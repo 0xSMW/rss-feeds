@@ -23,7 +23,7 @@ And everyone can learn along the way. 🧑‍🎓
 
 ## How do I subscribe to an existing RSS feed?
 
-To subscribe to an RSS feed, use the raw link of the feed file.
+To subscribe to an RSS feed, use the **raw** link of the feed file.
 
 You can find all available feeds in the [feeds directory](./feeds).
 
@@ -32,6 +32,9 @@ For example, to subscribe to the Ollama Blog feed, use the following link:
 ```url
 https://raw.githubusercontent.com/Olshansk/rss-feeds/main/feeds/feed_ollama.xml
 ```
+
+Personally, I use [Blogtrottr](https://blogtrottr.com/) so my email inbox acts
+as an RSS queue, but you can use any RSS reader.
 
 ## Which RSS feeds are available?
 
