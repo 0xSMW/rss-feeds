@@ -1,8 +1,14 @@
-# RSS Feeds <!-- omit in toc -->
+# RSS Feed Generator <!-- omit in toc -->
 
-You know how there are a bunch of blogs without RSS Feeds? 😡
+You know how there are a bunch of blogs out there without RSS Feeds? 😡
 
-Well, we're going to fix it using Open Source and AI tooling. 🙌
+Well, we're going to fix it Open Source Style. 🙌
+
+To make it simple, it just uses GitHub actions and some Python code. 🐍
+
+More importantly, we're using AI tooling so anyone can contribute. 🤖
+
+And everyone can learn along the way. 🧑‍🎓
 
 - [How do I subscribe to an existing RSS feed?](#how-do-i-subscribe-to-an-existing-rss-feed)
 - [Which RSS feeds are available?](#which-rss-feeds-are-available)
