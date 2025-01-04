@@ -1,25 +1,32 @@
 # RSS Feeds <!-- omit in toc -->
 
-- [How does this work?](#how-does-this-work)
+This repository provides RSS feeds for blogs and websites that do not offer a default RSS feed. It allows users to subscribe to updates using raw feed links.
+
 - [How do I subscribe?](#how-do-i-subscribe)
 - [Which RSS feeds are available?](#which-rss-feeds-are-available)
 - [How do I request a new RSS feed?](#how-do-i-request-a-new-rss-feed)
 - [How do I contribute a new feed?](#how-do-i-contribute-a-new-feed)
+- [How does this work?](#how-does-this-work)
 - [What did I use to make this?](#what-did-i-use-to-make-this)
   - [GitHub Copilot Workspace](#github-copilot-workspace)
   - [Claude Projects](#claude-projects)
   - [Claude Sync](#claude-sync)
 - [Star History](#star-history)
 
-## How does this work?
-
 ## How do I subscribe?
 
-blogtrottr.com
+To subscribe to an RSS feed, use the raw link of the feed file. For example, to subscribe to the Ollama Blog feed, use the following link:
+
+```url
+https://raw.githubusercontent.com/Olshansk/rss-feeds/main/feeds/feed_ollama.xml
+```
+
+You can find all available feeds in the [feeds directory](./feeds).
 
 ## Which RSS feeds are available?
 
 - [Ollama Blog](https://ollama.com/blog): [Ollama RSS feed](https://raw.githubusercontent.com/Olshansk/rss-feeds/refs/heads/main/feeds/feed_ollama.xml)
+- ???
 
 ## How do I request a new RSS feed?
 
@@ -29,7 +36,42 @@ If you would like to request a new RSS feed for a blog, please use our GitHub is
 
 ## How do I contribute a new feed?
 
-TODO
+To contribute a new feed, refer to the [Claude Projects](#claude-projects) section. It provides detailed instructions on how to convert HTML files into Python scripts that generate RSS feeds.
+
+## How does this work?
+
+```mermaid
+flowchart TB
+    subgraph GitHub["GitHub Repository"]
+        action[[GitHub Action\nHourly Cron Job]]
+        runner{{"run_all_feeds.py"}}
+        feeds["Individual Feed Generators\n(*.py files)"]
+        xml["Generated RSS Feeds\n(feed_*.xml)"]
+    end
+
+    subgraph External["External Services"]
+        blogtrottr["Example: Blogtrottr"]
+        rssreaders["Other RSS Readers"]
+    end
+
+    action -->|"Triggers"| runner
+    runner -->|"Executes"| feeds
+    feeds -->|"Scrapes"| websites[("Blog Websites\n(HTML Content)")]
+    websites -->|"Content"| feeds
+    feeds -->|"Generates"| xml
+    xml -->|"Updates"| repo["GitHub Repository\nMain Branch"]
+
+    repo -->|"Pulls Feed"| blogtrottr
+    repo -->|"Pulls Feed"| rssreaders
+
+    style GitHub fill:#e6f3ff,stroke:#0066cc
+    style External fill:#f9f9f9,stroke:#666666
+    style action fill:#ddf4dd,stroke:#28a745,color:#000000
+    style runner fill:#fff3cd,stroke:#ffc107,color:#000000
+    style feeds fill:#f8d7da,stroke:#dc3545,color:#000000
+    style xml fill:#d1ecf1,stroke:#17a2b8,color:#000000
+    style websites fill:#e2e3e5,stroke:#383d41,color:#000000
+```
 
 ## What did I use to make this?
 
@@ -73,7 +115,7 @@ Here is the expected flow and instructions:
 
 Link: [Claude Sync](https://github.com/jahwag/ClaudeSync?tab=readme-ov-files)
 
-I use
+I use `ClaudeSync` to sync all the files in this directory with the Project's knowledge.
 
 ## Star History
 
