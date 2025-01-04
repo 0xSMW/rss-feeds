@@ -29,6 +29,11 @@ env_create:  ## Create the env
 env_source:  ## Source the env; must be execute like so: $(make env_source)
 	@echo 'source venv/bin/activate'
 
+.PHONY: clean
+clean:  ## Clean generated files and virtual environment
+	rm -rf venv
+	rm -rf feeds/*.xml
+
 ##########################
 ### Pip Common Targets ###
 ##########################
@@ -54,11 +59,6 @@ py_format: check-env  ## Format the python code
 ### RSS Targets  ###
 ####################
 
-.PHONY: generate_feed
-generate_feed: check-env  ## Generate the RSS feeds
-	python feed_generators/ollama_blog.py
-
-.PHONY: clean
-clean:  ## Clean generated files and virtual environment
-	rm -rf venv
-	rm -rf feeds/*.xml
+.PHONY: generate_all_feeds
+generate_all_feeds: check-env  ## Generate all RSS feeds
+	python feed_generators/run_all_feeds.py
