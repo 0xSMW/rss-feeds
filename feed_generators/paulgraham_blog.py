@@ -6,6 +6,7 @@ import pytz
 from feedgen.feed import FeedGenerator
 import logging
 from pathlib import Path
+import re
 
 # Set up logging
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
@@ -38,23 +39,61 @@ def fetch_html_content(url):
         raise
 
 
-def get_article_description(article_url):
-    """Fetch and extract the first paragraph of the article as description."""
+def extract_date_from_text(text):
+    """Helper function to extract date from text."""
+    months = [
+        "January",
+        "February",
+        "March",
+        "April",
+        "May",
+        "June",
+        "July",
+        "August",
+        "September",
+        "October",
+        "November",
+        "December",
+    ]
+
+    # Match "Month YYYY" pattern
+    for month in months:
+        pattern = f"{month}\\s+\\d{{4}}"
+        match = re.search(pattern, text)
+        if match:
+            date_str = match.group(0)
+            try:
+                date = datetime.strptime(f"{date_str} 1", "%B %Y %d")
+                return date.replace(tzinfo=pytz.UTC)
+            except ValueError:
+                continue
+    return None
+
+
+def get_article_content(article_html):
+    """Extract the full article content and date."""
     try:
-        html_content = fetch_html_content(article_url)
-        soup = BeautifulSoup(html_content, "html.parser")
+        soup = BeautifulSoup(article_html, "html.parser")
+        content = None
+        pub_date = None
 
-        # Find the first text content after the title
-        paragraphs = soup.find_all(["p", "div", "font"])
-        for p in paragraphs:
-            text = p.get_text().strip()
-            if text and len(text) > 50:  # Ensure it's a substantial paragraph
-                return text[:500] + "..." if len(text) > 500 else text
+        # Find the main content
+        fonts = soup.find_all("font", size="2")
+        for font in fonts:
+            text = font.get_text().strip()
+            if len(text) > 100:  # Main content is usually the longest text block
+                content = text
+                pub_date = extract_date_from_text(text)
+                if pub_date:
+                    # Remove the date from the beginning of the content
+                    content = re.sub(r"^[A-Za-z]+ \d{4}", "", content).lstrip()
+                break
 
-        return "No description available"
+        return content, pub_date
+
     except Exception as e:
-        logger.error(f"Error fetching description for {article_url}: {str(e)}")
-        return "Description unavailable"
+        logger.error(f"Error extracting content: {str(e)}")
+        return None, None
 
 
 def parse_essays_page(html_content, base_url="https://paulgraham.com"):
@@ -75,12 +114,23 @@ def parse_essays_page(html_content, base_url="https://paulgraham.com"):
 
             full_url = f"{base_url}/{href}" if not href.startswith("http") else href
 
-            # Get description from the article page
-            description = get_article_description(full_url)
+            # Fetch article content once and reuse it
+            article_html = fetch_html_content(full_url)
+            content, pub_date = get_article_content(article_html)
 
-            # Since exact dates aren't available on the main page,
-            # we'll set the date to None and sort by order of appearance
-            blog_posts.append({"title": title, "link": full_url, "description": description})
+            if content:
+                description = content[:500] + "..." if len(content) > 500 else content
+            else:
+                description = "No description available"
+
+            blog_posts.append(
+                {
+                    "title": title,
+                    "link": full_url,
+                    "description": description,
+                    "pub_date": pub_date or datetime.now(pytz.UTC),  # Fallback to current date if none found
+                }
+            )
 
         logger.info(f"Successfully parsed {len(blog_posts)} blog posts")
         return blog_posts
@@ -111,8 +161,7 @@ def generate_rss_feed(blog_posts, feed_name="paulgraham"):
             fe.title(post["title"])
             fe.description(post["description"])
             fe.link(href=post["link"])
-            # Since we don't have actual dates, we'll use current date
-            fe.published(datetime.now(pytz.UTC))
+            fe.published(post["pub_date"])
             fe.id(post["link"])
 
         logger.info("Successfully generated RSS feed")
