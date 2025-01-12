@@ -43,7 +43,7 @@ as an RSS queue, but you can use any RSS reader.
 - 🦙 [Ollama Blog](https://ollama.com/blog): [Ollama RSS feed](https://raw.githubusercontent.com/Olshansk/rss-feeds/refs/heads/main/feeds/feed_ollama.xml)
 - 👨 [Paul Graham's Article](https://www.paulgraham.com/articles.html): [Paul Graham RSS feed](https://raw.githubusercontent.com/Olshansk/rss-feeds/refs/heads/main/feeds/feed_paulgraham.xml)
 - 🦍 [Anthropic News](https://www.anthropic.com/news): [Anthropic RSS feed](https://raw.githubusercontent.com/Olshansk/rss-feeds/refs/heads/main/feeds/feed_anthropic.xml)
-- 🤖 [OpenAI Research News](https://openai.com/news/research/)
+- 🤖 [OpenAI Research News](https://openai.com/news/research/): [OpenAI Research RSS feed](https://raw.githubusercontent.com/Olshansk/rss-feeds/refs/heads/main/feeds/feed_openai_research.xml)
 
 Coming soon:
 
