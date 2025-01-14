@@ -2,7 +2,7 @@ name: Run Feeds
 
 on:
   schedule:
-    - cron: "0 * * * *"  # Runs every hour
+    - cron: "0 * * * *" # Runs every hour
   workflow_dispatch:
 
 jobs:
@@ -16,7 +16,12 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v2
         with:
-          python-version: '3.x'
+          python-version: "3.12" # Use Python 3.12 explicitly
+
+      - name: Install setuptools (fix distutils issue)
+        run: |
+          python -m ensurepip --upgrade
+          python -m pip install --upgrade pip setuptools
 
       - name: Install dependencies
         run: |
