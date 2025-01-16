@@ -16,7 +16,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v2
         with:
-          python-version: "3.11" # Downgrade to Python 3.11 for compatibility
+          python-version: "3.11" # Use Python 3.11 to include distutils
 
       - name: Install system dependencies
         run: |
@@ -32,10 +32,9 @@ jobs:
           source venv/bin/activate
           python -m pip install --upgrade pip
           pip install -r requirements.txt
-          pip install distutils  # Install distutils manually if needed
 
       - name: Run all feed generators
         run: |
-          set -e  # Ensure the step fails on any error
+          set -e  # Fail the step on any error
           source venv/bin/activate
           python feed_generators/run_all_feeds.py
