@@ -16,21 +16,26 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v2
         with:
-          python-version: "3.12"
+          python-version: "3.11" # Downgrade to Python 3.11 for compatibility
 
       - name: Install system dependencies
         run: |
           sudo apt-get update
-          sudo apt-get install -y python3-setuptools python3-distutils
+          sudo apt-get install -y software-properties-common
+          sudo add-apt-repository universe
+          sudo apt-get update
+          sudo apt-get install -y python3-setuptools
 
-      - name: Install dependencies
+      - name: Install Python dependencies
         run: |
           python -m venv venv
           source venv/bin/activate
+          python -m pip install --upgrade pip
           pip install -r requirements.txt
+          pip install distutils  # Install distutils manually if needed
 
       - name: Run all feed generators
         run: |
-          set -e  # Ensure failure on any error
+          set -e  # Ensure the step fails on any error
           source venv/bin/activate
           python feed_generators/run_all_feeds.py
