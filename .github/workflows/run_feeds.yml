@@ -16,12 +16,12 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v2
         with:
-          python-version: "3.12" # Use Python 3.12 explicitly
+          python-version: "3.12"
 
       - name: Install system dependencies
         run: |
           sudo apt-get update
-          sudo apt-get install -y python3-setuptools
+          sudo apt-get install -y python3-setuptools python3-distutils
 
       - name: Install dependencies
         run: |
@@ -31,5 +31,6 @@ jobs:
 
       - name: Run all feed generators
         run: |
+          set -e  # Ensure failure on any error
           source venv/bin/activate
           python feed_generators/run_all_feeds.py
