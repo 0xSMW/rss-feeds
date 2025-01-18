@@ -114,6 +114,8 @@ def parse_essays_page(html_content, base_url="https://paulgraham.com"):
 
             full_url = f"{base_url}/{href}" if not href.startswith("http") else href
 
+            print("OLSH", full_url)
+
             # Fetch article content once and reuse it
             article_html = fetch_html_content(full_url)
             content, pub_date = get_article_content(article_html)
@@ -123,14 +125,20 @@ def parse_essays_page(html_content, base_url="https://paulgraham.com"):
             else:
                 description = "No description available"
 
-            blog_posts.append(
-                {
-                    "title": title,
-                    "link": full_url,
-                    "description": description,
-                    "pub_date": pub_date or datetime.now(pytz.UTC),  # Fallback to current date if none found
-                }
-            )
+            blog_post = {
+                "title": title,
+                "link": full_url,
+                "description": description,
+                "pub_date": pub_date or datetime.now(pytz.UTC),  # Fallback to current date if none found
+            }
+
+            # There are a handful (~7) old blog posts where parsing the date doesn't work very well.
+            # In order to avoid sending hourly emails for this, we're just skipping them altogether.
+            # We can spend more time on this if/when it ever becomes an issue.
+            if pub_date:
+                blog_posts.append(blog_post)
+            else:
+                print(f"Skipping post {title} - no date found")
 
         logger.info(f"Successfully parsed {len(blog_posts)} blog posts")
         return blog_posts
@@ -199,7 +207,7 @@ def main(blog_url="https://paulgraham.com/articles.html", feed_name="paulgraham"
         feed = generate_rss_feed(blog_posts, feed_name)
 
         # Save feed to file
-        output_file = save_rss_feed(feed, feed_name)
+        _output_file = save_rss_feed(feed, feed_name)
 
         return True
 
