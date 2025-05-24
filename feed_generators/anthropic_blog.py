@@ -1,4 +1,5 @@
 import requests
+import xml.etree.ElementTree as ET
 from bs4 import BeautifulSoup
 from datetime import datetime
 import pytz
@@ -141,8 +142,26 @@ def save_rss_feed(feed_generator, feed_name="anthropic"):
         raise
 
 
+def get_existing_links_from_feed(feed_path):
+    """Parse the existing RSS feed and return a set of all article links."""
+    existing_links = set()
+    try:
+        if not feed_path.exists():
+            return existing_links
+        tree = ET.parse(feed_path)
+        root = tree.getroot()
+        # RSS 2.0: items under channel/item
+        for item in root.findall("./channel/item"):
+            link_elem = item.find("link")
+            if link_elem is not None and link_elem.text:
+                existing_links.add(link_elem.text.strip())
+    except Exception as e:
+        logger.warning(f"Failed to parse existing feed for deduplication: {str(e)}")
+    return existing_links
+
+
 def main(feed_name="anthropic"):
-    """Main function to generate RSS feed from Anthropic's news page."""
+    """Main function to generate RSS feed from Anthropic's news page, deduplicating by existing feed links."""
     try:
         # Fetch news content
         html_content = fetch_news_content()
@@ -150,8 +169,18 @@ def main(feed_name="anthropic"):
         # Parse articles from HTML
         articles = parse_news_html(html_content)
 
-        # Generate RSS feed
-        feed = generate_rss_feed(articles, feed_name)
+        # Deduplicate using existing feed
+        feeds_dir = ensure_feeds_directory()
+        feed_path = feeds_dir / f"feed_{feed_name}.xml"
+        existing_links = get_existing_links_from_feed(feed_path)
+        new_articles = [a for a in articles if a["link"] not in existing_links]
+
+        if not new_articles:
+            logger.info("No new articles to add. Skipping feed update.")
+            return True
+
+        # Generate RSS feed with new articles only
+        feed = generate_rss_feed(new_articles, feed_name)
 
         # Save feed to file
         output_file = save_rss_feed(feed, feed_name)
