@@ -1,139 +1,107 @@
-I wrote a blog post about this repo here: https://olshansky.substack.com/p/no-rss-feed-no-problem-using-claude
-
 # RSS Feed Generator <!-- omit in toc -->
 
-You know how there are a bunch of blogs out there without RSS Feeds? 😡
+> [!NOTE] > [Blog post about this repo](https://olshansky.substack.com/p/no-rss-feed-no-problem-using-claude)
 
-Well, we're going to fix it Open Source Style. 🙌
+Easily create and maintain RSS feeds for blogs that don't offer them.
 
-To make it simple, it just uses GitHub actions and some Python code. 🐍
+- Open source and community-driven 🙌
+- Simple Python + GitHub Actions 🐍
+- AI tooling for easy contributions 🤖
+- Learn and contribute together 🧑‍🎓
 
-More importantly, we're using AI tooling so anyone can contribute. 🤖
+## Table of Contents <!-- omit in toc -->
 
-And everyone can learn along the way. 🧑‍🎓
-
-- [How do I subscribe to an existing RSS feed?](#how-do-i-subscribe-to-an-existing-rss-feed)
-- [Which RSS feeds are available?](#which-rss-feeds-are-available)
-- [How do I request a new RSS feed?](#how-do-i-request-a-new-rss-feed)
-- [How do I contribute a new feed?](#how-do-i-contribute-a-new-feed)
-- [What did I use to make this?](#what-did-i-use-to-make-this)
-  - [1. GitHub Copilot Workspace](#1-github-copilot-workspace)
-  - [2. Claude Projects](#2-claude-projects)
-  - [3. Claude Sync](#3-claude-sync)
+- [Quick Start](#quick-start)
+- [Available RSS Feeds](#available-rss-feeds)
+- [Request a Feed](#request-a-feed)
+- [Contribute a Feed](#contribute-a-feed)
+- [Project Tools](#project-tools)
 - [Star History](#star-history)
-- [How does this work?](#how-does-this-work)
+- [How It Works](#how-it-works)
 
-## How do I subscribe to an existing RSS feed?
+## Quick Start
 
-To subscribe to an RSS feed, use the **raw** link of the feed file.
+**Subscribe to a feed:**
 
-You can find all available feeds in the [feeds directory](./feeds).
+- Find feeds in the [feeds directory](./feeds).
+- Use the **raw** link for your RSS reader.
 
-For example, to subscribe to the Ollama Blog feed, use the following link:
+Example (Ollama Blog):
 
-```url
+```text
 https://raw.githubusercontent.com/Olshansk/rss-feeds/main/feeds/feed_ollama.xml
 ```
 
-Personally, I use [Blogtrottr](https://blogtrottr.com/) so my email inbox acts
-as an RSS queue, but you can use any RSS reader.
+Use any RSS reader (e.g., [Blogtrottr](https://blogtrottr.com/)), or add to your inbox.
 
-## Which RSS feeds are available?
+## Available RSS Feeds
 
-- 🦙 [Ollama Blog](https://ollama.com/blog): [Ollama RSS feed](https://raw.githubusercontent.com/Olshansk/rss-feeds/refs/heads/main/feeds/feed_ollama.xml)
-- 👨 [Paul Graham's Article](https://www.paulgraham.com/articles.html): [Paul Graham RSS feed](https://raw.githubusercontent.com/Olshansk/rss-feeds/refs/heads/main/feeds/feed_paulgraham.xml)
-- 🦍 [Anthropic News](https://www.anthropic.com/news): [Anthropic RSS feed](https://raw.githubusercontent.com/Olshansk/rss-feeds/refs/heads/main/feeds/feed_anthropic.xml)
-- 🤖 [OpenAI Research News](https://openai.com/news/research/)
+| Blog                                                              | Feed                                                                                                       |
+| ----------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| [Ollama Blog](https://ollama.com/blog)                            | [feed_ollama.xml](https://raw.githubusercontent.com/Olshansk/rss-feeds/main/feeds/feed_ollama.xml)         |
+| [Paul Graham's Article](https://www.paulgraham.com/articles.html) | [feed_paulgraham.xml](https://raw.githubusercontent.com/Olshansk/rss-feeds/main/feeds/feed_paulgraham.xml) |
+| [Anthropic News](https://www.anthropic.com/news)                  | [feed_anthropic.xml](https://raw.githubusercontent.com/Olshansk/rss-feeds/main/feeds/feed_anthropic.xml)   |
+| [OpenAI Research News](https://openai.com/news/research/)         | _(coming soon)_                                                                                            |
 
-Coming soon:
+**Planned:**
 
 - 👨 [Patrick Collison's Blog](https://patrickcollison.com/culture)
 - 💽 [Supabase Blog](https://supabase.com/blog)
 
-## How do I request a new RSS feed?
+## Request a Feed
 
-If you would like to request a new RSS feed for a blog, please use our GitHub issue template.
+Want a feed for a blog?
 
-Make sure to provide the link to the actual blog.
+[Open a GitHub issue](https://github.com/Olshansk/rss-feeds/issues/new?template=request_rss_feed.md) and include the blog URL.
 
-[Request a new RSS feed](https://github.com/Olshansk/rss-feeds/issues/new?template=request_rss_feed.md)
+## Contribute a Feed
 
-## How do I contribute a new feed?
+To add a new feed:
 
-To contribute a new feed, refer to the [Claude Projects](#claude-projects) section.
+- See [Project Tools](#project-tools) for details.
+- In short: write a Python script that converts a blog's HTML into a `feed_*.xml` file (see existing scripts in `feed_generators/`).
+- GitHub Actions will run your script automatically.
 
-It provides detailed instructions on how to convert HTML files into Python scripts that generate RSS feeds.
+## Project Tools
 
-## What did I use to make this?
+- **GitHub Copilot Workspace:** Used for some PRs ([label: copilot](https://github.com/Olshansk/rss-feeds/pulls?q=label%3Acopilot+)).
+- **Claude Projects:**
 
-### 1. GitHub Copilot Workspace
+  - Converts blog HTML to RSS via Python scripts.
+  - [Instructions](https://support.anthropic.com/en/articles/9517075-what-are-projects):
 
-_Link: [GitHub Copilot Workspace](https://copilot-workspace.githubnext.com/)_
+    - Parse blog HTML → Python script → `feed_*.xml` (see `feed_generators/`)
+    - Scripts run via GitHub Actions
+    - If you can't parse the HTML, ask for a sample or explain the issue
 
-GitHub Copilot Workspace is still in preview (as of 01/2025), so I can't share the workspace.
-
-However, I've attached the `copilot` label to all PRs generated by GitHub Copilot.
-
-You can access them [here](https://github.com/Olshansk/rss-feeds/pulls?q=label%3Acopilot+).
-
-### 2. Claude Projects
-
-_Link: [Claude Projects](https://support.anthropic.com/en/articles/9517075-what-are-projects)_
-
-I can't share the project (feature is not available as of 01/2025), so I'll share the details.
-
-The knowledge of the project includes files from this repository.
-
-The instructions are:
-
-```text
-The goal of this project is to generate rss (feed.xml) files from web pages (*.html) that contain blogs or updates but do not provide a subscribe button or a default RSS feed.
-
-Here is the expected flow and instructions:
-
-1. You will be given an HTML file that needs to be parsed and understood.
-
-2. You will provide a python script that writes a `feed_{}.xml` file that is RSS feed compatible.
-
-3. The `{}` in `feed_{}.xml` will refer to the name of a particular RSS feed.
-
-4. GitHub actions will take care of triggering this periodically, so you don't have to worry about it
-
-5. If you are not given an HTML file that you can parse into an rss feed, either ask for it or explain what the issue with the provided file is.
-```
-
-### 3. Claude Sync
-
-Link: [Claude Sync](https://github.com/jahwag/ClaudeSync?tab=readme-ov-files)
-
-I use `ClaudeSync` to sync all the files in this directory with the Project's knowledge.
+- **Claude Sync:** [ClaudeSync repo](https://github.com/jahwag/ClaudeSync?tab=readme-ov-files) keeps project files in sync.
 
 ## Star History
 
 [![Star History Chart](https://api.star-history.com/svg?repos=Olshansk/rss-feeds&type=Date)](https://star-history.com/#Olshansk/rss-feeds&Date)
 
-## How does this work?
+## How It Works
 
 ```mermaid
 flowchart TB
     subgraph GitHub["GitHub Repository"]
-        action[[GitHub Action\nHourly Cron Job]]
+        action[[GitHub Action<br/>Hourly Cron Job]]
         runner{{"run_all_feeds.py"}}
-        feeds["Individual Feed Generators\n(*.py files)"]
-        xml["Generated RSS Feeds\n(feed_*.xml)"]
+        feeds["Feed Generators<br/>(*.py files)"]
+        xml["Generated RSS Feeds<br/>(feed_*.xml)"]
     end
 
     subgraph External["External Services"]
-        blogtrottr["Example: Blogtrottr"]
+        blogtrottr["Blogtrottr"]
         rssreaders["Other RSS Readers"]
     end
 
     action -->|"Triggers"| runner
     runner -->|"Executes"| feeds
-    feeds -->|"Scrapes"| websites[("Blog Websites\n(HTML Content)")]
+    feeds -->|"Scrapes"| websites[("Blog Websites<br/>(HTML Content)")]
     websites -->|"Content"| feeds
     feeds -->|"Generates"| xml
-    xml -->|"Updates"| repo["GitHub Repository\nMain Branch"]
+    xml -->|"Updates"| repo["GitHub Repository<br/>Main Branch"]
 
     repo -->|"Pulls Feed"| blogtrottr
     repo -->|"Pulls Feed"| rssreaders
