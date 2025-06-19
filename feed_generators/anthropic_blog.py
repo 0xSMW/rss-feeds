@@ -161,7 +161,7 @@ def get_existing_links_from_feed(feed_path):
 
 
 def main(feed_name="anthropic"):
-    """Main function to generate RSS feed from Anthropic's news page, deduplicating by existing feed links."""
+    """Main function to generate RSS feed from Anthropic's news page."""
     try:
         # Fetch news content
         html_content = fetch_news_content()
@@ -169,22 +169,13 @@ def main(feed_name="anthropic"):
         # Parse articles from HTML
         articles = parse_news_html(html_content)
 
-        # Deduplicate using existing feed
-        feeds_dir = ensure_feeds_directory()
-        feed_path = feeds_dir / f"feed_{feed_name}.xml"
-        existing_links = get_existing_links_from_feed(feed_path)
-        new_articles = [a for a in articles if a["link"] not in existing_links]
-
-        if not new_articles:
-            logger.info("No new articles to add. Skipping feed update.")
-            return True
-
-        # Generate RSS feed with new articles only
-        feed = generate_rss_feed(new_articles, feed_name)
+        # Generate RSS feed with all articles
+        feed = generate_rss_feed(articles, feed_name)
 
         # Save feed to file
         output_file = save_rss_feed(feed, feed_name)
 
+        logger.info(f"Successfully generated RSS feed with {len(articles)} articles")
         return True
 
     except Exception as e:
