@@ -40,6 +40,7 @@ Use any RSS reader (e.g., [Blogtrottr](https://blogtrottr.com/)), or add to your
 | ----------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
 | [Anthropic News](https://www.anthropic.com/news)                  | [feed_anthropic.xml](https://raw.githubusercontent.com/Olshansk/rss-feeds/main/feeds/feed_anthropic.xml)                         |
 | [Anthropic Engineering](https://www.anthropic.com/engineering)    | [feed_anthropic_engineering.xml](https://raw.githubusercontent.com/Olshansk/rss-feeds/main/feeds/feed_anthropic_engineering.xml) |
+| [Anthropic Research](https://www.anthropic.com/research)          | [feed_anthropic_research.xml](https://raw.githubusercontent.com/Olshansk/rss-feeds/main/feeds/feed_anthropic_research.xml)       |
 | [Ollama Blog](https://ollama.com/blog)                            | [feed_ollama.xml](https://raw.githubusercontent.com/Olshansk/rss-feeds/main/feeds/feed_ollama.xml)                               |
 | [OpenAI Research News](https://openai.com/news/research/)         | _(coming soon)_                                                                                                                  |
 | [Paul Graham's Article](https://www.paulgraham.com/articles.html) | [feed_paulgraham.xml](https://raw.githubusercontent.com/Olshansk/rss-feeds/main/feeds/feed_paulgraham.xml)                       |

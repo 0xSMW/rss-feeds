@@ -71,6 +71,10 @@ generate_anthropic_feed: check-env  ## Generate RSS feed for anthropic/news
 generate_anthropic_engineering_feed: check-env  ## Generate RSS feed for anthropic/engineering
 	python feed_generators/anthropic_eng_blog.py
 
+.PHONY: generate_anthropic_research_feed
+generate_anthropic_research_feed: check-env  ## Generate RSS feed for anthropic/research
+	python feed_generators/anthropic_research_blog.py
+
 .PHONY: generate_openai_research_feed
 generate_openai_research_feed: check-env  ## Generate RSS feed for openai/research
 	python feed_generators/openai_research_blog.py
