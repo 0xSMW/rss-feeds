@@ -5,6 +5,8 @@ import pytz
 from feedgen.feed import FeedGenerator
 import logging
 from pathlib import Path
+import json
+import os
 
 # Set up logging
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
@@ -21,6 +23,43 @@ def ensure_feeds_directory():
     feeds_dir = get_project_root() / "feeds"
     feeds_dir.mkdir(exist_ok=True)
     return feeds_dir
+
+
+def get_article_cache_file():
+    """Get the path to the article cache file."""
+    feeds_dir = ensure_feeds_directory()
+    return feeds_dir / "anthropic_engineering_article_cache.json"
+
+
+def load_article_cache():
+    """Load the article cache from disk."""
+    cache_file = get_article_cache_file()
+    if cache_file.exists():
+        try:
+            with open(cache_file, "r") as f:
+                cache = json.load(f)
+                # Convert date strings back to datetime objects
+                for link, data in cache.items():
+                    data["date"] = datetime.fromisoformat(data["date"])
+                return cache
+        except Exception as e:
+            logger.warning(f"Failed to load article cache: {e}")
+    return {}
+
+
+def save_article_cache(cache):
+    """Save the article cache to disk."""
+    cache_file = get_article_cache_file()
+    try:
+        # Convert datetime objects to strings for JSON serialization
+        cache_to_save = {}
+        for link, data in cache.items():
+            cache_to_save[link] = {"title": data["title"], "date": data["date"].isoformat()}
+
+        with open(cache_file, "w") as f:
+            json.dump(cache_to_save, f, indent=2)
+    except Exception as e:
+        logger.warning(f"Failed to save article cache: {e}")
 
 
 def fetch_engineering_content(url="https://www.anthropic.com/engineering"):
@@ -43,6 +82,11 @@ def parse_engineering_html(html_content):
         soup = BeautifulSoup(html_content, "html.parser")
         articles = []
 
+        # Load existing article cache
+        article_cache = load_article_cache()
+        current_time = datetime.now(pytz.UTC)
+        cache_updated = False
+
         # Find the featured article first
         featured_article = soup.select_one("article.ArticleList_featured__2WCTd")
         if featured_article:
@@ -60,8 +104,32 @@ def parse_engineering_html(html_content):
                     desc_elem = featured_article.select_one("p.ArticleList_summary__G96cV")
                     description = desc_elem.text.strip() if desc_elem else title
 
-                    # For featured article, we'll use current date as we don't have publish date
-                    date = datetime.now(pytz.UTC)
+                    # Check if we have a cached date for this article
+                    if link in article_cache:
+                        date = article_cache[link]["date"]
+                        logger.info(f"Using cached date for featured article: {title}")
+                    else:
+                        # Look for date in the featured article
+                        date_elem = featured_article.select_one("div.ArticleList_date__2VTRg")
+                        if date_elem:
+                            try:
+                                date_text = date_elem.text.strip()
+                                date = datetime.strptime(date_text, "%b %d, %Y")
+                                date = date.replace(hour=0, minute=0, second=0, tzinfo=pytz.UTC)
+                            except ValueError:
+                                logger.warning(f"Could not parse date '{date_text}' for featured article: {title}")
+                                # Use current time as the "first seen" date
+                                date = current_time
+                        else:
+                            # Use current time as the "first seen" date
+                            logger.info(
+                                f"No date found for featured article: {title}, using current time as first seen date"
+                            )
+                            date = current_time
+
+                        # Cache this article
+                        article_cache[link] = {"title": title, "date": date}
+                        cache_updated = True
 
                     articles.append(
                         {
@@ -91,19 +159,31 @@ def parse_engineering_html(html_content):
                     continue
                 link = "https://www.anthropic.com" + link_elem["href"]
 
-                # Extract date
-                date_elem = card.select_one("div.ArticleList_date__2VTRg")
-                if date_elem:
-                    try:
-                        date_text = date_elem.text.strip()
-                        # Parse date format like "Apr 18, 2025"
-                        date = datetime.strptime(date_text, "%b %d, %Y")
-                        date = date.replace(tzinfo=pytz.UTC)
-                    except ValueError:
-                        logger.warning(f"Could not parse date '{date_text}' for article: {title}")
-                        date = datetime.now(pytz.UTC)
+                # Check if we have a cached date for this article
+                if link in article_cache:
+                    date = article_cache[link]["date"]
+                    logger.info(f"Using cached date for article: {title}")
                 else:
-                    date = datetime.now(pytz.UTC)
+                    # Extract date
+                    date_elem = card.select_one("div.ArticleList_date__2VTRg")
+                    if date_elem:
+                        try:
+                            date_text = date_elem.text.strip()
+                            # Parse date format like "Apr 18, 2025"
+                            date = datetime.strptime(date_text, "%b %d, %Y")
+                            date = date.replace(hour=0, minute=0, second=0, tzinfo=pytz.UTC)
+                        except ValueError:
+                            logger.warning(f"Could not parse date '{date_text}' for article: {title}")
+                            # Use current time as the "first seen" date
+                            date = current_time
+                    else:
+                        # Use current time as the "first seen" date
+                        logger.info(f"No date found for article: {title}, using current time as first seen date")
+                        date = current_time
+
+                    # Cache this article
+                    article_cache[link] = {"title": title, "date": date}
+                    cache_updated = True
 
                 # Use title as description since there's no separate description for non-featured articles
                 description = title
@@ -116,6 +196,11 @@ def parse_engineering_html(html_content):
             except Exception as e:
                 logger.warning(f"Error parsing article card: {str(e)}")
                 continue
+
+        # Save the updated cache if needed
+        if cache_updated:
+            save_article_cache(article_cache)
+            logger.info("Updated article cache with new articles")
 
         logger.info(f"Successfully parsed {len(articles)} articles")
         return articles
