@@ -1,6 +1,7 @@
 # RSS Feed Generator <!-- omit in toc -->
 
-> [!NOTE] > [Blog post about this repo](https://olshansky.substack.com/p/no-rss-feed-no-problem-using-claude)
+> [!NOTE]
+> [Blog post about this repo](https://olshansky.substack.com/p/no-rss-feed-no-problem-using-claude)
 
 Easily create and maintain RSS feeds for blogs that don't offer them.
 
