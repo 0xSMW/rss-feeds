@@ -7,7 +7,7 @@
 
 | Blog                                                              | Feed                                                                                                                             |
 | ----------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
-| [Anthropic News](https://www.anthropic.com/news)                  | [feed_anthropic.xml](https://raw.githubusercontent.com/Olshansk/rss-feeds/main/feeds/feed_anthropic.xml)                         |
+| [Anthropic News](https://www.anthropic.com/news)                  | [feed_anthropic_news.xml](https://raw.githubusercontent.com/Olshansk/rss-feeds/main/feeds/feed_anthropic_news.xml)               |
 | [Anthropic Engineering](https://www.anthropic.com/engineering)    | [feed_anthropic_engineering.xml](https://raw.githubusercontent.com/Olshansk/rss-feeds/main/feeds/feed_anthropic_engineering.xml) |
 | [Anthropic Research](https://www.anthropic.com/research)          | [feed_anthropic_research.xml](https://raw.githubusercontent.com/Olshansk/rss-feeds/main/feeds/feed_anthropic_research.xml)       |
 | [Ollama Blog](https://ollama.com/blog)                            | [feed_ollama.xml](https://raw.githubusercontent.com/Olshansk/rss-feeds/main/feeds/feed_ollama.xml)                               |
