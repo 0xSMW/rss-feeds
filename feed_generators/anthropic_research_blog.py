@@ -45,7 +45,7 @@ def fetch_research_content_selenium(url="https://www.anthropic.com/research"):
         driver.get(url)
 
         # Wait for the page to fully load
-        wait_time = 8
+        wait_time = 10
         logger.info(f"Waiting {wait_time} seconds for the page to fully load...")
         time.sleep(wait_time)
 
@@ -56,9 +56,7 @@ def fetch_research_content_selenium(url="https://www.anthropic.com/research"):
             from selenium.webdriver.support import expected_conditions as EC
 
             # Wait for research articles to be present
-            WebDriverWait(driver, 10).until(
-                EC.presence_of_element_located((By.CSS_SELECTOR, "a[href*='/research/'], a[href*='/news/']"))
-            )
+            WebDriverWait(driver, 15).until(EC.presence_of_element_located((By.CSS_SELECTOR, "a[href*='/research/']")))
             logger.info("Research articles loaded successfully")
         except:
             logger.warning("Could not confirm articles loaded, proceeding anyway...")
@@ -75,130 +73,164 @@ def fetch_research_content_selenium(url="https://www.anthropic.com/research"):
             driver.quit()
 
 
+def parse_date_string(date_str):
+    """Parse various date formats found on Anthropic research pages."""
+    if not date_str or not date_str.strip():
+        return None
+
+    date_str = date_str.strip()
+
+    # Try different date formats
+    date_formats = [
+        "%b %d, %Y",  # Mar 27, 2025
+        "%B %d, %Y",  # March 27, 2025
+        "%Y-%m-%d",  # 2025-03-27
+        "%m/%d/%Y",  # 03/27/2025
+        "%d %b %Y",  # 27 Mar 2025
+        "%d %B %Y",  # 27 March 2025
+    ]
+
+    for date_format in date_formats:
+        try:
+            date = datetime.strptime(date_str, date_format)
+            return date.replace(tzinfo=pytz.UTC)
+        except ValueError:
+            continue
+
+    logger.warning(f"Could not parse date: '{date_str}'")
+    return None
+
+
 def parse_research_html(html_content):
     """Parse the research HTML content and extract article information."""
     try:
         soup = BeautifulSoup(html_content, "html.parser")
         articles = []
 
-        # Look for research and news articles with various selectors
-        selectors = [
-            "a[href*='/research/']",  # Research articles
-            "a[href*='/news/']",  # News articles
-            "a.PostCard_post-card__z_Sqq",  # Post cards (if present)
-        ]
+        # Look for research article links - updated selectors based on the HTML
+        research_links = soup.select("a[href*='/research/']")
+        logger.info(f"Found {len(research_links)} research links")
 
         found_links = set()  # To avoid duplicates
 
-        for selector in selectors:
-            links = soup.select(selector)
-            logger.info(f"Found {len(links)} links with selector: {selector}")
+        for link in research_links:
+            try:
+                href = link.get("href", "")
+                if not href or href in found_links:
+                    continue
 
-            for link in links:
-                try:
-                    href = link.get("href", "")
-                    if not href or href in found_links:
+                # Skip non-research URLs
+                if not "/research/" in href or href == "/research":
+                    continue
+
+                found_links.add(href)
+
+                # Extract title - try multiple approaches
+                title = None
+
+                # Try to find title in the link itself
+                title_selectors = [
+                    "h3",
+                    "h2",
+                    "h1",
+                    ".Card_headline__reaoT",
+                    "[class*='headline']",
+                    "[class*='title']",
+                ]
+
+                for title_sel in title_selectors:
+                    title_elem = link.select_one(title_sel)
+                    if title_elem and title_elem.text.strip():
+                        title = title_elem.text.strip()
+                        break
+
+                # If no title found in the link, check parent elements
+                if not title:
+                    parent = link.parent
+                    for _ in range(3):  # Check up to 3 parent levels
+                        if parent:
+                            for title_sel in title_selectors:
+                                title_elem = parent.select_one(title_sel)
+                                if title_elem and title_elem.text.strip():
+                                    title = title_elem.text.strip()
+                                    break
+                            if title:
+                                break
+                            parent = parent.parent
+
+                # If still no title, use the link text itself
+                if not title:
+                    title = link.text.strip()
+                    if len(title) < 5:  # Skip very short titles
                         continue
 
-                    found_links.add(href)
+                # Clean up title
+                title = " ".join(title.split())  # Remove extra whitespace
 
-                    # Extract title - try multiple possible selectors
-                    title = None
-                    title_selectors = [
-                        "h3",
-                        "h2",
-                        ".PostCard_post-heading__Ob1pu",
-                        "[class*='heading']",
-                        "[class*='title']",
-                    ]
+                # Construct full URL
+                if href.startswith("https://"):
+                    full_url = href
+                elif href.startswith("/"):
+                    full_url = "https://www.anthropic.com" + href
+                else:
+                    continue
 
-                    for title_sel in title_selectors:
-                        title_elem = link.select_one(title_sel)
-                        if title_elem and title_elem.text.strip():
-                            title = title_elem.text.strip()
+                # Extract date - try multiple selectors
+                date = None
+                date_selectors = [
+                    ".detail-m.agate",  # Based on the HTML structure
+                    "[class*='timestamp']",
+                    "[class*='date']",
+                    "time",
+                    ".PostDetail_post-timestamp__TBJ0Z",
+                    ".text-label",
+                ]
+
+                # Look for date in the link or its parents
+                for date_sel in date_selectors:
+                    date_elem = link.select_one(date_sel)
+                    if not date_elem and link.parent:
+                        # Check parent and sibling elements
+                        for parent_level in [link.parent, link.parent.parent if link.parent.parent else None]:
+                            if parent_level:
+                                date_elem = parent_level.select_one(date_sel)
+                                if date_elem:
+                                    break
+
+                    if date_elem:
+                        date_text = date_elem.text.strip()
+                        parsed_date = parse_date_string(date_text)
+                        if parsed_date:
+                            date = parsed_date
                             break
 
-                    # If no title found in the link, try parent elements
-                    if not title:
-                        parent = link.parent
-                        for _ in range(3):  # Check up to 3 parent levels
-                            if parent:
-                                for title_sel in title_selectors:
-                                    title_elem = parent.select_one(title_sel)
-                                    if title_elem and title_elem.text.strip():
-                                        title = title_elem.text.strip()
-                                        break
-                                if title:
-                                    break
-                                parent = parent.parent
+                # If no date found, don't set a default date - let it be None
+                # This avoids the issue of updating dates to "now"
 
-                    if not title:
-                        # Use the link text itself as fallback
-                        title = link.text.strip()
-                        if len(title) < 10:  # Skip very short titles
-                            continue
+                # Determine category from URL
+                category = "Research"
+                if "/news/" in href:
+                    category = "News"
 
-                    # Clean up title
-                    title = " ".join(title.split())  # Remove extra whitespace
-
-                    # Construct full URL
-                    if href.startswith("https://"):
-                        full_url = href
-                    elif href.startswith("/"):
-                        full_url = "https://www.anthropic.com" + href
-                    else:
-                        continue
-
-                    # Extract date - try multiple selectors
-                    date = None
-                    date_selectors = [".PostList_post-date__djrOA", "[class*='date']", "[class*='timestamp']", "time"]
-
-                    for date_sel in date_selectors:
-                        date_elem = link.select_one(date_sel) or (link.parent and link.parent.select_one(date_sel))
-                        if date_elem:
-                            try:
-                                date_str = date_elem.text.strip()
-                                # Try different date formats
-                                for date_format in ["%b %d, %Y", "%B %d, %Y", "%Y-%m-%d"]:
-                                    try:
-                                        date = datetime.strptime(date_str, date_format)
-                                        date = date.replace(tzinfo=pytz.UTC)
-                                        break
-                                    except ValueError:
-                                        continue
-                                if date:
-                                    break
-                            except:
-                                continue
-
-                    if not date:
-                        date = datetime.now(pytz.UTC)
-
-                    # Extract category
-                    category = "Research"
-                    category_elem = link.select_one("[class*='category']") or link.select_one(".text-label")
-                    if category_elem:
-                        category = category_elem.text.strip()
-
-                    # Determine category from URL if not found
-                    if "/research/" in href:
-                        category = "Research"
-                    elif "/news/" in href:
-                        category = "News"
-
-                    articles.append(
-                        {
-                            "title": title,
-                            "link": full_url,
-                            "date": date,
-                            "category": category,
-                            "description": title,  # Use title as description
-                        }
-                    )
-
-                except Exception as e:
-                    logger.warning(f"Skipping article due to parsing error: {str(e)}")
+                # Skip entries without meaningful titles
+                if not title or len(title.strip()) < 5:
                     continue
+
+                articles.append(
+                    {
+                        "title": title,
+                        "link": full_url,
+                        "date": date,  # This can be None
+                        "category": category,
+                        "description": title,  # Use title as description
+                    }
+                )
+
+                logger.info(f"Found article: {title} - {date}")
+
+            except Exception as e:
+                logger.warning(f"Skipping article due to parsing error: {str(e)}")
+                continue
 
         # Remove duplicates based on link
         seen_links = set()
@@ -232,8 +264,13 @@ def generate_rss_feed(articles, feed_name="anthropic_research"):
         fg.link(href="https://www.anthropic.com/research", rel="alternate")
         fg.link(href=f"https://anthropic.com/research/feed_{feed_name}.xml", rel="self")
 
-        # Sort articles by date (most recent first)
-        articles_sorted = sorted(articles, key=lambda x: x["date"], reverse=True)
+        # Sort articles by date (most recent first), but handle None dates
+        # Articles with dates come first, then articles without dates (preserve original order)
+        articles_with_date = [a for a in articles if a["date"] is not None]
+        articles_without_date = [a for a in articles if a["date"] is None]
+
+        articles_with_date.sort(key=lambda x: x["date"], reverse=True)
+        articles_sorted = articles_with_date + articles_without_date
 
         # Add entries
         for article in articles_sorted:
@@ -241,7 +278,11 @@ def generate_rss_feed(articles, feed_name="anthropic_research"):
             fe.title(article["title"])
             fe.description(article["description"])
             fe.link(href=article["link"])
-            fe.published(article["date"])
+
+            # Only set published date if we have a valid date
+            if article["date"]:
+                fe.published(article["date"])
+
             fe.category(term=article["category"])
             fe.id(article["link"])
 
