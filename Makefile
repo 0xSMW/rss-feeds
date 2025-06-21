@@ -86,3 +86,20 @@ generate_ollama_feed: check-env  ## Generate RSS feed for ollama/blog
 .PHONY: generate_paulgraham_feed
 generate_paulgraham_feed: check-env  ## Generate RSS feed for paulgraham/articles
 	python feed_generators/paulgraham_blog.py
+
+#######################
+### Manual Testing  ###
+######################
+
+.PHONY: test_feed_workflow
+test_feed_workflow:  ## Run the .github/workflows/test_feed.yml workflow locally using act
+	@if command -v act >/dev/null 2>&1; then \
+	  act --container-architecture linux/amd64 -W .github/workflows/test_feed.yml; \
+	else \
+	  echo 'The `act` tool is not installed. To run GitHub Actions locally, install act: https://github.com/nektos/act'; \
+	fi
+
+.PHONY: test_feed_generate
+test_feed_generate:  ## Run the test_feed.py script
+	@echo 'Running test_feed.py...'
+	@python feed_generators/test_feed.py
