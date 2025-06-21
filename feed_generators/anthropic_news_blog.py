@@ -89,7 +89,7 @@ def parse_news_html(html_content):
         raise
 
 
-def generate_rss_feed(articles, feed_name="anthropic"):
+def generate_rss_feed(articles, feed_name="anthropic_news"):
     """Generate RSS feed from news articles."""
     try:
         fg = FeedGenerator()
@@ -99,7 +99,7 @@ def generate_rss_feed(articles, feed_name="anthropic"):
         fg.language("en")
 
         # Set feed metadata
-        fg.author({"name": "Anthropic"})
+        fg.author({"name": "Anthropic News"})
         fg.logo("https://www.anthropic.com/images/icons/apple-touch-icon.png")
         fg.subtitle("Latest updates from Anthropic's newsroom")
         fg.link(href="https://www.anthropic.com/news", rel="alternate")
@@ -160,7 +160,7 @@ def get_existing_links_from_feed(feed_path):
     return existing_links
 
 
-def main(feed_name="anthropic"):
+def main(feed_name="anthropic_news"):
     """Main function to generate RSS feed from Anthropic's news page."""
     try:
         # Fetch news content
