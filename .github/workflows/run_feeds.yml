@@ -18,6 +18,11 @@ jobs:
         with:
           python-version: "3.11" # Use Python 3.11 to include distutils
 
+      - name: Install uv
+        run: |
+          curl -LsSf https://astral.sh/uv/install.sh | sh
+          echo "$HOME/.local/bin" >> $GITHUB_PATH
+
       - name: Install system dependencies
         run: |
           sudo apt-get update
@@ -34,18 +39,12 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y google-chrome-stable
 
-      - name: Install Python dependencies
-        run: |
-          python -m venv venv
-          source venv/bin/activate
-          python -m pip install --upgrade pip
-          pip install -r requirements.txt
-
-      - name: Run all feed generators
+      - name: Install Python dependencies and run feed generators
         run: |
           set -e  # Fail the step on any error
-          source venv/bin/activate
-          python feed_generators/run_all_feeds.py
+          uv venv
+          uv pip install -r requirements.txt
+          .venv/bin/python feed_generators/run_all_feeds.py
 
       - name: Commit and push feed
         run: |

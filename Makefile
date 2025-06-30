@@ -22,29 +22,27 @@ ifndef VIRTUAL_ENV
 endif
 
 .PHONY: env_create
-env_create:  ## Create the env
-	python3 -m venv venv
+env_create:  ## Create the virtual environment
+	uv venv
 
 .PHONY: env_source
 env_source:  ## Source the env; must be execute like so: $(make env_source)
-	@echo 'source venv/bin/activate'
+	@echo 'source .venv/bin/activate'
 
 .PHONY: clean
 clean:  ## Clean generated files and virtual environment
 	rm -rf venv
+	rm -rf .venv
 	rm -rf feeds/*.xml
 
 ##########################
-### Pip Common Targets ###
+### Uvx Common Targets ###
 ##########################
 
-.PHONY: pip_freeze
-pip_freeze: check-env ## Freeze the pip requirements
-	pip freeze > requirements.txt
-
-.PHONY: pip_install
-pip_install: check-env ## Install the pip requirements
-	pip install -r requirements.txt
+.PHONY: uvx_install
+uvx_install: ## Install dependencies using uv
+	uv venv
+	uv pip install -r requirements.txt
 
 #############################
 ### Python Common Targets ###
@@ -100,6 +98,6 @@ test_feed_workflow:  ## Run the .github/workflows/test_feed.yml workflow locally
 	fi
 
 .PHONY: test_feed_generate
-test_feed_generate:  ## Run the test_feed.py script
+test_feed_generate: check-env  ## Run the test_feed.py script
 	@echo 'Running test_feed.py...'
 	@python feed_generators/test_feed.py

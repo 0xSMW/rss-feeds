@@ -9,6 +9,7 @@ This is an RSS feed generator that creates RSS feeds for blogs that don't provid
 ## Development Commands
 
 ### Environment Setup
+
 ```bash
 # Create virtual environment
 make env_create
@@ -17,20 +18,21 @@ make env_create
 $(make env_source)
 
 # Install dependencies
-make pip_install
+make uvx_install
 
-# Clean environment and generated files
+# Clean generated files
 make clean
 ```
 
 ### Feed Generation
+
 ```bash
 # Generate all RSS feeds
 make generate_all_feeds
 
 # Generate specific feeds
 make generate_anthropic_news_feed
-make generate_anthropic_engineering_feed  
+make generate_anthropic_engineering_feed
 make generate_anthropic_research_feed
 make generate_openai_research_feed
 make generate_ollama_feed
@@ -38,15 +40,14 @@ make generate_paulgraham_feed
 ```
 
 ### Code Quality
+
 ```bash
 # Format Python code
 make py_format
-
-# Freeze pip requirements
-make pip_freeze
 ```
 
 ### Testing
+
 ```bash
 # Test the feed generation workflow locally (requires 'act' tool)
 make test_feed_workflow
@@ -60,6 +61,7 @@ make test_feed_generate
 ### Core Components
 
 - **Feed Generators** (`feed_generators/`): Individual Python scripts that scrape specific blogs and generate RSS feeds
+
   - Each script follows the pattern: fetch HTML → parse content → generate RSS XML
   - Common utilities: BeautifulSoup for HTML parsing, feedgen for RSS generation, requests for HTTP
   - Output location: `feeds/feed_*.xml`
@@ -71,6 +73,7 @@ make test_feed_generate
 ### Feed Generator Pattern
 
 Each feed generator script follows this structure:
+
 1. Fetch HTML content from target blog using requests
 2. Parse HTML with BeautifulSoup to extract article data
 3. Use feedgen library to create RSS XML
@@ -79,6 +82,7 @@ Each feed generator script follows this structure:
 ### Dependencies
 
 Key Python packages:
+
 - `beautifulsoup4` & `bs4`: HTML parsing
 - `feedgen`: RSS feed generation
 - `requests`: HTTP requests

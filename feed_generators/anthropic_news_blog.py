@@ -123,7 +123,7 @@ def generate_rss_feed(articles, feed_name="anthropic_news"):
         raise
 
 
-def save_rss_feed(feed_generator, feed_name="anthropic"):
+def save_rss_feed(feed_generator, feed_name="anthropic_news"):
     """Save the RSS feed to a file in the feeds directory."""
     try:
         # Ensure feeds directory exists and get its path
