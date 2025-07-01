@@ -11,10 +11,10 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
       - name: Set up Python
-        uses: actions/setup-python@v2
+        uses: actions/setup-python@v4
         with:
           python-version: "3.11" # Use Python 3.11 to include distutils
 
@@ -34,8 +34,8 @@ jobs:
       - name: Install Chrome for Selenium
         run: |
           sudo apt-get install -y wget gnupg
-          wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
-          sudo sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
+          wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo gpg --dearmor -o /usr/share/keyrings/google-chrome-keyring.gpg
+          echo "deb [arch=amd64 signed-by=/usr/share/keyrings/google-chrome-keyring.gpg] http://dl.google.com/linux/chrome/deb/ stable main" | sudo tee /etc/apt/sources.list.d/google-chrome.list
           sudo apt-get update
           sudo apt-get install -y google-chrome-stable
 
@@ -43,13 +43,22 @@ jobs:
         run: |
           set -e  # Fail the step on any error
           uv venv
+          source .venv/bin/activate
           uv pip install -r requirements.txt
-          .venv/bin/python feed_generators/run_all_feeds.py
+          python feed_generators/run_all_feeds.py
 
       - name: Commit and push feed
         run: |
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-          git add .
-          git commit -m 'Update RSS feed'
-          git push
+          
+          # Only add feed files and cache files
+          git add feeds/*.xml feeds/*_cache.json || true
+          
+          # Check if there are any changes to commit
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m 'Update RSS feed'
+            git push
+          fi
