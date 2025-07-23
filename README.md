@@ -15,6 +15,7 @@
 | [OpenAI Research News](https://openai.com/news/research/)         | _planned_                                                                                                                        |
 | [Patrick Collison's Blog](https://patrickcollison.com/culture)    | _planned_                                                                                                                        |
 | [Supabase Blog](https://supabase.com/blog)                        | _planned_                                                                                                                        |
+| [David Crawshaw](https://crawshaw.io/)                        | _planned_                                                                                                                        |
 
 ### What is this?
 
