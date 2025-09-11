@@ -1,6 +1,7 @@
 import requests
 import time
 import undetected_chromedriver as uc
+import re
 from bs4 import BeautifulSoup
 from datetime import datetime
 import pytz
@@ -115,7 +116,28 @@ def _parse_date(text: str) -> datetime:
     return datetime.now(pytz.UTC)
 
 
-def parse_news_html(html_content: str):
+def _find_date_text(root) -> str | None:
+    """Search within an element subtree for a human-readable date like 'July 3, 2025'."""
+    # Regex for month name and day, year (supports short and long month names)
+    month_pattern = (
+        r"(?:Jan(?:uary)?|Feb(?:ruary)?|Mar(?:ch)?|Apr(?:il)?|May|Jun(?:e)?|Jul(?:y)?|"
+        r"Aug(?:ust)?|Sep(?:t(?:ember)?)?|Oct(?:ober)?|Nov(?:ember)?|Dec(?:ember)?)"
+    )
+    date_re = re.compile(rf"\b{month_pattern}\s+\d{{1,2}},\s+\d{{4}}\b", re.IGNORECASE)
+
+    # Prioritize likely containers, then fall back to any text node in common tags
+    for sel in ["time", "div.text-sm span", "div.text-sm time", "span", "p", "div"]:
+        for el in root.select(sel):
+            text = el.get_text(" ", strip=True)
+            if not text:
+                continue
+            m = date_re.search(text)
+            if m:
+                return m.group(0)
+    return None
+
+
+def parse_news_html(html_content: str, default_category: str | None = None):
     """Parse the Mistral AI news listing to extract articles.
 
     Strategy: collect anchors that link to individual news posts (contain '/news/').
@@ -156,7 +178,7 @@ def parse_news_html(html_content: str):
             # Skip if we still don't have a reasonable title
             continue
 
-        # Date: prefer <time> inside anchor, then in parent containers
+        # Date: prefer <time> inside anchor, then other elements with date text, then parent containers
         date_dt = None
         time_el = a.find("time")
         if not time_el and a.parent:
@@ -166,11 +188,18 @@ def parse_news_html(html_content: str):
             dt_attr = (time_el.get("datetime") or "").strip()
             text_val = time_el.get_text(strip=True)
             date_dt = _parse_date(dt_attr or text_val)
+        if date_dt is None:
+            # Look for a readable date string like 'July 3, 2025' inside the anchor
+            date_text = _find_date_text(a)
+            if not date_text and a.parent:
+                date_text = _find_date_text(a.parent)
+            if date_text:
+                date_dt = _parse_date(date_text)
         if not date_dt:
             date_dt = datetime.now(pytz.UTC)
 
-        # Category: default to News; try to read a nearby badge if available
-        category = "News"
+        # Category: default to provided category, else try to read a nearby badge, else 'News'
+        category = default_category or "News"
         badge = a.select_one(".badge, .tag, .label, [class*='category']")
         if badge and badge.get_text(strip=True):
             category = badge.get_text(strip=True)
@@ -188,6 +217,66 @@ def parse_news_html(html_content: str):
 
     logger.info(f"Parsed {len(articles)} Mistral news articles")
     return articles
+
+
+def collect_articles_from_categories(categories: list[str]) -> list[dict]:
+    """Fetch and parse multiple category listing pages, deduplicate by link."""
+    urls = [f"{NEWS_URL}?category={c}" for c in categories]
+
+    html_pages: dict[str, str] = {}
+    # Try selenium once to reuse the same driver across pages
+    try:
+        driver = setup_selenium_driver()
+        logger.info("Fetching category pages with selenium (single session)")
+        for url in urls:
+            driver.get(url)
+            time.sleep(4)
+            # Scroll a bit in case of lazy loading
+            last_height = driver.execute_script("return document.body.scrollHeight")
+            for _ in range(5):
+                driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
+                time.sleep(1.5)
+                new_height = driver.execute_script("return document.body.scrollHeight")
+                if new_height == last_height:
+                    break
+                last_height = new_height
+            html_pages[url] = driver.page_source
+    except Exception as e:
+        logger.warning(f"Selenium multi-fetch failed ({e}); falling back to requests per page")
+        html_pages = {}
+        for url in urls:
+            html_pages[url] = fetch_news_content_requests(url)
+    finally:
+        try:
+            driver.quit()  # type: ignore[name-defined]
+        except Exception:
+            pass
+
+    # Parse and dedupe
+    by_link: dict[str, dict] = {}
+    for url, html in html_pages.items():
+        # Extract category key from query param
+        if "?category=" in url:
+            default_cat = url.split("?category=", 1)[1].split("&", 1)[0].strip()
+            default_cat = default_cat.capitalize() if default_cat else None
+        else:
+            default_cat = None
+
+        articles = parse_news_html(html, default_category=default_cat)
+        for a in articles:
+            link = a.get("link")
+            if not link:
+                continue
+            if link not in by_link:
+                by_link[link] = a
+            else:
+                # Optionally upgrade category if existing is 'News' and we have a specific one
+                if by_link[link].get("category") in (None, "News") and a.get("category") not in (None, "News"):
+                    by_link[link]["category"] = a.get("category")
+
+    combined = list(by_link.values())
+    logger.info(f"Combined {len(combined)} unique articles from categories: {', '.join(categories)}")
+    return combined
 
 
 def generate_rss_feed(articles, feed_name: str = "mistral_news"):
@@ -225,13 +314,9 @@ def save_rss_feed(feed_generator, feed_name: str = "mistral_news") -> Path:
 
 def main(feed_name: str = "mistral_news") -> bool:
     try:
-        # Prefer Selenium to capture dynamically loaded items; fall back to requests
-        try:
-            html = fetch_news_content_selenium(NEWS_URL)
-        except Exception as e:
-            logger.warning(f"Selenium fetch failed ({e}); falling back to requests")
-            html = fetch_news_content_requests(NEWS_URL)
-        articles = parse_news_html(html)
+        # Pull from specific category routes and combine
+        categories = ["product", "solutions", "research", "company"]
+        articles = collect_articles_from_categories(categories)
         if not articles:
             logger.warning("No Mistral news articles parsed. Selectors may need updating.")
         feed = generate_rss_feed(articles, feed_name)
