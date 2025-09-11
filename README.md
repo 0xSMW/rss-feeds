@@ -12,6 +12,8 @@
 | [Anthropic Research](https://www.anthropic.com/research)          | [feed_anthropic_research.xml](https://raw.githubusercontent.com/Olshansk/rss-feeds/main/feeds/feed_anthropic_research.xml)       |
 | [Claude Code Changelog](https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md) | [feed_anthropic_changelog_claude_code.xml](https://raw.githubusercontent.com/Olshansk/rss-feeds/main/feeds/feed_anthropic_changelog_claude_code.xml) |
 | [Ollama Blog](https://ollama.com/blog)                            | [feed_ollama.xml](https://raw.githubusercontent.com/Olshansk/rss-feeds/main/feeds/feed_ollama.xml)                               |
+| [xAI News](https://x.ai/news)                                     | [feed_xai_news.xml](https://raw.githubusercontent.com/Olshansk/rss-feeds/main/feeds/feed_xai_news.xml)                           |
+| [Mistral AI News](https://mistral.ai/news)                        | [feed_mistral_news.xml](https://raw.githubusercontent.com/Olshansk/rss-feeds/main/feeds/feed_mistral_news.xml)                   |
 | [Paul Graham's Article](https://www.paulgraham.com/articles.html) | [feed_paulgraham.xml](https://raw.githubusercontent.com/Olshansk/rss-feeds/main/feeds/feed_paulgraham.xml)                       |
 | [OpenAI Research News](https://openai.com/news/research/)         | _planned_                                                                                                                        |
 | [Patrick Collison's Blog](https://patrickcollison.com/culture)    | _planned_                                                                                                                        |
