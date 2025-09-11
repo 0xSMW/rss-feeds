@@ -1,0 +1,84 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0">
+  <channel>
+    <title>Mistral AI News</title>
+    <link>https://mistral.ai/news</link>
+    <description>Latest news and updates from Mistral AI</description>
+    <docs>http://www.rssboard.org/rss-specification</docs>
+    <generator>python-feedgen</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 11 Sep 2025 07:31:17 +0000</lastBuildDate>
+    <item>
+      <title>Upgrading agentic coding capabilities with the new Devstral models</title>
+      <link>https://mistral.ai/news/devstral-2507</link>
+      <description>Upgrading agentic coding capabilities with the new Devstral models</description>
+      <guid isPermaLink="false">https://mistral.ai/news/devstral-2507</guid>
+      <category>News</category>
+      <pubDate>Thu, 11 Sep 2025 07:31:17 +0000</pubDate>
+    </item>
+    <item>
+      <title>Voxtral</title>
+      <link>https://mistral.ai/news/voxtral</link>
+      <description>Voxtral</description>
+      <guid isPermaLink="false">https://mistral.ai/news/voxtral</guid>
+      <category>News</category>
+      <pubDate>Thu, 11 Sep 2025 07:31:17 +0000</pubDate>
+    </item>
+    <item>
+      <title>Le Chat dives deep.</title>
+      <link>https://mistral.ai/news/le-chat-dives-deep</link>
+      <description>Le Chat dives deep.</description>
+      <guid isPermaLink="false">https://mistral.ai/news/le-chat-dives-deep</guid>
+      <category>News</category>
+      <pubDate>Thu, 11 Sep 2025 07:31:17 +0000</pubDate>
+    </item>
+    <item>
+      <title>Our contribution to a global environmental standard for AI</title>
+      <link>https://mistral.ai/news/our-contribution-to-a-global-environmental-standard-for-ai</link>
+      <description>Our contribution to a global environmental standard for AI</description>
+      <guid isPermaLink="false">https://mistral.ai/news/our-contribution-to-a-global-environmental-standard-for-ai</guid>
+      <category>News</category>
+      <pubDate>Thu, 11 Sep 2025 07:31:17 +0000</pubDate>
+    </item>
+    <item>
+      <title>Announcing Codestral 25.08 and the Complete Mistral Coding Stack for Enterprise</title>
+      <link>https://mistral.ai/news/codestral-25-08</link>
+      <description>Announcing Codestral 25.08 and the Complete Mistral Coding Stack for Enterprise</description>
+      <guid isPermaLink="false">https://mistral.ai/news/codestral-25-08</guid>
+      <category>News</category>
+      <pubDate>Thu, 11 Sep 2025 07:31:17 +0000</pubDate>
+    </item>
+    <item>
+      <title>Unlocking the potential of vision language models on satellite imagery through fine-tuning</title>
+      <link>https://mistral.ai/news/unlocking-potential-vision-language-models-satellite-imagery-fine-tuning</link>
+      <description>Unlocking the potential of vision language models on satellite imagery through fine-tuning</description>
+      <guid isPermaLink="false">https://mistral.ai/news/unlocking-potential-vision-language-models-satellite-imagery-fine-tuning</guid>
+      <category>News</category>
+      <pubDate>Thu, 11 Sep 2025 07:31:17 +0000</pubDate>
+    </item>
+    <item>
+      <title>Make Memory work for you.</title>
+      <link>https://mistral.ai/news/memory</link>
+      <description>Make Memory work for you.</description>
+      <guid isPermaLink="false">https://mistral.ai/news/memory</guid>
+      <category>News</category>
+      <pubDate>Thu, 11 Sep 2025 07:31:17 +0000</pubDate>
+    </item>
+    <item>
+      <title>Mistral AI raises 1.7B€ to accelerate technological progress with AI</title>
+      <link>https://mistral.ai/news/mistral-ai-raises-1-7-b-to-accelerate-technological-progress-with-ai</link>
+      <description>Mistral AI raises 1.7B€ to accelerate technological progress with AI</description>
+      <guid isPermaLink="false">https://mistral.ai/news/mistral-ai-raises-1-7-b-to-accelerate-technological-progress-with-ai</guid>
+      <category>News</category>
+      <pubDate>Thu, 11 Sep 2025 07:31:17 +0000</pubDate>
+    </item>
+    <item>
+      <title>Le Chat. Custom MCP connectors. Memories.</title>
+      <link>https://mistral.ai/news/le-chat-mcp-connectors-memories</link>
+      <description>Le Chat. Custom MCP connectors. Memories.</description>
+      <guid isPermaLink="false">https://mistral.ai/news/le-chat-mcp-connectors-memories</guid>
+      <category>News</category>
+      <pubDate>Thu, 11 Sep 2025 07:31:17 +0000</pubDate>
+    </item>
+  </channel>
+</rss>
