@@ -8,18 +8,10 @@
 | Blog                                                              | Feed                                                                                                                             |
 | ----------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
 | [Anthropic News](https://www.anthropic.com/news)                  | [feed_anthropic_news.xml](https://raw.githubusercontent.com/Olshansk/rss-feeds/main/feeds/feed_anthropic_news.xml)               |
-| [Anthropic Engineering](https://www.anthropic.com/engineering)    | [feed_anthropic_engineering.xml](https://raw.githubusercontent.com/Olshansk/rss-feeds/main/feeds/feed_anthropic_engineering.xml) |
 | [Anthropic Research](https://www.anthropic.com/research)          | [feed_anthropic_research.xml](https://raw.githubusercontent.com/Olshansk/rss-feeds/main/feeds/feed_anthropic_research.xml)       |
-| [Claude Code Changelog](https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md) | [feed_anthropic_changelog_claude_code.xml](https://raw.githubusercontent.com/Olshansk/rss-feeds/main/feeds/feed_anthropic_changelog_claude_code.xml) |
-| [Ollama Blog](https://ollama.com/blog)                            | [feed_ollama.xml](https://raw.githubusercontent.com/Olshansk/rss-feeds/main/feeds/feed_ollama.xml)                               |
 | [xAI News](https://x.ai/news)                                     | [feed_xai_news.xml](https://raw.githubusercontent.com/Olshansk/rss-feeds/main/feeds/feed_xai_news.xml)                           |
 | [Mistral AI News](https://mistral.ai/news)                        | [feed_mistral_news.xml](https://raw.githubusercontent.com/Olshansk/rss-feeds/main/feeds/feed_mistral_news.xml)                   |
-| [Paul Graham's Article](https://www.paulgraham.com/articles.html) | [feed_paulgraham.xml](https://raw.githubusercontent.com/Olshansk/rss-feeds/main/feeds/feed_paulgraham.xml)                       |
-| [OpenAI Research News](https://openai.com/news/research/)         | _planned_                                                                                                                        |
-| [Patrick Collison's Blog](https://patrickcollison.com/culture)    | _planned_                                                                                                                        |
-| [Supabase Blog](https://supabase.com/blog)                        | _planned_                                                                                                                        |
-| [David Crawshaw](https://crawshaw.io/)                        | _planned_                                                                                                                        |
-| [Engineering.fyi](https://engineering.fyi/)| _planned_                                                                                                                        |
+| [OpenAI Research News](https://openai.com/news/research/)         | [feed_openai_research.xml](https://raw.githubusercontent.com/Olshansk/rss-feeds/main/feeds/feed_openai_research.xml)             |
 
 ### What is this?
 
