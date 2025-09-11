@@ -45,39 +45,74 @@ def fetch_news_content_selenium(url):
             driver.quit()
 
 def parse_openai_news_html(html_content):
-    """Parse the HTML content from OpenAI's Research News page."""
+    """Parse the HTML content from OpenAI's Research News page.
+
+    The page structure (as of 2025-09) renders each card as an <a href="/index/..."> element
+    that contains:
+      - title in a div with class token 'text-h5'
+      - category in the first span inside p.text-meta
+      - date in a <time> tag with ISO 'datetime' attribute
+    """
     soup = BeautifulSoup(html_content, "html.parser")
     articles = []
 
-    # Extract news items that contain `/index` in the href
-    news_items = soup.select("a[href*='/index']")  # Look for links containing '/index'
+    # Find anchors that link to individual posts
+    news_items = soup.select("a[href^='/index/']")
 
+    seen_links = set()
     for item in news_items:
         try:
-            # Extract title
-            title_elem = item.select_one("div.line-clamp-4")
-            if not title_elem:
-                continue
-            title = title_elem.text.strip()
-
             # Extract link
-            link = "https://openai.com" + item["href"]
+            href = item.get("href")
+            if not href:
+                continue
+            link = "https://openai.com" + href
+            if link in seen_links:
+                continue
 
-            # Extract date
-            date_elem = item.select_one("span.text-small")
-            if date_elem:
-                try:
-                    date = datetime.strptime(date_elem.text.strip(), "%b %d, %Y")
-                    date = date.replace(tzinfo=pytz.UTC)
-                except Exception:
-                    logger.warning(f"Date parsing failed for article: {title}")
-                    date = datetime.now(pytz.UTC)
+            # Extract title: robustly match any element whose class contains 'text-h5'
+            title_elem = item.select_one("div.text-h5") or item.select_one("div[class*='text-h5']")
+            if title_elem and title_elem.text.strip():
+                title = title_elem.text.strip()
             else:
-                date = datetime.now(pytz.UTC)
+                # Fallback: derive from aria-label (format: "Title - Category - Mon d, YYYY")
+                aria = item.get("aria-label", "").strip()
+                title = aria.split(" - ")[0] if aria else None
+            if not title:
+                continue
+
+            # Extract category
+            cat_elem = item.select_one("p.text-meta span")
+            category = (cat_elem.text.strip() if cat_elem and cat_elem.text else "Research")
+
+            # Extract date from <time datetime="...">
+            date_obj = None
+            time_elem = item.select_one("time")
+            if time_elem:
+                dt_attr = time_elem.get("datetime", "").strip()
+                if dt_attr:
+                    try:
+                        # Handle values like '2025-08-07T10:00' (no timezone) by assuming UTC
+                        date_obj = datetime.fromisoformat(dt_attr)
+                        if date_obj.tzinfo is None:
+                            date_obj = date_obj.replace(tzinfo=pytz.UTC)
+                    except Exception:
+                        pass
+            if date_obj is None:
+                # Fallback to now (UTC) to avoid missing items
+                logger.warning(f"Date not found or unparsable for: {title}; defaulting to now")
+                date_obj = datetime.now(pytz.UTC)
 
             articles.append(
-                {"title": title, "link": link, "date": date, "category": "Research", "description": title}
+                {
+                    "title": title,
+                    "link": link,
+                    "date": date_obj,
+                    "category": category,
+                    "description": title,
+                }
             )
+            seen_links.add(link)
         except Exception as e:
             logger.warning(f"Skipping an article due to parsing error: {e}")
             continue
