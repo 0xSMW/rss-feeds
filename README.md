@@ -1,17 +1,14 @@
 # RSS Feed Generator <!-- omit in toc -->
 
-> [!NOTE]
-> Read the blog post about this repo: [No RSS Feed? No Problem. Using Claude to automate RSS feeds.](https://olshansky.substack.com/p/no-rss-feed-no-problem-using-claude)
-
 ## tl;dr Available RSS Feeds <!-- omit in toc -->
 
 | Blog                                                              | Feed                                                                                                                             |
 | ----------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
-| [Anthropic News](https://www.anthropic.com/news)                  | [feed_anthropic_news.xml](https://raw.githubusercontent.com/Olshansk/rss-feeds/main/feeds/feed_anthropic_news.xml)               |
-| [Anthropic Research](https://www.anthropic.com/research)          | [feed_anthropic_research.xml](https://raw.githubusercontent.com/Olshansk/rss-feeds/main/feeds/feed_anthropic_research.xml)       |
-| [xAI News](https://x.ai/news)                                     | [feed_xai_news.xml](https://raw.githubusercontent.com/Olshansk/rss-feeds/main/feeds/feed_xai_news.xml)                           |
-| [Mistral AI News](https://mistral.ai/news)                        | [feed_mistral_news.xml](https://raw.githubusercontent.com/Olshansk/rss-feeds/main/feeds/feed_mistral_news.xml)                   |
-| [OpenAI Research News](https://openai.com/news/research/)         | [feed_openai_research.xml](https://raw.githubusercontent.com/Olshansk/rss-feeds/main/feeds/feed_openai_research.xml)             |
+| [Anthropic News](https://www.anthropic.com/news)                  | [feed_anthropic_news.xml](https://raw.githubusercontent.com/0xSMW/rss-feeds/main/feeds/feed_anthropic_news.xml)               |
+| [Anthropic Research](https://www.anthropic.com/research)          | [feed_anthropic_research.xml](https://raw.githubusercontent.com/0xSMW/rss-feeds/main/feeds/feed_anthropic_research.xml)       |
+| [xAI News](https://x.ai/news)                                     | [feed_xai_news.xml](https://raw.githubusercontent.com/0xSMW/rss-feeds/main/feeds/feed_xai_news.xml)                           |
+| [Mistral AI News](https://mistral.ai/news)                        | [feed_mistral_news.xml](https://raw.githubusercontent.com/0xSMW/rss-feeds/main/feeds/feed_mistral_news.xml)                   |
+| [OpenAI Research News](https://openai.com/news/research/)         | [feed_openai_research.xml](https://raw.githubusercontent.com/0xSMW/rss-feeds/main/feeds/feed_openai_research.xml)             |
 
 ### What is this?
 
@@ -39,7 +36,7 @@ You know that blog you like that doesn't have an RSS feed and might never will?
 - Use the **raw** link for your RSS reader. Example:
 
   ```text
-    https://raw.githubusercontent.com/Olshansk/rss-feeds/main/feeds/feed_ollama.xml
+    https://raw.githubusercontent.com/0xSMW/rss-feeds/main/feeds/feed_ollama.xml
   ```
 
 - Use your RSS reader of choice to subscribe to the feed (e.g., [Blogtrottr](https://blogtrottr.com/)).
@@ -48,9 +45,9 @@ You know that blog you like that doesn't have an RSS feed and might never will?
 
 Want me to create a feed for you?
 
-[Open a GitHub issue](https://github.com/Olshansk/rss-feeds/issues/new?template=request_rss_feed.md) and include the blog URL.
+[Open a GitHub issue](https://github.com/0xSMW/rss-feeds/issues/new?template=request_rss_feed.md) and include the blog URL.
 
-If I do, consider supporting my 🌟🧋 addiction by [buying me a coffee](https://buymeacoffee.com/olshansky).
+If I do, consider supporting my 🌟🧋 addiction by [buying me a coffee](https://buymeacoffee.com/0xSMWy).
 
 ### Create a new a Feed
 
@@ -70,7 +67,7 @@ GitHub Actions will run your script automatically once it's committed
 
 ### Project Tools
 
-- **GitHub Copilot Workspace:** Used for some PRs ([label: copilot](https://github.com/Olshansk/rss-feeds/pulls?q=label%3Acopilot+)).
+- **GitHub Copilot Workspace:** Used for some PRs ([label: copilot](https://github.com/0xSMW/rss-feeds/pulls?q=label%3Acopilot+)).
 - **Claude Projects:**
 
   - Converts blog HTML to RSS via Python scripts.
@@ -84,7 +81,7 @@ GitHub Actions will run your script automatically once it's committed
 
 ## Star History
 
-[![Star History Chart](https://api.star-history.com/svg?repos=Olshansk/rss-feeds&type=Date)](https://star-history.com/#Olshansk/rss-feeds&Date)
+[![Star History Chart](https://api.star-history.com/svg?repos=0xSMW/rss-feeds&type=Date)](https://star-history.com/#0xSMW/rss-feeds&Date)
 
 ## How It Works
 
