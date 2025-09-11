@@ -7,11 +7,17 @@ on:
 
 jobs:
   run-feeds:
+    permissions:
+      contents: write
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          # Ensure we have the branch checked out and full history for pushing
+          ref: main
+          fetch-depth: 0
 
       - name: Set up Python
         uses: actions/setup-python@v4
@@ -49,16 +55,18 @@ jobs:
 
       - name: Commit and push feed
         run: |
-          git config --global user.name 'github-actions[bot]'
-          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-          
-          # Only add feed files and cache files
+          set -e
+          git config user.name 'github-actions[bot]'
+          git config user.email 'github-actions[bot]@users.noreply.github.com'
+
+          # Stage any changes under feeds/ (XML and any future cache files)
           git add feeds/*.xml || true
-          
-          # Check if there are any changes to commit
+
+          # Commit and push if anything is staged
           if git diff --staged --quiet; then
             echo "No changes to commit"
           else
             git commit -m "Update RSS feed $(date '+%m%d%Y %H%M')"
-            git push
+            # Push explicitly to main in case of detached HEAD
+            git push origin HEAD:main
           fi
