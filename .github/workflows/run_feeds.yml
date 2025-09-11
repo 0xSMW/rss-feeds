@@ -59,6 +59,6 @@ jobs:
           if git diff --staged --quiet; then
             echo "No changes to commit"
           else
-            git commit -m 'Update RSS feed'
+            git commit -m "Update RSS feed $(date '+%m%d%Y %H%M')"
             git push
           fi
