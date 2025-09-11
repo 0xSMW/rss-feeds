@@ -1,0 +1,133 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0">
+  <channel>
+    <title>xAI News</title>
+    <link>https://x.ai/news</link>
+    <description>Latest news and updates from xAI</description>
+    <atom:link href="https://x.ai/news/feed_xai_news.xml" rel="self"/>
+    <docs>http://www.rssboard.org/rss-specification</docs>
+    <generator>python-feedgen</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 11 Sep 2025 07:26:19 +0000</lastBuildDate>
+    <item>
+      <title>Announcing Grok</title>
+      <link>https://x.ai/news/grok</link>
+      <description>Announcing Grok</description>
+      <guid isPermaLink="false">https://x.ai/news/grok</guid>
+      <category>News</category>
+      <pubDate>Thu, 11 Sep 2025 07:26:19 +0000</pubDate>
+    </item>
+    <item>
+      <title>Announcing PromptIDE</title>
+      <link>https://x.ai/news/prompt-ide</link>
+      <description>Announcing PromptIDE</description>
+      <guid isPermaLink="false">https://x.ai/news/prompt-ide</guid>
+      <category>News</category>
+      <pubDate>Thu, 11 Sep 2025 07:26:19 +0000</pubDate>
+    </item>
+    <item>
+      <title>Open Release of Grok-1</title>
+      <link>https://x.ai/news/grok-os</link>
+      <description>Open Release of Grok-1</description>
+      <guid isPermaLink="false">https://x.ai/news/grok-os</guid>
+      <category>News</category>
+      <pubDate>Thu, 11 Sep 2025 07:26:19 +0000</pubDate>
+    </item>
+    <item>
+      <title>Announcing Grok-1.5</title>
+      <link>https://x.ai/news/grok-1.5</link>
+      <description>Announcing Grok-1.5</description>
+      <guid isPermaLink="false">https://x.ai/news/grok-1.5</guid>
+      <category>News</category>
+      <pubDate>Thu, 11 Sep 2025 07:26:19 +0000</pubDate>
+    </item>
+    <item>
+      <title>Grok-1.5 Vision Preview</title>
+      <link>https://x.ai/news/grok-1.5v</link>
+      <description>Grok-1.5 Vision Preview</description>
+      <guid isPermaLink="false">https://x.ai/news/grok-1.5v</guid>
+      <category>News</category>
+      <pubDate>Thu, 11 Sep 2025 07:26:19 +0000</pubDate>
+    </item>
+    <item>
+      <title>Series B funding round</title>
+      <link>https://x.ai/news/series-b</link>
+      <description>Series B funding round</description>
+      <guid isPermaLink="false">https://x.ai/news/series-b</guid>
+      <category>News</category>
+      <pubDate>Thu, 11 Sep 2025 07:26:19 +0000</pubDate>
+    </item>
+    <item>
+      <title>Grok-2 Beta Release</title>
+      <link>https://x.ai/news/grok-2</link>
+      <description>Grok-2 Beta Release</description>
+      <guid isPermaLink="false">https://x.ai/news/grok-2</guid>
+      <category>News</category>
+      <pubDate>Thu, 11 Sep 2025 07:26:19 +0000</pubDate>
+    </item>
+    <item>
+      <title>API Public Beta</title>
+      <link>https://x.ai/news/api</link>
+      <description>API Public Beta</description>
+      <guid isPermaLink="false">https://x.ai/news/api</guid>
+      <category>News</category>
+      <pubDate>Thu, 11 Sep 2025 07:26:19 +0000</pubDate>
+    </item>
+    <item>
+      <title>Grok Image Generation Release</title>
+      <link>https://x.ai/news/grok-image-generation-release</link>
+      <description>Grok Image Generation Release</description>
+      <guid isPermaLink="false">https://x.ai/news/grok-image-generation-release</guid>
+      <category>News</category>
+      <pubDate>Thu, 11 Sep 2025 07:26:19 +0000</pubDate>
+    </item>
+    <item>
+      <title>Bringing Grok to Everyone</title>
+      <link>https://x.ai/news/grok-1212</link>
+      <description>Bringing Grok to Everyone</description>
+      <guid isPermaLink="false">https://x.ai/news/grok-1212</guid>
+      <category>News</category>
+      <pubDate>Thu, 11 Sep 2025 07:26:19 +0000</pubDate>
+    </item>
+    <item>
+      <title>xAI raises $6B Series C</title>
+      <link>https://x.ai/news/series-c</link>
+      <description>xAI raises $6B Series C</description>
+      <guid isPermaLink="false">https://x.ai/news/series-c</guid>
+      <category>News</category>
+      <pubDate>Thu, 11 Sep 2025 07:26:19 +0000</pubDate>
+    </item>
+    <item>
+      <title>Grok 3 Beta — The Age of Reasoning Agents</title>
+      <link>https://x.ai/news/grok-3</link>
+      <description>Grok 3 Beta — The Age of Reasoning Agents</description>
+      <guid isPermaLink="false">https://x.ai/news/grok-3</guid>
+      <category>News</category>
+      <pubDate>Thu, 11 Sep 2025 07:26:19 +0000</pubDate>
+    </item>
+    <item>
+      <title>Announcing Grok for Government</title>
+      <link>https://x.ai/news/government</link>
+      <description>Announcing Grok for Government</description>
+      <guid isPermaLink="false">https://x.ai/news/government</guid>
+      <category>News</category>
+      <pubDate>Thu, 11 Sep 2025 07:26:19 +0000</pubDate>
+    </item>
+    <item>
+      <title>Grok 4</title>
+      <link>https://x.ai/news/grok-4</link>
+      <description>Grok 4</description>
+      <guid isPermaLink="false">https://x.ai/news/grok-4</guid>
+      <category>News</category>
+      <pubDate>Thu, 11 Sep 2025 07:26:19 +0000</pubDate>
+    </item>
+    <item>
+      <title>Grok Code Fast 1</title>
+      <link>https://x.ai/news/grok-code-fast-1</link>
+      <description>Grok Code Fast 1</description>
+      <guid isPermaLink="false">https://x.ai/news/grok-code-fast-1</guid>
+      <category>News</category>
+      <pubDate>Thu, 11 Sep 2025 07:26:19 +0000</pubDate>
+    </item>
+  </channel>
+</rss>
