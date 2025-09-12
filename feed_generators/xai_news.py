@@ -131,6 +131,24 @@ def fetch_html(url: str) -> str:
         return fetch_news_content_selenium(url)
 
 
+def fetch_article_html_selenium(url: str) -> str | None:
+    """Fetch a single article page via Selenium and return HTML, or None on error."""
+    try:
+        driver = setup_selenium_driver()
+        driver.get(url)
+        time.sleep(4)
+        html = driver.page_source
+        return html
+    except Exception as e:
+        logger.debug(f"Selenium fetch failed for {url}: {e}")
+        return None
+    finally:
+        try:
+            driver.quit()
+        except Exception:
+            pass
+
+
 def _parse_date(text: str):
     """Parse a date string into an aware UTC datetime, with fallbacks."""
     if not text:
@@ -521,17 +539,42 @@ def fetch_contents_parallel(articles: list[dict], cached: dict, max_workers: int
             except Exception as e:
                 logger.debug(f"Parallel fetch parse failed for {art['link']}: {e}")
 
-    # Fallback sequentially (Selenium) for any still missing content
+    # Fallback using Selenium IN PARALLEL for any still missing content
     remaining = [a for a in articles if not a.get("content_html")]
-    for a in remaining:
-        try:
-            html = fetch_html(a["link"])  # includes Selenium fallback
-            content_html, summary = extract_article_content(html, a["link"])
-            a["content_html"] = content_html
+    if remaining:
+        selenium_workers = max(1, int(os.getenv("XAI_SELENIUM_WORKERS", "2")))
+        logger.info(f"Falling back to Selenium for {len(remaining)} items with {selenium_workers} workers")
+
+        def _work(art: dict):
+            url = art["link"]
+            html = fetch_article_html_selenium(url)
+            if not html:
+                return (url, None, None)
+            content_html, summary = extract_article_content(html, url)
+            return (url, content_html, summary)
+
+        results = []
+        with ThreadPoolExecutor(max_workers=selenium_workers) as exe:
+            fut_map = {exe.submit(_work, a): a for a in remaining}
+            for fut in as_completed(fut_map):
+                try:
+                    results.append(fut.result())
+                except Exception as e:
+                    # Individual worker failure should not crash the whole run
+                    bad = fut_map[fut]
+                    logger.warning(f"Selenium worker failed for {bad['link']}: {e}")
+
+        by_link = {a["link"]: a for a in articles}
+        for url, content_html, summary in results:
+            if not url:
+                continue
+            art = by_link.get(url)
+            if not art:
+                continue
+            if content_html:
+                art["content_html"] = content_html
             if summary and summary.strip():
-                a["description"] = summary
-        except Exception as e:
-            logger.warning(f"Failed to fetch content for {a['link']} after fallback: {e}")
+                art["description"] = summary
 
 
 def generate_rss_feed(articles, feed_name: str = "xai_news"):
