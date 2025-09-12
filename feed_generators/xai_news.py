@@ -8,7 +8,9 @@ from feedgen.feed import FeedGenerator
 import logging
 from pathlib import Path
 import time
+import re
 import undetected_chromedriver as uc
+import argparse
 
 # Set up logging
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
@@ -70,9 +72,19 @@ def fetch_news_content_selenium(url: str = NEWS_URL) -> str:
     try:
         driver = setup_selenium_driver()
         driver.get(url)
-        wait_time = 6
-        logger.info(f"Waiting {wait_time}s for page to load...")
-        time.sleep(wait_time)
+        # Initial wait
+        time.sleep(4)
+
+        # Scroll to load lazy content if any
+        last_height = driver.execute_script("return document.body.scrollHeight")
+        for _ in range(10):
+            driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
+            time.sleep(1.5)
+            new_height = driver.execute_script("return document.body.scrollHeight")
+            if new_height == last_height:
+                break
+            last_height = new_height
+
         html = driver.page_source
         return html
     finally:
@@ -105,6 +117,67 @@ def _parse_date(text: str):
         return None
 
 
+def _find_date_text_near(element) -> str | None:
+    """Find a human-readable date near the given element.
+
+    Looks for:
+    - <time> elements (datetime attr or text)
+    - Elements with classes like 'mono-tag' used by xAI for dates
+    - Any text matching 'Month DD, YYYY' within nearby containers
+    """
+    if element is None:
+        return None
+
+    # Regex: Month name + day, year (e.g., August 28, 2025)
+    month_pattern = (
+        r"(?:Jan(?:uary)?|Feb(?:ruary)?|Mar(?:ch)?|Apr(?:il)?|May|Jun(?:e)?|Jul(?:y)?|"
+        r"Aug(?:ust)?|Sep(?:t(?:ember)?)?|Oct(?:ober)?|Nov(?:ember)?|Dec(?:ember)?)"
+    )
+    date_re = re.compile(rf"\b{month_pattern}\s+\d{{1,2}},\s+\d{{4}}\b", re.IGNORECASE)
+
+    def from_time(e):
+        t = e.find("time")
+        if t:
+            return (t.get("datetime") or t.get_text(" ", strip=True) or "").strip()
+        return None
+
+    # 1) Inside the element
+    dt_text = from_time(element)
+    if dt_text:
+        return dt_text
+
+    # 2) Direct siblings or parent
+    for candidate in [element.parent, getattr(element, "previous_sibling", None), getattr(element, "next_sibling", None)]:
+        if not candidate or not getattr(candidate, "find", None):
+            continue
+        dt_text = from_time(candidate)
+        if dt_text:
+            return dt_text
+
+    # 3) Walk up a few ancestors and search within
+    parent = element.parent
+    for _ in range(5):
+        if not parent:
+            break
+        # Prefer explicit date containers seen on xAI: class contains 'mono-tag'
+        for sel in [".mono-tag", "span", "p", "div", "time"]:
+            for el in parent.select(sel):
+                text = (el.get("datetime") if el.name == "time" else None) or el.get_text(" ", strip=True)
+                if not text:
+                    continue
+                if date_re.search(text):
+                    return text
+        parent = parent.parent
+
+    # 4) As a very last resort, scan element subtree
+    for el in element.select("time, .mono-tag, span, p, div"):
+        text = (el.get("datetime") if el.name == "time" else None) or el.get_text(" ", strip=True)
+        if text and date_re.search(text):
+            return text
+
+    return None
+
+
 def parse_xai_news_html(html: str):
     """Parse the xAI News HTML and extract article entries.
 
@@ -129,8 +202,11 @@ def parse_xai_news_html(html: str):
             if link in seen:
                 continue
 
-            # Title: prefer h2/h3 within the anchor; fall back to aria-label; else anchor text
-            title_elem = a.find(["h2", "h3"]) or a.select_one("[class*='title'], [class*='heading']")
+            # Title: prefer heading elements within the anchor; fall back to aria-label; else anchor text
+            title_elem = (
+                a.find(["h1", "h2", "h3", "h4", "h5", "h6"]) or
+                a.select_one("[class*='title'], [class*='heading']")
+            )
             title = (
                 (title_elem.get_text(strip=True) if title_elem else None)
                 or a.get("aria-label", "").strip()
@@ -139,44 +215,57 @@ def parse_xai_news_html(html: str):
             if not title:
                 continue
 
-            # Date: prefer <time datetime> within anchor; else search parent containers
+            # Date: try <time> first, then nearby text like '.mono-tag' or Month DD, YYYY
             date_obj = None
             time_elem = a.find("time")
             if time_elem:
                 dt_attr = (time_elem.get("datetime") or time_elem.get_text(" ", strip=True) or "").strip()
                 date_obj = _parse_date(dt_attr)
             if date_obj is None:
-                # Search one level up for a time or date-looking text
-                parent = a.parent
-                for _ in range(2):
-                    if not parent:
-                        break
-                    t = parent.find("time")
-                    if t:
-                        dt_attr = (t.get("datetime") or t.get_text(" ", strip=True) or "").strip()
-                        date_obj = _parse_date(dt_attr)
-                        if date_obj:
-                            break
-                    parent = parent.parent
+                # Look in siblings/ancestors for a near date text
+                dt_text = _find_date_text_near(a)
+                if dt_text:
+                    date_obj = _parse_date(dt_text)
             if date_obj is None:
                 logger.warning(f"Date not found for '{title}'; defaulting to now (UTC)")
                 date_obj = datetime.now(pytz.UTC)
 
-            articles.append(
-                {
-                    "title": title,
-                    "link": link,
-                    "date": date_obj,
-                    "category": "News",
-                    "description": title,
-                }
-            )
+            # Description: look for a nearby paragraph
+            description = title
+            # Common layout: <a>...</a><p>summary</p> within same container
+            # Try next siblings within the same parent
+            for sib in (a.next_sibling, getattr(a, "next_element", None)):
+                if getattr(sib, "name", None) == "p":
+                    text = sib.get_text(" ", strip=True)
+                    if text:
+                        description = text
+                        break
+            if description == title:
+                # Try parent container
+                parent = a.parent
+                if parent:
+                    p = parent.find("p")
+                    if p and p.get_text(strip=True):
+                        description = p.get_text(" ", strip=True)
+
+            articles.append({
+                "title": title,
+                "link": link,
+                "date": date_obj,
+                "category": "News",
+                "description": description,
+            })
             seen.add(link)
         except Exception as e:
             logger.warning(f"Skipping an item due to parsing error: {e}")
             continue
 
     logger.info(f"Parsed {len(articles)} xAI news items")
+    # Sort by date descending to match typical feed ordering
+    try:
+        articles.sort(key=lambda x: x.get("date") or datetime.min.replace(tzinfo=pytz.UTC), reverse=True)
+    except Exception:
+        pass
     return articles
 
 
@@ -217,13 +306,24 @@ def save_rss_feed(feed_generator, feed_name: str = "xai_news") -> Path:
 
 
 def main():
+    parser = argparse.ArgumentParser(description="Generate xAI News RSS feed")
+    parser.add_argument("--html-file", dest="html_file", help="Path to local HTML file to parse instead of fetching", default=None)
+    parser.add_argument("--feed-name", dest="feed_name", help="Feed name suffix (default: xai_news)", default="xai_news")
+    args = parser.parse_args()
+
     try:
-        html = fetch_news_content(NEWS_URL)
+        if args.html_file:
+            logger.info(f"Reading HTML from file: {args.html_file}")
+            with open(args.html_file, "r", encoding="utf-8") as f:
+                html = f.read()
+        else:
+            html = fetch_news_content(NEWS_URL)
+
         articles = parse_xai_news_html(html)
         if not articles:
             logger.warning("No articles parsed from xAI News. Selectors may need updates.")
-        feed = generate_rss_feed(articles, feed_name="xai_news")
-        save_rss_feed(feed, feed_name="xai_news")
+        feed = generate_rss_feed(articles, feed_name=args.feed_name)
+        save_rss_feed(feed, feed_name=args.feed_name)
     except Exception as e:
         logger.error(f"Failed to generate xAI News feed: {e}")
 
