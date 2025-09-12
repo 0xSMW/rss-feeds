@@ -1,5 +1,8 @@
 # Repository Guidelines
 
+Always test your code after changes by simply running `python feed_generators/openai_research_blog.py` or your edited script
+YOU DO NOT NEED TO SETUP AN ENV if you are CODEX CLI as you are running on a local system already configured
+
 ## Project Structure & Module Organization
 - `feed_generators/`: Python scrapers that convert blog HTML → RSS. Each script outputs an XML file in `feeds/`.
 - `feeds/`: Generated RSS XML files (`feed_*.xml`). Commit outputs.
@@ -8,6 +11,7 @@
 - `deprecated/`: Old or superseded code kept for reference.
 
 ## Build, Test, and Development Commands
+ONLY USE THE FOLLOWING IF YOU ARE NOT CODEX CLI:
 - Environment
   - `make env_create` — create virtualenv via `uv`.
   - `$(make env_source)` — print shell command to activate; run its output.
