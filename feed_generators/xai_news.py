@@ -11,6 +11,8 @@ import time
 import re
 import undetected_chromedriver as uc
 import argparse
+import os
+from concurrent.futures import ThreadPoolExecutor, as_completed
 
 # Set up logging
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
@@ -51,6 +53,24 @@ def fetch_news_content_requests(url: str = NEWS_URL) -> str:
     resp = requests.get(url, headers=headers, timeout=30)
     resp.raise_for_status()
     return resp.text
+
+
+def build_requests_session() -> requests.Session:
+    """Create a configured requests.Session for connection reuse."""
+    s = requests.Session()
+    s.headers.update(
+        {
+            "User-Agent": (
+                "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
+                "(KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+            ),
+            "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8",
+            "Accept-Language": "en-US,en;q=0.9",
+            "Connection": "keep-alive",
+            "Referer": BASE_URL + "/",
+        }
+    )
+    return s
 
 
 def setup_selenium_driver():
@@ -98,6 +118,16 @@ def fetch_news_content(url: str = NEWS_URL) -> str:
         return fetch_news_content_requests(url)
     except Exception as e:
         logger.warning(f"Requests fetch failed ({e}); falling back to Selenium...")
+        return fetch_news_content_selenium(url)
+
+
+def fetch_html(url: str) -> str:
+    """Fetch HTML for a URL, falling back to Selenium if needed."""
+    try:
+        return fetch_news_content_requests(url)
+    except Exception as e:
+        logger.warning(f"Requests fetch failed for {url} ({e}); falling back to Selenium...")
+        # Use dynamic rendering as a fallback
         return fetch_news_content_selenium(url)
 
 
@@ -269,6 +299,241 @@ def parse_xai_news_html(html: str):
     return articles
 
 
+def _clean_article_html(container, base_url: str) -> str:
+    """Clean article container and absolutize links/media.
+
+    - Removes script/style/noscript and common non-content elements
+    - Converts relative href/src to absolute using base_url
+    - Preserves headings, paragraphs, lists, images, blockquotes, code, tables
+    """
+    if container is None:
+        return ""
+
+    # Remove noisy elements by tag
+    for tag in container.select("script, style, noscript, svg use[xmlns], form, iframe[aria-hidden='true']"):
+        tag.decompose()
+
+    # Remove likely-non-content by class/id hints
+    noisy_patterns = [
+        "share",
+        "social",
+        "breadcrumb",
+        "nav",
+        "header",
+        "footer",
+        "subscribe",
+        "newsletter",
+        "related",
+        "author",
+        "meta",
+        "byline",
+        "tags",
+        "comment",
+        "toc",
+        "table-of-contents",
+        "promo",
+        "cta",
+    ]
+    noisy_re = re.compile("|".join([re.escape(p) for p in noisy_patterns]), re.IGNORECASE)
+    for el in container.find_all(True):
+        cid = (el.get("id") or "") + " " + " ".join(el.get("class", []))
+        if cid and noisy_re.search(cid):
+            if not el.find([
+                "p",
+                "h1",
+                "h2",
+                "h3",
+                "h4",
+                "h5",
+                "h6",
+                "li",
+                "img",
+                "pre",
+                "blockquote",
+                "table",
+            ]):
+                el.decompose()
+
+    # Make links and media absolute
+    for a in container.find_all("a", href=True):
+        href = a["href"]
+        if href.startswith(("/", "?")):
+            a["href"] = urljoin(base_url, href)
+    for img in container.find_all("img", src=True):
+        src = img["src"]
+        if src.startswith(("/", "?")):
+            img["src"] = urljoin(base_url, src)
+    for source in container.find_all("source"):
+        for attr in ["src", "srcset"]:
+            val = source.get(attr)
+            if val and (val.startswith("/") or val.startswith("?")):
+                source[attr] = urljoin(base_url, val)
+
+    return str(container)
+
+
+def extract_article_content(html: str, page_url: str) -> tuple[str, str]:
+    """Extract main article content HTML and a plain-text summary.
+
+    Returns (content_html, summary_text)
+    """
+    soup = BeautifulSoup(html, "html.parser")
+
+    # Preferred containers — try obvious content regions
+    candidates = [
+        soup.select_one("main article"),
+        soup.select_one("article"),
+        soup.select_one("main [class*='content']"),
+        soup.select_one("[class*='richtext']"),
+        soup.select_one("[class*='rich-text']"),
+        soup.select_one("[class*='prose']"),
+        soup.select_one("main"),
+    ]
+    container = next((c for c in candidates if c), None)
+    if container is None:
+        # Fallback: largest block by total paragraph text length
+        paragraphs = soup.find_all("p")
+        parent_scores: dict = {}
+        for p in paragraphs:
+            parent = p.find_parent()
+            if parent:
+                parent_scores[parent] = parent_scores.get(parent, 0) + len(p.get_text(strip=True))
+        container = max(parent_scores, key=parent_scores.get) if parent_scores else soup.body
+
+    content_html = _clean_article_html(container, base_url=page_url)
+
+    # Summary: first sufficiently long paragraph
+    summary = ""
+    if container:
+        for p in container.find_all("p"):
+            text = p.get_text(" ", strip=True)
+            if text and len(text) > 40:
+                summary = text
+                break
+    if not summary:
+        summary = soup.title.get_text(strip=True) if soup.title else ""
+
+    return content_html, summary
+
+
+def load_existing_feed(feed_path: Path) -> tuple[list[dict], dict]:
+    """Load existing feed items and a link->cached mapping from an RSS file if present.
+
+    Returns (existing_items, cache_by_link)
+    """
+    items: list[dict] = []
+    cache: dict[str, dict] = {}
+    if not feed_path.exists():
+        return items, cache
+
+    try:
+        with open(feed_path, "r", encoding="utf-8") as f:
+            xml = f.read()
+        soup = BeautifulSoup(xml, "xml")
+        for item in soup.find_all("item"):
+            link_tag = item.find("link")
+            if not link_tag or not link_tag.text:
+                continue
+            link = link_tag.text.strip()
+
+            title = (item.find("title").text if item.find("title") else link)
+            desc_tag = item.find("description")
+            desc = desc_tag.text if desc_tag else title
+            content_tag = item.find("content:encoded") or item.find("encoded")
+            content_html = content_tag.text if content_tag else None
+            # Parse pubDate if present
+            pub = item.find("pubDate")
+            date_obj = None
+            if pub and pub.text:
+                try:
+                    # dateutil handles RFC 2822 format
+                    date_obj = dateparser.parse(pub.text)
+                    if date_obj and date_obj.tzinfo is None:
+                        date_obj = date_obj.replace(tzinfo=pytz.UTC)
+                except Exception:
+                    date_obj = None
+            if date_obj is None:
+                date_obj = datetime.now(pytz.UTC)
+
+            cat_tag = item.find("category")
+            category = cat_tag.text if cat_tag and cat_tag.text else "News"
+
+            article = {
+                "title": title,
+                "link": link,
+                "date": date_obj,
+                "category": category,
+                "description": desc,
+                "content_html": content_html,
+            }
+            items.append(article)
+            cache[link] = {"description": desc, "content_html": content_html}
+    except Exception as e:
+        logger.warning(f"Failed to load existing feed from {feed_path}: {e}")
+
+    return items, cache
+
+
+def fetch_article_page(session: requests.Session, url: str) -> str | None:
+    try:
+        resp = session.get(url, timeout=30)
+        resp.raise_for_status()
+        return resp.text
+    except Exception as e:
+        logger.debug(f"Session fetch failed for {url}: {e}")
+        return None
+
+
+def fetch_contents_parallel(articles: list[dict], cached: dict, max_workers: int = 8) -> None:
+    """Populate content_html/description for uncached articles in parallel via requests.
+
+    Falls back to sequential Selenium for any that still lack content on failure.
+    Mutates the articles list in place.
+    """
+    # First apply cache
+    for a in articles:
+        c = cached.get(a["link"])
+        if c:
+            a["content_html"] = c.get("content_html")
+            if c.get("description"):
+                a["description"] = c["description"]
+
+    to_fetch = [a for a in articles if not a.get("content_html")]
+    if not to_fetch:
+        return
+
+    session = build_requests_session()
+    max_workers = max(1, int(os.getenv("XAI_FEED_WORKERS", str(max_workers))))
+    futures = {}
+    with ThreadPoolExecutor(max_workers=max_workers) as exe:
+        for a in to_fetch:
+            futures[exe.submit(fetch_article_page, session, a["link"])] = a
+
+        for fut in as_completed(futures):
+            art = futures[fut]
+            try:
+                html = fut.result()
+                if html:
+                    content_html, summary = extract_article_content(html, art["link"])
+                    art["content_html"] = content_html
+                    if summary and summary.strip():
+                        art["description"] = summary
+            except Exception as e:
+                logger.debug(f"Parallel fetch parse failed for {art['link']}: {e}")
+
+    # Fallback sequentially (Selenium) for any still missing content
+    remaining = [a for a in articles if not a.get("content_html")]
+    for a in remaining:
+        try:
+            html = fetch_html(a["link"])  # includes Selenium fallback
+            content_html, summary = extract_article_content(html, a["link"])
+            a["content_html"] = content_html
+            if summary and summary.strip():
+                a["description"] = summary
+        except Exception as e:
+            logger.warning(f"Failed to fetch content for {a['link']} after fallback: {e}")
+
+
 def generate_rss_feed(articles, feed_name: str = "xai_news"):
     """Generate RSS feed from parsed articles."""
     fg = FeedGenerator()
@@ -287,7 +552,12 @@ def generate_rss_feed(articles, feed_name: str = "xai_news"):
         fe = fg.add_entry()
         fe.title(article["title"])
         fe.link(href=article["link"])
-        fe.description(article["description"])
+        # Prefer full HTML content via content:encoded, with description as summary
+        content_html = article.get("content_html")
+        summary = article.get("description", article["title"]) or article["title"]
+        if content_html:
+            fe.content(content_html)
+        fe.description(summary)
         fe.published(article["date"])
         fe.category(term=article.get("category", "News"))
         fe.id(article["link"])
@@ -306,12 +576,20 @@ def save_rss_feed(feed_generator, feed_name: str = "xai_news") -> Path:
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Generate xAI News RSS feed")
+    parser = argparse.ArgumentParser(description="Generate xAI News RSS feed with full content and incremental updates")
     parser.add_argument("--html-file", dest="html_file", help="Path to local HTML file to parse instead of fetching", default=None)
     parser.add_argument("--feed-name", dest="feed_name", help="Feed name suffix (default: xai_news)", default="xai_news")
     args = parser.parse_args()
 
     try:
+        feeds_dir = ensure_feeds_directory()
+        existing_feed_path = feeds_dir / f"feed_{args.feed_name}.xml"
+
+        # Load existing items to avoid re-fetching and to append new ones only
+        existing_items, cache = load_existing_feed(existing_feed_path)
+        existing_links = {it["link"] for it in existing_items}
+
+        # Fetch or read index HTML
         if args.html_file:
             logger.info(f"Reading HTML from file: {args.html_file}")
             with open(args.html_file, "r", encoding="utf-8") as f:
@@ -319,10 +597,23 @@ def main():
         else:
             html = fetch_news_content(NEWS_URL)
 
-        articles = parse_xai_news_html(html)
-        if not articles:
-            logger.warning("No articles parsed from xAI News. Selectors may need updates.")
-        feed = generate_rss_feed(articles, feed_name=args.feed_name)
+        # Parse index for latest articles
+        parsed = parse_xai_news_html(html)
+        new_articles = [a for a in parsed if a["link"] not in existing_links]
+        logger.info(f"Found {len(parsed)} parsed items; {len(new_articles)} new since last feed")
+
+        # Fetch full content only for new items (parallel requests; Selenium fallback)
+        fetch_contents_parallel(new_articles, cached=cache, max_workers=int(os.getenv("XAI_FEED_WORKERS", "8")))
+
+        # Merge: keep existing items first (already sorted in prior feed order), then add new ones at top by date
+        try:
+            new_articles.sort(key=lambda x: x.get("date") or datetime.min.replace(tzinfo=pytz.UTC), reverse=True)
+        except Exception:
+            pass
+        merged = new_articles + existing_items
+
+        # Optionally limit feed length to a reasonable number (keep all by default)
+        feed = generate_rss_feed(merged, feed_name=args.feed_name)
         save_rss_feed(feed, feed_name=args.feed_name)
     except Exception as e:
         logger.error(f"Failed to generate xAI News feed: {e}")
