@@ -13,7 +13,7 @@
       <link>https://anthropic.com/research/feed_anthropic_research.xml</link>
     </image>
     <language>en</language>
-    <lastBuildDate>Mon, 15 Sep 2025 00:11:59 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 15 Sep 2025 12:06:41 +0000</lastBuildDate>
     <item>
       <title>A General Language Assistant as a Laboratory for Alignment</title>
       <link>https://www.anthropic.com/research/a-general-language-assistant-as-a-laboratory-for-alignment</link>
@@ -573,6 +573,22 @@
       <guid isPermaLink="false">https://www.anthropic.com/research/end-subset-conversations</guid>
       <category>Research</category>
       <pubDate>Fri, 15 Aug 2025 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Anthropic Economic Index: Tracking AI's role in the US and global economy</title>
+      <link>https://www.anthropic.com/research/economic-index-geography</link>
+      <description>Anthropic Economic Index: Tracking AI's role in the US and global economy</description>
+      <guid isPermaLink="false">https://www.anthropic.com/research/economic-index-geography</guid>
+      <category>Research</category>
+      <pubDate>Mon, 15 Sep 2025 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Anthropic Economic Index report: Uneven geographic and enterprise AI adoption</title>
+      <link>https://www.anthropic.com/research/anthropic-economic-index-september-2025-report</link>
+      <description>Anthropic Economic Index report: Uneven geographic and enterprise AI adoption</description>
+      <guid isPermaLink="false">https://www.anthropic.com/research/anthropic-economic-index-september-2025-report</guid>
+      <category>Research</category>
+      <pubDate>Mon, 15 Sep 2025 00:00:00 +0000</pubDate>
     </item>
   </channel>
 </rss>
