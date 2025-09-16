@@ -13,7 +13,7 @@
       <link>https://anthropic.com/news/feed_anthropic_news.xml</link>
     </image>
     <language>en</language>
-    <lastBuildDate>Mon, 15 Sep 2025 12:07:16 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 16 Sep 2025 00:10:55 +0000</lastBuildDate>
     <item>
       <title>Anthropic raises $124 million to build more reliable, general AI systems</title>
       <link>https://www.anthropic.com/news/anthropic-raises-124-million-to-build-more-reliable-general-ai-systems</link>
@@ -884,6 +884,14 @@
       <description>Anthropic Economic Index: Tracking AI's role in the US and global economy</description>
       <guid isPermaLink="false">https://www.anthropic.com/research/economic-index-geography</guid>
       <category>Societal Impacts</category>
+      <pubDate>Mon, 15 Sep 2025 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Claude is now generally available in Xcode</title>
+      <link>https://www.anthropic.com/news/claude-in-xcode</link>
+      <description>Claude is now generally available in Xcode</description>
+      <guid isPermaLink="false">https://www.anthropic.com/news/claude-in-xcode</guid>
+      <category>Product</category>
       <pubDate>Mon, 15 Sep 2025 00:00:00 +0000</pubDate>
     </item>
   </channel>
