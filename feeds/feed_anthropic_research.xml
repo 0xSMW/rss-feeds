@@ -13,7 +13,7 @@
       <link>https://anthropic.com/research/feed_anthropic_research.xml</link>
     </image>
     <language>en</language>
-    <lastBuildDate>Fri, 03 Oct 2025 12:05:20 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 04 Oct 2025 00:11:32 +0000</lastBuildDate>
     <item>
       <title>A General Language Assistant as a Laboratory for Alignment</title>
       <link>https://www.anthropic.com/research/a-general-language-assistant-as-a-laboratory-for-alignment</link>
@@ -589,6 +589,14 @@
       <guid isPermaLink="false">https://www.anthropic.com/research/anthropic-economic-index-september-2025-report</guid>
       <category>Research</category>
       <pubDate>Mon, 15 Sep 2025 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Building AI for cyber defenders</title>
+      <link>https://www.anthropic.com/research/building-ai-cyber-defenders</link>
+      <description>Building AI for cyber defenders</description>
+      <guid isPermaLink="false">https://www.anthropic.com/research/building-ai-cyber-defenders</guid>
+      <category>Research</category>
+      <pubDate>Fri, 03 Oct 2025 00:00:00 +0000</pubDate>
     </item>
   </channel>
 </rss>
