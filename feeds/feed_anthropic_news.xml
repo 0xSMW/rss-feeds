@@ -13,7 +13,7 @@
       <link>https://anthropic.com/news/feed_anthropic_news.xml</link>
     </image>
     <language>en</language>
-    <lastBuildDate>Tue, 07 Oct 2025 12:07:02 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 08 Oct 2025 00:11:35 +0000</lastBuildDate>
     <item>
       <title>Anthropic raises $124 million to build more reliable, general AI systems</title>
       <link>https://www.anthropic.com/news/anthropic-raises-124-million-to-build-more-reliable-general-ai-systems</link>
@@ -893,6 +893,14 @@
       <guid isPermaLink="false">https://www.anthropic.com/news/claude-in-xcode</guid>
       <category>Product</category>
       <pubDate>Mon, 15 Sep 2025 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Rahul Patil joins Anthropic as Chief Technology Officer</title>
+      <link>https://www.anthropic.com/news/rahul-patil-joins-anthropic</link>
+      <description>Rahul Patil joins Anthropic as Chief Technology Officer</description>
+      <guid isPermaLink="false">https://www.anthropic.com/news/rahul-patil-joins-anthropic</guid>
+      <category>Announcements</category>
+      <pubDate>Tue, 07 Oct 2025 00:00:00 +0000</pubDate>
     </item>
   </channel>
 </rss>
