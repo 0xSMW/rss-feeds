@@ -7,7 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 08 Oct 2025 12:05:41 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 11 Oct 2025 00:10:02 +0000</lastBuildDate>
     <item>
       <title>Weight normalization: A simple reparameterization to accelerate training of deep neural networks</title>
       <link>https://openai.com/index/weight-normalization/</link>
@@ -366,16 +366,16 @@
       <pubDate>Tue, 17 Oct 2017 07:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Asymmetric actor critic for image-based robot learning</title>
-      <link>https://openai.com/index/asymmetric-actor-critic-for-image-based-robot-learning/</link>
-      <description>Asymmetric actor critic for image-based robot learning</description>
+      <title>Sim-to-real transfer of robotic control with dynamics randomization</title>
+      <link>https://openai.com/index/sim-to-real-transfer-of-robotic-control-with-dynamics-randomization/</link>
+      <description>Sim-to-real transfer of robotic control with dynamics randomization</description>
       <category>Publication</category>
       <pubDate>Wed, 18 Oct 2017 07:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Sim-to-real transfer of robotic control with dynamics randomization</title>
-      <link>https://openai.com/index/sim-to-real-transfer-of-robotic-control-with-dynamics-randomization/</link>
-      <description>Sim-to-real transfer of robotic control with dynamics randomization</description>
+      <title>Asymmetric actor critic for image-based robot learning</title>
+      <link>https://openai.com/index/asymmetric-actor-critic-for-image-based-robot-learning/</link>
+      <description>Asymmetric actor critic for image-based robot learning</description>
       <category>Publication</category>
       <pubDate>Wed, 18 Oct 2017 07:00:00 +0000</pubDate>
     </item>
@@ -800,17 +800,17 @@
       <pubDate>Tue, 05 Nov 2019 08:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Safety Gym</title>
-      <link>https://openai.com/index/safety-gym/</link>
-      <description>Safety Gym</description>
-      <category>Release</category>
-      <pubDate>Thu, 21 Nov 2019 08:00:00 +0000</pubDate>
-    </item>
-    <item>
       <title>Benchmarking safe exploration in deep reinforcement learning</title>
       <link>https://openai.com/index/benchmarking-safe-exploration-in-deep-reinforcement-learning/</link>
       <description>Benchmarking safe exploration in deep reinforcement learning</description>
       <category>Publication</category>
+      <pubDate>Thu, 21 Nov 2019 08:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Safety Gym</title>
+      <link>https://openai.com/index/safety-gym/</link>
+      <description>Safety Gym</description>
+      <category>Release</category>
       <pubDate>Thu, 21 Nov 2019 08:00:00 +0000</pubDate>
     </item>
     <item>
@@ -898,16 +898,16 @@
       <pubDate>Mon, 07 Sep 2020 07:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>DALL·E: Creating images from text</title>
-      <link>https://openai.com/index/dall-e/</link>
-      <description>DALL·E: Creating images from text</description>
+      <title>CLIP: Connecting text and images</title>
+      <link>https://openai.com/index/clip/</link>
+      <description>CLIP: Connecting text and images</description>
       <category>Milestone</category>
       <pubDate>Tue, 05 Jan 2021 08:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>CLIP: Connecting text and images</title>
-      <link>https://openai.com/index/clip/</link>
-      <description>CLIP: Connecting text and images</description>
+      <title>DALL·E: Creating images from text</title>
+      <link>https://openai.com/index/dall-e/</link>
+      <description>DALL·E: Creating images from text</description>
       <category>Milestone</category>
       <pubDate>Tue, 05 Jan 2021 08:00:00 +0000</pubDate>
     </item>
@@ -1227,13 +1227,6 @@
       <pubDate>Thu, 06 Jun 2024 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Improved Techniques for Training Consistency Models</title>
-      <link>https://openai.com/index/improved-techniques-for-training-consistency-models/</link>
-      <description>Improved Techniques for Training Consistency Models</description>
-      <category>Publication</category>
-      <pubDate>Thu, 20 Jun 2024 00:00:00 +0000</pubDate>
-    </item>
-    <item>
       <title>Consistency Models</title>
       <link>https://openai.com/index/consistency-models/</link>
       <description>Consistency Models</description>
@@ -1244,6 +1237,13 @@
       <title>A Holistic Approach to Undesired Content Detection in the Real World</title>
       <link>https://openai.com/index/a-holistic-approach-to-undesired-content-detection-in-the-real-world/</link>
       <description>A Holistic Approach to Undesired Content Detection in the Real World</description>
+      <category>Publication</category>
+      <pubDate>Thu, 20 Jun 2024 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Improved Techniques for Training Consistency Models</title>
+      <link>https://openai.com/index/improved-techniques-for-training-consistency-models/</link>
+      <description>Improved Techniques for Training Consistency Models</description>
       <category>Publication</category>
       <pubDate>Thu, 20 Jun 2024 00:00:00 +0000</pubDate>
     </item>
@@ -1388,17 +1388,17 @@
       <pubDate>Thu, 23 Jan 2025 10:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>OpenAI o3-mini System Card</title>
-      <link>https://openai.com/index/o3-mini-system-card/</link>
-      <description>OpenAI o3-mini System Card</description>
-      <category>Publication</category>
-      <pubDate>Fri, 31 Jan 2025 11:00:00 +0000</pubDate>
-    </item>
-    <item>
       <title>OpenAI o3-mini</title>
       <link>https://openai.com/index/openai-o3-mini/</link>
       <description>OpenAI o3-mini</description>
       <category>Release</category>
+      <pubDate>Fri, 31 Jan 2025 11:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>OpenAI o3-mini System Card</title>
+      <link>https://openai.com/index/o3-mini-system-card/</link>
+      <description>OpenAI o3-mini System Card</description>
+      <category>Publication</category>
       <pubDate>Fri, 31 Jan 2025 11:00:00 +0000</pubDate>
     </item>
     <item>
@@ -1507,6 +1507,13 @@
       <pubDate>Tue, 15 Apr 2025 00:00:00 +0000</pubDate>
     </item>
     <item>
+      <title>Introducing OpenAI o3 and o4-mini</title>
+      <link>https://openai.com/index/introducing-o3-and-o4-mini/</link>
+      <description>Introducing OpenAI o3 and o4-mini</description>
+      <category>Release</category>
+      <pubDate>Wed, 16 Apr 2025 10:00:00 +0000</pubDate>
+    </item>
+    <item>
       <title>Thinking with images</title>
       <link>https://openai.com/index/thinking-with-images/</link>
       <description>Thinking with images</description>
@@ -1521,13 +1528,6 @@
       <pubDate>Wed, 16 Apr 2025 10:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Introducing OpenAI o3 and o4-mini</title>
-      <link>https://openai.com/index/introducing-o3-and-o4-mini/</link>
-      <description>Introducing OpenAI o3 and o4-mini</description>
-      <category>Release</category>
-      <pubDate>Wed, 16 Apr 2025 10:00:00 +0000</pubDate>
-    </item>
-    <item>
       <title>Introducing HealthBench</title>
       <link>https://openai.com/index/healthbench/</link>
       <description>Introducing HealthBench</description>
@@ -1535,17 +1535,17 @@
       <pubDate>Mon, 12 May 2025 10:30:00 +0000</pubDate>
     </item>
     <item>
-      <title>Addendum to o3 and o4-mini system card: Codex</title>
-      <link>https://openai.com/index/o3-o4-mini-codex-system-card-addendum/</link>
-      <description>Addendum to o3 and o4-mini system card: Codex</description>
-      <category>Safety</category>
-      <pubDate>Fri, 16 May 2025 08:00:00 +0000</pubDate>
-    </item>
-    <item>
       <title>Introducing Codex</title>
       <link>https://openai.com/index/introducing-codex/</link>
       <description>Introducing Codex</description>
       <category>Release</category>
+      <pubDate>Fri, 16 May 2025 08:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Addendum to o3 and o4-mini system card: Codex</title>
+      <link>https://openai.com/index/o3-o4-mini-codex-system-card-addendum/</link>
+      <description>Addendum to o3 and o4-mini system card: Codex</description>
+      <category>Safety</category>
       <pubDate>Fri, 16 May 2025 08:00:00 +0000</pubDate>
     </item>
     <item>
@@ -1584,17 +1584,17 @@
       <pubDate>Tue, 22 Jul 2025 10:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>gpt-oss-120b &amp; gpt-oss-20b Model Card</title>
-      <link>https://openai.com/index/gpt-oss-model-card/</link>
-      <description>gpt-oss-120b &amp; gpt-oss-20b Model Card</description>
-      <category>Publication</category>
-      <pubDate>Tue, 05 Aug 2025 00:00:00 +0000</pubDate>
-    </item>
-    <item>
       <title>Estimating worst case frontier risks of open weight LLMs</title>
       <link>https://openai.com/index/estimating-worst-case-frontier-risks-of-open-weight-llms/</link>
       <description>Estimating worst case frontier risks of open weight LLMs</description>
       <category>Safety</category>
+      <pubDate>Tue, 05 Aug 2025 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>gpt-oss-120b &amp; gpt-oss-20b Model Card</title>
+      <link>https://openai.com/index/gpt-oss-model-card/</link>
+      <description>gpt-oss-120b &amp; gpt-oss-20b Model Card</description>
+      <category>Publication</category>
       <pubDate>Tue, 05 Aug 2025 00:00:00 +0000</pubDate>
     </item>
     <item>
@@ -1603,6 +1603,13 @@
       <description>Introducing gpt-oss</description>
       <category>Release</category>
       <pubDate>Tue, 05 Aug 2025 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>GPT-5 System Card</title>
+      <link>https://openai.com/index/gpt-5-system-card/</link>
+      <description>GPT-5 System Card</description>
+      <category>Publication</category>
+      <pubDate>Thu, 07 Aug 2025 00:00:00 +0000</pubDate>
     </item>
     <item>
       <title>Introducing GPT-5</title>
@@ -1616,13 +1623,6 @@
       <link>https://openai.com/index/gpt-5-safe-completions/</link>
       <description>From hard refusals to safe-completions: toward output-centric safety training</description>
       <category>Safety</category>
-      <pubDate>Thu, 07 Aug 2025 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>GPT-5 System Card</title>
-      <link>https://openai.com/index/gpt-5-system-card/</link>
-      <description>GPT-5 System Card</description>
-      <category>Publication</category>
       <pubDate>Thu, 07 Aug 2025 00:00:00 +0000</pubDate>
     </item>
     <item>
@@ -1708,6 +1708,13 @@
       <description>Codex is now generally available</description>
       <category>Product</category>
       <pubDate>Mon, 06 Oct 2025 10:50:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Defining and evaluating political bias in LLMs</title>
+      <link>https://openai.com/index/defining-and-evaluating-political-bias-in-llms/</link>
+      <description>Defining and evaluating political bias in LLMs</description>
+      <category>Research</category>
+      <pubDate>Thu, 09 Oct 2025 13:00:00 +0000</pubDate>
     </item>
   </channel>
 </rss>

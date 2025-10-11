@@ -13,7 +13,7 @@
       <link>https://anthropic.com/research/feed_anthropic_research.xml</link>
     </image>
     <language>en</language>
-    <lastBuildDate>Wed, 08 Oct 2025 12:05:33 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 11 Oct 2025 00:09:53 +0000</lastBuildDate>
     <item>
       <title>A General Language Assistant as a Laboratory for Alignment</title>
       <link>https://www.anthropic.com/research/a-general-language-assistant-as-a-laboratory-for-alignment</link>
@@ -605,6 +605,14 @@
       <guid isPermaLink="false">https://www.anthropic.com/research/petri-open-source-auditing</guid>
       <category>Research</category>
       <pubDate>Mon, 06 Oct 2025 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>A small number of samples can poison LLMs of any size</title>
+      <link>https://www.anthropic.com/research/small-samples-poison</link>
+      <description>A small number of samples can poison LLMs of any size</description>
+      <guid isPermaLink="false">https://www.anthropic.com/research/small-samples-poison</guid>
+      <category>Research</category>
+      <pubDate>Thu, 09 Oct 2025 00:00:00 +0000</pubDate>
     </item>
   </channel>
 </rss>
