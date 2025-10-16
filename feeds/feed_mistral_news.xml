@@ -7,53 +7,13 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 16 Oct 2025 00:10:19 +0000</lastBuildDate>
-    <item>
-      <title>Bringing open AI models to the frontier</title>
-      <link>https://mistral.ai/news/about-mistral-ai</link>
-      <description>Bringing open AI models to the frontier</description>
-      <guid isPermaLink="false">https://mistral.ai/news/about-mistral-ai</guid>
-      <category>Company</category>
-      <pubDate>Wed, 27 Sep 2023 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Mistral AI Fine-tuning Hackathon</title>
-      <link>https://mistral.ai/news/2024-ft-hackathon</link>
-      <description>Mistral AI Fine-tuning Hackathon</description>
-      <guid isPermaLink="false">https://mistral.ai/news/2024-ft-hackathon</guid>
-      <category>Company</category>
-      <pubDate>Wed, 05 Jun 2024 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Mistral Compute</title>
-      <link>https://mistral.ai/news/mistral-compute</link>
-      <description>Mistral Compute</description>
-      <guid isPermaLink="false">https://mistral.ai/news/mistral-compute</guid>
-      <category>Company</category>
-      <pubDate>Wed, 11 Jun 2025 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Our contribution to a global environmental standard for AI</title>
-      <link>https://mistral.ai/news/our-contribution-to-a-global-environmental-standard-for-ai</link>
-      <description>Our contribution to a global environmental standard for AI</description>
-      <guid isPermaLink="false">https://mistral.ai/news/our-contribution-to-a-global-environmental-standard-for-ai</guid>
-      <category>Company</category>
-      <pubDate>Tue, 22 Jul 2025 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Mistral AI raises 1.7B€ to accelerate technological progress with AI</title>
-      <link>https://mistral.ai/news/mistral-ai-raises-1-7-b-to-accelerate-technological-progress-with-ai</link>
-      <description>Mistral AI raises 1.7B€ to accelerate technological progress with AI</description>
-      <guid isPermaLink="false">https://mistral.ai/news/mistral-ai-raises-1-7-b-to-accelerate-technological-progress-with-ai</guid>
-      <category>Company</category>
-      <pubDate>Tue, 09 Sep 2025 00:00:00 +0000</pubDate>
-    </item>
+    <lastBuildDate>Thu, 16 Oct 2025 12:06:41 +0000</lastBuildDate>
     <item>
       <title>Le Chat. Custom MCP connectors. Memories.</title>
       <link>https://mistral.ai/news/le-chat-mcp-connectors-memories</link>
       <description>Le Chat. Custom MCP connectors. Memories.</description>
       <guid isPermaLink="false">https://mistral.ai/news/le-chat-mcp-connectors-memories</guid>
-      <category>Company</category>
+      <category>Product</category>
       <pubDate>Tue, 02 Sep 2025 00:00:00 +0000</pubDate>
     </item>
   </channel>
