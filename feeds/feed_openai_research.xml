@@ -7,7 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 02 Nov 2025 00:11:33 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 02 Nov 2025 12:05:16 +0000</lastBuildDate>
     <item>
       <title>Weight normalization: A simple reparameterization to accelerate training of deep neural networks</title>
       <link>https://openai.com/index/weight-normalization/</link>
@@ -366,16 +366,16 @@
       <pubDate>Tue, 17 Oct 2017 07:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Sim-to-real transfer of robotic control with dynamics randomization</title>
-      <link>https://openai.com/index/sim-to-real-transfer-of-robotic-control-with-dynamics-randomization/</link>
-      <description>Sim-to-real transfer of robotic control with dynamics randomization</description>
+      <title>Asymmetric actor critic for image-based robot learning</title>
+      <link>https://openai.com/index/asymmetric-actor-critic-for-image-based-robot-learning/</link>
+      <description>Asymmetric actor critic for image-based robot learning</description>
       <category>Publication</category>
       <pubDate>Wed, 18 Oct 2017 07:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Asymmetric actor critic for image-based robot learning</title>
-      <link>https://openai.com/index/asymmetric-actor-critic-for-image-based-robot-learning/</link>
-      <description>Asymmetric actor critic for image-based robot learning</description>
+      <title>Sim-to-real transfer of robotic control with dynamics randomization</title>
+      <link>https://openai.com/index/sim-to-real-transfer-of-robotic-control-with-dynamics-randomization/</link>
+      <description>Sim-to-real transfer of robotic control with dynamics randomization</description>
       <category>Publication</category>
       <pubDate>Wed, 18 Oct 2017 07:00:00 +0000</pubDate>
     </item>
@@ -450,17 +450,17 @@
       <pubDate>Tue, 20 Feb 2018 08:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Ingredients for robotics research</title>
-      <link>https://openai.com/index/ingredients-for-robotics-research/</link>
-      <description>Ingredients for robotics research</description>
-      <category>Release</category>
-      <pubDate>Mon, 26 Feb 2018 08:00:00 +0000</pubDate>
-    </item>
-    <item>
       <title>Multi-Goal Reinforcement Learning: Challenging robotics environments and request for research</title>
       <link>https://openai.com/index/multi-goal-reinforcement-learning/</link>
       <description>Multi-Goal Reinforcement Learning: Challenging robotics environments and request for research</description>
       <category>Publication</category>
+      <pubDate>Mon, 26 Feb 2018 08:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Ingredients for robotics research</title>
+      <link>https://openai.com/index/ingredients-for-robotics-research/</link>
+      <description>Ingredients for robotics research</description>
+      <category>Release</category>
       <pubDate>Mon, 26 Feb 2018 08:00:00 +0000</pubDate>
     </item>
     <item>
@@ -800,17 +800,17 @@
       <pubDate>Tue, 05 Nov 2019 08:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Safety Gym</title>
-      <link>https://openai.com/index/safety-gym/</link>
-      <description>Safety Gym</description>
-      <category>Release</category>
-      <pubDate>Thu, 21 Nov 2019 08:00:00 +0000</pubDate>
-    </item>
-    <item>
       <title>Benchmarking safe exploration in deep reinforcement learning</title>
       <link>https://openai.com/index/benchmarking-safe-exploration-in-deep-reinforcement-learning/</link>
       <description>Benchmarking safe exploration in deep reinforcement learning</description>
       <category>Publication</category>
+      <pubDate>Thu, 21 Nov 2019 08:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Safety Gym</title>
+      <link>https://openai.com/index/safety-gym/</link>
+      <description>Safety Gym</description>
+      <category>Release</category>
       <pubDate>Thu, 21 Nov 2019 08:00:00 +0000</pubDate>
     </item>
     <item>
@@ -1234,16 +1234,16 @@
       <pubDate>Thu, 20 Jun 2024 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Consistency Models</title>
-      <link>https://openai.com/index/consistency-models/</link>
-      <description>Consistency Models</description>
+      <title>Improved Techniques for Training Consistency Models</title>
+      <link>https://openai.com/index/improved-techniques-for-training-consistency-models/</link>
+      <description>Improved Techniques for Training Consistency Models</description>
       <category>Publication</category>
       <pubDate>Thu, 20 Jun 2024 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Improved Techniques for Training Consistency Models</title>
-      <link>https://openai.com/index/improved-techniques-for-training-consistency-models/</link>
-      <description>Improved Techniques for Training Consistency Models</description>
+      <title>Consistency Models</title>
+      <link>https://openai.com/index/consistency-models/</link>
+      <description>Consistency Models</description>
       <category>Publication</category>
       <pubDate>Thu, 20 Jun 2024 00:00:00 +0000</pubDate>
     </item>
@@ -1507,17 +1507,17 @@
       <pubDate>Tue, 15 Apr 2025 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Thinking with images</title>
-      <link>https://openai.com/index/thinking-with-images/</link>
-      <description>Thinking with images</description>
-      <category>Release</category>
-      <pubDate>Wed, 16 Apr 2025 10:00:00 +0000</pubDate>
-    </item>
-    <item>
       <title>OpenAI o3 and o4-mini System Card</title>
       <link>https://openai.com/index/o3-o4-mini-system-card/</link>
       <description>OpenAI o3 and o4-mini System Card</description>
       <category>Publication</category>
+      <pubDate>Wed, 16 Apr 2025 10:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Thinking with images</title>
+      <link>https://openai.com/index/thinking-with-images/</link>
+      <description>Thinking with images</description>
+      <category>Release</category>
       <pubDate>Wed, 16 Apr 2025 10:00:00 +0000</pubDate>
     </item>
     <item>
@@ -1584,6 +1584,13 @@
       <pubDate>Tue, 22 Jul 2025 10:00:00 +0000</pubDate>
     </item>
     <item>
+      <title>gpt-oss-120b &amp; gpt-oss-20b Model Card</title>
+      <link>https://openai.com/index/gpt-oss-model-card/</link>
+      <description>gpt-oss-120b &amp; gpt-oss-20b Model Card</description>
+      <category>Publication</category>
+      <pubDate>Tue, 05 Aug 2025 00:00:00 +0000</pubDate>
+    </item>
+    <item>
       <title>Estimating worst case frontier risks of open weight LLMs</title>
       <link>https://openai.com/index/estimating-worst-case-frontier-risks-of-open-weight-llms/</link>
       <description>Estimating worst case frontier risks of open weight LLMs</description>
@@ -1595,13 +1602,6 @@
       <link>https://openai.com/index/introducing-gpt-oss/</link>
       <description>Introducing gpt-oss</description>
       <category>Release</category>
-      <pubDate>Tue, 05 Aug 2025 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>gpt-oss-120b &amp; gpt-oss-20b Model Card</title>
-      <link>https://openai.com/index/gpt-oss-model-card/</link>
-      <description>gpt-oss-120b &amp; gpt-oss-20b Model Card</description>
-      <category>Publication</category>
       <pubDate>Tue, 05 Aug 2025 00:00:00 +0000</pubDate>
     </item>
     <item>
@@ -1689,17 +1689,17 @@
       <pubDate>Thu, 25 Sep 2025 09:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Sora 2 System Card</title>
-      <link>https://openai.com/index/sora-2-system-card/</link>
-      <description>Sora 2 System Card</description>
-      <category>Publication</category>
-      <pubDate>Tue, 30 Sep 2025 00:00:00 +0000</pubDate>
-    </item>
-    <item>
       <title>Sora 2 is here</title>
       <link>https://openai.com/index/sora-2/</link>
       <description>Sora 2 is here</description>
       <category>Research</category>
+      <pubDate>Tue, 30 Sep 2025 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Sora 2 System Card</title>
+      <link>https://openai.com/index/sora-2-system-card/</link>
+      <description>Sora 2 System Card</description>
+      <category>Publication</category>
       <pubDate>Tue, 30 Sep 2025 00:00:00 +0000</pubDate>
     </item>
     <item>
@@ -1724,17 +1724,17 @@
       <pubDate>Mon, 27 Oct 2025 10:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Technical Report: Performance and baseline evaluations of gpt-oss-safeguard-120b and gpt-oss-safeguard-20b</title>
-      <link>https://openai.com/index/gpt-oss-safeguard-technical-report/</link>
-      <description>Technical Report: Performance and baseline evaluations of gpt-oss-safeguard-120b and gpt-oss-safeguard-20b</description>
-      <category>Safety</category>
-      <pubDate>Wed, 29 Oct 2025 00:00:00 +0000</pubDate>
-    </item>
-    <item>
       <title>Introducing gpt-oss-safeguard</title>
       <link>https://openai.com/index/introducing-gpt-oss-safeguard/</link>
       <description>Introducing gpt-oss-safeguard</description>
       <category>Product</category>
+      <pubDate>Wed, 29 Oct 2025 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Technical Report: Performance and baseline evaluations of gpt-oss-safeguard-120b and gpt-oss-safeguard-20b</title>
+      <link>https://openai.com/index/gpt-oss-safeguard-technical-report/</link>
+      <description>Technical Report: Performance and baseline evaluations of gpt-oss-safeguard-120b and gpt-oss-safeguard-20b</description>
+      <category>Safety</category>
       <pubDate>Wed, 29 Oct 2025 00:00:00 +0000</pubDate>
     </item>
   </channel>
