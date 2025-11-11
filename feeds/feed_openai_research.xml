@@ -7,7 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 11 Nov 2025 00:12:12 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 11 Nov 2025 12:05:59 +0000</lastBuildDate>
     <item>
       <title>Weight normalization: A simple reparameterization to accelerate training of deep neural networks</title>
       <link>https://openai.com/index/weight-normalization/</link>
@@ -450,17 +450,17 @@
       <pubDate>Tue, 20 Feb 2018 08:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Ingredients for robotics research</title>
-      <link>https://openai.com/index/ingredients-for-robotics-research/</link>
-      <description>Ingredients for robotics research</description>
-      <category>Release</category>
-      <pubDate>Mon, 26 Feb 2018 08:00:00 +0000</pubDate>
-    </item>
-    <item>
       <title>Multi-Goal Reinforcement Learning: Challenging robotics environments and request for research</title>
       <link>https://openai.com/index/multi-goal-reinforcement-learning/</link>
       <description>Multi-Goal Reinforcement Learning: Challenging robotics environments and request for research</description>
       <category>Publication</category>
+      <pubDate>Mon, 26 Feb 2018 08:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Ingredients for robotics research</title>
+      <link>https://openai.com/index/ingredients-for-robotics-research/</link>
+      <description>Ingredients for robotics research</description>
+      <category>Release</category>
       <pubDate>Mon, 26 Feb 2018 08:00:00 +0000</pubDate>
     </item>
     <item>
@@ -1584,13 +1584,6 @@
       <pubDate>Tue, 22 Jul 2025 10:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Introducing gpt-oss</title>
-      <link>https://openai.com/index/introducing-gpt-oss/</link>
-      <description>Introducing gpt-oss</description>
-      <category>Release</category>
-      <pubDate>Tue, 05 Aug 2025 00:00:00 +0000</pubDate>
-    </item>
-    <item>
       <title>gpt-oss-120b &amp; gpt-oss-20b Model Card</title>
       <link>https://openai.com/index/gpt-oss-model-card/</link>
       <description>gpt-oss-120b &amp; gpt-oss-20b Model Card</description>
@@ -1605,10 +1598,17 @@
       <pubDate>Tue, 05 Aug 2025 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>From hard refusals to safe-completions: toward output-centric safety training</title>
-      <link>https://openai.com/index/gpt-5-safe-completions/</link>
-      <description>From hard refusals to safe-completions: toward output-centric safety training</description>
-      <category>Safety</category>
+      <title>Introducing gpt-oss</title>
+      <link>https://openai.com/index/introducing-gpt-oss/</link>
+      <description>Introducing gpt-oss</description>
+      <category>Release</category>
+      <pubDate>Tue, 05 Aug 2025 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>GPT-5 System Card</title>
+      <link>https://openai.com/index/gpt-5-system-card/</link>
+      <description>GPT-5 System Card</description>
+      <category>Publication</category>
       <pubDate>Thu, 07 Aug 2025 00:00:00 +0000</pubDate>
     </item>
     <item>
@@ -1619,10 +1619,10 @@
       <pubDate>Thu, 07 Aug 2025 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>GPT-5 System Card</title>
-      <link>https://openai.com/index/gpt-5-system-card/</link>
-      <description>GPT-5 System Card</description>
-      <category>Publication</category>
+      <title>From hard refusals to safe-completions: toward output-centric safety training</title>
+      <link>https://openai.com/index/gpt-5-safe-completions/</link>
+      <description>From hard refusals to safe-completions: toward output-centric safety training</description>
+      <category>Safety</category>
       <pubDate>Thu, 07 Aug 2025 00:00:00 +0000</pubDate>
     </item>
     <item>
@@ -1724,17 +1724,17 @@
       <pubDate>Mon, 27 Oct 2025 10:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Introducing gpt-oss-safeguard</title>
-      <link>https://openai.com/index/introducing-gpt-oss-safeguard/</link>
-      <description>Introducing gpt-oss-safeguard</description>
-      <category>Product</category>
-      <pubDate>Wed, 29 Oct 2025 00:00:00 +0000</pubDate>
-    </item>
-    <item>
       <title>Technical Report: Performance and baseline evaluations of gpt-oss-safeguard-120b and gpt-oss-safeguard-20b</title>
       <link>https://openai.com/index/gpt-oss-safeguard-technical-report/</link>
       <description>Technical Report: Performance and baseline evaluations of gpt-oss-safeguard-120b and gpt-oss-safeguard-20b</description>
       <category>Safety</category>
+      <pubDate>Wed, 29 Oct 2025 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Introducing gpt-oss-safeguard</title>
+      <link>https://openai.com/index/introducing-gpt-oss-safeguard/</link>
+      <description>Introducing gpt-oss-safeguard</description>
+      <category>Product</category>
       <pubDate>Wed, 29 Oct 2025 00:00:00 +0000</pubDate>
     </item>
     <item>
