@@ -7,7 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 06 Dec 2025 00:11:13 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 08 Dec 2025 00:11:48 +0000</lastBuildDate>
     <item>
       <title>Weight normalization: A simple reparameterization to accelerate training of deep neural networks</title>
       <link>https://openai.com/index/weight-normalization/</link>
@@ -366,16 +366,16 @@
       <pubDate>Tue, 17 Oct 2017 07:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Sim-to-real transfer of robotic control with dynamics randomization</title>
-      <link>https://openai.com/index/sim-to-real-transfer-of-robotic-control-with-dynamics-randomization/</link>
-      <description>Sim-to-real transfer of robotic control with dynamics randomization</description>
+      <title>Asymmetric actor critic for image-based robot learning</title>
+      <link>https://openai.com/index/asymmetric-actor-critic-for-image-based-robot-learning/</link>
+      <description>Asymmetric actor critic for image-based robot learning</description>
       <category>Publication</category>
       <pubDate>Wed, 18 Oct 2017 07:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Asymmetric actor critic for image-based robot learning</title>
-      <link>https://openai.com/index/asymmetric-actor-critic-for-image-based-robot-learning/</link>
-      <description>Asymmetric actor critic for image-based robot learning</description>
+      <title>Sim-to-real transfer of robotic control with dynamics randomization</title>
+      <link>https://openai.com/index/sim-to-real-transfer-of-robotic-control-with-dynamics-randomization/</link>
+      <description>Sim-to-real transfer of robotic control with dynamics randomization</description>
       <category>Publication</category>
       <pubDate>Wed, 18 Oct 2017 07:00:00 +0000</pubDate>
     </item>
@@ -646,9 +646,9 @@
       <pubDate>Thu, 06 Jun 2024 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Consistency Models</title>
-      <link>https://openai.com/index/consistency-models/</link>
-      <description>Consistency Models</description>
+      <title>Improved Techniques for Training Consistency Models</title>
+      <link>https://openai.com/index/improved-techniques-for-training-consistency-models/</link>
+      <description>Improved Techniques for Training Consistency Models</description>
       <category>Publication</category>
       <pubDate>Thu, 20 Jun 2024 00:00:00 +0000</pubDate>
     </item>
@@ -660,9 +660,9 @@
       <pubDate>Thu, 20 Jun 2024 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Improved Techniques for Training Consistency Models</title>
-      <link>https://openai.com/index/improved-techniques-for-training-consistency-models/</link>
-      <description>Improved Techniques for Training Consistency Models</description>
+      <title>Consistency Models</title>
+      <link>https://openai.com/index/consistency-models/</link>
+      <description>Consistency Models</description>
       <category>Publication</category>
       <pubDate>Thu, 20 Jun 2024 00:00:00 +0000</pubDate>
     </item>
@@ -814,16 +814,16 @@
       <pubDate>Tue, 25 Mar 2025 11:05:00 +0000</pubDate>
     </item>
     <item>
-      <title>Introducing OpenAI o3 and o4-mini</title>
-      <link>https://openai.com/index/introducing-o3-and-o4-mini/</link>
-      <description>Introducing OpenAI o3 and o4-mini</description>
+      <title>Thinking with images</title>
+      <link>https://openai.com/index/thinking-with-images/</link>
+      <description>Thinking with images</description>
       <category>Release</category>
       <pubDate>Wed, 16 Apr 2025 10:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Thinking with images</title>
-      <link>https://openai.com/index/thinking-with-images/</link>
-      <description>Thinking with images</description>
+      <title>Introducing OpenAI o3 and o4-mini</title>
+      <link>https://openai.com/index/introducing-o3-and-o4-mini/</link>
+      <description>Introducing OpenAI o3 and o4-mini</description>
       <category>Release</category>
       <pubDate>Wed, 16 Apr 2025 10:00:00 +0000</pubDate>
     </item>
@@ -863,17 +863,17 @@
       <pubDate>Wed, 18 Jun 2025 10:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>ChatGPT agent System Card</title>
-      <link>https://openai.com/index/chatgpt-agent-system-card/</link>
-      <description>ChatGPT agent System Card</description>
-      <category>Publication</category>
-      <pubDate>Thu, 17 Jul 2025 10:00:00 +0000</pubDate>
-    </item>
-    <item>
       <title>Introducing ChatGPT agent</title>
       <link>https://openai.com/index/introducing-chatgpt-agent/</link>
       <description>Introducing ChatGPT agent</description>
       <category>Product</category>
+      <pubDate>Thu, 17 Jul 2025 10:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>ChatGPT agent System Card</title>
+      <link>https://openai.com/index/chatgpt-agent-system-card/</link>
+      <description>ChatGPT agent System Card</description>
+      <category>Publication</category>
       <pubDate>Thu, 17 Jul 2025 10:00:00 +0000</pubDate>
     </item>
     <item>
@@ -989,17 +989,17 @@
       <pubDate>Thu, 25 Sep 2025 09:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Sora 2 is here</title>
-      <link>https://openai.com/index/sora-2/</link>
-      <description>Sora 2 is here</description>
-      <category>Research</category>
-      <pubDate>Tue, 30 Sep 2025 00:00:00 +0000</pubDate>
-    </item>
-    <item>
       <title>Sora 2 System Card</title>
       <link>https://openai.com/index/sora-2-system-card/</link>
       <description>Sora 2 System Card</description>
       <category>Publication</category>
+      <pubDate>Tue, 30 Sep 2025 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Sora 2 is here</title>
+      <link>https://openai.com/index/sora-2/</link>
+      <description>Sora 2 is here</description>
+      <category>Research</category>
       <pubDate>Tue, 30 Sep 2025 00:00:00 +0000</pubDate>
     </item>
     <item>
@@ -1024,17 +1024,17 @@
       <pubDate>Mon, 27 Oct 2025 10:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Introducing gpt-oss-safeguard</title>
-      <link>https://openai.com/index/introducing-gpt-oss-safeguard/</link>
-      <description>Introducing gpt-oss-safeguard</description>
-      <category>Product</category>
-      <pubDate>Wed, 29 Oct 2025 00:00:00 +0000</pubDate>
-    </item>
-    <item>
       <title>Technical Report: Performance and baseline evaluations of gpt-oss-safeguard-120b and gpt-oss-safeguard-20b</title>
       <link>https://openai.com/index/gpt-oss-safeguard-technical-report/</link>
       <description>Technical Report: Performance and baseline evaluations of gpt-oss-safeguard-120b and gpt-oss-safeguard-20b</description>
       <category>Safety</category>
+      <pubDate>Wed, 29 Oct 2025 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Introducing gpt-oss-safeguard</title>
+      <link>https://openai.com/index/introducing-gpt-oss-safeguard/</link>
+      <description>Introducing gpt-oss-safeguard</description>
+      <category>Product</category>
       <pubDate>Wed, 29 Oct 2025 00:00:00 +0000</pubDate>
     </item>
     <item>
@@ -1073,17 +1073,17 @@
       <pubDate>Thu, 13 Nov 2025 10:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Building more with GPT-5.1-Codex-Max</title>
-      <link>https://openai.com/index/gpt-5-1-codex-max/</link>
-      <description>Building more with GPT-5.1-Codex-Max</description>
-      <category>Product</category>
-      <pubDate>Wed, 19 Nov 2025 00:00:00 +0000</pubDate>
-    </item>
-    <item>
       <title>GPT-5.1-Codex-Max System Card</title>
       <link>https://openai.com/index/gpt-5-1-codex-max-system-card/</link>
       <description>GPT-5.1-Codex-Max System Card</description>
       <category>Publication</category>
+      <pubDate>Wed, 19 Nov 2025 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Building more with GPT-5.1-Codex-Max</title>
+      <link>https://openai.com/index/gpt-5-1-codex-max/</link>
+      <description>Building more with GPT-5.1-Codex-Max</description>
+      <category>Product</category>
       <pubDate>Wed, 19 Nov 2025 00:00:00 +0000</pubDate>
     </item>
     <item>
