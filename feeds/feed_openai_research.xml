@@ -7,7 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 12 Dec 2025 00:12:32 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 12 Dec 2025 12:05:48 +0000</lastBuildDate>
     <item>
       <title>Weight normalization: A simple reparameterization to accelerate training of deep neural networks</title>
       <link>https://openai.com/index/weight-normalization/</link>
@@ -345,17 +345,17 @@
       <pubDate>Fri, 29 Sep 2017 07:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Meta-learning for wrestling</title>
-      <link>https://openai.com/index/meta-learning-for-wrestling/</link>
-      <description>Meta-learning for wrestling</description>
-      <category>Publication</category>
-      <pubDate>Wed, 11 Oct 2017 07:00:00 +0000</pubDate>
-    </item>
-    <item>
       <title>Competitive self-play</title>
       <link>https://openai.com/index/competitive-self-play/</link>
       <description>Competitive self-play</description>
       <category>Milestone</category>
+      <pubDate>Wed, 11 Oct 2017 07:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Meta-learning for wrestling</title>
+      <link>https://openai.com/index/meta-learning-for-wrestling/</link>
+      <description>Meta-learning for wrestling</description>
+      <category>Publication</category>
       <pubDate>Wed, 11 Oct 2017 07:00:00 +0000</pubDate>
     </item>
     <item>
@@ -1101,17 +1101,17 @@
       <pubDate>Wed, 03 Dec 2025 10:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Update to GPT-5 System Card: GPT-5.2</title>
-      <link>https://openai.com/index/gpt-5-system-card-update-gpt-5-2/</link>
-      <description>Update to GPT-5 System Card: GPT-5.2</description>
-      <category>Publication</category>
-      <pubDate>Thu, 11 Dec 2025 00:00:00 +0000</pubDate>
-    </item>
-    <item>
       <title>Introducing GPT-5.2</title>
       <link>https://openai.com/index/introducing-gpt-5-2/</link>
       <description>Introducing GPT-5.2</description>
       <category>Product</category>
+      <pubDate>Thu, 11 Dec 2025 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Update to GPT-5 System Card: GPT-5.2</title>
+      <link>https://openai.com/index/gpt-5-system-card-update-gpt-5-2/</link>
+      <description>Update to GPT-5 System Card: GPT-5.2</description>
+      <category>Publication</category>
       <pubDate>Thu, 11 Dec 2025 00:00:00 +0000</pubDate>
     </item>
     <item>
