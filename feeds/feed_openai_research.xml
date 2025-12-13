@@ -7,7 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 13 Dec 2025 00:12:11 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 13 Dec 2025 12:05:43 +0000</lastBuildDate>
     <item>
       <title>Weight normalization: A simple reparameterization to accelerate training of deep neural networks</title>
       <link>https://openai.com/index/weight-normalization/</link>
@@ -562,13 +562,6 @@
       <pubDate>Sun, 17 Jun 2018 07:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Retro Contest: Results</title>
-      <link>https://openai.com/index/retro-contest-results/</link>
-      <description>Retro Contest: Results</description>
-      <category>Conclusion</category>
-      <pubDate>Fri, 22 Jun 2018 07:00:00 +0000</pubDate>
-    </item>
-    <item>
       <title>Solving Rubik’s Cube with a robot hand</title>
       <link>https://openai.com/index/solving-rubiks-cube/</link>
       <description>Solving Rubik’s Cube with a robot hand</description>
@@ -814,6 +807,13 @@
       <pubDate>Tue, 25 Mar 2025 11:05:00 +0000</pubDate>
     </item>
     <item>
+      <title>Introducing GPT-4.1 in the API</title>
+      <link>https://openai.com/index/gpt-4-1/</link>
+      <description>Introducing GPT-4.1 in the API</description>
+      <category>Product</category>
+      <pubDate>Mon, 14 Apr 2025 10:00:00 +0000</pubDate>
+    </item>
+    <item>
       <title>Thinking with images</title>
       <link>https://openai.com/index/thinking-with-images/</link>
       <description>Thinking with images</description>
@@ -884,6 +884,13 @@
       <pubDate>Tue, 22 Jul 2025 10:00:00 +0000</pubDate>
     </item>
     <item>
+      <title>Introducing gpt-oss</title>
+      <link>https://openai.com/index/introducing-gpt-oss/</link>
+      <description>Introducing gpt-oss</description>
+      <category>Release</category>
+      <pubDate>Tue, 05 Aug 2025 00:00:00 +0000</pubDate>
+    </item>
+    <item>
       <title>Estimating worst case frontier risks of open weight LLMs</title>
       <link>https://openai.com/index/estimating-worst-case-frontier-risks-of-open-weight-llms/</link>
       <description>Estimating worst case frontier risks of open weight LLMs</description>
@@ -898,11 +905,11 @@
       <pubDate>Tue, 05 Aug 2025 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Introducing gpt-oss</title>
-      <link>https://openai.com/index/introducing-gpt-oss/</link>
-      <description>Introducing gpt-oss</description>
-      <category>Release</category>
-      <pubDate>Tue, 05 Aug 2025 00:00:00 +0000</pubDate>
+      <title>GPT-5 System Card</title>
+      <link>https://openai.com/index/gpt-5-system-card/</link>
+      <description>GPT-5 System Card</description>
+      <category>Publication</category>
+      <pubDate>Thu, 07 Aug 2025 00:00:00 +0000</pubDate>
     </item>
     <item>
       <title>From hard refusals to safe-completions: toward output-centric safety training</title>
@@ -916,13 +923,6 @@
       <link>https://openai.com/index/introducing-gpt-5/</link>
       <description>Introducing GPT-5</description>
       <category>Release</category>
-      <pubDate>Thu, 07 Aug 2025 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>GPT-5 System Card</title>
-      <link>https://openai.com/index/gpt-5-system-card/</link>
-      <description>GPT-5 System Card</description>
-      <category>Publication</category>
       <pubDate>Thu, 07 Aug 2025 00:00:00 +0000</pubDate>
     </item>
     <item>
@@ -989,17 +989,17 @@
       <pubDate>Thu, 25 Sep 2025 09:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Sora 2 System Card</title>
-      <link>https://openai.com/index/sora-2-system-card/</link>
-      <description>Sora 2 System Card</description>
-      <category>Publication</category>
-      <pubDate>Tue, 30 Sep 2025 00:00:00 +0000</pubDate>
-    </item>
-    <item>
       <title>Sora 2 is here</title>
       <link>https://openai.com/index/sora-2/</link>
       <description>Sora 2 is here</description>
       <category>Research</category>
+      <pubDate>Tue, 30 Sep 2025 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Sora 2 System Card</title>
+      <link>https://openai.com/index/sora-2-system-card/</link>
+      <description>Sora 2 System Card</description>
+      <category>Publication</category>
       <pubDate>Tue, 30 Sep 2025 00:00:00 +0000</pubDate>
     </item>
     <item>
@@ -1024,17 +1024,17 @@
       <pubDate>Mon, 27 Oct 2025 10:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Introducing gpt-oss-safeguard</title>
-      <link>https://openai.com/index/introducing-gpt-oss-safeguard/</link>
-      <description>Introducing gpt-oss-safeguard</description>
-      <category>Product</category>
-      <pubDate>Wed, 29 Oct 2025 00:00:00 +0000</pubDate>
-    </item>
-    <item>
       <title>Technical Report: Performance and baseline evaluations of gpt-oss-safeguard-120b and gpt-oss-safeguard-20b</title>
       <link>https://openai.com/index/gpt-oss-safeguard-technical-report/</link>
       <description>Technical Report: Performance and baseline evaluations of gpt-oss-safeguard-120b and gpt-oss-safeguard-20b</description>
       <category>Safety</category>
+      <pubDate>Wed, 29 Oct 2025 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Introducing gpt-oss-safeguard</title>
+      <link>https://openai.com/index/introducing-gpt-oss-safeguard/</link>
+      <description>Introducing gpt-oss-safeguard</description>
+      <category>Product</category>
       <pubDate>Wed, 29 Oct 2025 00:00:00 +0000</pubDate>
     </item>
     <item>
