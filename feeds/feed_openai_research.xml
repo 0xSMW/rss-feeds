@@ -7,7 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 16 Dec 2025 12:05:57 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 17 Dec 2025 00:11:32 +0000</lastBuildDate>
     <item>
       <title>Weight normalization: A simple reparameterization to accelerate training of deep neural networks</title>
       <link>https://openai.com/index/weight-normalization/</link>
@@ -345,17 +345,17 @@
       <pubDate>Fri, 29 Sep 2017 07:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Meta-learning for wrestling</title>
-      <link>https://openai.com/index/meta-learning-for-wrestling/</link>
-      <description>Meta-learning for wrestling</description>
-      <category>Publication</category>
-      <pubDate>Wed, 11 Oct 2017 07:00:00 +0000</pubDate>
-    </item>
-    <item>
       <title>Competitive self-play</title>
       <link>https://openai.com/index/competitive-self-play/</link>
       <description>Competitive self-play</description>
       <category>Milestone</category>
+      <pubDate>Wed, 11 Oct 2017 07:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Meta-learning for wrestling</title>
+      <link>https://openai.com/index/meta-learning-for-wrestling/</link>
+      <description>Meta-learning for wrestling</description>
+      <category>Publication</category>
       <pubDate>Wed, 11 Oct 2017 07:00:00 +0000</pubDate>
     </item>
     <item>
@@ -366,16 +366,16 @@
       <pubDate>Tue, 17 Oct 2017 07:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Sim-to-real transfer of robotic control with dynamics randomization</title>
-      <link>https://openai.com/index/sim-to-real-transfer-of-robotic-control-with-dynamics-randomization/</link>
-      <description>Sim-to-real transfer of robotic control with dynamics randomization</description>
+      <title>Asymmetric actor critic for image-based robot learning</title>
+      <link>https://openai.com/index/asymmetric-actor-critic-for-image-based-robot-learning/</link>
+      <description>Asymmetric actor critic for image-based robot learning</description>
       <category>Publication</category>
       <pubDate>Wed, 18 Oct 2017 07:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Asymmetric actor critic for image-based robot learning</title>
-      <link>https://openai.com/index/asymmetric-actor-critic-for-image-based-robot-learning/</link>
-      <description>Asymmetric actor critic for image-based robot learning</description>
+      <title>Sim-to-real transfer of robotic control with dynamics randomization</title>
+      <link>https://openai.com/index/sim-to-real-transfer-of-robotic-control-with-dynamics-randomization/</link>
+      <description>Sim-to-real transfer of robotic control with dynamics randomization</description>
       <category>Publication</category>
       <pubDate>Wed, 18 Oct 2017 07:00:00 +0000</pubDate>
     </item>
@@ -450,17 +450,17 @@
       <pubDate>Tue, 20 Feb 2018 08:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Multi-Goal Reinforcement Learning: Challenging robotics environments and request for research</title>
-      <link>https://openai.com/index/multi-goal-reinforcement-learning/</link>
-      <description>Multi-Goal Reinforcement Learning: Challenging robotics environments and request for research</description>
-      <category>Publication</category>
-      <pubDate>Mon, 26 Feb 2018 08:00:00 +0000</pubDate>
-    </item>
-    <item>
       <title>Ingredients for robotics research</title>
       <link>https://openai.com/index/ingredients-for-robotics-research/</link>
       <description>Ingredients for robotics research</description>
       <category>Release</category>
+      <pubDate>Mon, 26 Feb 2018 08:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Multi-Goal Reinforcement Learning: Challenging robotics environments and request for research</title>
+      <link>https://openai.com/index/multi-goal-reinforcement-learning/</link>
+      <description>Multi-Goal Reinforcement Learning: Challenging robotics environments and request for research</description>
+      <category>Publication</category>
       <pubDate>Mon, 26 Feb 2018 08:00:00 +0000</pubDate>
     </item>
     <item>
@@ -814,6 +814,13 @@
       <pubDate>Mon, 14 Apr 2025 10:00:00 +0000</pubDate>
     </item>
     <item>
+      <title>Thinking with images</title>
+      <link>https://openai.com/index/thinking-with-images/</link>
+      <description>Thinking with images</description>
+      <category>Release</category>
+      <pubDate>Wed, 16 Apr 2025 10:00:00 +0000</pubDate>
+    </item>
+    <item>
       <title>OpenAI o3 and o4-mini System Card</title>
       <link>https://openai.com/index/o3-o4-mini-system-card/</link>
       <description>OpenAI o3 and o4-mini System Card</description>
@@ -824,13 +831,6 @@
       <title>Introducing OpenAI o3 and o4-mini</title>
       <link>https://openai.com/index/introducing-o3-and-o4-mini/</link>
       <description>Introducing OpenAI o3 and o4-mini</description>
-      <category>Release</category>
-      <pubDate>Wed, 16 Apr 2025 10:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Thinking with images</title>
-      <link>https://openai.com/index/thinking-with-images/</link>
-      <description>Thinking with images</description>
       <category>Release</category>
       <pubDate>Wed, 16 Apr 2025 10:00:00 +0000</pubDate>
     </item>
@@ -863,17 +863,17 @@
       <pubDate>Wed, 18 Jun 2025 10:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>ChatGPT agent System Card</title>
-      <link>https://openai.com/index/chatgpt-agent-system-card/</link>
-      <description>ChatGPT agent System Card</description>
-      <category>Publication</category>
-      <pubDate>Thu, 17 Jul 2025 10:00:00 +0000</pubDate>
-    </item>
-    <item>
       <title>Introducing ChatGPT agent</title>
       <link>https://openai.com/index/introducing-chatgpt-agent/</link>
       <description>Introducing ChatGPT agent</description>
       <category>Product</category>
+      <pubDate>Thu, 17 Jul 2025 10:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>ChatGPT agent System Card</title>
+      <link>https://openai.com/index/chatgpt-agent-system-card/</link>
+      <description>ChatGPT agent System Card</description>
+      <category>Publication</category>
       <pubDate>Thu, 17 Jul 2025 10:00:00 +0000</pubDate>
     </item>
     <item>
@@ -905,13 +905,6 @@
       <pubDate>Tue, 05 Aug 2025 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Introducing GPT-5</title>
-      <link>https://openai.com/index/introducing-gpt-5/</link>
-      <description>Introducing GPT-5</description>
-      <category>Release</category>
-      <pubDate>Thu, 07 Aug 2025 00:00:00 +0000</pubDate>
-    </item>
-    <item>
       <title>GPT-5 System Card</title>
       <link>https://openai.com/index/gpt-5-system-card/</link>
       <description>GPT-5 System Card</description>
@@ -923,6 +916,13 @@
       <link>https://openai.com/index/gpt-5-safe-completions/</link>
       <description>From hard refusals to safe-completions: toward output-centric safety training</description>
       <category>Safety</category>
+      <pubDate>Thu, 07 Aug 2025 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Introducing GPT-5</title>
+      <link>https://openai.com/index/introducing-gpt-5/</link>
+      <description>Introducing GPT-5</description>
+      <category>Release</category>
       <pubDate>Thu, 07 Aug 2025 00:00:00 +0000</pubDate>
     </item>
     <item>
@@ -989,17 +989,17 @@
       <pubDate>Thu, 25 Sep 2025 09:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Sora 2 is here</title>
-      <link>https://openai.com/index/sora-2/</link>
-      <description>Sora 2 is here</description>
-      <category>Research</category>
-      <pubDate>Tue, 30 Sep 2025 00:00:00 +0000</pubDate>
-    </item>
-    <item>
       <title>Sora 2 System Card</title>
       <link>https://openai.com/index/sora-2-system-card/</link>
       <description>Sora 2 System Card</description>
       <category>Publication</category>
+      <pubDate>Tue, 30 Sep 2025 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Sora 2 is here</title>
+      <link>https://openai.com/index/sora-2/</link>
+      <description>Sora 2 is here</description>
+      <category>Research</category>
       <pubDate>Tue, 30 Sep 2025 00:00:00 +0000</pubDate>
     </item>
     <item>
@@ -1052,17 +1052,17 @@
       <pubDate>Mon, 03 Nov 2025 22:30:00 +0000</pubDate>
     </item>
     <item>
-      <title>GPT-5.1: A smarter, more conversational ChatGPT</title>
-      <link>https://openai.com/index/gpt-5-1/</link>
-      <description>GPT-5.1: A smarter, more conversational ChatGPT</description>
-      <category>Product</category>
-      <pubDate>Wed, 12 Nov 2025 00:00:00 +0000</pubDate>
-    </item>
-    <item>
       <title>GPT-5.1 Instant and GPT-5.1 Thinking System Card Addendum</title>
       <link>https://openai.com/index/gpt-5-system-card-addendum-gpt-5-1/</link>
       <description>GPT-5.1 Instant and GPT-5.1 Thinking System Card Addendum</description>
       <category>Publication</category>
+      <pubDate>Wed, 12 Nov 2025 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>GPT-5.1: A smarter, more conversational ChatGPT</title>
+      <link>https://openai.com/index/gpt-5-1/</link>
+      <description>GPT-5.1: A smarter, more conversational ChatGPT</description>
+      <category>Product</category>
       <pubDate>Wed, 12 Nov 2025 00:00:00 +0000</pubDate>
     </item>
     <item>
@@ -1101,17 +1101,17 @@
       <pubDate>Wed, 03 Dec 2025 10:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Introducing GPT-5.2</title>
-      <link>https://openai.com/index/introducing-gpt-5-2/</link>
-      <description>Introducing GPT-5.2</description>
-      <category>Product</category>
-      <pubDate>Thu, 11 Dec 2025 00:00:00 +0000</pubDate>
-    </item>
-    <item>
       <title>Update to GPT-5 System Card: GPT-5.2</title>
       <link>https://openai.com/index/gpt-5-system-card-update-gpt-5-2/</link>
       <description>Update to GPT-5 System Card: GPT-5.2</description>
       <category>Publication</category>
+      <pubDate>Thu, 11 Dec 2025 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Introducing GPT-5.2</title>
+      <link>https://openai.com/index/introducing-gpt-5-2/</link>
+      <description>Introducing GPT-5.2</description>
+      <category>Product</category>
       <pubDate>Thu, 11 Dec 2025 00:00:00 +0000</pubDate>
     </item>
     <item>
@@ -1120,6 +1120,27 @@
       <description>Advancing science and math with GPT-5.2</description>
       <category>Publication</category>
       <pubDate>Thu, 11 Dec 2025 10:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>The new ChatGPT Images is here</title>
+      <link>https://openai.com/index/new-chatgpt-images-is-here/</link>
+      <description>The new ChatGPT Images is here</description>
+      <category>Product</category>
+      <pubDate>Tue, 16 Dec 2025 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Measuring AI’s capability to accelerate biological research</title>
+      <link>https://openai.com/index/accelerating-biological-research-in-the-wet-lab/</link>
+      <description>Measuring AI’s capability to accelerate biological research</description>
+      <category>Research</category>
+      <pubDate>Tue, 16 Dec 2025 08:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Evaluating AI’s ability to perform scientific research tasks</title>
+      <link>https://openai.com/index/frontierscience/</link>
+      <description>Evaluating AI’s ability to perform scientific research tasks</description>
+      <category>Research</category>
+      <pubDate>Tue, 16 Dec 2025 09:00:00 +0000</pubDate>
     </item>
   </channel>
 </rss>
