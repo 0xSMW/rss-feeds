@@ -7,7 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 17 Dec 2025 12:05:44 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 18 Dec 2025 00:11:17 +0000</lastBuildDate>
     <item>
       <title>Weight normalization: A simple reparameterization to accelerate training of deep neural networks</title>
       <link>https://openai.com/index/weight-normalization/</link>
@@ -569,16 +569,16 @@
       <pubDate>Tue, 15 Oct 2019 07:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>CLIP: Connecting text and images</title>
-      <link>https://openai.com/index/clip/</link>
-      <description>CLIP: Connecting text and images</description>
+      <title>DALL·E: Creating images from text</title>
+      <link>https://openai.com/index/dall-e/</link>
+      <description>DALL·E: Creating images from text</description>
       <category>Milestone</category>
       <pubDate>Tue, 05 Jan 2021 08:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>DALL·E: Creating images from text</title>
-      <link>https://openai.com/index/dall-e/</link>
-      <description>DALL·E: Creating images from text</description>
+      <title>CLIP: Connecting text and images</title>
+      <link>https://openai.com/index/clip/</link>
+      <description>CLIP: Connecting text and images</description>
       <category>Milestone</category>
       <pubDate>Tue, 05 Jan 2021 08:00:00 +0000</pubDate>
     </item>
@@ -814,17 +814,17 @@
       <pubDate>Mon, 14 Apr 2025 10:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Thinking with images</title>
-      <link>https://openai.com/index/thinking-with-images/</link>
-      <description>Thinking with images</description>
-      <category>Release</category>
-      <pubDate>Wed, 16 Apr 2025 10:00:00 +0000</pubDate>
-    </item>
-    <item>
       <title>OpenAI o3 and o4-mini System Card</title>
       <link>https://openai.com/index/o3-o4-mini-system-card/</link>
       <description>OpenAI o3 and o4-mini System Card</description>
       <category>Publication</category>
+      <pubDate>Wed, 16 Apr 2025 10:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Thinking with images</title>
+      <link>https://openai.com/index/thinking-with-images/</link>
+      <description>Thinking with images</description>
+      <category>Release</category>
       <pubDate>Wed, 16 Apr 2025 10:00:00 +0000</pubDate>
     </item>
     <item>
@@ -863,17 +863,17 @@
       <pubDate>Wed, 18 Jun 2025 10:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Introducing ChatGPT agent</title>
-      <link>https://openai.com/index/introducing-chatgpt-agent/</link>
-      <description>Introducing ChatGPT agent</description>
-      <category>Product</category>
-      <pubDate>Thu, 17 Jul 2025 10:00:00 +0000</pubDate>
-    </item>
-    <item>
       <title>ChatGPT agent System Card</title>
       <link>https://openai.com/index/chatgpt-agent-system-card/</link>
       <description>ChatGPT agent System Card</description>
       <category>Publication</category>
+      <pubDate>Thu, 17 Jul 2025 10:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Introducing ChatGPT agent</title>
+      <link>https://openai.com/index/introducing-chatgpt-agent/</link>
+      <description>Introducing ChatGPT agent</description>
+      <category>Product</category>
       <pubDate>Thu, 17 Jul 2025 10:00:00 +0000</pubDate>
     </item>
     <item>
@@ -891,13 +891,6 @@
       <pubDate>Tue, 05 Aug 2025 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Estimating worst case frontier risks of open weight LLMs</title>
-      <link>https://openai.com/index/estimating-worst-case-frontier-risks-of-open-weight-llms/</link>
-      <description>Estimating worst case frontier risks of open weight LLMs</description>
-      <category>Safety</category>
-      <pubDate>Tue, 05 Aug 2025 00:00:00 +0000</pubDate>
-    </item>
-    <item>
       <title>Introducing gpt-oss</title>
       <link>https://openai.com/index/introducing-gpt-oss/</link>
       <description>Introducing gpt-oss</description>
@@ -905,10 +898,17 @@
       <pubDate>Tue, 05 Aug 2025 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>GPT-5 System Card</title>
-      <link>https://openai.com/index/gpt-5-system-card/</link>
-      <description>GPT-5 System Card</description>
-      <category>Publication</category>
+      <title>Estimating worst case frontier risks of open weight LLMs</title>
+      <link>https://openai.com/index/estimating-worst-case-frontier-risks-of-open-weight-llms/</link>
+      <description>Estimating worst case frontier risks of open weight LLMs</description>
+      <category>Safety</category>
+      <pubDate>Tue, 05 Aug 2025 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Introducing GPT-5</title>
+      <link>https://openai.com/index/introducing-gpt-5/</link>
+      <description>Introducing GPT-5</description>
+      <category>Release</category>
       <pubDate>Thu, 07 Aug 2025 00:00:00 +0000</pubDate>
     </item>
     <item>
@@ -919,10 +919,10 @@
       <pubDate>Thu, 07 Aug 2025 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Introducing GPT-5</title>
-      <link>https://openai.com/index/introducing-gpt-5/</link>
-      <description>Introducing GPT-5</description>
-      <category>Release</category>
+      <title>GPT-5 System Card</title>
+      <link>https://openai.com/index/gpt-5-system-card/</link>
+      <description>GPT-5 System Card</description>
+      <category>Publication</category>
       <pubDate>Thu, 07 Aug 2025 00:00:00 +0000</pubDate>
     </item>
     <item>
@@ -1024,17 +1024,17 @@
       <pubDate>Mon, 27 Oct 2025 10:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Technical Report: Performance and baseline evaluations of gpt-oss-safeguard-120b and gpt-oss-safeguard-20b</title>
-      <link>https://openai.com/index/gpt-oss-safeguard-technical-report/</link>
-      <description>Technical Report: Performance and baseline evaluations of gpt-oss-safeguard-120b and gpt-oss-safeguard-20b</description>
-      <category>Safety</category>
-      <pubDate>Wed, 29 Oct 2025 00:00:00 +0000</pubDate>
-    </item>
-    <item>
       <title>Introducing gpt-oss-safeguard</title>
       <link>https://openai.com/index/introducing-gpt-oss-safeguard/</link>
       <description>Introducing gpt-oss-safeguard</description>
       <category>Product</category>
+      <pubDate>Wed, 29 Oct 2025 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Technical Report: Performance and baseline evaluations of gpt-oss-safeguard-120b and gpt-oss-safeguard-20b</title>
+      <link>https://openai.com/index/gpt-oss-safeguard-technical-report/</link>
+      <description>Technical Report: Performance and baseline evaluations of gpt-oss-safeguard-120b and gpt-oss-safeguard-20b</description>
+      <category>Safety</category>
       <pubDate>Wed, 29 Oct 2025 00:00:00 +0000</pubDate>
     </item>
     <item>
@@ -1052,17 +1052,17 @@
       <pubDate>Mon, 03 Nov 2025 22:30:00 +0000</pubDate>
     </item>
     <item>
-      <title>GPT-5.1 Instant and GPT-5.1 Thinking System Card Addendum</title>
-      <link>https://openai.com/index/gpt-5-system-card-addendum-gpt-5-1/</link>
-      <description>GPT-5.1 Instant and GPT-5.1 Thinking System Card Addendum</description>
-      <category>Publication</category>
-      <pubDate>Wed, 12 Nov 2025 00:00:00 +0000</pubDate>
-    </item>
-    <item>
       <title>GPT-5.1: A smarter, more conversational ChatGPT</title>
       <link>https://openai.com/index/gpt-5-1/</link>
       <description>GPT-5.1: A smarter, more conversational ChatGPT</description>
       <category>Product</category>
+      <pubDate>Wed, 12 Nov 2025 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>GPT-5.1 Instant and GPT-5.1 Thinking System Card Addendum</title>
+      <link>https://openai.com/index/gpt-5-system-card-addendum-gpt-5-1/</link>
+      <description>GPT-5.1 Instant and GPT-5.1 Thinking System Card Addendum</description>
+      <category>Publication</category>
       <pubDate>Wed, 12 Nov 2025 00:00:00 +0000</pubDate>
     </item>
     <item>
