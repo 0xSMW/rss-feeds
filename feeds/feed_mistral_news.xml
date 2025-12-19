@@ -7,7 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 18 Dec 2025 12:05:23 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 19 Dec 2025 00:12:17 +0000</lastBuildDate>
     <item>
       <title>Bringing open AI models to the frontier</title>
       <link>https://mistral.ai/news/about-mistral-ai</link>
@@ -65,14 +65,6 @@
       <pubDate>Thu, 11 Dec 2025 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Medium is the new large.</title>
-      <link>https://mistral.ai/news/mistral-medium-3</link>
-      <description>Medium is the new large.</description>
-      <guid isPermaLink="false">https://mistral.ai/news/mistral-medium-3</guid>
-      <category>Research</category>
-      <pubDate>Wed, 07 May 2025 00:00:00 +0000</pubDate>
-    </item>
-    <item>
       <title>Devstral</title>
       <link>https://mistral.ai/news/devstral</link>
       <description>Devstral</description>
@@ -127,6 +119,14 @@
       <guid isPermaLink="false">https://mistral.ai/news/mistral-3</guid>
       <category>Research</category>
       <pubDate>Tue, 02 Dec 2025 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Introducing: Devstral 2 and Mistral Vibe CLI.</title>
+      <link>https://mistral.ai/news/devstral-2-vibe-cli</link>
+      <description>Introducing: Devstral 2 and Mistral Vibe CLI.</description>
+      <guid isPermaLink="false">https://mistral.ai/news/devstral-2-vibe-cli</guid>
+      <category>Research</category>
+      <pubDate>Tue, 09 Dec 2025 00:00:00 +0000</pubDate>
     </item>
     <item>
       <title>Empowering product development with an agentic workflow</title>
@@ -233,12 +233,12 @@
       <pubDate>Fri, 24 Oct 2025 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Introducing: Devstral 2 and Mistral Vibe CLI.</title>
-      <link>https://mistral.ai/news/devstral-2-vibe-cli</link>
-      <description>Introducing: Devstral 2 and Mistral Vibe CLI.</description>
-      <guid isPermaLink="false">https://mistral.ai/news/devstral-2-vibe-cli</guid>
+      <title>Introducing Mistral OCR 3</title>
+      <link>https://mistral.ai/news/mistral-ocr-3</link>
+      <description>Introducing Mistral OCR 3</description>
+      <guid isPermaLink="false">https://mistral.ai/news/mistral-ocr-3</guid>
       <category>Product</category>
-      <pubDate>Tue, 09 Dec 2025 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 17 Dec 2025 00:00:00 +0000</pubDate>
     </item>
   </channel>
 </rss>
