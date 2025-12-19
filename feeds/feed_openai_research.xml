@@ -7,7 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 19 Dec 2025 00:12:40 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 19 Dec 2025 12:07:15 +0000</lastBuildDate>
     <item>
       <title>Weight normalization: A simple reparameterization to accelerate training of deep neural networks</title>
       <link>https://openai.com/index/weight-normalization/</link>
@@ -345,17 +345,17 @@
       <pubDate>Fri, 29 Sep 2017 07:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Competitive self-play</title>
-      <link>https://openai.com/index/competitive-self-play/</link>
-      <description>Competitive self-play</description>
-      <category>Milestone</category>
-      <pubDate>Wed, 11 Oct 2017 07:00:00 +0000</pubDate>
-    </item>
-    <item>
       <title>Meta-learning for wrestling</title>
       <link>https://openai.com/index/meta-learning-for-wrestling/</link>
       <description>Meta-learning for wrestling</description>
       <category>Publication</category>
+      <pubDate>Wed, 11 Oct 2017 07:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Competitive self-play</title>
+      <link>https://openai.com/index/competitive-self-play/</link>
+      <description>Competitive self-play</description>
+      <category>Milestone</category>
       <pubDate>Wed, 11 Oct 2017 07:00:00 +0000</pubDate>
     </item>
     <item>
@@ -366,16 +366,16 @@
       <pubDate>Tue, 17 Oct 2017 07:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Asymmetric actor critic for image-based robot learning</title>
-      <link>https://openai.com/index/asymmetric-actor-critic-for-image-based-robot-learning/</link>
-      <description>Asymmetric actor critic for image-based robot learning</description>
+      <title>Sim-to-real transfer of robotic control with dynamics randomization</title>
+      <link>https://openai.com/index/sim-to-real-transfer-of-robotic-control-with-dynamics-randomization/</link>
+      <description>Sim-to-real transfer of robotic control with dynamics randomization</description>
       <category>Publication</category>
       <pubDate>Wed, 18 Oct 2017 07:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Sim-to-real transfer of robotic control with dynamics randomization</title>
-      <link>https://openai.com/index/sim-to-real-transfer-of-robotic-control-with-dynamics-randomization/</link>
-      <description>Sim-to-real transfer of robotic control with dynamics randomization</description>
+      <title>Asymmetric actor critic for image-based robot learning</title>
+      <link>https://openai.com/index/asymmetric-actor-critic-for-image-based-robot-learning/</link>
+      <description>Asymmetric actor critic for image-based robot learning</description>
       <category>Publication</category>
       <pubDate>Wed, 18 Oct 2017 07:00:00 +0000</pubDate>
     </item>
@@ -863,17 +863,17 @@
       <pubDate>Wed, 18 Jun 2025 10:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Introducing ChatGPT agent</title>
-      <link>https://openai.com/index/introducing-chatgpt-agent/</link>
-      <description>Introducing ChatGPT agent</description>
-      <category>Product</category>
-      <pubDate>Thu, 17 Jul 2025 10:00:00 +0000</pubDate>
-    </item>
-    <item>
       <title>ChatGPT agent System Card</title>
       <link>https://openai.com/index/chatgpt-agent-system-card/</link>
       <description>ChatGPT agent System Card</description>
       <category>Publication</category>
+      <pubDate>Thu, 17 Jul 2025 10:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Introducing ChatGPT agent: bridging research and action</title>
+      <link>https://openai.com/index/introducing-chatgpt-agent/</link>
+      <description>Introducing ChatGPT agent: bridging research and action</description>
+      <category>Product</category>
       <pubDate>Thu, 17 Jul 2025 10:00:00 +0000</pubDate>
     </item>
     <item>
@@ -884,10 +884,10 @@
       <pubDate>Tue, 22 Jul 2025 10:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Estimating worst case frontier risks of open weight LLMs</title>
-      <link>https://openai.com/index/estimating-worst-case-frontier-risks-of-open-weight-llms/</link>
-      <description>Estimating worst case frontier risks of open weight LLMs</description>
-      <category>Safety</category>
+      <title>gpt-oss-120b &amp; gpt-oss-20b Model Card</title>
+      <link>https://openai.com/index/gpt-oss-model-card/</link>
+      <description>gpt-oss-120b &amp; gpt-oss-20b Model Card</description>
+      <category>Publication</category>
       <pubDate>Tue, 05 Aug 2025 00:00:00 +0000</pubDate>
     </item>
     <item>
@@ -898,24 +898,24 @@
       <pubDate>Tue, 05 Aug 2025 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>gpt-oss-120b &amp; gpt-oss-20b Model Card</title>
-      <link>https://openai.com/index/gpt-oss-model-card/</link>
-      <description>gpt-oss-120b &amp; gpt-oss-20b Model Card</description>
-      <category>Publication</category>
-      <pubDate>Tue, 05 Aug 2025 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>From hard refusals to safe-completions: toward output-centric safety training</title>
-      <link>https://openai.com/index/gpt-5-safe-completions/</link>
-      <description>From hard refusals to safe-completions: toward output-centric safety training</description>
+      <title>Estimating worst case frontier risks of open weight LLMs</title>
+      <link>https://openai.com/index/estimating-worst-case-frontier-risks-of-open-weight-llms/</link>
+      <description>Estimating worst case frontier risks of open weight LLMs</description>
       <category>Safety</category>
-      <pubDate>Thu, 07 Aug 2025 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 05 Aug 2025 00:00:00 +0000</pubDate>
     </item>
     <item>
       <title>Introducing GPT-5</title>
       <link>https://openai.com/index/introducing-gpt-5/</link>
       <description>Introducing GPT-5</description>
       <category>Release</category>
+      <pubDate>Thu, 07 Aug 2025 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>From hard refusals to safe-completions: toward output-centric safety training</title>
+      <link>https://openai.com/index/gpt-5-safe-completions/</link>
+      <description>From hard refusals to safe-completions: toward output-centric safety training</description>
+      <category>Safety</category>
       <pubDate>Thu, 07 Aug 2025 00:00:00 +0000</pubDate>
     </item>
     <item>
@@ -940,9 +940,9 @@
       <pubDate>Wed, 27 Aug 2025 13:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Introducing gpt-realtime and Realtime API updates</title>
+      <title>Introducing gpt-realtime and Realtime API updates for production voice agents</title>
       <link>https://openai.com/index/introducing-gpt-realtime/</link>
-      <description>Introducing gpt-realtime and Realtime API updates</description>
+      <description>Introducing gpt-realtime and Realtime API updates for production voice agents</description>
       <category>Product</category>
       <pubDate>Thu, 28 Aug 2025 10:00:00 +0000</pubDate>
     </item>
@@ -1024,17 +1024,17 @@
       <pubDate>Mon, 27 Oct 2025 10:00:00 +0000</pubDate>
     </item>
     <item>
+      <title>Technical report</title>
+      <link>https://openai.com/index/gpt-oss-safeguard-technical-report/</link>
+      <description>Technical report</description>
+      <category>Safety</category>
+      <pubDate>Wed, 29 Oct 2025 00:00:00 +0000</pubDate>
+    </item>
+    <item>
       <title>Introducing gpt-oss-safeguard</title>
       <link>https://openai.com/index/introducing-gpt-oss-safeguard/</link>
       <description>Introducing gpt-oss-safeguard</description>
       <category>Product</category>
-      <pubDate>Wed, 29 Oct 2025 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Technical Report: Performance and baseline evaluations of gpt-oss-safeguard-120b and gpt-oss-safeguard-20b</title>
-      <link>https://openai.com/index/gpt-oss-safeguard-technical-report/</link>
-      <description>Technical Report: Performance and baseline evaluations of gpt-oss-safeguard-120b and gpt-oss-safeguard-20b</description>
-      <category>Safety</category>
       <pubDate>Wed, 29 Oct 2025 00:00:00 +0000</pubDate>
     </item>
     <item>
@@ -1073,17 +1073,17 @@
       <pubDate>Thu, 13 Nov 2025 10:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>GPT-5.1-Codex-Max System Card</title>
-      <link>https://openai.com/index/gpt-5-1-codex-max-system-card/</link>
-      <description>GPT-5.1-Codex-Max System Card</description>
-      <category>Publication</category>
-      <pubDate>Wed, 19 Nov 2025 00:00:00 +0000</pubDate>
-    </item>
-    <item>
       <title>Building more with GPT-5.1-Codex-Max</title>
       <link>https://openai.com/index/gpt-5-1-codex-max/</link>
       <description>Building more with GPT-5.1-Codex-Max</description>
       <category>Product</category>
+      <pubDate>Wed, 19 Nov 2025 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>GPT-5.1-Codex-Max System Card</title>
+      <link>https://openai.com/index/gpt-5-1-codex-max-system-card/</link>
+      <description>GPT-5.1-Codex-Max System Card</description>
+      <category>Publication</category>
       <pubDate>Wed, 19 Nov 2025 00:00:00 +0000</pubDate>
     </item>
     <item>
@@ -1101,17 +1101,17 @@
       <pubDate>Wed, 03 Dec 2025 10:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Introducing GPT-5.2</title>
-      <link>https://openai.com/index/introducing-gpt-5-2/</link>
-      <description>Introducing GPT-5.2</description>
-      <category>Product</category>
-      <pubDate>Thu, 11 Dec 2025 00:00:00 +0000</pubDate>
-    </item>
-    <item>
       <title>Update to GPT-5 System Card: GPT-5.2</title>
       <link>https://openai.com/index/gpt-5-system-card-update-gpt-5-2/</link>
       <description>Update to GPT-5 System Card: GPT-5.2</description>
       <category>Publication</category>
+      <pubDate>Thu, 11 Dec 2025 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Introducing GPT-5.2</title>
+      <link>https://openai.com/index/introducing-gpt-5-2/</link>
+      <description>Introducing GPT-5.2</description>
+      <category>Product</category>
       <pubDate>Thu, 11 Dec 2025 00:00:00 +0000</pubDate>
     </item>
     <item>
@@ -1129,9 +1129,9 @@
       <pubDate>Tue, 16 Dec 2025 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Measuring AI’s capability to accelerate biological research</title>
+      <title>Measuring AI’s capability to accelerate biological research in the wet lab</title>
       <link>https://openai.com/index/accelerating-biological-research-in-the-wet-lab/</link>
-      <description>Measuring AI’s capability to accelerate biological research</description>
+      <description>Measuring AI’s capability to accelerate biological research in the wet lab</description>
       <category>Research</category>
       <pubDate>Tue, 16 Dec 2025 08:00:00 +0000</pubDate>
     </item>
