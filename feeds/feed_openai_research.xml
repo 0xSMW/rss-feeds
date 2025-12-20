@@ -7,7 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 19 Dec 2025 12:07:15 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 20 Dec 2025 00:13:25 +0000</lastBuildDate>
     <item>
       <title>Weight normalization: A simple reparameterization to accelerate training of deep neural networks</title>
       <link>https://openai.com/index/weight-normalization/</link>
@@ -569,16 +569,16 @@
       <pubDate>Tue, 15 Oct 2019 07:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>CLIP: Connecting text and images</title>
-      <link>https://openai.com/index/clip/</link>
-      <description>CLIP: Connecting text and images</description>
+      <title>DALL·E: Creating images from text</title>
+      <link>https://openai.com/index/dall-e/</link>
+      <description>DALL·E: Creating images from text</description>
       <category>Milestone</category>
       <pubDate>Tue, 05 Jan 2021 08:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>DALL·E: Creating images from text</title>
-      <link>https://openai.com/index/dall-e/</link>
-      <description>DALL·E: Creating images from text</description>
+      <title>CLIP: Connecting text and images</title>
+      <link>https://openai.com/index/clip/</link>
+      <description>CLIP: Connecting text and images</description>
       <category>Milestone</category>
       <pubDate>Tue, 05 Jan 2021 08:00:00 +0000</pubDate>
     </item>
@@ -639,16 +639,16 @@
       <pubDate>Thu, 06 Jun 2024 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>A Holistic Approach to Undesired Content Detection in the Real World</title>
-      <link>https://openai.com/index/a-holistic-approach-to-undesired-content-detection-in-the-real-world/</link>
-      <description>A Holistic Approach to Undesired Content Detection in the Real World</description>
+      <title>Consistency Models</title>
+      <link>https://openai.com/index/consistency-models/</link>
+      <description>Consistency Models</description>
       <category>Publication</category>
       <pubDate>Thu, 20 Jun 2024 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Consistency Models</title>
-      <link>https://openai.com/index/consistency-models/</link>
-      <description>Consistency Models</description>
+      <title>A Holistic Approach to Undesired Content Detection in the Real World</title>
+      <link>https://openai.com/index/a-holistic-approach-to-undesired-content-detection-in-the-real-world/</link>
+      <description>A Holistic Approach to Undesired Content Detection in the Real World</description>
       <category>Publication</category>
       <pubDate>Thu, 20 Jun 2024 00:00:00 +0000</pubDate>
     </item>
@@ -744,13 +744,6 @@
       <pubDate>Mon, 09 Dec 2024 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Computer-Using Agent</title>
-      <link>https://openai.com/index/computer-using-agent/</link>
-      <description>Computer-Using Agent</description>
-      <category>Release</category>
-      <pubDate>Thu, 23 Jan 2025 10:00:00 +0000</pubDate>
-    </item>
-    <item>
       <title>Operator System Card</title>
       <link>https://openai.com/index/operator-system-card/</link>
       <description>Operator System Card</description>
@@ -758,17 +751,24 @@
       <pubDate>Thu, 23 Jan 2025 10:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>OpenAI o3-mini</title>
-      <link>https://openai.com/index/openai-o3-mini/</link>
-      <description>OpenAI o3-mini</description>
+      <title>Computer-Using Agent</title>
+      <link>https://openai.com/index/computer-using-agent/</link>
+      <description>Computer-Using Agent</description>
       <category>Release</category>
-      <pubDate>Fri, 31 Jan 2025 11:00:00 +0000</pubDate>
+      <pubDate>Thu, 23 Jan 2025 10:00:00 +0000</pubDate>
     </item>
     <item>
       <title>OpenAI o3-mini System Card</title>
       <link>https://openai.com/index/o3-mini-system-card/</link>
       <description>OpenAI o3-mini System Card</description>
       <category>Publication</category>
+      <pubDate>Fri, 31 Jan 2025 11:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>OpenAI o3-mini</title>
+      <link>https://openai.com/index/openai-o3-mini/</link>
+      <description>OpenAI o3-mini</description>
+      <category>Release</category>
       <pubDate>Fri, 31 Jan 2025 11:00:00 +0000</pubDate>
     </item>
     <item>
@@ -814,17 +814,17 @@
       <pubDate>Mon, 14 Apr 2025 10:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>OpenAI o3 and o4-mini System Card</title>
-      <link>https://openai.com/index/o3-o4-mini-system-card/</link>
-      <description>OpenAI o3 and o4-mini System Card</description>
-      <category>Publication</category>
-      <pubDate>Wed, 16 Apr 2025 10:00:00 +0000</pubDate>
-    </item>
-    <item>
       <title>Introducing OpenAI o3 and o4-mini</title>
       <link>https://openai.com/index/introducing-o3-and-o4-mini/</link>
       <description>Introducing OpenAI o3 and o4-mini</description>
       <category>Release</category>
+      <pubDate>Wed, 16 Apr 2025 10:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>OpenAI o3 and o4-mini System Card</title>
+      <link>https://openai.com/index/o3-o4-mini-system-card/</link>
+      <description>OpenAI o3 and o4-mini System Card</description>
+      <category>Publication</category>
       <pubDate>Wed, 16 Apr 2025 10:00:00 +0000</pubDate>
     </item>
     <item>
@@ -884,6 +884,13 @@
       <pubDate>Tue, 22 Jul 2025 10:00:00 +0000</pubDate>
     </item>
     <item>
+      <title>Estimating worst case frontier risks of open weight LLMs</title>
+      <link>https://openai.com/index/estimating-worst-case-frontier-risks-of-open-weight-llms/</link>
+      <description>Estimating worst case frontier risks of open weight LLMs</description>
+      <category>Safety</category>
+      <pubDate>Tue, 05 Aug 2025 00:00:00 +0000</pubDate>
+    </item>
+    <item>
       <title>gpt-oss-120b &amp; gpt-oss-20b Model Card</title>
       <link>https://openai.com/index/gpt-oss-model-card/</link>
       <description>gpt-oss-120b &amp; gpt-oss-20b Model Card</description>
@@ -898,17 +905,10 @@
       <pubDate>Tue, 05 Aug 2025 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Estimating worst case frontier risks of open weight LLMs</title>
-      <link>https://openai.com/index/estimating-worst-case-frontier-risks-of-open-weight-llms/</link>
-      <description>Estimating worst case frontier risks of open weight LLMs</description>
-      <category>Safety</category>
-      <pubDate>Tue, 05 Aug 2025 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Introducing GPT-5</title>
-      <link>https://openai.com/index/introducing-gpt-5/</link>
-      <description>Introducing GPT-5</description>
-      <category>Release</category>
+      <title>GPT-5 System Card</title>
+      <link>https://openai.com/index/gpt-5-system-card/</link>
+      <description>GPT-5 System Card</description>
+      <category>Publication</category>
       <pubDate>Thu, 07 Aug 2025 00:00:00 +0000</pubDate>
     </item>
     <item>
@@ -919,10 +919,10 @@
       <pubDate>Thu, 07 Aug 2025 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>GPT-5 System Card</title>
-      <link>https://openai.com/index/gpt-5-system-card/</link>
-      <description>GPT-5 System Card</description>
-      <category>Publication</category>
+      <title>Introducing GPT-5</title>
+      <link>https://openai.com/index/introducing-gpt-5/</link>
+      <description>Introducing GPT-5</description>
+      <category>Release</category>
       <pubDate>Thu, 07 Aug 2025 00:00:00 +0000</pubDate>
     </item>
     <item>
@@ -989,17 +989,17 @@
       <pubDate>Thu, 25 Sep 2025 09:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Sora 2 System Card</title>
-      <link>https://openai.com/index/sora-2-system-card/</link>
-      <description>Sora 2 System Card</description>
-      <category>Publication</category>
-      <pubDate>Tue, 30 Sep 2025 00:00:00 +0000</pubDate>
-    </item>
-    <item>
       <title>Sora 2 is here</title>
       <link>https://openai.com/index/sora-2/</link>
       <description>Sora 2 is here</description>
       <category>Research</category>
+      <pubDate>Tue, 30 Sep 2025 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Sora 2 System Card</title>
+      <link>https://openai.com/index/sora-2-system-card/</link>
+      <description>Sora 2 System Card</description>
+      <category>Publication</category>
       <pubDate>Tue, 30 Sep 2025 00:00:00 +0000</pubDate>
     </item>
     <item>
@@ -1024,17 +1024,17 @@
       <pubDate>Mon, 27 Oct 2025 10:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Technical report</title>
-      <link>https://openai.com/index/gpt-oss-safeguard-technical-report/</link>
-      <description>Technical report</description>
-      <category>Safety</category>
-      <pubDate>Wed, 29 Oct 2025 00:00:00 +0000</pubDate>
-    </item>
-    <item>
       <title>Introducing gpt-oss-safeguard</title>
       <link>https://openai.com/index/introducing-gpt-oss-safeguard/</link>
       <description>Introducing gpt-oss-safeguard</description>
       <category>Product</category>
+      <pubDate>Wed, 29 Oct 2025 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Technical report</title>
+      <link>https://openai.com/index/gpt-oss-safeguard-technical-report/</link>
+      <description>Technical report</description>
+      <category>Safety</category>
       <pubDate>Wed, 29 Oct 2025 00:00:00 +0000</pubDate>
     </item>
     <item>
@@ -1101,17 +1101,17 @@
       <pubDate>Wed, 03 Dec 2025 10:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Update to GPT-5 System Card: GPT-5.2</title>
-      <link>https://openai.com/index/gpt-5-system-card-update-gpt-5-2/</link>
-      <description>Update to GPT-5 System Card: GPT-5.2</description>
-      <category>Publication</category>
-      <pubDate>Thu, 11 Dec 2025 00:00:00 +0000</pubDate>
-    </item>
-    <item>
       <title>Introducing GPT-5.2</title>
       <link>https://openai.com/index/introducing-gpt-5-2/</link>
       <description>Introducing GPT-5.2</description>
       <category>Product</category>
+      <pubDate>Thu, 11 Dec 2025 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Update to GPT-5 System Card: GPT-5.2</title>
+      <link>https://openai.com/index/gpt-5-system-card-update-gpt-5-2/</link>
+      <description>Update to GPT-5 System Card: GPT-5.2</description>
+      <category>Publication</category>
       <pubDate>Thu, 11 Dec 2025 00:00:00 +0000</pubDate>
     </item>
     <item>
