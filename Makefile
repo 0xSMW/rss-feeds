@@ -93,6 +93,10 @@ generate_paulgraham_feed: check-env  ## Generate RSS feed for paulgraham/article
 generate_thinkingmachines_feed: check-env  ## Generate RSS feed for thinkingmachines/blog
 	python feed_generators/thinkingmachines_blog.py
 
+.PHONY: generate_arenamag_feed
+generate_arenamag_feed: check-env  ## Generate RSS feed for arenamag (all categories)
+	python feed_generators/arenamag_blog.py
+
 #######################
 ### Manual Testing  ###
 ######################
