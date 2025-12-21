@@ -1,14 +1,17 @@
+import argparse
 import requests
 import time
 import undetected_chromedriver as uc
 import re
 from bs4 import BeautifulSoup
 from datetime import datetime
+from email.utils import parsedate_to_datetime
 import pytz
 from feedgen.feed import FeedGenerator
 import logging
 from pathlib import Path
 from urllib.parse import urljoin
+import xml.etree.ElementTree as ET
 
 # Set up logging
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
@@ -82,6 +85,127 @@ def fetch_news_content_selenium(url: str = NEWS_URL) -> str:
     finally:
         if driver:
             driver.quit()
+
+
+def fetch_article_page(url: str) -> str | None:
+    """Fetch HTML for a single article page."""
+    headers = {
+        "User-Agent": (
+            "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+            "AppleWebKit/537.36 (KHTML, like Gecko) "
+            "Chrome/123.0.0.0 Safari/537.36"
+        )
+    }
+    try:
+        resp = requests.get(url, headers=headers, timeout=20)
+        resp.raise_for_status()
+        return resp.text
+    except Exception as e:
+        logger.warning(f"Requests fetch failed for {url} ({e}); falling back to Selenium")
+        try:
+            driver = setup_selenium_driver()
+            driver.get(url)
+            html = driver.page_source
+            driver.quit()
+            return html
+        except Exception as e2:
+            logger.warning(f"Selenium fetch failed for {url}: {e2}")
+            return None
+
+
+def _clean_article_html(container, base_url: str) -> str:
+    """Clean article container and keep only <p>, <a>, and <img> tags."""
+    if container is None:
+        return ""
+
+    related_markers = (
+        "related articles",
+        "related posts",
+        "more articles",
+        "you might also like",
+    )
+    share_domains = (
+        "linkedin.com/sharing",
+        "facebook.com/sharer",
+        "twitter.com/intent",
+        "x.com/intent",
+        "reddit.com/submit",
+    )
+
+    for el in container.find_all(["h2", "h3", "h4", "p", "div", "section", "aside"]):
+        text = el.get_text(" ", strip=True).lower()
+        if any(marker in text for marker in related_markers):
+            parent = el.find_parent(["section", "aside", "div"]) or el
+            parent.decompose()
+
+    for tag in list(container.find_all(True)):
+        if tag.parent is None:
+            continue
+        if tag.name == "a":
+            href = tag.get("href", "")
+            href_l = href.lower()
+            if any(domain in href_l for domain in share_domains):
+                tag.decompose()
+                continue
+            if not href:
+                tag.decompose()
+                continue
+            if not href.startswith(("http://", "https://", "mailto:", "#")):
+                tag["href"] = urljoin(base_url, href)
+            if not tag.get_text(strip=True) and not tag.find("img"):
+                tag.decompose()
+                continue
+            tag.attrs = {"href": tag["href"]}
+            continue
+        if tag.name == "img":
+            if "src" in tag.attrs:
+                src = tag["src"]
+                if not src.startswith(("http://", "https://", "data:")):
+                    tag["src"] = urljoin(base_url, src)
+            else:
+                tag.decompose()
+                continue
+            tag.attrs = {"src": tag["src"]}
+            continue
+
+        if tag.name == "p":
+            if tag.find("img"):
+                for img in tag.find_all("img"):
+                    tag.insert_after(img)
+            tag.attrs = {}
+            continue
+
+        tag.unwrap()
+
+    parts: list[str] = []
+    for tag in container.find_all(["p", "a", "img"], recursive=True):
+        if tag.name == "p" and not tag.get_text(strip=True):
+            continue
+        parts.append(str(tag))
+
+    return "\n".join(parts)
+
+
+def extract_article_content(html: str, page_url: str) -> tuple[str, str]:
+    """Extract main article content HTML and a plain-text summary."""
+    soup = BeautifulSoup(html, "html.parser")
+    container = (
+        soup.select_one("article")
+        or soup.select_one("main article")
+        or soup.select_one("main")
+        or soup.select_one("[class*='content']")
+    )
+    content_html = _clean_article_html(container, base_url=page_url)
+
+    summary = ""
+    if container:
+        first_p = container.find("p")
+        if first_p:
+            summary = first_p.get_text(" ", strip=True)
+    if not summary:
+        summary = soup.title.get_text(strip=True) if soup.title else ""
+
+    return content_html, summary
 
 
 def _parse_date(text: str) -> datetime:
@@ -296,6 +420,8 @@ def generate_rss_feed(articles, feed_name: str = "mistral_news"):
         fe.title(article["title"])
         fe.link(href=article["link"])
         fe.description(article["description"])
+        if article.get("content_html"):
+            fe.content(article["content_html"])
         fe.published(article["date"])
         fe.category(term=article["category"])
         fe.id(article["link"])
@@ -312,14 +438,86 @@ def save_rss_feed(feed_generator, feed_name: str = "mistral_news") -> Path:
     return output_file
 
 
-def main(feed_name: str = "mistral_news") -> bool:
+def get_existing_entries_from_feed(feed_path: Path):
+    """Parse the existing RSS feed and return entries for reuse."""
+    entries = []
+    if not feed_path.exists():
+        return entries
     try:
+        tree = ET.parse(feed_path)
+        root = tree.getroot()
+        ns = {"content": "http://purl.org/rss/1.0/modules/content/"}
+        for item in root.findall("./channel/item"):
+            link_elem = item.find("link")
+            title_elem = item.find("title")
+            desc_elem = item.find("description")
+            content_elem = item.find("content:encoded", ns)
+            date_elem = item.find("pubDate")
+            category_elem = item.find("category")
+
+            link = link_elem.text.strip() if link_elem is not None and link_elem.text else None
+            if not link:
+                continue
+
+            date = None
+            if date_elem is not None and date_elem.text:
+                try:
+                    date = parsedate_to_datetime(date_elem.text.strip())
+                except Exception:
+                    date = None
+
+            entries.append(
+                {
+                    "title": title_elem.text.strip() if title_elem is not None and title_elem.text else link,
+                    "link": link,
+                    "date": date or datetime.now(pytz.UTC),
+                    "category": category_elem.text.strip() if category_elem is not None and category_elem.text else "News",
+                    "description": desc_elem.text if desc_elem is not None and desc_elem.text else "",
+                    "content_html": content_elem.text if content_elem is not None and content_elem.text else "",
+                }
+            )
+    except Exception as e:
+        logger.warning(f"Failed to parse existing feed entries: {str(e)}")
+    return entries
+
+
+def main(feed_name: str = "mistral_news", force: bool = False) -> bool:
+    try:
+        feeds_dir = ensure_feeds_directory()
+        feed_path = feeds_dir / f"feed_{feed_name}.xml"
+
+        existing_entries = []
+        existing_links = set()
+        if not force:
+            existing_entries = get_existing_entries_from_feed(feed_path)
+            existing_links = {entry["link"] for entry in existing_entries}
+
         # Pull from specific category routes and combine
         categories = ["product", "solutions", "research", "company"]
         articles = collect_articles_from_categories(categories)
         if not articles:
             logger.warning("No Mistral news articles parsed. Selectors may need updating.")
-        feed = generate_rss_feed(articles, feed_name)
+        new_articles = [article for article in articles if article["link"] not in existing_links]
+        for article in new_articles:
+            article_html = fetch_article_page(article["link"])
+            if not article_html:
+                continue
+            content_html, summary = extract_article_content(article_html, article["link"])
+            if content_html:
+                article["content_html"] = content_html
+            if summary:
+                article["description"] = summary
+
+        combined_articles = new_articles + existing_entries
+        seen_links = set()
+        deduped_articles = []
+        for article in combined_articles:
+            if article["link"] in seen_links:
+                continue
+            seen_links.add(article["link"])
+            deduped_articles.append(article)
+
+        feed = generate_rss_feed(deduped_articles, feed_name)
         save_rss_feed(feed, feed_name)
         return True
     except Exception as e:
@@ -328,4 +526,7 @@ def main(feed_name: str = "mistral_news") -> bool:
 
 
 if __name__ == "__main__":
-    main()
+    parser = argparse.ArgumentParser(description="Generate Mistral AI News RSS feed.")
+    parser.add_argument("--force", action="store_true", help="Refetch all articles and rebuild the feed.")
+    args = parser.parse_args()
+    main(force=args.force)

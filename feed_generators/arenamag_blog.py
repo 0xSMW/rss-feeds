@@ -1,3 +1,4 @@
+import argparse
 import requests
 import time
 import undetected_chromedriver as uc
@@ -6,11 +7,13 @@ import unicodedata
 from bs4 import BeautifulSoup
 from datetime import datetime
 from dateutil import parser as dateparser
+from email.utils import parsedate_to_datetime
 import pytz
 from feedgen.feed import FeedGenerator
 import logging
 from pathlib import Path
 from urllib.parse import urljoin
+import xml.etree.ElementTree as ET
 
 # Set up logging
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
@@ -528,15 +531,70 @@ def save_rss_feed(feed_generator, feed_name: str = "arenamag") -> Path:
     return output_file
 
 
-def main(feed_name: str = "arenamag") -> bool:
+def get_existing_entries_from_feed(feed_path: Path):
+    """Parse the existing RSS feed and return entries for reuse."""
+    entries = []
+    if not feed_path.exists():
+        return entries
     try:
+        tree = ET.parse(feed_path)
+        root = tree.getroot()
+        ns = {"content": "http://purl.org/rss/1.0/modules/content/"}
+        for item in root.findall("./channel/item"):
+            link_elem = item.find("link")
+            title_elem = item.find("title")
+            desc_elem = item.find("description")
+            content_elem = item.find("content:encoded", ns)
+            date_elem = item.find("pubDate")
+            category_elem = item.find("category")
+            author_elem = item.find("author")
+
+            link = link_elem.text.strip() if link_elem is not None and link_elem.text else None
+            if not link:
+                continue
+
+            date = None
+            if date_elem is not None and date_elem.text:
+                try:
+                    date = parsedate_to_datetime(date_elem.text.strip())
+                except Exception:
+                    date = None
+
+            entries.append(
+                {
+                    "title": title_elem.text.strip() if title_elem is not None and title_elem.text else link,
+                    "link": link,
+                    "date": date or datetime.now(pytz.UTC),
+                    "category": category_elem.text.strip() if category_elem is not None and category_elem.text else "News",
+                    "author": author_elem.text.strip() if author_elem is not None and author_elem.text else None,
+                    "description": desc_elem.text if desc_elem is not None and desc_elem.text else "",
+                    "content_html": content_elem.text if content_elem is not None and content_elem.text else "",
+                }
+            )
+    except Exception as e:
+        logger.warning(f"Failed to parse existing feed entries: {str(e)}")
+    return entries
+
+
+def main(feed_name: str = "arenamag", force: bool = False) -> bool:
+    try:
+        feeds_dir = ensure_feeds_directory()
+        feed_path = feeds_dir / f"feed_{feed_name}.xml"
+
+        existing_entries = []
+        existing_links = set()
+        if not force:
+            existing_entries = get_existing_entries_from_feed(feed_path)
+            existing_links = {entry["link"] for entry in existing_entries}
+
         articles = collect_all_articles()
         if not articles:
             logger.warning("No Arena Magazine articles parsed. Selectors may need updating.")
         
         # Fetch full content and metadata for each article from the article page
-        logger.info(f"Fetching full content for {len(articles)} articles...")
-        for article in articles:
+        new_articles = [article for article in articles if article["link"] not in existing_links]
+        logger.info(f"Fetching full content for {len(new_articles)} articles...")
+        for article in new_articles:
             article_html = fetch_article_page(article["link"])
             if article_html:
                 metadata = extract_article_metadata(article_html, article["link"])
@@ -552,6 +610,15 @@ def main(feed_name: str = "arenamag") -> bool:
                     article["description"] = metadata["description"]
             else:
                 logger.warning(f"Could not fetch content for {article['link']}")
+
+        combined_articles = new_articles + existing_entries
+        seen_links = set()
+        deduped_articles = []
+        for article in combined_articles:
+            if article["link"] in seen_links:
+                continue
+            seen_links.add(article["link"])
+            deduped_articles.append(article)
         
         # Re-sort by date now that we have dates from article pages
         def sort_key(a):
@@ -559,11 +626,11 @@ def main(feed_name: str = "arenamag") -> bool:
                 return (0, a["date"])
             return (1, datetime.min.replace(tzinfo=pytz.UTC))
         
-        articles.sort(key=sort_key, reverse=True)
+        deduped_articles.sort(key=sort_key, reverse=True)
         
-        feed = generate_rss_feed(articles, feed_name)
+        feed = generate_rss_feed(deduped_articles, feed_name)
         save_rss_feed(feed, feed_name)
-        logger.info(f"Successfully generated RSS feed with {len(articles)} articles")
+        logger.info(f"Successfully generated RSS feed with {len(deduped_articles)} articles")
         return True
     except Exception as e:
         logger.error(f"Failed to generate Arena Magazine RSS: {e}")
@@ -571,5 +638,7 @@ def main(feed_name: str = "arenamag") -> bool:
 
 
 if __name__ == "__main__":
-    main()
-
+    parser = argparse.ArgumentParser(description="Generate Arena Magazine RSS feed.")
+    parser.add_argument("--force", action="store_true", help="Refetch all articles and rebuild the feed.")
+    args = parser.parse_args()
+    main(force=args.force)

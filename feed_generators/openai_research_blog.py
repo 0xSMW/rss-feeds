@@ -1,11 +1,16 @@
+import argparse
 import requests
 import undetected_chromedriver as uc
 from bs4 import BeautifulSoup
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime
+from email.utils import parsedate_to_datetime
 import pytz
 from feedgen.feed import FeedGenerator
 import logging
 from pathlib import Path
+from urllib.parse import urljoin
+import xml.etree.ElementTree as ET
 
 # Set up logging
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
@@ -20,17 +25,33 @@ def setup_selenium_driver():
     options.add_argument("--user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36")
     return uc.Chrome(options=options)
 
-def fetch_news_content_requests(url):
+def build_requests_session() -> requests.Session:
+    """Build a requests session with headers that mimic a real browser."""
+    session = requests.Session()
+    session.headers.update(
+        {
+            "User-Agent": (
+                "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+                "AppleWebKit/537.36 (KHTML, like Gecko) "
+                "Chrome/123.0.0.0 Safari/537.36"
+            ),
+            "Accept": (
+                "text/html,application/xhtml+xml,application/xml;q=0.9,"
+                "image/avif,image/webp,*/*;q=0.8"
+            ),
+            "Accept-Language": "en-US,en;q=0.9",
+            "Upgrade-Insecure-Requests": "1",
+            "Referer": "https://openai.com/",
+        }
+    )
+    return session
+
+
+def fetch_news_content_requests(url, session: requests.Session | None = None):
     """Fetch the HTML content via requests."""
-    headers = {
-        "User-Agent": (
-            "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
-            "AppleWebKit/537.36 (KHTML, like Gecko) "
-            "Chrome/123.0.0.0 Safari/537.36"
-        )
-    }
+    sess = session or build_requests_session()
     logger.info(f"Fetching content via requests: {url}")
-    resp = requests.get(url, headers=headers, timeout=20)
+    resp = sess.get(url, timeout=20)
     resp.raise_for_status()
     return resp.text
 
@@ -61,6 +82,167 @@ def fetch_news_content_selenium(url):
     finally:
         if driver:
             driver.quit()
+
+def fetch_article_page_requests(url: str, session: requests.Session | None = None) -> str | None:
+    """Fetch HTML for a single article page via requests."""
+    sess = session or build_requests_session()
+    try:
+        resp = sess.get(url, timeout=20)
+        resp.raise_for_status()
+        return resp.text
+    except Exception as e:
+        logger.warning(f"Requests fetch failed for {url} ({e})")
+        return None
+
+
+def fetch_articles_selenium(urls: list[str]) -> dict[str, str]:
+    """Fetch article pages via a single Selenium session."""
+    results: dict[str, str] = {}
+    if not urls:
+        return results
+    driver = None
+    try:
+        driver = setup_selenium_driver()
+        for url in urls:
+            try:
+                driver.get(url)
+                html = driver.page_source
+                results[url] = html
+            except Exception as e:
+                logger.warning(f"Selenium fetch failed for {url}: {e}")
+    finally:
+        if driver:
+            driver.quit()
+    return results
+
+
+def fetch_article_selenium(url: str) -> str | None:
+    """Fetch a single article page via Selenium."""
+    driver = None
+    try:
+        driver = setup_selenium_driver()
+        driver.get(url)
+        return driver.page_source
+    except Exception as e:
+        logger.warning(f"Selenium fetch failed for {url}: {e}")
+        return None
+    finally:
+        if driver:
+            driver.quit()
+
+
+def fetch_articles_selenium_parallel(urls: list[str], max_workers: int = 5) -> dict[str, str]:
+    """Fetch article pages in parallel Selenium sessions."""
+    results: dict[str, str] = {}
+    if not urls:
+        return results
+    with ThreadPoolExecutor(max_workers=max_workers) as executor:
+        future_to_url = {executor.submit(fetch_article_selenium, url): url for url in urls}
+        for future in as_completed(future_to_url):
+            url = future_to_url[future]
+            try:
+                html = future.result()
+            except Exception as e:
+                logger.warning(f"Selenium fetch failed for {url}: {e}")
+                continue
+            if html:
+                results[url] = html
+    return results
+
+
+def _clean_article_html(container, base_url: str) -> str:
+    """Clean article container and keep only <p>, <a>, and <img> tags."""
+    if container is None:
+        return ""
+
+    related_markers = (
+        "related articles",
+        "related posts",
+        "more articles",
+        "you might also like",
+    )
+    share_domains = (
+        "linkedin.com/sharing",
+        "facebook.com/sharer",
+        "twitter.com/intent",
+        "x.com/intent",
+        "reddit.com/submit",
+    )
+
+    for el in container.find_all(["h2", "h3", "h4", "p", "div", "section", "aside"]):
+        text = el.get_text(" ", strip=True).lower()
+        if any(marker in text for marker in related_markers):
+            parent = el.find_parent(["section", "aside", "div"]) or el
+            parent.decompose()
+
+    for tag in list(container.find_all(True)):
+        if tag.parent is None:
+            continue
+        if tag.name == "a":
+            href = tag.get("href", "")
+            href_l = href.lower()
+            if any(domain in href_l for domain in share_domains):
+                tag.decompose()
+                continue
+            if not href:
+                tag.decompose()
+                continue
+            if not href.startswith(("http://", "https://", "mailto:", "#")):
+                tag["href"] = urljoin(base_url, href)
+            if not tag.get_text(strip=True) and not tag.find("img"):
+                tag.decompose()
+                continue
+            tag.attrs = {"href": tag["href"]}
+            continue
+        if tag.name == "img":
+            if "src" in tag.attrs:
+                src = tag["src"]
+                if not src.startswith(("http://", "https://", "data:")):
+                    tag["src"] = urljoin(base_url, src)
+            else:
+                tag.decompose()
+                continue
+            tag.attrs = {"src": tag["src"]}
+            continue
+
+        if tag.name == "p":
+            if tag.find("img"):
+                for img in tag.find_all("img"):
+                    tag.insert_after(img)
+            tag.attrs = {}
+            continue
+
+        tag.unwrap()
+
+    parts: list[str] = []
+    for tag in container.find_all(["p", "a", "img"], recursive=True):
+        if tag.name == "p" and not tag.get_text(strip=True):
+            continue
+        parts.append(str(tag))
+
+    return "\n".join(parts)
+
+
+def extract_article_content(html: str, page_url: str) -> tuple[str, str]:
+    """Extract main article content HTML and a plain-text summary."""
+    soup = BeautifulSoup(html, "html.parser")
+    container = (
+        soup.select_one("article")
+        or soup.select_one("main article")
+        or soup.select_one("main")
+        or soup.select_one("[class*='content']")
+    )
+    content_html = _clean_article_html(container, base_url=page_url)
+
+    summary = ""
+    if container:
+        first_p = container.find("p")
+        if first_p:
+            summary = first_p.get_text(" ", strip=True)
+    if not summary:
+        summary = soup.title.get_text(strip=True) if soup.title else ""
+
+    return content_html, summary
 
 def parse_openai_news_html(html_content):
     """Parse the HTML content from OpenAI's Research News page.
@@ -151,6 +333,8 @@ def generate_rss_feed(articles, feed_name="openai_research"):
         fe.title(article["title"])
         fe.link(href=article["link"])
         fe.description(article["description"])
+        if article.get("content_html"):
+            fe.content(article["content_html"])
         fe.published(article["date"])
         fe.category(term=article["category"])
 
@@ -166,28 +350,125 @@ def save_rss_feed(feed_generator, feed_name="openai_research"):
     logger.info(f"RSS feed saved to {output_file}")
     return output_file
 
-def main():
+
+def get_existing_entries_from_feed(feed_path: Path):
+    """Parse the existing RSS feed and return entries for reuse."""
+    entries = []
+    if not feed_path.exists():
+        return entries
+    try:
+        tree = ET.parse(feed_path)
+        root = tree.getroot()
+        ns = {"content": "http://purl.org/rss/1.0/modules/content/"}
+        for item in root.findall("./channel/item"):
+            link_elem = item.find("link")
+            title_elem = item.find("title")
+            desc_elem = item.find("description")
+            content_elem = item.find("content:encoded", ns)
+            date_elem = item.find("pubDate")
+            category_elem = item.find("category")
+
+            link = link_elem.text.strip() if link_elem is not None and link_elem.text else None
+            if not link:
+                continue
+
+            date = None
+            if date_elem is not None and date_elem.text:
+                try:
+                    date = parsedate_to_datetime(date_elem.text.strip())
+                except Exception:
+                    date = None
+
+            entries.append(
+                {
+                    "title": title_elem.text.strip() if title_elem is not None and title_elem.text else link,
+                    "link": link,
+                    "date": date or datetime.now(pytz.UTC),
+                    "category": category_elem.text.strip() if category_elem is not None and category_elem.text else "Research",
+                    "description": desc_elem.text if desc_elem is not None and desc_elem.text else "",
+                    "content_html": content_elem.text if content_elem is not None and content_elem.text else "",
+                }
+            )
+    except Exception as e:
+        logger.warning(f"Failed to parse existing feed entries: {str(e)}")
+    return entries
+
+
+def main(limit: int = 500, test_first: bool = False, force: bool = False) -> bool:
     """Main function to generate OpenAI Research News RSS feed."""
-    url = "https://openai.com/news/research/?limit=500"
+    url = "https://openai.com/news/research/"
+    if limit:
+        url = f"{url}?limit={limit}"
 
     try:
-        articles = []
-        try:
-            html_content = fetch_news_content_requests(url)
-            articles = parse_openai_news_html(html_content)
-        except Exception as e:
-            logger.warning(f"Requests fetch failed ({e}); falling back to Selenium")
+        feeds_dir = Path("feeds")
+        feeds_dir.mkdir(exist_ok=True)
+        feed_path = feeds_dir / "feed_openai_research.xml"
 
-        if not articles:
-            html_content = fetch_news_content_selenium(url)
-            articles = parse_openai_news_html(html_content)
+        existing_entries = []
+        existing_links = set()
+        if not force and not test_first:
+            existing_entries = get_existing_entries_from_feed(feed_path)
+            existing_links = {entry["link"] for entry in existing_entries}
+
+        html_content = fetch_news_content_selenium(url)
+        articles = parse_openai_news_html(html_content)
 
         if not articles:
             logger.warning("No articles were parsed. Check your selectors.")
-        feed = generate_rss_feed(articles)
+            return False
+
+        if test_first:
+            article = articles[0]
+            article_html = fetch_article_selenium(article["link"])
+            if not article_html:
+                logger.error("Failed to fetch first article content.")
+                return False
+
+            content_html, summary = extract_article_content(article_html, article["link"])
+            print("TITLE:", article["title"])
+            print("LINK:", article["link"])
+            print("SUMMARY:", summary)
+            print("CONTENT_SNIPPET:", content_html[:800])
+            return True
+
+        new_articles = [article for article in articles if article["link"] not in existing_links]
+        urls = [article["link"] for article in new_articles]
+        selenium_html = fetch_articles_selenium_parallel(urls, max_workers=5)
+        for article in new_articles:
+            html = selenium_html.get(article["link"])
+            if not html:
+                continue
+            content_html, summary = extract_article_content(html, article["link"])
+            if content_html:
+                article["content_html"] = content_html
+            if summary:
+                article["description"] = summary
+
+        combined_articles = new_articles + existing_entries
+        seen_links = set()
+        deduped_articles = []
+        for article in combined_articles:
+            if article["link"] in seen_links:
+                continue
+            seen_links.add(article["link"])
+            deduped_articles.append(article)
+
+        feed = generate_rss_feed(deduped_articles)
         save_rss_feed(feed)
     except Exception as e:
         logger.error(f"Failed to generate RSS feed: {e}")
+        return False
+    return True
 
 if __name__ == "__main__":
-    main()
+    parser = argparse.ArgumentParser(description="Generate OpenAI Research News RSS feed.")
+    parser.add_argument("--limit", type=int, default=500, help="Listing page limit param")
+    parser.add_argument(
+        "--test-first",
+        action="store_true",
+        help="Fetch only the first article and print a content snippet.",
+    )
+    parser.add_argument("--force", action="store_true", help="Refetch all articles and rebuild the feed.")
+    args = parser.parse_args()
+    raise SystemExit(0 if main(limit=args.limit, test_first=args.test_first, force=args.force) else 1)
