@@ -34,6 +34,7 @@ ONLY USE THE FOLLOWING IF YOU ARE NOT CODEX CLI:
 
 ## Testing Guidelines
 - Prefer deterministic parsing (avoid flaky selectors/timing). Use Selenium only when necessary.
+- Prefer a requests-first fetch with Selenium fallback; avoid fixed `sleep` calls and use `WebDriverWait` when Selenium is needed.
 - Validate a new generator by running it locally and confirming the XML in `feeds/`.
 - If using `act`, ensure Docker is available; CI mirrors `run_all_feeds.py` execution.
 
@@ -46,6 +47,8 @@ ONLY USE THE FOLLOWING IF YOU ARE NOT CODEX CLI:
 ## Agent-Specific Notes
 - Follow patterns in existing generators; keep site‑specific logic isolated.
 - See `CLAUDE.md` for a deeper architecture overview and examples.
+- When adding new scrapers, try a lightweight `requests` path first, then fall back to Selenium only if parsing fails or the site blocks requests.
+- If Selenium is required, rely on explicit waits for target elements instead of fixed delays to reduce runtime and flakiness.
 
 ## Creating a Feed Generator (Step-by-Step Guide)
 

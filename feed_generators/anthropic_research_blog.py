@@ -1,9 +1,9 @@
+import requests
 import undetected_chromedriver as uc
 from bs4 import BeautifulSoup
 from datetime import datetime
 import pytz
 from feedgen.feed import FeedGenerator
-import time
 import logging
 from pathlib import Path
 
@@ -35,6 +35,20 @@ def setup_selenium_driver():
     )
     return uc.Chrome(options=options)
 
+def fetch_research_content_requests(url="https://www.anthropic.com/research"):
+    """Fetch the research page HTML using requests."""
+    headers = {
+        "User-Agent": (
+            "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+            "AppleWebKit/537.36 (KHTML, like Gecko) "
+            "Chrome/123.0.0.0 Safari/537.36"
+        )
+    }
+    logger.info(f"Fetching research content via requests: {url}")
+    resp = requests.get(url, headers=headers, timeout=20)
+    resp.raise_for_status()
+    return resp.text
+
 
 def fetch_research_content_selenium(url="https://www.anthropic.com/research"):
     """Fetch the fully loaded HTML content of the research page using Selenium."""
@@ -43,11 +57,6 @@ def fetch_research_content_selenium(url="https://www.anthropic.com/research"):
         logger.info(f"Fetching content from URL: {url}")
         driver = setup_selenium_driver()
         driver.get(url)
-
-        # Wait for the page to fully load
-        wait_time = 10
-        logger.info(f"Waiting {wait_time} seconds for the page to fully load...")
-        time.sleep(wait_time)
 
         # Wait for research articles to load by checking for specific elements
         try:
@@ -316,11 +325,16 @@ def save_rss_feed(feed_generator, feed_name="anthropic_research"):
 def main(feed_name="anthropic_research"):
     """Main function to generate RSS feed from Anthropic's research page."""
     try:
-        # Fetch research content using Selenium
-        html_content = fetch_research_content_selenium()
+        articles = []
+        try:
+            html_content = fetch_research_content_requests()
+            articles = parse_research_html(html_content)
+        except Exception as e:
+            logger.warning(f"Requests fetch failed ({e}); falling back to Selenium")
 
-        # Parse articles from HTML
-        articles = parse_research_html(html_content)
+        if not articles:
+            html_content = fetch_research_content_selenium()
+            articles = parse_research_html(html_content)
 
         if not articles:
             logger.warning("No articles found. Please check the HTML structure.")
