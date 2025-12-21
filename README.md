@@ -15,3 +15,5 @@ This repository provides automated RSS feed generators for AI research blogs and
 | SV News                                                              | Feed                                                                                                                             |
 | ----------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
 | [Arena Magazine](https://arenamag.com)                            | [feed_arenamag.xml](https://raw.githubusercontent.com/0xSMW/rss-feeds/main/feeds/feed_arenamag.xml)                            |
+
+Forked from [https://github.com/Olshansk/rss-feeds/](https://github.com/Olshansk/rss-feeds/)
