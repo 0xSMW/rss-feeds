@@ -2,6 +2,7 @@ import requests
 import time
 import undetected_chromedriver as uc
 import re
+import unicodedata
 from bs4 import BeautifulSoup
 from datetime import datetime
 from dateutil import parser as dateparser
@@ -14,6 +15,39 @@ from urllib.parse import urljoin
 # Set up logging
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
 logger = logging.getLogger(__name__)
+
+
+def normalize_text(text: str) -> str:
+    """Normalize Unicode text - fix smart quotes, dashes, double-encoding issues."""
+    if not text:
+        return text
+    
+    # Fix double-encoded UTF-8 (common mojibake issue)
+    # This happens when UTF-8 bytes are interpreted as Latin-1 and re-encoded
+    try:
+        # Try to fix double-encoding: encode as latin-1, decode as utf-8
+        fixed = text.encode("latin-1").decode("utf-8")
+        text = fixed
+    except (UnicodeDecodeError, UnicodeEncodeError):
+        pass  # Not double-encoded, use original
+    
+    # Normalize to NFC form
+    text = unicodedata.normalize("NFC", text)
+    
+    # Replace smart quotes and apostrophes with ASCII equivalents
+    replacements = {
+        "\u2018": "'",  # Left single quote
+        "\u2019": "'",  # Right single quote (apostrophe)
+        "\u201c": '"',  # Left double quote
+        "\u201d": '"',  # Right double quote
+        "\u2013": "-",  # En dash
+        "\u2014": "-",  # Em dash
+        "\u2026": "...",  # Ellipsis
+        "\u00a0": " ",  # Non-breaking space
+    }
+    for old, new in replacements.items():
+        text = text.replace(old, new)
+    return text
 
 BASE_URL = "https://arenamag.com"
 CATEGORY_URLS = [
@@ -197,15 +231,15 @@ def extract_article_metadata(html: str, page_url: str) -> dict:
     
     # Extract clean title from <title> tag or og:title
     if soup.title:
-        result["title"] = soup.title.get_text(strip=True)
+        result["title"] = normalize_text(soup.title.get_text(strip=True))
     og_title = soup.find("meta", property="og:title")
     if og_title and og_title.get("content"):
-        result["title"] = og_title["content"].strip()
+        result["title"] = normalize_text(og_title["content"].strip())
     
     # Extract description from og:description
     og_desc = soup.find("meta", property="og:description")
     if og_desc and og_desc.get("content"):
-        result["description"] = og_desc["content"].strip()
+        result["description"] = normalize_text(og_desc["content"].strip())
     
     # Extract date from article page - Arena uses framer-styles-preset-f8oqe2 for dates
     # Look for pattern like "Nov 10, 2025" in the header area
