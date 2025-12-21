@@ -14,6 +14,7 @@
 | SV News                                                              | Feed                                                                                                                             |
 | ----------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
 | [Arena Magazine](https://arenamag.com)                            | [feed_arenamag.xml](https://raw.githubusercontent.com/0xSMW/rss-feeds/main/feeds/feed_arenamag.xml)                            |
+| [Pirate Wires](https://www.piratewires.com)                       | [feed_piratewires.xml](https://raw.githubusercontent.com/0xSMW/rss-feeds/main/feeds/feed_piratewires.xml)                      |
 
 ---
 
