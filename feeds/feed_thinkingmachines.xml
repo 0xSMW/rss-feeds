@@ -7,7 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 21 Dec 2025 05:39:51 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 21 Dec 2025 11:00:02 +0000</lastBuildDate>
     <item>
       <title>Tinker: General Availability and Vision Input</title>
       <link>https://thinkingmachines.ai/blog/tinker-general-availability/</link>
@@ -89,7 +89,7 @@
 &lt;li&gt;Infrastructure contributions, such as a clean self-hosted implementation of the Tinker training API.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Your submission should include a write-up and, preferably, an open-source release of your code. We encourage you to focus on rigor and clear evaluation in your write-ups: crisp charts, raw output examples, clear comparisons to alternative approaches or models on relevant benchmarks and metrics. Tinkering is experimenting — we want to feature diligent work and transparent results over novelty or hype.&lt;/p&gt;
-&lt;p&gt;Please send your projects and any related questions to &lt;a href="https://thinkingmachines.ai/cdn-cgi/l/email-protection#34405d5a5f514674405c5d5a5f5d5a535955575c5d5a51471a555d0b4741565e51574009725155404146515011060464465b5e515740110604"&gt;[email protected]&lt;/a&gt; with “Featured Project” in the subject line.&lt;/p&gt;
+&lt;p&gt;Please send your projects and any related questions to &lt;a href="https://thinkingmachines.ai/cdn-cgi/l/email-protection#72061b1c19170032061a1b1c191b1c151f13111a1b1c17015c131b4d010710181711064f341713060700171657404222001d18171106574042"&gt;[email protected]&lt;/a&gt; with “Featured Project” in the subject line.&lt;/p&gt;
 &lt;h2 id="suggested-research-projects"&gt;Suggested research projects&lt;/h2&gt;
 &lt;p&gt;Here are some research directions that we would personally love to see explored and that Tinker can enable real progress on. We have &lt;a href="https://github.com/thinking-machines-lab/tinker-project-ideas"&gt;created a repo&lt;/a&gt; with detailed motivation and guidelines for each; we’ll be adding more resources to it over time to help researchers get started. We expect most project ideas to surprise us, but this short list could serve as inspiration.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;&lt;a href="https://github.com/thinking-machines-lab/tinker-project-ideas/blob/main/replicate-cai-with-base-models.md"&gt;Replicating Constitutional AI, starting from the base model.&lt;/a&gt;&lt;/strong&gt; Though RLAIF is widely used, it’s most often bootstrapped from existing instruction-tuned models. This makes it difficult to separate the impact of the constitution from the impact of the data-generating model that interprets it. A study of Constitutional AI with and without instruction-tuned models in the pipeline would shed light on the use of constitutions and RLAIF.&lt;/p&gt;
@@ -530,7 +530,7 @@ Thinking Machines Lab: Connectionism, Oct 2025.
 &lt;li&gt;&lt;a href="https://www.redwoodresearch.org/"&gt;Redwood Research&lt;/a&gt; used Tinker to RL Qwen3-32B on difficult AI control tasks&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Tinker is now in private beta for researchers and developers. You can sign up for the Tinker waitlist &lt;a href="https://thinkingmachines.ai/tinker"&gt;here&lt;/a&gt;. We will be onboarding users to the platform starting today.&lt;/p&gt;
-&lt;p&gt;If you’re an organization interested in using Tinker, please contact us &lt;a href="https://thinkingmachines.ai/cdn-cgi/l/email-protection#d0a4b9bebbb5a290a4b8b9bebbb9beb7bdb1b3b8b9beb5a3feb1b9"&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;If you’re an organization interested in using Tinker, please contact us &lt;a href="https://thinkingmachines.ai/cdn-cgi/l/email-protection#2e5a4740454b5c6e5a46474045474049434f4d4647404b5d004f47"&gt;here&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Tinker will be free to start. We will introduce usage-based pricing in the coming weeks.&lt;/p&gt;
 &lt;p&gt;We’re excited to see what you discover and make with Tinker!&lt;/p&gt;
 &lt;/article&gt;</content:encoded>
