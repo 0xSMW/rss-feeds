@@ -89,6 +89,10 @@ generate_ollama_feed: check-env  ## Generate RSS feed for ollama/blog
 generate_paulgraham_feed: check-env  ## Generate RSS feed for paulgraham/articles
 	python feed_generators/paulgraham_blog.py
 
+.PHONY: generate_thinkingmachines_feed
+generate_thinkingmachines_feed: check-env  ## Generate RSS feed for thinkingmachines/blog
+	python feed_generators/thinkingmachines_blog.py
+
 #######################
 ### Manual Testing  ###
 ######################
