@@ -1,0 +1,793 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0">
+  <channel>
+    <title>Arena Magazine</title>
+    <link>https://arenamag.com</link>
+    <description>Technology, Capitalism, Science, Civilization, and Greatness - Arena Magazine</description>
+    <docs>http://www.rssboard.org/rss-specification</docs>
+    <generator>python-feedgen</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 21 Dec 2025 05:05:06 +0000</lastBuildDate>
+    <item>
+      <title>Life of Coogan</title>
+      <link>https://arenamag.com/articles/life-of-coogan</link>
+      <description>A Day in the Life of the TBPN Host</description>
+      <content:encoded>&lt;p&gt;For the past year, I've been running a daily live talk show about technology and business called TBPN. It's a bit of an outlier in the media world, as - it's more like a daytime TV show than a weekly podcast. It's three hours long, so in a single week I'm on-air for about 15 hours. It's a lot of content, and it's forced me to have a very consistent daily routine, which I thought I'd share with you today.&lt;/p&gt;
+&lt;p&gt;People often ask how I go live for three hours every day. The truth of it is that I just started doing it, built up the muscle memory, and got to a place where it's become routine.&lt;/p&gt;
+&lt;p&gt;My day begins at 5:30am. I use Eight Sleep, one of my show sponsors, to wake me up. I go to the fridge, grab a protein shake, and warm up two bottles of milk for my one-year-old twin boys. I drop off the milk for the boys, who will be waking up soon, and head out the door of my house in Pasadena. Driving to Hollywood takes about 25 minutes at six in the morning, and I start my day by meeting my co-host Jordi Hays at the gym.&lt;/p&gt;
+&lt;p&gt;Today's Wednesday, October 1st, and it's leg day. I do some barbell back squats, then move over to machines for leg extensions, leg curls, and calf raises. We throw in some random ab exercises as well. I track my workouts with an app called Strong. It helps remind me what amount of weight I lifted the last time I did each exercise, and it helps track rest times.&lt;/p&gt;
+&lt;p&gt;During our workout, we scroll X, look through newsletters, and scan our news apps to take the temperature of what's going on in our world, which will ultimately inform our run of show. We have to do a lot of filtering to avoid political stories, which we never touch on-air, but this past week has been a great week for tech. OpenAI just launched their AI version of TikTok called Sora, and everyone has a hot take about it. We wrap up the workout, hit the sauna, then shower, shave, get cleaned up for the day, and head over to a breakfast spot a block away.&lt;/p&gt;
+&lt;img alt="" src="https://framerusercontent.com/images/Z0upKdDU47gTkcW7n6GrMUpGmas.png"/&gt;
+&lt;p&gt;Over breakfast, I start to crystallize the main key questions I have about the current thing (Sora). A lot of the hot takes on X focus on whether it's good or bad; I'm much more interested in whether it will be successful. I don't know yet. Jordi and I both order double smash burgers. I have a cinnamon bun, black coffee with one sugar, and an orange juice. This will be the last meal I eat until we wrap the show around 2 p.m., so I like to load up on carbs and calories - basically anything I can do to maintain energy through the rest of the day.&lt;/p&gt;
+&lt;p&gt;After we finish breakfast, we head over to the TBPN Ultradome - our Hollywood studio, a soundstage built inside a Quonset hut. It's 9am.&lt;/p&gt;
+&lt;p&gt;At the studio, I walk around and check in with all our employees. We have ten full-time, in-person team members, so everyone's pretty synced up on the same schedule. We're all discussing Sora - how much we've been using the app - and I'm trying to nail down predictions for how much people will still be using it a month from now, after the honeymoon phase fades away.&lt;/p&gt;
+&lt;p&gt;I sit down at my desk and drink a Mateina Yerba Mate while reading physical copies of T&lt;em&gt;he Wall Street Journal&lt;/em&gt; and the &lt;em&gt;Financial Times&lt;/em&gt; cover to cover. Doing this is particularly ironic on Sora Day, because I'm simultaneously thinking about an endless TikTok-style feed of AI content. But I still need to know what else is going on in the world, outside of the Sora launch. And Sora doesn't have FT's coverage yet.&lt;/p&gt;
+&lt;p&gt;At my desk, I open my laptop and write a short one-pager about Sora. I have a few questions I want to dig into on the show. This one page of text becomes a newsletter that we send out each morning, but it's also the backbone of my opening monologue, where I introduce the core theme and debate I want to explore with our audience. I hand off what I've written to our head of the newsletter, who helps synthesize it into one coherent email that includes the run of show for the day, the guest lineup, posts we'll be talking about, and links we find interesting. He gets that ready to send out.&lt;/p&gt;
+&lt;p&gt;I keep prepping the show by pulling up more content that we'll dig through throughout the day and organizing all of it into a PDF. At 10:55, the show goes live with a five-minute countdown. Everyone in the studio is hustling to make sure all the little details are sorted. I put on my suit (I wear one for each show), grab three Diet Cokes, share the PDF with the team, and I'm ready to go.&lt;/p&gt;
+&lt;p&gt;At 11 sharp, Jordi and I yell "You're watching TBPN!" at the camera, and the show begins. We riff for about two hours before our first guest joins. It's an absolutely chaotic day on the X timeline because of all the discussion about brain rot, slop, and Infinite Jest, as it pertains to the Sora news, so it's easy to keep the conversation going. We don't come close to hitting all the different topics we want to cover.&lt;/p&gt;
+&lt;img alt="" src="https://framerusercontent.com/images/HWDGS5rzComIJeCK4hfIYrTzE.png"/&gt;
+&lt;p&gt;Then we go into our lightning round. We have seven guests joining the show for about ten minutes each, all with news about fundraising, milestones, or product launches for their respective companies. It turns into a broad overview of what's happening in tech that day across AI, SaaS, hard tech, and crypto. It's a lot of fun to quickly catch up with a ton of founders and investors. Even though it's a little scatterbrained and takes us away from the main story of the day, we circle back to Sora with a few founders working on AI video or image generation and get their takes - which is always great.&lt;/p&gt;
+&lt;p&gt;After we wrap the show at 2pm, I grab lunch, then hop on a few Zoom calls with Jordi at my side. This is basically the only time of the day we have to connect with people off-air, because the early morning is for prepping the show, then we're live until 2pm, and after that we need to get home to our families. The 2 to 3pm slot is key for any conversation that can't happen on the show.&lt;/p&gt;
+&lt;p&gt;Once we finish our calls for the day, I hop in my car, drive back to Pasadena, pick up my four-year-old son from preschool, where he also reads the Wall Street Journal, and come home for family dinner. Once I'm home, I'm basically offline entirely. I might answer an urgent text, but I'm not carving out time to log back on or do anything productive. It's family time until I go to bed on my Eight Sleep mattress to start the cycle all over again the next day, where another day of breaking tech news awaits.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;This article appears in print in Issue 006! &lt;/em&gt;&lt;!--$--&gt;&lt;a href="https://arenamag.com/subscribe"&gt;&lt;em&gt;Subscribe today&lt;/em&gt;&lt;/a&gt;&lt;!--/$--&gt;&lt;em&gt; to get it in your mailbox. &lt;/em&gt;&lt;/p&gt;
+&lt;img alt="" src="https://framerusercontent.com/images/DPew8iBiaKlZbnFp83zfxnIhE4s.png"/&gt;</content:encoded>
+      <guid isPermaLink="false">https://arenamag.com/articles/life-of-coogan</guid>
+      <category>Technology</category>
+      <pubDate>Thu, 18 Dec 2025 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Dirty, Twisted, Shaken, Dry</title>
+      <link>https://arenamag.com/articles/dirty-twisted-shaken-dry</link>
+      <description>The mythic origin of the martini</description>
+      <content:encoded>&lt;p&gt;The earliest reference to the "three-martini lunch" &lt;!--$--&gt;&lt;a href="https://www.forbes.com/sites/taxnotes/2021/01/21/a-cultural-tax-history-of-the-three-martini-lunch/#:~:text=That%20said%2C%20the%20phrase%20%E2%80%9Cthree,laden%20midday%20meal"&gt;comes&lt;/a&gt;&lt;!--/$--&gt; from a 1954 article in &lt;em&gt;The Atlanta Constitution&lt;/em&gt; describing long lunches enjoyed by retirees and expense-account men. By 1960 the term had become a marketing trope; a clothing advertisement bragged that its suits could endure the "now-famous three-martini lunch." &lt;/p&gt;
+&lt;p&gt;In the meal's heyday in the mid-20th century, businessmen would shake hands, make deals, and generate shareholder wealth over a white tablecloth three-martini lunch. By the end of the century, the ritual faded, the three-martini lunch attacked as a symbol of excess and inequality.&lt;/p&gt;
+&lt;p&gt;As the three-martini lunch has morphed into the rush to grab a &lt;em&gt;bowl&lt;/em&gt;, some important dignity and civility of business has been lost. As it happens, so has the origin of the martini. It undoubtedly rose because of its association with corporate glamour, but nobody really knows where it started. Given the martini's strength as a symbol, its origin is an event primed for mythmaking. &lt;/p&gt;
+&lt;p&gt;One theory traces the origins of the drink to a bartender in the 1850s at San Francisco's Occidental Hotel, who was asked to make something special for a miner heading to "Martinez," a town about forty miles east of San Francisco. The bartender mixed Old Tom gin (a particularly sweet gin), vermouth, bitters and Maraschino liqueur; his customer's slurred request for a "Martinez" became "Martini" across the bar. A competing story flips the geography: a bartender in Martinez is said to have invented the drink for a miner heading to San Francisco. These dual tales appear in almost every account of the Martini's history, from Difford's Guide to cocktail lore, because they mirror the 19th-century Gold Rush's restlessness and uncertainty.&lt;/p&gt;
+&lt;p&gt;And then there is the Knickerbocker legend: a bartender named Martini di Arma di Taggia, tending bar at New York's Knickerbocker Hotel in 1911, mixed gin and dry vermouth for John D. Rockefeller himself. This story has the perfect setup: the richest man in America drinking what would become America's richest cocktail. It is almost certainly apocryphal, given early recipes of the "Martinez." Still, the myth clings. Given a century-long association of martinis with finance and old money, it makes aesthetic sense that the martini would come not from the Wild West but from a hotel lobby overlooking the great American financial center. Both the quest to find gold out west and the drive to create capital out east root the martini's history in one of hard work. Only the type of work (rugged and exploratory versus streamlined and corporate) differs.&lt;/p&gt;
+&lt;p&gt;The early formulations of the martini resemble a gin Manhattan: Old Tom gin, vermouth, orange curaÃ§ao or maraschino, and bitters. The first printed recipe for a cocktail called the "Martinez" &lt;!--$--&gt;&lt;a href="https://www.diffordsguide.com/g/1121/martini/martini-history#:~:text=The%20first%20known%20written%20recipe,based%20on%20old%20tom%20gin"&gt;appears&lt;/a&gt;&lt;!--/$--&gt; in O.H. Byron's 1884 &lt;em&gt;The Modern, &lt;/em&gt;decades before the Knickerbocker legend. The Martinez was essentially a fortified wine cocktail anchored by gin; the sweetness reflected not just available ingredients but also the 19th-century palate. As the drink travelled east, the recipe changed and the name morphed from &lt;em&gt;Martinez&lt;/em&gt; to &lt;em&gt;Martine&lt;/em&gt; and eventually &lt;em&gt;Martini&lt;/em&gt;, perhaps because American bartenders associated the cocktail with the Italian vermouth brand Martini &amp;amp; Rossi. Naming is never innocent; to call it a Martini was to tie it to an aspirational European sophistication and a global trade in spirits.&lt;/p&gt;
+&lt;p&gt;By the turn of the 20th century, the martini underwent a sleek rebrand. Difford's historical survey &lt;!--$--&gt;&lt;a href="https://www.diffordsguide.com/g/1121/martini/martini-history#:~:text=bitters%20and%20an%20orange%20zest,dry%20vermouth"&gt;notes&lt;/a&gt;&lt;!--/$--&gt; that early recipes contained two parts gin to one part sweet vermouth, but by 1904 &lt;em&gt;Stuart's Fancy Drinks and How to Mix Them&lt;/em&gt; recommended Plymouth gin with French dry vermouth, signalling a shift toward dryness. (A cocktail is 'dry' if it is not sweet, when all the fermentable sugars in a drink have converted into alcohol.) The first printed reference to a &lt;em&gt;dry&lt;/em&gt; martini appears in Frank P. Newman's 1904 French bar book. As cocktail historian David Wondrich observes, this 'dryness' was partly a marketing innovation: the Italian vermouth maker Martini &amp;amp; Rossi promoted its product for "dry cocktails," and the rise of London Dry gin, which was simple, juniper-forward, and industrially produced. But 'dry' drinks felt less indulgent and more restrained. The sugar of Old Tom gave way to the austerity of dry gin. During this time, the lemon peel was the garnish of choice for the dry martini, a holdover from the sweet martini precursor in Harry Johnson's &lt;em&gt;Manual&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;As time went on, the martini's dryness only intensified. By the 1920s and 1930s the martini ratio shrank to 4:1 or even 15:1 gin to vermouth. During Prohibition, like all drinks, the martini went underground, but new forms of the drink continued to evolve. As the drink gained popularity in the United States, the British novelist W. Somerset Maugham insisted that a martini must be stirred, not shaken, so that the molecules "lie sensuously on top of one another." Shaking, on the other hand, popularised later by James Bond, signals the modern appetite for speed and spectacle. In &lt;em&gt;Dr. No&lt;/em&gt; (1962), Bond's order of a "vodka martini, shaken, not stirred" propelled the vodka martini - all that's changed is the base spirit - to global fame; Tom Sisson of the New York Bartending School argues that Bond's order made the vodka martini the predominant form of the drink. A 2000 &lt;em&gt;Vanity Fair &lt;/em&gt;article claims that a Lebanese barman at the Colony, a Manhattan restaurant and gathering for high society that operated from 1919 to 1971, was the first to shake, not stir, vodka. Vodka's purity and flavor and minimalism was the perfect base spirit for a professional drink; its dryness made the drink feel productive, not excessive. Lacking sugar and juice, the martini - either gin or vodka - read as 'serious' and thus 'corporate.'&lt;/p&gt;
+&lt;img alt="" src="https://framerusercontent.com/images/zakhD6Abprf2Oz7m3SBZ98YaVo.png"/&gt;
+&lt;p&gt;By the mid-20th century, the martini became the drink of the American elite. &lt;/p&gt;
+&lt;p&gt;But, this martini was specifically the &lt;em&gt;dry&lt;/em&gt; martini that was allegedly served at the Knickerbocker Hotel and served to John D. Rockefeller; it was made from gin and dry vermouth, with bitters optional. The phrase "three-martini lunch" did not appear in print until the 1950s, but when Wall Street and Madison Avenue adopted the drink, it became synonymous with efficiency and taste.&lt;/p&gt;
+&lt;p&gt;In a 1978 address to the National Restaurant Association, Gerald Ford summarized: "The three-martini lunch is the epitome of American efficiency-where else can you get an earful, a bellyful, and a snootful at the same time?" Businessmen claimed that their creativity increased post-three-martini lunch. At white tablecloth steakhouses, olives were served as martini accoutrements: as an imported European delicacy, the olive added to the martini's high-class reputation. The early martinis were smaller at around two and a half ounces, only a third as intoxicating as contemporary versions. The three-martini lunch emerged from this environment: a perfect accompaniment to a long midday meeting where deals were made and class distinctions affirmed. One can imagine going back into the office after a 1950s three-martini lunch (now equivalent to one martini in 2025) only slightly tipsy and ready to keep working. &lt;/p&gt;
+&lt;p&gt;But as the three-martini lunch became a symbol of pinstripe-suited corporate America, a target was placed on the martini's back (and the back of the well-heeled executives who liked to charge their long lunches to the corporate account). In the 1970s, the three-martini lunch also became a political symbol of runaway capitalism. When stagflation plagued the American economy, President Jimmy Carter denounced business meal deductions as an abuse of the upper class, saying that the "working class was subsidizing the $50 martini lunch." Conservative writer William F. Buckley Jr. &lt;!--$--&gt;&lt;a href="https://isi.org/a-time-for-action-william-f-buckley-national-review-and-the-defeat-of-stagflation/#:~:text=reputation%E2%80%94on%20whether%20martinis%20at%20a,%E2%80%9D"&gt;responded&lt;/a&gt;&lt;!--/$--&gt; that the martini had become "a code word" used not to protect tax revenue, but to attack a pro-capitalist lifestyle that personally offended Carter, an especially prescient attack during the Cold War where being branded 'anti-capitalist' was a political liability. &lt;/p&gt;
+&lt;p&gt;But the "three-martini lunch" struck a nerve; the debate over whether elaborate corporate meals  ought to be tax deductible continued for decades. Presidents Gerald Ford and Donald Trump supported allowing businesses to deduct 100 percent of meal costs; John F. Kennedy, Ronald Reagan and Carter, odd bedfellows, opposed it. A 1942 tax reform that prevented "lavish or extravagant" business expense deductions was solidified in the 1986 Tax Reform Act, which proclaimed that "No deduction shall be allowed for any activity of a type generally considered to constitute entertainment, amusement, or recreation... if such activity is lavish or extravagant under the circumstances." This language governs business expenses to this day. &lt;/p&gt;
+&lt;p&gt;Three-martini lunches are now a relic. And, drudging through the stagflation that ruled the 1970s economy, corporate entities did not want to foot the bill for "lavish or extravagant" lunches amidst economic uncertainty. Today, young professionals pay for their own espressomartinis from their own pockets rather than ordering dry martinis midday from a bottomless expense account. But the business lunch never left, it just changed clothes. Yes, Sweetgreen is less glamorous than the white-tablecloth settings of three-martini lunches. But, the kale salad is just the martini inverted: instead of demonstrating your immunity to toxins, you demonstrate your immunity to pleasure. &lt;/p&gt;
+&lt;p&gt;Before 1987, every dollar spent on three-martini lunches could be written off against business income. Now, these meals are only fifty percent deductible. Worse yet, they've become unfashionable. Now, &lt;!--$--&gt;&lt;a href="https://www.kornferry.com/insights/this-week-in-leadership/the-end-of-lunch?utm_source=allsoc&amp;amp;utm_medium=soc&amp;amp;utm_campaign=25-09-gbl-brand-twil&amp;amp;utm_content=awa"&gt;62% of workers &lt;/a&gt;&lt;!--/$--&gt;report not leaving their desks at all for lunch. The end of the three-martini lunch era marked the beginning of a sterile, overly-professionalized work environment. Bureaucracy's fight against corporate excess has pushed away a human element in business. No one was harmed by these long business lunches, unless a participant had a low tolerance for vodka.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;This article appears in Issue 006: Three Martini Lunch. &lt;/em&gt;&lt;!--$--&gt;&lt;a href="https://arenamag.com/subscribe"&gt;&lt;em&gt;Subscribe&lt;/em&gt;&lt;/a&gt;&lt;!--/$--&gt;&lt;em&gt; to get it in print! &lt;/em&gt;&lt;/p&gt;
+&lt;img alt="" src="https://framerusercontent.com/images/EybovAI3QE4bp8oQNbHA2UTy3Y.png"/&gt;</content:encoded>
+      <guid isPermaLink="false">https://arenamag.com/articles/dirty-twisted-shaken-dry</guid>
+      <category>Technology</category>
+      <pubDate>Tue, 16 Dec 2025 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Black Gold and Grey Markets</title>
+      <link>https://arenamag.com/articles/black-gold-and-grey-markets</link>
+      <description>Adventures in energy trading</description>
+      <content:encoded>&lt;p&gt;In the Spring of 2020, close to 100 million barrels of oil were stored in tankers on ten square miles of prairie land in Cushing, Oklahoma. Founded by William "Billy Rae" Little, a U.S. government trader for an Indian tribe in 1891, Cushing is a town of about 8,300 people that serves as a critical node in the oil industry. &lt;/p&gt;
+&lt;p&gt;Cushing is where more than 10,000 miles of Canadian and American pipelines converge. It's the physical delivery point for West Texas Intermediate (WTI) crude oil, which, alongside Brent, underpins global oil pricing. When WTI futures contracts expire, holders who haven't closed their positions must take physical delivery of oil at Cushing.&lt;/p&gt;
+&lt;p&gt;The vast majority of oil traders - over 95%, according to the CME Group, which runs the Chicago Mercantile Exchange - never take delivery of oil. They trade in futures to make money on price changes, but don't want to deal with the logistics of transporting or storing oil, so they sell contracts before delivery. &lt;/p&gt;
+&lt;p&gt;The Covid-19 lockdowns broke this system in spectacular fashion.&lt;/p&gt;
+&lt;p&gt;The lockdowns destroyed global demand for oil, causing prices to collapse dramatically and suddenly. Airlines grounded flights, factories shut down, and commuters stayed home, leading to a historic oversupply. So, rather than sending oil through pipelines to refineries and customers, traders and producers filled storage to capacity at the major trading hubs like Cushing. &lt;/p&gt;
+&lt;p&gt;At the end of April, with no more room to store oil in Cushing, traders with futures contracts for May delivery were left holding a very large bag, especially those 95% who weren't actually equipped to take delivery. The result, in simplified terms, was that oil prices went negative. During intra-day trading on April 20th, WTI futures for May delivery hit -$40.32 per barrel. Buyers were being paid to take oil, because the sellers had nowhere to store it. It was the first time that had happened in the history of the WTI futures market. &lt;/p&gt;
+&lt;p&gt;The five large "trading houses" - Vitol, Glencore, Trafigura, Gunvor, and Mercuria - bought as much oil as they could and stored it on tankers. The traders had control of hundreds of vessels, and were spending a lot of money to control more, including $500,000 a day to lease Very Large Crude Carriers that can hold two million barrels of oil. Vitol alone reportedly booked around 200 million barrels in "floating storage" at its peak which would be enough to meet the entire annual demand of Ukraine.&lt;/p&gt;
+&lt;p&gt;News of the traders' activities reached the White House, with President Trump stating at a press conference that "Frankly, ships turned out to be a good business for some people because they're filling up tankers, sending them out to sea, and not saying where to go. They're just sitting out there loaded up with oil."&lt;/p&gt;
+&lt;p&gt;The Covid lockdowns created logistical and price dislocations globally and the traders could move their ships to where oil prices were strongest and book profits as the economy recovered. The major commodity traders combined for an estimated $50-60 billion in profit in 2021. &lt;/p&gt;
+&lt;p&gt;These gains would be eclipsed the following year when the geopolitical fall out of Russia's invasion of Ukraine sent commodity markets into another panic. European nations, fearing their people would be unable to heat their homes in winter and their economies would crater without Russian oil and gas, aggressively bought alternative supply from traders. A &lt;em&gt;Financial Times&lt;/em&gt; analysis showed the commodity trading industry combined for $148 billion in profits in 2022.&lt;/p&gt;
+&lt;p&gt;A little over 10% of these profits went to Vitol alone, most of which was distributed to the company's 400 partners. The boom continued into 2023, with the top five houses combining for $1.1 trillion in revenue, with the companies supplying ~24% of global oil supply and controlling 32% of global seaborne oil trade. For perspective, this figure would place the companies behind only China, the U.S., and Germany in a ranking of the world's largest exporters.&lt;/p&gt;
+&lt;p&gt;Despite the scale of their operations, few people have heard of the trading houses. This is deliberate. The trading houses are mostly private opaque companies based in Switzerland and do not want their operations scrutinized. The story of how a group of obscure companies came to play such an outsized role in the functioning of the global energy system dates back to the aftermath of World War II when the great powers became locked in a secret war for control of the world's natural resources.&lt;/p&gt;
+&lt;h3&gt;&lt;strong&gt;From West to East&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;The long economic boom that followed World War II transformed the structure of the global economy. More of every commodity was needed and in massive volumes. Between 1948-1972, oil consumption alone tripled in the U.S., while it increased 15 times in western Europe and 100 times in Japan. &lt;/p&gt;
+&lt;p&gt;At the same time, Western companies began to lose control of global commodities markets. A cartel of Western companies known as the Seven Sisters - Exxon, Mobil, Chevron, Gulf, Texaco, British Petroleum (BP), and Royal Dutch Shell - had long controlled 85-90% of global oil reserves and production. This led to widespread resentment from resource-rich Third World nations, sparking nationalization movements.&lt;/p&gt;
+&lt;p&gt;One of the first blows to Western dominance was in Iran, which nationalized the Anglo-Iranian Oil Company in 1951. Mohammed Mossadegh, the Iranian legislator who led the charge, would later become Prime Minister, only to be overthrown by a CIA-MI6 orchestrated coup d'etat dubbed "Operation AJAX."&lt;/p&gt;
+&lt;p&gt;Almost fifty African and Asian nations with significant natural resources gained independence in the decades following World War II, many of them from the United Kingdom. The Soviet Union welcomed the opportunity to weaken Western dominance and provided ideological support along with military and technical aid to postcolonial states. &lt;/p&gt;
+&lt;p&gt;Instead of a Western oligopoly, states no longer under direct Western control controlled the natural resources required for industrial civilization to survive. Because of the importance of their resources, these countries became geopolitical hinge states and pawns on the Cold War chess board. &lt;/p&gt;
+&lt;p&gt;The conflict played out most frequently through covert actions. When the CIA saw Patrice Lumumba, the first Prime Minister of the Democratic Republic of Congo, as sympathetic towards the Soviet Union, the agency moved to have him killed. The DRC was the largest supplier of uranium to the U.S. nuclear program and the U.S. could not risk losing this supply. The CIA first sent Sidney Gottlieb, a CIA scientist who had previously researched mind control, to poison Lumumba in 1960; it then drafted the plan which led to Lumumba's capture by DRC secessionists and Belgian military officers and mercenaries the following year. Lumumba was tortured, executed by a firing squad, had his body dismembered and dissolved by acid, and his remains hidden to prevent his grave from becoming a rallying point.&lt;/p&gt;
+&lt;p&gt;While East versus West spy games played out, political and economic warfare was constant with countries subjected to trade restrictions, embargos, and sanctions. The combination of exploding natural resource demand and the loss of control over these markets by Western companies created the conditions for a new type of company to emerge. A company that could serve as intermediary between the blocs and make large profits in the process.&lt;/p&gt;
+&lt;p&gt;One of the first to realize this opportunity was Ludwig Jesselson, a German-born refugee who worked at Philipp Brothers, known as PhilBro, a 50-person metals dealer in New York. Under Jesselon's leadership, PhilBro would deal with any country if there was a profit to be had. As a PhilBro trader put it "One of the basic rules of Phillip Brothers is that business is supreme; politics are not business." This made PhilBro a very unique firm. &lt;br/&gt;Jesselon traveled the world, securing contracts with regimes other Western companies deemed untouchable. His first big break came in 1946, when Jesselson visited Yugoslavia and left with a contract to sell the entire metals output of Jugometal, Yugoslavia's state metals monopoly. PhilBro soon had offices across the globe and within a decade was the largest metal trader in the world.&lt;/p&gt;
+&lt;p&gt;This global reach provided PhilBro the information edge it could use to exploit arbitrage opportunities. PhilBro relied on a network of informants at ports, within governments, and at state-owned exporters and shipping businesses. Bribes were a routine cost of business. This inside information was rapidly disseminated to PhilBro traders around the world through private telex lines. PhilBro executives bragged their telecommunications system was the most sophisticated in the world outside of the CIA and the Pentagon.&lt;/p&gt;
+&lt;p&gt;The CIA itself paid regular visits to PhilBro's offices in New York to extract the inside information the company had obtained about the inner workings of the global economy. There are claims that PhilBro's relationship with the CIA ran much deeper, but what has been confirmed is that the CIA routinely used commodities businesses as fronts and covert partners.&lt;/p&gt;
+&lt;p&gt;In the early 1960's the CIA was developing a secret spy plane, dubbed "Archangel", that was so fast it could outrun any missile. The plane, which would become the SR-71 Blackbird, was designed to fly 85,000 feet in the air at a cruising speed of Mach 3.2. This speed would cause the plane's skin to reach temperatures of over 500Â°F, which would deform any conventional airframe. The plane's designers came upon the novel solution of making the Archangel out of titanium, which is stronger and lighter than steel, and has a melting point of over 3,000Â°F.&lt;/p&gt;
+&lt;p&gt;There was just one problem -  the largest producer of titanium ore at the time was the Soviet Union and openly buying tonnes of high-grade titanium was impossible.The CIA had to create front companies to acquire the titanium through Western trading companies and other intermediaries.&lt;/p&gt;
+&lt;p&gt;While the U.S. was forced to leverage its power and use subterfuge to obtain critical metals such as uranium and titanium, its dominance over the most important commodity of all - oil - remained secure. The U.S. was, as the Cold War started, the world's largest oil producer. To ensure a stable supply of oil, Roosevelt organized a strategic alliance with Saudi Arabia, then led by the founding King Ibn Saud, signed aboard a U.S. Navy cruiser in the Suez Canal during the final months of World War II.&lt;/p&gt;
+&lt;p&gt;This started to change in 1970, when the U.S. ceded its role as the global swing oil producer to Saudi Arabia. In 1971, the U.S. ended the dollar's gold convertibility, allowing it to be devalued freely against gold and other currencies. Oil transactions around the world all happened in USD, so the devaluation of the dollar affected the purchasing power of the Gulf States in a meaningful way. Dissatisfied with the economic losses and Western for support for Israel in the Yom Kippur War, the Saudis led the OPEC oil embargo of 1973. As part of the negotiations to end the embargo, Saudi Arabia purchased a 25% stake in Aramco, the U.S.-controlled joint venture that had long monopolized the Saudi's oil industry. By the end of the decade, the Gulf Arab states had completely nationalized their oil industries and the Seven Sisters (Shell, BP, Texaco, and the Standard Oil scions) controlled less than 10% of global oil reserves. &lt;/p&gt;
+&lt;p&gt;The changes meant oil supply, the greatest economic prize in history, was now open with the oil industry becoming a free-for-all. Traders who could master the game of oil trading could get very rich.&lt;/p&gt;
+&lt;h3&gt;&lt;strong&gt;The Game&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;Arguably the best to ever play the oil game was a PhilBro trader named Marc Rich. An NYU dropout, Rich joined Jesselson's PhilBro as a trainee in 1954 at age 19. Worldly and fluent in multiple languages, Rich quickly became a star at the firm and was dispatched across the globe to close deals and solve problems. After the Cuban revolution, he was one of the first Westerners to arrive in Havana to negotiate contracts with Fidel Castro's government. &lt;/p&gt;
+&lt;p&gt;A competitor would later say of Rich that "the secret of success in this business is to spot trends...Marc Rich spots trends quicker than anyone I know." Rich would become the firm's top oil trader and seized upon the idea that "oil is just another form of money." That is, oil is merely a  liquid store of value that can be traded like any other.&lt;/p&gt;
+&lt;p&gt;Oil had previously been regarded strictly as an industrial supply that was sold through long-term contracts. Rich pioneered the 'spot market' - buying and selling oil for immediate delivery. This novel arrangement allowed Rich, working closely with his associate Pincus "Pinky" Green (nicknamed the Admiral for his mastery of shipping) to make a profit by buying oil wherever it was cheapest and shipping it to wherever it was most profitable.&lt;/p&gt;
+&lt;p&gt;The cornerstone of Rich's trading strategy became the 158-mile Trans-Israel Pipeline, abbreviated as Tipline, built in 1968 with covert support from the Imperial State of Iran. From 1967-1975, the Suez Canal was shut down following the Six-Day War between Israel and Egypt, Jordan, and Syria. This meant Iranian oil had to be shipped at high cost nearly 14,000 miles around South Africa's Cape of Good Hope to reach European markets. The pipeline allowed Iran to bypass the Suez completely, but no one wanted to buy oil transported across Israel in fear of angering the Arab oil powers.&lt;/p&gt;
+&lt;p&gt;No one, that is, except Marc Rich. Rich and Green had been courting the most powerful people in Iran for years, including sending bribes of $125,000 per awarded oil contract to officials at the National Iranian Oil Company. Serving as an intermediary between Israel and Iran, Rich facilitated a complex scheme where Iranian ships would depart under a false manifest to Israel where its oil would be sent via Tipline to a Mediterranean port and then depart under secrecy to Europe. &lt;/p&gt;
+&lt;p&gt;Tipline proved especially lucrative during the 1973 oil crises, with Rich and Green using it to make record profits. Despite their performance, PhilBro's CEO turned down Rich's request for a $1 million bonus to be split between Green and himself, causing Rich to leave the firm and start a competitor, Marc Rich + Co. in 1974. Rich's new venture was immediately profitable and by its third year in operation it earned $200 million in profit, exceeding PhilBro.&lt;/p&gt;
+&lt;p&gt;The profits generated by Rich attracted fierce competition, with a Dutch trader named John Deuss emerging as Rich's primary rival. Based in a Bahamas villa, Deuss surrounded himself with beautiful female assistants and a large security detail. He traveled the world on his Gulfstream jet, securing deals with the most notorious Third World leaders.&lt;/p&gt;
+&lt;p&gt;Helping Deuss navigate the geopolitical landscape was ex-CIA agent Ted Shackley, who was nicknamed the "Blond Ghost." Shackley was formerly second in command of the CIA's covert operations. Prior to taking that role he had served as the CIA's Miami station chief leading psychological warfare and sabotage operations in Cuba at the height of the Cuban Missile Crisis, before serving as CIA station chief in Saigon, where he was involved in the Operation Phoenix assassination program that "neutralized" 20,000 people between 1968 and1972.&lt;/p&gt;
+&lt;p&gt;Deuss was the primary client of Shackley's company, Research Associates International (RAI), which served as an intermediary and helped deploy tactics such as false flags and mid-sea cargo transfers to help evade embargos.  Beyond Shackley, Deuss was linked to a network of former CIA agents who would later be implicated in the Iran-Contra affair, Libyan arms deals, and murder-for-hire plots.&lt;/p&gt;
+&lt;p&gt;Rich had his own connections to the intelligence world - he was an asset of the Israeli Mossad. After the 1973 Yom Kippur War, Arab oil producers imposed embargos on Israel that threatened to economically strangle the country. Marc Rich's newly-formed company became critical to Israel's survival by buying oil from Arab nations and others and secretly selling it to Israel. Over time, Rich "&lt;!--$--&gt;&lt;a href="https://www.latimes.com/archives/la-xpm-2001-feb-25-op-29986-story.html"&gt;befriended&lt;/a&gt;&lt;!--/$--&gt; and gained unlimited access to all Israeli prime ministers" and became a power player in the country.&lt;/p&gt;
+&lt;p&gt;Rich leveraged his contacts in Third World countries to facilitate rescues of imperiled Jewish communities, including  "Operation Moses" in 1984 to rescue Ethiopian Jews. Per Israeli journalists, Rich financed "numerous covert missions" on Mossad's behalf and let Mossad operatives use his offices and business cover to gather intelligence and recruit assets. He also hired Avner Azulay, a retired high-ranking Mossad officer to serve as his security chief and non-profit foundation director.&lt;/p&gt;
+&lt;p&gt;When the 1979 Iranian Revolution toppled the Shah, Israel lost its primary supplier as did apartheid-era South Africa, which had depended on Iran for 80% of its petroleum. Rich facilitated a secret agreement, covertly supplying South Africa with oil as well as transporting oil from South Africa to Israel. Oil would be shipped via secret tankers where they would be offloaded for shipment through Tipline under fake documentation or in offshore transfers. In exchange, Israel provided an array of weaponry including missiles, rockets, fighter jets, electronic warfare systems, and some of the first military drones.&lt;/p&gt;
+&lt;p&gt;This trading continued despite U.S. sanctions on Iran, which had caused a global oil market disruption that Rich was able to fully exploit. Marc Rich + Co. earned $1 billion in profits in 1979, which would rank his company - which only had around 100 employees -  amongst the ten most profitable in the U.S. &lt;/p&gt;
+&lt;p&gt;The company would continue to benefit from subverting U.S. sanctions, facilitating Iranian oil trading throughout the 1980-1988 Iran-Iraq War and using the profits to entrench its position in the commodities industry. The company would finance entire governments to secure natural resource rights. A former U.S. official stated "(Rich) virtually hijacked Jamaica's economy" by providing $1 billion in funding to its government over many years, including paying for the country to send a bobsled team to the 1988 Winter Olympics. &lt;/p&gt;
+&lt;p&gt;Marc Rich became known as the "King of Oil" as his firm controlled around 13% of global seaborne oil flows at its peak. An estimated 50% or more of company profits was derived from the Iran and South Africa trading. This money funded a lavish lifestyle. Company parties were cocaine-fueled bacchanalias where luxury sports cars were given out as gifts. Rich bought a yacht and became a serious art collector, purchasing works by Picasso, Monet, MirÃ³, Rothko, and Bacon. &lt;/p&gt;
+&lt;p&gt;The fact that one of the most profitable businesses in the U.S. could fairly be described as a Mossad intelligence operation that was making most of its money by flouting U.S. sanctions did not go unnoticed. In 1984, an ambitious young U.S. attorney named Rudy Giuliani led a prosecution against Marc Rich, indicting him with 65 charges ranging from tax evasion to trading with the enemy.&lt;/p&gt;
+&lt;p&gt;Facing a 300-year sentence, Rich's legal team, led by Jack Quinn, former White House counsel, proposed a deal to the FBI and CIA: Rich would share his insider knowledge or assist U.S. intelligence, in exchange for the charges against him being dropped. When the FBI and CIA declined his offer, Rich fled to Switzerland where he remained a trading powerhouse, despite his slot  on the FBI's most-wanted list.&lt;/p&gt;
+&lt;p&gt;In exile, Rich became a pillar of Zurich society and evaded several near captures facilitated by U.S. intelligence. It was revealed in the Justice Department's case against Rich that he had covertly obtained a 50% stake in the movie studio 20th Century Fox and he remained engaged in the movie business from Switzerland. He funded the production company New Regency, which was led by Arnon Milcha, a former Israeli intelligence operative who had helped the country secure nuclear triggers. New Regency would go on to produce a series of iconic 1990's films, including LA Confidential, Fight Club, Pretty Woman, and Heat.&lt;/p&gt;
+&lt;p&gt;At the same time his movie investments were thriving, Rich divorced his wife Denise, herself a Grammy-nominated songwriter for Celine Dion and Aretha Franklin. The move was rumored to have been done to shield Denise from his legal issues. After the divorce, Denise started showing interest in politics and donated millions to the Democratic National Committee, Hillary Clinton's 2000 U.S. Senate campaign, Bill Clinton's legal defense fund, and the Clinton Presidential Library Fund. Her donations and an intense Israeli lobbying effort helped convince Clinton to pardon Rich in 2001. It was one of Rich's most impressive trades.&lt;/p&gt;
+&lt;p&gt;To escape the stain on its reputation, senior managers bought Rich's stake in his business in 1993 and renamed it Glencore. Traders who had worked under Rich went on to start Trafigura and Gunvor, which, along with Glencore, became three of the five largest trading houses in the world. All shared the same core DNA: comfort with risk, speed and information, and a willingness to operate where others wouldn't. The culture of the modern commodities trading industry, not any one company, is Rich's legacy.&lt;/p&gt;
+&lt;p&gt;But their ability to play the games Marc Rich perfected has gotten harder. Glencore was forced to pay $1.1 billion in fines to the U.S., U.K., and Brazil for market manipulation and bribery in 2022 while Trafigura's COO was sentenced to prison earlier this year in Switzerland for bribing African officials. This is notable because Switzerland has historically been so accommodating that the trading houses used to be able to deduct bribes as business expenses.&lt;/p&gt;
+&lt;p&gt;The information edge enjoyed by the trading houses has also steadily eroded. This dates back to at least 1981, when PhilBro acquired the investment bank Salomon Brothers, which was famously described as being dominated by "big swinging dick" traders in the book Liar's Poker. When Salomon Brothers partner Michael Bloomberg was let go, he used his $10 million severance to found his eponymous information service, which provides its customers with pricing data only the established trading houses used to possess.&lt;/p&gt;
+&lt;p&gt;The trading houses' last great information edge came from ownership of physical infrastructure, such as tankers and storage terminals. But hedge funds now use satellites equipped with infrared imaging to monitor oil storage levels and ship movements. Some funds, such as Ken Griffin's Citadel, have nation-state level weather modeling teams that use supercomputers to run forecasts and determine weather impacts on energy supply and demand. All of these tools are additive to the ocean of market data now available for funds to model and create algorithmic trading strategies. No trader can simply use his intuition to spot trends better than the machines employed by the hedge funds.&lt;/p&gt;
+&lt;p&gt;Perhaps the biggest change in the competitive dynamics for the trading houses has been the emergence of China. Not only is it by far the biggest commodities market, its traders do not have to fear U.S. sanctions or prosecution. The U.S. attempted to sanction a Chinese trader nicknamed Crazy Yang for dealing in Iran multiple times to no avail. A hard drinker who wore a green Army jacket everywhere he went, Yang liked to bear hug business partners and tell them stories about his time in mental institutions. His eccentricities did not prevent him from becoming the world's largest handler of Iranian crude oil before he died of cancer at age 62 in 2014.&lt;/p&gt;
+&lt;p&gt;New frontiers are opening in the grey markets of energy. Trading houses of unclear ownership set up shop in Dubai immediately after the Ukraine war began, collectively moving billions of dollars of Russian crude a month. Some curiously had directors with ties to the big five trading houses listed on their corporate registrations. Russian intelligence services have facilitated a "ghost fleet" of ships to keep Russian oil flowing to non-Western buyers and Hong Kong has emerged as a major trading hub of Russian oil and gas. Traders continue to look for an edge, petro states continue to evade sanctions, and old habits die hard.&lt;/p&gt;</content:encoded>
+      <guid isPermaLink="false">https://arenamag.com/articles/black-gold-and-grey-markets</guid>
+      <category>Technology</category>
+      <pubDate>Thu, 11 Dec 2025 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>The Great Eighties Wall Street Bonanza</title>
+      <link>https://arenamag.com/articles/the-great-eighties-wall-street-bonanza</link>
+      <description>Misremembered excerpts from the start of modern investing</description>
+      <content:encoded>&lt;blockquote&gt;&lt;p&gt;"It was a vast space, perhaps sixty by eighty feet, but with the same eight-foot ceiling bearing down on your head. It was an oppressive space with a ferocious glare, writhing silhouettes, and the roar...The writhing silhouettes were the arms and torsos of young men, few of them older than forty. They had their suit jackets off. They were moving about in an agitated manner and sweating early in the morning and shouting, which created the roar...The room was like a newspaper city room in that there were no partitions and no signs of visible rank. Everyone sat at light gray metal desks in front of veal-colored computer terminals with black screens. Rows of green-diode letters and numbers came skidding across."&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;Thus Tom Wolfe in &lt;em&gt;Bonfire of the Vanities &lt;/em&gt;(1987) described a Wall Street trading room. &lt;/p&gt;
+&lt;p&gt;The images of Wall Street in the eighties are forever engraved on the public consciousness. Besides the young men screaming at trading desks, there is the executive with his car phone in the back seat of a black stretch limousine flying through Manhattan's streets; a corporate raider with slick-backed hair and suspenders over a striped shirt pontificating while staring out of the plate glass window; exultant brokers running around the New York Stock Exchange floor surrounded by crumpled order sheets. The images convey ambition and excitement in equal measure.&lt;/p&gt;
+&lt;p&gt;Yet for all the drama, people still misunderstand the great investment boom of that era. That run came after an unprecedentedly bad decade for the stock market and New York City. Instead of defining the "eighties," the boom was really a five-year run, from 1982 to 1987. And far from defining a "decade of greed" that met its comeuppance, the glowing success of the market in that period planted the seeds for decades of triumphant American stock returns. Wall Street in the eighties became a symbol of raw, unrestrained capitalism, which it was. It was also a symbol of capitalism at its best.&lt;/p&gt;
+&lt;img alt="" src="https://framerusercontent.com/images/AxCJEo8zV6jE9v3kfUqgHmmTxAs.png"/&gt;
+&lt;p&gt;What we now think of as the eighties almost started in the seventies. On November 14, 1972, soon after the reelection of the seemingly market-friendly Richard Nixon, the Dow Jones Industrial average finished over 1,000 for the first time. The New York Times &lt;!--$--&gt;&lt;a href="https://www.nytimes.com/1972/11/17/archives/the-dow-at-1000.html"&gt;reported&lt;/a&gt;&lt;!--/$--&gt; that "Confetti fluttered, champagne corks popped and stock brokers cheered." The "Nifty Fifty," &lt;!--$--&gt;&lt;a href="https://web.archive.org/web/20111127144254/http:/economics-files.pomona.edu/GarySmith/nifty50/nifty50.html"&gt;as&lt;/a&gt;&lt;!--/$--&gt; the blue-chip stocks such Gillette, Dow Chemical, and Eastman Kodak were known, seemed to be on a permanent tear. Economists wondered why, despite the highs, the stock market lagged what they saw as the strong growth in the rest of the economy, and they expected the boom to continue. To some, Dow 1,000 seemed to end the pall the Great Crash of 1929 and the subsequent Great Depression had cast over the market.&lt;/p&gt;
+&lt;p&gt;Yet what happened to stocks in the decade after 1972 made the Great Depression look good by comparison. If you had &lt;!--$--&gt;&lt;a href="https://www.officialdata.org/us/stocks/s-p-500/1929?amount=100&amp;amp;endYear=1939"&gt;invested&lt;/a&gt;&lt;!--/$--&gt; $100 in the S&amp;amp;P 500 at the beginning of 1929, and reinvested all of the dividends, you would still have $90 in ten years. But that was an era of deflation, so the real value of your stocks would actually end up by about ten percent. By contrast, if you had invested that $100 in the stock market at the beginning of 1972, by July 1982 your nominal investment would have gone up a bit. But this was the era of inflation, so in real terms you would only have a little over $70. The post-tax return for investors was even worse, because capital gains and dividend taxes would be taken out of what the government considered the investors' "gains," which in reality were the result of depreciating paper. The seventies were devastating for investors in stocks and bonds. &lt;/p&gt;
+&lt;p&gt;The main reason for the bad times was simple: inflation, which had been marching upwards by 1972, exploded soon afterwards and, when combined with the high taxes of the period, put a damper on investment. But other shocks hit the market. Nixon and the Republicans came a cropper in Watergate, even as they conceded to ever more activist government policies. New York City, still the global center of stocks and bonds, itself teetered on the edge of bankruptcy, and the Street had to eat losses from the state and city's questionable municipal bonds. &lt;/p&gt;
+&lt;p&gt;Like many hard times, the seventies forced reforms that would pay off later. On "May Day" 1975, the New York Stock Exchange ended fixed commissions that had kept trading expensive and exclusive. In 1978 the federal government tweaked its "prudent man" rule, giving pension trustees more power to invest in risky stocks and bonds and private equity. The same year, the Financial Accounting Standards Board made dramatic changes in accounting standards, which allowed outside analysts a better look at the true value of public companies. &lt;/p&gt;
+&lt;p&gt;The chaotic financial markets of the era also led to financial innovation, which would pay off in the following decade. Here the city of Chicago took a surprising lead from down at-the-heels New York. Fischer Black, then of the University of Chicago, became co-inventor of the Black-Scholes formula for pricing options, and was an early one to see a future in which derivatives were an essential part of investment. He presciently noted: "[A] long term corporate bond could actually be sold to three separate persons. One would supply the money for the bond; one would bear the interest rate risk; and one would bear the risk of default." In 1973 the new Chicago Board of Options Exchange opened and allowed general trading of stock and bond options. Richard Sandors, the economist who invented the word "derivatives," helped design the first interest-rate futures. The Chicago Mercantile Exchange struck a deal with Standards and Poors to issue a stock index futures contract.&lt;/p&gt;
+&lt;p&gt;Most importantly for the coming boom, the Fed finally got serious about fighting inflation. In October 1979, the lanky, cigar-smoking Federal Reserve chair Paul Volcker announced to the world that the Fed was going to start restricting the money supply and that it would allow interest rates to rise. At first, the Fed's anti-inflation fight imposed immense costs for the country in general, and for New York City in particular. Peter Sternlight was the manager of the Open Market Desk at the Federal Reserve in the early 1980s, so he bought and sold bonds on orders from the Fed's chiefs. He &lt;!--$--&gt;&lt;a href="https://archive.org/details/secretsoftempleh0000grei/page/458/mode/2up?utm_source=chatgpt.com&amp;amp;q=bicycle"&gt;lived&lt;/a&gt;&lt;!--/$--&gt; in Brooklyn, which was then filled with empty husks of buildings that couldn't be refinanced or maintained and the closed shops that came from high interest rates and high unemployment. He knew that he and his colleagues were scribbling little numbers on pieces of paper, entering a few digits in a computer, and that, through a circuitous process, that caused some buildings in Brooklyn to burn down: "I ride my bike through these neighborhoods on Sundays and I ask myself: 'What the hell are we doing to these areas?" He told himself that "They'll probably be better off in the long run if we do something about inflation. But I continue to be bothered." Volcker endured death threats and abuse, but it was his and his colleagues' work restricting inflation, after a painful three-year period, that allowed the later boom.&lt;/p&gt;
+&lt;p&gt;The other man most responsible for the boom, and who is still associated with it today, was that unapologetic apologist for capitalism, President Ronald Reagan. It helped that he had some experienced Wall Streeters by his side. For the first four years of his presidency, the former CEO of Merrill Lynch and former vice chair of the NYSE, Donald Regan (whose name caused writers and commentators endless confusion with his boss) was the Treasury Secretary. He had helped Merrill Lynch go public in the early 1970s and had helped with numerous 1970s-era Wall Street reforms. William Casey, who as director of the CIA shipped arms to the Afghan mullahs, had mastered dissimulation from his &lt;!--$--&gt;&lt;a href="https://books.google.com/books?id=7PcJmjU_n0UC&amp;amp;pg=PA87#v=onepage&amp;amp;q&amp;amp;f=false"&gt;time&lt;/a&gt;&lt;!--/$--&gt; as a Wall Street tax attorney, where, according to one report, he had "invented the tax shelter." He also became chair of the NYSE and pushed for the changes in accounting standards. John Shad was tapped to head the all-important Securities and Exchange Commission. He &lt;!--$--&gt;&lt;a href="https://www.nytimes.com/1994/07/09/obituaries/john-s-r-shad-dies-at-71-sec-chairman-in-the-80-s.html"&gt;was&lt;/a&gt;&lt;!--/$--&gt; formerly vice chair of E.F. Hutton and the first former Wall Streeter to head the commission in half a century. &lt;/p&gt;
+&lt;p&gt;Although Reagan assumed power in the midst of an economic crisis that would continue deepening during his early years in office and which weighed on stocks and bonds, his administration tried to assure investors. The SEC backed off of excessive involvement in corporate decision making, and Shad actively cheered on the new corporate raiders who bought up sclerotic companies. The relaxed merger requirements from the Department of Justice's Antitrust Division allowed new combinations to take place without Washington intrusion. The greatest contribution to the boom was the Economic Recovery Tax Act of 1981, which was helped over the finish line by the goodwill Reagan garnered after he was shot. The act cut income tax rates from 70 percent to 50, capital gains rates from 28 percent to 20, and indexed tax brackets to inflation.&lt;/p&gt;
+&lt;p&gt;But the combination of continued high interest rates and spending cuts meant the economy continued in recession. Volcker and Reagan had to grit their teeth and hope feast would follow famine.  &lt;/p&gt;
+&lt;p&gt;When the stock market bottomed out in August 1982 the country was in a conservative mood. The number one song in America was "Eye of the Tiger" by Survivor, a paean to the "thrill of the fight" and pitiless triumph, without a cause beyond success. The song was better known as the background to Rocky III, the third time Sylvester Stallone portrayed a white working-class hero taking on a showboating black boxer. The number one movie was E.T., whose main villains were U.S. government agents caging something they didn't understand. The number one fictional TV show in America was &lt;em&gt;Dallas&lt;/em&gt;, featuring loving images of oil-fueled luxury, wealth, and sex. Despite the hard times, America was sick of the government involving itself in their business and they wanted to win and get rich. &lt;/p&gt;
+&lt;p&gt;On August 15, 1982 the &lt;em&gt;New York Times&lt;/em&gt; &lt;!--$--&gt;&lt;a href="https://www.nytimes.com/1982/08/15/business/dark-days-on-wall-street.html"&gt;published&lt;/a&gt;&lt;!--/$--&gt; "Dark Days on Wall Street," where they noted "[t]he consensus is that the market is in for a tailspin" and that people "are drawing parallels between current happenings and those just prior to the Great Depression." To most of the American public it didn't matter though, because "the public has largely withdrawn from the market." &lt;/p&gt;
+&lt;p&gt;But that &lt;em&gt;Times&lt;/em&gt; article, in classic fashion, hit right at the nadir. Just three days &lt;!--$--&gt;&lt;a href="https://www.nytimes.com/1982/08/18/business/dow-soars-by-38.81-volume-near-peak.html"&gt;later&lt;/a&gt;&lt;!--/$--&gt; it became clear that the Fed felt it had finally squelched inflation and that it could start increasing the money supply and reducing interest rates. The Dow saw an all-time record advance, and one of the biggest booms in Wall Street history was off. After the November 1982 elections, when, as the &lt;em&gt;Times&lt;/em&gt; &lt;!--$--&gt;&lt;a href="https://www.nytimes.com/1982/12/12/business/what-ronald-reagan-has-done-for-investors.html"&gt;reported&lt;/a&gt;&lt;!--/$--&gt;, "the Democrats failed, despite a 10-percent-plus unemployment rate, to break decisively Mr. Reagan's hold on Congress" people realized the Reagan revolution was not a passing phase. Now "investors in long-despised stocks and bonds are smiling again and talking about the possibility of sustained good times... The market optimism appears based on what analysts regard as fundamental improvements in the way Washington approaches economic policymaking." Volcker and Reagan together had endured the hard times, and now they would reap the fruits.  &lt;/p&gt;
+&lt;p&gt;Reagan later &lt;!--$--&gt;&lt;a href="https://www.reaganlibrary.gov/archives/speech/remarks-brokers-and-staff-new-york-stock-exchange-new-york-new-york"&gt;went&lt;/a&gt;&lt;!--/$--&gt; to the NYSE rostrum to ring the morning trade bell. Reagan, as with Volcker, was not inclined to tout the roaring stock market, but the market loved him. He was met with calls of "Eight More Years" and "Ronnie! Ronnie! Ronnie!"&lt;/p&gt;
+&lt;img alt="" src="https://framerusercontent.com/images/TL4p0OxE9j1fXmUBz3IjcvA.png"/&gt;
+&lt;p&gt;If one watches the movies of 1980s Wall Street, and there are many, the story is usually of hard-scrabble outer-borough climbers who worked their way up to a glamorous Manhattan trading office. In &lt;em&gt;Wall Street&lt;/em&gt; (1987), Charlie Sheen's (real life and fictional) dad played a Queens-based airport mechanic who cautioned him against canny traders' ways. Melanie Griffith commuted into Wall Street from big-haired Staten Island in &lt;em&gt;Working Girl&lt;/em&gt; (1988). Danny DeVito, already in the flush of success, in &lt;em&gt;Other People's Money &lt;/em&gt;(1990) told his limo driver: "They're not gonna send us back to the Bronx, Arthur."&lt;/p&gt;
+&lt;p&gt;There was more than a hint of truth to these stories, but Hollywood was reluctant to note that most of these outer-borough risers in this decade were Jewish. Many followed the &lt;!--$--&gt;&lt;a href="https://www.nytimes.com/2012/12/11/business/saul-p-steinberg-bold-corporate-raider-dies-at-73.html"&gt;path&lt;/a&gt;&lt;!--/$--&gt; of Saul Steinberg, a Brooklyn-born son of a small bathmat manufacturer who started the corporate takeover trend in the 1960s and then made it big in the 1980s. Carl Icahn was &lt;!--$--&gt;&lt;a href="https://www.newyorker.com/magazine/2006/03/20/the-raid"&gt;born&lt;/a&gt;&lt;!--/$--&gt; in Brooklyn the son of two school teachers. His dad was a cantor at the local synagogue. Nelson Peltz was born in Brooklyn to a successful food distributor. Other of the biggest traders of the era came from beyond the boroughs: Michael Milken was the son of an accountant in Encino, California. Ronald Perelman was born in North Carolina to a successful paper products businessman. These men became the core of the corporate stock raiders that challenged corporate America's WASPish ways. &lt;/p&gt;
+&lt;p&gt;With the exception of Icahn, who went to Princeton University across the Delaware River, every one of these attended the Wharton School of Business at the University of Pennsylvania, in part because UPenn had a reputation as being, unlike the other old Ivies, &lt;!--$--&gt;&lt;a href="https://www.insidehighered.com/news/admissions/2023/05/08/jewish-student-enrollment-declines-many-ivies"&gt;open&lt;/a&gt;&lt;!--/$--&gt; to Jews. In the late 1960s about 40% of its student body was Jewish. Outsiders were attracted to Wharton, because, despite its academic qualities, Wharton remained something of a backwater. As one graduate &lt;!--$--&gt;&lt;a href="https://magazine.wharton.upenn.edu/issues/summer-2002/wharton-then-and-now/"&gt;remembered&lt;/a&gt;&lt;!--/$--&gt;, Wharton in the 1960s "had these pale green cinderblock walls and vinyl tile floors." It was an unpretty place that told people to look for value in unpretty things. &lt;/p&gt;
+&lt;p&gt;Given their backgrounds, it's not surprising that what united these outsiders was a fascination with the undervalued. Although the anti-Semitism among their opponents was often palpable, their outsider perspective allowed them to look at firms, bonds, and stocks that weren't glamorous but that contained within them the seeds of greatness. The great corporate battles these raiders led weren't over the Apple Computers, but the cracker companies, lipstick companies, and beaten down airlines that others scorned. &lt;/p&gt;
+&lt;p&gt;Luckily, the raiders lived in a target-rich environment. In August 1982, the price-to-book ratio of the S&amp;amp;P 500, or how much the stocks were trading for on the market relative to their raw accounting value, was just about one. The Dow's &lt;!--$--&gt;&lt;a href="https://www.nytimes.com/1982/08/15/business/dark-days-on-wall-street.html"&gt;was&lt;/a&gt;&lt;!--/$--&gt; 0.78. This meant that much of the American corporate sector would have its value improved by stripping it and selling it for parts. That's exactly what many raiders tried to do. &lt;/p&gt;
+&lt;p&gt;The essential insight came from Michael Milken, who realized that although junk bonds looked risky individually, when you assembled a lot of them into a portfolio the risks canceled each other out and they turned into great investments. By issuing tons of junk bonds to eager investors, Milken and his allies could fund the takeover of almost whatever company they saw as undervalued. The junk bond buyers would get their high-interest loans paid back after everything was rejiggered or stripped and the stock purchasers paid off with the winnings. &lt;/p&gt;
+&lt;p&gt;It didn't take a lot of insight into corporations to fuel takeovers, just guts and a willingness to upset old habits. Icahn told the head of Hammermill Paper Company that he wanted to "piece off the company." He said "I'm only in this for the money. I don't know anything about the paper business. I don't care about the paper business."  With the book value so clear, almost any company could be bought up and parceled out.&lt;/p&gt;
+&lt;p&gt;The raiders helped fuel a mergers and acquisition boom. In 1985, almost 10 percent of the whole stock market was involved in a merger deal, a level five times that of the mid-1970s. The peculiar trade of the raiders was taking companies private. The number of companies taken private in raids and buy-outs peaked in 1988 at 2.5% of all stock market value. Instead of fighting the raids, Chairman Shad of the SEC  argued that the takeovers forced corporate management to improve.&lt;/p&gt;
+&lt;p&gt;These mergers and threats of mergers did reform corporate America and helped propel the value of all stocks higher. A dollar invested in the S&amp;amp;P 500 right before the market's bottom in August 1982 would be worth about triple in real terms by the same time in 1987, when it peaked. Although descriptions of Wall Street in the era focus on the stock boom, bonds were in a boom as well. In 1981 new public issues of bonds and notes besides U.S. Treasuries were less than $100 billion. Over the next 12 years they rose to well over $1.25 trillion. [Mallaby, More Money Than God, 186.]&lt;/p&gt;
+&lt;p&gt;The raiders made the biggest names of the era, but many stock pickers did well too. Warren Buffett had started his investment partnership in 1956, but it was only in the 1980s that he acquired popular &lt;!--$--&gt;&lt;a href="https://books.google.com/ngrams/graph?content=Warren+Buffett&amp;amp;year_start=1800&amp;amp;year_end=2022&amp;amp;corpus=en&amp;amp;smoothing=3"&gt;prominence&lt;/a&gt;&lt;!--/$--&gt;. Buffett also could function as a white knight protecting companies that were about to be taken over by raiders, as he did for the seller of World Book encyclopedias. Julian Roberston started Tiger Management in 1980, and his simple model, go long good companies and short bad ones in the same market, so that your yields were invariant to general trends, worked shockingly well. It helped that he focused on small stocks in an era when small stocks did great. Unlike the Nifty Fifty of the previous boom era, the whole market was rising. &lt;/p&gt;
+&lt;p&gt;For the first time Wall Street also brought academics into the mix. Fisher Black, of Black-Scholes fame, left academia to work at Goldman Sachs, recruited by future Treasury Secretary Robert Rubin. Richard Sandors, of inventing derivatives fame, went to Drexel with Milken. They brought new financial models and derivatives into mainstream trading. &lt;/p&gt;
+&lt;p&gt;The courtly Southern Paul Tudor Jones was one of the first traders to take advantage of these derivatives. He was the subject of a largely fawning documentary &lt;!--$--&gt;&lt;a href="https://www.youtube.com/watch?v=0Fsa4sOJwh4"&gt;&lt;em&gt;Trader&lt;/em&gt;&lt;/a&gt;&lt;!--/$--&gt;that followed him in his work in 1986 The documentary showed him analyzing supposedly complicated mathematical models and then engaging in frantic phone shouting. But Jones worried about all the debt that had been "mortgaging our future earnings." He made a prediction: "There will be some type of a decline, without a question, in the next ten to twenty months. And it will be Earth-shaking; it will be saber-rattling, and it will have Wall Street in a tizzy." &lt;/p&gt;
+&lt;p&gt;The 1987 stock market crash, Black Monday, October 17th, seemed to many people to offer the perfect, if somewhat early, finale to the 1980s. As one news report on &lt;!--$--&gt;&lt;a href="https://www.youtube.com/watch?v=0_8YEglCFdU"&gt;that&lt;/a&gt;&lt;!--/$--&gt; day said, the crash was the result of "a nation living beyond its means." &lt;/p&gt;
+&lt;p&gt;What really caused the crash remains open to debate. One of the causes was likely Alan Greenspan, the new chair of the Federal Reserve as of August. He was somewhat obsessed with the stock market (his dad had written a book in 1935 about a coming boom, which didn't come) and he had harbored concerns throughout the 1980s that the market was flying too high. A few weeks after entering the office he engineered a somewhat devious interest rate increase, going behind the backs of the Federal Open Market Committee where rates were usually set. The increase was the first in 3 years and sparked concerns on the Street that the easy money was over. After the decision, he watched the stock market begin a steady drop. As his interlocutor Bob Woodward noted, "It was one of the most unusual experiences of his life," watching a decision of his immediately move the market. Stocks moved downwards for the rest of September.&lt;/p&gt;
+&lt;p&gt;In October there &lt;!--$--&gt;&lt;a href="https://www.federalreservehistory.org/essays/stock-market-crash-of-1987"&gt;was&lt;/a&gt;&lt;!--/$--&gt; a larger than expected trade deficit that led some to be worried about the state of the dollar, which Treasury Secretary James Baker exacerbated by threatening to devalue the weekend before the crash. The problems were exacerbated by the fact that an Iranian missile &lt;!--$--&gt;&lt;a href="https://www.nytimes.com/1987/10/17/nyregion/news-summary-saturday-october-17-1987.html"&gt;hit&lt;/a&gt;&lt;!--/$--&gt; a US oil tanker near Kuwait at the same time. This was part of the little remembered "tanker war" in the Gulf that threatened to blow up the recently quiescent oil markets again at any minute. &lt;/p&gt;
+&lt;p&gt;On the morning of Monday the 17th the Asian stock markets began dropping. Just before the US markets opened, some US naval &lt;!--$--&gt;&lt;a href="https://www.navybook.com/no-higher-honor/timeline/operation-nimble-archer/"&gt;destroyers&lt;/a&gt;&lt;!--/$--&gt; lobbed shells at two Iranian oil platforms. Soon the sell orders came in so fast the stock ticker was an hour behind. While stocks were tumbling, the new SEC chairman David Ruder &lt;!--$--&gt;&lt;a href="https://www.wsj.com/video/remembering-black-monday-crash-of-1987/A5BC09AA-4010-481E-9076-77ECEBFDB25B"&gt;was&lt;/a&gt;&lt;!--/$--&gt; misquoted as saying that the agency might close the market, further inflaming fears. &lt;/p&gt;
+&lt;p&gt;On Black Monday 1987, the Dow Jones dropped 22.6 percent. By comparison, on Black Monday October 28, 1929, the Dow Jones &lt;!--$--&gt;&lt;a href="https://www.federalreservehistory.org/essays/stock-market-crash-of-1929"&gt;dropped&lt;/a&gt;&lt;!--/$--&gt; less than 13 percent. People at the time noted the difference. "Percentage Decline is Far Steeper than '29" said the &lt;em&gt;Wall Street Journa&lt;/em&gt;l headline. It is still the biggest one-day decline in history. &lt;/p&gt;
+&lt;p&gt;It took almost 2 years for stocks to reach the level before the crash again. Junk bonds, which had powered the M&amp;amp;A boom that in turn powered the wider market, collapsed, never to regain full favor again. US Attorney Rudy Giuliani began jailing some of the top Wall Streeters. Just months before the crash, Ivan Boesky, who had famously &lt;!--$--&gt;&lt;a href="https://www.voanews.com/a/ivan-boesky-stock-trader-convicted-in-insider-trading-scandal-dies-at-87/7619886.html"&gt;told&lt;/a&gt;&lt;!--/$--&gt; a group of students that "I think greed is healthy," which transmogrified into the infamous line "Greed is good&lt;em&gt;,"&lt;/em&gt; was &lt;!--$--&gt;&lt;a href="https://www.nytimes.com/1987/12/19/business/boesky-sentenced-to-3-years-in-jail-in-insider-scandal.html"&gt;sentenced&lt;/a&gt;&lt;!--/$--&gt; to three years in prison for false reporting. Two years later Michael Milken was indicted and agreed to a plea deal. &lt;/p&gt;
+&lt;p&gt;The stock boom had ended in a crash, the top players were in jail, and everyone had the morality tale they wanted about a nation that had gone too far. For many, the end of a "decade of greed" was clear. &lt;/p&gt;
+&lt;p&gt;Yet most of what we know about the aftermath of the boom is wrong. Instead of 1987 representing the culmination of a sugar-high, it turned out to be a pause, caused by a series of one-off events, in the long march of stocks upwards. Instead of being the end of something, the eighties were the beginning of the modern long-term bull market. The economy after the 1987 crash continued to be vibrant. Those prognosticators, including Paul Tudor Jones, who predicted an imminent and catastrophic  bear market, had to create ever more elaborate epicycles and abstruse explanations about why the Street was not just wrong for a year or a decade, but, now, for almost half a century.&lt;/p&gt;
+&lt;p&gt;The corporate raiders were a success. The price-to-book ratio of the S&amp;amp;P 500 was&lt;!--$--&gt;&lt;a href="https://pages.stern.nyu.edu/~adamodar/pdfiles/val3ed/c19.pdf"&gt; above&lt;/a&gt;&lt;!--/$--&gt; two by the end of the decade, about double where it was earlier. Far from being the sign of excess animal spirits, the higher valuations were a sign of improved corporate governance. One &lt;!--$--&gt;&lt;a href="https://scholar.harvard.edu/files/shleifer/files/hostile_takeovers_80s.pdf"&gt;study&lt;/a&gt;&lt;!--/$--&gt; looked at the 62 biggest hostile takeover attempts from 1984 to 1986. While critics made a big deal of all the asset sales the raider conducted, which supposedly stripped the real value of such companies, the study shows these sales overwhelmingly went to firms in the same industry that could deploy the assets better. The real result was the "deconglomeration of American business and a return to corporate specialization" that led to higher returns. Despite claims that the raiders decimated blue-collar jobs, their layoffs "disproportionately affect high-level white-collar employees." If anything, the main &lt;!--$--&gt;&lt;a href="https://www.nber.org/system/files/working_papers/w8220/w8220.pdf"&gt;problem&lt;/a&gt;&lt;!--/$--&gt; was that the raiders, at least in the latter half of the decade, overpaid and much of the benefits of their improvements went to the previous shareholders they bought out.&lt;/p&gt;
+&lt;p&gt;Most of the prosecutions of that era turned out to be flimsy. Milken only caved to a plea deal after prosecutors threatened to jail his brother. Rudolph Giuliani himself later &lt;!--$--&gt;&lt;a href="https://www.nytimes.com/2020/03/01/business/michael-milken-trump-pardon.html"&gt;said&lt;/a&gt;&lt;!--/$--&gt;, "Milken and I are good friends now, and I believe Milken is an excellent candidate for a pardon." Milken got his pardon n 2020. Much of the "insider trading" of the era involved people who were trading against themselves as much as anyone else. The claims that they were cheating their clients seem laughable when one considers the billions their clients made. &lt;/p&gt;
+&lt;p&gt;If the eighties were the "decade of greed," as the New York Times still &lt;!--$--&gt;&lt;a href="https://www.nytimes.com/2024/05/20/business/ivan-f-boesky-dead.html"&gt;calls&lt;/a&gt;&lt;!--/$--&gt; it, then Wall Street was the representative of everything that went wrong in those years. In reality, Wall Street was a great symbol of things going right. American outsiders challenged the old ways, got rich and in the process, made the country, and the world, better off. We should be so lucky to have another such era.   &lt;/p&gt;</content:encoded>
+      <guid isPermaLink="false">https://arenamag.com/articles/the-great-eighties-wall-street-bonanza</guid>
+      <category>Technology</category>
+      <pubDate>Mon, 08 Dec 2025 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>California's City on a Hill</title>
+      <link>https://arenamag.com/articles/californias-city-on-a-hill</link>
+      <description>On 70,000 acres in the Bay Area, an ambitious plan for a new city takes shape. Is California Forever the antidote to American stagnation?</description>
+      <content:encoded>&lt;p&gt;In 1959, the Army Corps of Engineers released a report, &lt;em&gt;Future Development of the San Francisco Bay Area 1960-2020&lt;/em&gt;. The report, a hundred-or-so bound pages, was "designed to show, on a decade-to-decade basis, how the San Francisco Bay Area could grow." The &lt;em&gt;Future Development&lt;/em&gt; report predicted that, by 2020, the San Francisco Bay Area would have a population of 14.4 million-almost double the current population of 7.7 million. The report also predicted that manufacturing employment in the region would triple, with 24% of the population expected to work in manufacturing. But today, only 353,000 (or 4.6% of Bay Area residents) &lt;!--$--&gt;&lt;a href="https://vitalsigns.mtc.ca.gov/indicators/jobs-by-industry"&gt;work&lt;/a&gt;&lt;!--/$--&gt; in manufacturing. In the last 65 years, a lot went wrong. &lt;/p&gt;
+&lt;p&gt;But the Army Corps of Engineers did get one thing right. They "correctly predicted that sometime around 2020 someone would want to build a city here," Jan Sramek, the founder of California Forever, a company trying to build a manufacturing focused city in the Bay Area, told me.&lt;/p&gt;
+&lt;p&gt;"Here" means Solano County. We are in a small office park in Fairfield, California, an hour drive from San Francisco. The California Forever office is unassuming; neighboring a few medspas, financial offices, and a dental surgeon. Although Sramek is originally from Czechia, he has lived in California for a bit more than a decade; he came in 2014 to, like many others, seek the California start-up dream.&lt;/p&gt;
+&lt;img alt="" src="https://framerusercontent.com/images/Zje9H2ZSZkn9VG3ECeZUvGOmfFE.jpg"/&gt;
+&lt;p&gt;As we walked out of the office, about to drive through California Forever's land, which is more than double the size of San Francisco (at around 69,000 acres), Sramek handed me one of his forty copies of the Army Corps of Engineers report in a worn-down red box.  "I was so concerned that someone was going to figure out what we were doing during the land assembly but I systematically bought every single one of these that I could find online." While buying up the land around Solano County, he systematically collected the reports that explain how a new city may take shape so that others wouldn't steal his idea or worse, thwart it.&lt;/p&gt;
+&lt;p&gt;When I asked him where he shipped the reports to, he laughed. "I shipped them to PO boxes that I maintain all over America. And then I had them rerouted to the same place, and then I had them stored in a storage facility somewhere in Napa." &lt;/p&gt;
+&lt;p&gt;Julia Blystone, California Forever's Head of Communications, pointed to Sramek, 6'7" and wearing an all-American outfit of a tucked-in blue button-down and jeans: "Someone who comes from Eastern Europe."&lt;/p&gt;
+&lt;img alt="" src="https://framerusercontent.com/images/xYY7193YHoJXq5QbBSoQKlGOg.jpg"/&gt;
+&lt;p&gt;Born behind the Iron Curtain in Czechia in DÅevohostice, "a village of 1400 people in the middle of nowhere," Sramek was two-years-old when the Berlin Wall fell. Born to a car mechanic turned small business owner, Hollywood saturated his childhood: spreading American-really Californian-stories of the "the profoundly optimistic" nineties around the world. On the early internet, he found a full scholarship to Bootham School, a quaker boarding school in York, England, and stayed in the United Kingdom both for college and his first post-grad job at Goldman Sachs. "It's a lot easier to explain building a city to my grandma, who used to work in a steel mill, than to explain to her what I used to do at Goldman Sachs," Sramek told me.&lt;/p&gt;
+&lt;p&gt;Sramek first drove through Solano County on a fishing trip in early 2016. He recalled chatting with his fishing guide, who lived locally, about the fisherman's wife, who worked in Mountain View-an 80-minute commute in the morning, two hours on the way home. "I said, 'How does that work? You have a two-year-old child?' And he said, 'well, she gets up at 3 a.m. in the morning to beat the traffic, and then she comes home early before the afternoon traffic, and then I go really late.' I was like, 'So when do you see each other?' And he says, 'well, only on the weekends.' And I'm like,&lt;em&gt; that's completely batshit insane.&lt;/em&gt;" &lt;/p&gt;
+&lt;p&gt;The California Forever plan is to build a new city for 400,000 people, including a shipyard at the confluence of the Sacramento River and the Bay and a foundry-to restore the Golden State's industrial capacity. When he first followed his now-wife Naytri to California, Sramek was underwhelmed by California's promise of growth and prosperity after moving to San Francisco in 2014 because housing was in such short supply: "I was surprised, confused, disappointed by the fact that we couldn't build anything. And I thought it was profoundly sad." Speaking of his frustrations with California's reluctance-or inability-to build more housing, Sramek said: "If you tried to design a system that was going to completely break up society, make everyone fight and make everyone hate each other, you would design the California Land Use system."&lt;/p&gt;
+&lt;p&gt;Once he became a California resident, Sramek experienced a common Californian coming-of-age: coming to the realization that while California excels at capitalism and attracting elite human capital-in particular, through start-ups and  Hollywood-it was failing miserably at governance. California law makes it difficult to build multi-family housing and forces builders to navigate an unwieldy discretionary review process, hence why the fisherman's wife was driving nearly four hours to-and-from work. What was worse is that California's policies, Sramek argues, essentially force its successes to move out-of-state. "We dream up the future in San Francisco, design it in Silicon Valley, and then you need somewhere to build it. But right now, the build part happens in Texas and Florida, and I think that that's really bad for our ability to innovate." He repeated several times that it's a three-day trip for an engineer to visit the Texas or Ohio factory he is building from California-a trip that could be shortened down to an eighty-minute drive from Silicon Valley to Solano County. The economic growth that California creates is offshored to other states. &lt;/p&gt;
+&lt;p&gt;Sramek told me that he tried to convince himself that his idea to build a new city in Solano County was crazy-or, as he'd say it, "batshit insane." He wrote down seventy-five reasons why the plan would fail. "Maybe there's some rare ecosystem there. Maybe there isn't enough water. Maybe you can't build enough transportation infrastructure. Maybe the politics doesn't make sense. Maybe the soil isn't suitable for building, and it's really expensive to build there." But after seven months of testing each objection, Sramek told me "I couldn't find the fatal flaw." To Sramek, the story of the fisherman's wife was a "market-slash-planning inefficiency"-regulations stymied growth, so the market could not properly react by building more housing in the needed locations. In a ploy to solve this inefficiency, Sramek, over a series of eight years, raised a billion dollars and used that money to buy up land in Solano County. He currently employs fifteen full-time employees, as well as around eighty political, planning, and engineering consultants who work close to full-time trying to bring California Forever into existence. &lt;/p&gt;
+&lt;p&gt;On a late October afternoon, I went to meet Sramek on the land that will, if all goes right, become California Forever. After we meet in the Fairfield office, we drive for a bit more than two hours through the dirt roads of what will, if Sramek's moonshot becomes a reality, become California Forever. We drive by Travis Air Force base and then subdivisions surrounded with palm trees, out of place in the prairie of Solano County. We drove by two small hamlets, Collinsville and Bird's Landing, each of which consisted of a half-abandoned settlement with a half-a-dozen houses. "This is called Collinsville because it was started by Collins. That's called Bird's Landing, not because birds landed there, but because it was started by a guy called Bird."&lt;/p&gt;
+&lt;p&gt;In other words, California is composed of hundreds of cities and towns, all founded by someone. But Collinsville, purchased by C.J. Collins in 1859, and Bird's Landing, settled by John Bird in 1865, now have a shot of becoming (at least part of) a "real city": they are now owned by California Forever. For now, the two towns sit as a physical record of the risks of trying to start a new city. But the two towns were not started with a billion dollars of venture capital funding. &lt;/p&gt;
+&lt;img alt="" src="https://framerusercontent.com/images/5P6bnLnaWxTjAasu5STugNDh5w.jpg"/&gt;
+&lt;p&gt;I am a fourth-generation Angeleno. Anywhere else in the world, those roots would be laughably shallow, short of one hundred years. But in California-time, my ancestors came long ago. Los Angeles was only founded in 1781, by the Spanish Empire in their drive to settle the New World. And San Francisco was only founded five years earlier, in 1776.&lt;/p&gt;
+&lt;p&gt;California is dotted with cities-not major ones, but cities nevertheless-that were founded extremely recently. A striking number are also run privately. Disneyland was initially run by Disneyland, Inc., the corporation formed to finance, build, and govern the park. Irvine is run by The Irvine Company, an owner and developer of master-planned communities across Southern California. Foster City, which was founded by T. Jack Foster, real estate mogul and former mayor of Norman, Oklahoma, in the early 1960s (the first houses sold for less than $20,000, perhaps because this Bay Area suburb was built atop an engineered landfill). Then there is also Beverly Hills (founded in 1906 by the Rodeo Land &amp;amp; Water Co), Carmel-by-the-Sea (founded in 1902 by the Carmel Development Company), Mission Viejo (developed beginning in 1963 by the Mission Viejo Company), Westlake Village (Daniel Ludwig, incorporated in 1981), and Weed (Abner Weed, founded in 1904). There was no better place for a private individual to build his own utopia than in California. &lt;/p&gt;
+&lt;p&gt;Beyond California, Sramek spoke about the successes of Summerlin, Nevada, a master-planned commercial and residential area to the west of Las Vegas; the Woodlands, Texas, a metro area spanning two counties and host to the corporate campuses of Occidental Petroleum Corporation and Halliburton; Reston, Virginia, a D.C. suburb influenced by the 1960s Garden City movement with open space and forests aplenty; and Columbia, Maryland, which is  halfway between D.C. and Baltimore, and the second most populous community in Maryland behind Baltimore itself. Master-planned cities are as American as Apple Pie: Philadelphia, Pennsylvania and Savannah, Georgia were both colonial-era planned grids centered around public space, planned in 1682 and 1733, respectively. Our capital, Washington, D.C., was even master-planned by French-American artist Pierre Charles L'Enfant, who was appointed by George Washington to build the "federal city" intentionally in a style fit for the new nation. &lt;/p&gt;
+&lt;p&gt;But, all of the sudden, starting in the mid-sixties, America stopped building new cities. Not developments (there are still plenty of those), but great cities, centers of industry and culture. Not because our population is shrinking; quite the opposite. From 1960 to 2020, the U.S. population grew from 179,323,175 to 331,449,281, with 92% of that growth occurring in urban centers. But almost all of that urban population growth has occurred because existing cities have grown, not because new ones have been built. California mirrors these national trends: there has been exponential population growth in existing cities, creating the crushing housing crisis the state is now known for, but no new cities have emerged to pick up the slack. Once Los Angeles and San Francisco became American, capitalist expansion naturally drove the growth of both: with Hollywood accelerating population growth from 102,000 to around 1,238,048 in Los Angeles from 1900 to 1930, and back-to-back gold rushes (in gold and tech, respectively) in San Francisco drove the population first from around 1,000 (1848) to 25,000 (December 1849) to 56,802 (1860) and second from 723,959 (1990) to 873,965 (2020). But while driving into a sea of 1100 windmills ("there's enough steel and concrete and rebar in the ground to build fifteen Empire State Buildings just from the windmills"), Sramek laments about how, if he did not decide California Forever, the land that could become a Great American city would become an ocean of modest developments scattered among prairie grass. &lt;/p&gt;
+&lt;p&gt;"I think it's profoundly sad that we are taking this incredibly optimistic story of California and letting it stagnate at best," Sramek said. The slow, unambitious development of California currently looks like "suburban sprawl," Sramek says, where developers plan to build two hundred homes and a small office park, with the vague promise to "bring jobs."  But office parks are not "a credible plan to bring jobs" to the suburbs or exurbs because they are not providing any new industries or companies that could create jobs. In a better world, California housing developers could have been heroes for building homes in a place millions more people desperately want to live; instead, the current default outcome of a new development is stale sprawl and hell-bent inertia. Sramek blames the false promise of "200 houses and an office park" for the vilification of developers in general, who have become associated with a dreary, endless suburbia. He gestured to a line of stucco-house subdivisions as we cruised on the two-lane highway. The view reminded me of home. &lt;/p&gt;
+&lt;p&gt;For much of the history of Silicon Valley, the San Francisco Bay Area was the perfect geographical complement to the technological frontier created within its bounds. The Bay Area of the sixties was populated by residents who fit (at least) one of two tropes: hippies or engineers. The sixties hippie counterculture, which encouraged freedom and experimentation with communal living and psychedelic drug use, was geographically proximate to the hard-nosed engineers who were building the first modern computers. On paper, the two groups should not have gotten along, but because of this shared optimism and geographic proximity, the two elements of futurism-wide-eyed social experimentation and cutting-edge science-fused together across cultural barriers to become techno-utopianism, which would come to define "Silicon Valley" culture by the century's end. Back then, all Californians were (in one way or another) utopians.&lt;/p&gt;
+&lt;p&gt;That was the California that Sramek, sitting in DÅevohostice, Czechia, saw as a child in the nineties: when he would eagerly sit down to American media, which was continuing to portray the idealized West Coast counterculture of the 1960s. And this was the California Sramek was expecting to find when he finally made it to the Bay Area in 2014. But by the time Sramek made his way West, technoutopianism was in short supply-people were throwing rocks at Google buses, and homelessness became rampant, as more and more of the world's problems were being blamed on the omnipresent outputs of "Big Tech". And what optimism was left was purely reserved to the digital world, with the still-alive promise of cryptocurrencies and artificial intelligence. Desperate to escape the crushing regulations and environment in California, Silicon Valley libertarians (who still harbored dreams of a better physical-world state) threw their support behind seasteading, an optimistic and escapist project to establish autonomous above-water settlements-called "seasteads"-in international waters.In 2008, PayPal cofounder Peter Thiel gave $500,000 in seed capital to Patri Friedman (Milton's grandson) and Wayne Gramlich's Seasteading Institute; conveniently, in international waters, the U.S. government would have no jurisdiction to impose restraints (or collect taxes). However, no such seasteads have been built. &lt;/p&gt;
+&lt;p&gt;Silicon Valley elites, doubling down on ambition, have since backed numerous new efforts to create new, privately developed cities-but always in far away places, selling the dream of a clean slate away from whatever had gone wrong in California. There's Praxis, a proposed digital-first city-state of 10,000 that has raised over $525 million in financing and has, for the last few years, been attempting to purchase land in the Mediterranean. Then there is Prospera, a charter city in Honduras that was set on becoming a hypercapitalist technoutopia, but is now suing the Honduran government for $11 billion after its 'special autonomous zone' (ZEDE) status was flouted. Culdesac, a $140 million development in Tempe, AZ, broke ground on the first purpose-built walkable neighborhood in 2019, but it only houses 1000 residents and a mere 21 local businesses. In 2022, Balaji Srinivasan, former CTO of Coinbase and a venture capitalist, wrote a book entitled &lt;em&gt;The Network State&lt;/em&gt;, pitching digital-first highly aligned communities that have the capacity for collective action. The book and "network state" meme was wildly popular in tech circles during the COVID-19 pandemic, but no such states have been created. The closest might be Esmeralda: a small, walkable town which is in the process of buying land ninety minutes north of San Francisco to create a new walkable and intellectually dynamic town in wine country, with a focus on family and community for commuters to San Francisco (rather than trying to create a new stand-alone industry town). And for the real eccentrics, the frontier is no longer on Earth, but on Mars.&lt;/p&gt;
+&lt;p&gt;But a small but committed group of Silicon Valley investors, who still are interested in making the future look like the future, are now looking closer to home for a solution to Silicon Valley's woes.&lt;/p&gt;
+&lt;p&gt;"I specifically found people who wanted to double down on California and make a huge bet on the state in something that was really risky, very illiquid, very long term," Sramek told me. His investors include LinkedIn co-founder Reid Hoffman, philanthropist Laurene Powell Jobs, Stripe co-founders Patrick and John Collison, former GitHub CEO Nat Friedman, Sequoia chairman Michael Moritz, and the venture capital firm Andreessen Horowitz. Many of California Forever's investors have been (predictably) attacked for trying to hijack a small town to turn it into a billionaire's paradise with no regulations, or locals. Sramek dismissed the attacks offhand. "We can either fund [a new city] from wealthy families who are very committed to California, and who can afford to take a forty year view, or I can go to some private equity firm and a bank, take out a seven year loan and a seven year line of financing" and create another boring subdivision (like the ones that already sit half-filled all over California). "Which one do you think is going to allow us to build a better place?"&lt;/p&gt;
+&lt;p&gt;California, with the longest continental coastline on the Pacific, was once at the bleeding edge of the frontier: In his 1893 essay "The Significance of the Frontier in American History," historian of the American West Frederick Jackson Turner argued that the American national character is uniquely dependent on the frontier, because it forced self-reliance, a rugged independence, and the constant bucking away of old norms in pursuit of progress and expansion. By backing California Forever, some of the Valley's most intelligent investors are betting that California can once again behave like a frontier. Today, the "frontier" is less physical than intellectual: it has been recast as technological advancement or even multiplanetary expansion. But California Forever is a bet that land that was settled hundreds of years ago can still provide the much-needed physical infrastructure for the intellectual exploits that will define the future. It's betting that the next frontier lies on the same ground as the old frontier.&lt;/p&gt;
+&lt;img alt="" src="https://framerusercontent.com/images/mNq7pN7uGAd88iA3EMp7lYPvs.jpg"/&gt;
+&lt;p&gt;And yet, for all the high minded theorizing, California Forever still lacks the frontier's autonomy: the city needs to win popular support in Solano County to begin building. To get permission, Sramek's team will need to convince residents of Solano County to approve development. When Sramek began buying up the land for his dream city in 2017-first with an "irresponsible" loan, then with more and more financial backing-he was met with suspicion. Local residents and national security observers expressed fears that a foreign adversary was buying up the land. Sramek, who did not want to announce California Forever until he had secured the land (lest opponents of the project move to stop it), would tell curious family and friends that his project was "a group of American investors who are buying the land for as a very long term investment, and we're not going to comment on who they are, and we're not going to comment on what are we going to do with the land."&lt;/p&gt;
+&lt;p&gt;The night before we had met, Sramek had dinner with a cattle rancher who he had purchased land from at four times the market price. It was a "win-win-win situation" (Sramek has been buying the land in Solano County at up to four times the market price on average). Sramek is quite confident that the California Forever project, is on net, hugely net beneficial for the residents of Solano County. He told me that through buying the land, "we minted 700 millionaires and everyone was very happy." The vast majority of the people who had sold land to Sramek were pleased with the outcome.&lt;/p&gt;
+&lt;p&gt;However, a few who regretted the transactions became a vocal minority. And in 2023, after California Forever came forward about its acquisition of more than 50,000 acres of land, the public outrage started. The narrative went as follows: wealthy out-of-towners (worse yet: &lt;em&gt;developers&lt;/em&gt;) were trying to turn an authentic rural community into an exclave of the elitist Bay Area. On the website California ForNever, several Solano County residents had the following testimony to give: "This is a money making opportunity for the "developers" with a long list of over the top promises"; "This misconceived fever dream of these audacious and arrogant billionaires will cause a myriad of unintended consequences"; "Solano County services are already stretched thin."&lt;/p&gt;
+&lt;p&gt;After my trip to Solano County, I found the Facebook page of the same name as the website: "California ForNever - A group opposing California Forever/Flannery" (Flannery, Inc. is the name of the legal entity behind California Forever, named after the street where Sramek purchased his first parcel of land). The page has, as of writing, 3,250 members and an average of four posts a day, and features similar content to that found on the website.&lt;/p&gt;
+&lt;p&gt;Common complaints include: concerns about the meager water supply, California Forever's potential encroachment on the Travis Air Force Base (Sramek told me that its employees face a housing shortage and so will certainly benefit from new housing nearby), possible traffic jams on the county's two-lane highways, and the general "feeling" that out-of-towners are taking over a small rural community. Ironically, the Solano County residents are using Facebook (a primary export of Silicon Valley in the early aughts) to voice their concerns about Silicon Valley overreach.&lt;/p&gt;
+&lt;p&gt;In November 2024, a ballot measure asking Solano County residents whether they approved development of the "East Solano Plan" ( as it was called then) was approved for a vote.But California Forever pulled the ballot measure after polling showed that 70% of Solano County residents opposed the proposal-a certain loss for the new city. On October 14, 2025, California Forever returned with a new 250-page plan: the nearby Suisun City (the county's smallest city, with a population of a mere 30,000) would annex 22,873 acres of land. Rather than relying on voters directly, California Forever now only has to win the favor of elected officials and administrators. For the Suisun City annexation to commence, the plan first needs to be approved by the Suisun City Council and the Solano County LAFCO (Local Agency Formation Commission). After both approvals are secured, California Forever will "only" be blocked by a  litany of state agency permits. Suisun City will publish a draft Environmental Impact Report in early 2026, which Sramek estimates will be around 12,000 pages; the final version of the report will be used by Suisun City when evaluating whether to approve the annexation.&lt;/p&gt;
+&lt;p&gt;When I visited the California Forever office, the power of the government to stifle the California Forever project was the elephant in the room. The entrenched power of the regulatory state was not in the spirit of the optimistic decor of the office, which featured maps and plans strewn across the table in the central room, as well as bookshelves featuring a litany of books about great American cities and urban planning: &lt;em&gt;Detroit: The Dream is Now&lt;/em&gt;, &lt;em&gt;Cities Under Siege&lt;/em&gt;, &lt;em&gt;Walt Disney Imagineering&lt;/em&gt;, &lt;em&gt;Edge City: Life on the New Frontier&lt;/em&gt;, as well as (I counted them) eighteen copies of &lt;em&gt;Abundance&lt;/em&gt; by Ezra Klein and Derek Thompson. And this was the abridged version of Sramek's collection: Sramek described how his interest in building a new city has turned into "this obsession when I went on this deep dive of reading 500 books about urban planning and architecture and real estate development and cities and infrastructure and history of California and land use reform and CEQA [The California Environmental Quality Act] and history of all of the major cities in the world." He also mentioned that, when he moved to the U.S. in 2013, he went on a seven-week "reading binge" of biographies of the founding fathers. Hamilton's biography stuck out (Sramek told me that seeing the musical "was one of the most singular defining artistic experiences" of his life) .&lt;/p&gt;
+&lt;p&gt;But real-life government is a lot less glamorous than Broadway made it out to be. When I asked Sramek if he was worried about the 2026 California gubernatorial election-of a new governor who may have the authority to stamp out the California Forever promise forever, or at least the for well-foreseeable future-he shrugged. "The vast majority of Californians don't want to be the state that we have been for the last 10 years," he insisted.&lt;/p&gt;
+&lt;p&gt;While the initial ballot measure did not end in California Forever's favor, "it was a useful way to get out all the concerns that everyone had, have the big debate" about the future of Solano County. Sramek continued: "And the reality is, the conclusion of that debate was the two cities invited us to come in and talk about annexation." &lt;/p&gt;
+&lt;p&gt;Californians are progressives; they wear their openness to change like a badge of honor. And "you can't call yourself a progressive if there's no progress. You can't call yourself progressive if half of your friends' kids-and now your kids, probably-are living in Tennessee and Texas," as Sramek told me. In 2020, for the first time in California's history, California's population decreased, and the state lost seats in the House of Representatives. It can't go on like this.&lt;/p&gt;
+&lt;img alt="" src="https://framerusercontent.com/images/T6i9UiH8mlsfpib9K5CvggITwv0.jpg"/&gt;
+&lt;p&gt;The United States has built exactly zero cities from scratch in the 21st century. By contrast, China has built a few dozen new cities in the same twenty-five years. (The biggest "new" American cities of this century are just incorporations of previously-populated suburbs like Centennial, CO and Sandy Springs, GA-so jurisdictions, not cities.) Of course, many of these new Chinese cities sit empty, created for the sake of national prestige and to give its unemployed workers jobs digging holes. But Sramek thinks that a progress-oriented electorate, tired of watching California fail, may take a step towards closing the gulf with China.&lt;/p&gt;
+&lt;p&gt;When I asked Sramek about the perception that California Forever is undemocratic, Sramek clarified that the project's success "will require approvals by many, many, many elected officials." If California Forever succeeds, it will be a project by the people, for the people, of California. The only question that remains is whether the people, in fact, want something new.&lt;/p&gt;
+&lt;p&gt;At the end of our drive around the California Forever land, we arrive at an abandoned brick midcentury modern house on a hill. Purchased in the sixties by a descendant of a California steel fortune and used to entertain their friends, the house was abandoned in the eighties. It has a view of the Suisun Bay, where Sramek planned his shipyard. &lt;/p&gt;
+&lt;p&gt;One thing me and Sramek never talked about on our journey is the name of his new city, California Forever. If all goes according to plan, California Forever will be ten times the size of Suisun City, but it will legally share the name. When I asked Sramek if California Forever would, going forward, be known as Suisun City, he acknowledged that yes, California Forever will be a part of Suisun City. But "often in real estate development, particularly if you have a large master plan, the master plan gets a name as well, and so we'll see exactly how that happens. That's still a couple of years down the road." There is a sense of grandeur in building a new city, one well-captured by the necessarily impossible promise of &lt;em&gt;forever&lt;/em&gt;. Under the new plan, the name may change, but the spirit of California Forever will live on. &lt;/p&gt;
+&lt;img alt="" src="https://framerusercontent.com/images/TeKn42SH8IrVFv3sCuHcZJ9uw4.jpg"/&gt;
+&lt;p&gt;Sarcastically describing the California ForNever crowd, Sramek said: "We've been building cities for 10,000 years, and somehow, after doing it for 10,000 years, we've now arrived at the perfect exact number of cities." Californian optimism, the kind the state was known for fifty years ago, would instruct us that San Francisco and Los Angeles will last another 10,000 years (so functionally "forever" compared to a human lifetime), a beacon of optimism at the Western edge of the Western world. California Forever, as an American-borne expression of this Californian Optimism, has the chance to join the pantheon of great cities, with plenty of spoils to go around.&lt;/p&gt;
+&lt;p&gt;But Californian pessimism, the kind the state is known for now, would lead to the opposite conclusion: that San Francisco and Los Angeles, if not destroyed by climate change, or deportations, or drug use, or crime, will be relics at best. These cities were founded just short of 250 years ago; the state's collective unconscious feels unsure if they can last 250 more. If our existing cities are barely going to last the next century, then what is the use of building more?&lt;/p&gt;
+&lt;p&gt;California Forever is a promise to overcome the ultimate test of a declining society-both a bet that we can build a new city, and a bet that this new city can be built in the same location as our present stagnation. Sramek believes that without the ambition of great projects like California Forever, the future will, by default, look like a nothing more degraded version of the present. "If you wiped off the physical infrastructure of America, but you kept all of the people here, and all of the IP here, and then we had to go and rebuild the country, we couldn't do it in 500 years. There's no way! You would have famines. You would have people living in huts made from animal skins and sitting by bonfires. In order to continue our civilization, it is insufficient to theorize about building civilizations; we have to actually try to rebuild civilization. He continues, "We are unable to rebuild the civilization that we live in today, which I think is a radicalizing thought." In order to continue to grow Western civilization, it has to be possible to build new cities to save civilization. Sramek is an optimist because someone must be.&lt;/p&gt;
+&lt;img alt="" src="https://framerusercontent.com/images/eIKmTPinQhVuheDvyjrzr4OcRKs.jpg"/&gt;</content:encoded>
+      <guid isPermaLink="false">https://arenamag.com/articles/californias-city-on-a-hill</guid>
+      <category>Civilization</category>
+      <pubDate>Thu, 13 Nov 2025 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Dwarkesh Patel's Chronicle of Intelligence</title>
+      <link>https://arenamag.com/articles/dwarkesh-patel-s-chronicle-of-intelligence</link>
+      <description>Reviewed - The Scaling Era: An Oral History of AI, 2019-2025 by Dwarkesh Patel with Gavin Leech.</description>
+      <content:encoded>&lt;p&gt;One of the most revealing sentences in Dwarkesh Patel's new book is a footnote attached to the title of chapter eight: "It is important to note that each interviewee uses a different definition of AGI." In that last and shortest chapter, luminaries from the world of artificial intelligence make predictions (or decline to) about the timeline for &lt;em&gt;Artificial General Intelligence, &lt;/em&gt;or AGI.&lt;/p&gt;
+&lt;p&gt;As the footnote suggests, AGI can mean many things to many people - both at the level of what qualifies as AGI, and what it will be for the world. Patel, host of the popular &lt;em&gt;Dwarkesh Podcast&lt;/em&gt;, is  uniquely able to give readers the full spectrum of opinion. He did it by curating interviews with a dozen-and-a-half subjects from his show into one book.&lt;/p&gt;
+&lt;p&gt;The book, out now via Stripe Press is &lt;em&gt;The Scaling Era: An Oral History of AI, 2019-2025&lt;/em&gt;, co-written with Gavin Leech, ex-Head of Research at the &lt;em&gt;Dwarkesh Podcast. &lt;/em&gt;A sort of podcast anthology, &lt;em&gt;The Scaling Era&lt;/em&gt; doesn't have one flashy thesis. Rather, the authors (shall we call them curators?) are happy to mostly let the guests speak. The result may be a first: a distillation, in print, of more than a hundred hours of interviews from a single podcast.&lt;/p&gt;
+&lt;p&gt;It's quite the rolodex: names that many will know like Mark Zuckerberg and Tyler Cowen; and names that few outside the AI scene would, like Carl Schulman and Sholto Douglas. Naturally, many of the guests disagree, including about definitions.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Dwarkesh Podcast&lt;/em&gt; has enjoyed an explosion in popularity - growing from tens of thousands of subscribers on YouTube at the beginning of 2024 to 1 million today. Millions are tuning in, from frontier researchers to schoolchildren.&lt;!--$--&gt;&lt;a href="https://mercury.com/blog/dwarkesh-patel"&gt; Patel says&lt;/a&gt;&lt;!--/$--&gt; he often spends a week or more researching for an interview, taking the approach of an investigative journalist. His guests have included nearly all the biggest names in AI research, neuroscience, and intelligence. One could say that Dwarkesh Patel's main strength as an interviewer is in coming up with big, urgent questions. As it turns out, that strength shines through most in discussions about geopolitics and AI. Those worlds collide in two of &lt;em&gt;The Scaling Era's&lt;/em&gt; final chapters about the possible impacts of AI in the world, and especially in conflicts between states.&lt;/p&gt;
+&lt;p&gt;By curating questions and answers, Patel gives readers a picture of the hopes, fears, objections, and projections of some of AI's leading thinkers and practitioners.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;The Scaling Era'&lt;/em&gt;schapters are organized around eight concepts in AI research: scaling, evals, internals, safety, inputs, impact, explosion, and timelines. There's a bit of background at the beginning of each chapter explaining to a nontechnical audience what, for example, a "benchmark test" is (think of it like a much longer, more challenging SAT to test the strength of a large-language model). But Patel and Leech are really just setting the scene. They must ultimately construct the "argument" with excerpts from guests on &lt;em&gt;Dwarkesh Podcast. &lt;/em&gt;In the margins next to blocks of screenplay-like podcast text, unfamiliar terms are defined. (If you've never heard of a &lt;em&gt;residual stream&lt;/em&gt; or &lt;em&gt;inference, &lt;/em&gt;these notes are for you.)&lt;/p&gt;
+&lt;p&gt;A core theme of the book, as its name suggests, is scaling. Scaling is what it sounds like - how do we scale up AI models efficiently and effectively? Much of the scaling discussion stems from a short essay published in 2019 by Richard Sutton, a professor of computer science at the University of Alberta.&lt;!--$--&gt;&lt;a href="https://www.cs.utexas.edu/~eunsol/courses/data/bitter_lesson.pdf"&gt; "The Bitter Lesson"&lt;/a&gt;&lt;!--/$--&gt;is reprinted in the appendix of &lt;em&gt;The Scaling Era. &lt;/em&gt;Sutton's bitter lesson is, in short, that scaling raw computational power (abbreviated as "compute") has always been more successful than trying to infuse human-ness into AI systems - like IBM's Watson computer learning to play chess, or speech recognition. &lt;em&gt;"We have to learn the bitter lesson that building in how we think we think does not work in the long run," &lt;/em&gt;Sutton wrote. In other words, "tricks" to make machine learning models smarter, like changing the model architecture, are far less effective than scaling every input. What matters is the scale of the data, the scale of the model, and the scale of training time.&lt;/p&gt;
+&lt;p&gt;Between 2020 and 2022, OpenAI and DeepMind released&lt;!--$--&gt;&lt;a href="https://arxiv.org/abs/2203.15556"&gt; research&lt;/a&gt;&lt;!--/$--&gt; on "scaling laws," illustrating a predictive relationship between the amount of data, compute, and number of parameters you need in a model to sufficiently learn the underlying data distribution for a particular set of tasks. Over time, "scaling laws" have begun to refer to other similar phenomena, such as how the increasing size of models over time is correlated with increasing accuracy, generalizability, and "intelligence" of AI.&lt;/p&gt;
+&lt;p&gt;These inputs to AI form tight bottlenecks for AI development. There is only so much data in existence (most of it online), and it may not be enough for the next generation of models that might qualify as AGI - and that's not even counting the immense power and infrastructure needed to train them.&lt;/p&gt;
+&lt;p&gt;Jared Kaplan, cofounder of Anthropic, puts the scale of an AGI training run at 10^29 or 10^30 floating point operations (FLOPs). To put that in perspective, the largest current AI models are trained at around 10^25 FLOPs, so training needs to scale by a hundred thousand times from here. Kaplan thinks we'll reach that by 2030, though he gives a ten to thirty percent chance that he's "just kind of nuts." That colorful humility from AI pioneers is characteristic of discussions with Dwarkesh.&lt;/p&gt;
+&lt;img alt="" src="https://framerusercontent.com/images/Lzyv9BlbIpQsrRVYXYt7SfZZhE.png"/&gt;
+&lt;p&gt;&lt;br/&gt;Throughout &lt;em&gt;The Scaling Era&lt;/em&gt;, it's a given that AI is a big deal, and the biggest current deal. Most frontier researchers believe that we &lt;em&gt;will&lt;/em&gt; reach human-level intelligence soon on many, if not most, economically useful tasks (in some cases, we have already). Almost everything that humans do to make money - sell insurance, diagnose illnesses, develop software - will be within the reach of AIs.&lt;/p&gt;
+&lt;p&gt;And this stems from the idea that LLMs are actually "intelligent" - that they &lt;em&gt;can&lt;/em&gt; reason, not just match patterns in words in their training data (though they do that too). It's clear that beyond a certain size, models understand associations between concepts, just as humans do, but it's not quite clear how. Patel and Leech explain this paradox: "in theory, with the right data, it could perform any task... [but] people who work with it know to constantly doubt its output. It's like having a brilliant but sometimes amnesiac coworker."&lt;/p&gt;
+&lt;p&gt;Most of Patel's guests - and Patel himself - argue that just because the underlying architecture and process seem relatively simple and sub-intelligent at first, they are quite complex systems, hard for us to understand, and therefore hard for us to say for certain that they don't possess "intelligence," a term that does not have a well-accepted definition. After all, the scope of tasks that AGI should be able to solve, or what constitutes "human-level" capability for them, is large, often hard to measure, and amorphic.&lt;/p&gt;
+&lt;p&gt;For some, the less philosophical and more practical big questions will be those related to future scenarios around "AI risk." Patel and his guests evaluate a number of such scenarios. Can AI overthrow governments?&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;"Is there any hope that having leverage over the complex global supply chains that advanced rogue AIs would initially rely on to accomplish their goals would make it easy to disrupt their behavior?" &lt;/em&gt;Patel asks Carl Shulman, an advisor at Open Philanthropy.&lt;/p&gt;
+&lt;p&gt;To some, a scenario like this may seem fanciful. But whether or not one is persuaded, &lt;em&gt;The Scaling Era&lt;/em&gt; presents some very real views from people who are influential at the highest levels of AI about its possible risks.&lt;/p&gt;
+&lt;p&gt;These are problems that fall under the broad term of &lt;em&gt;alignment&lt;/em&gt;, the study of getting a sufficiently intelligent AI to act and think as humans want, or aligned in line with human values and morals. Because we lack a thorough understanding of how LLMs "think" and that it is hard to manipulate effectively what is essentially a huge matrix of decimals, the problem of alignment is quite difficult to solve.&lt;/p&gt;
+&lt;p&gt;The "shoggoth with a smiley-face mask" meme perhaps best encapsulates the challenge of alignment and understanding LLMs. The shoggoth - a fictional monster created by H.P. Lovecraft as a "vast, indescribable thing," shapeless, indiscernible, eerie, and all-encompassing - represents LLMs' unpredictability and associated risks. Reinforcement Learning for Human Feedback (RLHF), a common method of imbuing an LLM with human preferences, is the smiley-face mask, an almost hilariously flimsy layer on top of the shoggoth. Since then, it's become a meme - pessimistic, perhaps - to attribute to all attempts at LLM alignment.&lt;/p&gt;
+&lt;p&gt;Like many of the large-language models it covers, &lt;em&gt;The Scaling Era&lt;/em&gt; has a "knowledge cutoff." That cutoff is November 2024. In the eleven months since that cutoff, things are still moving forward at a rapid pace in the world of AI. In one way this is a weakness for a work that wants to comprehensively cover a subject. But as an oral history, a snapshot of what smart people thought during a crucial period, it works. And by going to print, there was no way to avoid leaving &lt;em&gt;some stuff&lt;/em&gt; out.&lt;/p&gt;
+&lt;p&gt;Patel and Leech mostly don't point readers to a "correct" conclusion from a set of conversations, many of which disagree in meaningful ways. At times it's frustrating, particularly for readers looking for clear answers about what to think about such an important and constantly evolving field, but it's kind of the point, too. A multiplicity of perspectives is, after all, inherent to the book's format. In choosing to preserve rather than resolve the contradictions, &lt;em&gt;The Scaling Era&lt;/em&gt; offers something rare: an honest portrait of uncertainty at the frontier of human knowledge.&lt;/p&gt;</content:encoded>
+      <guid isPermaLink="false">https://arenamag.com/articles/dwarkesh-patel-s-chronicle-of-intelligence</guid>
+      <category>Technology</category>
+      <pubDate>Mon, 10 Nov 2025 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>America's Rare Earth Moment</title>
+      <link>https://arenamag.com/articles/americas-rare-earth-moment</link>
+      <description>What to make of the elemental fight with China</description>
+      <content:encoded>&lt;h3&gt;Subscribe&lt;/h3&gt;
+&lt;p&gt;Four beautiful 100+ page issues per year&lt;/p&gt;</content:encoded>
+      <guid isPermaLink="false">https://arenamag.com/articles/americas-rare-earth-moment</guid>
+      <category>Civilization</category>
+      <pubDate>Mon, 27 Oct 2025 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>10X the City: A New Politics for San Francisco?</title>
+      <link>https://arenamag.com/articles/10x-the-city-a-new-politics-for-san-francisco</link>
+      <description>Technology, Capitalism, Civilization</description>
+      <content:encoded>&lt;h3&gt;Subscribe&lt;/h3&gt;
+&lt;p&gt;Four beautiful 100+ page issues per year&lt;/p&gt;</content:encoded>
+      <guid isPermaLink="false">https://arenamag.com/articles/10x-the-city-a-new-politics-for-san-francisco</guid>
+      <category>Civilization</category>
+      <pubDate>Fri, 17 Oct 2025 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>The Paradox of Harmful Information</title>
+      <link>https://arenamag.com/articles/the-paradox-of-harmful-information</link>
+      <description>Risk and progress in the sciences.</description>
+      <content:encoded>&lt;h3&gt;Subscribe&lt;/h3&gt;
+&lt;p&gt;Four beautiful 100+ page issues per year&lt;/p&gt;</content:encoded>
+      <guid isPermaLink="false">https://arenamag.com/articles/the-paradox-of-harmful-information</guid>
+      <category>Science</category>
+      <pubDate>Wed, 15 Oct 2025 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>The Cold Chain</title>
+      <link>https://arenamag.com/articles/the-cold-chain</link>
+      <description>Civilization on Ice.</description>
+      <content:encoded>&lt;h3&gt;Subscribe&lt;/h3&gt;
+&lt;p&gt;Four beautiful 100+ page issues per year&lt;/p&gt;</content:encoded>
+      <guid isPermaLink="false">https://arenamag.com/articles/the-cold-chain</guid>
+      <category>Civilization</category>
+      <pubDate>Mon, 06 Oct 2025 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Safe Harbors</title>
+      <link>https://arenamag.com/articles/safe-harbors</link>
+      <description>The Security of American Ports.</description>
+      <content:encoded>&lt;h3&gt;Subscribe&lt;/h3&gt;
+&lt;p&gt;Four beautiful 100+ page issues per year&lt;/p&gt;</content:encoded>
+      <guid isPermaLink="false">https://arenamag.com/articles/safe-harbors</guid>
+      <category>Technology</category>
+      <pubDate>Thu, 25 Sep 2025 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Curious Times</title>
+      <link>https://arenamag.com/articles/curious-times</link>
+      <description>From the Information to the Question Age</description>
+      <content:encoded>&lt;h3&gt;Subscribe&lt;/h3&gt;
+&lt;p&gt;Four beautiful 100+ page issues per year&lt;/p&gt;</content:encoded>
+      <guid isPermaLink="false">https://arenamag.com/articles/curious-times</guid>
+      <category>Technology</category>
+      <pubDate>Mon, 22 Sep 2025 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Air Mission</title>
+      <link>https://arenamag.com/articles/air-mission</link>
+      <description>What are we breathing? And: what entrepreneurship means.</description>
+      <content:encoded>&lt;h3&gt;Subscribe&lt;/h3&gt;
+&lt;p&gt;Four beautiful 100+ page issues per year&lt;/p&gt;</content:encoded>
+      <guid isPermaLink="false">https://arenamag.com/articles/air-mission</guid>
+      <category>Technology</category>
+      <pubDate>Fri, 19 Sep 2025 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Ryan's World</title>
+      <link>https://arenamag.com/articles/ryans-world</link>
+      <description>Flexport CEO Ryan Petersen on the craziest year for global trade.</description>
+      <content:encoded>&lt;h3&gt;Subscribe&lt;/h3&gt;
+&lt;p&gt;Four beautiful 100+ page issues per year&lt;/p&gt;</content:encoded>
+      <guid isPermaLink="false">https://arenamag.com/articles/ryans-world</guid>
+      <category>Technology</category>
+      <pubDate>Wed, 17 Sep 2025 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>A Return to Form</title>
+      <link>https://arenamag.com/articles/a-return-to-form</link>
+      <description>Dreaming of Liberty and Titanium</description>
+      <content:encoded>&lt;h3&gt;Subscribe&lt;/h3&gt;
+&lt;p&gt;Four beautiful 100+ page issues per year&lt;/p&gt;</content:encoded>
+      <guid isPermaLink="false">https://arenamag.com/articles/a-return-to-form</guid>
+      <category>Civilization</category>
+      <pubDate>Wed, 10 Sep 2025 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Infinite Nothing, Infinite Everything</title>
+      <link>https://arenamag.com/articles/infinite-nothing-infinite-everything</link>
+      <description>Technology, Capitalism, Civilization</description>
+      <content:encoded>&lt;h3&gt;Subscribe&lt;/h3&gt;
+&lt;p&gt;Four beautiful 100+ page issues per year&lt;/p&gt;</content:encoded>
+      <guid isPermaLink="false">https://arenamag.com/articles/infinite-nothing-infinite-everything</guid>
+      <category>Technology</category>
+      <pubDate>Mon, 08 Sep 2025 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>The Diffusion Dilemma</title>
+      <link>https://arenamag.com/articles/the-diffusion-dilemma</link>
+      <description>Can we innovate for the real world?</description>
+      <content:encoded>&lt;h3&gt;Subscribe&lt;/h3&gt;
+&lt;p&gt;Four beautiful 100+ page issues per year&lt;/p&gt;</content:encoded>
+      <guid isPermaLink="false">https://arenamag.com/articles/the-diffusion-dilemma</guid>
+      <category>Technology</category>
+      <pubDate>Mon, 01 Sep 2025 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>American Power is American Power</title>
+      <link>https://arenamag.com/articles/american-power-is-american-power</link>
+      <description>Base Power wants the biggest grid revolution since the grid itself</description>
+      <content:encoded>&lt;h3&gt;Subscribe&lt;/h3&gt;
+&lt;p&gt;Four beautiful 100+ page issues per year&lt;/p&gt;</content:encoded>
+      <guid isPermaLink="false">https://arenamag.com/articles/american-power-is-american-power</guid>
+      <category>Technology</category>
+      <pubDate>Tue, 26 Aug 2025 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>China's State of Engineering</title>
+      <link>https://arenamag.com/articles/china-s-state-of-engineering</link>
+      <description>Reviewed: "Breakneck: China's Race to Engineer the Future" by Dan Wang.</description>
+      <content:encoded>&lt;h3&gt;Subscribe&lt;/h3&gt;
+&lt;p&gt;Four beautiful 100+ page issues per year&lt;/p&gt;</content:encoded>
+      <guid isPermaLink="false">https://arenamag.com/articles/china-s-state-of-engineering</guid>
+      <category>Civilization</category>
+      <pubDate>Tue, 26 Aug 2025 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>A Nuclear Revival on the Old Frontier</title>
+      <link>https://arenamag.com/articles/a-nuclear-revival-on-the-old-frontier</link>
+      <description>Nuclear enrichment startup General Matter re-opens a plant in Paducah, Kentucky</description>
+      <content:encoded>&lt;h3&gt;Subscribe&lt;/h3&gt;
+&lt;p&gt;Four beautiful 100+ page issues per year&lt;/p&gt;</content:encoded>
+      <guid isPermaLink="false">https://arenamag.com/articles/a-nuclear-revival-on-the-old-frontier</guid>
+      <category>Civilization</category>
+      <pubDate>Fri, 15 Aug 2025 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>How America Wins the Invisible War</title>
+      <link>https://arenamag.com/articles/how-america-wins-the-invisible-war</link>
+      <description>Notes from El Segundo</description>
+      <content:encoded>&lt;h3&gt;Subscribe&lt;/h3&gt;
+&lt;p&gt;Four beautiful 100+ page issues per year&lt;/p&gt;</content:encoded>
+      <guid isPermaLink="false">https://arenamag.com/articles/how-america-wins-the-invisible-war</guid>
+      <category>Technology</category>
+      <pubDate>Tue, 29 Jul 2025 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Welcome to the Everything Race</title>
+      <link>https://arenamag.com/articles/welcome-to-the-everything-race</link>
+      <description>America and China compete for AI supremacy, and everything else</description>
+      <content:encoded>&lt;h3&gt;Subscribe&lt;/h3&gt;
+&lt;p&gt;Four beautiful 100+ page issues per year&lt;/p&gt;</content:encoded>
+      <guid isPermaLink="false">https://arenamag.com/articles/welcome-to-the-everything-race</guid>
+      <category>Civilization</category>
+      <pubDate>Mon, 07 Jul 2025 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Robots are for the Masses</title>
+      <link>https://arenamag.com/articles/robots-are-for-the-masses</link>
+      <description>How advanced robotics will change class</description>
+      <content:encoded>&lt;h3&gt;Subscribe&lt;/h3&gt;
+&lt;p&gt;Four beautiful 100+ page issues per year&lt;/p&gt;</content:encoded>
+      <guid isPermaLink="false">https://arenamag.com/articles/robots-are-for-the-masses</guid>
+      <category>Technology</category>
+      <pubDate>Thu, 03 Jul 2025 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Fred Smith: An American Life</title>
+      <link>https://arenamag.com/articles/fred-smith-an-american-life</link>
+      <description>The FedEx founder's legacy.</description>
+      <content:encoded>&lt;h3&gt;Subscribe&lt;/h3&gt;
+&lt;p&gt;Four beautiful 100+ page issues per year&lt;/p&gt;</content:encoded>
+      <guid isPermaLink="false">https://arenamag.com/articles/fred-smith-an-american-life</guid>
+      <category>Greatness</category>
+      <pubDate>Mon, 23 Jun 2025 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Mobs, Machines, and the American Spirit</title>
+      <link>https://arenamag.com/articles/american-technology-vs-the-mob</link>
+      <description>Burning Waymos and what technology means to America</description>
+      <content:encoded>&lt;h3&gt;Subscribe&lt;/h3&gt;
+&lt;p&gt;Four beautiful 100+ page issues per year&lt;/p&gt;</content:encoded>
+      <guid isPermaLink="false">https://arenamag.com/articles/american-technology-vs-the-mob</guid>
+      <category>Civilization</category>
+      <pubDate>Tue, 17 Jun 2025 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>The War Below</title>
+      <link>https://arenamag.com/articles/the-war-below</link>
+      <description>Fighting underground, fighting in the dark.</description>
+      <content:encoded>&lt;h3&gt;Subscribe&lt;/h3&gt;
+&lt;p&gt;Four beautiful 100+ page issues per year&lt;/p&gt;</content:encoded>
+      <guid isPermaLink="false">https://arenamag.com/articles/the-war-below</guid>
+      <category>Civilization</category>
+      <pubDate>Mon, 16 Jun 2025 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Automated People's War</title>
+      <link>https://arenamag.com/articles/automated-people-s-war</link>
+      <description>The United States of America and the People's Republic of China on drones and men at war</description>
+      <content:encoded>&lt;h3&gt;Subscribe&lt;/h3&gt;
+&lt;p&gt;Four beautiful 100+ page issues per year&lt;/p&gt;</content:encoded>
+      <guid isPermaLink="false">https://arenamag.com/articles/automated-people-s-war</guid>
+      <category>Civilization</category>
+      <pubDate>Wed, 11 Jun 2025 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Mr. DeepSeek Goes to Washington</title>
+      <link>https://arenamag.com/articles/mr-deepseek-goes-to-washington</link>
+      <description>The coastal information bubbles of American AI, and what happens next</description>
+      <content:encoded>&lt;h3&gt;Subscribe&lt;/h3&gt;
+&lt;p&gt;Four beautiful 100+ page issues per year&lt;/p&gt;</content:encoded>
+      <guid isPermaLink="false">https://arenamag.com/articles/mr-deepseek-goes-to-washington</guid>
+      <category>Technology</category>
+      <pubDate>Wed, 04 Jun 2025 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>The Sea Monster that Flew</title>
+      <link>https://arenamag.com/articles/the-sea-monster-that-flew</link>
+      <description>Poseidon Aerospace wants to resurrect a technological dream.</description>
+      <content:encoded>&lt;h3&gt;Subscribe&lt;/h3&gt;
+&lt;p&gt;Four beautiful 100+ page issues per year&lt;/p&gt;</content:encoded>
+      <guid isPermaLink="false">https://arenamag.com/articles/the-sea-monster-that-flew</guid>
+      <category>Technology</category>
+      <pubDate>Tue, 20 May 2025 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>As Below, So Above</title>
+      <link>https://arenamag.com/articles/as-below-so-above</link>
+      <description>In space, satellites are submarines</description>
+      <content:encoded>&lt;h3&gt;Subscribe&lt;/h3&gt;
+&lt;p&gt;Four beautiful 100+ page issues per year&lt;/p&gt;</content:encoded>
+      <guid isPermaLink="false">https://arenamag.com/articles/as-below-so-above</guid>
+      <category>Technology</category>
+      <pubDate>Tue, 20 May 2025 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Let It Rip</title>
+      <link>https://arenamag.com/articles/let-it-rip</link>
+      <description>Freedom as Grand Strategy</description>
+      <content:encoded>&lt;h3&gt;Subscribe&lt;/h3&gt;
+&lt;p&gt;Four beautiful 100+ page issues per year&lt;/p&gt;</content:encoded>
+      <guid isPermaLink="false">https://arenamag.com/articles/let-it-rip</guid>
+      <category>Civilization</category>
+      <pubDate>Fri, 16 May 2025 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Choose Your Adventure</title>
+      <link>https://arenamag.com/articles/choose-your-adventure</link>
+      <description>Fixing the Pentagon's feedback loop</description>
+      <content:encoded>&lt;h3&gt;Subscribe&lt;/h3&gt;
+&lt;p&gt;Four beautiful 100+ page issues per year&lt;/p&gt;</content:encoded>
+      <guid isPermaLink="false">https://arenamag.com/articles/choose-your-adventure</guid>
+      <category>Civilization</category>
+      <pubDate>Wed, 14 May 2025 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Brian Schimpf: Engineer at War</title>
+      <link>https://arenamag.com/articles/brian-schimpf-engineer-at-war</link>
+      <description>How Anduril CEO Brian Schimpf built an engineering enterprise to take on Goliath and protect the US</description>
+      <content:encoded>&lt;h3&gt;Subscribe&lt;/h3&gt;
+&lt;p&gt;Four beautiful 100+ page issues per year&lt;/p&gt;</content:encoded>
+      <guid isPermaLink="false">https://arenamag.com/articles/brian-schimpf-engineer-at-war</guid>
+      <category>Technology</category>
+      <pubDate>Tue, 29 Apr 2025 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Taking Our Hands Off the Wheel</title>
+      <link>https://arenamag.com/articles/taking-our-hands-off-the-wheel</link>
+      <description>What a world with self-driving cars might be like</description>
+      <content:encoded>&lt;h3&gt;Subscribe&lt;/h3&gt;
+&lt;p&gt;Four beautiful 100+ page issues per year&lt;/p&gt;</content:encoded>
+      <guid isPermaLink="false">https://arenamag.com/articles/taking-our-hands-off-the-wheel</guid>
+      <category>Technology</category>
+      <pubDate>Mon, 21 Apr 2025 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>The Right to Machines' Souls</title>
+      <link>https://arenamag.com/articles/the-right-to-machines-souls</link>
+      <description>Debate over "Right to Repair" puts classic American values in conflict.</description>
+      <content:encoded>&lt;h3&gt;Subscribe&lt;/h3&gt;
+&lt;p&gt;Four beautiful 100+ page issues per year&lt;/p&gt;</content:encoded>
+      <guid isPermaLink="false">https://arenamag.com/articles/the-right-to-machines-souls</guid>
+      <category>Capitalism</category>
+      <pubDate>Wed, 09 Apr 2025 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Life, Liberty, and Superintelligence</title>
+      <link>https://arenamag.com/articles/life-liberty-and-superintelligence</link>
+      <description>Are American institutions ready for the AI age?</description>
+      <content:encoded>&lt;h3&gt;Subscribe&lt;/h3&gt;
+&lt;p&gt;Four beautiful 100+ page issues per year&lt;/p&gt;</content:encoded>
+      <guid isPermaLink="false">https://arenamag.com/articles/life-liberty-and-superintelligence</guid>
+      <category>Civilization</category>
+      <pubDate>Mon, 03 Mar 2025 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Learning to Learn to Walk</title>
+      <link>https://arenamag.com/articles/learning-to-learn-to-walk</link>
+      <description>Humans, Robots, and the Story of Embodied Intelligence</description>
+      <content:encoded>&lt;h3&gt;Subscribe&lt;/h3&gt;
+&lt;p&gt;Four beautiful 100+ page issues per year&lt;/p&gt;</content:encoded>
+      <guid isPermaLink="false">https://arenamag.com/articles/learning-to-learn-to-walk</guid>
+      <category>Technology</category>
+      <pubDate>Wed, 19 Feb 2025 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>A Techno-Republic, if you can keep it</title>
+      <link>https://arenamag.com/articles/a-techno-republic-if-you-can-keep-it</link>
+      <description>Reviewed: The Technological Republic: Hard Power, Soft Belief, and the Future of the West by Alexander C. Karp and Nicholas W. Zamiska.</description>
+      <content:encoded>&lt;h3&gt;Subscribe&lt;/h3&gt;
+&lt;p&gt;Four beautiful 100+ page issues per year&lt;/p&gt;</content:encoded>
+      <guid isPermaLink="false">https://arenamag.com/articles/a-techno-republic-if-you-can-keep-it</guid>
+      <category>Civilization</category>
+      <pubDate>Tue, 18 Feb 2025 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Who Wants to Work in a Factory?</title>
+      <link>https://arenamag.com/articles/who-wants-to-work-in-a-factory</link>
+      <description>Notes on manufacturing and our posterity.</description>
+      <content:encoded>&lt;h3&gt;Subscribe&lt;/h3&gt;
+&lt;p&gt;Four beautiful 100+ page issues per year&lt;/p&gt;</content:encoded>
+      <guid isPermaLink="false">https://arenamag.com/articles/who-wants-to-work-in-a-factory</guid>
+      <category>Technology</category>
+      <pubDate>Tue, 11 Feb 2025 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Pax Hydraulica</title>
+      <link>https://arenamag.com/articles/pax-hydraulica</link>
+      <description>How America fracked itself and remade the world</description>
+      <content:encoded>&lt;h3&gt;Subscribe&lt;/h3&gt;
+&lt;p&gt;Four beautiful 100+ page issues per year&lt;/p&gt;</content:encoded>
+      <guid isPermaLink="false">https://arenamag.com/articles/pax-hydraulica</guid>
+      <category>Civilization</category>
+      <pubDate>Mon, 10 Feb 2025 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Gen-Z's Capitalist Whisperer</title>
+      <link>https://arenamag.com/articles/gen-zs-capitalist-whisperer</link>
+      <description>Arena Magazine talks to author Kyla Scanlon</description>
+      <content:encoded>&lt;h3&gt;Subscribe&lt;/h3&gt;
+&lt;p&gt;Four beautiful 100+ page issues per year&lt;/p&gt;</content:encoded>
+      <guid isPermaLink="false">https://arenamag.com/articles/gen-zs-capitalist-whisperer</guid>
+      <category>Capitalism</category>
+      <pubDate>Thu, 05 Dec 2024 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>The General Intelligence Tsunami</title>
+      <link>https://arenamag.com/articles/the-general-intelligence-tsunami</link>
+      <description>If Leopold Aschenbrenner's "Situational Awareness" proves true, then we are on the cusp of the most important period in the history of humanity.</description>
+      <content:encoded>&lt;h3&gt;Subscribe&lt;/h3&gt;
+&lt;p&gt;Four beautiful 100+ page issues per year&lt;/p&gt;</content:encoded>
+      <guid isPermaLink="false">https://arenamag.com/articles/the-general-intelligence-tsunami</guid>
+      <category>Technology</category>
+      <pubDate>Sat, 23 Nov 2024 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>San Francisco Strikes Back</title>
+      <link>https://arenamag.com/articles/san-francisco-strikes-back</link>
+      <description>Or: How I Learned to Stop Worrying and Love the City by the Bay</description>
+      <content:encoded>&lt;h3&gt;Subscribe&lt;/h3&gt;
+&lt;p&gt;Four beautiful 100+ page issues per year&lt;/p&gt;</content:encoded>
+      <guid isPermaLink="false">https://arenamag.com/articles/san-francisco-strikes-back</guid>
+      <category>Civilization</category>
+      <pubDate>Sat, 23 Nov 2024 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Bubbling Up</title>
+      <link>https://arenamag.com/articles/bubbling-up</link>
+      <description>Byrne Hobart and Tobias Huber's new book makes the case for economic mania as a driver of progress</description>
+      <content:encoded>&lt;h3&gt;Subscribe&lt;/h3&gt;
+&lt;p&gt;Four beautiful 100+ page issues per year&lt;/p&gt;</content:encoded>
+      <guid isPermaLink="false">https://arenamag.com/articles/bubbling-up</guid>
+      <category>Capitalism</category>
+      <pubDate>Tue, 19 Nov 2024 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>The Ballad of Rahul Ligma</title>
+      <link>https://arenamag.com/articles/the-ballad-of-rahul-ligma</link>
+      <description>Rahul Sonwalkar (the real "Rahul Ligma"), the promise of AI, and the total victory of the hackers.</description>
+      <content:encoded>&lt;h3&gt;Subscribe&lt;/h3&gt;
+&lt;p&gt;Four beautiful 100+ page issues per year&lt;/p&gt;</content:encoded>
+      <guid isPermaLink="false">https://arenamag.com/articles/the-ballad-of-rahul-ligma</guid>
+      <category>Technology</category>
+      <pubDate>Mon, 28 Oct 2024 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>How to Spend a Trillion Dollars</title>
+      <link>https://arenamag.com/articles/how-to-spend-a-trillion-dollars</link>
+      <description>A rebellious program of spending for a competent government.</description>
+      <content:encoded>&lt;h3&gt;Subscribe&lt;/h3&gt;
+&lt;p&gt;Four beautiful 100+ page issues per year&lt;/p&gt;</content:encoded>
+      <guid isPermaLink="false">https://arenamag.com/articles/how-to-spend-a-trillion-dollars</guid>
+      <category>Civilization</category>
+      <pubDate>Fri, 25 Oct 2024 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>The Best Possible World</title>
+      <link>https://arenamag.com/articles/the-best-possible-world</link>
+      <description>A computer scientist, Noor Siddiqui, wants to help everyone "have a healthy baby." Will we let her?</description>
+      <content:encoded>&lt;h3&gt;Subscribe&lt;/h3&gt;
+&lt;p&gt;Four beautiful 100+ page issues per year&lt;/p&gt;</content:encoded>
+      <guid isPermaLink="false">https://arenamag.com/articles/the-best-possible-world</guid>
+      <category>Science</category>
+      <pubDate>Mon, 21 Oct 2024 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>America Punk</title>
+      <link>https://arenamag.com/articles/america-punk</link>
+      <description>Cool Things Should Be Cool</description>
+      <content:encoded>&lt;h3&gt;Subscribe&lt;/h3&gt;
+&lt;p&gt;Four beautiful 100+ page issues per year&lt;/p&gt;</content:encoded>
+      <guid isPermaLink="false">https://arenamag.com/articles/america-punk</guid>
+      <category>Civilization</category>
+      <pubDate>Mon, 21 Oct 2024 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>The American Nuclear Tragedy</title>
+      <link>https://arenamag.com/articles/the-american-nuclear-tragedy</link>
+      <description>America gave up on nuclear. But it's never too late to change course.</description>
+      <content:encoded>&lt;h3&gt;Subscribe&lt;/h3&gt;
+&lt;p&gt;Four beautiful 100+ page issues per year&lt;/p&gt;</content:encoded>
+      <guid isPermaLink="false">https://arenamag.com/articles/the-american-nuclear-tragedy</guid>
+      <category>Civilization</category>
+      <pubDate>Mon, 21 Oct 2024 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>The Earthly Miracle of the Grocery Store</title>
+      <link>https://arenamag.com/articles/the-earthly-miracle-of-the-grocery-store</link>
+      <description>How a Texas grocery store set the world free, and a Labor Day message about "price gouging."</description>
+      <content:encoded>&lt;h3&gt;Subscribe&lt;/h3&gt;
+&lt;p&gt;Four beautiful 100+ page issues per year&lt;/p&gt;</content:encoded>
+      <guid isPermaLink="false">https://arenamag.com/articles/the-earthly-miracle-of-the-grocery-store</guid>
+      <category>Civilization</category>
+      <pubDate>Mon, 02 Sep 2024 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Boyle's War</title>
+      <link>https://arenamag.com/articles/boyles-war</link>
+      <description>In Silicon Valley and Washington D.C., a former journalist turned venture capitalist is waging a war for the memes, minds, and machines of the future.</description>
+      <content:encoded>&lt;h3&gt;Subscribe&lt;/h3&gt;
+&lt;p&gt;Four beautiful 100+ page issues per year&lt;/p&gt;</content:encoded>
+      <guid isPermaLink="false">https://arenamag.com/articles/boyles-war</guid>
+      <category>Technology</category>
+      <pubDate>Fri, 09 Aug 2024 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>The FTC Hates Your Data</title>
+      <link>https://arenamag.com/articles/the-ftc-hates-your-data</link>
+      <description>Inside the FTC's crusade to make the Internet dumber and more expensive.</description>
+      <content:encoded>&lt;h3&gt;Subscribe&lt;/h3&gt;
+&lt;p&gt;Four beautiful 100+ page issues per year&lt;/p&gt;</content:encoded>
+      <guid isPermaLink="false">https://arenamag.com/articles/the-ftc-hates-your-data</guid>
+      <category>Civilization</category>
+      <pubDate>Thu, 01 Aug 2024 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Playing With Guns (and Phones)</title>
+      <link>https://arenamag.com/articles/playing-with-guns-and-phones</link>
+      <description>The great phone debate, and what it means to love and understand a powerful technology.</description>
+      <content:encoded>&lt;h3&gt;Subscribe&lt;/h3&gt;
+&lt;p&gt;Four beautiful 100+ page issues per year&lt;/p&gt;</content:encoded>
+      <guid isPermaLink="false">https://arenamag.com/articles/playing-with-guns-and-phones</guid>
+      <category>Technology</category>
+      <pubDate>Wed, 31 Jul 2024 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>The Tinkerer's Box of Dreams</title>
+      <link>https://arenamag.com/articles/the-tinkerers-box-of-dreams</link>
+      <description>An engineer and his box of phones tell the 30-year story of how the smartphone war was fought and lost.</description>
+      <content:encoded>&lt;h3&gt;Subscribe&lt;/h3&gt;
+&lt;p&gt;Four beautiful 100+ page issues per year&lt;/p&gt;</content:encoded>
+      <guid isPermaLink="false">https://arenamag.com/articles/the-tinkerers-box-of-dreams</guid>
+      <category>Technology</category>
+      <pubDate>Wed, 31 Jul 2024 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>The New Needs Friends</title>
+      <link>https://arenamag.com/articles/the-new-needs-friends</link>
+      <description>A Manifesto for the Future</description>
+      <content:encoded>&lt;h3&gt;Subscribe&lt;/h3&gt;
+&lt;p&gt;Four beautiful 100+ page issues per year&lt;/p&gt;</content:encoded>
+      <guid isPermaLink="false">https://arenamag.com/articles/the-new-needs-friends</guid>
+      <category>Civilization</category>
+      <pubDate>Wed, 31 Jul 2024 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Gmail at 20</title>
+      <link>https://arenamag.com/articles/gmail-at-20</link>
+      <description>Talking to Paul Buchheit as his biggest invention enters its third decade.</description>
+      <content:encoded>&lt;h3&gt;Subscribe&lt;/h3&gt;
+&lt;p&gt;Four beautiful 100+ page issues per year&lt;/p&gt;</content:encoded>
+      <guid isPermaLink="false">https://arenamag.com/articles/gmail-at-20</guid>
+      <category>Technology</category>
+      <pubDate>Fri, 28 Jun 2024 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>The Dream of Speed</title>
+      <link>https://arenamag.com/articles/the-dream-of-speed</link>
+      <description>The supersonic dream died in the 20th century. Can the 21st century bring it back to life?</description>
+      <content:encoded>&lt;h3&gt;Subscribe&lt;/h3&gt;
+&lt;p&gt;Four beautiful 100+ page issues per year&lt;/p&gt;</content:encoded>
+      <guid isPermaLink="false">https://arenamag.com/articles/the-dream-of-speed</guid>
+      <category>Greatness</category>
+      <pubDate>Wed, 05 Jun 2024 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>AI Monopolies? Not So Fast.</title>
+      <link>https://arenamag.com/articles/ai-monopolies-not-so-fast</link>
+      <description>Why the future of AI will be competition and specialization, not monopolization.</description>
+      <content:encoded>&lt;h3&gt;Subscribe&lt;/h3&gt;
+&lt;p&gt;Four beautiful 100+ page issues per year&lt;/p&gt;</content:encoded>
+      <guid isPermaLink="false">https://arenamag.com/articles/ai-monopolies-not-so-fast</guid>
+      <category>Civilization</category>
+      <pubDate>Mon, 03 Jun 2024 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>The Prophet of Doom Gets Positive</title>
+      <link>https://arenamag.com/articles/a-solved-world</link>
+      <description>In his new book "Deep Utopia," Nick Bostrom wonders about a better future.</description>
+      <content:encoded>&lt;h3&gt;Subscribe&lt;/h3&gt;
+&lt;p&gt;Four beautiful 100+ page issues per year&lt;/p&gt;</content:encoded>
+      <guid isPermaLink="false">https://arenamag.com/articles/a-solved-world</guid>
+      <category>Civilization</category>
+      <pubDate>Mon, 03 Jun 2024 00:00:00 +0000</pubDate>
+    </item>
+  </channel>
+</rss>
