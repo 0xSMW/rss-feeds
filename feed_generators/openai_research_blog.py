@@ -1,9 +1,9 @@
+import requests
 import undetected_chromedriver as uc
 from bs4 import BeautifulSoup
 from datetime import datetime
 import pytz
 from feedgen.feed import FeedGenerator
-import time
 import logging
 from pathlib import Path
 
@@ -20,6 +20,20 @@ def setup_selenium_driver():
     options.add_argument("--user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36")
     return uc.Chrome(options=options)
 
+def fetch_news_content_requests(url):
+    """Fetch the HTML content via requests."""
+    headers = {
+        "User-Agent": (
+            "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+            "AppleWebKit/537.36 (KHTML, like Gecko) "
+            "Chrome/123.0.0.0 Safari/537.36"
+        )
+    }
+    logger.info(f"Fetching content via requests: {url}")
+    resp = requests.get(url, headers=headers, timeout=20)
+    resp.raise_for_status()
+    return resp.text
+
 def fetch_news_content_selenium(url):
     """Fetch the fully loaded HTML content of a webpage using Selenium."""
     driver = None
@@ -28,10 +42,14 @@ def fetch_news_content_selenium(url):
         driver = setup_selenium_driver()
         driver.get(url)
 
-        # Log wait time
-        wait_time = 5
-        logger.info(f"Waiting {wait_time} seconds for the page to fully load...")
-        time.sleep(wait_time)
+        try:
+            from selenium.webdriver.common.by import By
+            from selenium.webdriver.support.ui import WebDriverWait
+            from selenium.webdriver.support import expected_conditions as EC
+
+            WebDriverWait(driver, 15).until(EC.presence_of_element_located((By.CSS_SELECTOR, "a[href^='/index/']")))
+        except Exception:
+            logger.warning("Could not confirm OpenAI research items loaded, proceeding anyway...")
 
         html_content = driver.page_source
         logger.info("Successfully fetched HTML content")
@@ -153,8 +171,17 @@ def main():
     url = "https://openai.com/news/research/?limit=500"
 
     try:
-        html_content = fetch_news_content_selenium(url)
-        articles = parse_openai_news_html(html_content)
+        articles = []
+        try:
+            html_content = fetch_news_content_requests(url)
+            articles = parse_openai_news_html(html_content)
+        except Exception as e:
+            logger.warning(f"Requests fetch failed ({e}); falling back to Selenium")
+
+        if not articles:
+            html_content = fetch_news_content_selenium(url)
+            articles = parse_openai_news_html(html_content)
+
         if not articles:
             logger.warning("No articles were parsed. Check your selectors.")
         feed = generate_rss_feed(articles)
