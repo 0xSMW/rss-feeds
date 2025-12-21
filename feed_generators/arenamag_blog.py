@@ -18,18 +18,34 @@ logger = logging.getLogger(__name__)
 
 
 def normalize_text(text: str) -> str:
-    """Normalize Unicode text - fix smart quotes, dashes, double-encoding issues."""
+    """Normalize Unicode text - fix smart quotes, dashes, encoding issues."""
     if not text:
         return text
     
-    # Fix double-encoded UTF-8 (common mojibake issue)
-    # This happens when UTF-8 bytes are interpreted as Latin-1 and re-encoded
+    # Fix mojibake: UTF-8 decoded as Latin-1 creates sequences like â€™ for '
+    # These appear as Unicode chars: â (U+00E2), control chars (U+0080, U+0099), etc.
+    mojibake_map = {
+        "\u00e2\u0080\u0099": "'",   # Right single quote (')
+        "\u00e2\u0080\u0098": "'",   # Left single quote (')
+        "\u00e2\u0080\u009c": '"',   # Left double quote (")
+        "\u00e2\u0080\u009d": '"',   # Right double quote (")
+        "\u00e2\u0080\u0093": "-",   # En dash (–)
+        "\u00e2\u0080\u0094": "-",   # Em dash (—)
+        "\u00e2\u0080\u0091": "-",   # Non-breaking hyphen (‑)
+        "\u00e2\u0080\u00a6": "...", # Ellipsis (…)
+        "\u00c2\u00a0": " ",         # Non-breaking space
+        "\u00e2\u0080\u009a": "'",   # Single low-9 quote (‚)
+        "\u00e2\u0080\u009e": '"',   # Double low-9 quote („)
+    }
+    for mojibake, replacement in mojibake_map.items():
+        text = text.replace(mojibake, replacement)
+    
+    # Also try the Latin-1 re-encoding fix for other cases
     try:
-        # Try to fix double-encoding: encode as latin-1, decode as utf-8
         fixed = text.encode("latin-1").decode("utf-8")
         text = fixed
     except (UnicodeDecodeError, UnicodeEncodeError):
-        pass  # Not double-encoded, use original
+        pass
     
     # Normalize to NFC form
     text = unicodedata.normalize("NFC", text)
@@ -164,7 +180,7 @@ def fetch_article_page(url: str) -> str | None:
 
 
 def _clean_article_html(container, base_url: str) -> str:
-    """Clean article container and absolutize links/media."""
+    """Clean article container - strip classes, simplify HTML for RSS readers."""
     if container is None:
         return ""
 
@@ -176,7 +192,6 @@ def _clean_article_html(container, base_url: str) -> str:
         tag.decompose()
 
     # Remove Arena/Framer specific noise elements
-    # Remove header sections, newsletter cards, subscription prompts, author boxes
     framer_noise_patterns = [
         '[data-framer-name="Header"]',
         '[data-framer-name="HeaderImage"]',
@@ -202,16 +217,10 @@ def _clean_article_html(container, base_url: str) -> str:
     for el in container.find_all(True):
         cid = (el.get("id") or "") + " " + " ".join(el.get("class", []))
         if cid and noisy_re.search(cid):
-            # Only remove if it doesn't contain substantial content
             if not el.find(["p", "h1", "h2", "h3", "h4", "h5", "h6", "li", "img", "pre", "blockquote", "table"]):
                 el.decompose()
 
-    # Remove empty divs with only whitespace
-    for div in container.find_all("div"):
-        if not div.get_text(strip=True) and not div.find(["img", "video", "iframe"]):
-            div.decompose()
-
-    # Make links and media absolute
+    # Make links and media absolute BEFORE stripping attributes
     for a in container.find_all("a", href=True):
         href = a["href"]
         if not href.startswith(("http://", "https://", "mailto:", "#")):
@@ -221,7 +230,47 @@ def _clean_article_html(container, base_url: str) -> str:
         if not src.startswith(("http://", "https://", "data:")):
             img["src"] = urljoin(base_url, src)
 
-    return str(container)
+    # Strip all attributes except essential ones (href, src, alt)
+    allowed_attrs = {
+        "a": ["href"],
+        "img": ["src", "alt"],
+    }
+    for el in container.find_all(True):
+        tag_name = el.name
+        if tag_name in allowed_attrs:
+            # Keep only allowed attributes for this tag
+            attrs_to_keep = {}
+            for attr in allowed_attrs[tag_name]:
+                if el.has_attr(attr):
+                    attrs_to_keep[attr] = el[attr]
+            el.attrs = attrs_to_keep
+        else:
+            # Remove all attributes from other tags
+            el.attrs = {}
+
+    # Unwrap unnecessary wrapper divs (divs that just contain other content)
+    # Do multiple passes to handle nested wrappers
+    for _ in range(5):
+        for div in container.find_all("div"):
+            # If div has no text directly (only children) and only one child element, unwrap
+            if div.parent and len(list(div.children)) > 0:
+                div.unwrap()
+
+    # Remove any remaining empty elements
+    for el in container.find_all(True):
+        if el.name not in ["img", "br", "hr"] and not el.get_text(strip=True) and not el.find("img"):
+            el.decompose()
+
+    # Build clean HTML with only content tags
+    output_parts = []
+    for el in container.find_all(["p", "h1", "h2", "h3", "h4", "h5", "h6", "ul", "ol", "li", 
+                                   "blockquote", "pre", "code", "em", "strong", "a", "img", "br", "hr"]):
+        # Skip if this element is inside another element we'll process
+        if el.find_parent(["p", "h1", "h2", "h3", "h4", "h5", "h6", "blockquote", "pre", "li"]):
+            continue
+        output_parts.append(str(el))
+    
+    return "\n".join(output_parts)
 
 
 def extract_article_metadata(html: str, page_url: str) -> dict:
