@@ -1,11 +1,16 @@
+import argparse
+import logging
+from datetime import datetime
+from email.utils import parsedate_to_datetime
+from pathlib import Path
+from urllib.parse import urljoin
+
+import pytz
 import requests
 import undetected_chromedriver as uc
 from bs4 import BeautifulSoup
-from datetime import datetime
-import pytz
 from feedgen.feed import FeedGenerator
-import logging
-from pathlib import Path
+import xml.etree.ElementTree as ET
 
 # Set up logging
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
@@ -80,6 +85,119 @@ def fetch_research_content_selenium(url="https://www.anthropic.com/research"):
     finally:
         if driver:
             driver.quit()
+
+
+def fetch_article_page(url: str) -> str | None:
+    """Fetch HTML for a single article page."""
+    headers = {
+        "User-Agent": (
+            "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+            "AppleWebKit/537.36 (KHTML, like Gecko) "
+            "Chrome/123.0.0.0 Safari/537.36"
+        )
+    }
+    try:
+        resp = requests.get(url, headers=headers, timeout=20)
+        resp.raise_for_status()
+        return resp.text
+    except Exception as e:
+        logger.warning(f"Requests fetch failed for {url} ({e}); falling back to Selenium")
+        try:
+            driver = setup_selenium_driver()
+            driver.get(url)
+            html = driver.page_source
+            driver.quit()
+            return html
+        except Exception as e2:
+            logger.warning(f"Selenium fetch failed for {url}: {e2}")
+            return None
+
+
+def _clean_article_html(container, base_url: str) -> str:
+    """Clean article container and keep feed-friendly tags."""
+    if container is None:
+        return ""
+
+    for tag in container.select("script, style, noscript, svg, form, iframe, nav, header, footer"):
+        tag.decompose()
+
+    for share_link in container.find_all("a", href=True):
+        href = share_link["href"]
+        if "twitter.com/intent/tweet" in href or "linkedin.com/shareArticle" in href:
+            share_link.decompose()
+
+    for heading in container.find_all(["h1", "h2", "h3", "h4", "h5", "h6"]):
+        if heading.get_text(" ", strip=True).lower() == "related content":
+            for sibling in list(heading.find_all_next()):
+                sibling.decompose()
+            heading.decompose()
+            break
+
+    allowed = {
+        "p",
+        "a",
+        "img",
+        "ul",
+        "ol",
+        "li",
+        "strong",
+        "em",
+        "blockquote",
+        "code",
+        "pre",
+        "h1",
+        "h2",
+        "h3",
+        "h4",
+        "h5",
+        "h6",
+        "br",
+    }
+    for tag in list(container.find_all(True)):
+        if tag.name not in allowed:
+            tag.unwrap()
+            continue
+        attrs = {}
+        if tag.name == "a" and tag.get("href"):
+            attrs["href"] = tag["href"]
+        elif tag.name == "img" and tag.get("src"):
+            attrs["src"] = tag["src"]
+            if tag.get("alt"):
+                attrs["alt"] = tag["alt"]
+        tag.attrs = attrs
+
+    for a in container.find_all("a", href=True):
+        href = a["href"]
+        if not href.startswith(("http://", "https://", "mailto:", "#")):
+            a["href"] = urljoin(base_url, href)
+    for img in container.find_all("img", src=True):
+        src = img["src"]
+        if not src.startswith(("http://", "https://", "data:")):
+            img["src"] = urljoin(base_url, src)
+
+    return str(container)
+
+
+def extract_article_content(html: str, page_url: str) -> tuple[str, str]:
+    """Extract main article content HTML and a plain-text summary."""
+    soup = BeautifulSoup(html, "html.parser")
+    container = (
+        soup.select_one("article")
+        or soup.select_one("main article")
+        or soup.select_one("main")
+        or soup.select_one("[class*='content']")
+    )
+    content_html = _clean_article_html(container, base_url=page_url)
+
+    summary = ""
+    if container:
+        first_p = container.find("p")
+        if first_p:
+            summary = first_p.get_text(" ", strip=True)
+    if not summary:
+        summary = soup.title.get_text(strip=True) if soup.title else ""
+
+    return content_html, summary
 
 
 def parse_date_string(date_str):
@@ -287,6 +405,8 @@ def generate_rss_feed(articles, feed_name="anthropic_research"):
             fe.title(article["title"])
             fe.description(article["description"])
             fe.link(href=article["link"])
+            if article.get("content_html"):
+                fe.content(article["content_html"])
 
             # Only set published date if we have a valid date
             if article["date"]:
@@ -322,9 +442,61 @@ def save_rss_feed(feed_generator, feed_name="anthropic_research"):
         raise
 
 
-def main(feed_name="anthropic_research"):
+def get_existing_entries_from_feed(feed_path):
+    """Parse the existing RSS feed and return entries for reuse."""
+    entries = []
+    if not feed_path.exists():
+        return entries
+    try:
+        tree = ET.parse(feed_path)
+        root = tree.getroot()
+        ns = {"content": "http://purl.org/rss/1.0/modules/content/"}
+        for item in root.findall("./channel/item"):
+            link_elem = item.find("link")
+            title_elem = item.find("title")
+            desc_elem = item.find("description")
+            content_elem = item.find("content:encoded", ns)
+            date_elem = item.find("pubDate")
+            category_elem = item.find("category")
+
+            link = link_elem.text.strip() if link_elem is not None and link_elem.text else None
+            if not link:
+                continue
+
+            date = None
+            if date_elem is not None and date_elem.text:
+                try:
+                    date = parsedate_to_datetime(date_elem.text.strip())
+                except Exception:
+                    date = None
+
+            entries.append(
+                {
+                    "title": title_elem.text.strip() if title_elem is not None and title_elem.text else link,
+                    "link": link,
+                    "date": date,
+                    "category": category_elem.text.strip() if category_elem is not None and category_elem.text else "Research",
+                    "description": desc_elem.text if desc_elem is not None and desc_elem.text else "",
+                    "content_html": content_elem.text if content_elem is not None and content_elem.text else "",
+                }
+            )
+    except Exception as e:
+        logger.warning(f"Failed to parse existing feed entries: {str(e)}")
+    return entries
+
+
+def main(feed_name="anthropic_research", force: bool = False):
     """Main function to generate RSS feed from Anthropic's research page."""
     try:
+        feeds_dir = ensure_feeds_directory()
+        feed_path = feeds_dir / f"feed_{feed_name}.xml"
+
+        existing_entries = []
+        existing_links = set()
+        if not force:
+            existing_entries = get_existing_entries_from_feed(feed_path)
+            existing_links = {entry["link"] for entry in existing_entries}
+
         articles = []
         try:
             html_content = fetch_research_content_requests()
@@ -340,13 +512,34 @@ def main(feed_name="anthropic_research"):
             logger.warning("No articles found. Please check the HTML structure.")
             return False
 
+        new_articles = [article for article in articles if article["link"] not in existing_links]
+
+        for article in new_articles:
+            article_html = fetch_article_page(article["link"])
+            if not article_html:
+                continue
+            content_html, summary = extract_article_content(article_html, article["link"])
+            if content_html:
+                article["content_html"] = content_html
+            if summary:
+                article["description"] = summary
+
+        combined_articles = new_articles + existing_entries
+        seen_links = set()
+        deduped_articles = []
+        for article in combined_articles:
+            if article["link"] in seen_links:
+                continue
+            seen_links.add(article["link"])
+            deduped_articles.append(article)
+
         # Generate RSS feed
-        feed = generate_rss_feed(articles, feed_name)
+        feed = generate_rss_feed(deduped_articles, feed_name)
 
         # Save feed to file
         output_file = save_rss_feed(feed, feed_name)
 
-        logger.info(f"Successfully generated RSS feed with {len(articles)} articles")
+        logger.info(f"Successfully generated RSS feed with {len(deduped_articles)} articles")
         return True
 
     except Exception as e:
@@ -355,4 +548,7 @@ def main(feed_name="anthropic_research"):
 
 
 if __name__ == "__main__":
-    main()
+    parser = argparse.ArgumentParser(description="Generate Anthropic Research RSS feed.")
+    parser.add_argument("--force", action="store_true", help="Refetch all articles and rebuild the feed.")
+    args = parser.parse_args()
+    main(force=args.force)
