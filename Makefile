@@ -81,6 +81,10 @@ generate_anthropic_changelog_claude_code_feed: check-env  ## Generate RSS feed f
 generate_openai_research_feed: check-env  ## Generate RSS feed for openai/research
 	python feed_generators/openai_research_blog.py
 
+.PHONY: generate_openai_alignment_feed
+generate_openai_alignment_feed: check-env  ## Generate RSS feed for alignment.openai.com
+	python feed_generators/openai_alignment_blog.py
+
 .PHONY: generate_ollama_feed
 generate_ollama_feed: check-env  ## Generate RSS feed for ollama/blog
 	python feed_generators/ollama_blog.py
