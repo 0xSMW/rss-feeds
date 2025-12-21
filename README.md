@@ -11,6 +11,7 @@ This repository provides automated RSS feed generators for AI research blogs and
 | [OpenAI Research News](https://openai.com/news/research/)         | [feed_openai_research.xml](https://raw.githubusercontent.com/0xSMW/rss-feeds/main/feeds/feed_openai_research.xml)             |
 | [Thinking Machines Blog](https://thinkingmachines.ai/blog)       | [feed_thinkingmachines.xml](https://raw.githubusercontent.com/0xSMW/rss-feeds/main/feeds/feed_thinkingmachines.xml)            |
 | [xAI News](https://x.ai/news)                                     | [feed_xai_news.xml](https://raw.githubusercontent.com/0xSMW/rss-feeds/main/feeds/feed_xai_news.xml)                           |
+| [AI Research Feed (All)](https://github.com/0xSMW/rss-feeds)      | [feed_ai_research.xml](https://raw.githubusercontent.com/0xSMW/rss-feeds/main/feeds/feed_ai_research.xml)                     |
 
 | SV News                                                              | Feed                                                                                                                             |
 | ----------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
