@@ -134,25 +134,48 @@ def _clean_article_html(container, base_url: str) -> str:
     if container is None:
         return ""
 
-    # Remove noisy elements
+    # Remove noisy elements by tag
     for tag in container.select(
         "script, style, noscript, svg, form, iframe, "
         "input, canvas, link, button, select, textarea, nav, header, footer"
     ):
         tag.decompose()
 
+    # Remove Arena/Framer specific noise elements
+    # Remove header sections, newsletter cards, subscription prompts, author boxes
+    framer_noise_patterns = [
+        '[data-framer-name="Header"]',
+        '[data-framer-name="HeaderImage"]',
+        '[data-framer-name="NewsletterCard"]',
+        '[data-framer-name="SubscribePaywall"]',
+        '[data-framer-name="RequiresSubscription"]',
+        '[data-framer-name="MetaItem"]',
+        '[class*="newsletter"]',
+        '[class*="subscribe"]',
+        '[class*="paywall"]',
+    ]
+    for pattern in framer_noise_patterns:
+        for el in container.select(pattern):
+            el.decompose()
+
     # Remove elements with noisy class/id patterns
     noisy_patterns = [
         "share", "social", "breadcrumb", "nav", "header", "footer",
         "subscribe", "newsletter", "related", "sidebar", "menu",
-        "comment", "ad", "promo", "cta", "signup",
+        "comment", "ad", "promo", "cta", "signup", "paywall",
     ]
     noisy_re = re.compile("|".join([re.escape(p) for p in noisy_patterns]), re.IGNORECASE)
     for el in container.find_all(True):
         cid = (el.get("id") or "") + " " + " ".join(el.get("class", []))
         if cid and noisy_re.search(cid):
+            # Only remove if it doesn't contain substantial content
             if not el.find(["p", "h1", "h2", "h3", "h4", "h5", "h6", "li", "img", "pre", "blockquote", "table"]):
                 el.decompose()
+
+    # Remove empty divs with only whitespace
+    for div in container.find_all("div"):
+        if not div.get_text(strip=True) and not div.find(["img", "video", "iframe"]):
+            div.decompose()
 
     # Make links and media absolute
     for a in container.find_all("a", href=True):
@@ -167,44 +190,68 @@ def _clean_article_html(container, base_url: str) -> str:
     return str(container)
 
 
-def extract_article_content(html: str, page_url: str) -> tuple[str, str]:
-    """Extract main article content HTML and a plain-text summary."""
+def extract_article_metadata(html: str, page_url: str) -> dict:
+    """Extract article metadata from page: title, date, description, content."""
     soup = BeautifulSoup(html, "html.parser")
-
-    # Try to find the main article content
-    candidates = [
-        soup.select_one("article"),
-        soup.select_one("main article"),
-        soup.select_one("[class*='article']"),
-        soup.select_one("[class*='content']"),
-        soup.select_one("[class*='post']"),
-        soup.select_one("[class*='prose']"),
-        soup.select_one("main"),
-    ]
-    container = next((c for c in candidates if c), None)
-    if container is None:
-        paragraphs = soup.find_all("p")
-        parent_scores: dict = {}
-        for p in paragraphs:
-            parent = p.find_parent()
-            if parent:
-                parent_scores[parent] = parent_scores.get(parent, 0) + len(p.get_text(strip=True))
-        container = max(parent_scores, key=parent_scores.get) if parent_scores else soup.body
-
-    content_html = _clean_article_html(container, base_url=page_url)
-
-    # Summary: first sufficiently long paragraph
-    summary = ""
-    if container:
-        for p in container.find_all("p"):
+    result = {}
+    
+    # Extract clean title from <title> tag or og:title
+    if soup.title:
+        result["title"] = soup.title.get_text(strip=True)
+    og_title = soup.find("meta", property="og:title")
+    if og_title and og_title.get("content"):
+        result["title"] = og_title["content"].strip()
+    
+    # Extract description from og:description
+    og_desc = soup.find("meta", property="og:description")
+    if og_desc and og_desc.get("content"):
+        result["description"] = og_desc["content"].strip()
+    
+    # Extract date from article page - Arena uses framer-styles-preset-f8oqe2 for dates
+    # Look for pattern like "Nov 10, 2025" in the header area
+    date_pattern = re.compile(
+        r'(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\s+\d{1,2},\s+202\d'
+    )
+    
+    # Find all p tags with framer-text class
+    for p in soup.find_all("p"):
+        classes = p.get("class", [])
+        if classes and "framer-text" in " ".join(classes):
+            text = p.get_text(strip=True)
+            if date_pattern.match(text):
+                dt = _parse_date(text)
+                if dt:
+                    result["date"] = dt
+                    break
+    
+    # Find main content - look for the FullContent container
+    content_container = soup.select_one('[data-framer-name="FullContent"]')
+    if not content_container:
+        # Fallback: find the content div by looking for the actual article paragraphs
+        content_container = soup.select_one('[data-framer-name="Content"]')
+    
+    if not content_container:
+        # Try to find container with most paragraph content
+        candidates = [
+            soup.select_one("[class*='content']"),
+            soup.select_one("main"),
+            soup.select_one("article"),
+        ]
+        content_container = next((c for c in candidates if c), None)
+    
+    if content_container:
+        result["content_html"] = _clean_article_html(content_container, base_url=page_url)
+        
+        # Extract summary from first substantial paragraph
+        for p in content_container.find_all("p"):
             text = p.get_text(" ", strip=True)
-            if text and len(text) > 40:
-                summary = text
+            # Skip very short text and metadata-like text
+            if text and len(text) > 80 and not text.startswith(("by", "Subscribe", "Get Arena")):
+                if "description" not in result:
+                    result["description"] = text[:300] + "..." if len(text) > 300 else text
                 break
-    if not summary:
-        summary = soup.title.get_text(strip=True) if soup.title else ""
-
-    return content_html, summary
+    
+    return result
 
 
 def _parse_date(text: str) -> datetime | None:
@@ -401,17 +448,32 @@ def main(feed_name: str = "arenamag") -> bool:
         if not articles:
             logger.warning("No Arena Magazine articles parsed. Selectors may need updating.")
         
-        # Fetch full content for each article
+        # Fetch full content and metadata for each article from the article page
         logger.info(f"Fetching full content for {len(articles)} articles...")
         for article in articles:
             article_html = fetch_article_page(article["link"])
             if article_html:
-                content_html, summary = extract_article_content(article_html, article["link"])
-                article["content_html"] = content_html
-                if summary and summary.strip() and len(summary) > len(article.get("description", "")):
-                    article["description"] = summary
+                metadata = extract_article_metadata(article_html, article["link"])
+                
+                # Update article with extracted metadata
+                if metadata.get("title"):
+                    article["title"] = metadata["title"]
+                if metadata.get("date"):
+                    article["date"] = metadata["date"]
+                if metadata.get("content_html"):
+                    article["content_html"] = metadata["content_html"]
+                if metadata.get("description"):
+                    article["description"] = metadata["description"]
             else:
                 logger.warning(f"Could not fetch content for {article['link']}")
+        
+        # Re-sort by date now that we have dates from article pages
+        def sort_key(a):
+            if a.get("date"):
+                return (0, a["date"])
+            return (1, datetime.min.replace(tzinfo=pytz.UTC))
+        
+        articles.sort(key=sort_key, reverse=True)
         
         feed = generate_rss_feed(articles, feed_name)
         save_rss_feed(feed, feed_name)
