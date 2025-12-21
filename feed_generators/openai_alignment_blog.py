@@ -75,7 +75,8 @@ def _clean_article_html(container, base_url: str) -> str:
     for img in container.find_all("img", src=True):
         src = img["src"]
         if not src.startswith(("http://", "https://", "data:")):
-            img["src"] = urljoin(base_url, src)
+            # Handle relative paths like ./figures/image.png
+            img["src"] = urljoin(base_url + "/", src.lstrip("./"))
 
     # Strip all attributes except essential ones (href, src, alt)
     allowed_attrs = {
@@ -93,26 +94,27 @@ def _clean_article_html(container, base_url: str) -> str:
         else:
             el.attrs = {}
 
-    # Extract only content elements, removing wrapper divs
-    # Find all top-level content elements (direct children or not nested in other content elements)
+    # Extract content elements in order, including images from wrapper divs
+    # First, handle plot-group divs to extract images and their captions
+    plot_groups = container.find_all("div", class_=lambda c: c and "plot-group" in c if c else False)
+    for plot_group in plot_groups:
+        img = plot_group.find("img")
+        if img:
+            # Replace the plot-group div with just the image
+            plot_group.replace_with(img)
+    
+    # Now extract all content elements in document order
     output_parts = []
-    content_tags = ["h1", "h2", "h3", "h4", "h5", "h6", "p", "ul", "ol", "blockquote", "pre", "img", "hr"]
+    content_tags = ["h1", "h2", "h3", "h4", "h5", "h6", "p", "ul", "ol", "blockquote", "pre", "hr", "img"]
     
-    # Get direct children first
-    for child in container.children:
-        if hasattr(child, 'name') and child.name in content_tags:
-            output_parts.append(str(child))
-    
-    # If no direct children found, find all top-level content elements
-    if not output_parts:
-        for el in container.find_all(content_tags):
-            # Only include if parent is container or a non-content wrapper
-            parent = el.parent
-            if parent == container or (parent.name == "div" and parent == container):
-                output_parts.append(str(el))
-            elif parent.name not in content_tags:
-                # Parent is a wrapper div, include this element
-                output_parts.append(str(el))
+    # Get all content elements, preserving order
+    for el in container.find_all(content_tags):
+        # Skip if nested inside another content element (will be included with parent)
+        parent = el.parent
+        if parent and parent.name in content_tags:
+            continue
+        # Include the element
+        output_parts.append(str(el))
     
     return "\n".join(output_parts)
 
