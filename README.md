@@ -1,6 +1,4 @@
-# RSS Feed Generator
-
-This repository provides automated RSS feed generators for AI research blogs and technology publications that don't offer native RSS feeds. These generators fetch the full article content from each post, creating RSS feeds with complete text, images, and formatting. The generators extract complete article text, clean HTML by removing ads and navigation while preserving content, run automatically via GitHub Actions to keep feeds updated, use respectful scraping practices with proper delays and user agents, and generate standards-compliant RSS feeds. Useful for following AI research across multiple sites through a single RSS reader.
+# AI RSS Feeds
 
 | AI Blog                                                              | Feed                                                                                                                             |
 | ----------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
@@ -17,4 +15,12 @@ This repository provides automated RSS feed generators for AI research blogs and
 | ----------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
 | [Arena Magazine](https://arenamag.com)                            | [feed_arenamag.xml](https://raw.githubusercontent.com/0xSMW/rss-feeds/main/feeds/feed_arenamag.xml)                            |
 
-Forked from [https://github.com/Olshansk/rss-feeds/](https://github.com/Olshansk/rss-feeds/)
+---
+
+Automated RSS feeds for AI research blogs that don't provide them natively.
+
+Each feed includes the full article content (not just titles), so you can read everything directly in your RSS reader. The feeds update automatically via GitHub Actions and include proper formatting, images, and links.
+
+Perfect for staying up-to-date with AI research without having to check multiple sites manually.
+
+Idea forked from [https://github.com/Olshansk/rss-feeds/](https://github.com/Olshansk/rss-feeds/)
