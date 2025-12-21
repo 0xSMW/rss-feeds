@@ -318,76 +318,76 @@ def parse_xai_news_html(html: str):
 
 
 def _clean_article_html(container, base_url: str) -> str:
-    """Clean article container and absolutize links/media.
-
-    - Removes script/style/noscript and common non-content elements
-    - Converts relative href/src to absolute using base_url
-    - Preserves headings, paragraphs, lists, images, blockquotes, code, tables
-    """
+    """Clean article container and keep only <p>, <a>, and <img> tags."""
     if container is None:
         return ""
 
-    # Remove noisy elements by tag
-    for tag in container.select("script, style, noscript, svg use[xmlns], form, iframe[aria-hidden='true']"):
-        tag.decompose()
+    related_markers = (
+        "related articles",
+        "related posts",
+        "more articles",
+        "you might also like",
+    )
+    share_domains = (
+        "linkedin.com/sharing",
+        "facebook.com/sharer",
+        "twitter.com/intent",
+        "x.com/intent",
+        "reddit.com/submit",
+    )
 
-    # Remove likely-non-content by class/id hints
-    noisy_patterns = [
-        "share",
-        "social",
-        "breadcrumb",
-        "nav",
-        "header",
-        "footer",
-        "subscribe",
-        "newsletter",
-        "related",
-        "author",
-        "meta",
-        "byline",
-        "tags",
-        "comment",
-        "toc",
-        "table-of-contents",
-        "promo",
-        "cta",
-    ]
-    noisy_re = re.compile("|".join([re.escape(p) for p in noisy_patterns]), re.IGNORECASE)
-    for el in container.find_all(True):
-        cid = (el.get("id") or "") + " " + " ".join(el.get("class", []))
-        if cid and noisy_re.search(cid):
-            if not el.find([
-                "p",
-                "h1",
-                "h2",
-                "h3",
-                "h4",
-                "h5",
-                "h6",
-                "li",
-                "img",
-                "pre",
-                "blockquote",
-                "table",
-            ]):
-                el.decompose()
+    for el in container.find_all(["h2", "h3", "h4", "p", "div", "section", "aside"]):
+        text = el.get_text(" ", strip=True).lower()
+        if any(marker in text for marker in related_markers):
+            parent = el.find_parent(["section", "aside", "div"]) or el
+            parent.decompose()
 
-    # Make links and media absolute
-    for a in container.find_all("a", href=True):
-        href = a["href"]
-        if href.startswith(("/", "?")):
-            a["href"] = urljoin(base_url, href)
-    for img in container.find_all("img", src=True):
-        src = img["src"]
-        if src.startswith(("/", "?")):
-            img["src"] = urljoin(base_url, src)
-    for source in container.find_all("source"):
-        for attr in ["src", "srcset"]:
-            val = source.get(attr)
-            if val and (val.startswith("/") or val.startswith("?")):
-                source[attr] = urljoin(base_url, val)
+    for tag in list(container.find_all(True)):
+        if tag.parent is None:
+            continue
+        if tag.name == "a":
+            href = tag.get("href", "")
+            href_l = href.lower()
+            if any(domain in href_l for domain in share_domains):
+                tag.decompose()
+                continue
+            if not href:
+                tag.decompose()
+                continue
+            if not href.startswith(("http://", "https://", "mailto:", "#")):
+                tag["href"] = urljoin(base_url, href)
+            if not tag.get_text(strip=True) and not tag.find("img"):
+                tag.decompose()
+                continue
+            tag.attrs = {"href": tag["href"]}
+            continue
+        if tag.name == "img":
+            if "src" in tag.attrs:
+                src = tag["src"]
+                if not src.startswith(("http://", "https://", "data:")):
+                    tag["src"] = urljoin(base_url, src)
+            else:
+                tag.decompose()
+                continue
+            tag.attrs = {"src": tag["src"]}
+            continue
 
-    return str(container)
+        if tag.name == "p":
+            if tag.find("img"):
+                for img in tag.find_all("img"):
+                    tag.insert_after(img)
+            tag.attrs = {}
+            continue
+
+        tag.unwrap()
+
+    parts: list[str] = []
+    for tag in container.find_all(["p", "a", "img"], recursive=True):
+        if tag.name == "p" and not tag.get_text(strip=True):
+            continue
+        parts.append(str(tag))
+
+    return "\n".join(parts)
 
 
 def extract_article_content(html: str, page_url: str) -> tuple[str, str]:
@@ -622,6 +622,7 @@ def main():
     parser = argparse.ArgumentParser(description="Generate xAI News RSS feed with full content and incremental updates")
     parser.add_argument("--html-file", dest="html_file", help="Path to local HTML file to parse instead of fetching", default=None)
     parser.add_argument("--feed-name", dest="feed_name", help="Feed name suffix (default: xai_news)", default="xai_news")
+    parser.add_argument("--force", action="store_true", help="Refetch all articles and rebuild the feed.")
     args = parser.parse_args()
 
     try:
@@ -629,8 +630,12 @@ def main():
         existing_feed_path = feeds_dir / f"feed_{args.feed_name}.xml"
 
         # Load existing items to avoid re-fetching and to append new ones only
-        existing_items, cache = load_existing_feed(existing_feed_path)
-        existing_links = {it["link"] for it in existing_items}
+        if args.force:
+            existing_items, cache = [], {}
+            existing_links = set()
+        else:
+            existing_items, cache = load_existing_feed(existing_feed_path)
+            existing_links = {it["link"] for it in existing_items}
 
         # Fetch or read index HTML
         if args.html_file:
