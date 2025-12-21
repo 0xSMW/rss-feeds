@@ -274,7 +274,9 @@ def extract_article_metadata(html: str, page_url: str) -> dict:
         content_container = next((c for c in candidates if c), None)
     
     if content_container:
-        result["content_html"] = _clean_article_html(content_container, base_url=page_url)
+        content_html = _clean_article_html(content_container, base_url=page_url)
+        # Normalize encoding in content HTML
+        result["content_html"] = normalize_text(content_html)
         
         # Extract summary from first substantial paragraph
         for p in content_container.find_all("p"):
@@ -282,7 +284,8 @@ def extract_article_metadata(html: str, page_url: str) -> dict:
             # Skip very short text and metadata-like text
             if text and len(text) > 80 and not text.startswith(("by", "Subscribe", "Get Arena")):
                 if "description" not in result:
-                    result["description"] = text[:300] + "..." if len(text) > 300 else text
+                    summary = text[:300] + "..." if len(text) > 300 else text
+                    result["description"] = normalize_text(summary)
                 break
     
     return result
