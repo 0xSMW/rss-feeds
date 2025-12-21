@@ -1,7 +1,6 @@
 import xml.etree.ElementTree as ET
-from bs4 import BeautifulSoup
-from datetime import datetime
-import pytz
+from datetime import datetime, timezone
+from email.utils import parsedate_to_datetime
 from feedgen.feed import FeedGenerator
 import logging
 from pathlib import Path
@@ -23,87 +22,66 @@ def ensure_feeds_directory():
     return feeds_dir
 
 
+def _parse_pub_date(date_str: str | None) -> datetime | None:
+    if not date_str:
+        return None
+    try:
+        dt = parsedate_to_datetime(date_str)
+    except (TypeError, ValueError, IndexError):
+        return None
+    if dt is None:
+        return None
+    if dt.tzinfo is None:
+        dt = dt.replace(tzinfo=timezone.utc)
+    return dt
+
+
 def parse_feed_xml(feed_path: Path) -> list[dict]:
     """Parse an RSS feed XML file and extract all items."""
     try:
-        with open(feed_path, "r", encoding="utf-8") as f:
-            content = f.read()
-        
-        soup = BeautifulSoup(content, "xml")
+        tree = ET.parse(feed_path)
+        root = tree.getroot()
+
+        channel = root.find("channel")
+        if channel is None:
+            logger.warning(f"No channel found in {feed_path.name}")
+            return []
+
         items = []
-        
-        for item in soup.find_all("item"):
-            item_data = {}
-            
-            # Extract title
-            title_elem = item.find("title")
-            if title_elem:
-                item_data["title"] = title_elem.get_text(strip=True)
-            else:
+        namespaces = {"content": "http://purl.org/rss/1.0/modules/content/"}
+
+        for item in channel.findall("item"):
+            title = (item.findtext("title") or "").strip()
+            link = (item.findtext("link") or "").strip()
+            if not title or not link:
                 continue
-            
-            # Extract link
-            link_elem = item.find("link")
-            if link_elem:
-                item_data["link"] = link_elem.get_text(strip=True)
-            else:
-                continue
-            
-            # Extract description
-            desc_elem = item.find("description")
-            if desc_elem:
-                item_data["description"] = desc_elem.get_text(strip=True)
-            else:
-                item_data["description"] = item_data["title"]
-            
-            # Extract content:encoded
-            content_elem = item.find("content:encoded")
-            if content_elem:
-                item_data["content_html"] = content_elem.get_text()
-            
-            # Extract date
-            pub_date_elem = item.find("pubDate")
-            if pub_date_elem:
-                date_str = pub_date_elem.get_text(strip=True)
-                try:
-                    # Parse RFC 822 date format
-                    dt = datetime.strptime(date_str, "%a, %d %b %Y %H:%M:%S %z")
-                    item_data["date"] = dt
-                except ValueError:
-                    try:
-                        # Try without timezone
-                        dt = datetime.strptime(date_str, "%a, %d %b %Y %H:%M:%S %Z")
-                        dt = dt.replace(tzinfo=pytz.UTC)
-                        item_data["date"] = dt
-                    except ValueError:
-                        item_data["date"] = None
-            else:
-                item_data["date"] = None
-            
-            # Extract category
-            category_elem = item.find("category")
-            if category_elem:
-                item_data["category"] = category_elem.get_text(strip=True)
-            else:
-                item_data["category"] = "Research"
-            
-            # Extract guid/id
-            guid_elem = item.find("guid")
-            if guid_elem:
-                item_data["guid"] = guid_elem.get_text(strip=True)
-            else:
-                item_data["guid"] = item_data["link"]
-            
-            # Extract author if present
-            author_elem = item.find("author")
-            if author_elem:
-                item_data["author"] = author_elem.get_text(strip=True)
-            
+
+            description = (item.findtext("description") or "").strip() or title
+            content_html = item.findtext("content:encoded", default=None, namespaces=namespaces)
+
+            date = _parse_pub_date((item.findtext("pubDate") or "").strip())
+            category = (item.findtext("category") or "").strip() or "Research"
+            guid = (item.findtext("guid") or "").strip() or link
+            author = (item.findtext("author") or "").strip()
+
+            item_data = {
+                "title": title,
+                "link": link,
+                "description": description,
+                "date": date,
+                "category": category,
+                "guid": guid,
+            }
+            if content_html:
+                item_data["content_html"] = content_html
+            if author:
+                item_data["author"] = author
+
             items.append(item_data)
-        
+
         logger.info(f"Parsed {len(items)} items from {feed_path.name}")
         return items
-    
+
     except Exception as e:
         logger.error(f"Error parsing feed {feed_path}: {e}")
         return []
@@ -118,7 +96,7 @@ def collect_all_items(exclude_feeds: list[str] = None) -> list[dict]:
     all_items = []
     
     # Find all feed XML files
-    feed_files = list(feeds_dir.glob("feed_*.xml"))
+    feed_files = sorted(feeds_dir.glob("feed_*.xml"))
     
     for feed_file in feed_files:
         feed_name = feed_file.stem.replace("feed_", "")
@@ -203,8 +181,8 @@ def save_rss_feed(feed_generator, feed_name: str = "ai_research") -> Path:
 def main(feed_name: str = "ai_research") -> bool:
     """Main function to generate combined AI Research Feed."""
     try:
-        # Exclude Arena Magazine feeds
-        exclude_feeds = ["arenamag"]
+        # Exclude Arena Magazine and this meta feed
+        exclude_feeds = ["arenamag", feed_name]
         
         items = collect_all_items(exclude_feeds=exclude_feeds)
         if not items:
@@ -222,4 +200,3 @@ def main(feed_name: str = "ai_research") -> bool:
 
 if __name__ == "__main__":
     main()
-
