@@ -4,6 +4,7 @@
 | ----------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
 | [Anthropic News](https://www.anthropic.com/news)                  | [feed_anthropic_news.xml](https://raw.githubusercontent.com/0xSMW/rss-feeds/main/feeds/feed_anthropic_news.xml)               |
 | [Anthropic Research](https://www.anthropic.com/research)          | [feed_anthropic_research.xml](https://raw.githubusercontent.com/0xSMW/rss-feeds/main/feeds/feed_anthropic_research.xml)       |
+| [Anthropic Red Teaming](https://red.anthropic.com)                | [feed_anthropic_red.xml](https://raw.githubusercontent.com/0xSMW/rss-feeds/main/feeds/feed_anthropic_red.xml)                 |
 | [Mistral AI News](https://mistral.ai/news)                        | [feed_mistral_news.xml](https://raw.githubusercontent.com/0xSMW/rss-feeds/main/feeds/feed_mistral_news.xml)                   |
 | [OpenAI Alignment Research](https://alignment.openai.com)         | [feed_openai_alignment.xml](https://raw.githubusercontent.com/0xSMW/rss-feeds/main/feeds/feed_openai_alignment.xml)         |
 | [OpenAI Research News](https://openai.com/news/research/)         | [feed_openai_research.xml](https://raw.githubusercontent.com/0xSMW/rss-feeds/main/feeds/feed_openai_research.xml)             |

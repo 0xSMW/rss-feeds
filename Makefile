@@ -65,17 +65,21 @@ generate_all_feeds: check-env  ## Generate all RSS feeds
 generate_anthropic_news_feed: check-env  ## Generate RSS feed for anthropic/news
 	python feed_generators/anthropic_news_blog.py
 
-.PHONY: generate_anthropic_engineering_feed
-generate_anthropic_engineering_feed: check-env  ## Generate RSS feed for anthropic/engineering
-	python feed_generators/anthropic_eng_blog.py
+# .PHONY: generate_anthropic_engineering_feed
+# generate_anthropic_engineering_feed: check-env  ## Generate RSS feed for anthropic/engineering
+# 	python feed_generators/anthropic_eng_blog.py
 
 .PHONY: generate_anthropic_research_feed
 generate_anthropic_research_feed: check-env  ## Generate RSS feed for anthropic/research
 	python feed_generators/anthropic_research_blog.py
 
-.PHONY: generate_anthropic_changelog_claude_code_feed
-generate_anthropic_changelog_claude_code_feed: check-env  ## Generate RSS feed for Anthropic Claude Code changelog
-	python feed_generators/anthropic_changelog_claude_code.py
+.PHONY: generate_anthropic_red_feed
+generate_anthropic_red_feed: check-env  ## Generate RSS feed for red.anthropic.com
+	python feed_generators/anthropic_red_blog.py
+
+# .PHONY: generate_anthropic_changelog_claude_code_feed
+# generate_anthropic_changelog_claude_code_feed: check-env  ## Generate RSS feed for Anthropic Claude Code changelog
+# 	python feed_generators/anthropic_changelog_claude_code.py
 
 .PHONY: generate_openai_research_feed
 generate_openai_research_feed: check-env  ## Generate RSS feed for openai/research
@@ -85,13 +89,13 @@ generate_openai_research_feed: check-env  ## Generate RSS feed for openai/resear
 generate_openai_alignment_feed: check-env  ## Generate RSS feed for alignment.openai.com
 	python feed_generators/openai_alignment_blog.py
 
-.PHONY: generate_ollama_feed
-generate_ollama_feed: check-env  ## Generate RSS feed for ollama/blog
-	python feed_generators/ollama_blog.py
+# .PHONY: generate_ollama_feed
+# generate_ollama_feed: check-env  ## Generate RSS feed for ollama/blog
+# 	python feed_generators/ollama_blog.py
 
-.PHONY: generate_paulgraham_feed
-generate_paulgraham_feed: check-env  ## Generate RSS feed for paulgraham/articles
-	python feed_generators/paulgraham_blog.py
+# .PHONY: generate_paulgraham_feed
+# generate_paulgraham_feed: check-env  ## Generate RSS feed for paulgraham/articles
+# 	python feed_generators/paulgraham_blog.py
 
 .PHONY: generate_thinkingmachines_feed
 generate_thinkingmachines_feed: check-env  ## Generate RSS feed for thinkingmachines/blog
