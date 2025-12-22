@@ -37,15 +37,15 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y python3-setuptools
 
-      - name: Install Chrome for Selenium
+      - name: Install Chromium and Chromedriver for Selenium
         run: |
-          sudo apt-get install -y wget gnupg
-          wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo gpg --dearmor -o /usr/share/keyrings/google-chrome-keyring.gpg
-          echo "deb [arch=amd64 signed-by=/usr/share/keyrings/google-chrome-keyring.gpg] http://dl.google.com/linux/chrome/deb/ stable main" | sudo tee /etc/apt/sources.list.d/google-chrome.list
           sudo apt-get update
-          sudo apt-get install -y google-chrome-stable
+          sudo apt-get install -y chromium chromium-driver
 
       - name: Install Python dependencies and run feed generators
+        env:
+          CHROME_BINARY: /usr/bin/chromium
+          CHROMEDRIVER_PATH: /usr/bin/chromedriver
         run: |
           set -e  # Fail the step on any error
           uv venv
