@@ -1,5 +1,6 @@
 import argparse
 import logging
+import time
 import os
 import re
 import xml.etree.ElementTree as ET
@@ -264,13 +265,31 @@ def fetch_articles_selenium(urls: list[str]) -> dict[str, str]:
         from selenium.webdriver.support import expected_conditions as EC
         from selenium.webdriver.support.ui import WebDriverWait
 
-        for url in urls:
+        total = len(urls)
+        start_time = time.perf_counter()
+        for idx, url in enumerate(urls, start=1):
             try:
+                logger.info(f"Selenium fetch {idx}/{total}: {url}")
                 driver.get(url)
-                WebDriverWait(driver, 15).until(
+                WebDriverWait(driver, 20).until(
                     EC.presence_of_element_located((By.CSS_SELECTOR, "section[class*='article_postBody']"))
                 )
-                results[url] = driver.page_source
+                try:
+                    WebDriverWait(driver, 20).until(
+                        lambda d: d.execute_script(
+                            "const el=document.querySelector(\"section[class*='article_postBody']\");"
+                            "return el ? el.innerText.length : 0;"
+                        )
+                        > 1500
+                    )
+                except Exception:
+                    pass
+                page_source = driver.page_source
+                results[url] = page_source
+                elapsed = time.perf_counter() - start_time
+                logger.info(
+                    f"Selenium fetched {idx}/{total} in {elapsed:.1f}s (html {len(page_source)} chars)"
+                )
             except Exception as e:
                 logger.warning(f"Selenium fetch failed for {url}: {e}")
     finally:
