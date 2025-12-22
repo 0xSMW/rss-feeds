@@ -101,8 +101,8 @@ def collect_all_items(exclude_feeds: list[str] = None) -> list[dict]:
     for feed_file in feed_files:
         feed_name = feed_file.stem.replace("feed_", "")
         
-        # Skip excluded feeds
-        if feed_name in exclude_feeds or any(excluded in feed_name for excluded in exclude_feeds):
+        # Skip excluded feeds by exact name match
+        if feed_name in exclude_feeds:
             logger.info(f"Skipping excluded feed: {feed_file.name}")
             continue
         
