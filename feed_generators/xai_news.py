@@ -539,38 +539,17 @@ def fetch_contents_parallel(articles: list[dict], cached: dict, max_workers: int
             except Exception as e:
                 logger.debug(f"Parallel fetch parse failed for {art['link']}: {e}")
 
-    # Fallback using Selenium IN PARALLEL for any still missing content
+    # Fallback using Selenium sequentially for any still missing content
     remaining = [a for a in articles if not a.get("content_html")]
     if remaining:
-        selenium_workers = max(1, int(os.getenv("XAI_SELENIUM_WORKERS", "2")))
-        logger.info(f"Falling back to Selenium for {len(remaining)} items with {selenium_workers} workers")
-
-        def _work(art: dict):
+        logger.info(f"Falling back to Selenium for {len(remaining)} items (sequential)")
+        for art in remaining:
             url = art["link"]
+            logger.info(f"Fetching article (selenium): {url}")
             html = fetch_article_html_selenium(url)
             if not html:
-                return (url, None, None)
+                continue
             content_html, summary = extract_article_content(html, url)
-            return (url, content_html, summary)
-
-        results = []
-        with ThreadPoolExecutor(max_workers=selenium_workers) as exe:
-            fut_map = {exe.submit(_work, a): a for a in remaining}
-            for fut in as_completed(fut_map):
-                try:
-                    results.append(fut.result())
-                except Exception as e:
-                    # Individual worker failure should not crash the whole run
-                    bad = fut_map[fut]
-                    logger.warning(f"Selenium worker failed for {bad['link']}: {e}")
-
-        by_link = {a["link"]: a for a in articles}
-        for url, content_html, summary in results:
-            if not url:
-                continue
-            art = by_link.get(url)
-            if not art:
-                continue
             if content_html:
                 art["content_html"] = content_html
             if summary and summary.strip():
@@ -629,11 +608,15 @@ def main():
         feeds_dir = ensure_feeds_directory()
         existing_feed_path = feeds_dir / f"feed_{args.feed_name}.xml"
 
+        logger.info("Starting xAI News feed generation")
+
         # Load existing items to avoid re-fetching and to append new ones only
         if args.force:
+            logger.info("Force mode enabled: rebuilding feed from scratch")
             existing_items, cache = [], {}
             existing_links = set()
         else:
+            logger.info("Loading existing feed cache")
             existing_items, cache = load_existing_feed(existing_feed_path)
             existing_links = {it["link"] for it in existing_items}
 
@@ -643,15 +626,14 @@ def main():
             with open(args.html_file, "r", encoding="utf-8") as f:
                 html = f.read()
         else:
+            logger.info("Fetching news index HTML")
             html = fetch_news_content(NEWS_URL)
 
         # Parse index for latest articles
+        logger.info("Parsing news index HTML")
         parsed = parse_xai_news_html(html)
         new_articles = [a for a in parsed if a["link"] not in existing_links]
         logger.info(f"Found {len(parsed)} parsed items; {len(new_articles)} new since last feed")
-
-        # Fetch full content only for new items (parallel requests; Selenium fallback)
-        fetch_contents_parallel(new_articles, cached=cache, max_workers=int(os.getenv("XAI_FEED_WORKERS", "8")))
 
         # Merge: keep existing items first (already sorted in prior feed order), then add new ones at top by date
         try:
@@ -660,9 +642,15 @@ def main():
             pass
         merged = new_articles + existing_items
 
+        # Fetch full content for any items still missing it (including older cached items)
+        logger.info(f"Fetching full article content for {len(merged)} total items")
+        fetch_contents_parallel(merged, cached=cache, max_workers=int(os.getenv("XAI_FEED_WORKERS", "8")))
+
         # Optionally limit feed length to a reasonable number (keep all by default)
+        logger.info("Generating RSS feed output")
         feed = generate_rss_feed(merged, feed_name=args.feed_name)
         save_rss_feed(feed, feed_name=args.feed_name)
+        logger.info("xAI News feed generation complete")
     except Exception as e:
         logger.error(f"Failed to generate xAI News feed: {e}")
 
