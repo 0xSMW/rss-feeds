@@ -1,20 +1,24 @@
 import argparse
+import logging
+import os
+import xml.etree.ElementTree as ET
+from datetime import datetime
+from email.utils import parsedate_to_datetime
+from pathlib import Path
+from urllib.parse import urljoin
+
+import pytz
 import requests
 import undetected_chromedriver as uc
 from bs4 import BeautifulSoup
-from concurrent.futures import ThreadPoolExecutor, as_completed
-from datetime import datetime
-from email.utils import parsedate_to_datetime
-import pytz
 from feedgen.feed import FeedGenerator
-import logging
-from pathlib import Path
-from urllib.parse import urljoin
-import xml.etree.ElementTree as ET
 
 # Set up logging
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
 logger = logging.getLogger(__name__)
+
+def in_ci() -> bool:
+    return os.environ.get("CI", "").lower() == "true"
 
 def setup_selenium_driver():
     """Set up Selenium WebDriver with undetected-chromedriver."""
@@ -23,7 +27,14 @@ def setup_selenium_driver():
     options.add_argument("--window-size=1920,1080")
     options.add_argument("--disable-blink-features=AutomationControlled")
     options.add_argument("--user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36")
-    return uc.Chrome(options=options)
+    driver_path = os.environ.get("CHROMEDRIVER_PATH")
+    browser_path = os.environ.get("CHROME_BINARY")
+    return uc.Chrome(
+        options=options,
+        driver_executable_path=driver_path,
+        browser_executable_path=browser_path,
+        user_multi_procs=True,
+    )
 
 def build_requests_session() -> requests.Session:
     """Build a requests session with headers that mimic a real browser."""
@@ -106,8 +117,14 @@ def fetch_articles_selenium(urls: list[str]) -> dict[str, str]:
         for url in urls:
             try:
                 driver.get(url)
-                html = driver.page_source
-                results[url] = html
+                try:
+                    from selenium.webdriver.support.ui import WebDriverWait
+                    WebDriverWait(driver, 20).until(
+                        lambda d: d.execute_script("return document.readyState") == "complete"
+                    )
+                except Exception:
+                    logger.warning(f"Timed out waiting for page load: {url}")
+                results[url] = driver.page_source
             except Exception as e:
                 logger.warning(f"Selenium fetch failed for {url}: {e}")
     finally:
@@ -122,6 +139,13 @@ def fetch_article_selenium(url: str) -> str | None:
     try:
         driver = setup_selenium_driver()
         driver.get(url)
+        try:
+            from selenium.webdriver.support.ui import WebDriverWait
+            WebDriverWait(driver, 20).until(
+                lambda d: d.execute_script("return document.readyState") == "complete"
+            )
+        except Exception:
+            logger.warning(f"Timed out waiting for page load: {url}")
         return driver.page_source
     except Exception as e:
         logger.warning(f"Selenium fetch failed for {url}: {e}")
@@ -129,25 +153,6 @@ def fetch_article_selenium(url: str) -> str | None:
     finally:
         if driver:
             driver.quit()
-
-
-def fetch_articles_selenium_parallel(urls: list[str], max_workers: int = 5) -> dict[str, str]:
-    """Fetch article pages in parallel Selenium sessions."""
-    results: dict[str, str] = {}
-    if not urls:
-        return results
-    with ThreadPoolExecutor(max_workers=max_workers) as executor:
-        future_to_url = {executor.submit(fetch_article_selenium, url): url for url in urls}
-        for future in as_completed(future_to_url):
-            url = future_to_url[future]
-            try:
-                html = future.result()
-            except Exception as e:
-                logger.warning(f"Selenium fetch failed for {url}: {e}")
-                continue
-            if html:
-                results[url] = html
-    return results
 
 
 def _clean_article_html(container, base_url: str) -> str:
@@ -328,7 +333,7 @@ def generate_rss_feed(articles, feed_name="openai_research"):
     fg.link(href="https://openai.com/news/research")
     fg.language("en")
 
-    for article in articles:
+    for article in reversed(articles):
         fe = fg.add_entry()
         fe.title(article["title"])
         fe.link(href=article["link"])
@@ -411,16 +416,43 @@ def main(limit: int = 500, test_first: bool = False, force: bool = False) -> boo
             existing_entries = get_existing_entries_from_feed(feed_path)
             existing_links = {entry["link"] for entry in existing_entries}
 
-        html_content = fetch_news_content_selenium(url)
-        articles = parse_openai_news_html(html_content)
+        session = build_requests_session()
+        html_content = ""
+        requests_blocked = False
+        try:
+            html_content = fetch_news_content_requests(url, session=session)
+        except requests.HTTPError as e:
+            status_code = getattr(e.response, "status_code", None)
+            if status_code == 403:
+                requests_blocked = True
+                logger.warning("Requests blocked (403). Switching to Selenium for this run.")
+            else:
+                logger.warning(f"Requests listing fetch failed ({e})")
+        except Exception as e:
+            logger.warning(f"Requests listing fetch failed ({e})")
+
+        if (requests_blocked or not html_content) and not in_ci():
+            html_content = fetch_news_content_selenium(url)
+
+        articles = parse_openai_news_html(html_content) if html_content else []
+        if not articles and not in_ci():
+            html_content = fetch_news_content_selenium(url)
+            articles = parse_openai_news_html(html_content)
 
         if not articles:
             logger.warning("No articles were parsed. Check your selectors.")
+            if existing_entries:
+                logger.warning("Falling back to existing feed entries.")
+                feed = generate_rss_feed(existing_entries)
+                save_rss_feed(feed)
+                return True
             return False
 
         if test_first:
             article = articles[0]
-            article_html = fetch_article_selenium(article["link"])
+            article_html = fetch_article_page_requests(article["link"], session=session)
+            if not article_html and not in_ci():
+                article_html = fetch_article_selenium(article["link"])
             if not article_html:
                 logger.error("Failed to fetch first article content.")
                 return False
@@ -433,17 +465,31 @@ def main(limit: int = 500, test_first: bool = False, force: bool = False) -> boo
             return True
 
         new_articles = [article for article in articles if article["link"] not in existing_links]
-        urls = [article["link"] for article in new_articles]
-        selenium_html = fetch_articles_selenium_parallel(urls, max_workers=5)
+        needs_selenium = []
         for article in new_articles:
-            html = selenium_html.get(article["link"])
+            html = None
+            if not requests_blocked:
+                html = fetch_article_page_requests(article["link"], session=session)
             if not html:
+                needs_selenium.append(article["link"])
                 continue
             content_html, summary = extract_article_content(html, article["link"])
             if content_html:
                 article["content_html"] = content_html
             if summary:
                 article["description"] = summary
+
+        if needs_selenium and not in_ci():
+            selenium_html = fetch_articles_selenium(needs_selenium)
+            for article in new_articles:
+                html = selenium_html.get(article["link"])
+                if not html:
+                    continue
+                content_html, summary = extract_article_content(html, article["link"])
+                if content_html:
+                    article["content_html"] = content_html
+                if summary:
+                    article["description"] = summary
 
         combined_articles = new_articles + existing_entries
         seen_links = set()
@@ -454,6 +500,8 @@ def main(limit: int = 500, test_first: bool = False, force: bool = False) -> boo
             seen_links.add(article["link"])
             deduped_articles.append(article)
 
+        min_dt = datetime.min.replace(tzinfo=pytz.UTC)
+        deduped_articles.sort(key=lambda item: item.get("date") or min_dt, reverse=True)
         feed = generate_rss_feed(deduped_articles)
         save_rss_feed(feed)
     except Exception as e:
