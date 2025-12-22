@@ -1,5 +1,7 @@
 import argparse
 import logging
+import os
+import re
 import xml.etree.ElementTree as ET
 from datetime import datetime
 from email.utils import parsedate_to_datetime
@@ -47,6 +49,10 @@ def build_requests_session() -> requests.Session:
     return session
 
 
+def in_ci() -> bool:
+    return os.environ.get("CI", "").lower() == "true"
+
+
 def setup_selenium_driver():
     options = uc.ChromeOptions()
     options.add_argument("--headless=new")
@@ -56,7 +62,14 @@ def setup_selenium_driver():
         "--user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
         "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36"
     )
-    return uc.Chrome(options=options)
+    driver_path = os.environ.get("CHROMEDRIVER_PATH")
+    browser_path = os.environ.get("CHROME_BINARY")
+    return uc.Chrome(
+        options=options,
+        driver_executable_path=driver_path,
+        browser_executable_path=browser_path,
+        user_multi_procs=True,
+    )
 
 
 def fetch_page_requests(url: str, session: requests.Session | None = None) -> str:
@@ -109,6 +122,8 @@ def fetch_page(url: str, session: requests.Session | None = None) -> str:
     try:
         return fetch_page_requests(url, session=session)
     except Exception as e:
+        if in_ci():
+            raise
         logger.warning(f"Requests fetch failed ({e}); falling back to Selenium...")
         return fetch_page_selenium(url)
 
@@ -141,6 +156,78 @@ def parse_listing_links(html: str) -> list[str]:
         seen.add(link)
         unique_links.append(link)
     return unique_links
+
+
+def _decode_payload_text(value: str) -> str:
+    if not value:
+        return value
+    try:
+        return value.encode("utf-8").decode("unicode_escape")
+    except Exception:
+        return value
+
+
+def parse_listing_payload(html: str, category: str) -> list[dict]:
+    items: list[dict] = []
+    seen_links = set()
+    needle = "\\\"canonical_url\\\":\\\"https://piratewires.substack.com/p/"
+    title_key = "\\\"title\\\":\\\""
+    subtitle_key = "\\\"subtitle\\\":\\\""
+    date_key = "\\\"post_date\\\":\\\""
+
+    idx = 0
+    while True:
+        idx = html.find(needle, idx)
+        if idx == -1:
+            break
+
+        slug_start = idx + len(needle)
+        slug_end = html.find("\\\"", slug_start)
+        if slug_end == -1:
+            break
+
+        window_start = max(idx - 2000, 0)
+        window = html[window_start:idx]
+
+        title_pos = window.rfind(title_key)
+        subtitle_pos = window.rfind(subtitle_key)
+        date_pos = window.rfind(date_key)
+        if title_pos == -1 or subtitle_pos == -1 or date_pos == -1:
+            idx = slug_end + 1
+            continue
+
+        title_start = title_pos + len(title_key)
+        subtitle_start = subtitle_pos + len(subtitle_key)
+        date_start = date_pos + len(date_key)
+
+        title_end = window.find("\\\"", title_start)
+        subtitle_end = window.find("\\\"", subtitle_start)
+        date_end = window.find("\\\"", date_start)
+        if title_end == -1 or subtitle_end == -1 or date_end == -1:
+            idx = slug_end + 1
+            continue
+
+        title = _decode_payload_text(window[title_start:title_end])
+        subtitle = _decode_payload_text(window[subtitle_start:subtitle_end])
+        post_date = _decode_payload_text(window[date_start:date_end])
+        slug = html[slug_start:slug_end]
+        link = f"{BASE_URL}/p/{slug}"
+        if link in seen_links:
+            idx = slug_end + 1
+            continue
+        seen_links.add(link)
+        items.append(
+            {
+                "title": title,
+                "link": link,
+                "date": _parse_date(post_date),
+                "category": category,
+                "description": subtitle,
+            }
+        )
+        idx = slug_end + 1
+
+    return items
 
 
 def _parse_date(text: str) -> datetime | None:
@@ -193,8 +280,27 @@ def fetch_articles_selenium(urls: list[str]) -> dict[str, str]:
 
 
 def _clean_article_html(container, base_url: str) -> str:
-    if container is None:
+    from bs4.element import Tag
+
+    if container is None or not isinstance(container, Tag):
         return ""
+
+    footer_markers = (
+        "enjoying this story",
+        "sign up for free",
+        "already have an account",
+        "sign in",
+    )
+    for text_node in list(container.find_all(string=True)):
+        text = text_node.strip().lower()
+        if not text:
+            continue
+        if any(marker in text for marker in footer_markers):
+            parent = getattr(text_node, "parent", None)
+            if parent is None:
+                continue
+            wrapper = parent.find_parent(["section", "div", "aside"]) or parent
+            wrapper.decompose()
 
     for tag in container.select(
         "script, style, noscript, svg, form, iframe, "
@@ -248,6 +354,7 @@ def _clean_article_html(container, base_url: str) -> str:
 def extract_article_metadata(html: str, page_url: str) -> dict:
     soup = BeautifulSoup(html, "html.parser")
     result: dict[str, str | datetime] = {}
+    needs_selenium = False
 
     title_el = soup.find("h1")
     if title_el:
@@ -269,6 +376,14 @@ def extract_article_metadata(html: str, page_url: str) -> dict:
 
     content_container = soup.select_one("section[class*='article_postBody']")
     if content_container:
+        paragraphs = [
+            p.get_text(" ", strip=True)
+            for p in content_container.find_all("p")
+            if p.get_text(strip=True)
+        ]
+        if len(paragraphs) < 6 or len(" ".join(paragraphs)) < 1200:
+            needs_selenium = True
+
         content_html = _clean_article_html(content_container, base_url=page_url)
         result["content_html"] = content_html
 
@@ -276,6 +391,9 @@ def extract_article_metadata(html: str, page_url: str) -> dict:
             first_p = content_container.find("p")
             if first_p:
                 result["description"] = first_p.get_text(" ", strip=True)
+
+    if needs_selenium:
+        result["needs_selenium"] = True
 
     return result
 
@@ -285,12 +403,22 @@ def collect_listing_articles(session: requests.Session | None = None) -> list[di
     seen_links = set()
 
     for category, url in CATEGORY_PAGES.items():
-        html = fetch_page(url, session=session)
+        html = fetch_page_requests(url, session=session)
+        payload_items = parse_listing_payload(html, category)
         links = parse_listing_links(html)
-        if not links:
+
+        if not payload_items and not links and not in_ci():
             logger.warning(f"No links found via requests for {url}; retrying with Selenium...")
             html = fetch_page_selenium(url)
+            payload_items = parse_listing_payload(html, category)
             links = parse_listing_links(html)
+
+        for item in payload_items:
+            link = item["link"]
+            if link in seen_links:
+                continue
+            seen_links.add(link)
+            articles.append(item)
 
         for link in links:
             if link in seen_links:
@@ -306,7 +434,9 @@ def collect_listing_articles(session: requests.Session | None = None) -> list[di
                 }
             )
 
-        logger.info(f"Collected {len(links)} links from {category}")
+        logger.info(
+            f"Collected {len(payload_items)} payload items and {len(links)} links from {category}"
+        )
 
     return articles
 
@@ -365,6 +495,11 @@ def get_existing_entries_from_feed(feed_path: Path):
             link = link_elem.text.strip() if link_elem is not None and link_elem.text else None
             if not link:
                 continue
+            needs_refresh = False
+            if "piratewires.substack.com/p/" in link:
+                slug = link.split("/p/")[-1]
+                link = f"{BASE_URL}/p/{slug}"
+                needs_refresh = True
 
             date = None
             if date_elem is not None and date_elem.text:
@@ -382,6 +517,7 @@ def get_existing_entries_from_feed(feed_path: Path):
                     "author": author_elem.text.strip() if author_elem is not None and author_elem.text else None,
                     "description": desc_elem.text if desc_elem is not None and desc_elem.text else "",
                     "content_html": content_elem.text if content_elem is not None and content_elem.text else "",
+                    "needs_refresh": needs_refresh,
                 }
             )
     except Exception as e:
@@ -399,7 +535,9 @@ def main(force: bool = False) -> bool:
         existing_links = set()
         if not force:
             existing_entries = get_existing_entries_from_feed(feed_path)
-            existing_links = {entry["link"] for entry in existing_entries}
+            existing_links = {
+                entry["link"] for entry in existing_entries if not entry.get("needs_refresh")
+            }
 
         session = build_requests_session()
         articles = collect_listing_articles(session=session)
@@ -410,22 +548,18 @@ def main(force: bool = False) -> bool:
         new_articles = [article for article in articles if article["link"] not in existing_links]
         logger.info(f"Fetching full content for {len(new_articles)} articles...")
 
-        needs_selenium = []
+        needs_selenium: list[str] = []
         for article in new_articles:
             html = fetch_article_page_requests(article["link"], session=session)
             if not html:
                 needs_selenium.append(article["link"])
                 continue
-
             metadata = extract_article_metadata(html, article["link"])
-            if metadata.get("content_html"):
-                article["content_html"] = metadata["content_html"]
-            else:
-                needs_selenium.append(article["link"])
-
-            for key in ("title", "description", "date", "author"):
+            for key in ("title", "description", "date", "author", "content_html"):
                 if metadata.get(key):
                     article[key] = metadata[key]
+            if metadata.get("needs_selenium"):
+                needs_selenium.append(article["link"])
 
         if needs_selenium:
             selenium_html = fetch_articles_selenium(needs_selenium)
