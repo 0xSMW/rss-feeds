@@ -358,13 +358,36 @@ def _clean_article_html(container, base_url: str) -> str:
 
         tag.unwrap()
 
+    block_tags = {"p", "h1", "h2", "h3", "h4", "h5", "h6", "ul", "ol", "li", "blockquote", "pre"}
+    inline_single_tags = {"a", "img", "br", "hr"}
+
+    block_link_hrefs: set[str] = set()
+    for block in container.find_all(list(block_tags)):
+        for link in block.find_all("a"):
+            href = link.get("href", "")
+            if href:
+                block_link_hrefs.add(href)
+
     parts: list[str] = []
-    for tag in container.find_all(
-        ["p", "h2", "h3", "h4", "h5", "h6", "ul", "ol", "li", "blockquote", "pre", "code", "em", "strong", "a", "img", "br", "hr"],
-        recursive=True,
-    ):
-        if tag.name == "p" and not tag.get_text(strip=True) and not tag.find("img"):
+    seen_hrefs: set[str] = set()
+    for tag in container.find_all(list(block_tags | inline_single_tags), recursive=True):
+        if tag.name in block_tags:
+            if tag.name == "p" and not tag.get_text(strip=True) and not tag.find("img"):
+                continue
+            parts.append(str(tag))
             continue
+
+        if tag.find_parent(list(block_tags)):
+            continue
+
+        if tag.name == "a":
+            href = tag.get("href", "")
+            if href in block_link_hrefs:
+                continue
+            if href in seen_hrefs:
+                continue
+            if href:
+                seen_hrefs.add(href)
         parts.append(str(tag))
 
     return "\n".join(parts)
@@ -554,9 +577,7 @@ def main(force: bool = False) -> bool:
         existing_links = set()
         if not force:
             existing_entries = get_existing_entries_from_feed(feed_path)
-            existing_links = {
-                entry["link"] for entry in existing_entries if not entry.get("needs_refresh")
-            }
+            existing_links = {entry["link"] for entry in existing_entries}
 
         session = build_requests_session()
         articles = collect_listing_articles(session=session)
