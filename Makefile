@@ -109,6 +109,10 @@ generate_arenamag_feed: check-env  ## Generate RSS feed for arenamag (all catego
 generate_piratewires_feed: check-env  ## Generate RSS feed for piratewires (home + categories)
 	python feed_generators/piratewires_blog.py
 
+.PHONY: generate_hackernews_feed
+generate_hackernews_feed: check-env  ## Generate RSS feed for Hacker News (full content)
+	python feed_generators/hackernews_rss.py
+
 .PHONY: generate_ai_research_feed
 generate_ai_research_feed: check-env  ## Generate combined AI Research Feed (all feeds except Arena Magazine)
 	python feed_generators/ai_research_meta_feed.py
