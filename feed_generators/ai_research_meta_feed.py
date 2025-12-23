@@ -181,8 +181,8 @@ def save_rss_feed(feed_generator, feed_name: str = "ai_research") -> Path:
 def main(feed_name: str = "ai_research") -> bool:
     """Main function to generate combined AI Research Feed."""
     try:
-        # Exclude Arena Magazine, Pirate Wires, and this meta feed
-        exclude_feeds = ["arenamag", "piratewires", feed_name]
+        # Exclude non-AI feeds and this meta feed
+        exclude_feeds = ["arenamag", "piratewires", "hackernews", feed_name]
         
         items = collect_all_items(exclude_feeds=exclude_feeds)
         if not items:
