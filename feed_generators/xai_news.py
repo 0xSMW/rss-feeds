@@ -381,10 +381,29 @@ def _clean_article_html(container, base_url: str) -> str:
 
         tag.unwrap()
 
+    p_link_hrefs: set[str] = set()
+    for p in container.find_all("p"):
+        for link in p.find_all("a"):
+            href = link.get("href", "")
+            if href:
+                p_link_hrefs.add(href)
+
     parts: list[str] = []
+    seen_hrefs: set[str] = set()
     for tag in container.find_all(["p", "a", "img"], recursive=True):
         if tag.name == "p" and not tag.get_text(strip=True):
             continue
+        # Skip links/images already contained inside a paragraph or link to avoid duplicates.
+        if tag.find_parent(["p", "a"]):
+            continue
+        if tag.name == "a":
+            href = tag.get("href", "")
+            if href in p_link_hrefs:
+                continue
+            if href in seen_hrefs:
+                continue
+            if href:
+                seen_hrefs.add(href)
         parts.append(str(tag))
 
     return "\n".join(parts)
