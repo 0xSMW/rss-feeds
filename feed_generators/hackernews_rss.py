@@ -254,7 +254,7 @@ def extract_article_content(html: str, page_url: str) -> tuple[str, str]:
 def generate_rss_feed(articles: list[dict], feed_name: str = "hackernews") -> FeedGenerator:
     """Generate RSS feed for Hacker News with full content."""
     fg = FeedGenerator()
-    fg.title("Hacker News Full Content Feed")
+    fg.title("Hacker News")
     fg.description("Hacker News front-page links with full article content.")
     fg.link(href=HN_BASE_URL)
     fg.language("en")
