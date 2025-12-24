@@ -144,27 +144,66 @@ def _clean_article_html(container, base_url: str) -> str:
     for tag in container.select("script, style, noscript, svg, form, iframe, nav, header, footer, aside"):
         tag.decompose()
 
-    allowed = {
-        "p",
-        "a",
-        "img",
-        "ul",
-        "ol",
-        "li",
-        "strong",
-        "em",
-        "blockquote",
-        "code",
-        "pre",
-        "h1",
-        "h2",
-        "h3",
-        "h4",
-        "h5",
-        "h6",
-        "br",
-    }
+    noise_pattern = re.compile(
+        r"(author|byline|avatar|profile|subscribe|newsletter|share|social|comment|footer|header|nav|breadcrumb|related|promo|advert|ads|banner)",
+        re.I,
+    )
+    noise_text_pattern = re.compile(
+        r"(written by|posted by|subscribe|newsletter|share|related|sponsored|advertis|promo|sign up|follow|log in|login|comments?)",
+        re.I,
+    )
+
+    def is_low_value_block(tag) -> bool:
+        text = tag.get_text(" ", strip=True)
+        if not text:
+            return True
+        words = text.split()
+        link_text = " ".join(a.get_text(" ", strip=True) for a in tag.find_all("a"))
+        link_density = (len(link_text) / len(text)) if text else 0
+        if len(words) <= 6 and noise_text_pattern.search(text):
+            return True
+        if len(words) <= 12 and link_density > 0.6 and noise_text_pattern.search(text):
+            return True
+        return False
     for tag in list(container.find_all(True)):
+        if tag is None or tag.attrs is None:
+            continue
+        tag_id = tag.get("id") or ""
+        tag_class = " ".join(tag.get("class") or [])
+        if noise_pattern.search(tag_id) or noise_pattern.search(tag_class):
+            tag.decompose()
+
+    for text_node in list(container.find_all(string=True)):
+        text = text_node.strip()
+        if not text:
+            continue
+        if len(text) <= 120 and noise_text_pattern.search(text):
+            lowered = text.lower()
+            if lowered.startswith(("written by", "posted by", "author:", "byline:")):
+                text_node.extract()
+            elif re.fullmatch(r".*\\bcomments?\\b.*", text, flags=re.I) and len(text.split()) <= 6:
+                text_node.extract()
+            elif re.fullmatch(r".*\\b(share|subscribe|newsletter|follow|log in|login)\\b.*", text, flags=re.I):
+                text_node.extract()
+
+    for img in list(container.find_all("img")):
+        if img is None or img.attrs is None:
+            continue
+        alt_text = img.get("alt") or ""
+        img_class = " ".join(img.get("class") or [])
+        img_src = img.get("src") or ""
+        if re.search(r"(avatar|profile|author|logo|icon|category)", alt_text, re.I) or re.search(
+            r"(avatar|profile|gravatar|author|logo|icon|category)", img_class + " " + img_src, re.I
+        ):
+            img.decompose()
+
+    allowed = {"p", "a", "img"}
+    for tag in list(container.find_all(True)):
+        if tag is None or tag.attrs is None:
+            continue
+        if is_low_value_block(tag):
+            tag.decompose()
+            continue
         if tag.name not in allowed:
             tag.unwrap()
             continue
@@ -292,7 +331,7 @@ def get_existing_entries_from_feed(feed_path: Path) -> list[dict]:
     return entries
 
 
-def main(feed_name: str = "hackernews") -> bool:
+def main(feed_name: str = "hackernews", force: bool = False) -> bool:
     """Main function to generate Hacker News RSS feed."""
     try:
         feed_path = ensure_feeds_directory() / f"feed_{feed_name}.xml"
@@ -305,7 +344,10 @@ def main(feed_name: str = "hackernews") -> bool:
             logger.warning("No items parsed from Hacker News RSS")
             return False
 
-        new_articles = [article for article in articles if article["link"] not in existing_links]
+        if force:
+            new_articles = articles
+        else:
+            new_articles = [article for article in articles if article["link"] not in existing_links]
         skipped_count = len(articles) - len(new_articles)
         if skipped_count:
             logger.info(f"Skipping {skipped_count} existing links already in feed.")
@@ -338,9 +380,14 @@ def main(feed_name: str = "hackernews") -> bool:
         logger.info(f"Successfully generated Hacker News feed with {len(deduped_articles)} items")
         return True
     except Exception as e:
-        logger.error(f"Failed to generate Hacker News feed: {e}")
+        logger.exception(f"Failed to generate Hacker News feed: {e}")
         return False
 
 
 if __name__ == "__main__":
-    main()
+    import argparse
+
+    parser = argparse.ArgumentParser(description="Generate Hacker News RSS feed.")
+    parser.add_argument("--force", action="store_true", help="Refetch all articles and rebuild the feed.")
+    args = parser.parse_args()
+    main(force=args.force)
