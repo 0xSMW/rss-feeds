@@ -182,7 +182,13 @@ def main(feed_name: str = "ai_research") -> bool:
     """Main function to generate combined AI Research Feed."""
     try:
         # Exclude non-AI feeds and this meta feed
-        exclude_feeds = ["arenamag", "piratewires", "hackernews", feed_name]
+        exclude_feeds = [
+            "arenamag",
+            "piratewires",
+            "hackernews",
+            "steve_jobs_archive_stories",
+            feed_name,
+        ]
         
         items = collect_all_items(exclude_feeds=exclude_feeds)
         if not items:
