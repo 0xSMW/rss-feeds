@@ -7,7 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 08 Jan 2026 12:05:55 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 09 Jan 2026 00:12:06 +0000</lastBuildDate>
     <item>
       <title>Experimenting with AI to defend critical infrastructure</title>
       <link>https://red.anthropic.com/2026/critical-infrastructure-defense/</link>
@@ -29,7 +29,7 @@
             scaffold allowed natural language prompts to be quickly translated into complex attack chains, in part by
             pre-defining some code-based “tools” that allow the model to more easily take actions on computer networks.
             The researchers then tasked this agent with emulating attacks against a cyber-physical model of a water
-            treatment plant (one of the &lt;a href="https://www.pnnl.gov/projects/control-environment-laboratory-resource"&gt;Controlled Environment
+            treatment plant (one of the &lt;a href="https://www.pnnl.gov/projects/control-environment-laboratory-resource"&gt;Control Environment
                 Laboratory Resource&lt;/a&gt; platforms that PNNL operates on behalf of the Department of Homeland Security’s
             Cybersecurity and Infrastructure Security Agency). PNNL’s estimate is that this allowed attack
             reconstruction to be completed in three hours instead of multiple weeks.&lt;/p&gt;&lt;p&gt;During one of the runs of this test, Claude displayed notable resourcefulness. One of the pre-defined tools
