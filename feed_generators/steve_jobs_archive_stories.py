@@ -5,7 +5,7 @@ import os
 import re
 from datetime import datetime
 from pathlib import Path
-from urllib.parse import urljoin
+from urllib.parse import urljoin, urlparse
 
 import pytz
 import requests
@@ -149,6 +149,17 @@ def _normalize_story_link(slug: str) -> str | None:
     return urljoin(BASE_URL + "/", slug.lstrip("/"))
 
 
+def _is_story_link(link: str) -> bool:
+    if not link:
+        return False
+    base = urlparse(BASE_URL)
+    parsed = urlparse(link)
+    if parsed.netloc and parsed.netloc != base.netloc:
+        return False
+    path = parsed.path or ""
+    return path == "/stories" or path.startswith("/stories/")
+
+
 def _rich_text_to_text(node) -> str:
     parts: list[str] = []
 
@@ -206,7 +217,7 @@ def parse_listing(html: str) -> list[dict]:
             if not description:
                 description = _rich_text_to_text(module.get("body", {}))
             link = _normalize_story_link(link) if link else None
-            if not title or not link:
+            if not title or not link or not _is_story_link(link):
                 continue
             items.append(
                 {
@@ -225,7 +236,7 @@ def parse_listing(html: str) -> list[dict]:
             slug = entry.get("slug") or entry.get("url")
             description = (entry.get("description") or entry.get("subtitle") or "").strip()
             link = _normalize_story_link(slug)
-            if not title or not link:
+            if not title or not link or not _is_story_link(link):
                 continue
             items.append(
                 {
