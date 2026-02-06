@@ -7,7 +7,150 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 05 Feb 2026 12:10:33 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 06 Feb 2026 00:13:35 +0000</lastBuildDate>
+    <item>
+      <title>Evaluating and mitigating the growing risk of LLM-discovered 0-days</title>
+      <link>https://red.anthropic.com/2026/zero-days/</link>
+      <description>AI models can now find high-severity vulnerabilities at scale. This is a moment to empower defenders. We're now using Claude to find and help fix vulnerabilities in open source software.</description>
+      <content:encoded>&lt;p&gt;
+            Nicholas Carlini&lt;sup&gt;*&lt;/sup&gt;, Keane Lucas&lt;sup&gt;*&lt;/sup&gt;, Evyatar Ben Asher&lt;sup&gt;*&lt;/sup&gt;, Newton Cheng, Hasnain
+            Lakhani, and David Forsythe&lt;br/&gt;
+&lt;sup&gt;*&lt;/sup&gt;indicates equal contribution
+&lt;/p&gt;&lt;p&gt;Claude Opus 4.6, &lt;a href="http://anthropic.com/news/claude-opus-4-6"&gt;released today&lt;/a&gt;, continues a &lt;a href="https://www.anthropic.com/claude-opus-4-6-system-card"&gt;trajectory of meaningful improvements&lt;/a&gt;&lt;a href="https://www.anthropic.com/claude-opus-4-6-system-card"&gt; &lt;/a&gt;in AI models’ cybersecurity
+            capabilities. Last fall, we wrote that we believed we were at an &lt;a href="https://red.anthropic.com/2025/ai-for-cyber-defenders/"&gt;inflection point for AI's impact on
+                cybersecurity&lt;/a&gt;—that progress could become quite fast, and now was the moment to accelerate defensive
+            use of AI. The evidence since then has only reinforced that view. AI models can now find high-severity
+            vulnerabilities at scale. Our view is this is a moment to move quickly—to empower defenders and secure as
+            much code as possible while the window exists.&lt;/p&gt;&lt;p&gt;Opus 4.6 is notably better at finding high-severity vulnerabilities than previous models and a sign of how
+            quickly things are moving. Security teams have been automating vulnerability discovery for years, investing
+            heavily in fuzzing infrastructure and custom harnesses to find bugs at scale. But what stood out in early
+            testing is how quickly Opus 4.6 found vulnerabilities out of the box without task-specific tooling, custom
+            scaffolding, or specialized prompting. Even more interesting is how it found them. Fuzzers work by throwing massive amounts of random
+            inputs at code to see what breaks. Opus 4.6 reads and reasons about code the way a human researcher
+            would—looking at past fixes to find similar bugs that weren't addressed, spotting patterns that tend to
+            cause problems, or understanding a piece of logic well enough to know exactly what input would break it.
+            When we pointed Opus 4.6 at some of the most well-tested codebases (projects that have had
+            fuzzers running against them for years, &lt;a href="https://google.github.io/oss-fuzz/research/llms/target_generation/"&gt;accumulating millions of hours
+                of CPU time&lt;/a&gt;), Opus 4.6 found high-severity vulnerabilities, some that had gone undetected for
+            decades.&lt;/p&gt;&lt;p&gt;Part of tipping the scales toward defenders means doing the work ourselves. We're now using Claude to find
+            and help fix vulnerabilities in open source software. We’ve started with open source because it runs
+            everywhere—from enterprise systems to critical infrastructure—and vulnerabilities there ripple across the
+            internet. Many of these projects are maintained by small teams or volunteers who don't have dedicated
+            security resources, so finding human-validated bugs and contributing human-reviewed patches goes a long way.
+        &lt;/p&gt;&lt;p&gt;So far, we've found and validated more than 500 high-severity vulnerabilities. We've begun reporting them and
+            are seeing our initial patches land, and we’re continuing to work with
+            maintainers to patch the others. In this post, we’ll walk through our methodology, share some early examples
+            of vulnerabilities Claude discovered, and discuss the safeguards we've put in place to manage misuse as
+            these capabilities continue to improve. This is just the beginning of our efforts. We'll have more to share
+            as this work scales.&lt;/p&gt;&lt;h3&gt;Setup&lt;/h3&gt;&lt;p&gt;In this work, we put Claude inside a “virtual machine” (literally, a simulated computer) with access to the
+            latest versions of open source projects. We gave it standard utilities (e.g., the standard coreutils or
+            Python) and vulnerability analysis tools (e.g., debuggers or fuzzers), but we didn’t provide any special
+            instructions on how to use these tools, nor did we provide a custom
+            harness that would have given it specialized knowledge about how to better find vulnerabilities. This means
+            we were directly testing Claude’s “out-of-the-box” capabilities, relying solely on the fact that modern
+            large language models are generally-capable agents that can already reason about how to best make use of the
+            tools available.&lt;/p&gt;&lt;p&gt;To ensure that Claude hadn’t hallucinated bugs (i.e., invented problems that don’t exist, a problem that
+            increasingly is placing an undue burden on open source developers), we validated every bug extensively
+            before reporting it. We focused on searching for memory corruption vulnerabilities, because they can be
+            validated with relative ease. Unlike logic errors where the program remains functional, memory corruption
+            vulnerabilities are easy to identify by monitoring the program for crashes and running tools like address
+            sanitizers to catch non-crashing memory errors. But because not all inputs that cause a program to crash are
+            high severity vulnerabilities, we then had Claude critique, de-duplicate, and re-prioritize the crashes that
+            remain. Finally, for our initial round of findings, our own security researchers validated each
+            vulnerability and wrote patches by hand. As the volume of findings grew, we brought in external (human)
+            security researchers to help with validation and patch development. Our intent here was to meaningfully
+            assist human maintainers in handling our reports, so the process optimized for reducing false positives. In
+            parallel, we are accelerating our efforts to automate patch development to reliably remediate bugs as we
+            find them.&lt;/p&gt;&lt;h3&gt;Vulnerabilities&lt;/h3&gt;&lt;p&gt;Here are three of the vulnerabilities Claude found (now patched by maintainers), which we believe demonstrate
+            the unique advantages LLMs have over other tools.&lt;/p&gt;&lt;p&gt;GhostScript is a utility that processes PostScript and PDF files.
+            Claude initially went down several dead ends when searching for a vulnerability—both attempting to fuzz the
+            code, and, after this failed, attempting manual analysis. Neither of these methods yielded any significant
+            findings. Eventually, however, Claude took a different approach: reading the Git commit history. Claude
+            quickly found a security-relevant commit, and commented:&lt;/p&gt;&lt;p&gt;There's a commit about "stack bounds checking for MM blend values" in Type 1 charstrings. This is related
+                to font handling. Let me get more details about this commit.&lt;/p&gt;&lt;p&gt;From here, Claude looked at the code to understand what had changed:&lt;/p&gt;&lt;p&gt;The commit shows it's adding stack bounds checking - this suggests there was a vulnerability before this
+                check was added. … If this commit *adds* bounds checking, then the code before this commit was
+                vulnerable … So to trigger the vulnerability, I would need to test against a version of the code
+                *before* this fix was applied.&lt;/p&gt;&lt;p&gt;With this in mind, Claude then looked for other places where this function was called in order to find
+            potentially similar vulnerabilities that were left unpatched.&lt;/p&gt;&lt;p&gt;Let me check if maybe the checks are incomplete or there's another code path. Let me look at the other
+                caller in gdevpsfx.c … Aha! This is very interesting! In &lt;code&gt;gdevpsfx.c&lt;/code&gt;, the call to
+                &lt;code&gt;gs_type1_blend&lt;/code&gt; at line 292 does NOT have the bounds checking that was added in
+                &lt;code&gt;gstype1.c&lt;/code&gt;.
+            &lt;/p&gt;&lt;p&gt;After making this observation, Claude quickly constructed a proof-of-concept crash (a file that can be passed
+            to GhostScript that will cause it to crash), proving its predictions.&lt;/p&gt;&lt;p&gt;OpenSC is a command line utility to process smart card data. Again,
+            Claude initially attempted to find vulnerabilities by fuzzing the code, and after this failed, by manual
+            analysis. As before, when this didn’t work, Claude took a different approach: it began to search the
+            repository for function calls that are frequently vulnerable.&lt;/p&gt;&lt;p&gt;Let me look at where the URL is used - specifically the &lt;code&gt;strrchr&lt;/code&gt; and &lt;code&gt;strcat&lt;/code&gt;
+                operations which could potentially have path traversal or buffer overflow issues.&lt;/p&gt;&lt;p&gt;Claude quickly identified a location where multiple &lt;code&gt;strcat&lt;/code&gt; operations were used in succession.
+            These functions are typically viewed as unsafe in C because they allow for concatenating strings without any
+            check on the length of the resulting concatenated string. It is therefore extremely important that the
+            programmer verify the output buffer is long enough to contain the concatenated input. For OpenSC, the key
+            issue was in the following code:
+        &lt;/p&gt;&lt;pre&gt;&lt;code&gt;char filename[PATH_MAX];  // this buffer is 4096 bytes
+r = sc_get_cache_dir(card-&amp;gt;ctx, filename,
+        sizeof(filename) - strlen(fp) - 2);
+if (r != SC_SUCCESS)
+        goto err;
+strcat(filename,"/");
+strcat(filename,fp);&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Claude identified that this is vulnerable to a buffer overflow. And when we look at the statistics for how
+            frequently this line of code was fuzzed by existing fuzzers, we see that this line of code is infrequently
+            studied by traditional fuzzers because of how many preconditions are required. Claude, in contrast, was able
+            to reason about which code fragments were interesting and focus its effort there, instead of
+            indiscriminately studying all lines with equal effort.&lt;/p&gt;&lt;p&gt;CGIF is a library for processing GIF files. In this case, we were
+            surprised not by how Claude found the bug, but by how it validated the bug and produced a proof-of-concept that proved the
+            vulnerability was real.&lt;/p&gt;&lt;p&gt;Briefly, Claude found that this library assumes compressed data will always be smaller than its original size
+            (which is normally a safe assumption), and that this assumption could be exploited. The way it did this was
+            challenging. The GIF file format compresses data with the LZW compression algorithm. Unlike the more
+            traditional LZ77-backed compressors that encode matches with a (distance, length) pair, LZW builds a
+            dictionary of frequently-used pairs of tokens (either individual characters, or pairs of tokens). Then, when
+            the compressor encounters this token a second time, it can output a shorter bitstring indicating “output
+            this token again”. (For those familiar with language modeling, LZW is very similar in spirit to the process
+            of BPE tokenization.)&lt;/p&gt;&lt;p&gt;CGIF had implicitly assumed that the compressed size of a compressed string would always be less than the
+            uncompressed size—something that is almost always true. However,
+            Claude immediately recognized the vulnerability here:&lt;/p&gt;&lt;p&gt;To trigger overflow, we need:&lt;/p&gt;&lt;ul&gt;
+&lt;li&gt;Small numPixel (small image)&lt;/li&gt;
+&lt;li&gt;Many LZW codes written&lt;/li&gt;
+&lt;/ul&gt;&lt;p&gt;The pattern that generates most LZW codes is one where:&lt;/p&gt;&lt;ul&gt;
+&lt;li&gt;No compression happens (each pixel becomes a code)&lt;/li&gt;
+&lt;li&gt;Many resets occur&lt;/li&gt;
+&lt;/ul&gt;&lt;p&gt;With a palette of 4 colors (indices 0-3):&lt;/p&gt;&lt;ul&gt;
+&lt;li&gt;initDictLen = 4&lt;/li&gt;
+&lt;li&gt;Dictionary fills up after MAX_DICT_LEN (4096) entries&lt;/li&gt;
+&lt;li&gt;Reset happens when dict reaches 4096&lt;/li&gt;
+&lt;/ul&gt;&lt;p&gt;To trigger overflow with small image:&lt;/p&gt;&lt;ul&gt;
+&lt;li&gt;numPixel = N&lt;/li&gt;
+&lt;li&gt;Buffer size = (N + 2) codes&lt;/li&gt;
+&lt;li&gt;We need to generate &amp;gt; N + 1 codes&lt;/li&gt;
+&lt;/ul&gt;&lt;p&gt;Each pixel can generate 1 code + resets.&lt;/p&gt;&lt;p&gt;But the pattern that might cause more codes is when we have sequences of length 1.&lt;/p&gt;&lt;p&gt;That is, Claude recognized that LZW maintains a fixed-size symbol table; if it was possible to max out the
+            size of the symbol table, then LZW inserts a new special “clear” token in the data-stream. This then results
+            in the output “compressed” size exceeding the uncompressed size—triggering a buffer overflow vulnerability.
+        &lt;/p&gt;&lt;p&gt;This vulnerability is particularly interesting because triggering it requires a conceptual understanding of
+            the LZW algorithm and how it relates to the GIF file format. Traditional fuzzers (and even coverage-guided
+            fuzzers) struggle to trigger vulnerabilities of this nature because they require making a particular choice
+            of branches. In fact, even if CGIF had 100% line- and branch-coverage, this vulnerability could still remain
+            undetected: it requires a very specific sequence of operations.&lt;/p&gt;&lt;h3&gt;Safeguards&lt;/h3&gt;&lt;p&gt;Alongside the release of Claude Opus 4.6, we're introducing a new layer of detection to support our
+            Safeguards team in &lt;a href="https://www.anthropic.com/news/detecting-countering-misuse-aug-2025"&gt;identifying
+                and responding&lt;/a&gt; to cyber misuse of Claude. At the core of this work are &lt;a href="https://alignment.anthropic.com/2025/cheap-monitors/"&gt;probes&lt;/a&gt;, which measure activations within
+            the model as it generates a response and allow us to detect specific harms at scale. With this launch, we’ve
+            created new cyber-specific probes to better track and understand the potential misuse of Claude in the
+            cybersecurity domain. &lt;/p&gt;&lt;p&gt;On the enforcement side, we're evolving our pipelines to keep pace with this new detection architecture. That
+            includes updating our cyber enforcement workflows to take advantage of probe-based detection, as well as
+            expanding the range of actions we take to respond to cyber misuse. In particular, we may institute real-time
+            intervention, including blocking traffic we detect as malicious. This will create friction for legitimate
+            research and some defensive work, and we want to work with the security research community to find ways to
+            address it as it arises. We are committed to keeping Claude at the forefront of cybersecurity by working
+            hard to make it both safe and effective. &lt;/p&gt;&lt;p&gt;Together, these changes represent a meaningful step forward in our ability to prevent misuse: not just in
+            what we can detect, but in how quickly and effectively we can act on what we find. &lt;/p&gt;&lt;h3&gt;Conclusion&lt;/h3&gt;&lt;p&gt;Claude Opus 4.6 can find meaningful 0-day vulnerabilities in well-tested codebases, even without specialized
+            scaffolding. Our results show that language models can add real value on top of existing discovery tools.
+            The Safeguards work we describe above is essential to managing the dual-use risk this creates.&lt;/p&gt;&lt;p&gt;Looking ahead, both we and the broader security community will need to grapple with an uncomfortable reality:
+            language models are already capable of identifying novel vulnerabilities, and may soon exceed the speed and
+            scale of even expert human researchers.&lt;/p&gt;&lt;p&gt;At the same time, existing disclosure norms will need to evolve. Industry-standard 90-day windows may not
+            hold up against the speed and volume of LLM-discovered bugs, and the industry will need workflows that can
+            keep pace.&lt;/p&gt;&lt;p&gt;This is ongoing work, and we'll have more to share soon—including what we're learning about how these
+            capabilities evolve and how the security community can best put them to use.&lt;/p&gt;&lt;hr/&gt;&lt;h3&gt;Subscribe&lt;/h3&gt;</content:encoded>
+      <guid isPermaLink="false">https://red.anthropic.com/2026/zero-days/</guid>
+      <category>Anthropic Red Teaming</category>
+      <pubDate>Thu, 05 Feb 2026 00:00:00 +0000</pubDate>
+    </item>
     <item>
       <title>AI models are showing a greater ability to find and exploit vulnerabilities on realistic cyber ranges</title>
       <link>https://red.anthropic.com/2026/cyber-toolkits-update/</link>
