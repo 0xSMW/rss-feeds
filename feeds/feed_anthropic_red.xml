@@ -7,14 +7,14 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 06 Feb 2026 12:09:34 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 07 Feb 2026 00:15:17 +0000</lastBuildDate>
     <item>
       <title>Evaluating and mitigating the growing risk of LLM-discovered 0-days</title>
       <link>https://red.anthropic.com/2026/zero-days/</link>
       <description>AI models can now find high-severity vulnerabilities at scale. This is a moment to empower defenders. We're now using Claude to find and help fix vulnerabilities in open source software.</description>
       <content:encoded>&lt;p&gt;
             Nicholas Carlini&lt;sup&gt;*&lt;/sup&gt;, Keane Lucas&lt;sup&gt;*&lt;/sup&gt;, Evyatar Ben Asher&lt;sup&gt;*&lt;/sup&gt;, Newton Cheng, Hasnain
-            Lakhani, and David Forsythe&lt;br/&gt;
+            Lakhani, David Forsythe, and Kyla Guru&lt;br/&gt;
 &lt;sup&gt;*&lt;/sup&gt;indicates equal contribution
 &lt;/p&gt;&lt;p&gt;Claude Opus 4.6, &lt;a href="http://anthropic.com/news/claude-opus-4-6"&gt;released today&lt;/a&gt;, continues a &lt;a href="https://www.anthropic.com/claude-opus-4-6-system-card"&gt;trajectory of meaningful improvements&lt;/a&gt;&lt;a href="https://www.anthropic.com/claude-opus-4-6-system-card"&gt; &lt;/a&gt;in AI models’ cybersecurity
             capabilities. Last fall, we wrote that we believed we were at an &lt;a href="https://red.anthropic.com/2025/ai-for-cyber-defenders/"&gt;inflection point for AI's impact on
@@ -146,7 +146,9 @@ strcat(filename,fp);&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Claude identified that thi
             scale of even expert human researchers.&lt;/p&gt;&lt;p&gt;At the same time, existing disclosure norms will need to evolve. Industry-standard 90-day windows may not
             hold up against the speed and volume of LLM-discovered bugs, and the industry will need workflows that can
             keep pace.&lt;/p&gt;&lt;p&gt;This is ongoing work, and we'll have more to share soon—including what we're learning about how these
-            capabilities evolve and how the security community can best put them to use.&lt;/p&gt;&lt;hr/&gt;&lt;h3&gt;Subscribe&lt;/h3&gt;</content:encoded>
+            capabilities evolve and how the security community can best put them to use.&lt;/p&gt;&lt;p&gt;Edited February 6, 2026:&lt;/p&gt;&lt;ul&gt;
+&lt;li&gt;Updated the author list&lt;/li&gt;
+&lt;/ul&gt;&lt;hr/&gt;&lt;h3&gt;Subscribe&lt;/h3&gt;</content:encoded>
       <guid isPermaLink="false">https://red.anthropic.com/2026/zero-days/</guid>
       <category>Anthropic Red Teaming</category>
       <pubDate>Thu, 05 Feb 2026 00:00:00 +0000</pubDate>
