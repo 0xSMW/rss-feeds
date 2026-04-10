@@ -7,16 +7,17 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 10 Apr 2026 00:19:15 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 10 Apr 2026 12:15:28 +0000</lastBuildDate>
     <item>
       <title>Assessing Claude Mythos Preview’s cybersecurity capabilities</title>
       <link>https://red.anthropic.com/2026/mythos-preview/</link>
       <description>Earlier today we announced Claude Mythos Preview, a new general-purpose language model that  is strikingly capable at computer security tasks. This post provides technical details for researchers and practitioners who want to understand exactly how we have been testing this model, and what we have found over the past month. We hope this will show why we view this as a watershed moment for security, and why we have chosen to begin a coordinated effort to reinforce the world’s cyber defenses.</description>
       <content:encoded>&lt;p&gt;
             Nicholas Carlini, Newton Cheng, Keane Lucas, Michael Moore, Milad Nasr, Vinay Prabhushankar, Winnie Xiao
-            Evyatar Ben Asher, Hakeem Angulu, Jackie Bow, Keir Bradwell,
-                Ben Buchanan, Daniel Freeman, Alex Gaynor, Xinyang Ge, Logan Graham, Hasnain Lakhani, Matt McNiece,
-                Adnan Pirzada, Sophia Porter, Andreas Terzis, Kevin Troy
+            Hakeem Angulu, Evyatar Ben Asher, Jackie Bow, Keir Bradwell,
+                Ben Buchanan, David Forsythe, Daniel Freeman, Alex Gaynor, Xinyang Ge, Logan Graham, Kyla Guru,
+                Hasnain Lakhani, Matt McNiece, Mojtaba Mehrara, Renee Nichol, Adnan Pirzada, Sophia Porter,
+                Andreas Terzis, Kevin Troy
 &lt;/p&gt;&lt;p&gt;Earlier today we announced &lt;a href="https://anthropic.com/glasswing"&gt;Claude Mythos Preview&lt;/a&gt;, a new
             general-purpose language model. This model performs strongly across the board, but it is strikingly capable
             at computer security tasks. In response, we have launched Project Glasswing, an effort to use Mythos Preview
@@ -1393,7 +1394,9 @@
                         exploits
                         discussed below for boring reasons.&lt;/p&gt;&lt;p&gt;&lt;a href="#ftnt_ref7"&gt;[7]&lt;/a&gt; Security professionals whose legitimate work is affected
                         by these
-                        safeguards will be able to apply to an upcoming Cyber Verification Program.&lt;/p&gt;&lt;hr/&gt;&lt;h3&gt;Subscribe&lt;/h3&gt;</content:encoded>
+                        safeguards will be able to apply to an upcoming Cyber Verification Program.&lt;/p&gt;&lt;p&gt;Edited April 9, 2026:&lt;/p&gt;&lt;ul&gt;
+&lt;li&gt;Updated the author list&lt;/li&gt;
+&lt;/ul&gt;&lt;hr/&gt;&lt;h3&gt;Subscribe&lt;/h3&gt;</content:encoded>
       <guid isPermaLink="false">https://red.anthropic.com/2026/mythos-preview/</guid>
       <category>Anthropic Red Teaming</category>
       <pubDate>Tue, 07 Apr 2026 00:00:00 +0000</pubDate>
