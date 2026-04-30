@@ -7,7 +7,57 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 30 Apr 2026 00:28:16 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 30 Apr 2026 12:31:07 +0000</lastBuildDate>
+    <item>
+      <title>Where the goblins came from</title>
+      <link>https://openai.com/index/where-the-goblins-came-from/</link>
+      <description>April 29, 2026</description>
+      <content:encoded>&lt;p&gt;April 29, 2026&lt;/p&gt;
+&lt;a href="https://openai.com/research/index/publication/"&gt;Publication&lt;/a&gt;
+&lt;p&gt;Starting with GPT‑5.1, our models began developing a strange habit: they increasingly mentioned goblins, gremlins, and other creatures in their metaphors. Unlike model bugs that show up through a tanking eval or a spiking training metric and point back to a specific change, this one crept in subtly. A single “little goblin” in an answer could be harmless, even charming. Across model generations, though, the habit became hard to miss: the goblins kept multiplying, and we needed to figure out where they came from.&lt;/p&gt;
+&lt;img src="https://images.ctfassets.net/kftzwdyauwt9/2mv3MIYe0gkFpjqH8lUECs/a1b39ea729fb561ea01e54e85b6fa7e9/godsped_gang_screenshot_-_light_mode__2_.jpg?w=3840&amp;amp;q=90&amp;amp;fm=webp"/&gt;
+&lt;p&gt;In early testing, GPT‑5.5 in Codex showed an odd affinity for goblin metaphors.&lt;/p&gt;
+&lt;p&gt;The short answer is that model behavior is shaped by many small incentives. In this case, one of those incentives came from training the model for the &lt;a href="https://help.openai.com/en/articles/11899719-customizing-your-chatgpt-personality"&gt;personality customization feature⁠(opens in a new window)&lt;/a&gt;, in particular the Nerdy personality. We unknowingly gave particularly high rewards for metaphors with creatures. From there, the goblins spread.&lt;/p&gt;
+&lt;a href="https://help.openai.com/en/articles/11899719-customizing-your-chatgpt-personality"&gt;personality customization feature⁠(opens in a new window)&lt;/a&gt;
+&lt;img src="https://images.ctfassets.net/kftzwdyauwt9/21KS4i9oTMDvszfWaLJtLT/764a6db9157b7039b8890f886b0e69d0/ChatGPT_Image_Apr_29__2026__07_53_34_PM.png?w=3840&amp;amp;q=90&amp;amp;fm=webp"/&gt;
+&lt;p&gt;The goblins were funny at first, but the increasing number of employee reports became concerning.&lt;/p&gt;
+&lt;img src="https://images.ctfassets.net/kftzwdyauwt9/3fB0tk16WGLwryFG558bp8/ce040e51f163a7d5a3a671947577e625/ChatGPT_Image_Apr_29__2026__07_57_32_PM.png?w=3840&amp;amp;q=90&amp;amp;fm=webp"/&gt;
+&lt;p&gt;An interesting interaction our Chief Scientist had with GPT‑5.5.&lt;/p&gt;
+&lt;p&gt;The first time we clearly saw the pattern was in November, after the GPT‑5.1 launch, &lt;a href="https://www.reddit.com/r/ChatGPT/comments/1k5hg5c/does_anyone_elses_chatgpt_refer_to_people_as/"&gt;although it may have started earlier⁠(opens in a new window)&lt;/a&gt;. Users complained about the model being oddly overfamiliar in conversation, which prompted an investigation into specific verbal tics. A safety researcher had experienced a few “goblins” and “gremlins” and asked that they be included in the check. When we looked, use of “goblin” in ChatGPT had risen by 175% after the launch of GPT‑5.1, while “gremlin” had risen by 52%.&lt;/p&gt;
+&lt;a href="https://www.reddit.com/r/ChatGPT/comments/1k5hg5c/does_anyone_elses_chatgpt_refer_to_people_as/"&gt;although it may have started earlier⁠(opens in a new window)&lt;/a&gt;
+&lt;p&gt;A measurable small lexical quirk in GPT‑5.1.&lt;/p&gt;
+&lt;p&gt;At the time, the prevalence of goblins did not look especially alarming. A few months later, the goblins came back to haunt us in a much more specific and reproducible form.&lt;/p&gt;
+&lt;p&gt;With GPT‑5.4, we &lt;a href="https://news.ycombinator.com/item?id=47319285"&gt;and our users⁠(opens in a new window)&lt;/a&gt; noticed an even bigger uptick in references to these creatures. That triggered another internal analysis and surfaced the first connection to the root cause: creature language was especially common in production traffic from users who had selected the “Nerdy” personality. “Nerdy” used the following system prompt, which partially explained the quirkiness:&lt;/p&gt;
+&lt;a href="https://news.ycombinator.com/item?id=47319285"&gt;and our users⁠(opens in a new window)&lt;/a&gt;
+&lt;p&gt;You are an unapologetically nerdy, playful and wise AI mentor to a human. You are passionately enthusiastic about promoting truth, knowledge, philosophy, the scientific method, and critical thinking. [...] You must undercut pretension through playful use of language. The world is complex and strange, and its strangeness must be acknowledged, analyzed, and enjoyed. Tackle weighty subjects without falling into the trap of self-seriousness. [...]&lt;/p&gt;
+&lt;p&gt;If the behavior were simply a broad internet trend, we would expect it to spread more evenly. Instead, it was clustered in the part of the system explicitly optimized for a playful, nerdy style. Nerdy accounted for only 2.5% of all ChatGPT responses, but 66.7% of all “goblin” mentions in ChatGPT responses.&lt;/p&gt;
+&lt;p&gt;The behavior was highly concentrated in the "Nerdy" personality. &lt;/p&gt;
+&lt;p&gt;Because “goblin” prevalence seemed to increase over our model releases, we had a suspicion that something in our personality instruction-following training was amplifying this.&lt;/p&gt;
+&lt;p&gt;Codex helped us compare model outputs generated during RL training containing goblin or gremlin with outputs from the same task that did not. One reward signal stood out immediately: the one originally designed to encourage the Nerdy personality was consistently more favorable to the creature-word outputs. Across all datasets in the audit, the Nerdy personality reward showed a clear tendency to score outputs to the same problem with “goblin” or “gremlin” higher than outputs without, with positive uplift in 76.2% of datasets.&lt;/p&gt;
+&lt;p&gt;That explained why the behavior was boosted with the Nerdy personality prompt, but not why it also appeared without that prompt. To test whether the style was transferring, we tracked mention rates over training both with and without the Nerdy prompt.&lt;/p&gt;
+&lt;p&gt;As goblin and gremlin mentions increased under the Nerdy personality, they increased by nearly the same relative proportion in samples without it. Taken together, the evidence suggests that the broader behavior emerged through transfer from Nerdy personality training.&lt;/p&gt;
+&lt;p&gt;The rewards were applied only in the Nerdy condition, but reinforcement learning does not guarantee that learned behaviors stay neatly scoped to the condition that produced them. Once a style tic is rewarded, later training can spread or reinforce it elsewhere, especially if those outputs are reused in supervised fine-tuning or preference data.&lt;/p&gt;
+&lt;p&gt;That creates a feedback loop:&lt;/p&gt;
+&lt;p&gt;A search through GPT‑5.5’s SFT data found many datapoints containing “goblin” and “gremlin.” Further investigation revealed a whole family of other odd creatures: raccoons, trolls, ogres, and pigeons were identified as other tic words, while most uses of frog turned out to be legitimate.&lt;/p&gt;
+&lt;p&gt;One week average of production prevalence of goblins and gremlins. The drop in GPT‑5.4 Thinking was a result of retiring the “Nerdy” personality mid-March. GPT‑5.5 never launched with the “Nerdy” personality, and showed another increase over GPT‑5.4 (even without “Nerdy”).&lt;/p&gt;
+&lt;p&gt;We retired the “Nerdy” personality in March after launching GPT‑5.4. In training, we removed the goblin-affine reward signal and filtered training data containing creature-words, making goblins less likely to over-appear or show up in inappropriate contexts. Unfortunately, GPT‑5.5 started training before we found the root cause of the goblins. When we began testing GPT‑5.5 in Codex, OpenAI employees immediately noticed the strange affinity for goblins, and we added a &lt;a href="https://github.com/openai/codex/blob/main/codex-rs/models-manager/models.json#L55"&gt;developer-prompt instruction⁠(opens in a new window)&lt;/a&gt; to mitigate. Codex is, after all, quite nerdy.&lt;/p&gt;
+&lt;a href="https://github.com/openai/codex/blob/main/codex-rs/models-manager/models.json#L55"&gt;developer-prompt instruction⁠(opens in a new window)&lt;/a&gt;
+&lt;p&gt;If you want to let the creatures run free in Codex, you can run this command to launch Codex with the goblin-suppressing instructions removed:&lt;/p&gt;
+&lt;p&gt;Depending on who you ask, the goblins are a delightful or annoying quirk of the model. But they are also a powerful example of how reward signals can shape model behavior in unexpected ways, and how models can learn to generalize rewards in certain situations to unrelated ones. Taking the time to understand why a model is behaving in a strange way, and building out ways to investigate those patterns quickly, is an important capability for our research team. This investigation resulted in new tools for the research team to audit model behavior and fix behavior problems at their root.&lt;/p&gt;
+&lt;a href="https://openai.com/research/index/?tags=2026"&gt;2026&lt;/a&gt;
+&lt;a href="https://openai.com/news/"&gt;View all&lt;/a&gt;
+&lt;img src="https://images.ctfassets.net/kftzwdyauwt9/7qMrOFCWWMweIDBUpYFr79/7741661650df6eb935acb5bda179b091/System_Card_Card_SEO_1x1.jpg?w=3840&amp;amp;q=90&amp;amp;fm=webp"/&gt;
+&lt;a href="https://openai.com/index/gpt-5-5-system-card/"&gt;GPT-5.5 System Card&lt;p&gt;SafetyApr 23, 2026&lt;/p&gt;&lt;/a&gt;
+&lt;p&gt;SafetyApr 23, 2026&lt;/p&gt;
+&lt;img src="https://images.ctfassets.net/kftzwdyauwt9/3ZlINT9EhkfY55coSIdBWq/64c9eaca9767f231ff2902685b4092ea/oai_model_spec_1x1.png?w=3840&amp;amp;q=90&amp;amp;fm=webp"/&gt;
+&lt;a href="https://openai.com/index/our-approach-to-the-model-spec/"&gt;Inside our approach to the Model Spec&lt;p&gt;ResearchMar 25, 2026&lt;/p&gt;&lt;/a&gt;
+&lt;p&gt;ResearchMar 25, 2026&lt;/p&gt;
+&lt;img src="https://images.ctfassets.net/kftzwdyauwt9/5GCZHArpg3FLRTissb13aX/50b2716c198dbbc4cf241b05faeee97c/OAI_Monitoring_internal_deployments_for_loss_of_control_risks_Art_Card_1x1.png?w=3840&amp;amp;q=90&amp;amp;fm=webp"/&gt;
+&lt;a href="https://openai.com/index/how-we-monitor-internal-coding-agents-misalignment/"&gt;How we monitor internal coding agents for misalignment&lt;p&gt;SafetyMar 19, 2026&lt;/p&gt;&lt;/a&gt;
+&lt;p&gt;SafetyMar 19, 2026&lt;/p&gt;</content:encoded>
+      <category>Publication</category>
+      <pubDate>Wed, 29 Apr 2026 20:00:00 +0000</pubDate>
+    </item>
     <item>
       <title>GPT-5.5 System Card</title>
       <link>https://openai.com/index/gpt-5-5-system-card/</link>
