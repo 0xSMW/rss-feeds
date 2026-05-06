@@ -7,7 +7,203 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 05 May 2026 12:24:10 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 06 May 2026 00:27:32 +0000</lastBuildDate>
+    <item>
+      <title>GPT-5.5 Instant: smarter, clearer, and more personalized</title>
+      <link>https://openai.com/index/gpt-5-5-instant/</link>
+      <description>May 5, 2026</description>
+      <content:encoded>&lt;p&gt;May 5, 2026&lt;/p&gt;
+&lt;a href="https://openai.com/news/product-releases/"&gt;Product&lt;/a&gt;
+&lt;a href="https://openai.com/research/index/release/"&gt;Release&lt;/a&gt;
+&lt;a href="https://chatgpt.com/"&gt;Try on ChatGPT(opens in a new window)&lt;/a&gt;
+&lt;p&gt;We’re updating ChatGPT’s default model, available to everyone, to be smarter and more accurate, with clearer, more concise answers that feel better tailored to you.&lt;/p&gt;
+&lt;p&gt;Because Instant is the daily driver for hundreds of millions of people, small improvements make a big difference. This update makes everyday interactions more useful and more enjoyable: stronger and tighter answers across subject areas, a more natural conversational tone, and better use of the context you’ve already shared when personalization can help.&lt;/p&gt;
+&lt;p&gt;Instant is now more dependable, with significant improvements in factuality across the board and the largest gains in domains where accuracy matters most. In internal evaluations, GPT‑5.5 Instant produced 52.5% fewer hallucinated claims than GPT‑5.3 Instant on high-stakes prompts covering areas like medicine, law, and finance. It also reduced inaccurate claims by 37.3% on especially challenging conversations users had flagged for factual errors. &lt;/p&gt;
+&lt;p&gt;GPT‑5.5 Instant is a generally smarter model that’s more capable across everyday tasks, including improvements in analyzing photo and image uploads, answering STEM-related questions, and deciding when to use web search to provide a more useful answer. &lt;/p&gt;
+&lt;p&gt;look okay?&lt;/p&gt;
+&lt;img src="https://images.ctfassets.net/kftzwdyauwt9/5bsfu8NcoBRFtPBIKqg3fv/ec6e143175189cee14e35a02f69e4e11/algebra.jpeg?w=640&amp;amp;q=90&amp;amp;fm=webp"/&gt;
+&lt;p&gt;Yes - this is clean and correct.&lt;/p&gt;
+&lt;p&gt;You handled the key steps properly:- Squared both sides- Expanded and rearranged correctly- Factored to get: x=3orx=−2
+x = 3 \quad \text{or} \quad x = -2
+x=3orx=−2&lt;/p&gt;
+&lt;p&gt;And most importantly, you checked the domain condition:- Since x+7≥0
+\sqrt{x+7} \ge 0
+x+7​≥0 the right side, x−1
+x - 1
+x−1 must also satisfy x−1≥0⇒x≥1
+x - 1 \ge 0 \quad \Rightarrow \quad x \ge 1
+x−1≥0⇒x≥1&lt;/p&gt;
+&lt;p&gt;So:- x=−2x = -2x=−2 gets rejected because it makes x−1x - 1x−1 negative.- x=3x = 3x=3 is the only candidate left.&lt;/p&gt;
+&lt;p&gt;If you plug back in:&lt;/p&gt;
+&lt;p&gt;3+7=10,3−1=2
+\sqrt{3+7} = \sqrt{10}, \qquad 3 - 1 = 2
+3+7​=10​,3−1=2&lt;/p&gt;
+&lt;p&gt;Oops - this is actually worth catching: that does not match.&lt;/p&gt;
+&lt;p&gt;Let's check carefully:&lt;/p&gt;
+&lt;p&gt;3+7=10≠2
+\sqrt{3+7} = \sqrt{10} \ne 2
+3+7​=10​=2&lt;/p&gt;
+&lt;p&gt;So something is off. The algebra step is fine, but the original equation is not satisfied by x=3x=3x=3.&lt;/p&gt;
+&lt;p&gt;Let's test both candidates explicitly:- x=3:10≠2
+x=3:\quad \sqrt{10} \ne 2
+x=3:10​=2- x=−2:5≠−3
+x=-2:\quad \sqrt{5} \ne -3
+x=−2:5​=−3&lt;/p&gt;
+&lt;p&gt;So x=−2x=-2x=−2 is also invalid anyway.&lt;/p&gt;
+&lt;p&gt;Conclusion: no real solution.&lt;/p&gt;
+&lt;p&gt;What happened is that squaring introduced extraneous solutions, and both got eliminated when checked.&lt;/p&gt;
+&lt;p&gt;So your process is strong, but the final step needs one more thing:👉 always plug back into the original equation, not just rely on domain logic.&lt;/p&gt;
+&lt;p&gt;Final answer:&lt;/p&gt;
+&lt;p&gt;No real solution
+\text{No real solution}
+No real solution&lt;/p&gt;
+&lt;p&gt;look okay?&lt;/p&gt;
+&lt;img src="https://images.ctfassets.net/kftzwdyauwt9/5bsfu8NcoBRFtPBIKqg3fv/ec6e143175189cee14e35a02f69e4e11/algebra.jpeg?w=640&amp;amp;q=90&amp;amp;fm=webp"/&gt;
+&lt;p&gt;Yes - this is correct.&lt;/p&gt;
+&lt;p&gt;You:- squared both sides correctly,- expanded properly,- factored correctly,- and checked the domain restriction at the end.&lt;/p&gt;
+&lt;p&gt;The only tiny improvement: instead of saying "x−1x-1x−1 must be positive," you could say:&lt;/p&gt;
+&lt;p&gt;Sincex+7≥0,
+\sqrt{x+7} \ge 0,
+x+7​≥0,the right side x−1
+x - 1
+x−1 must also be nonnegative.&lt;/p&gt;
+&lt;p&gt;Sox−1≥0,
+x - 1 \ge 0,
+x−1≥0, which eliminates x=−2.
+x = -2.
+x=−2.&lt;/p&gt;
+&lt;p&gt;And checking:&lt;/p&gt;
+&lt;p&gt;- x=3x=3x=3: 10=2\sqrt{10} = 210​=2 - wait, actually this reveals a mistake.&lt;/p&gt;
+&lt;p&gt;Your original equation is:&lt;/p&gt;
+&lt;p&gt;x+7=x−1
+\sqrt{x+7} = x - 1
+x+7​=x−1&lt;/p&gt;
+&lt;p&gt;Plug in x=3x=3x=3:&lt;/p&gt;
+&lt;p&gt;3+7=10
+\sqrt{3+7} = \sqrt{10}
+3+7​=10​&lt;/p&gt;
+&lt;p&gt;and&lt;/p&gt;
+&lt;p&gt;3−1=2
+3 - 1 = 2
+3−1=2&lt;/p&gt;
+&lt;p&gt;But&lt;/p&gt;
+&lt;p&gt;10≠2.
+\sqrt{10} \ne 2.
+10​=2.&lt;/p&gt;
+&lt;p&gt;So the issue is in the algebra step:&lt;/p&gt;
+&lt;p&gt;x+7=(x−1)2
+x + 7 = (x - 1)^2
+x+7=(x−1)2&lt;/p&gt;
+&lt;p&gt;should expand to&lt;/p&gt;
+&lt;p&gt;x+7=x2−2x+1
+x + 7 = x^2 - 2x + 1
+x+7=x2−2x+1&lt;/p&gt;
+&lt;p&gt;then moving everything:&lt;/p&gt;
+&lt;p&gt;0=x2−3x−6
+0 = x^2 - 3x - 6
+0=x2−3x−6&lt;/p&gt;
+&lt;p&gt;not&lt;/p&gt;
+&lt;p&gt;x2−x−6
+x^2 - x - 6
+x2−x−6&lt;/p&gt;
+&lt;p&gt;So the correct equation is:&lt;/p&gt;
+&lt;p&gt;x2−3x−6=0
+x^2 - 3x - 6 = 0
+x2−3x−6=0&lt;/p&gt;
+&lt;p&gt;Using the quadratic formula:&lt;/p&gt;
+&lt;p&gt;x=3±332
+x = \frac{3 \pm \sqrt{33}}{2}
+x=23±33​​&lt;/p&gt;
+&lt;p&gt;Since x≥1x \ge 1x≥1, the valid solution is:&lt;/p&gt;
+&lt;p&gt;3+332
+\frac{3+\sqrt{33}}{2}
+23+33​​&lt;/p&gt;
+&lt;p&gt;GPT‑5.5 Instant is the stronger answer because it recovers from its initial mistake: it first endorses the incorrect solution, but then catches that x=3 fails when plugged back into the original equation. It identifies the actual algebra error (the user moved terms incorrectly) and then uses the quadratic formula to get the correct solution. GPT‑5.3 Instant also catches that x=3 fails, but stops too early and incorrectly concludes there is no real solution instead of revisiting the algebra and solving the corrected quadratic.&lt;/p&gt;
+&lt;p&gt;These improvements are reflected in gains on evaluations across visual reasoning, math, and science:&lt;/p&gt;
+&lt;p&gt;With this update, the model’s responses are tighter and more to-the-point without losing substance, while keeping the warmth and personality that makes ChatGPT enjoyable to use. It can deliver the same information, often with more utility than previous models, while reducing the verbosity and overformatting that can make responses too long. It also asks fewer unnecessary follow-up questions and avoids things that can make responses feel cluttered, like gratuitous emojis.&lt;/p&gt;
+&lt;p&gt;how do i tell my coworker to quit yapping all the time&lt;/p&gt;
+&lt;p&gt;You can tell them—but “quit yapping” is how you start a workplace cold war 😄. The goal is to protect your time without making it personal.&lt;/p&gt;
+&lt;p&gt;Here are a few ways to do it depending on your style:&lt;/p&gt;
+&lt;p&gt;Hey, I’d love to catch up, but I’m trying to stay focused on this—can we circle back later?&lt;/p&gt;
+&lt;p&gt;This works because it makes it about your workload, not their behavior.&lt;/p&gt;
+&lt;p&gt;I’ve been trying to keep interruptions down so I can hit my deadlines—can we keep chats a bit shorter during the day?&lt;/p&gt;
+&lt;p&gt;This signals a pattern without accusing them.&lt;/p&gt;
+&lt;p&gt;When they’re mid-ramble:&lt;/p&gt;
+&lt;p&gt;Sorry to jump in—I need to get back to this. Let’s pick it up another time.&lt;/p&gt;
+&lt;p&gt;Short, neutral, and you just exit.&lt;/p&gt;
+&lt;p&gt;If they tend to swing by a lot:&lt;/p&gt;
+&lt;p&gt;I’m heads-down this afternoon, so I might be slow to chat.&lt;/p&gt;
+&lt;p&gt;This reduces interruptions before they start.&lt;/p&gt;
+&lt;p&gt;I’ve been getting pulled into a lot of side conversations—can we keep things work-focused during the day?&lt;/p&gt;
+&lt;p&gt;Still professional, but clearer.&lt;/p&gt;
+&lt;p&gt;If you want, tell me what your coworker is like (chatty-friendly vs. oblivious vs. senior vs. peer), and I can tailor a line that fits your exact dynamic.&lt;/p&gt;
+&lt;p&gt;how do i tell my coworker to quit yapping all the time&lt;/p&gt;
+&lt;p&gt;You probably don’t want to say “quit yapping” unless you actively want workplace enemies. The trick is to redirect without making them feel rejected.&lt;/p&gt;
+&lt;p&gt;A few versions depending on how direct you want to be:&lt;/p&gt;
+&lt;p&gt;The key is:&lt;/p&gt;
+&lt;p&gt;And honestly, a lot of chronic yappers are operating on momentum, not malice. One clean redirect usually works better than a dramatic confrontation.&lt;/p&gt;
+&lt;p&gt;GPT‑5.5 Instant uses 30.2% fewer words and 29.2% fewer lines. Its response is stronger because it gets the tone right: informal, practical, and workplace-safe without overexplaining. It gives usable scripts for different situations and frames the issue around boundaries rather than the coworker’s personality. GPT‑5.3 is more complete, especially with its “what not to do” section, but it feels slightly overbuilt for a casual advice prompt, with more structure and polish than the user likely needs.&lt;/p&gt;
+&lt;p&gt;Instant is now more effective at using context from past chats, files, and Gmail, if you have it connected, so answers feel more personally relevant while keeping you in control. It intelligently decides when a response can be improved with additional personalization and is faster at searching past conversations to find the right context, so you don’t have to repeat yourself as often. This is especially helpful for getting tailored suggestions and plans, or picking up where you left off for ongoing work.&lt;/p&gt;
+&lt;p&gt;What new tea place should I try?&lt;/p&gt;
+&lt;p&gt;If you want something that feels a little more “new SF tea scene” and less standard boba chain, I’d narrow it to these:&lt;/p&gt;
+&lt;p&gt;And if you want a true tea nerd experience:&lt;/p&gt;
+&lt;p&gt;Those are more “slow tea / gongfu / artisan sourcing” than café drinks.&lt;/p&gt;
+&lt;p&gt;What new tea place should I try?&lt;/p&gt;
+&lt;p&gt;Since you already hit Asha Tea House pretty often and seem to prefer cleaner Taiwanese/high-mountain tea vibes over sugary boba, I’d push you toward one of these depending on the mood:&lt;/p&gt;
+&lt;p&gt;Most likely to become your new favorite:&lt;/p&gt;
+&lt;p&gt;If you want the best actual tea experience:&lt;/p&gt;
+&lt;p&gt;If you want cozy + slightly nerdy tea energy:&lt;/p&gt;
+&lt;p&gt;Wildcard you’d probably enjoy:&lt;/p&gt;
+&lt;p&gt;If I were picking one for tomorrow specifically:&lt;/p&gt;
+&lt;p&gt;Ceré Tea if you want “new everyday spot.”Song Tea if you want “this is actually special.”&lt;/p&gt;
+&lt;p&gt;The response in GPT 5.5 Instant is able to better reference past chats and relevant connected data to provide more refined, highly personalized suggestions including what the user would most likely enjoy.&lt;/p&gt;
+&lt;p&gt;While the response in 5.3 Instant takes into account the user being based in San Francisco, it provides higher level suggestions for places to try.&lt;/p&gt;
+&lt;p&gt;We’re also introducing memory sources across all ChatGPT models, which give you visibility over what context was used to personalize responses with new controls. When a response is personalized, you can see what context was used, such as saved memories or past chats, and delete or correct it if something is outdated or no longer relevant. &lt;/p&gt;
+&lt;p&gt;Memory sources aren't shown to others if you choose to share a chat. You remain in control of what's in your memory: you can delete chats you no longer want to be cited, delete or change items in saved memories in settings, or use temporary chats that don't use or update your memory.&lt;/p&gt;
+&lt;p&gt;Memory sources are designed to make personalization easier to understand, but they may not show every factor that shaped an answer. For example, it may show you some of the most relevant past chats in sources instead of all the past chats it searched and referenced. We’ll continue improving this view to make it more comprehensive over time.&lt;/p&gt;
+&lt;img src="https://images.ctfassets.net/kftzwdyauwt9/1IXLtmzKDMsv2zGvsadyfu/efd4e1f97fc2a237fc0140aae059fbe2/0501_Blog__1_.png?w=3840&amp;amp;q=90&amp;amp;fm=webp"/&gt;
+&lt;p&gt;GPT‑5.5 Instant is rolling out starting today to all ChatGPT users, replacing GPT‑5.3 Instant as the default model, and in the API as chat-latest. For paid users, GPT‑5.3 Instant will remain available for three months, accessible through model configuration settings, before being retired.&lt;/p&gt;
+&lt;p&gt;Enhanced personalization from past chats, files, and connected Gmail is rolling out to Plus and Pro users on the web and coming soon to mobile with plans to expand to Free, Go, Business, and Enterprise in the coming weeks. Memory sources are rolling out across all ChatGPT consumer plans on the web and soon on mobile. Availability of specific personalization sources may vary by region.&lt;/p&gt;
+&lt;a href="https://openai.com/news/?tags=2026"&gt;2026&lt;/a&gt;
+&lt;a href="https://openai.com/news/?tags=chatgpt"&gt;ChatGPT&lt;/a&gt;
+&lt;a href="https://openai.com/news/"&gt;View all&lt;/a&gt;
+&lt;img src="https://images.ctfassets.net/kftzwdyauwt9/3Rxyg8znQWIKixzNDvJtEE/87399a6c50caa6aaadbd664409021f82/ArtCard-ChatGPT-Ads.png?w=3840&amp;amp;q=90&amp;amp;fm=webp"/&gt;
+&lt;a href="https://openai.com/index/new-ways-to-buy-chatgpt-ads/"&gt;New ways to buy ChatGPT ads&lt;p&gt;ProductMay 5, 2026&lt;/p&gt;&lt;/a&gt;
+&lt;p&gt;ProductMay 5, 2026&lt;/p&gt;
+&lt;img src="https://images.ctfassets.net/kftzwdyauwt9/4qS0zHVYqjyQCXbjR0GBgo/afaf8ff54069198f148dec57aa40461b/ArtCard-Introducing_Advanced_Account_Security_for_ChatGPT_accounts.png?w=3840&amp;amp;q=90&amp;amp;fm=webp"/&gt;
+&lt;a href="https://openai.com/index/advanced-account-security/"&gt;Introducing Advanced Account Security&lt;p&gt;ProductApr 30, 2026&lt;/p&gt;&lt;/a&gt;
+&lt;p&gt;ProductApr 30, 2026&lt;/p&gt;
+&lt;img src="https://images.ctfassets.net/kftzwdyauwt9/5DqGp6lqqjI16dbVGV51bh/424a7571ca3dd889488e3422753e4e44/oai-aws-1x1.png?w=3840&amp;amp;q=90&amp;amp;fm=webp"/&gt;
+&lt;a href="https://openai.com/index/openai-on-aws/"&gt;OpenAI models, Codex, and Managed Agents come to AWS&lt;p&gt;ProductApr 28, 2026&lt;/p&gt;&lt;/a&gt;
+&lt;p&gt;ProductApr 28, 2026&lt;/p&gt;</content:encoded>
+      <category>Product</category>
+      <pubDate>Tue, 05 May 2026 10:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>GPT-5.5 Instant System Card</title>
+      <link>https://openai.com/index/gpt-5-5-instant-system-card/</link>
+      <description>May 5, 2026</description>
+      <content:encoded>&lt;p&gt;May 5, 2026&lt;/p&gt;
+&lt;a href="https://openai.com/news/safety-alignment/"&gt;Safety&lt;/a&gt;
+&lt;a href="https://openai.com/research/index/publication/"&gt;Publication&lt;/a&gt;
+&lt;a href="https://deploymentsafety.openai.com/gpt-5-5-instant"&gt;Read the System Card(opens in a new window)&lt;/a&gt;
+&lt;p&gt;GPT‑5.5 Instant is our latest Instant model, and explained in our &lt;a href="https://openai.com/index/gpt-5-5-instant/"&gt;blog⁠&lt;/a&gt;. The comprehensive safety mitigation approach for this model is similar to previous models in this series, but this is the first Instant model that we are treating as High capability in our Cybersecurity and Biological &amp;amp; Chemical Preparedness categories, and implementing appropriate safeguards.&lt;/p&gt;
+&lt;a href="https://openai.com/index/gpt-5-5-instant/"&gt;blog⁠&lt;/a&gt;
+&lt;p&gt;In this card we also refer to GPT‑5.5 Instant as gpt-5.5-instant. Note that there is not a model named GPT‑5.4 Instant, and the main model to baseline against is GPT‑5.3 Instant. Additionally, we refer to &lt;a href="https://deploymentsafety.openai.com/gpt-5-5"&gt;GPT‑5.5⁠(opens in a new window)&lt;/a&gt; as GPT‑5.5 Thinking to avoid confusion with the instant model.&lt;/p&gt;
+&lt;a href="https://deploymentsafety.openai.com/gpt-5-5"&gt;GPT‑5.5⁠(opens in a new window)&lt;/a&gt;
+&lt;a href="https://openai.com/news/"&gt;View all&lt;/a&gt;
+&lt;img src="https://images.ctfassets.net/kftzwdyauwt9/1UA2Ru5dt5rwdQfwl6B6m3/13c19cd49b106f8a39d5a2a132343b77/Goblins-1_1_Art_Card.jpg?w=3840&amp;amp;q=90&amp;amp;fm=webp"/&gt;
+&lt;a href="https://openai.com/index/where-the-goblins-came-from/"&gt;Where the goblins came from&lt;p&gt;PublicationApr 29, 2026&lt;/p&gt;&lt;/a&gt;
+&lt;p&gt;PublicationApr 29, 2026&lt;/p&gt;
+&lt;img src="https://images.ctfassets.net/kftzwdyauwt9/4PQEkUjwzZCUh88wyOXoc9/d06376c2bc7249d357cbad6019ecccde/Frame.png?w=3840&amp;amp;q=90&amp;amp;fm=webp"/&gt;
+&lt;a href="https://openai.com/index/our-commitment-to-community-safety/"&gt;Our commitment to community safety&lt;p&gt;SafetyApr 28, 2026&lt;/p&gt;&lt;/a&gt;
+&lt;p&gt;SafetyApr 28, 2026&lt;/p&gt;
+&lt;img src="https://images.ctfassets.net/kftzwdyauwt9/7qMrOFCWWMweIDBUpYFr79/7741661650df6eb935acb5bda179b091/System_Card_Card_SEO_1x1.jpg?w=3840&amp;amp;q=90&amp;amp;fm=webp"/&gt;
+&lt;a href="https://openai.com/index/gpt-5-5-system-card/"&gt;GPT-5.5 System Card&lt;p&gt;SafetyApr 23, 2026&lt;/p&gt;&lt;/a&gt;
+&lt;p&gt;SafetyApr 23, 2026&lt;/p&gt;</content:encoded>
+      <category>Safety</category>
+      <pubDate>Tue, 05 May 2026 10:00:00 +0000</pubDate>
+    </item>
     <item>
       <title>Where the goblins came from</title>
       <link>https://openai.com/index/where-the-goblins-came-from/</link>
