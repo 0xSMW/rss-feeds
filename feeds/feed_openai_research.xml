@@ -7,7 +7,66 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 07 May 2026 12:35:35 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 08 May 2026 00:28:44 +0000</lastBuildDate>
+    <item>
+      <title>Advancing voice intelligence with new models in the API</title>
+      <link>https://openai.com/index/advancing-voice-intelligence-with-new-models-in-the-api/</link>
+      <description>May 7, 2026</description>
+      <content:encoded>&lt;p&gt;May 7, 2026&lt;/p&gt;
+&lt;a href="https://openai.com/news/product-releases/"&gt;Product&lt;/a&gt;
+&lt;a href="https://openai.com/research/index/release/"&gt;Release&lt;/a&gt;
+&lt;p&gt;A new generation of realtime voice models that can reason, translate, and transcribe as people speak.&lt;/p&gt;
+&lt;p&gt;We’re introducing three audio models in the API that unlock a new class of voice apps for developers. With these models, developers can build voice experiences that feel more natural, respond more intelligently, and take action in real time:&lt;/p&gt;
+&lt;p&gt;After you start the session, try saying one of these:&lt;/p&gt;
+&lt;p&gt;This demo is time-limited. By using it, you agree to OpenAI's &lt;a href="https://openai.com/policies/terms-of-use/"&gt;Terms&lt;/a&gt; and acknowledge our &lt;a href="https://openai.com/policies/privacy-policy/"&gt;Privacy Policy&lt;/a&gt;.&lt;/p&gt;
+&lt;a href="https://openai.com/policies/terms-of-use/"&gt;Terms&lt;/a&gt;
+&lt;a href="https://openai.com/policies/privacy-policy/"&gt;Privacy Policy&lt;/a&gt;
+&lt;p&gt;Voice is becoming one of the most natural ways for people to use software. It lets someone ask for help while driving, change a travel plan while walking through an airport, get support in their preferred language, or move through a task without stopping to type.&lt;/p&gt;
+&lt;p&gt;But building useful voice products takes more than fast turn-taking or a natural-sounding voice. A voice agent needs to understand what someone means, keep track of context, recover when a request changes, use tools while the conversation continues, and respond in a way that feels appropriate to the moment.&lt;/p&gt;
+&lt;p&gt;Together, the models we are launching move realtime audio from simple call-and-response toward voice interfaces that can actually do work: listen, reason, translate, transcribe, and take action as a conversation unfolds.&lt;/p&gt;
+&lt;p&gt;As voice becomes a more natural way to use software, we’re seeing developers build around three emerging patterns in voice AI:&lt;/p&gt;
+&lt;img src="https://images.ctfassets.net/kftzwdyauwt9/32pQSj9Ayvkt9QSZpOPdky/470716092a7230e92e9670dba0ad410d/OAI_GPT-Realtime-2_Three_ways_to_build_with_voice_AI_desktop-light.svg?w=3840&amp;amp;q=90"/&gt;
+&lt;p&gt;These patterns can also work together. Priceline is working toward a future where travelers can manage entire trips by voice: searching for flights and hotels conversationally, handling changes like adjusting a hotel reservation after a flight delay or getting real-time updates on TSA wait times, and translating conversations once travelers are on the ground.&lt;/p&gt;
+&lt;p&gt;GPT‑Realtime‑2 is built for live voice interactions where the model keeps the conversation moving while it reasons through a request, calls tools, handles corrections or interruptions, and responds in a way that fits the moment.&lt;/p&gt;
+&lt;p&gt;The gains show up on audio evals that map closely to production voice agents: GPT‑Realtime‑2 (high) scores 15.2% higher on Big Bench Audio for audio intelligence than GPT‑Realtime‑1.5. GPT‑Realtime‑2 (xhigh) scores 13.8% higher on Audio MultiChallenge for instruction following, improving over GPT‑Realtime‑1.5 and showing stronger reasoning, context management, and control in live conversations.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://artificialanalysis.ai/methodology/speech-to-speech-benchmarking"&gt;Big Bench Audio⁠&lt;/a&gt; evaluates challenging reasoning capabilities in language models that support audio input. &lt;a href="https://labs.scale.com/leaderboard/audiomc-audio"&gt;Audio MultiChallenge⁠(opens in a new window)&lt;/a&gt; evaluates multi-turn conversational intelligence in spoken dialogue systems, including instruction following, context integration, self-consistency, and handling natural speech corrections.&lt;/p&gt;
+&lt;a href="https://artificialanalysis.ai/methodology/speech-to-speech-benchmarking"&gt;Big Bench Audio⁠&lt;/a&gt;
+&lt;a href="https://labs.scale.com/leaderboard/audiomc-audio"&gt;Audio MultiChallenge⁠(opens in a new window)&lt;/a&gt;
+&lt;p&gt;The magic of GPT‑Realtime‑2 shows up across a variety of different use cases:&lt;/p&gt;
+&lt;p&gt;During early testing, businesses used GPT‑Realtime‑2 to build voice agents that help customers and employees get things done through natural conversation:&lt;/p&gt;
+&lt;p&gt;GPT‑Realtime‑Translate helps developers build live multilingual voice experiences where each person can speak in their preferred language and hear the conversation translated in real time and read the real time transcriptions. It supports more than 70 input languages and 13 output languages, making it useful for customer support, cross-border sales, education, events, media, and creator platforms serving global audiences.&lt;/p&gt;
+&lt;p&gt;For developers, live translation needs to preserve meaning while keeping pace with the speaker, even when people speak naturally, switch context, or use regional pronunciation and domain-specific language. For example, Deutsche Telekom is testing the model for multilingual voice interactions, where lower latency and stronger fluency can make cross-language conversations feel more natural.&lt;/p&gt;
+&lt;p&gt;In this video, Vimeo shows how GPT‑Realtime‑Translate can translate a product education video live as it plays, so global customers can hear updates in their preferred language without waiting for a separately produced version.&lt;/p&gt;
+&lt;p&gt;GPT‑Realtime‑Whisper is a new streaming transcription model built for low-latency speech-to-text. It transcribes audio as people speak, so live products can feel faster, more responsive, and more natural—from captions that appear in the moment, to meeting notes that keep up with the conversation.&lt;/p&gt;
+&lt;p&gt;The model makes live speech usable inside business workflows as it happens. Teams can power captions for meetings, classrooms, broadcasts, and events; generate notes and summaries while conversations are still in progress; build voice agents that need to understand users continuously; and create faster follow-up workflows for customer support, healthcare, sales, recruiting, and other high-volume spoken interactions.&lt;/p&gt;
+&lt;p&gt;The Realtime API incorporates multiple layers of safeguards and mitigations to help prevent misuse. We employ active classifiers over Realtime API sessions, meaning certain conversations can be halted if they are detected as violating our harmful content guidelines. Developers can also easily add their own additional safety guardrails using the &lt;a href="https://openai.github.io/openai-agents-js/guides/guardrails/"&gt;Agents SDK⁠.⁠(opens in a new window)&lt;/a&gt;&lt;/p&gt;
+&lt;a href="https://openai.github.io/openai-agents-js/guides/guardrails/"&gt;Agents SDK⁠.⁠(opens in a new window)&lt;/a&gt;
+&lt;p&gt;Our &lt;a href="https://openai.com/policies/usage-policies/"&gt;usage policies⁠⁠&lt;/a&gt; prohibit repurposing or distributing outputs from our services for spam, deception, or other harmful purposes. Developers must also make it clear to end users when they’re interacting with AI, unless it’s already obvious from the context.&lt;/p&gt;
+&lt;a href="https://openai.com/policies/usage-policies/"&gt;usage policies⁠⁠&lt;/a&gt;
+&lt;p&gt;The Realtime API fully supports &lt;a href="https://platform.openai.com/docs/guides/your-data#data-residency-controls"&gt;EU Data Residency⁠⁠(opens in a new window)&lt;/a&gt; for EU-based applications and is covered by our &lt;a href="https://openai.com/enterprise-privacy/"&gt;enterprise privacy commitments⁠⁠&lt;/a&gt;.&lt;/p&gt;
+&lt;a href="https://platform.openai.com/docs/guides/your-data#data-residency-controls"&gt;EU Data Residency⁠⁠(opens in a new window)&lt;/a&gt;
+&lt;a href="https://openai.com/enterprise-privacy/"&gt;enterprise privacy commitments⁠⁠&lt;/a&gt;
+&lt;p&gt;GPT‑Realtime‑2, GPT‑Realtime‑Translate and GPT‑Realtime‑Whisper are available in the Realtime API. GPT‑Realtime‑2 is priced at $32 / 1M audio input tokens ($0.40 for cached input tokens) and $64 / 1M audio output tokens. GPT‑Realtime‑Translate is priced at $0.034 per minute. GPT‑Realtime‑Whisper is priced at $0.017 per minute. &lt;/p&gt;
+&lt;p&gt;You can test the new realtime voice models in the &lt;a href="https://platform.openai.com/audio/realtime"&gt;Playground⁠(opens in a new window)&lt;/a&gt;. &lt;/p&gt;
+&lt;a href="https://platform.openai.com/audio/realtime"&gt;Playground⁠(opens in a new window)&lt;/a&gt;
+&lt;p&gt;To start building, &lt;a href="codex://new?prompt=Build+or+add+a+minimal+Realtime+2+WebRTC+voice+agent+using+the+gpt-realtime-2+model.%0A%0AUse+the+latest+OpenAI+Realtime+API+docs+for+the+WebRTC+and+session+setup+patterns.+If+this+folder+already+contains+an+app%2C+add+it+to+the+existing+app.+Otherwise%2C+create+a+small+local+web+app.+Add+a+server-side+session+endpoint+that+uses+OPENAI_API_KEY+and+posts+browser+SDP+to+%2Fv1%2Frealtime%2Fcalls+following+the+docs+exactly%3A+multipart+FormData+fields+named+sdp+and+session%2C+not+file+uploads.+Connect+browser+microphone+input+and+model+audio+output+with+RTCPeerConnection%2C+open+an+oai-events+data+channel%2C+and+register+one+sample+function+tool+with+session.update%3A+check_calendar%28date%2C+time%29%2C+which+returns+whether+the+requested+time+is+available.%0A%0AKeep+it+small+and+include+setup%2Frun+instructions."&gt;open this prompt in Codex⁠&lt;/a&gt; to add GPT‑Realtime‑2 to an existing app or start a new one. If you don’t have Codex yet, download the &lt;a href="https://openai.com/codex/"&gt;Codex app⁠&lt;/a&gt; first.&lt;/p&gt;
+&lt;a href="codex://new?prompt=Build+or+add+a+minimal+Realtime+2+WebRTC+voice+agent+using+the+gpt-realtime-2+model.%0A%0AUse+the+latest+OpenAI+Realtime+API+docs+for+the+WebRTC+and+session+setup+patterns.+If+this+folder+already+contains+an+app%2C+add+it+to+the+existing+app.+Otherwise%2C+create+a+small+local+web+app.+Add+a+server-side+session+endpoint+that+uses+OPENAI_API_KEY+and+posts+browser+SDP+to+%2Fv1%2Frealtime%2Fcalls+following+the+docs+exactly%3A+multipart+FormData+fields+named+sdp+and+session%2C+not+file+uploads.+Connect+browser+microphone+input+and+model+audio+output+with+RTCPeerConnection%2C+open+an+oai-events+data+channel%2C+and+register+one+sample+function+tool+with+session.update%3A+check_calendar%28date%2C+time%29%2C+which+returns+whether+the+requested+time+is+available.%0A%0AKeep+it+small+and+include+setup%2Frun+instructions."&gt;open this prompt in Codex⁠&lt;/a&gt;
+&lt;a href="https://openai.com/codex/"&gt;Codex app⁠&lt;/a&gt;
+&lt;a href="https://openai.com/news/?tags=2026"&gt;2026&lt;/a&gt;
+&lt;a href="https://openai.com/news/?tags=api-platform"&gt;API Platform&lt;/a&gt;
+&lt;a href="https://openai.com/news/"&gt;View all&lt;/a&gt;
+&lt;img src="https://images.ctfassets.net/kftzwdyauwt9/7drPwCnD6ied4wPzlJd7qa/d79ccfda974080bbca7d688ad9bcbc6f/OAI_AdsTest_Blog_ArtCard_1x1.png?w=3840&amp;amp;q=90&amp;amp;fm=webp"/&gt;
+&lt;a href="https://openai.com/index/testing-ads-in-chatgpt/"&gt;Testing ads in ChatGPT&lt;p&gt;CompanyMay 7, 2026&lt;/p&gt;&lt;/a&gt;
+&lt;p&gt;CompanyMay 7, 2026&lt;/p&gt;
+&lt;img src="https://images.ctfassets.net/kftzwdyauwt9/2H347RfdThVOeTfSBchxDx/8a053f4cfa92faeed7141265dd02e7dd/20250826.jpg?w=3840&amp;amp;q=90&amp;amp;fm=webp"/&gt;
+&lt;a href="https://openai.com/index/gpt-5-5-instant/"&gt;GPT-5.5 Instant: smarter, clearer, and more personalized&lt;p&gt;ProductMay 5, 2026&lt;/p&gt;&lt;/a&gt;
+&lt;p&gt;ProductMay 5, 2026&lt;/p&gt;
+&lt;img src="https://images.ctfassets.net/kftzwdyauwt9/3Rxyg8znQWIKixzNDvJtEE/87399a6c50caa6aaadbd664409021f82/ArtCard-ChatGPT-Ads.png?w=3840&amp;amp;q=90&amp;amp;fm=webp"/&gt;
+&lt;a href="https://openai.com/index/new-ways-to-buy-chatgpt-ads/"&gt;New ways to buy ChatGPT ads&lt;p&gt;ProductMay 5, 2026&lt;/p&gt;&lt;/a&gt;
+&lt;p&gt;ProductMay 5, 2026&lt;/p&gt;</content:encoded>
+      <category>Product</category>
+      <pubDate>Thu, 07 May 2026 10:00:00 +0000</pubDate>
+    </item>
     <item>
       <title>GPT-5.5 Instant: smarter, clearer, and more personalized</title>
       <link>https://openai.com/index/gpt-5-5-instant/</link>
