@@ -7,7 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 24 May 2026 12:22:07 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 25 May 2026 00:33:36 +0000</lastBuildDate>
     <item>
       <title>Measuring LLMs’ ability to develop exploits</title>
       <link>https://red.anthropic.com/2026/exploit-evals/</link>
