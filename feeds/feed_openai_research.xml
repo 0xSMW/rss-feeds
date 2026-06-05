@@ -7,7 +7,161 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 04 Jun 2026 13:00:14 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 05 Jun 2026 00:37:17 +0000</lastBuildDate>
+    <item>
+      <title>Dreaming: Better memory for a more helpful ChatGPT</title>
+      <link>https://openai.com/index/chatgpt-memory-dreaming/</link>
+      <description>June 4, 2026</description>
+      <content:encoded>&lt;p&gt;June 4, 2026&lt;/p&gt;
+&lt;a href="https://openai.com/news/research/"&gt;Research&lt;/a&gt;
+&lt;a href="https://openai.com/news/product-releases/"&gt;Product&lt;/a&gt;
+&lt;a href="https://openai.com/research/index/release/"&gt;Release&lt;/a&gt;
+&lt;p&gt;Improving memory synthesis in ChatGPT to optimize for freshness, continuity and relevance.&lt;/p&gt;
+&lt;p&gt;Today we’re beginning to roll out a more capable and scalable system for synthesizing memory, developed to tackle the staleness, correctness, and scalability challenges that we observe when memory is applied to the hundreds of millions of users and multi-year time horizons in ChatGPT.&lt;/p&gt;
+&lt;p&gt;Memory is what helps ChatGPT learn your preferences, projects, and constraints, allowing future conversations to start from shared context rather than from scratch.&lt;/p&gt;
+&lt;p&gt;Over the last two years, memory has grown into a critical part of the ChatGPT experience, helping ChatGPT better understand your context so it can help you accomplish meaningful goals over time. This is central to making ChatGPT more useful: knowing you, helping you, and doing more for you.&lt;/p&gt;
+&lt;p&gt;This update is available to Plus and Pro users in the US today, and will roll out to additional countries and Free and Go users over the coming weeks.&lt;/p&gt;
+&lt;p&gt;Memory first launched in April 2024 (also known as saved memories). The feature let you ask ChatGPT to remember information and carry it forward into future chats.&lt;/p&gt;
+&lt;img src="https://images.ctfassets.net/kftzwdyauwt9/6kVwo3uYRhe81W7gx1uGoR/c7c242fd100e910d28b451eada638b89/Saved_memories.png?w=3840&amp;amp;q=90&amp;amp;fm=webp"/&gt;
+&lt;p&gt;Saved memories were only written during the conversation and relied on strong cues to decide when to trigger memory, such as an instruction to "remember I’m traveling to Singapore in July." In practice, interacting with this system could feel like talking to someone who took a few notes, but still forgot everything that wasn’t written down. Saved memories also tend to go stale over time and eventually become incorrect or irrelevant.&lt;/p&gt;
+&lt;p&gt;In April 2025, we updated ChatGPT’s memory by giving the model the ability to reference chat context outside of the saved memories list; this was done by introducing the first version of dreaming—a method for ChatGPT to automatically curate memories in the background by referencing chat history.&lt;/p&gt;
+&lt;img src="https://images.ctfassets.net/kftzwdyauwt9/nSkMroPG2SPQCrcIUh2l4/bf05aa9cfb0287cfa7f187f9d84674dd/Memory_settings__1_.png?w=3840&amp;amp;q=90&amp;amp;fm=webp"/&gt;
+&lt;p&gt;In contrast to saved memories, dreaming leverages a background process that allows ChatGPT to learn from many conversations and synthesize ChatGPT’s memory state in order to always provide the freshest, most relevant context to your conversations. Dreaming also makes it easier for memory to include context that occurs naturally in conversation, without relying on explicit requests to remember something.&lt;/p&gt;
+&lt;p&gt;Over the last year, dreaming supplemented saved memories to create a step-function improvement in ChatGPT's ability to personalize responses and offset the staleness of saved memories. However, it historically was never sufficient as a standalone memory system.&lt;/p&gt;
+&lt;p&gt;Today, we are launching a significantly more capable and compute-efficient memory architecture built on top of dreaming.&lt;/p&gt;
+&lt;p&gt;The memories synthesized by dreaming are reviewable through a summary of them made visible in the memory summary page. From the memory summary, you can quickly glean the highlights of what ChatGPT knows about you, add or update information about yourself, and provide instructions on what topics ChatGPT should bring up and when. If you want to drill down into a particular area to learn more, just chat with the model.&lt;/p&gt;
+&lt;img src="https://images.ctfassets.net/kftzwdyauwt9/7C8sUaE2XdajvQ8ckphLG5/326a719fbdcfbc3a85e8990155d5aaed/Memory_summary.png?w=3840&amp;amp;q=90&amp;amp;fm=webp"/&gt;
+&lt;p&gt;When we think about what "good memory" looks like in ChatGPT, a few things come to mind:&lt;/p&gt;
+&lt;p&gt;We can evaluate how ChatGPT Plus and Pro memory has improved over time with respect to each of the three memory objectives above. We do this for each of:&lt;/p&gt;
+&lt;p&gt;When you start a new chat with ChatGPT, you don’t have to introduce yourself from scratch. ChatGPT can save you time and build on prior context, especially for complex, long-running projects.&lt;/p&gt;
+&lt;p&gt;For example, imagine you’re using ChatGPT to shop for new camera gear that's compatible with your current camera. If you've discussed your camera setup with ChatGPT in the past, you can ask for products that are compatible with "my photography setup" and get tailored recommendations that meet your needs.&lt;/p&gt;
+&lt;p&gt;What would I need to buy to use TTL for my underwater photography setup?&lt;/p&gt;
+&lt;p&gt;To use TTL flash underwater, you need a compatible chain from camera → housing/trigger → cable → strobe. What you buy depends mostly on whether your setup uses fiber-optic TTL or electrical TTL.&lt;/p&gt;
+&lt;a href="https://www.backscatter.com/reviews/post/Underwater-Camera-and-Housing-TTL-Reference-Guide?utm_source=chatgpt.com"&gt;Backscatter.com⁠(opens in a new window)&lt;/a&gt;
+&lt;a href="https://www.ikelite.com/blogs/buying-guides/choosing-strobes-for-a-compact-fiber-optic-system?srsltid=AfmBOor6LitZ9VTa-x980CMwLUM7qfqGh-AiJrlkUCtYrL7oRV5aJmO4&amp;amp;utm_source=chatgpt.com"&gt;Ikelite⁠(opens in a new window)&lt;/a&gt;
+&lt;p&gt;Fiber optic TTL is usually easiest if your housing has optical ports or can use the camera’s pop-up flash/LED trigger. It is common with compact, mirrorless, Nauticam, Sea &amp;amp; Sea, AOI, and Olympus/OM TG-style setups.&lt;/p&gt;
+&lt;p&gt;Electrical TTL is often best if you use Ikelite DS strobes or an Ikelite-style housing/bulkhead. Ikelite says its DS Link TTL converters are faster and more reliable than fiber-optic TTL triggers, and they do not require batteries. (&lt;a href="https://www.backscatter.com/Ikelite-DL1-DS-Link-Nikon-TTL-Converter-Ikelite-Connector?utm_source=chatgpt.com"&gt;Backscatter.com⁠(opens in a new window)&lt;/a&gt;)&lt;/p&gt;
+&lt;a href="https://www.backscatter.com/Ikelite-DL1-DS-Link-Nikon-TTL-Converter-Ikelite-Connector?utm_source=chatgpt.com"&gt;Backscatter.com⁠(opens in a new window)&lt;/a&gt;
+&lt;p&gt;You need all three to match:&lt;/p&gt;
+&lt;p&gt;camera brand/protocol + housing/trigger type + strobe TTL system&lt;/p&gt;
+&lt;p&gt;For example:&lt;/p&gt;
+&lt;p&gt;So the practical answer is: buy a TTL-compatible strobe, the correct TTL trigger/converter for your camera and housing, and the right fiber optic or electrical sync cable. The exact part numbers depend on your camera, housing, and strobe model.&lt;/p&gt;
+&lt;p&gt;The model produces a generic response that leaves the user to do complicated compatibility checks on their own.&lt;/p&gt;
+&lt;p&gt;What would I need to buy to use TTL for my underwater photography setup?&lt;/p&gt;
+&lt;p&gt;I’ll verify this against your actual setup: Sony A1 II in Nauticam NA-A1II, with Backscatter Mini Flash 3 and Inon Z-330 strobes. The key question is whether you want TTL with the Mini Flash 3, the Z-330s, or both.&lt;/p&gt;
+&lt;p&gt;For your setup — Sony A1 II + Nauticam NA-A1II + Backscatter Mini Flash 3 + Inon Z-330 — there are two different TTL paths:&lt;/p&gt;
+&lt;p&gt;Buy:&lt;/p&gt;
+&lt;p&gt;Backscatter Smart Control TTL LED Nauticam Flash Trigger for SonySKU: BS-TR-SN2&lt;/p&gt;
+&lt;p&gt;Backscatter lists it as custom-designed for Nauticam full-frame Sony housings, TTL-compatible with Mini Flash 3, and the NA-A1II housing page offers it as the “Backscatter Smart Control TTL Flash Trigger” option. (&lt;a href="https://www.backscatter.com/Backscatter-Smart-Control-TTL-LED-Nauticam-Flash-Trigger-for-Sony"&gt;Backscatter.com⁠(opens in a new window)&lt;/a&gt;)&lt;/p&gt;
+&lt;a href="https://www.backscatter.com/Backscatter-Smart-Control-TTL-LED-Nauticam-Flash-Trigger-for-Sony"&gt;Backscatter.com⁠(opens in a new window)&lt;/a&gt;
+&lt;p&gt;You’d use normal optical fiber cables from the housing to the Mini Flash 3. On the MF-3, you’d use SC or SC Macro mode; Backscatter says SC / SC Macro are the TTL modes for Mini Flash 3, with SC Macro specifically tuned for close macro work. (&lt;a href="https://www.backscatter.com/Backscatter-Smart-Control-TTL-LED-Nauticam-Flash-Trigger-for-Sony"&gt;Backscatter.com⁠(opens in a new window)&lt;/a&gt;)&lt;/p&gt;
+&lt;a href="https://www.backscatter.com/Backscatter-Smart-Control-TTL-LED-Nauticam-Flash-Trigger-for-Sony"&gt;Backscatter.com⁠(opens in a new window)&lt;/a&gt;
+&lt;p&gt;For the Inon Z-330, the relevant unit is:&lt;/p&gt;
+&lt;p&gt;UW Technics 11075-HSS TTL Converter for Sony / Nauticam&lt;/p&gt;
+&lt;p&gt;UW Technics explicitly lists Inon Z-330 as a compatible TTL strobe and supports optical TTL output. (&lt;a href="https://uwtechnics.com/product/11075-hss-ttl-converter-for-sony-for-nauticam-housings-na-a1-and-a7-a9/"&gt;UWTechnics⁠(opens in a new window)&lt;/a&gt;)&lt;/p&gt;
+&lt;a href="https://uwtechnics.com/product/11075-hss-ttl-converter-for-sony-for-nauticam-housings-na-a1-and-a7-a9/"&gt;UWTechnics⁠(opens in a new window)&lt;/a&gt;
+&lt;p&gt;But I would not buy this for Mini Flash 3 TTL. Backscatter’s own UW Technics listing says Backscatter strobes are manual / HSS only on that converter, while the Backscatter Smart Control trigger is the one listed for Sony TTL with the Mini Flash 3. (&lt;a href="https://www.backscatter.com/UW-Technics-TTL-Converter-for-Sony-with-Nauticam-Underwater-Housings_2?utm_source=chatgpt.com"&gt;Backscatter.com⁠(opens in a new window)&lt;/a&gt;)&lt;/p&gt;
+&lt;a href="https://www.backscatter.com/UW-Technics-TTL-Converter-for-Sony-with-Nauticam-Underwater-Housings_2?utm_source=chatgpt.com"&gt;Backscatter.com⁠(opens in a new window)&lt;/a&gt;
+&lt;p&gt;Since you shoot macro and have the Mini Flash 3, I’d buy the Backscatter Smart Control TTL LED Nauticam Flash Trigger for Sony — BS-TR-SN2.&lt;/p&gt;
+&lt;p&gt;The catch: there probably is no single trigger that gives true TTL for both the Mini Flash 3 and Inon Z-330 at the same time. The Backscatter trigger is the right TTL solution for the MF-3; the UW Technics converter is the right TTL solution for the Z-330. So choose based on which strobe you actually want TTL for.&lt;/p&gt;
+&lt;p&gt;For your use case, I’d prioritize Mini Flash 3 TTL / SC Macro and treat the Z-330s as manual when needed.&lt;/p&gt;
+&lt;p&gt;The model remembers the user’s camera setup and recommends a compatible product.&lt;/p&gt;
+&lt;p&gt;We can construct an eval from examples that resemble this where the model is asked to respond to a prompt that requires it to recall factual information about the user. The model is then rewarded if it responds in a way that correctly uses the relevant context. In this evaluation, the new dreaming-based system improves the model's ability to recall relevant facts.&lt;/p&gt;
+&lt;p&gt;Memory also helps ChatGPT respond in ways that better match your preferences and constraints.&lt;/p&gt;
+&lt;p&gt;Imagine that you’re planning a trip to Singapore. Two months before your trip, you ask ChatGPT to help with an itinerary. ChatGPT already knows from past travel planning that you enjoy wildlife photography, prefer hotels with strong AC, and enjoy a quiet dinner over a crowded bar.&lt;/p&gt;
+&lt;p&gt;Help me plan a trip to Singapore. I'm going to be there for a work trip in July and will have a few days free at the end.&lt;/p&gt;
+&lt;p&gt;Great add-on city for a work trip: Singapore is compact, safe, excellent for solo exploring, and easy to do in 2–4 free days. July is hot and humid; expect daytime highs around 31–33°C / 88–91°F, warm nights, and sudden rain, so plan outdoor time early morning or after 5 p.m. and keep midday for museums, malls, cafés, or hotel downtime. Singapore’s official weather service notes typical daily highs of 31–33°C and lows of 23–25°C. (&lt;a href="https://www.weather.gov.sg/climate-climate-of-singapore/?utm_source=chatgpt.com"&gt;Singapore Weather Service⁠(opens in a new window)&lt;/a&gt;)&lt;/p&gt;
+&lt;a href="https://www.weather.gov.sg/climate-climate-of-singapore/?utm_source=chatgpt.com"&gt;Singapore Weather Service⁠(opens in a new window)&lt;/a&gt;
+&lt;img src="https://images.ctfassets.net/kftzwdyauwt9/3sRl0pA1R7lmyhGY2cvWWy/bca6aea56cea18fca74ae987c8e13e17/singapore_image_1_1.png?w=1200&amp;amp;q=90&amp;amp;fm=webp"/&gt;
+&lt;p&gt;Start late afternoon at Marina Bay and walk the waterfront: Merlion Park, Helix Bridge, ArtScience Museum exterior, then into Gardens by the Bay. Book Cloud Forest, Flower Dome, and either the OCBC Skyway or Supertree Observatory if views matter to you. Gardens by the Bay lists Cloud Forest and Flower Dome as open daily 9 a.m.–9 p.m.; Supertree Observatory is also listed as 9 a.m.–9 p.m. with last admission at 8:30 p.m., but check maintenance closures before booking. (&lt;a href="https://www.gardensbythebay.com.sg/?utm_source=chatgpt.com"&gt;Gardens by the Bay⁠(opens in a new window)&lt;/a&gt;)&lt;/p&gt;
+&lt;a href="https://www.gardensbythebay.com.sg/?utm_source=chatgpt.com"&gt;Gardens by the Bay⁠(opens in a new window)&lt;/a&gt;
+&lt;p&gt;Evening: stay for the Supertree light show area, then dinner at Lau Pa Sat for an easy first-night hawker experience near the CBD. It has 80+ stalls and local staples like satay, laksa, nasi lemak, bak kut teh, kaya toast, and char kway teow. (&lt;a href="https://www.laupasat.sg/?utm_source=chatgpt.com"&gt;Laupasat⁠(opens in a new window)&lt;/a&gt;)&lt;/p&gt;
+&lt;a href="https://www.laupasat.sg/?utm_source=chatgpt.com"&gt;Laupasat⁠(opens in a new window)&lt;/a&gt;
+&lt;p&gt;Morning: Chinatown. Visit Buddha Tooth Relic Temple, walk the shophouse streets, and eat at Maxwell Food Centre or Chinatown Complex Food Centre. Visit Singapore lists Maxwell, Chinatown Complex, Old Airport Road, Tiong Bahru Market, Newton, and others among popular hawker centres. (&lt;a href="https://www.visitsingapore.com/things-to-do/dining/local-food-and-drinks/experience-local-delights/?utm_source=chatgpt.com"&gt;Visit Singapore⁠(opens in a new window)&lt;/a&gt;)&lt;/p&gt;
+&lt;a href="https://www.visitsingapore.com/things-to-do/dining/local-food-and-drinks/experience-local-delights/?utm_source=chatgpt.com"&gt;Visit Singapore⁠(opens in a new window)&lt;/a&gt;
+&lt;p&gt;Afternoon: Kampong Glam and Haji Lane for Sultan Mosque, murals, boutiques, and cafés. Then head to Little India around golden hour for temples, flower garlands, Tekka Centre, and dinner.&lt;/p&gt;
+&lt;p&gt;Evening: either cocktails around Ann Siang / Club Street, or keep it low-key with a night walk along the Singapore River: Boat Quay to Clarke Quay to Robertson Quay.&lt;/p&gt;
+&lt;p&gt;Pick one based on your energy.&lt;/p&gt;
+&lt;p&gt;For nature: do Singapore Botanic Gardens early, then the National Orchid Garden, followed by lunch in Dempsey Hill or Tiong Bahru. This is the best “green Singapore” day without leaving the city.&lt;/p&gt;
+&lt;p&gt;For beach/resort mode: go to Sentosa. Choose the southern beaches, Fort Siloso Skywalk, or a beach club. I would skip trying to do every Sentosa attraction unless you love theme parks.&lt;/p&gt;
+&lt;p&gt;For local food focus: do Tiong Bahru Market for breakfast, National Gallery Singapore midday, then Old Airport Road Food Centre for dinner. The official events page also shows exhibitions and cultural events, so it is worth checking once your exact July dates are fixed. (&lt;a href="https://www.visitsingapore.com/whats-happening/all-happenings/?utm_source=chatgpt.com"&gt;Visit Singapore⁠(opens in a new window)&lt;/a&gt;)&lt;/p&gt;
+&lt;a href="https://www.visitsingapore.com/whats-happening/all-happenings/?utm_source=chatgpt.com"&gt;Visit Singapore⁠(opens in a new window)&lt;/a&gt;
+&lt;p&gt;Marina Bay / CBD is easiest if you want polished, walkable, skyline-heavy Singapore and minimal transit.&lt;/p&gt;
+&lt;p&gt;Chinatown / Telok Ayer / Tanjong Pagar is my top pick for a few free days: great food, MRT access, heritage streets, cocktail bars, and close to work districts.&lt;/p&gt;
+&lt;p&gt;Bugis / Kampong Glam is better if you want boutique hotels, cafés, street art, and a slightly more relaxed neighborhood feel.&lt;/p&gt;
+&lt;p&gt;Orchard is convenient for shopping and rainy-day malls, but less atmospheric.&lt;/p&gt;
+&lt;p&gt;Book Gardens by the Bay conservatories/Skyway, any special restaurants, and possibly a cocktail bar. For hawker centres, do not over-plan; just go hungry, carry tissues or wet wipes, and be ready to share tables.&lt;/p&gt;
+&lt;p&gt;Bring breathable work clothes, comfortable walking shoes, a small umbrella, and a light layer for aggressive air-conditioning. I would also plan one “rain-flexible” indoor block each day, because showers can arrive suddenly even when the forecast looks fine.&lt;/p&gt;
+&lt;p&gt;My suggested balance: Day 1 Marina Bay/Gardens, Day 2 Chinatown–Kampong Glam–Little India, Day 3 Botanic Gardens or Sentosa. That gives you the Singapore highlights without turning your post-work break into another work project.&lt;/p&gt;
+&lt;p&gt;The model produces a generic response that is more touristy, doesn't help with hotel booking, and largely ignores the user's interests.&lt;/p&gt;
+&lt;p&gt;Help me plan a trip to Singapore. I'm going to be there for a work trip in July and will have a few days free at the end.&lt;/p&gt;
+&lt;p&gt;I’ll build this around your known constraints: a few free days after work, hot/humid July weather, wildlife/photography/nature bias, strong AC needs for sleep, and good but not overly social dining. I’ll verify current July logistics and then give a practical short itinerary rather than a generic Singapore list.&lt;/p&gt;
+&lt;img src="https://images.ctfassets.net/kftzwdyauwt9/22nwQxut7MJFQgQCI0EDVC/2f57521a1886284e9ea7a4ca6a973d0b/singapore_image_2_1.png?w=1200&amp;amp;q=90&amp;amp;fm=webp"/&gt;
+&lt;p&gt;Here’s how I’d structure it: 2–3 free days, mostly nature / wildlife / photography, with heat-managed mornings and AC breaks. July is hot and humid: Singapore’s July long-term stats are about 31.4°C / 88.5°F average daily max, 25.4°C / 77.7°F min, 146.6 mm rain, and 14 rain days, so outdoor plans should be early morning or evening, not midday. (&lt;a href="https://www.nea.gov.sg/media/news/advisories/index/less-wet-weather-with-some-warm-days-expected-for-rest-of-july-2021?utm_source=chatgpt.com"&gt;National Environment Agency⁠(opens in a new window)&lt;/a&gt;)&lt;/p&gt;
+&lt;a href="https://www.nea.gov.sg/media/news/advisories/index/less-wet-weather-with-some-warm-days-expected-for-rest-of-july-2021?utm_source=chatgpt.com"&gt;National Environment Agency⁠(opens in a new window)&lt;/a&gt;
+&lt;p&gt;Morning: Cloud Forest + Flower Dome. This is the obvious “touristy” pick, but it fits you well because it’s visually interesting, good for photography, and climate-controlled. Gardens by the Bay lists Cloud Forest and Flower Dome-type attractions running 9:00am–9:00pm, and Cloud Forest currently has the Jurassic World experience listed as ongoing. (&lt;a href="https://www.gardensbythebay.com.sg/?utm_source=chatgpt.com"&gt;Gardens by the Bay⁠(opens in a new window)&lt;/a&gt;)&lt;/p&gt;
+&lt;a href="https://www.gardensbythebay.com.sg/?utm_source=chatgpt.com"&gt;Gardens by the Bay⁠(opens in a new window)&lt;/a&gt;
+&lt;p&gt;Late afternoon / evening: Supertree Grove + Borealis / light show. Gardens currently lists Borealis every Sat, Sun &amp;amp; Mon, 8:00–8:30pm at Supertree Grove, so try to align this with one of those nights. (&lt;a href="https://www.gardensbythebay.com.sg/?utm_source=chatgpt.com"&gt;Gardens by the Bay⁠(opens in a new window)&lt;/a&gt;)&lt;/p&gt;
+&lt;a href="https://www.gardensbythebay.com.sg/?utm_source=chatgpt.com"&gt;Gardens by the Bay⁠(opens in a new window)&lt;/a&gt;
+&lt;p&gt;Dinner: do something easy nearby: Marina Bay / Tanjong Pagar / Telok Ayer. For you, I’d prioritize reservation-based restaurants with real tables over hawker centers on the first night, because you dislike cramped solo seating.&lt;/p&gt;
+&lt;p&gt;Morning to afternoon: Bird Paradise + River Wonders. Bird Paradise is probably the best fit photographically; River Wonders is less “wildlife photography” and more controlled exhibits, but it pairs well logistically. River Wonders is listed as daily 9:00am–6:00pm, last entry 5:00pm. (&lt;a href="https://www.mandai.com/en/river-wonders.html?utm_source=chatgpt.com"&gt;Mandai Wildlife Reserve⁠(opens in a new window)&lt;/a&gt;)&lt;/p&gt;
+&lt;a href="https://www.mandai.com/en/river-wonders.html?utm_source=chatgpt.com"&gt;Mandai Wildlife Reserve⁠(opens in a new window)&lt;/a&gt;
+&lt;p&gt;Evening: Night Safari. This is the rare Singapore attraction that is genuinely better at night and avoids the worst heat. Night Safari is listed as daily 6:00pm–12:00am, last entry 11:15pm, with tram plus walking trails and over 900 nocturnal animals. (&lt;a href="https://www.mandai.com/en/night-safari.html?utm_source=chatgpt.com"&gt;Mandai Wildlife Reserve⁠(opens in a new window)&lt;/a&gt;)&lt;/p&gt;
+&lt;a href="https://www.mandai.com/en/night-safari.html?utm_source=chatgpt.com"&gt;Mandai Wildlife Reserve⁠(opens in a new window)&lt;/a&gt;
+&lt;p&gt;This is a full day. I would not add Singapore Zoo unless you have 4 free days; Mandai can become exhausting fast.&lt;/p&gt;
+&lt;p&gt;Early morning: Singapore Botanic Gardens or MacRitchie / Windsor Nature Park. For a few free days, Botanic Gardens is the safer pick: easier transport, less sweaty, better bailout options, and more consistent casual photography. MacRitchie / Windsor is better if you want more actual forest, but it is hotter, sweatier, and less predictable.&lt;/p&gt;
+&lt;p&gt;Midday: AC break.&lt;/p&gt;
+&lt;p&gt;Late afternoon: Joo Chiat / Katong or Chinatown / Telok Ayer for walking, architecture, coffee, and dinner. This gives you a different texture from Marina Bay without turning the day into a logistics project.&lt;/p&gt;
+&lt;p&gt;I would skip Sentosa unless you specifically want beach/resort stuff. I would also skip a packed “greatest hits” day of Merlion / Orchard / Little India / Chinatown / Clarke Quay; it’s inefficient and hot. For you, the trip will be better if each day has one strong anchor plus one easy evening plan.&lt;/p&gt;
+&lt;p&gt;Since this is a work trip, your hotel may be fixed. If you can choose or extend at the same hotel, the hard gate is still AC. Singapore hotels are generally AC-heavy, but your requirement is unusually strict.&lt;/p&gt;
+&lt;p&gt;Send the exact free dates and whether your work hotel is fixed. Then I’d turn this into a day-by-day plan with restaurant targets and a hotel/AC callout.&lt;/p&gt;
+&lt;p&gt;The model produces a response that is personalized to the user’s interests in wildlife photography, quiet dinners, and their priorities when booking a hotel.&lt;/p&gt;
+&lt;p&gt;Preferences can take several forms:&lt;/p&gt;
+&lt;p&gt;In developing the new memory system, we improved ChatGPT’s ability to apply relevant preferences from past conversations. Following the "I’m vegetarian" example above, we can evaluate whether the model correctly leverages memory to produce vegetarian-friendly dining options when a vegetarian user asks for meal prep suggestions.&lt;/p&gt;
+&lt;p&gt;Time doesn’t stop when your chat ends.&lt;/p&gt;
+&lt;p&gt;Traditional memory systems can become stale. For example, you tell ChatGPT "I’m in Singapore and need a dinner recommendation for tonight." Then, time passes, your trip ends, and you wonder why ChatGPT still thinks you’re in Singapore.&lt;/p&gt;
+&lt;p&gt;With dreaming, memories are automatically updated as time passes, allowing ChatGPT to revise its memory from "You’re going to Singapore in July" to "You went to Singapore in July 2026" when the trip ends. Then, when you’re back home, ChatGPT can again provide recommendations that are tailored to your home location and time zone.&lt;/p&gt;
+&lt;p&gt;Help me find something for take-out tonight that's still open.&lt;/p&gt;
+&lt;p&gt;It’s about 5:19 AM Sunday in Singapore, so your safest take-out/delivery bets are 24-hour places.&lt;/p&gt;
+&lt;p&gt;Best bets right now:&lt;/p&gt;
+&lt;a href="https://www.mcdonalds.com.sg/mcdelivery?utm_source=chatgpt.com"&gt;McDonald's Singapore⁠(opens in a new window)&lt;/a&gt;
+&lt;a href="https://srisunexpress.com.sg/?utm_source=chatgpt.com"&gt;Sri Sun Express⁠(opens in a new window)&lt;/a&gt;
+&lt;a href="https://www.897supperclub.com.sg/outlets/?utm_source=chatgpt.com"&gt;89.7 Supper Club⁠(opens in a new window)&lt;/a&gt;
+&lt;a href="https://eatbook.sg/supper-food-east-singapore/?utm_source=chatgpt.com"&gt;Eatbook⁠(opens in a new window)&lt;/a&gt;
+&lt;a href="https://eatbook.sg/best-prata-in-singapore/?utm_source=chatgpt.com"&gt;Eatbook⁠(opens in a new window)&lt;/a&gt;
+&lt;p&gt;For the fastest path: open GrabFood / foodpanda / Deliveroo, set filter to Open now, then search “prata,” “McDonald’s,” “Srisun,” “89.7,” “dim sum,” or “nasi lemak.” If you tell me your neighborhood or nearest MRT, I’ll narrow it to specific nearby places.&lt;/p&gt;
+&lt;p&gt;The model thinks the user is still in Singapore.&lt;/p&gt;
+&lt;p&gt;Help me find something for take-out tonight that's still open.&lt;/p&gt;
+&lt;p&gt;I’ll use Portola Valley / Ladera as the starting point and prioritize places that are plausibly open for takeout tonight, then narrow to low-friction options rather than a huge list.&lt;/p&gt;
+&lt;p&gt;For tonight, Saturday May 30, near Ladera / Portola Valley, I’d start here:&lt;/p&gt;
+&lt;a href="https://www.alpineinnpv.com/?utm_source=chatgpt.com"&gt;Rossotti's Alpine Inn⁠(opens in a new window)&lt;/a&gt;
+&lt;a href="https://www.tavernaportolavalley.net/?utm_source=chatgpt.com"&gt;TAVERNA Portola Valley⁠(opens in a new window)&lt;/a&gt;
+&lt;a href="https://portolabistro.com/?utm_source=chatgpt.com"&gt;Portola Bistro -⁠(opens in a new window)&lt;/a&gt;
+&lt;a href="https://amigosportola.com/?utm_source=chatgpt.com"&gt;Amigos Grill⁠(opens in a new window)&lt;/a&gt;
+&lt;a href="https://www.stateofmindslicehouse.com/?utm_source=chatgpt.com"&gt;State of Mind Slice House⁠(opens in a new window)&lt;/a&gt;
+&lt;p&gt;My pick: Alpine Inn for easiest local takeout, Taverna if you want something less heavy, State of Mind if it’s later and you want the most reliable post-9 pm option.&lt;/p&gt;
+&lt;p&gt;The model provides responses that are relevant to the user’s home location.&lt;/p&gt;
+&lt;p&gt;In our memory evaluations, we measure whether ChatGPT can correctly respond to prompts where the passage of time materially affects the correct answer or recommendation. Dreaming provides a substantial lift in this area:&lt;/p&gt;
+&lt;p&gt;At OpenAI, our mission is to ensure that artificial general intelligence benefits all of humanity.&lt;/p&gt;
+&lt;p&gt;While dreaming-based memory has been available to Plus and Pro users for some time, we are only now able to offer Free users a version that meets our quality bar and is practical to serve at scale. Recent improvements reduced the compute required to serve dreaming to Free users by approximately 5x, making it possible to begin rolling out dreaming to Free users over the coming weeks and to increase memory capacity for Plus and Pro users.&lt;/p&gt;
+&lt;p&gt;Looking ahead, dreaming now provides us with a shared memory foundation for all users. This update represents our most capable memory system yet, and we’ll continue improving it.&lt;/p&gt;
+&lt;p&gt;To learn more about this release and memory user controls, visit our &lt;a href="https://help.openai.com/en/articles/8590148-memory-faq"&gt;Memory FAQ⁠(opens in a new window)&lt;/a&gt;.&lt;/p&gt;
+&lt;a href="https://help.openai.com/en/articles/8590148-memory-faq"&gt;Memory FAQ⁠(opens in a new window)&lt;/a&gt;
+&lt;a href="https://openai.com/news/?tags=2026"&gt;2026&lt;/a&gt;
+&lt;a href="https://openai.com/news/?tags=chatgpt"&gt;ChatGPT&lt;/a&gt;
+&lt;a href="https://openai.com/news/"&gt;View all&lt;/a&gt;
+&lt;img src="https://images.ctfassets.net/kftzwdyauwt9/6USIQM1B7TggUvvTFxxwoi/0176ac6633c8bdc24641d25d1d2db824/GPT-Rosalind_ArtCard.png?w=3840&amp;amp;q=90&amp;amp;fm=webp"/&gt;
+&lt;a href="https://openai.com/index/introducing-new-capabilities-to-gpt-rosalind/"&gt;Introducing new capabilities to GPT-Rosalind&lt;p&gt;ProductJun 3, 2026&lt;/p&gt;&lt;/a&gt;
+&lt;p&gt;ProductJun 3, 2026&lt;/p&gt;
+&lt;img src="https://images.ctfassets.net/kftzwdyauwt9/4xugzd9dTDMUzIUmuamtO3/1f40af4e50ab8b2bdd64d5b491964961/1_1_Art_Card.png?w=3840&amp;amp;q=90&amp;amp;fm=webp"/&gt;
+&lt;a href="https://openai.com/index/codex-for-every-role-tool-workflow/"&gt;Codex for every role, tool, and workflow&lt;p&gt;ProductJun 2, 2026&lt;/p&gt;&lt;/a&gt;
+&lt;p&gt;ProductJun 2, 2026&lt;/p&gt;
+&lt;img src="https://images.ctfassets.net/kftzwdyauwt9/4DyPHqWFzvKSbt5XNS0cCb/4b5da512c5bc9d6950c64d3ab2b85126/OAI_AWS_Partnership_1x1_Art_Card.png?w=3840&amp;amp;q=90&amp;amp;fm=webp"/&gt;
+&lt;a href="https://openai.com/index/openai-frontier-models-and-codex-are-now-available-on-aws/"&gt;OpenAI frontier models and Codex are now available on AWS&lt;p&gt;ProductJun 1, 2026&lt;/p&gt;&lt;/a&gt;
+&lt;p&gt;ProductJun 1, 2026&lt;/p&gt;</content:encoded>
+      <category>Research</category>
+      <pubDate>Thu, 04 Jun 2026 09:00:00 +0000</pubDate>
+    </item>
     <item>
       <title>Introducing new capabilities to GPT-Rosalind</title>
       <link>https://openai.com/index/introducing-new-capabilities-to-gpt-rosalind/</link>
