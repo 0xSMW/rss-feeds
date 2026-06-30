@@ -1,72 +1,67 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0">
   <channel>
-    <title>Digg Tech Top 10</title>
+    <title>Digg AI Feed from X</title>
     <link>https://digg.com/tech</link>
-    <description>Top 10 Digg Tech stories with click-through links to original source content.</description>
+    <description>Top 10 AI stories from Digg's X-ranked tech feed with click-through links to original source content.</description>
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 30 Jun 2026 06:25:28 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 30 Jun 2026 08:40:25 +0000</lastBuildDate>
     <item>
-      <title>#1: Meta AI open-sources Brain2Qwerty v2, a non-invasive brain-to-text decoder achieving 61% word accuracy</title>
-      <link>https://ai.meta.com/blog/brain2qwerty-brain-ai-human-communication/?utm_source=twitter&amp;utm_medium=organic_social&amp;utm_content=video&amp;utm_campaign=brain2qwertyv2</link>
-      <description>It transitions from character decoding to full-sentence semantic decoding.</description>
-      <content:encoded>&lt;p&gt;It transitions from character decoding to full-sentence semantic decoding.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://ai.meta.com/blog/brain2qwerty-brain-ai-human-communication/?utm_source=twitter&amp;amp;utm_medium=organic_social&amp;amp;utm_content=video&amp;amp;utm_campaign=brain2qwertyv2"&gt;https://ai.meta.com/blog/brain2qwerty-brain-ai-human-communication/?utm_source=twitter&amp;amp;utm_medium=organic_social&amp;amp;utm_content=video&amp;amp;utm_campaign=brain2qwertyv2&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/bs3l55vn"&gt;https://digg.com/tech/bs3l55vn&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Meta just dropped the full code for Brain2Qwerty v2, turning raw MEG and EEG signals from people typing memorized sentences into real-time decoded text at the word and semantic level. The pipeline stacks a convolutional encoder with a transformer and character-level language model, lifting average word accuracy to 61 percent on data from nine volunteers and letting the best cases hit 78 percent with at most one error per sentence. 1.9K 19.6K 561 8.9K 5.2M BR #1861 | @BRIANROEMMELE XL #1855 | @XLR8HARDER CB #1428 | @CHRISJBAKKE CH #1360 | @KIMMONISMUS CS #1057 | @CSHORTEN30 AM #1027 | @ADAMMARBLESTONE ZN #983 | @ZACHARYNADO DF #756 | @DANIELLEFONG EL #684 | @OMARSAR0 TM #613 | @ISCIENCELUVR B( #530 | @BEFFJEZOS PH #448 | @PDHSU AM #437 | @ANJNEYMIDHA AW #74 | @ALEXANDR_WANG&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Rank:&lt;/strong&gt; 1&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 5,159,775&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 19,648&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 8,893&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 1,149&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 793&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 37&lt;/li&gt;&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/alexandr_wang"&gt;Alexandr Wang&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/AnjneyMidha"&gt;Anjney Midha&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/pdhsu"&gt;Patrick Hsu&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/beffjezos"&gt;Beff (e/acc)&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/iScienceLuvr"&gt;Tanishq Mathew Abraham, Ph.D.&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
-&lt;blockquote&gt;To help accelerate neuroscience breakthroughs, we&amp;#x27;re releasing the full training code for Brain2Qwerty v1 and v2, and our partner, @bcbl_, is releasing the v1 dataset. Learn more and explore the artifacts here: https://go.meta.me/42ed9c&lt;/blockquote&gt;</content:encoded>
-      <guid isPermaLink="false">c4a8bd83-5fff-4941-95d2-a9e950d563d0</guid>
-      <category>Digg Tech</category>
-      <pubDate>Mon, 29 Jun 2026 14:05:45 +0000</pubDate>
-    </item>
-    <item>
-      <title>#2: Anysphere launches Cursor for iOS, letting developers run always-on cloud agents and manage desktop agents remotely</title>
+      <title>#1: Anysphere launches Cursor for iOS, letting developers run always-on cloud agents and manage desktop agents remotely</title>
       <link>https://apps.apple.com/us/app/cursor/id6767085653</link>
       <description>The mobile app supports voice dictation for background code generation</description>
       <content:encoded>&lt;p&gt;The mobile app supports voice dictation for background code generation&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://apps.apple.com/us/app/cursor/id6767085653"&gt;https://apps.apple.com/us/app/cursor/id6767085653&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/vjioabgl"&gt;https://digg.com/tech/vjioabgl&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Anysphere has shipped a native iOS app that puts Cursor&amp;#x27;s AI coding agents in developers&amp;#x27; pockets, letting them spin up always-on cloud agents or reach out to desktop agents from anywhere. The release adds voice dictation so spoken ideas can trigger background code work, along with tools to review diffs, merge PRs, and annotate screenshots while the agents keep running. 2.5K 23.2K 1.7K 4.6K 6.1M EZ #1911 | @ERICZAKARIASSON BR #1861 | @BRIANROEMMELE RL #1733 | @RYOLU_ HH #1682 | @HAMELHUSAIN ND #1653 | @NICKADOBOS CH #1360 | @KIMMONISMUS SO #1349 | @SOLEIO T- #1325 | @THEO SW #1092 | @SJWHITMORE TS #1050 | @TIMSWEENEYEPIC MM #716 | @MASCOBOT B( #530 | @BEFFJEZOS MA #315 | @MARTIN_CASADO EM #52 | @ELONMUSK&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Rank:&lt;/strong&gt; 2&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 6,148,302&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 23,166&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 4,601&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 701&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 1,813&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 19&lt;/li&gt;&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/elonmusk"&gt;Elon Musk&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/martin_casado"&gt;martin_casado&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/beffjezos"&gt;Beff (e/acc)&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/Mascobot"&gt;Marco Mascorro&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/TimSweeneyEpic"&gt;Tim Sweeney&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
-&lt;blockquote&gt;wherever ideas hit. desks and laptops optional.&lt;/blockquote&gt;</content:encoded>
+&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Rank:&lt;/strong&gt; 1&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 2,946,116&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 14,109&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 2,164&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 83&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 1,088&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 19&lt;/li&gt;&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/elonmusk"&gt;Elon Musk&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/martin_casado"&gt;martin_casado&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/beffjezos"&gt;Beff (e/acc)&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/Mascobot"&gt;Marco Mascorro&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/TimSweeneyEpic"&gt;Tim Sweeney&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;</content:encoded>
       <guid isPermaLink="false">bf4f33ea-d242-4f9c-b5d6-8148933ae8d7</guid>
-      <category>Digg Tech</category>
+      <category>Digg AI from X</category>
       <pubDate>Mon, 29 Jun 2026 17:13:36 +0000</pubDate>
     </item>
     <item>
-      <title>#3: Anthropic CEO Dario Amodei argues open-source AI cannot be monitored, revoked, or patched for safety after release</title>
-      <link>https://x.com/uncledoomer/status/2071620724775678438</link>
-      <description>The clip reignited debate over open-source AI safety risks</description>
-      <content:encoded>&lt;p&gt;The clip reignited debate over open-source AI safety risks&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://x.com/uncledoomer/status/2071620724775678438"&gt;https://x.com/uncledoomer/status/2071620724775678438&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/zx1bqifo"&gt;https://digg.com/tech/zx1bqifo&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;A 2023 Senate testimony clip from Anthropic&amp;#x27;s Dario Amodei has resurfaced to sharpen the divide over open-source AI, stressing that once frontier models escape controlled environments the original developers lose any practical way to watch for abuse, pull them back, or push safety fixes. 813 43.3K 1.9K 1.8K 1.4M RN #1992 | @RAMEZ BR #1861 | @BRIANROEMMELE CH #1360 | @KIMMONISMUS RP #1257 | @ROHANPAUL_AI ME #861 | @MERVENOYANN B( #530 | @BEFFJEZOS KA #403 | @YACINEMTB RA #218 | @AGARWL_&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Rank:&lt;/strong&gt; 3&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 1,409,891&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 43,251&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 1,829&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 187&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 626&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 17&lt;/li&gt;&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/agarwl_"&gt;Rishabh Agarwal&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/yacineMTB"&gt;kache&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/beffjezos"&gt;Beff (e/acc)&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/mervenoyann"&gt;merve&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/rohanpaul_ai"&gt;Rohan Paul&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
-&lt;blockquote&gt;For every software provider, your biggest competitor is the customer themselves -- building it for themselves and thereby reducing reliance on you. Instead consider making a net positive business that helps your customer, instead of trying to rent seek forever&lt;/blockquote&gt;</content:encoded>
-      <guid isPermaLink="false">2a65aa78-fe0c-4901-9107-2f1470865873</guid>
-      <category>Digg Tech</category>
-      <pubDate>Mon, 29 Jun 2026 07:22:19 +0000</pubDate>
+      <title>#2: Meta AI open-sources Brain2Qwerty v2, a non-invasive brain-to-text decoder achieving 61% word accuracy</title>
+      <link>https://ai.meta.com/blog/brain2qwerty-brain-ai-human-communication/?utm_source=twitter&amp;utm_medium=organic_social&amp;utm_content=video&amp;utm_campaign=brain2qwertyv2</link>
+      <description>It transitions from character decoding to full-sentence semantic decoding.</description>
+      <content:encoded>&lt;p&gt;It transitions from character decoding to full-sentence semantic decoding.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://ai.meta.com/blog/brain2qwerty-brain-ai-human-communication/?utm_source=twitter&amp;amp;utm_medium=organic_social&amp;amp;utm_content=video&amp;amp;utm_campaign=brain2qwertyv2"&gt;https://ai.meta.com/blog/brain2qwerty-brain-ai-human-communication/?utm_source=twitter&amp;amp;utm_medium=organic_social&amp;amp;utm_content=video&amp;amp;utm_campaign=brain2qwertyv2&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/bs3l55vn"&gt;https://digg.com/tech/bs3l55vn&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Meta just dropped the full code for Brain2Qwerty v2, turning raw MEG and EEG signals from people typing memorized sentences into real-time decoded text at the word and semantic level. The pipeline stacks a convolutional encoder with a transformer and character-level language model, lifting average word accuracy to 61 percent on data from nine volunteers and letting the best cases hit 78 percent with at most one error per sentence. 2K 20.4K 566 9.3K 5.4M BR #1861 | @BRIANROEMMELE XL #1855 | @XLR8HARDER CB #1428 | @CHRISJBAKKE CH #1360 | @KIMMONISMUS CS #1057 | @CSHORTEN30 AM #1027 | @ADAMMARBLESTONE ZN #983 | @ZACHARYNADO DF #756 | @DANIELLEFONG EL #684 | @OMARSAR0 TM #613 | @ISCIENCELUVR B( #530 | @BEFFJEZOS PH #448 | @PDHSU AM #437 | @ANJNEYMIDHA AW #74 | @ALEXANDR_WANG&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Rank:&lt;/strong&gt; 2&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 333,196&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 2,918&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 702&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 12&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 130&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 39&lt;/li&gt;&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/alexandr_wang"&gt;Alexandr Wang&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/AnjneyMidha"&gt;Anjney Midha&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/pdhsu"&gt;Patrick Hsu&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/beffjezos"&gt;Beff (e/acc)&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/iScienceLuvr"&gt;Tanishq Mathew Abraham, Ph.D.&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;</content:encoded>
+      <guid isPermaLink="false">c4a8bd83-5fff-4941-95d2-a9e950d563d0</guid>
+      <category>Digg AI from X</category>
+      <pubDate>Mon, 29 Jun 2026 14:05:45 +0000</pubDate>
     </item>
     <item>
-      <title>#4: Meituan releases LongCat-2.0, a 1.6-trillion-parameter MoE model trained entirely on 50,000 domestic Chinese ASICs</title>
-      <link>https://huggingface.co/meituan-longcat/LongCat-2.0</link>
-      <description>The open-weights model supports a 1-million-token context window</description>
-      <content:encoded>&lt;p&gt;The open-weights model supports a 1-million-token context window&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://huggingface.co/meituan-longcat/LongCat-2.0"&gt;https://huggingface.co/meituan-longcat/LongCat-2.0&lt;/a&gt;&lt;/p&gt;
+      <title>#3: Meituan Trains LongCat 2.0 on 50K Domestic AI ASICs in Superpods</title>
+      <link>https://longcat.chat/blog/longcat-2.0/</link>
+      <description>Meituan Trains LongCat 2.0 on 50K Domestic AI ASICs in Superpods</description>
+      <content:encoded>&lt;p&gt;Meituan Trains LongCat 2.0 on 50K Domestic AI ASICs in Superpods&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://longcat.chat/blog/longcat-2.0/"&gt;https://longcat.chat/blog/longcat-2.0/&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/va380veu"&gt;https://digg.com/tech/va380veu&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Chinese food-delivery giant Meituan has released LongCat-2.0, a 1.6-trillion-parameter MoE model with roughly 48 billion active parameters that was pretrained entirely on more than 50,000 domestic AI ASICs across 35 trillion tokens and now offers native 1-million-token context for agentic coding work. 124 1K 69 295 95.7K LH #1586 | @OHLENNART EL #1136 | @ELIEBAKOUCH ME #861 | @MERVENOYANN TM #613 | @ISCIENCELUVR YJ #586 | @YUCHENJ_UW WB #573 | @WILLCCBB T( #501 | @TEORTAXESTEX AC #484 | @ANDREW_N_CARR EM #171 | @EMOSTAQUE JH #90 | @JEREMYPHOWARD AK #33 | @_AKHALIQ&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Rank:&lt;/strong&gt; 4&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 96,086&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 1,047&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 296&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 50&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 74&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 26&lt;/li&gt;&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/_akhaliq"&gt;AK&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/jeremyphoward"&gt;Jeremy Howard&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/EMostaque"&gt;Emad&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/andrew_n_carr"&gt;Andrew Carr 🤸&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/teortaxesTex"&gt;Teortaxes▶️ (DeepSeek 推特🐋铁粉 2023 – ∞)&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
-&lt;blockquote&gt;Most popular model on @OpenRouter (10tr tokens) turns out to be a 1.6tr MoE by @Meituan_LongCat (superapp/DoorDash of China) Basically Gemini / Opus 4.6 level 35tr tokens trained entirely on 50k Chinese ASICs No GPUs needed https://longcat.chat/blog/longcat-2.0/&lt;/blockquote&gt;</content:encoded>
+&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Rank:&lt;/strong&gt; 3&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 46,482&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 492&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 143&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 6&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 36&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 27&lt;/li&gt;&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/_akhaliq"&gt;AK&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/jeremyphoward"&gt;Jeremy Howard&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/EMostaque"&gt;Emad&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/yacineMTB"&gt;kache&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/andrew_n_carr"&gt;Andrew Carr 🤸&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;</content:encoded>
       <guid isPermaLink="false">0fa19af5-72a7-4708-b060-6ed0bb6e5cde</guid>
-      <category>Digg Tech</category>
+      <category>Digg AI from X</category>
       <pubDate>Mon, 29 Jun 2026 19:09:50 +0000</pubDate>
+    </item>
+    <item>
+      <title>#4: Anthropic CEO Dario Amodei argues open-source AI cannot be monitored, revoked, or patched for safety after release</title>
+      <link>https://x.com/ramez/status/2071616710839521281</link>
+      <description>The clip reignited debate over open-source AI safety risks</description>
+      <content:encoded>&lt;p&gt;The clip reignited debate over open-source AI safety risks&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://x.com/ramez/status/2071616710839521281"&gt;https://x.com/ramez/status/2071616710839521281&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/zx1bqifo"&gt;https://digg.com/tech/zx1bqifo&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;A 2023 Senate testimony clip from Anthropic&amp;#x27;s Dario Amodei has resurfaced to sharpen the divide over open-source AI, stressing that once frontier models escape controlled environments the original developers lose any practical way to watch for abuse, pull them back, or push safety fixes. 815 43.3K 1.9K 1.8K 1.4M RN #1992 | @RAMEZ BR #1861 | @BRIANROEMMELE CH #1360 | @KIMMONISMUS RP #1257 | @ROHANPAUL_AI ME #861 | @MERVENOYANN B( #530 | @BEFFJEZOS KA #403 | @YACINEMTB RA #218 | @AGARWL_&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Rank:&lt;/strong&gt; 4&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 176,835&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 1,495&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 142&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 22&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 159&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 17&lt;/li&gt;&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/agarwl_"&gt;Rishabh Agarwal&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/yacineMTB"&gt;kache&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/beffjezos"&gt;Beff (e/acc)&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/mervenoyann"&gt;merve&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/rohanpaul_ai"&gt;Rohan Paul&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;</content:encoded>
+      <guid isPermaLink="false">2a65aa78-fe0c-4901-9107-2f1470865873</guid>
+      <category>Digg AI from X</category>
+      <pubDate>Mon, 29 Jun 2026 07:22:19 +0000</pubDate>
     </item>
     <item>
       <title>#5: Secretary of War Pete Hegseth appoints Marc Andreessen and Blake Masters to new Defense Policy Board</title>
@@ -76,87 +71,79 @@
 &lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://www.war.gov/News/Releases/Release/Article/4528780/department-of-war-establishes-new-defense-policy-board/"&gt;https://www.war.gov/News/Releases/Release/Article/4528780/department-of-war-establishes-new-defense-policy-board/&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/9y5ypxtg"&gt;https://digg.com/tech/9y5ypxtg&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Secretary of War Pete Hegseth has named Marc Andreessen and Blake Masters among thirteen appointees to the revived Defense Policy Board, an advisory panel first formed in 1985 that reports directly to the Secretary, Deputy Secretary, and Under Secretary for Policy on matters of strategy and national security. 599 4.9K 417 764 653.8K CH #1360 | @KIMMONISMUS AC #682 | @ANDREWCURRAN_ BT #593 | @TUNGUZ B( #530 | @BEFFJEZOS KA #403 | @YACINEMTB SU #361 | @SUHAIL&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Rank:&lt;/strong&gt; 5&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 653,810&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 4,865&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 764&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 205&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 394&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 10&lt;/li&gt;&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/Suhail"&gt;Suhail&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/yacineMTB"&gt;kache&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/beffjezos"&gt;Beff (e/acc)&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/tunguz"&gt;Bojan Tunguz&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/AndrewCurran_"&gt;Andrew Curran&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
-&lt;blockquote&gt;Excellent.&lt;/blockquote&gt;</content:encoded>
+&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Rank:&lt;/strong&gt; 5&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 651,546&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 4,816&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 763&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 204&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 388&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 10&lt;/li&gt;&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/Suhail"&gt;Suhail&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/yacineMTB"&gt;kache&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/beffjezos"&gt;Beff (e/acc)&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/tunguz"&gt;Bojan Tunguz&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/AndrewCurran_"&gt;Andrew Curran&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;</content:encoded>
       <guid isPermaLink="false">2fe6a9c7-d4d1-4d18-a72a-7bd8518d9bfd</guid>
-      <category>Digg Tech</category>
+      <category>Digg AI from X</category>
       <pubDate>Mon, 29 Jun 2026 18:34:44 +0000</pubDate>
     </item>
     <item>
-      <title>#6: ND Studio releases Rampart, an open-source 14.7MB model for browser-based personal data redaction</title>
-      <link>https://huggingface.co/nationaldesignstudio/rampart</link>
-      <description>Local execution prevents sensitive data transmission to external servers</description>
-      <content:encoded>&lt;p&gt;Local execution prevents sensitive data transmission to external servers&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://huggingface.co/nationaldesignstudio/rampart"&gt;https://huggingface.co/nationaldesignstudio/rampart&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/grum3t15"&gt;https://digg.com/tech/grum3t15&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;ND Studio has released Rampart, a compact open-source model that detects and redacts personal information locally in the browser using ONNX Runtime Web, so nothing sensitive ever reaches external servers or logs. 160 2.5K 72 1.2K 446.6K DM #1198 | @DAVEMORIN JG #970 | @JGEBBIA MP #928 | @MARKPINC JC #410 | @JOHNCOOGAN LC #219 | @LULUMESERVEY C🤗 #109 | @CLEMENTDELANGUE&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Rank:&lt;/strong&gt; 6&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 446,626&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 2,527&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 1,205&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 56&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 104&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 10&lt;/li&gt;&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/ClementDelangue"&gt;clem 🤗&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/lulumeservey"&gt;Lulu Cheng Meservey&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/johncoogan"&gt;John Coogan&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/markpinc"&gt;mark pincus&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/jgebbia"&gt;Joe Gebbia&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
-&lt;blockquote&gt;Introducing Rampart, an open source model to protect the privacy of citizens’ personal information, built by the talented software team at @ndstudio. Watch the recorded live stream below with @as400495 @taigrr 🇺🇸&lt;/blockquote&gt;</content:encoded>
-      <guid isPermaLink="false">6d10d9ae-0ede-42f6-8c40-fb30731af011</guid>
-      <category>Digg Tech</category>
-      <pubDate>Mon, 29 Jun 2026 17:55:28 +0000</pubDate>
-    </item>
-    <item>
-      <title>#7: Cognition AI co-founder Walden Yan launches Devin Fusion, a hybrid-model routing system that cuts coding agent costs by 35%</title>
-      <link>https://cognition.com/blog/devin-fusion</link>
-      <description>It delegates targeted coding sub-tasks to a sidekick agent.</description>
-      <content:encoded>&lt;p&gt;It delegates targeted coding sub-tasks to a sidekick agent.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://cognition.com/blog/devin-fusion"&gt;https://cognition.com/blog/devin-fusion&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/21ahns4h"&gt;https://digg.com/tech/21ahns4h&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Cognition AI&amp;#x27;s new Devin Fusion setup pairs a frontier main agent with a cheaper sidekick model that takes over specific subtasks like exploration, writing tests, and lint fixes through dynamic mid-session handoffs, keeping the primary agent in charge of planning and final review. 141 1K 63 465 205.1K WA #1849 | @WALDEN_YAN AG #1848 | @ITSANDREWGAO MB #1780 | @MATTHEWBERMAN BH #1762 | @BENHYLAK EL #1136 | @ELIEBAKOUCH JL #906 | @JERRYJLIU0 SW #548 | @SCOTTWU46&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Rank:&lt;/strong&gt; 7&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 205,145&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 1,038&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 465&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 86&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 55&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 10&lt;/li&gt;&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/ScottWu46"&gt;Scott Wu&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/jerryjliu0"&gt;Jerry Liu&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/eliebakouch"&gt;elie&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/benhylak"&gt;ben hylak&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/MatthewBerman"&gt;Matthew Berman&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
-&lt;blockquote&gt;Model routing is a hot topic but there are two challenges to doing routing for coding agents: 1) Even if different models can pass the task, there are subtle differences in behavior &amp;amp; style that mean they aren&amp;#x27;t perfectly interchangeable. 2) The initial agent prompt isn&amp;#x27;t enough to know the difficulty of the task. &amp;quot;Fix xyz bug&amp;quot; could be a one-line edge case or could require rearchitecting your entire product; you can&amp;#x27;t know until you&amp;#x27;ve actually investigated the code. How do you solve these problems? Well, you need evals that account for style and behavior, not just pass/fail. And you need the agent to be able to dynamically update and re-route. We built Devin Fusion with both of these points in mind and found that it reduces costs by 30-40% while still maintaining the frontier intelligence &amp;quot;smell&amp;quot;:&lt;/blockquote&gt;</content:encoded>
-      <guid isPermaLink="false">b2d152d2-9ce5-4f7d-a5eb-2b0f31c4e00b</guid>
-      <category>Digg Tech</category>
-      <pubDate>Mon, 29 Jun 2026 16:14:44 +0000</pubDate>
-    </item>
-    <item>
-      <title>#8: Former Meta PM Xiaoyin Qu predicts US and European enterprises will adopt Chinese AI models to self-host on private GPUs</title>
-      <link>https://x.com/quxiaoyin/status/2071420870741143570</link>
+      <title>#6: Former Meta PM Xiaoyin Qu predicts US and European enterprises will adopt Chinese AI models to self-host on private GPUs</title>
+      <link>https://x.com/xlr8harder/status/2071539689115267148</link>
       <description>Qu cites enterprise distrust of Anthropic's data retention policies</description>
       <content:encoded>&lt;p&gt;Qu cites enterprise distrust of Anthropic&amp;#x27;s data retention policies&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://x.com/quxiaoyin/status/2071420870741143570"&gt;https://x.com/quxiaoyin/status/2071420870741143570&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://x.com/xlr8harder/status/2071539689115267148"&gt;https://x.com/xlr8harder/status/2071539689115267148&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/189tymuk"&gt;https://digg.com/tech/189tymuk&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;A former Meta product manager argues that US and European companies will move toward Chinese AI models specifically so they can run them on their own GPUs, gaining direct control over data and the chance to fine-tune on internal datasets for competitive edges. 166 2.7K 273 1.1K 458.1K XL #1855 | @XLR8HARDER ZE #1695 | @ZEPHYR_Z9 AD #1537 | @DORIALEXANDER RO #1315 | @KRISHNANROHIT RP #1257 | @ROHANPAUL_AI XJ #830 | @_XJDR&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Rank:&lt;/strong&gt; 8&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 471,412&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 2,706&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 1,107&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 25&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 141&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 13&lt;/li&gt;&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/_xjdr"&gt;xjdr&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/rohanpaul_ai"&gt;Rohan Paul&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/krishnanrohit"&gt;rohit&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/Dorialexander"&gt;Alexander Doria&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/zephyr_z9"&gt;Zephyr&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
-&lt;blockquote&gt;Aravind Srinivas just explained why China’s open-source AI may become more powerful than ever. And why Anthropic has lobbied very hard for export control. &amp;quot;the only reason why there is even a 12-month gap between open source and frontier models is export controls. But there is a chance that, because of that, they now get really good at the physical layer. One advantage they (China) have is that they can actually build data centers a lot faster. Power is not a problem. Permits are not a problem. People are not a problem. Labor is not a problem. Expertise is not a problem. And so, by forcing them to go out there and build all this, you are converting them into a far more potent competitor.&amp;quot; --- From &amp;quot;20VC with Harry Stebbings&amp;quot; YouTube channel (@HarryStebbings ), link in comment&lt;/blockquote&gt;</content:encoded>
+&lt;p&gt;A former Meta product manager argues that US and European companies will move toward Chinese AI models specifically so they can run them on their own GPUs, gaining direct control over data and the chance to fine-tune on internal datasets for competitive edges. 168 2.7K 277 1.1K 487.2K XL #1855 | @XLR8HARDER ZE #1695 | @ZEPHYR_Z9 AD #1537 | @DORIALEXANDER RO #1315 | @KRISHNANROHIT RP #1257 | @ROHANPAUL_AI XJ #830 | @_XJDR&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Rank:&lt;/strong&gt; 6&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 483,230&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 2,718&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 1,111&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 25&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 141&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 13&lt;/li&gt;&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/_xjdr"&gt;xjdr&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/rohanpaul_ai"&gt;Rohan Paul&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/krishnanrohit"&gt;rohit&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/Dorialexander"&gt;Alexander Doria&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/zephyr_z9"&gt;Zephyr&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;</content:encoded>
       <guid isPermaLink="false">3f1d3eae-c6b5-414d-9722-2a9df7a126c2</guid>
-      <category>Digg Tech</category>
+      <category>Digg AI from X</category>
       <pubDate>Mon, 29 Jun 2026 07:22:19 +0000</pubDate>
     </item>
     <item>
-      <title>#9: X launches hosted Model Context Protocol servers to connect AI tools to real-time platform data</title>
-      <link>https://docs.x.com/tools/mcp</link>
-      <description>The tools run using existing user account permissions.</description>
-      <content:encoded>&lt;p&gt;The tools run using existing user account permissions.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://docs.x.com/tools/mcp"&gt;https://docs.x.com/tools/mcp&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/bm5svjqw"&gt;https://digg.com/tech/bm5svjqw&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;X now hosts two Model Context Protocol servers that let compatible AI tools reach live platform data and developer documentation through standard user permissions rather than new integrations. 779 4.6K 616 3.3K 1.1M RS #447 | @SCOBLEIZER @J #416 | @JASON BY #380 | @BILLYUCHENLIN EM #52 | @ELONMUSK&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Rank:&lt;/strong&gt; 9&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 1,142,737&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 4,611&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 3,311&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 259&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 520&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 5&lt;/li&gt;&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/elonmusk"&gt;Elon Musk&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/billyuchenlin"&gt;Bill Yuchen Lin&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/Jason"&gt;@jason&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/Scobleizer"&gt;Robert Scoble&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
-&lt;blockquote&gt;Try it out&lt;/blockquote&gt;</content:encoded>
-      <guid isPermaLink="false">a5a8a33a-cdf4-4f3d-bf82-ce7005b9df78</guid>
-      <category>Digg Tech</category>
-      <pubDate>Tue, 30 Jun 2026 01:24:17 +0000</pubDate>
-    </item>
-    <item>
-      <title>#10: Meta restricts employees from using Claude Code and OpenAI Codex to prevent competitor model distillation</title>
-      <link>https://www.theinformation.com/articles/internal-docs-show-meta-putting-limits-claude-codex-fearing-distillation</link>
+      <title>#7: Meta restricts employees from using Claude Code and OpenAI Codex to prevent competitor model distillation</title>
+      <link>https://www.theinformation.com/articles/internal-docs-show-meta-putting-limits-claude-codex-fearing-distillation?rc=bfliih</link>
       <description>The policy protects the training pipeline of Meta's upcoming MetaCode.</description>
       <content:encoded>&lt;p&gt;The policy protects the training pipeline of Meta&amp;#x27;s upcoming MetaCode.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://www.theinformation.com/articles/internal-docs-show-meta-putting-limits-claude-codex-fearing-distillation"&gt;https://www.theinformation.com/articles/internal-docs-show-meta-putting-limits-claude-codex-fearing-distillation&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://www.theinformation.com/articles/internal-docs-show-meta-putting-limits-claude-codex-fearing-distillation?rc=bfliih"&gt;https://www.theinformation.com/articles/internal-docs-show-meta-putting-limits-claude-codex-fearing-distillation?rc=bfliih&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/84bk7m29"&gt;https://digg.com/tech/84bk7m29&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Meta is restricting employee access to Anthropic’s Claude Code and OpenAI’s Codex while building its internal coding model, MetaCode, to stop outputs from those tools from slipping into its training data or evaluations. 164 1.4K 90 314 168.2K XL #1855 | @XLR8HARDER AD #1537 | @DORIALEXANDER CH #1360 | @KIMMONISMUS RP #1257 | @ROHANPAUL_AI AC #682 | @ANDREWCURRAN_ B( #530 | @BEFFJEZOS SW #201 | @SIMONW&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Rank:&lt;/strong&gt; 10&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 168,184&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 1,350&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 314&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 27&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 137&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 16&lt;/li&gt;&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/simonw"&gt;Simon Willison&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/beffjezos"&gt;Beff (e/acc)&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/AndrewCurran_"&gt;Andrew Curran&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/rohanpaul_ai"&gt;Rohan Paul&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/kimmonismus"&gt;Chubby♨️&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
-&lt;blockquote&gt;&amp;quot;Meta, which has been among the biggest customers of Claude Code, set up the applied AI engineering team earlier this year and has tasked it with improving Meta’s own coding assistant, MetaCode. A big part of that entails building high-quality datasets and programming challenges that engineers use to train and test its models for coding work. While Meta permits the team to use outside AI tools for some purposes, it requires engineers to design those challenges themselves and to rely on their own technical expertise rather than AI-generated concepts.&amp;quot;&lt;/blockquote&gt;</content:encoded>
+&lt;p&gt;Meta is restricting employee access to Anthropic’s Claude Code and OpenAI’s Codex while building its internal coding model, MetaCode, to stop outputs from those tools from slipping into its training data or evaluations. 173 1.4K 92 331 179.3K XL #1855 | @XLR8HARDER AD #1537 | @DORIALEXANDER CH #1360 | @KIMMONISMUS RP #1257 | @ROHANPAUL_AI AC #682 | @ANDREWCURRAN_ B( #530 | @BEFFJEZOS SW #201 | @SIMONW&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Rank:&lt;/strong&gt; 7&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 168,184&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 1,350&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 314&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 27&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 137&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 16&lt;/li&gt;&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/simonw"&gt;Simon Willison&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/beffjezos"&gt;Beff (e/acc)&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/AndrewCurran_"&gt;Andrew Curran&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/rohanpaul_ai"&gt;Rohan Paul&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/kimmonismus"&gt;Chubby♨️&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;</content:encoded>
       <guid isPermaLink="false">df60367f-2a19-4ee6-8f4c-58bc321ca52e</guid>
-      <category>Digg Tech</category>
+      <category>Digg AI from X</category>
       <pubDate>Mon, 29 Jun 2026 13:53:13 +0000</pubDate>
+    </item>
+    <item>
+      <title>#8: Kim Isenberg and Peter Wang argue the US is losing the AI race due to energy and data center constraints</title>
+      <link>https://x.com/davidlee/status/2071609936329760769</link>
+      <description>China uses free models to promote domestic Huawei hardware.</description>
+      <content:encoded>&lt;p&gt;China uses free models to promote domestic Huawei hardware.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://x.com/davidlee/status/2071609936329760769"&gt;https://x.com/davidlee/status/2071609936329760769&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/3baroum6"&gt;https://digg.com/tech/3baroum6&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Analysts Kim Isenberg and Peter Wang frame America&amp;#x27;s AI lag as a direct result of stalled data center construction and electricity grid limits, contrasting this with China&amp;#x27;s rapid rollout of models that favor domestic Huawei chips and infrastructure. 223 2K 252 1K 366.2K DA #1469 | @DAVIDLEE CH #1360 | @KIMMONISMUS SB #289 | @BLANCHEMINERVA AL #195 | @LEVIE GT #121 | @GARRYTAN&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Rank:&lt;/strong&gt; 8&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 358,049&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 1,999&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 1,003&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 54&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 167&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 6&lt;/li&gt;&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/garrytan"&gt;Garry Tan&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/levie"&gt;Aaron Levie&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/BlancheMinerva"&gt;Stella Biderman&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/kimmonismus"&gt;Chubby♨️&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/davidlee"&gt;davidlee&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;</content:encoded>
+      <guid isPermaLink="false">1ccb65ed-598e-4500-9c41-aa5a519e7d90</guid>
+      <category>Digg AI from X</category>
+      <pubDate>Mon, 29 Jun 2026 09:41:25 +0000</pubDate>
+    </item>
+    <item>
+      <title>#9: Tesla releases FSD v14 Lite, bringing distilled AI4 driving models to memory-constrained AI3 hardware</title>
+      <link>https://x.com/aelluswamy/status/2071487485172134131</link>
+      <description>Older AI3 computers operate with 15% of AI4's memory bandwidth</description>
+      <content:encoded>&lt;p&gt;Older AI3 computers operate with 15% of AI4&amp;#x27;s memory bandwidth&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://x.com/aelluswamy/status/2071487485172134131"&gt;https://x.com/aelluswamy/status/2071487485172134131&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/6y2ultrn"&gt;https://digg.com/tech/6y2ultrn&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Rank:&lt;/strong&gt; 9&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 4,819,303&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 25,422&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 921&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 248&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 2,500&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 7&lt;/li&gt;&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/elonmusk"&gt;Elon Musk&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/Scobleizer"&gt;Robert Scoble&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/davemorin"&gt;Dave Morin 🦞&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;</content:encoded>
+      <guid isPermaLink="false">888c1592-7852-4dc7-8635-3ff4a8b23e79</guid>
+      <category>Digg AI from X</category>
+      <pubDate>Mon, 29 Jun 2026 07:11:51 +0000</pubDate>
+    </item>
+    <item>
+      <title>#10: Smol.ai founder Shawn 'swyx' Wang opens the AI Engineer World's Fair with a focus on local AI and NVIDIA Blackwell hardware</title>
+      <link>https://aie-evolution.vercel.app</link>
+      <description>Major sponsors include OpenAI, Anthropic, and Google DeepMind</description>
+      <content:encoded>&lt;p&gt;Major sponsors include OpenAI, Anthropic, and Google DeepMind&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://aie-evolution.vercel.app"&gt;https://aie-evolution.vercel.app&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/14q7z08p"&gt;https://digg.com/tech/14q7z08p&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Rank:&lt;/strong&gt; 10&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 8,577&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 121&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 4&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 0&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 15&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 13&lt;/li&gt;&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/swyx"&gt;swyx @aiDotEngineer WF&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/abeirami"&gt;Ahmad Beirami&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/DynamicWebPaige"&gt;👩‍💻 Paige Bailey&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/jxnlco"&gt;jason&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/peteskomoroch"&gt;Pete Skomoroch&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;</content:encoded>
+      <guid isPermaLink="false">df2cdd30-06dc-47fd-9589-44be7e0dad2b</guid>
+      <category>Digg AI from X</category>
+      <pubDate>Mon, 29 Jun 2026 08:42:43 +0000</pubDate>
     </item>
   </channel>
 </rss>

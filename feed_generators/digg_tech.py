@@ -14,10 +14,8 @@ from feedgen.feed import FeedGenerator
 
 DIGG_TECH_URL = "https://digg.com/tech"
 DIGG_BASE_URL = "https://digg.com"
-FEED_TITLE = "Digg Tech Top 10"
-FEED_DESCRIPTION = (
-    "Top 10 Digg Tech stories with click-through links to original source content."
-)
+FEED_TITLE = "Digg AI Feed from X"
+FEED_DESCRIPTION = "Top 10 AI stories from Digg's X-ranked tech feed with click-through links to original source content."
 DEFAULT_LIMIT = 10
 
 logging.basicConfig(
@@ -78,10 +76,14 @@ def _parse_datetime(value: str | None) -> datetime | None:
 def _extract_top_items_payload(html_content: str) -> list[dict]:
     soup = BeautifulSoup(html_content, "html.parser")
     decoder = json.JSONDecoder()
+    fallback_items: list[dict] = []
 
     for script in soup.find_all("script"):
         text = script.string or script.get_text() or ""
-        if "storiesByFilter" not in text:
+        if (
+            "storiesByFilter" not in text
+            and "data-yesterday-stories-section" not in text
+        ):
             continue
 
         match = re.match(r"self\.__next_f\.push\((.*)\)$", text, flags=re.S)
@@ -95,26 +97,38 @@ def _extract_top_items_payload(html_content: str) -> list[dict]:
 
         stories_idx = payload.find('"storiesByFilter"')
         items_idx = payload.find('"items":[', stories_idx)
-        if stories_idx == -1 or items_idx == -1:
-            continue
+        if stories_idx != -1 and items_idx != -1:
+            array_start = payload.find("[", items_idx)
+            try:
+                items, _ = decoder.raw_decode(payload[array_start:])
+            except json.JSONDecodeError:
+                items = []
 
-        array_start = payload.find("[", items_idx)
-        try:
-            items, _ = decoder.raw_decode(payload[array_start:])
-        except json.JSONDecodeError:
-            continue
+            if isinstance(items, list) and items:
+                logger.info(
+                    f"Parsed {len(items)} Digg AI Feed from X ranked items from embedded payload"
+                )
+                return items
 
-        if isinstance(items, list):
-            logger.info(
-                f"Parsed {len(items)} Digg Tech ranked items from embedded payload"
-            )
-            return items
+        daily_stories_idx = payload.find('"stories"')
+        if daily_stories_idx != -1 and "data-yesterday-stories-section" in payload:
+            array_start = payload.find("[", daily_stories_idx)
+            try:
+                items, _ = decoder.raw_decode(payload[array_start:])
+            except json.JSONDecodeError:
+                items = []
+            if isinstance(items, list) and items:
+                fallback_items = items
 
-    return []
+    if fallback_items:
+        logger.info(
+            f"Parsed {len(fallback_items)} Digg AI Feed from X daily items from embedded payload"
+        )
+    return fallback_items
 
 
 def _story_url(item: dict) -> str:
-    cluster_url_id = item.get("clusterUrlId")
+    cluster_url_id = item.get("clusterUrlId") or item.get("shortId")
     if cluster_url_id:
         return f"{DIGG_BASE_URL}/tech/{cluster_url_id}"
     cluster_id = item.get("clusterId") or item.get("id")
@@ -276,31 +290,39 @@ def _build_content_html(article: dict) -> str:
 def parse_digg_items(html_content: str, limit: int = DEFAULT_LIMIT) -> list[dict]:
     items = _extract_top_items_payload(html_content)
     articles = []
-    for item in items[:limit]:
+    for index, item in enumerate(items[:limit], start=1):
         title = (item.get("title") or "").strip()
         if not title:
             continue
 
         digg_url = _story_url(item)
         top_item = item.get("topItem") if isinstance(item.get("topItem"), dict) else {}
+        totals = item.get("totals") if isinstance(item.get("totals"), dict) else {}
+        rank = item.get("rank") or index
         articles.append(
             {
-                "title": f"#{item.get('rank')}: {title}" if item.get("rank") else title,
+                "title": f"#{rank}: {title}",
                 "raw_title": title,
                 "description": (item.get("tldr") or title).strip(),
                 "date": _parse_datetime(item.get("createdAt")),
-                "category": "Digg Tech",
-                "guid": item.get("clusterId") or item.get("clusterUrlId") or digg_url,
+                "category": "Digg AI from X",
+                "guid": item.get("clusterId")
+                or item.get("id")
+                or item.get("clusterUrlId")
+                or item.get("shortId")
+                or digg_url,
                 "digg_url": digg_url,
                 "link": digg_url,
-                "rank": item.get("rank"),
-                "views": item.get("views"),
-                "likes": item.get("likes"),
-                "bookmarks": item.get("bookmarks"),
-                "quotes": item.get("quotes"),
-                "replies": item.get("replies") or item.get("comments"),
+                "rank": rank,
+                "views": item.get("views") or totals.get("impressions"),
+                "likes": item.get("likes") or totals.get("likes"),
+                "bookmarks": item.get("bookmarks") or totals.get("bookmarks"),
+                "quotes": item.get("quotes") or totals.get("quotes"),
+                "replies": item.get("replies")
+                or item.get("comments")
+                or totals.get("replies"),
                 "postCount": item.get("postCount") or item.get("posts"),
-                "authors": item.get("authors") or [],
+                "authors": item.get("authors") or item.get("topAuthors") or [],
                 "payload_candidate_urls": _candidate_urls_from_payload(item),
                 "top_text": top_item.get("text") or "",
             }
@@ -349,7 +371,7 @@ def generate_rss_feed(
         fe.content(article["content_html"])
         if article.get("date"):
             fe.published(article["date"])
-        fe.category(term=article.get("category") or "Digg Tech")
+        fe.category(term=article.get("category") or "Digg AI from X")
         fe.id(article.get("guid") or article["digg_url"])
 
     return fg
@@ -358,7 +380,7 @@ def generate_rss_feed(
 def save_rss_feed(feed_generator: FeedGenerator, feed_name: str = "digg_tech") -> Path:
     output_file = ensure_feeds_directory() / f"feed_{feed_name}.xml"
     feed_generator.rss_file(str(output_file), pretty=True)
-    logger.info(f"Digg Tech RSS feed saved to {output_file}")
+    logger.info(f"Digg AI Feed from X RSS feed saved to {output_file}")
     return output_file
 
 
@@ -384,29 +406,33 @@ def main(feed_name: str = "digg_tech", limit: int = DEFAULT_LIMIT) -> bool:
         html_content = fetch_page(DIGG_TECH_URL, session=session)
         articles = parse_digg_items(html_content, limit=limit)
         if not articles:
-            logger.warning("No Digg Tech items parsed")
+            logger.warning("No Digg AI Feed from X items parsed")
             return False
 
         enrich_article_sources(articles, session=session)
         feed = generate_rss_feed(articles, feed_name=feed_name)
         output_file = save_rss_feed(feed, feed_name=feed_name)
         validate_feed(output_file)
-        logger.info(f"Successfully generated Digg Tech feed with {len(articles)} items")
+        logger.info(
+            f"Successfully generated Digg AI Feed from X with {len(articles)} items"
+        )
         return True
     except Exception as exc:
-        logger.exception(f"Failed to generate Digg Tech feed: {exc}")
+        logger.exception(f"Failed to generate Digg AI Feed from X: {exc}")
         return False
 
 
 if __name__ == "__main__":
     import argparse
 
-    parser = argparse.ArgumentParser(description="Generate Digg Tech Top 10 RSS feed.")
+    parser = argparse.ArgumentParser(
+        description="Generate Digg AI Feed from X RSS feed."
+    )
     parser.add_argument(
         "--limit",
         type=int,
         default=DEFAULT_LIMIT,
-        help="Number of ranked Digg Tech items to include.",
+        help="Number of ranked Digg AI Feed from X items to include.",
     )
     args = parser.parse_args()
     raise SystemExit(0 if main(limit=args.limit) else 1)
