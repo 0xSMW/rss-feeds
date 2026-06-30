@@ -118,7 +118,7 @@ generate_hackernews_feed: check-env  ## Generate RSS feed for Hacker News (full 
 	python feed_generators/hackernews_rss.py
 
 .PHONY: generate_digg_tech_feed
-generate_digg_tech_feed: check-env  ## Generate RSS feed for Digg Tech Top 10
+generate_digg_tech_feed: check-env  ## Generate RSS feed for Digg AI Feed from X
 	python feed_generators/digg_tech.py
 
 .PHONY: generate_ai_research_feed
