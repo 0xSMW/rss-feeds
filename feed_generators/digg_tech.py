@@ -232,6 +232,25 @@ def _extract_story_overview(html_content: str) -> str:
     return overview[:800]
 
 
+def _extract_story_metadata(html_content: str) -> dict:
+    soup = BeautifulSoup(html_content, "html.parser")
+    for script in soup.find_all("script", type="application/ld+json"):
+        text = script.string or script.get_text() or ""
+        if not text.strip():
+            continue
+        try:
+            data = json.loads(text)
+        except json.JSONDecodeError:
+            continue
+        if isinstance(data, dict) and data.get("@type") == "NewsArticle":
+            return {
+                "title": (data.get("headline") or "").strip(),
+                "description": (data.get("description") or "").strip(),
+                "date": _parse_datetime(data.get("datePublished")),
+            }
+    return {}
+
+
 def _format_number(value) -> str:
     if value is None:
         return ""
@@ -255,7 +274,6 @@ def _build_content_html(article: dict) -> str:
         author_items.append(f"<li>{label}</li>")
 
     metrics = {
-        "Rank": article.get("rank"),
         "Views": _format_number(article.get("views")),
         "Likes": _format_number(article.get("likes")),
         "Bookmarks": _format_number(article.get("bookmarks")),
@@ -301,7 +319,7 @@ def parse_digg_items(html_content: str, limit: int = DEFAULT_LIMIT) -> list[dict
         rank = item.get("rank") or index
         articles.append(
             {
-                "title": f"#{rank}: {title}",
+                "title": title,
                 "raw_title": title,
                 "description": (item.get("tldr") or title).strip(),
                 "date": _parse_datetime(item.get("createdAt")),
@@ -346,6 +364,14 @@ def enrich_article_sources(articles: list[dict], session: requests.Session) -> N
                 _candidate_urls_from_story_page(story_html, article["digg_url"])
             )
             article["overview"] = _extract_story_overview(story_html)
+            story_metadata = _extract_story_metadata(story_html)
+            if story_metadata.get("title") and "…" not in story_metadata["title"]:
+                article["title"] = story_metadata["title"]
+                article["raw_title"] = story_metadata["title"]
+            if story_metadata.get("description"):
+                article["description"] = story_metadata["description"]
+            if story_metadata.get("date"):
+                article["date"] = story_metadata["date"]
 
         article["source_candidates"] = _dedupe_urls(candidates)
         article["link"] = _choose_source_url(
