@@ -117,6 +117,10 @@ generate_steve_jobs_archive_stories_feed: check-env  ## Generate RSS feed for St
 generate_hackernews_feed: check-env  ## Generate RSS feed for Hacker News (full content)
 	python feed_generators/hackernews_rss.py
 
+.PHONY: generate_digg_tech_feed
+generate_digg_tech_feed: check-env  ## Generate RSS feed for Digg Tech Top 10
+	python feed_generators/digg_tech.py
+
 .PHONY: generate_ai_research_feed
 generate_ai_research_feed: check-env  ## Generate combined AI Research Feed (all feeds except Arena Magazine)
 	python feed_generators/ai_research_meta_feed.py
