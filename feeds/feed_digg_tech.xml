@@ -7,143 +7,96 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 30 Jun 2026 09:05:51 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 30 Jun 2026 12:39:14 +0000</lastBuildDate>
     <item>
-      <title>Anysphere launches Cursor for iOS, letting developers run always-on cloud agents and manage desktop agents remotely</title>
-      <link>https://apps.apple.com/us/app/cursor/id6767085653</link>
-      <description>The mobile app supports voice dictation for background code generation</description>
-      <content:encoded>&lt;p&gt;The mobile app supports voice dictation for background code generation&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://apps.apple.com/us/app/cursor/id6767085653"&gt;https://apps.apple.com/us/app/cursor/id6767085653&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/vjioabgl"&gt;https://digg.com/tech/vjioabgl&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Anysphere has shipped a native iOS app that puts Cursor&amp;#x27;s AI coding agents in developers&amp;#x27; pockets, letting them spin up always-on cloud agents or reach out to desktop agents from anywhere. The release adds voice dictation so spoken ideas can trigger background code work, along with tools to review diffs, merge PRs, and annotate screenshots while the agents keep running. 2.5K 23.2K 1.7K 4.6K 6.1M EZ #1911 | @ERICZAKARIASSON BR #1861 | @BRIANROEMMELE RL #1733 | @RYOLU_ HH #1682 | @HAMELHUSAIN ND #1653 | @NICKADOBOS CH #1360 | @KIMMONISMUS SO #1349 | @SOLEIO T- #1325 | @THEO SW #1092 | @SJWHITMORE TS #1050 | @TIMSWEENEYEPIC MM #716 | @MASCOBOT B( #530 | @BEFFJEZOS MA #315 | @MARTIN_CASADO EM #52 | @ELONMUSK&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 2,946,116&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 14,109&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 2,164&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 83&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 1,088&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 19&lt;/li&gt;&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/elonmusk"&gt;Elon Musk&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/martin_casado"&gt;martin_casado&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/beffjezos"&gt;Beff (e/acc)&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/Mascobot"&gt;Marco Mascorro&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/TimSweeneyEpic"&gt;Tim Sweeney&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;</content:encoded>
-      <guid isPermaLink="false">bf4f33ea-d242-4f9c-b5d6-8148933ae8d7</guid>
+      <title>DeepSeek releases DSpark, a speculative decoding algorithm boosting DeepSeek-V4 throughput by up to 661%</title>
+      <link>https://github.com/vllm-project/vllm/pull/46995</link>
+      <description>Open-source vLLM has rapidly integrated support for the algorithm.</description>
+      <content:encoded>&lt;p&gt;Open-source vLLM has rapidly integrated support for the algorithm.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://github.com/vllm-project/vllm/pull/46995"&gt;https://github.com/vllm-project/vllm/pull/46995&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/47usplg9"&gt;https://digg.com/tech/47usplg9&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;DeepSeek has introduced DSpark, a speculative decoding algorithm that attaches a lightweight draft module to existing V4 model weights and delivers substantial inference acceleration while keeping the original output distribution intact. The technique combines a parallel draft backbone with a sequential head and a hardware-aware scheduler, and early production numbers show it already running inside DeepSeek’s own serving stack. 23 579 61 100 35.8K ZE #1695 | @ZEPHYR_Z9 T( #501 | @TEORTAXESTEX KA #403 | @YACINEMTB&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 4,070&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 11&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 3&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 3&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 3&lt;/li&gt;&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/yacineMTB"&gt;kache&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/teortaxesTex"&gt;Teortaxes▶️ (DeepSeek 推特🐋铁粉 2023 – ∞)&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/zephyr_z9"&gt;Zephyr&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+&lt;blockquote&gt;DSpark will see crazy adoption The Whale reduced the compute pressure on Chinese AI infra&lt;/blockquote&gt;</content:encoded>
+      <guid isPermaLink="false">4f2dd651-30c9-4edf-a287-a1047f35bd0a</guid>
       <category>Digg AI from X</category>
-      <pubDate>Mon, 29 Jun 2026 17:06:35 +0000</pubDate>
+      <pubDate>Tue, 30 Jun 2026 08:27:25 +0000</pubDate>
     </item>
     <item>
-      <title>Meta AI open-sources Brain2Qwerty v2, a non-invasive brain-to-text decoder achieving 61% word accuracy</title>
-      <link>https://ai.meta.com/blog/brain2qwerty-brain-ai-human-communication/?utm_source=twitter&amp;utm_medium=organic_social&amp;utm_content=video&amp;utm_campaign=brain2qwertyv2</link>
-      <description>It transitions from character decoding to full-sentence semantic decoding.</description>
-      <content:encoded>&lt;p&gt;It transitions from character decoding to full-sentence semantic decoding.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://ai.meta.com/blog/brain2qwerty-brain-ai-human-communication/?utm_source=twitter&amp;amp;utm_medium=organic_social&amp;amp;utm_content=video&amp;amp;utm_campaign=brain2qwertyv2"&gt;https://ai.meta.com/blog/brain2qwerty-brain-ai-human-communication/?utm_source=twitter&amp;amp;utm_medium=organic_social&amp;amp;utm_content=video&amp;amp;utm_campaign=brain2qwertyv2&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/bs3l55vn"&gt;https://digg.com/tech/bs3l55vn&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Meta just dropped the full code for Brain2Qwerty v2, turning raw MEG and EEG signals from people typing memorized sentences into real-time decoded text at the word and semantic level. The pipeline stacks a convolutional encoder with a transformer and character-level language model, lifting average word accuracy to 61 percent on data from nine volunteers and letting the best cases hit 78 percent with at most one error per sentence. 2K 20.7K 569 9.4K 5.5M BR #1861 | @BRIANROEMMELE XL #1855 | @XLR8HARDER CB #1428 | @CHRISJBAKKE CH #1360 | @KIMMONISMUS CS #1057 | @CSHORTEN30 AM #1027 | @ADAMMARBLESTONE ZN #983 | @ZACHARYNADO DF #756 | @DANIELLEFONG EL #684 | @OMARSAR0 TM #613 | @ISCIENCELUVR B( #530 | @BEFFJEZOS PH #448 | @PDHSU AM #437 | @ANJNEYMIDHA AW #74 | @ALEXANDR_WANG&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 333,196&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 2,918&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 702&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 12&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 130&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 39&lt;/li&gt;&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/alexandr_wang"&gt;Alexandr Wang&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/AnjneyMidha"&gt;Anjney Midha&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/pdhsu"&gt;Patrick Hsu&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/beffjezos"&gt;Beff (e/acc)&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/iScienceLuvr"&gt;Tanishq Mathew Abraham, Ph.D.&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;</content:encoded>
-      <guid isPermaLink="false">c4a8bd83-5fff-4941-95d2-a9e950d563d0</guid>
+      <title>Alibaba's Qwen team disputes researcher Tianhang Zhu's claims of leading its reinforcement learning development</title>
+      <link>https://www.linkedin.com/in/bobzhu</link>
+      <description>Zhu's Google Scholar profile listed papers lacking his name.</description>
+      <content:encoded>&lt;p&gt;Zhu&amp;#x27;s Google Scholar profile listed papers lacking his name.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://www.linkedin.com/in/bobzhu"&gt;https://www.linkedin.com/in/bobzhu&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/s41zyhe3"&gt;https://digg.com/tech/s41zyhe3&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;A public back-and-forth erupted on X after Tianhang Zhu posted about his new role leading LLM research at Fundamental Research Labs while referencing his past Alibaba Qwen work. Team members pushed back, stating he left after the first Qwen model and that no head-of-RL position existed on the team at the time. 17 96 1 5 8.4K T( #501 | @TEORTAXESTEX SZ #84 | @SUCHENZANG&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 3,912&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 49&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 4&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 10&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 7&lt;/li&gt;&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/suchenzang"&gt;Susan Zhang&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/teortaxesTex"&gt;Teortaxes▶️ (DeepSeek 推特🐋铁粉 2023 – ∞)&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+&lt;blockquote&gt;The plot thickens! I guess Tianhang can boast of his RL contributions very legitimately. PPO back then was a really high-risk, high-effort choice. I apologize.&lt;/blockquote&gt;</content:encoded>
+      <guid isPermaLink="false">d075d08c-89b0-4c80-a4d9-fe8a3fb06690</guid>
       <category>Digg AI from X</category>
-      <pubDate>Mon, 29 Jun 2026 13:42:17 +0000</pubDate>
+      <pubDate>Tue, 30 Jun 2026 07:00:24 +0000</pubDate>
     </item>
     <item>
-      <title>Meituan releases LongCat-2.0, a 1.6-trillion-parameter MoE model trained on 50,000 domestic Chinese ASICs</title>
-      <link>https://longcat.chat/blog/longcat-2.0/</link>
-      <description>The model supports a 1-million-token context window.</description>
-      <content:encoded>&lt;p&gt;The model supports a 1-million-token context window.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://longcat.chat/blog/longcat-2.0/"&gt;https://longcat.chat/blog/longcat-2.0/&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/va380veu"&gt;https://digg.com/tech/va380veu&lt;/a&gt;&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 46,482&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 492&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 143&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 6&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 36&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 27&lt;/li&gt;&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/_akhaliq"&gt;AK&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/jeremyphoward"&gt;Jeremy Howard&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/EMostaque"&gt;Emad&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/yacineMTB"&gt;kache&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/andrew_n_carr"&gt;Andrew Carr 🤸&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;</content:encoded>
-      <guid isPermaLink="false">0fa19af5-72a7-4708-b060-6ed0bb6e5cde</guid>
+      <title>DeepSeek open-sources core ML infrastructure projects DeepEP and DeepGEMM to optimize throughput and lower inference costs</title>
+      <link>https://x.com/Xianbao_QIAN/status/2071917185380073611</link>
+      <description>Nvidia's Dynamo infrastructure reportedly responds directly to these releases</description>
+      <content:encoded>&lt;p&gt;Nvidia&amp;#x27;s Dynamo infrastructure reportedly responds directly to these releases&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://x.com/Xianbao_QIAN/status/2071917185380073611"&gt;https://x.com/Xianbao_QIAN/status/2071917185380073611&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/8ranai60"&gt;https://digg.com/tech/8ranai60&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;DeepSeek has released two production-focused libraries under MIT licenses on GitHub: DeepEP for efficient expert-parallel communication in MoE setups and DeepGEMM for high-performance GEMM kernels with FP8/FP4 support and fused operations. The tools target inference bottlenecks with near-bandwidth throughput, reduced SM occupancy in later versions, and easy PyTorch integration via lightweight JIT compilation on Hopper-class GPUs or newer. 1 9 1 3 2.9K ZE #1695 | @ZEPHYR_Z9 T( #501 | @TEORTAXESTEX&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 2,736&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 7&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 2&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 1&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 2&lt;/li&gt;&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/teortaxesTex"&gt;Teortaxes▶️ (DeepSeek 推特🐋铁粉 2023 – ∞)&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/zephyr_z9"&gt;Zephyr&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+&lt;blockquote&gt;Nvidia Dynamo exists because of the whale&lt;/blockquote&gt;</content:encoded>
+      <guid isPermaLink="false">1e4b87e3-b57b-4115-8270-212922d5003a</guid>
       <category>Digg AI from X</category>
-      <pubDate>Mon, 29 Jun 2026 18:50:07 +0000</pubDate>
+      <pubDate>Tue, 30 Jun 2026 11:27:48 +0000</pubDate>
     </item>
     <item>
-      <title>Anthropic CEO Dario Amodei argues open-source AI cannot be monitored, revoked, or patched for safety after release</title>
-      <link>https://x.com/ramez/status/2071616710839521281</link>
-      <description>The clip reignited debate over open-source AI safety risks</description>
-      <content:encoded>&lt;p&gt;The clip reignited debate over open-source AI safety risks&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://x.com/ramez/status/2071616710839521281"&gt;https://x.com/ramez/status/2071616710839521281&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/zx1bqifo"&gt;https://digg.com/tech/zx1bqifo&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;A 2023 Senate testimony clip from Anthropic&amp;#x27;s Dario Amodei has resurfaced to sharpen the divide over open-source AI, stressing that once frontier models escape controlled environments the original developers lose any practical way to watch for abuse, pull them back, or push safety fixes. 815 43.3K 1.9K 1.8K 1.4M RN #1992 | @RAMEZ BR #1861 | @BRIANROEMMELE CH #1360 | @KIMMONISMUS RP #1257 | @ROHANPAUL_AI ME #861 | @MERVENOYANN B( #530 | @BEFFJEZOS KA #403 | @YACINEMTB RA #218 | @AGARWL_&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 176,835&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 1,495&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 142&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 22&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 159&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 17&lt;/li&gt;&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/agarwl_"&gt;Rishabh Agarwal&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/yacineMTB"&gt;kache&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/beffjezos"&gt;Beff (e/acc)&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/mervenoyann"&gt;merve&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/rohanpaul_ai"&gt;Rohan Paul&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;</content:encoded>
-      <guid isPermaLink="false">2a65aa78-fe0c-4901-9107-2f1470865873</guid>
+      <title>AI developer teortaxesTex argues China must spend $1.5 trillion annually to match US AI resource intensity</title>
+      <link>https://x.com/teortaxesTex/status/2071927594367213752</link>
+      <description>Hardware costs cap China's data center savings at 10%.</description>
+      <content:encoded>&lt;p&gt;Hardware costs cap China&amp;#x27;s data center savings at 10%.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://x.com/teortaxesTex/status/2071927594367213752"&gt;https://x.com/teortaxesTex/status/2071927594367213752&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/qo15l6pu"&gt;https://digg.com/tech/qo15l6pu&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Pseudonymous AI commentator @teortaxesTex, known as a vocal DeepSeek supporter, lays out why China would need roughly $1.5 trillion per year in AI spending to reach the same resource intensity as the US, where raw private investment runs far higher though state support and cost differences shrink the effective gap to perhaps two or three times. 3 7 0 2 2.1K ZE #1695 | @ZEPHYR_Z9 T( #501 | @TEORTAXESTEX&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 2,078&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 7&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 2&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 3&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 3&lt;/li&gt;&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/teortaxesTex"&gt;Teortaxes▶️ (DeepSeek 推特🐋铁粉 2023 – ∞)&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/zephyr_z9"&gt;Zephyr&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+&lt;blockquote&gt;Memory+Compute+Networking is 80% of total CAPEX (China has no advantage here) The rest 20% is power+cooling+shell Assuming China is 50% cheaper compared to US The max net savings is 10%&lt;/blockquote&gt;</content:encoded>
+      <guid isPermaLink="false">4ccb5278-39cc-4831-a275-cfff5bf03923</guid>
       <category>Digg AI from X</category>
-      <pubDate>Mon, 29 Jun 2026 07:15:03 +0000</pubDate>
+      <pubDate>Tue, 30 Jun 2026 12:03:27 +0000</pubDate>
     </item>
     <item>
-      <title>Secretary of War Pete Hegseth appoints Marc Andreessen and Blake Masters to new Defense Policy Board</title>
-      <link>https://www.war.gov/News/Releases/Release/Article/4528780/department-of-war-establishes-new-defense-policy-board/</link>
-      <description>Ambassador Robert Lighthizer will chair the advisory board.</description>
-      <content:encoded>&lt;p&gt;Ambassador Robert Lighthizer will chair the advisory board.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://www.war.gov/News/Releases/Release/Article/4528780/department-of-war-establishes-new-defense-policy-board/"&gt;https://www.war.gov/News/Releases/Release/Article/4528780/department-of-war-establishes-new-defense-policy-board/&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/9y5ypxtg"&gt;https://digg.com/tech/9y5ypxtg&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Secretary of War Pete Hegseth has named Marc Andreessen and Blake Masters among thirteen appointees to the revived Defense Policy Board, an advisory panel first formed in 1985 that reports directly to the Secretary, Deputy Secretary, and Under Secretary for Policy on matters of strategy and national security. 599 4.9K 417 764 653.8K CH #1360 | @KIMMONISMUS AC #682 | @ANDREWCURRAN_ BT #593 | @TUNGUZ B( #530 | @BEFFJEZOS KA #403 | @YACINEMTB SU #361 | @SUHAIL&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 651,546&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 4,816&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 763&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 204&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 388&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 10&lt;/li&gt;&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/Suhail"&gt;Suhail&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/yacineMTB"&gt;kache&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/beffjezos"&gt;Beff (e/acc)&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/tunguz"&gt;Bojan Tunguz&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/AndrewCurran_"&gt;Andrew Curran&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;</content:encoded>
-      <guid isPermaLink="false">2fe6a9c7-d4d1-4d18-a72a-7bd8518d9bfd</guid>
+      <title>Google DeepMind opens its new London headquarters, named Platform 37 after AlphaGo's historic Move 37</title>
+      <link>https://x.com/fofrAI/status/2071883174603338212</link>
+      <description>DeepMind staff shared first-day tours of the terraced workspace.</description>
+      <content:encoded>&lt;p&gt;DeepMind staff shared first-day tours of the terraced workspace.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://x.com/fofrAI/status/2071883174603338212"&gt;https://x.com/fofrAI/status/2071883174603338212&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/84u6b971"&gt;https://digg.com/tech/84u6b971&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Google DeepMind has begun moving staff into its first wholly owned headquarters outside the US, a purpose-built King’s Cross complex named Platform 37 that nods to both the adjacent rail station and AlphaGo’s famous 2016 move. Early tours show a terraced workspace already in use this summer, with the public AI Exchange space still slated for later in the year. 1 17 0 1 913 FO #1853 | @FOFRAI JP #774 | @JPARKERHOLDER&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 913&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 17&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 1&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 1&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 2&lt;/li&gt;&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/jparkerholder"&gt;Jack Parker-Holder&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/fofrAI"&gt;fofr&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+&lt;blockquote&gt;Even more inspiring, it’s coming home (personal view only 🤣)&lt;/blockquote&gt;</content:encoded>
+      <guid isPermaLink="false">0b407d8d-f5b4-4f7a-9623-8110accd0e77</guid>
       <category>Digg AI from X</category>
-      <pubDate>Mon, 29 Jun 2026 18:23:04 +0000</pubDate>
+      <pubDate>Tue, 30 Jun 2026 09:06:57 +0000</pubDate>
     </item>
     <item>
-      <title>Former Meta PM Xiaoyin Qu predicts US and European enterprises will adopt Chinese AI models to self-host on private GPUs</title>
-      <link>https://x.com/xlr8harder/status/2071539689115267148</link>
-      <description>Qu cites enterprise distrust of Anthropic's data retention policies</description>
-      <content:encoded>&lt;p&gt;Qu cites enterprise distrust of Anthropic&amp;#x27;s data retention policies&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://x.com/xlr8harder/status/2071539689115267148"&gt;https://x.com/xlr8harder/status/2071539689115267148&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/189tymuk"&gt;https://digg.com/tech/189tymuk&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;A former Meta product manager argues that US and European companies will move toward Chinese AI models specifically so they can run them on their own GPUs, gaining direct control over data and the chance to fine-tune on internal datasets for competitive edges. 168 2.7K 277 1.1K 487.2K XL #1855 | @XLR8HARDER ZE #1695 | @ZEPHYR_Z9 AD #1537 | @DORIALEXANDER RO #1315 | @KRISHNANROHIT RP #1257 | @ROHANPAUL_AI XJ #830 | @_XJDR&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 483,230&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 2,718&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 1,111&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 25&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 141&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 13&lt;/li&gt;&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/_xjdr"&gt;xjdr&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/rohanpaul_ai"&gt;Rohan Paul&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/krishnanrohit"&gt;rohit&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/Dorialexander"&gt;Alexander Doria&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/zephyr_z9"&gt;Zephyr&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;</content:encoded>
-      <guid isPermaLink="false">3f1d3eae-c6b5-414d-9722-2a9df7a126c2</guid>
+      <title>ETH Zürich's Florian Tramèr questions ACL 2026 conference budget allocating $50 per coffee break with no actual meals</title>
+      <link>https://x.com/florian_tramer/status/2071896295610990786/photo/1</link>
+      <description>Organizers claim food costs will exceed $800 per attendee.</description>
+      <content:encoded>&lt;p&gt;Organizers claim food costs will exceed $800 per attendee.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://x.com/florian_tramer/status/2071896295610990786/photo/1"&gt;https://x.com/florian_tramer/status/2071896295610990786/photo/1&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/lyjsa0jn"&gt;https://digg.com/tech/lyjsa0jn&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;A leading researcher at ETH Zürich is calling out the ACL 2026 organizers over registration pricing that assigns roughly $50 to each of a dozen coffee breaks while providing no meals beyond a single welcome reception and one social event, even as total food and beverage costs are said to top $800 per attendee. 0 1 0 0 147 FT #1659 | @FLORIAN_TRAMER GK #197 | @THEGAUTAMKAMATH&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 147&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 1&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 2&lt;/li&gt;&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/thegautamkamath"&gt;Gautam Kamath&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/florian_tramer"&gt;Florian Tramèr&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+&lt;blockquote&gt;@florian_tramer @aclmeeting Maybe it&amp;#x27;s because of all the vegans pumping up the catering costs? For example at last EACL we were provided with the ultimate catering experience: a plastic bowl of stale fruits (for coffee break snacks and lunch).&lt;/blockquote&gt;</content:encoded>
+      <guid isPermaLink="false">fe880f7c-bde9-4adc-a3ea-3e02179ebca0</guid>
       <category>Digg AI from X</category>
-      <pubDate>Mon, 29 Jun 2026 07:10:21 +0000</pubDate>
-    </item>
-    <item>
-      <title>Meta restricts employees from using Claude Code and OpenAI Codex to prevent competitor model distillation</title>
-      <link>https://www.theinformation.com/articles/internal-docs-show-meta-putting-limits-claude-codex-fearing-distillation?rc=bfliih</link>
-      <description>The policy protects the training pipeline of Meta's upcoming MetaCode.</description>
-      <content:encoded>&lt;p&gt;The policy protects the training pipeline of Meta&amp;#x27;s upcoming MetaCode.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://www.theinformation.com/articles/internal-docs-show-meta-putting-limits-claude-codex-fearing-distillation?rc=bfliih"&gt;https://www.theinformation.com/articles/internal-docs-show-meta-putting-limits-claude-codex-fearing-distillation?rc=bfliih&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/84bk7m29"&gt;https://digg.com/tech/84bk7m29&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Meta is restricting employee access to Anthropic’s Claude Code and OpenAI’s Codex while building its internal coding model, MetaCode, to stop outputs from those tools from slipping into its training data or evaluations. 174 1.4K 92 336 180.8K XL #1855 | @XLR8HARDER AD #1537 | @DORIALEXANDER CH #1360 | @KIMMONISMUS RP #1257 | @ROHANPAUL_AI AC #682 | @ANDREWCURRAN_ B( #530 | @BEFFJEZOS SW #201 | @SIMONW&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 168,184&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 1,350&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 314&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 27&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 137&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 16&lt;/li&gt;&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/simonw"&gt;Simon Willison&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/beffjezos"&gt;Beff (e/acc)&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/AndrewCurran_"&gt;Andrew Curran&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/rohanpaul_ai"&gt;Rohan Paul&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/kimmonismus"&gt;Chubby♨️&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;</content:encoded>
-      <guid isPermaLink="false">df60367f-2a19-4ee6-8f4c-58bc321ca52e</guid>
-      <category>Digg AI from X</category>
-      <pubDate>Mon, 29 Jun 2026 13:48:57 +0000</pubDate>
-    </item>
-    <item>
-      <title>Kim Isenberg and Peter Wang argue the US is losing the AI race due to energy and data center constraints</title>
-      <link>https://x.com/davidlee/status/2071609936329760769</link>
-      <description>China uses free models to promote domestic Huawei hardware.</description>
-      <content:encoded>&lt;p&gt;China uses free models to promote domestic Huawei hardware.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://x.com/davidlee/status/2071609936329760769"&gt;https://x.com/davidlee/status/2071609936329760769&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/3baroum6"&gt;https://digg.com/tech/3baroum6&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Analysts Kim Isenberg and Peter Wang frame America&amp;#x27;s AI lag as a direct result of stalled data center construction and electricity grid limits, contrasting this with China&amp;#x27;s rapid rollout of models that favor domestic Huawei chips and infrastructure. 226 2.1K 259 1K 371.9K DA #1469 | @DAVIDLEE CH #1360 | @KIMMONISMUS SB #289 | @BLANCHEMINERVA AL #195 | @LEVIE GT #121 | @GARRYTAN&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 358,049&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 1,999&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 1,003&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 54&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 167&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 6&lt;/li&gt;&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/garrytan"&gt;Garry Tan&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/levie"&gt;Aaron Levie&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/BlancheMinerva"&gt;Stella Biderman&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/kimmonismus"&gt;Chubby♨️&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/davidlee"&gt;davidlee&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;</content:encoded>
-      <guid isPermaLink="false">1ccb65ed-598e-4500-9c41-aa5a519e7d90</guid>
-      <category>Digg AI from X</category>
-      <pubDate>Mon, 29 Jun 2026 09:21:09 +0000</pubDate>
-    </item>
-    <item>
-      <title>Tesla releases FSD v14 Lite, bringing distilled AI4 driving models to memory-constrained AI3 hardware</title>
-      <link>https://x.com/aelluswamy/status/2071487485172134131</link>
-      <description>Older AI3 computers operate with 15% of AI4's memory bandwidth</description>
-      <content:encoded>&lt;p&gt;Older AI3 computers operate with 15% of AI4&amp;#x27;s memory bandwidth&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://x.com/aelluswamy/status/2071487485172134131"&gt;https://x.com/aelluswamy/status/2071487485172134131&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/6y2ultrn"&gt;https://digg.com/tech/6y2ultrn&lt;/a&gt;&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 4,819,303&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 25,422&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 921&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 248&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 2,500&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 7&lt;/li&gt;&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/elonmusk"&gt;Elon Musk&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/Scobleizer"&gt;Robert Scoble&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/davemorin"&gt;Dave Morin 🦞&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;</content:encoded>
-      <guid isPermaLink="false">888c1592-7852-4dc7-8635-3ff4a8b23e79</guid>
-      <category>Digg AI from X</category>
-      <pubDate>Mon, 29 Jun 2026 06:45:07 +0000</pubDate>
-    </item>
-    <item>
-      <title>Smol.ai founder Shawn 'swyx' Wang opens the AI Engineer World's Fair with a focus on local AI and NVIDIA Blackwell hardware</title>
-      <link>https://aie-evolution.vercel.app</link>
-      <description>Major sponsors include OpenAI, Anthropic, and Google DeepMind</description>
-      <content:encoded>&lt;p&gt;Major sponsors include OpenAI, Anthropic, and Google DeepMind&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://aie-evolution.vercel.app"&gt;https://aie-evolution.vercel.app&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/14q7z08p"&gt;https://digg.com/tech/14q7z08p&lt;/a&gt;&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 8,577&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 121&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 4&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 0&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 15&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 13&lt;/li&gt;&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/swyx"&gt;swyx @aiDotEngineer WF&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/abeirami"&gt;Ahmad Beirami&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/DynamicWebPaige"&gt;👩‍💻 Paige Bailey&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/jxnlco"&gt;jason&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/peteskomoroch"&gt;Pete Skomoroch&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;</content:encoded>
-      <guid isPermaLink="false">df2cdd30-06dc-47fd-9589-44be7e0dad2b</guid>
-      <category>Digg AI from X</category>
-      <pubDate>Mon, 29 Jun 2026 00:32:08 +0000</pubDate>
+      <pubDate>Tue, 30 Jun 2026 09:59:05 +0000</pubDate>
     </item>
   </channel>
 </rss>
