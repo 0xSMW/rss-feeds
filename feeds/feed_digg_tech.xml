@@ -7,96 +7,156 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 30 Jun 2026 12:39:14 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 01 Jul 2026 00:36:29 +0000</lastBuildDate>
     <item>
-      <title>DeepSeek releases DSpark, a speculative decoding algorithm boosting DeepSeek-V4 throughput by up to 661%</title>
-      <link>https://github.com/vllm-project/vllm/pull/46995</link>
-      <description>Open-source vLLM has rapidly integrated support for the algorithm.</description>
-      <content:encoded>&lt;p&gt;Open-source vLLM has rapidly integrated support for the algorithm.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://github.com/vllm-project/vllm/pull/46995"&gt;https://github.com/vllm-project/vllm/pull/46995&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/47usplg9"&gt;https://digg.com/tech/47usplg9&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;DeepSeek has introduced DSpark, a speculative decoding algorithm that attaches a lightweight draft module to existing V4 model weights and delivers substantial inference acceleration while keeping the original output distribution intact. The technique combines a parallel draft backbone with a sequential head and a hardware-aware scheduler, and early production numbers show it already running inside DeepSeek’s own serving stack. 23 579 61 100 35.8K ZE #1695 | @ZEPHYR_Z9 T( #501 | @TEORTAXESTEX KA #403 | @YACINEMTB&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 4,070&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 11&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 3&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 3&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 3&lt;/li&gt;&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/yacineMTB"&gt;kache&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/teortaxesTex"&gt;Teortaxes▶️ (DeepSeek 推特🐋铁粉 2023 – ∞)&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/zephyr_z9"&gt;Zephyr&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
-&lt;blockquote&gt;DSpark will see crazy adoption The Whale reduced the compute pressure on Chinese AI infra&lt;/blockquote&gt;</content:encoded>
-      <guid isPermaLink="false">4f2dd651-30c9-4edf-a287-a1047f35bd0a</guid>
+      <title>AI startup Etched exits stealth with $800M in funding for its Sohu chip, which hardcodes LLM attention into silicon</title>
+      <link>https://x.com/Etched/status/2071972062202343590</link>
+      <description>The company has secured over $1 billion in contracts.</description>
+      <content:encoded>&lt;p&gt;The company has secured over $1 billion in contracts.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://x.com/Etched/status/2071972062202343590"&gt;https://x.com/Etched/status/2071972062202343590&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/lnyilbgg"&gt;https://digg.com/tech/lnyilbgg&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Etched has stepped out of stealth with $800 million raised across multiple rounds to advance its Sohu ASIC, a chip built specifically for transformer-based LLM inference, while also reporting more than $1 billion in customer contracts and plans to ship its first full inference racks this summer after a completed A0 tapeout. 71 572 36 107 70K ID #1972 | @IAINDUNNING SO #1919 | @CIS_FEMALE AG #1848 | @ITSANDREWGAO MP #1819 | @MVPATEL2000 DZ #1794 | @DZHANG50 LA #1783 | @LIORONAI NA #1761 | @NIKESHARORA BT #1605 | @BENTOSSELL MB #1589 | @BAKKERMICHIEL SW #1516 | @0XSIGIL LP #1442 | @LPOLOVETS CH #1360 | @KIMMONISMUS JS #1313 | @JOON_S_PK LA #1215 | @SCALING01 JH #1190 | @MATHEMAGIC1AN YP #1171 | @YPATIL125 EL #1136 | @ELIEBAKOUCH SH #1085 | @SONYATWEETYBIRD TS #1050 | @TIMSWEENEYEPIC DR #981 &lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 56,367&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 364&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 74&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 2&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 56&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 52&lt;/li&gt;&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/_rockt"&gt;Tim Rocktäschel&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/_arohan_"&gt;rohan anil&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/tri_dao"&gt;Tri Dao&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/StefanoErmon"&gt;Stefano Ermon&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/MillionInt"&gt;Jerry Tworek&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+&lt;blockquote&gt;I’m a very early investor in Etched, as I’ve believed for years that inference will be the biggest market we’ve ever seen. Incredibly impressed by the team’s execution and so excited to use models powered by their hardware!&lt;/blockquote&gt;</content:encoded>
+      <guid isPermaLink="false">2fec3454-4f91-4c39-a5dd-da4feaa812dd</guid>
       <category>Digg AI from X</category>
-      <pubDate>Tue, 30 Jun 2026 08:27:25 +0000</pubDate>
+      <pubDate>Tue, 30 Jun 2026 15:00:01 +0000</pubDate>
     </item>
     <item>
-      <title>Alibaba's Qwen team disputes researcher Tianhang Zhu's claims of leading its reinforcement learning development</title>
-      <link>https://www.linkedin.com/in/bobzhu</link>
-      <description>Zhu's Google Scholar profile listed papers lacking his name.</description>
-      <content:encoded>&lt;p&gt;Zhu&amp;#x27;s Google Scholar profile listed papers lacking his name.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://www.linkedin.com/in/bobzhu"&gt;https://www.linkedin.com/in/bobzhu&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/s41zyhe3"&gt;https://digg.com/tech/s41zyhe3&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;A public back-and-forth erupted on X after Tianhang Zhu posted about his new role leading LLM research at Fundamental Research Labs while referencing his past Alibaba Qwen work. Team members pushed back, stating he left after the first Qwen model and that no head-of-RL position existed on the team at the time. 17 96 1 5 8.4K T( #501 | @TEORTAXESTEX SZ #84 | @SUCHENZANG&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 3,912&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 49&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 4&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 10&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 7&lt;/li&gt;&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/suchenzang"&gt;Susan Zhang&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/teortaxesTex"&gt;Teortaxes▶️ (DeepSeek 推特🐋铁粉 2023 – ∞)&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
-&lt;blockquote&gt;The plot thickens! I guess Tianhang can boast of his RL contributions very legitimately. PPO back then was a really high-risk, high-effort choice. I apologize.&lt;/blockquote&gt;</content:encoded>
-      <guid isPermaLink="false">d075d08c-89b0-4c80-a4d9-fe8a3fb06690</guid>
+      <title>US Commerce Department is expected to lift export controls on Fable technology on July 1, 2026</title>
+      <link>https://www.politico.com/news/2026/06/30/anthropic-wh-lifting-export-limits-00980865</link>
+      <description>Creators Matthew Berman and Dan Shipper plan immediate live testing</description>
+      <content:encoded>&lt;p&gt;Creators Matthew Berman and Dan Shipper plan immediate live testing&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://www.politico.com/news/2026/06/30/anthropic-wh-lifting-export-limits-00980865"&gt;https://www.politico.com/news/2026/06/30/anthropic-wh-lifting-export-limits-00980865&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/aypwilha"&gt;https://digg.com/tech/aypwilha&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;The Commerce Department move would reverse the June export controls that forced Anthropic to shut down Claude Fable 5 worldwide after launch, restoring the model to general availability without the foreign-national restrictions that had blocked everyone including US users. 2.1K 10K 1.6K 875 582.1K “P #1846 | @PAULARAMBLES MB #1780 | @MATTHEWBERMAN BH #1762 | @BENHYLAK ZE #1695 | @ZEPHYR_Z9 AV #1419 | @ALTRYNE CH #1360 | @KIMMONISMUS T- #1325 | @THEO RP #1257 | @ROHANPAUL_AI LA #1215 | @SCALING01 BA #1115 | @BAYESLORD 🎭 #1014 | @DEEPFATES DS #975 | @DANSHIPPER HE #708 | @HEINRICHKUTTLER MS #691 | @MATTSHUMER_ AC #682 | @ANDREWCURRAN_ TM #613 | @ISCIENCELUVR BT #593 | @TUNGUZ YJ #586 | @YUCHENJ_UW B( #530 | @BEFFJEZOS MB #57 | @MILES_BRUNDAGE&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 121,992&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 2,185&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 137&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 38&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 222&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 50&lt;/li&gt;&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/Miles_Brundage"&gt;Miles Brundage&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/beffjezos"&gt;Beff (e/acc)&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/Yuchenj_UW"&gt;Yuchen Jin&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/tunguz"&gt;Bojan Tunguz&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/iScienceLuvr"&gt;Tanishq Mathew Abraham, Ph.D.&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+&lt;blockquote&gt;The plan is to Fable 5 available again to all general users. Full story here w/@cheyennehaslett : https://www.politico.com/news/2026/06/30/anthropic-wh-lifting-export-limits-00980865&lt;/blockquote&gt;</content:encoded>
+      <guid isPermaLink="false">8fb0acba-346a-400e-920a-bbe386c9681e</guid>
       <category>Digg AI from X</category>
-      <pubDate>Tue, 30 Jun 2026 07:00:24 +0000</pubDate>
+      <pubDate>Tue, 30 Jun 2026 22:32:21 +0000</pubDate>
     </item>
     <item>
-      <title>DeepSeek open-sources core ML infrastructure projects DeepEP and DeepGEMM to optimize throughput and lower inference costs</title>
-      <link>https://x.com/Xianbao_QIAN/status/2071917185380073611</link>
-      <description>Nvidia's Dynamo infrastructure reportedly responds directly to these releases</description>
-      <content:encoded>&lt;p&gt;Nvidia&amp;#x27;s Dynamo infrastructure reportedly responds directly to these releases&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://x.com/Xianbao_QIAN/status/2071917185380073611"&gt;https://x.com/Xianbao_QIAN/status/2071917185380073611&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/8ranai60"&gt;https://digg.com/tech/8ranai60&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;DeepSeek has released two production-focused libraries under MIT licenses on GitHub: DeepEP for efficient expert-parallel communication in MoE setups and DeepGEMM for high-performance GEMM kernels with FP8/FP4 support and fused operations. The tools target inference bottlenecks with near-bandwidth throughput, reduced SM occupancy in later versions, and easy PyTorch integration via lightweight JIT compilation on Hopper-class GPUs or newer. 1 9 1 3 2.9K ZE #1695 | @ZEPHYR_Z9 T( #501 | @TEORTAXESTEX&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 2,736&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 7&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 2&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 1&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 2&lt;/li&gt;&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/teortaxesTex"&gt;Teortaxes▶️ (DeepSeek 推特🐋铁粉 2023 – ∞)&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/zephyr_z9"&gt;Zephyr&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
-&lt;blockquote&gt;Nvidia Dynamo exists because of the whale&lt;/blockquote&gt;</content:encoded>
-      <guid isPermaLink="false">1e4b87e3-b57b-4115-8270-212922d5003a</guid>
+      <title>Anthropic releases Claude Sonnet 5, scoring 63.2% on SWE-bench Pro and 81.2% on OSWorld computer use</title>
+      <link>https://www.anthropic.com/news/claude-sonnet-5</link>
+      <description>The model features an optional 1-million-token context window.</description>
+      <content:encoded>&lt;p&gt;The model features an optional 1-million-token context window.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://www.anthropic.com/news/claude-sonnet-5"&gt;https://www.anthropic.com/news/claude-sonnet-5&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/bao6n6us"&gt;https://digg.com/tech/bao6n6us&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Anthropic is releasing Claude Sonnet 5 today as its most agentic Sonnet model, with improved planning, browser and terminal tool use, and autonomous task execution that previously needed larger models. Official details highlight gains over Sonnet 4.6 in reasoning and coding while landing close to but generally below Opus 4.8 on evaluations. Reports circulating on social media mention a 1M context window and January 2026 knowledge cutoff, yet these specifics do not appear in the primary announcement or system card. 953 5.7K 675 546 249.4K BR #1861 | @BRIANROEMMELE XL #1855 | @XLR8HARDER FB #1778 | @XEOPHON PS #1578 | @SKIRANO AV #1419 | @ALTRYNE CH #1360 | @KIMMONISMUS RO #1315 | @KRISHNANROHIT RP #1257 | @ROHANPAUL_AI LA #1215 | @SCALING01 XJ #830 | @_XJDR RS #741 | @ZIV_RAVID EL #684 | @O&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 78,597&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 1,163&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 75&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 21&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 134&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 55&lt;/li&gt;&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/levie"&gt;Aaron Levie&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/Scobleizer"&gt;Robert Scoble&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/teortaxesTex"&gt;Teortaxes▶️ (DeepSeek 推特🐋铁粉 2023 – ∞)&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/willccbb"&gt;will brown&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/iScienceLuvr"&gt;Tanishq Mathew Abraham, Ph.D.&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+&lt;blockquote&gt;@claudeai Pricing is dope!&lt;/blockquote&gt;</content:encoded>
+      <guid isPermaLink="false">21dd9977-6a31-4b0f-95da-a776f222dce0</guid>
       <category>Digg AI from X</category>
-      <pubDate>Tue, 30 Jun 2026 11:27:48 +0000</pubDate>
+      <pubDate>Tue, 30 Jun 2026 13:45:35 +0000</pubDate>
     </item>
     <item>
-      <title>AI developer teortaxesTex argues China must spend $1.5 trillion annually to match US AI resource intensity</title>
-      <link>https://x.com/teortaxesTex/status/2071927594367213752</link>
-      <description>Hardware costs cap China's data center savings at 10%.</description>
-      <content:encoded>&lt;p&gt;Hardware costs cap China&amp;#x27;s data center savings at 10%.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://x.com/teortaxesTex/status/2071927594367213752"&gt;https://x.com/teortaxesTex/status/2071927594367213752&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/qo15l6pu"&gt;https://digg.com/tech/qo15l6pu&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Pseudonymous AI commentator @teortaxesTex, known as a vocal DeepSeek supporter, lays out why China would need roughly $1.5 trillion per year in AI spending to reach the same resource intensity as the US, where raw private investment runs far higher though state support and cost differences shrink the effective gap to perhaps two or three times. 3 7 0 2 2.1K ZE #1695 | @ZEPHYR_Z9 T( #501 | @TEORTAXESTEX&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 2,078&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 7&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 2&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 3&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 3&lt;/li&gt;&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/teortaxesTex"&gt;Teortaxes▶️ (DeepSeek 推特🐋铁粉 2023 – ∞)&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/zephyr_z9"&gt;Zephyr&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
-&lt;blockquote&gt;Memory+Compute+Networking is 80% of total CAPEX (China has no advantage here) The rest 20% is power+cooling+shell Assuming China is 50% cheaper compared to US The max net savings is 10%&lt;/blockquote&gt;</content:encoded>
-      <guid isPermaLink="false">4ccb5278-39cc-4831-a275-cfff5bf03923</guid>
+      <title>Neuralink completes first human through-dura electrode insertion, bypassing the need to cut the brain's protective membrane</title>
+      <link>https://x.com/neuralink/status/2072026718467166512</link>
+      <description>The milestone procedure was performed at Toronto's University Health Network.</description>
+      <content:encoded>&lt;p&gt;The milestone procedure was performed at Toronto&amp;#x27;s University Health Network.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://x.com/neuralink/status/2072026718467166512"&gt;https://x.com/neuralink/status/2072026718467166512&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/vadfob6e"&gt;https://digg.com/tech/vadfob6e&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Neuralink has now threaded its electrode arrays straight through the intact dura mater in human trial participants, leaving the brain&amp;#x27;s tough outer membrane uncut for the first time. The approach skips a traditional scalpel step, which Elon Musk described as solving a key challenge and making procedures notably safer and simpler. 924 4.3K 554 176 1.3M MS #585 | @MARTINSHKRELI RS #447 | @SCOBLEIZER SZ #303 | @SHIVON EM #52 | @ELONMUSK&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 1,316,464&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 4,291&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 176&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 45&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 879&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 7&lt;/li&gt;&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/elonmusk"&gt;Elon Musk&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/shivon"&gt;Shivon Zilis&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/Scobleizer"&gt;Robert Scoble&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/MartinShkreli"&gt;Martin Shkreli&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+&lt;blockquote&gt;@shivon @cb_doge Absolutely&lt;/blockquote&gt;</content:encoded>
+      <guid isPermaLink="false">e8c14734-46bc-4c94-9d7c-ac10ac090fcc</guid>
       <category>Digg AI from X</category>
-      <pubDate>Tue, 30 Jun 2026 12:03:27 +0000</pubDate>
+      <pubDate>Tue, 30 Jun 2026 19:09:21 +0000</pubDate>
     </item>
     <item>
-      <title>Google DeepMind opens its new London headquarters, named Platform 37 after AlphaGo's historic Move 37</title>
-      <link>https://x.com/fofrAI/status/2071883174603338212</link>
-      <description>DeepMind staff shared first-day tours of the terraced workspace.</description>
-      <content:encoded>&lt;p&gt;DeepMind staff shared first-day tours of the terraced workspace.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://x.com/fofrAI/status/2071883174603338212"&gt;https://x.com/fofrAI/status/2071883174603338212&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/84u6b971"&gt;https://digg.com/tech/84u6b971&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Google DeepMind has begun moving staff into its first wholly owned headquarters outside the US, a purpose-built King’s Cross complex named Platform 37 that nods to both the adjacent rail station and AlphaGo’s famous 2016 move. Early tours show a terraced workspace already in use this summer, with the public AI Exchange space still slated for later in the year. 1 17 0 1 913 FO #1853 | @FOFRAI JP #774 | @JPARKERHOLDER&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 913&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 17&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 1&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 1&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 2&lt;/li&gt;&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/jparkerholder"&gt;Jack Parker-Holder&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/fofrAI"&gt;fofr&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
-&lt;blockquote&gt;Even more inspiring, it’s coming home (personal view only 🤣)&lt;/blockquote&gt;</content:encoded>
-      <guid isPermaLink="false">0b407d8d-f5b4-4f7a-9623-8110accd0e77</guid>
+      <title>Google DeepMind launches Nano Banana 2 Lite for $0.034 images and previews Gemini Omni Flash API</title>
+      <link>https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-omni-flash-nano-banana-2-lite/</link>
+      <description>Omni Flash generates 10-second videos at $0.10 per second.</description>
+      <content:encoded>&lt;p&gt;Omni Flash generates 10-second videos at $0.10 per second.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-omni-flash-nano-banana-2-lite/"&gt;https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-omni-flash-nano-banana-2-lite/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/plr69ybe"&gt;https://digg.com/tech/plr69ybe&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Google DeepMind is rolling out Nano Banana 2 Lite as a generally available image model that handles generation and editing in roughly four seconds while Gemini Omni Flash enters preview for conversational video work inside the Gemini API and AI Studio. 171 994 176 173 155.6K FO #1853 | @FOFRAI AV #1419 | @ALTRYNE PS #1404 | @_PHILSCHMID RP #1257 | @ROHANPAUL_AI EL #684 | @OMARSAR0 T( #501 | @TEORTAXESTEX 👩‍💻P #387 | @DYNAMICWEBPAIGE PM #317 | @DOCMILANFAR JB #245 | @JASONBALDRIDGE LK #100 | @OFFICIALLOGANK DH #29 | @DEMISHASSABIS&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 17,206&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 217&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 39&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 10&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 42&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 16&lt;/li&gt;&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/demishassabis"&gt;Demis Hassabis&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/OfficialLoganK"&gt;Logan Kilpatrick&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/jasonbaldridge"&gt;Jason Baldridge&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/docmilanfar"&gt;Peyman Milanfar&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/DynamicWebPaige"&gt;👩‍💻 Paige Bailey&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+&lt;blockquote&gt;Nano Banana 2 Lite delivers text-to-image outputs in just 4 seconds. It’s designed for quicker ideation and workflows where speed and cost are the primary roadblocks.&lt;/blockquote&gt;</content:encoded>
+      <guid isPermaLink="false">01278980-59c9-4879-adac-971e2c0d16da</guid>
       <category>Digg AI from X</category>
-      <pubDate>Tue, 30 Jun 2026 09:06:57 +0000</pubDate>
+      <pubDate>Tue, 30 Jun 2026 16:04:53 +0000</pubDate>
     </item>
     <item>
-      <title>ETH Zürich's Florian Tramèr questions ACL 2026 conference budget allocating $50 per coffee break with no actual meals</title>
-      <link>https://x.com/florian_tramer/status/2071896295610990786/photo/1</link>
-      <description>Organizers claim food costs will exceed $800 per attendee.</description>
-      <content:encoded>&lt;p&gt;Organizers claim food costs will exceed $800 per attendee.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://x.com/florian_tramer/status/2071896295610990786/photo/1"&gt;https://x.com/florian_tramer/status/2071896295610990786/photo/1&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/lyjsa0jn"&gt;https://digg.com/tech/lyjsa0jn&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;A leading researcher at ETH Zürich is calling out the ACL 2026 organizers over registration pricing that assigns roughly $50 to each of a dozen coffee breaks while providing no meals beyond a single welcome reception and one social event, even as total food and beverage costs are said to top $800 per attendee. 0 1 0 0 147 FT #1659 | @FLORIAN_TRAMER GK #197 | @THEGAUTAMKAMATH&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 147&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 1&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 2&lt;/li&gt;&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/thegautamkamath"&gt;Gautam Kamath&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/florian_tramer"&gt;Florian Tramèr&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
-&lt;blockquote&gt;@florian_tramer @aclmeeting Maybe it&amp;#x27;s because of all the vegans pumping up the catering costs? For example at last EACL we were provided with the ultimate catering experience: a plastic bowl of stale fruits (for coffee break snacks and lunch).&lt;/blockquote&gt;</content:encoded>
-      <guid isPermaLink="false">fe880f7c-bde9-4adc-a3ea-3e02179ebca0</guid>
+      <title>Ramp and Revelio Labs study of 21,559 firms finds high-intensity AI adopters grew headcount by 10% over two years</title>
+      <link>https://ramp.com/data/ai-jobs-impact</link>
+      <description>Entry-level headcount at those high-adopting firms rose 12%.</description>
+      <content:encoded>&lt;p&gt;Entry-level headcount at those high-adopting firms rose 12%.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://ramp.com/data/ai-jobs-impact"&gt;https://ramp.com/data/ai-jobs-impact&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/o8ls9tj2"&gt;https://digg.com/tech/o8ls9tj2&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;The Ramp-Revelio analysis tracks actual vendor spending on AI tools against monthly workforce records for 21,559 U.S. firms from 2021 through early 2026. Companies in the top tercile of AI intensity added staff steadily after adoption, while lower-intensity spenders showed no measurable shift, with entry-level roles expanding fastest among the heavier users. 27 109 629 37 22.8K RN #1992 | @RAMEZ DJ #1706 | @DAN_JEFFRIES1 CB #1674 | @CODE_STAR TN #1157 | @TURNERNOVAK CV #659 | @C_VALENZUELAB SI #584 | @SIGNULLL KR #384 | @RABOIS NB #353 | @NATHANBENAICH AL #195 | @LEVIE DS #192 | @DAVIDSACKS YL #3 | @YLECUN&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 23,116&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 80&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 21&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 1&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 20&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 16&lt;/li&gt;&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/ylecun"&gt;Yann LeCun&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/DavidSacks"&gt;David Sacks&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/levie"&gt;Aaron Levie&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/nathanbenaich"&gt;Nathan Benaich&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/rabois"&gt;Keith Rabois&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+&lt;blockquote&gt;Sources: Study: https://ramp.com/data/ai-jobs-impact Charts: https://www.ft.com/content/8026eac6-16ad-467d-b8c3-c48c5af684e6?syn-25a6b1a6=1&lt;/blockquote&gt;</content:encoded>
+      <guid isPermaLink="false">591c55d9-3636-4b88-8647-85a23dd4457e</guid>
       <category>Digg AI from X</category>
-      <pubDate>Tue, 30 Jun 2026 09:59:05 +0000</pubDate>
+      <pubDate>Tue, 30 Jun 2026 11:32:19 +0000</pubDate>
+    </item>
+    <item>
+      <title>Visa, Stripe, and Coinbase back Open Standard's upcoming OpenUSD stablecoin designed to share economics with users</title>
+      <link>http://joinopenstandard.com</link>
+      <description>Tempo will natively issue the stablecoin on day one.</description>
+      <content:encoded>&lt;p&gt;Tempo will natively issue the stablecoin on day one.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="http://joinopenstandard.com"&gt;http://joinopenstandard.com&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/m3fwr9bt"&gt;https://digg.com/tech/m3fwr9bt&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Open Standard is rolling out Open USD as the first stablecoin built explicitly as shared infrastructure rather than a proprietary product, with Visa, Stripe, Coinbase and over 140 other partners signed on to support it. The design centers on neutral governance through an independent company, zero mint or redeem fees, and a commitment to return nearly all reserve earnings to the partners and distributors who drive volume. 61 405 216 41 46.8K DR #1656 | @DWR DM #1132 | @DAVIDMARCUS MH #1108 | @MATTHUANG MP #1028 | @EASTDAKOTA AL #820 | @ALFRED_LIN BA #398 | @BRIAN_ARMSTRONG TL #220 | @TOBI EM #171 | @EMOSTAQUE PC #81 | @PATRICKC PG #39 | @PAULG&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 42,217&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 306&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 23&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 2&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 51&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 15&lt;/li&gt;&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/paulg"&gt;Paul Graham&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/patrickc"&gt;Patrick Collison&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/EMostaque"&gt;Emad&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/tobi"&gt;tobi lutke&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/brian_armstrong"&gt;Brian Armstrong&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+&lt;blockquote&gt;Delighted to partner with Visa, Mastercard, Coinbase, Cloudflare, Google, and many others, to introduce Open Standard, a new stablecoin designed for scale: http://joinopenstandard.com.&lt;/blockquote&gt;</content:encoded>
+      <guid isPermaLink="false">e56f0879-cad2-4107-85de-7ef032f45049</guid>
+      <category>Digg AI from X</category>
+      <pubDate>Tue, 30 Jun 2026 13:19:54 +0000</pubDate>
+    </item>
+    <item>
+      <title>OpenAI internal optimization cuts inference costs by half, running logged-out ChatGPT traffic on a couple hundred GPUs</title>
+      <link>https://www.theinformation.com/articles/openai-discovers-new-way-cut-inference-costs-half?utm_source=ti_app&amp;rc=hwneun</link>
+      <description>Observers speculate the undisclosed method relies on speculative decoding</description>
+      <content:encoded>&lt;p&gt;Observers speculate the undisclosed method relies on speculative decoding&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://www.theinformation.com/articles/openai-discovers-new-way-cut-inference-costs-half?utm_source=ti_app&amp;amp;rc=hwneun"&gt;https://www.theinformation.com/articles/openai-discovers-new-way-cut-inference-costs-half?utm_source=ti_app&amp;amp;rc=hwneun&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/r2e9x85d"&gt;https://digg.com/tech/r2e9x85d&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;OpenAI quietly found an optimization that cuts inference costs in half on the models it touched, and the first visible payoff showed up in logged-out ChatGPT traffic where GPU count dropped to just a few hundred. The work came from engineers squeezing more out of existing servers rather than chasing new chips, a detail that stayed internal until The Information surfaced it. 39 257 28 44 18K DM #1766 | @DAVEMCCLURE CB #1674 | @CODE_STAR CH #1360 | @KIMMONISMUS RP #1257 | @ROHANPAUL_AI LA #1215 | @SCALING01 JL #1086 | @JESSICALESSIN AC #682 | @ANDREWCURRAN_ ⿻A #595 | @IAMTRASK T( #501 | @TEORTAXESTEX NL #80 | @NATOLAMBERT&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 14,701&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 239&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 35&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 8&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 31&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 19&lt;/li&gt;&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/natolambert"&gt;Nathan Lambert&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/teortaxesTex"&gt;Teortaxes▶️ (DeepSeek 推特🐋铁粉 2023 – ∞)&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/iamtrask"&gt;⿻ Andrew Trask&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/AndrewCurran_"&gt;Andrew Curran&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/Jessicalessin"&gt;Jessica Lessin&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+&lt;blockquote&gt;More on the optimization + what it could mean for OpenAI&amp;#x27;s gross margins or usage limits here: https://www.theinformation.com/newsletters/ai-agenda/openai-discovers-new-way-cut-inference-costs-half&lt;/blockquote&gt;</content:encoded>
+      <guid isPermaLink="false">5cf981f5-6a95-4764-91d0-e830f446285c</guid>
+      <category>Digg AI from X</category>
+      <pubDate>Tue, 30 Jun 2026 15:00:53 +0000</pubDate>
+    </item>
+    <item>
+      <title>Biotech startup Conception successfully generates the first early-stage human eggs derived from stem cells</title>
+      <link>https://x.com/mattkrisiloff/status/2071963092263768157</link>
+      <description>The milestone advances in vitro gametogenesis to address infertility.</description>
+      <content:encoded>&lt;p&gt;The milestone advances in vitro gametogenesis to address infertility.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://x.com/mattkrisiloff/status/2071963092263768157"&gt;https://x.com/mattkrisiloff/status/2071963092263768157&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/d7cqlgwk"&gt;https://digg.com/tech/d7cqlgwk&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;A blood draw can now yield induced pluripotent stem cells that Conception has coaxed into miniature ovaries holding the first reported early-stage human eggs. This technical step inches in vitro gametogenesis forward for infertility research, yet the cells remain far from mature gametes and carry no verified path to fertilization or live birth. 45 229 27 26 37.4K RN #1992 | @RAMEZ TH #1982 | @VOOOOOOGEL KJ #1971 | @KATIES M🍥 #1956 | @MAYFER MD #1628 | @MHDEMPSEY MP #1028 | @EASTDAKOTA DF #756 | @DANIELLEFONG BA #398 | @BRIAN_ARMSTRONG BP #381 | @BORISMPOWER JA #173 | @JACHIAM0&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 32,733&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 137&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 10&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 25&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 17&lt;/li&gt;&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/jachiam0"&gt;Joshua Achiam&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/BorisMPower"&gt;Boris Power&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/brian_armstrong"&gt;Brian Armstrong&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/DanielleFong"&gt;Danielle Fong 🔆&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/eastdakota"&gt;Matthew Prince 🌥&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+&lt;blockquote&gt;This is a huge deal once we can safely start doing it in humans - any cell can be turned into a human egg !&lt;/blockquote&gt;</content:encoded>
+      <guid isPermaLink="false">78bc460a-86ae-43a7-a8e4-51d2fd39d494</guid>
+      <category>Digg AI from X</category>
+      <pubDate>Tue, 30 Jun 2026 14:59:05 +0000</pubDate>
+    </item>
+    <item>
+      <title>Sebastian Raschka releases a new book on building reasoning LLMs from scratch</title>
+      <link>https://mng.bz/Nwr7</link>
+      <description>The guide covers inference scaling, reinforcement learning, and distillation.</description>
+      <content:encoded>&lt;p&gt;The guide covers inference scaling, reinforcement learning, and distillation.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://mng.bz/Nwr7"&gt;https://mng.bz/Nwr7&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/23u54olf"&gt;https://digg.com/tech/23u54olf&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Sebastian Raschka follows his earlier LLM pretraining guide with a 440-page full-color volume that starts from an off-the-shelf model and walks through building reasoning capabilities by hand, covering text generation mechanics, verifier evaluation, and post-training methods. 19 156 266 36 5.8K MJ #1433 | @MIMANSAJ EL #1136 | @ELIEBAKOUCH KM #409 | @KORYMATH SR #182 | @RASBT NL #80 | @NATOLAMBERT&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 5,825&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 156&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 36&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 4&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 15&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 9&lt;/li&gt;&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/natolambert"&gt;Nathan Lambert&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/rasbt"&gt;Sebastian Raschka&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/korymath"&gt;Kory Mathewson&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/eliebakouch"&gt;elie&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/MimansaJ"&gt;Mimansa Jaiswal&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+&lt;blockquote&gt;It&amp;#x27;s available from Manning (already shipping): https://mng.bz/Nwr7 and Amazon (for preorder, shipping in a few weeks): https://amzn.to/4aAKiFY&lt;/blockquote&gt;</content:encoded>
+      <guid isPermaLink="false">e61df52c-a59d-4877-9b37-752e61e62ec2</guid>
+      <category>Digg AI from X</category>
+      <pubDate>Tue, 30 Jun 2026 13:16:03 +0000</pubDate>
     </item>
   </channel>
 </rss>
