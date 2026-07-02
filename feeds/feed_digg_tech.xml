@@ -7,21 +7,96 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 01 Jul 2026 12:57:58 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 02 Jul 2026 00:36:01 +0000</lastBuildDate>
     <item>
-      <title>Anthropic pulls Claude Fable 5 offline one day after redeployment following a successful jailbreak by security researcher Pliny</title>
-      <link>https://www.anthropic.com/news/redeploying-fable-5</link>
-      <description>The model was redeployed following discussions with the US government.</description>
-      <content:encoded>&lt;p&gt;The model was redeployed following discussions with the US government.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://www.anthropic.com/news/redeploying-fable-5"&gt;https://www.anthropic.com/news/redeploying-fable-5&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/x9l7qu4s"&gt;https://digg.com/tech/x9l7qu4s&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Anthropic restored global access to Claude Fable 5 after the US Department of Commerce lifted export controls, adding fresh classifiers to curb cybersecurity misuse and temporarily routing routine coding queries to Opus 4.8 while the safeguards improve. 18 51 4 5 5.5K CH #1364 | @KIMMONISMUS LA #1218 | @SCALING01 J⧉ #674 | @REPLIGATE JS #576 | @MONONOFU B( #530 | @BEFFJEZOS ND #22 | @NANDODF&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 5,520&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 51&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 5&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 18&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 9&lt;/li&gt;&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/NandoDF"&gt;Nando de Freitas&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/beffjezos"&gt;Beff (e/acc)&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/Mononofu"&gt;Julian Schrittwieser&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/repligate"&gt;j⧉nus&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/scaling01"&gt;Lisan al Gaib&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
-&lt;blockquote&gt;I’m stoked that Fable is available again! This is the first model where I went from individually reviewing changes to just reviewing PRs, it’s astonishingly smart - it’s when I really felt in my bones that coding will be solved by end of year&lt;/blockquote&gt;</content:encoded>
-      <guid isPermaLink="false">0f3fd122-b682-4e81-9311-7592c42e7019</guid>
+      <title>Anthropic redeploys Claude Fable 5 on Amazon Bedrock ahead of API and Claude.ai rollouts</title>
+      <link>https://support.claude.com/en/articles/15424964-claude-fable-5-promotional-access</link>
+      <description>The model is available immediately for enterprise Bedrock customers.</description>
+      <content:encoded>&lt;p&gt;The model is available immediately for enterprise Bedrock customers.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://support.claude.com/en/articles/15424964-claude-fable-5-promotional-access"&gt;https://support.claude.com/en/articles/15424964-claude-fable-5-promotional-access&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/87t14h5u"&gt;https://digg.com/tech/87t14h5u&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;After export controls briefly sidelined Claude Fable 5 just days after its June debut, Anthropic is flipping the switch back on for enterprise teams first through Amazon Bedrock, with the same top-tier Mythos-class capabilities now cleared for wider use once the compliance pause lifted. 6.5K 58.1K 2.4K 4.1K 3.7M TH #1985 | @VOOOOOOGEL LA #1787 | @LIORONAI SM #1714 | @SAMMCALLISTER ND #1657 | @NICKADOBOS CH #1364 | @KIMMONISMUS T- #1329 | @THEO LA #1218 | @SCALING01 PT #821 | @ELDER_PLINIUS DF #756 | @DANIELLEFONG RS #741 | @ZIV_RAVID EL #684 | @OMARSAR0 BT #593 | @TUNGUZ AA #479 | @ALEXALBERT__ RS #447 | @SCOBLEIZER&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 249,163&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 3,598&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 178&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 11&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 237&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 18&lt;/li&gt;&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/Scobleizer"&gt;Robert Scoble&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/alexalbert__"&gt;Alex Albert&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/tunguz"&gt;Bojan Tunguz&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/omarsar0"&gt;elvis&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/ziv_ravid"&gt;Ravid Shwartz Ziv&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+&lt;blockquote&gt;Welcome back to the world Fable!!&lt;/blockquote&gt;</content:encoded>
+      <guid isPermaLink="false">3a3dbb50-49c8-4149-9e5b-d9f6955b8b07</guid>
       <category>Digg AI from X</category>
-      <pubDate>Wed, 01 Jul 2026 07:14:30 +0000</pubDate>
+      <pubDate>Wed, 01 Jul 2026 17:46:54 +0000</pubDate>
+    </item>
+    <item>
+      <title>Nikita Bier announces X Live Studio, a professional livestreaming command center with subscriber-only chat controls</title>
+      <link>https://studio.x.com/live</link>
+      <description>The release will be paired with a new Livestream API.</description>
+      <content:encoded>&lt;p&gt;The release will be paired with a new Livestream API.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://studio.x.com/live"&gt;https://studio.x.com/live&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/pshgbev1"&gt;https://digg.com/tech/pshgbev1&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;X is rolling out Live Studio as a desktop command center inside Creator Studio, letting pro streamers schedule events, upload thumbnails, gate audiences including subscriber-only chats, moderate live chat in real time, and track viewer metrics, with a demo featuring a scheduled rocket launch; the move also introduces an accompanying Livestream API and hints at a future $1 million creator rewards pool. 2K 6.7K 743 1K 765.9K AV #1423 | @ALTRYNE T- #1329 | @THEO RS #447 | @SCOBLEIZER NB #239 | @NIKITABIER&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 769,120&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 6,439&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 1,033&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 538&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 1,495&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 9&lt;/li&gt;&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/nikitabier"&gt;Nikita Bier&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/Scobleizer"&gt;Robert Scoble&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/theo"&gt;Theo - t3.gg&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/altryne"&gt;Alex Volkov @ AI Engineer&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+&lt;blockquote&gt;@chrisparkX Need chatterino support&lt;/blockquote&gt;</content:encoded>
+      <guid isPermaLink="false">dfa9840f-086b-4798-8f3c-96ab8354d515</guid>
+      <category>Digg AI from X</category>
+      <pubDate>Wed, 01 Jul 2026 21:38:20 +0000</pubDate>
+    </item>
+    <item>
+      <title>OpenAI's Romain Huet showcases a joke physical 'Codex token reset device' at the aiDotEngineer conference</title>
+      <link>https://x.com/dkundel/status/2072422693081940445</link>
+      <description>Codex engineering lead Thibault Sottiaux also promoted the stunt.</description>
+      <content:encoded>&lt;p&gt;Codex engineering lead Thibault Sottiaux also promoted the stunt.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://x.com/dkundel/status/2072422693081940445"&gt;https://x.com/dkundel/status/2072422693081940445&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/gahp7h76"&gt;https://digg.com/tech/gahp7h76&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;At the aiDotEngineer conference, OpenAI turned its booth into a playful stage by placing a small blue button inside a locked glass case, framed as the Codex token reset device and open for a one-time 1pm demonstration before heading back to storage. 579 7.5K 177 390 1.4M V( #1942 | @REACH_VB EL #684 | @OMARSAR0 RH #642 | @ROMAINHUET TI #611 | @THSOTTIAUX PS #382 | @STEIPETE S@ #225 | @SWYX GB #32 | @GDB&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 252,674&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 2,271&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 122&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 24&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 261&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 11&lt;/li&gt;&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/gdb"&gt;Greg Brockman&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/swyx"&gt;swyx @aiDotEngineer WF&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/steipete"&gt;Peter Steinberger 🦞&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/thsottiaux"&gt;Tibo&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/romainhuet"&gt;Romain Huet&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+&lt;blockquote&gt;It&amp;#x27;s happening&lt;/blockquote&gt;</content:encoded>
+      <guid isPermaLink="false">aea07bea-9adb-47f1-a6bc-4788f396c1d9</guid>
+      <category>Digg AI from X</category>
+      <pubDate>Wed, 01 Jul 2026 19:48:08 +0000</pubDate>
+    </item>
+    <item>
+      <title>Meta plans to launch a cloud service selling excess AI compute capacity and hosted models to offset infrastructure costs</title>
+      <link>https://www.bloomberg.com/news/articles/2026-07-01/meta-is-building-a-cloud-business-to-sell-excess-ai-compute</link>
+      <description>The service will compete with AWS Bedrock and CoreWeave.</description>
+      <content:encoded>&lt;p&gt;The service will compete with AWS Bedrock and CoreWeave.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://www.bloomberg.com/news/articles/2026-07-01/meta-is-building-a-cloud-business-to-sell-excess-ai-compute"&gt;https://www.bloomberg.com/news/articles/2026-07-01/meta-is-building-a-cloud-business-to-sell-excess-ai-compute&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/gypsshy5"&gt;https://digg.com/tech/gypsshy5&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Meta&amp;#x27;s CEO floated the idea of renting out extra AI GPUs as a backup plan during a May shareholder meeting, but only if the company&amp;#x27;s massive data-center buildout ends up exceeding its own needs. No engineering work, pricing, or launch timeline has been confirmed, leaving the idea as strategic optionality rather than an active project. 181 3K 92 222 589.7K DM #1770 | @DAVEMCCLURE ZE #1700 | @ZEPHYR_Z9 CH #1364 | @KIMMONISMUS LA #1218 | @SCALING01 GM #178 | @GARYMARCUS&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 590,569&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 3,071&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 219&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 17&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 156&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 12&lt;/li&gt;&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/GaryMarcus"&gt;Gary Marcus&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/scaling01"&gt;Lisan al Gaib&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/kimmonismus"&gt;Chubby♨️&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/zephyr_z9"&gt;Zephyr&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/davemcclure"&gt;Dave McClure&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+&lt;blockquote&gt;@zephyr_z9 @evrgn11112231 First poly market business, now this…&lt;/blockquote&gt;</content:encoded>
+      <guid isPermaLink="false">95dc7ddf-d02f-4600-afe3-168570da2b0f</guid>
+      <category>Digg AI from X</category>
+      <pubDate>Wed, 01 Jul 2026 12:37:07 +0000</pubDate>
+    </item>
+    <item>
+      <title>Anthropic launches one-week Claude Fable 5 trial for Pro, Team, and Enterprise subscribers</title>
+      <link>https://x.com/nathanbenaich/status/2072403895997825496/photo/1</link>
+      <description>The promotional model trial runs until July 7.</description>
+      <content:encoded>&lt;p&gt;The promotional model trial runs until July 7.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://x.com/nathanbenaich/status/2072403895997825496/photo/1"&gt;https://x.com/nathanbenaich/status/2072403895997825496/photo/1&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/i217ig5t"&gt;https://digg.com/tech/i217ig5t&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Anthropic is giving Pro, Team, and premium Enterprise subscribers a short window to test Claude Fable 5 across its main platforms, with the offer running only through July 7 at no added cost. 1.2K 12.2K 172 450 550K RP #1260 | @ROHANPAUL_AI SM #1228 | @PITDESI JW #710 | @WOLFEJOSH AC #682 | @ANDREWCURRAN_ @L #627 | @LEVELSIO NB #353 | @NATHANBENAICH&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 70,797&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 1,036&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 44&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 7&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 69&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 7&lt;/li&gt;&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/nathanbenaich"&gt;Nathan Benaich&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/levelsio"&gt;@levelsio&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/AndrewCurran_"&gt;Andrew Curran&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/wolfejosh"&gt;Josh Wolfe&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/pitdesi"&gt;Sheel Mohnot&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+&lt;blockquote&gt;Omg&lt;/blockquote&gt;</content:encoded>
+      <guid isPermaLink="false">46e65a6d-22d1-4f88-9138-672bbd2ce20c</guid>
+      <category>Digg AI from X</category>
+      <pubDate>Wed, 01 Jul 2026 19:36:06 +0000</pubDate>
+    </item>
+    <item>
+      <title>UC Berkeley EECS department chair Jelani Nelson joins Anthropic while on leave of absence</title>
+      <link>https://x.com/netcapgirl/status/2072434231259844694</link>
+      <description>Nelson specializes in algorithms for massive datasets.</description>
+      <content:encoded>&lt;p&gt;Nelson specializes in algorithms for massive datasets.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://x.com/netcapgirl/status/2072434231259844694"&gt;https://x.com/netcapgirl/status/2072434231259844694&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/1r7064v5"&gt;https://digg.com/tech/1r7064v5&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;UC Berkeley&amp;#x27;s computer science division chair Jelani Nelson has started a leave of absence to join Anthropic as Member of Technical Staff on July 1, 2026, shifting his focus from teaching combinatorial algorithms and sketching methods to applying those techniques inside a frontier AI lab. 505 7.6K 216 970 3.2M JL #907 | @JERRYJLIU0 DF #756 | @DANIELLEFONG AC #682 | @ANDREWCURRAN_ B( #530 | @BEFFJEZOS PM #317 | @DOCMILANFAR DP #179 | @PFAU&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 34,536&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 261&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 14&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 2&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 14&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 9&lt;/li&gt;&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/pfau"&gt;David Pfau&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/docmilanfar"&gt;Peyman Milanfar&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/beffjezos"&gt;Beff (e/acc)&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/AndrewCurran_"&gt;Andrew Curran&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/DanielleFong"&gt;Danielle Fong 🔆&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+&lt;blockquote&gt;imagine being a berkeley eecs undergrad opening piazza and the pinned post says your department chair has been acquired by claude&lt;/blockquote&gt;</content:encoded>
+      <guid isPermaLink="false">386ab306-d368-49aa-9fe7-8898a0e25ae1</guid>
+      <category>Digg AI from X</category>
+      <pubDate>Wed, 01 Jul 2026 17:48:39 +0000</pubDate>
     </item>
     <item>
       <title>Founder @levelsio warns the EU's new sub-€150 customs duty will trigger severe shipping delays and complex tax burdens</title>
@@ -30,132 +105,58 @@
       <content:encoded>&lt;p&gt;Recipients must manually classify imports using complex tariff codes.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://x.com/vonderleyen/status/2072222371461705796"&gt;https://x.com/vonderleyen/status/2072222371461705796&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/3v4ejtj6"&gt;https://digg.com/tech/3v4ejtj6&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;The EU ends its €150 de minimis exemption on 1 July 2026, replacing it with a temporary €3 flat customs fee per tariff line on low-value distance sales until mid-2028, after which normal product-specific tariffs kick in. A Portugal-based founder has flagged potential weeks-long delays, broken portals, and confusing classifications for recipients, yet official guidance stresses a simplified transitional regime handled mainly by carriers and platforms. 2.8K 2.2K 299 489 594.1K @L #627 | @LEVELSIO RP #395 | @TYPESFAST&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 6,367&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 94&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 9&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 3&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 13&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 2&lt;/li&gt;&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/typesfast"&gt;Ryan Petersen&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/levelsio"&gt;@levelsio&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+&lt;p&gt;The EU ends its €150 de minimis exemption on 1 July 2026, replacing it with a temporary €3 flat customs fee per tariff line on low-value distance sales until mid-2028, after which normal product-specific tariffs kick in. A Portugal-based founder has flagged potential weeks-long delays, broken portals, and confusing classifications for recipients, yet official guidance stresses a simplified transitional regime handled mainly by carriers and platforms. 7.1K 12.1K 1K 2.3K 5.4M PS #1362 | @PETESKOMOROCH @L #627 | @LEVELSIO RP #395 | @TYPESFAST&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 740,997&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 7,895&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 955&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 130&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 110&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 3&lt;/li&gt;&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/typesfast"&gt;Ryan Petersen&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/levelsio"&gt;@levelsio&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/peteskomoroch"&gt;Pete Skomoroch&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
 &lt;blockquote&gt;$3b&lt;/blockquote&gt;</content:encoded>
       <guid isPermaLink="false">740c750f-abd0-4e6c-9c85-b0f6b2cbf9ee</guid>
       <category>Digg AI from X</category>
       <pubDate>Wed, 01 Jul 2026 11:08:28 +0000</pubDate>
     </item>
     <item>
-      <title>Meta is reportedly developing a cloud service to rent its surplus AI GPU capacity to external customers</title>
-      <link>https://x.com/wallstengine/status/2072298205379977548</link>
-      <description>The move aims to offset massive AI infrastructure costs.</description>
-      <content:encoded>&lt;p&gt;The move aims to offset massive AI infrastructure costs.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://x.com/wallstengine/status/2072298205379977548"&gt;https://x.com/wallstengine/status/2072298205379977548&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/gypsshy5"&gt;https://digg.com/tech/gypsshy5&lt;/a&gt;&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 20,790&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 117&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 5&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 1&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 13&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 3&lt;/li&gt;&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/scaling01"&gt;Lisan al Gaib&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/zephyr_z9"&gt;Zephyr&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
-&lt;blockquote&gt;Bad news for neos &amp;amp; other hyperscalers&lt;/blockquote&gt;</content:encoded>
-      <guid isPermaLink="false">95dc7ddf-d02f-4600-afe3-168570da2b0f</guid>
+      <title>Weaver Robotics launches Isaac 1, a household chore robot shipping this fall</title>
+      <link>https://x.com/weaverobotics/status/2072362538671706314</link>
+      <description>Online orders are open alongside a promotional capability video.</description>
+      <content:encoded>&lt;p&gt;Online orders are open alongside a promotional capability video.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://x.com/weaverobotics/status/2072362538671706314"&gt;https://x.com/weaverobotics/status/2072362538671706314&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/ewunnqxu"&gt;https://digg.com/tech/ewunnqxu&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Weaver Robotics, the YC S24 startup, is opening pre-orders for its wheeled Isaac 1 robot that tackles laundry pickup and folding plus daily tidying of beds, toys, and clutter, with the first customer shipments slated for fall 2026 beginning in California. 1.8K 10.2K 217 3.8K 6.5M B( #1627 | @ANDERSONBCDEFG AL #1156 | @ALTH0U CP #856 | @CHRIS_J_PAXTON&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 1,011,579&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 2,725&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 615&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 12&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 123&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 5&lt;/li&gt;&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/chris_j_paxton"&gt;Chris Paxton&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/alth0u"&gt;alth0u🧶&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/andersonbcdefg"&gt;Ben (no treats)&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+&lt;blockquote&gt;$$8k home robot. Closer and closer to never doing chores again&lt;/blockquote&gt;</content:encoded>
+      <guid isPermaLink="false">aa072763-064d-4516-9883-7399f8ea9fd5</guid>
       <category>Digg AI from X</category>
-      <pubDate>Wed, 01 Jul 2026 12:37:07 +0000</pubDate>
+      <pubDate>Wed, 01 Jul 2026 17:27:35 +0000</pubDate>
     </item>
     <item>
-      <title>US House advances the KIDS Act to regulate AI chatbots and mandate web age verification</title>
-      <link>https://clerk.house.gov/evs/2026/roll228.xml</link>
-      <description>Critics warn the rules could force universal web identity verification.</description>
-      <content:encoded>&lt;p&gt;Critics warn the rules could force universal web identity verification.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://clerk.house.gov/evs/2026/roll228.xml"&gt;https://clerk.house.gov/evs/2026/roll228.xml&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/s32xoq12"&gt;https://digg.com/tech/s32xoq12&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;The House cleared a wide-ranging package that layers fresh disclosure and safety rules onto AI chatbots while adding age checks for adult content sites, sending the measure to the Senate after a 267-117 vote. 65 908 216 42 21.2K DJ #1711 | @DAN_JEFFRIES1 T( #501 | @TEORTAXESTEX&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 659&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 7&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 5&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 2&lt;/li&gt;&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/teortaxesTex"&gt;Teortaxes▶️ (DeepSeek 推特🐋铁粉 2023 – ∞)&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/Dan_Jeffries1"&gt;Daniel Jeffries&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
-&lt;blockquote&gt;Here’s the roll call: https://clerk.house.gov/evs/2026/roll228.xml&lt;/blockquote&gt;</content:encoded>
-      <guid isPermaLink="false">55b43c7d-bb17-43d2-acc7-58b49c7e9b00</guid>
+      <title>Epic Games founder Tim Sweeney shares screenshot of Anthropic's Claude safety filter blocking a query about bumblebee flatulence</title>
+      <link>https://x.com/TimSweeneyEpic/status/2072405899260448997</link>
+      <description>The safety block forced a model switch to Opus 4.8</description>
+      <content:encoded>&lt;p&gt;The safety block forced a model switch to Opus 4.8&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://x.com/TimSweeneyEpic/status/2072405899260448997"&gt;https://x.com/TimSweeneyEpic/status/2072405899260448997&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/7yl7cme8"&gt;https://digg.com/tech/7yl7cme8&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Epic Games founder Tim Sweeney posted a screenshot showing Anthropic&amp;#x27;s Claude interface blocking the query &amp;quot;Do bumblebees fart?&amp;quot; with a message about safety measures flagging even safe conversations. The exchange occurred with the newly launched Fable 5 model, whose classifiers routed the prompt onward rather than refusing it outright. 252 4K 196 185 197.8K TS #1051 | @TIMSWEENEYEPIC DF #756 | @DANIELLEFONG LB #72 | @GIFFMANA&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 201,100&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 4,101&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 188&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 57&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 198&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 3&lt;/li&gt;&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/giffmana"&gt;Lucas Beyer (bl16)&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/DanielleFong"&gt;Danielle Fong 🔆&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/TimSweeneyEpic"&gt;Tim Sweeney&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+&lt;blockquote&gt;@TimSweeneyEpic “Sir, they know about the Bumblebee farts.”&lt;/blockquote&gt;</content:encoded>
+      <guid isPermaLink="false">1e84cbbc-ccff-4c46-a99e-292c3bfc884f</guid>
       <category>Digg AI from X</category>
-      <pubDate>Wed, 01 Jul 2026 09:39:12 +0000</pubDate>
+      <pubDate>Wed, 01 Jul 2026 19:44:04 +0000</pubDate>
     </item>
     <item>
-      <title>Google DeepMind's Pranav Shyam argues short-horizon PPO reduces to bandit problems, but open-source developer Grad disputes the latency impact</title>
-      <link>https://x.com/recurseparadox/status/2072232321873539132</link>
-      <description>Grad says 20,000-token reasoning workloads bypass critic bottlenecks.</description>
-      <content:encoded>&lt;p&gt;Grad says 20,000-token reasoning workloads bypass critic bottlenecks.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://x.com/recurseparadox/status/2072232321873539132"&gt;https://x.com/recurseparadox/status/2072232321873539132&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/l5lv32c1"&gt;https://digg.com/tech/l5lv32c1&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;A public exchange on X between Google DeepMind researcher Pranav Shyam and open-source account Grad highlights how short-horizon reinforcement learning setups mirror bandit problems, removing any advantage from value functions while still forcing PPO to wait on its critic and add latency. 8 6 0 2 135 PS #1597 | @RECURSEPARADOX GR #1525 | @GRAD62304977&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 135&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 6&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 2&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 8&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 11&lt;/li&gt;&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/Grad62304977"&gt;Grad&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/recurseparadox"&gt;Pranav Shyam&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
-&lt;blockquote&gt;Like my point is for long horizon I would trust the value models less and less and with compute scaling I would prefer a bigger group size or other ideas to improve credit assignment here If we assume the value model is pretty good then surely it should’ve always been what we should’ve been doing and save lots of compute still&lt;/blockquote&gt;</content:encoded>
-      <guid isPermaLink="false">2d5c7ca6-bb9e-4829-a72a-3dc331374c05</guid>
+      <title>BPI report says a China-linked activist group blocked or delayed $23.6 billion in US AI infrastructure projects</title>
+      <link>https://www.btcpolicy.org/articles/foreign-influence-campaign-against-american-ai-part-ii-singham-ground-game</link>
+      <description>The campaigns triggered ten US data center moratoria.</description>
+      <content:encoded>&lt;p&gt;The campaigns triggered ten US data center moratoria.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://www.btcpolicy.org/articles/foreign-influence-campaign-against-american-ai-part-ii-singham-ground-game"&gt;https://www.btcpolicy.org/articles/foreign-influence-campaign-against-american-ai-part-ii-singham-ground-game&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/6ntxbmwz"&gt;https://digg.com/tech/6ntxbmwz&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;A BPI investigation traces how the Party for Socialism and Liberation helped organize local opposition that contributed to ten data-center moratoria and roughly $23.6 billion in delayed or canceled AI infrastructure across 14 states, with documented wins in nine of them. 470 6.1K 1.1K 2K 1.2M BO #832 | @BODONOGHUE85 B( #530 | @BEFFJEZOS GT #121 | @GARRYTAN&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 27,764&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 548&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 47&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 2&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 28&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 5&lt;/li&gt;&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/garrytan"&gt;Garry Tan&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/beffjezos"&gt;Beff (e/acc)&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/bodonoghue85"&gt;Brendan O&amp;#x27;Donoghue&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+&lt;blockquote&gt;Read the full report here 👇 https://www.btcpolicy.org/articles/foreign-influence-campaign-against-american-ai-part-ii-singham-ground-game&lt;/blockquote&gt;</content:encoded>
+      <guid isPermaLink="false">8f2a5d83-c125-41f4-9754-77cf0cd052fa</guid>
       <category>Digg AI from X</category>
-      <pubDate>Wed, 01 Jul 2026 08:14:20 +0000</pubDate>
-    </item>
-    <item>
-      <title>AI chip startup Etched raises $800 million and tapes out its chip after deploying an emergency sprint to Bangalore</title>
-      <link>https://x.com/InvestLikeBest/status/2072296999186026720</link>
-      <description>The company has secured over $1 billion in customer contracts.</description>
-      <content:encoded>&lt;p&gt;The company has secured over $1 billion in customer contracts.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://x.com/InvestLikeBest/status/2072296999186026720"&gt;https://x.com/InvestLikeBest/status/2072296999186026720&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/zdtxg01y"&gt;https://digg.com/tech/zdtxg01y&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Etched has raised a total of $800 million across rounds to develop purpose-built inference chips for transformer models, with the latest tranche closing at a $5 billion valuation and the company now validating its first taped-out A0 silicon ahead of rack shipments this summer. 11 131 21 50 23.7K SC #827 | @BLADER PO #571 | @PATRICK_OSHAG&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 1,076&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 2&lt;/li&gt;&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/patrick_oshag"&gt;Patrick OShaughnessy&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/blader"&gt;Siqi Chen&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
-&lt;blockquote&gt;@Tijori1 They are literally saying that the Bangalore team (vendor) was putting them behind schedule and that&amp;#x27;s why they had to stay here. That&amp;#x27;s not a pat on the back.&lt;/blockquote&gt;</content:encoded>
-      <guid isPermaLink="false">24acca73-10d5-469b-a252-ddf3eeeb6ab4</guid>
-      <category>Digg AI from X</category>
-      <pubDate>Wed, 01 Jul 2026 11:21:32 +0000</pubDate>
-    </item>
-    <item>
-      <title>Technical commentators joke that a highly recursive post by Paul Graham resembles Lisp without parentheses</title>
-      <link>https://x.com/sytelus/status/2072242266413179055</link>
-      <description>Commentators joked the nested sentence structure needed closing parentheses</description>
-      <content:encoded>&lt;p&gt;Commentators joked the nested sentence structure needed closing parentheses&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://x.com/sytelus/status/2072242266413179055"&gt;https://x.com/sytelus/status/2072242266413179055&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/diwv9rlk"&gt;https://digg.com/tech/diwv9rlk&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Paul Graham posted a single sentence describing Y Combinator that folds the familiar &amp;quot;make something people want&amp;quot; phrasing back on itself, creating an extra layer of self-reference that immediately prompted jokes about missing Lisp parentheses. 1 7 0 0 539 SS #1474 | @SYTELUS BS #797 | @BSCHOLL&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 539&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 7&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 1&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 2&lt;/li&gt;&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/bscholl"&gt;Blake Scholl 🛫&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/sytelus"&gt;Shital Shah&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
-&lt;blockquote&gt;@paulg Needs more parentheses&lt;/blockquote&gt;</content:encoded>
-      <guid isPermaLink="false">54b31b9c-b3bc-4979-9bf1-9403aa2c5a2d</guid>
-      <category>Digg AI from X</category>
-      <pubDate>Wed, 01 Jul 2026 08:53:51 +0000</pubDate>
-    </item>
-    <item>
-      <title>Prime Intellect's kalomaze argues GANs remain ubiquitous because they power the autoencoders used in modern diffusion models</title>
-      <link>https://x.com/kalomaze/status/2072229341791134096</link>
-      <description>The debate counters claims that the technology is obsolete.</description>
-      <content:encoded>&lt;p&gt;The debate counters claims that the technology is obsolete.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://x.com/kalomaze/status/2072229341791134096"&gt;https://x.com/kalomaze/status/2072229341791134096&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/oju244es"&gt;https://digg.com/tech/oju244es&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;In a July 1 X reply, Prime Intellect researcher kalomaze pushes back on the idea that GANs have faded by pointing to their continued presence inside autoencoders that support latent diffusion pipelines, treating that integration as evidence of ongoing relevance rather than any fall from grace. 1 3 0 0 235 KA #1216 | @KALOMAZE GA #598 | @GABRIEL1&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 235&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 3&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 1&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 2&lt;/li&gt;&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/gabriel1"&gt;gabriel&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/kalomaze"&gt;kalomaze&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
-&lt;blockquote&gt;@willdepue GANs are hella satisfying&lt;/blockquote&gt;</content:encoded>
-      <guid isPermaLink="false">492fd301-f53f-46a6-ae44-ffd2f85b1feb</guid>
-      <category>Digg AI from X</category>
-      <pubDate>Wed, 01 Jul 2026 08:02:29 +0000</pubDate>
-    </item>
-    <item>
-      <title>Elie Bakouch says Claude's safety filters blocked a routine request to retrieve an Artifact link from a past session</title>
-      <link>https://x.com/xeophon/status/2072216410558779475</link>
-      <description>The filter flagged the cross-session request as a policy violation</description>
-      <content:encoded>&lt;p&gt;The filter flagged the cross-session request as a policy violation&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://x.com/xeophon/status/2072216410558779475"&gt;https://x.com/xeophon/status/2072216410558779475&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/mr6ehd82"&gt;https://digg.com/tech/mr6ehd82&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;A research engineer prepping slides for a talk on automated AI research hit an immediate API error when asking Claude to fetch a prior-session Artifact link for simple plot color swaps, with the model citing a usage policy breach despite the request involving nothing more than theme adjustments like blue for Claude and orange for Codex. 1 2 0 0 100 FB #1782 | @XEOPHON EL #1138 | @ELIEBAKOUCH&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 100&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 2&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 1&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 2&lt;/li&gt;&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/eliebakouch"&gt;elie&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/xeophon"&gt;Florian Brand&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
-&lt;blockquote&gt;@xeophon you know the worst part, the color was like blue for claude and orange for codex and just asked in another convo to switch it and send the artifact link 😭&lt;/blockquote&gt;</content:encoded>
-      <guid isPermaLink="false">d3b21579-52a2-44cb-9be0-612aa2ebd6bd</guid>
-      <category>Digg AI from X</category>
-      <pubDate>Wed, 01 Jul 2026 07:11:06 +0000</pubDate>
-    </item>
-    <item>
-      <title>Google DeepMind's Pranav Shyam defines short context horizons at 32k tokens or fewer and long context at 64k or more</title>
-      <link>https://x.com/recurseparadox/status/2072240314035970240</link>
-      <description>Longer horizons require complex multi-round tool calls and code execution.</description>
-      <content:encoded>&lt;p&gt;Longer horizons require complex multi-round tool calls and code execution.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://x.com/recurseparadox/status/2072240314035970240"&gt;https://x.com/recurseparadox/status/2072240314035970240&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/1vg8ir9u"&gt;https://digg.com/tech/1vg8ir9u&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Google DeepMind researcher Pranav Shyam drew a line in an X thread between simpler AI interactions capped at 32K tokens and the more demanding setups that kick in at 64K or 128K, where models must juggle repeated tool calls and code execution to keep state updated across steps. 1 2 0 0 18 PS #1597 | @RECURSEPARADOX GR #1525 | @GRAD62304977&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 18&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 2&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 1&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 2&lt;/li&gt;&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/Grad62304977"&gt;Grad&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/recurseparadox"&gt;Pranav Shyam&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
-&lt;blockquote&gt;@recurseparadox but whats the intuition here that tool calls and environments have a big effect here. As in its a clear point the value model can make a more accurate prediction on the final expected reward? Why is it different to say a long reasoning chain with a clear step made?&lt;/blockquote&gt;</content:encoded>
-      <guid isPermaLink="false">031070e1-7ec6-4e8d-92e3-07aeccd9846c</guid>
-      <category>Digg AI from X</category>
-      <pubDate>Wed, 01 Jul 2026 08:46:05 +0000</pubDate>
+      <pubDate>Wed, 01 Jul 2026 08:14:23 +0000</pubDate>
     </item>
   </channel>
 </rss>
