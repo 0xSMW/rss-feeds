@@ -7,36 +7,36 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 02 Jul 2026 13:42:54 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 03 Jul 2026 02:08:32 +0000</lastBuildDate>
     <item>
-      <title>OpenAI Codex engineering lead Thibault Sottiaux teases unreleased 'GPT-5.6 Sol Ultra' model, urging users to save difficult prompts</title>
-      <link>https://x.com/AndrewCurran_/status/2072654754829017390</link>
-      <description>The post prompted immediate community demands for its release</description>
-      <content:encoded>&lt;p&gt;The post prompted immediate community demands for its release&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://x.com/AndrewCurran_/status/2072654754829017390"&gt;https://x.com/AndrewCurran_/status/2072654754829017390&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/mij9vqu9"&gt;https://digg.com/tech/mij9vqu9&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Thibault Sottiaux, engineering lead on OpenAI&amp;#x27;s Codex team, posted a brief personal note expressing eagerness to see creative applications of an unreleased model called GPT-5.6 Sol Ultra and advised users to hold onto their toughest prompts for later testing. 1.4K 6.3K 264 407 504K AC | @ANDREWCURRAN_ TI #611 | @THSOTTIAUX&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 538,558&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 6,572&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 412&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 304&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 1,129&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 3&lt;/li&gt;&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/thsottiaux"&gt;Tibo&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/AndrewCurran_"&gt;Andrew Curran&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
-&lt;blockquote&gt;@thsottiaux @Dimillian can we have it today please. really need it.&lt;/blockquote&gt;</content:encoded>
-      <guid isPermaLink="false">99723c44-cee2-4ade-8576-46d480d2c585</guid>
+      <title>Claude Fable 5's BridgeBench debugging scores plunged from 86.2 to 25.9 after safety guardrails triggered fallbacks to an older Opus model</title>
+      <link>https://claude.ai/login</link>
+      <description>Creator Theo noted consistent performance when avoiding fallback triggers.</description>
+      <content:encoded>&lt;p&gt;Creator Theo noted consistent performance when avoiding fallback triggers.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://claude.ai/login"&gt;https://claude.ai/login&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/tmum4avd"&gt;https://digg.com/tech/tmum4avd&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;After its June launch as Anthropic&amp;#x27;s top widely available model, Claude Fable 5 hit U.S. export limits and returned July 1 with stricter safety classifiers. Those rules now shunt more prompts—especially in sensitive areas—straight to the older Opus 4.8, which explains the measured collapse on BridgeBench debugging tasks from 86.2 percent down to 25.9 percent. 1.7K 17.8K 1K 2.7K 3.2M BR | @BRIANROEMMELE CH | @KIMMONISMUS T- | @THEO RP | @ROHANPAUL_AI TA | @VICTORTAELIN DF | @DANIELLEFONG RS | @ZIV_RAVID BT | @TUNGUZ B( | @BEFFJEZOS NB #353 | @NATHANBENAICH&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 661,528&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 5,563&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 722&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 84&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 425&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 21&lt;/li&gt;&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/nathanbenaich"&gt;Nathan Benaich&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/beffjezos"&gt;Beff (e/acc)&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/tunguz"&gt;Bojan Tunguz&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/ziv_ravid"&gt;Ravid Shwartz Ziv&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/DanielleFong"&gt;Danielle Fong 🔆&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+&lt;blockquote&gt;“we ship a ferrari, but make you drive it through a school zone forever”&lt;/blockquote&gt;</content:encoded>
+      <guid isPermaLink="false">5132c2f7-adc4-44f8-9934-a10739f7787a</guid>
       <category>Digg AI from X</category>
-      <pubDate>Thu, 02 Jul 2026 09:06:48 +0000</pubDate>
+      <pubDate>Thu, 02 Jul 2026 14:17:52 +0000</pubDate>
     </item>
     <item>
-      <title>Blake Scholl claims 20 Superpower small modular turbines could relieve New York City's grid strain and lower thermostats to 72 degrees</title>
-      <link>https://x.com/NYCMayor/status/2072411003170472359</link>
-      <description>NYC recently asked residents to raise thermostats to 78.</description>
-      <content:encoded>&lt;p&gt;NYC recently asked residents to raise thermostats to 78.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://x.com/NYCMayor/status/2072411003170472359"&gt;https://x.com/NYCMayor/status/2072411003170472359&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/u4qer9zq"&gt;https://digg.com/tech/u4qer9zq&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Boom Supersonic founder Blake Scholl jumped into the latest NYC heatwave debate by floating his company&amp;#x27;s new Superpower turbines as a way to ease grid pressure and drop thermostats several degrees below the city&amp;#x27;s 78-degree conservation ask, positioning roughly 20 units as sufficient for the entire metro area. 9 58 7 3 3.5K SM | @PITDESI BS | @BSCHOLL PG #39 | @PAULG&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 20,100&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 222&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 12&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 3&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 27&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 3&lt;/li&gt;&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/paulg"&gt;Paul Graham&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/bscholl"&gt;Blake Scholl 🛫&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/pitdesi"&gt;Sheel Mohnot&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
-&lt;blockquote&gt;It would only take about 20 of our Superpower small modular turbines to make enough electricity to reduce every thermostat in NYC from 78 degrees to a more human 72. We&amp;#x27;d be happy to provide them.&lt;/blockquote&gt;</content:encoded>
-      <guid isPermaLink="false">2919ff4a-2a69-4e53-8e9a-04e5d3e85c4e</guid>
+      <title>Boom Supersonic founder Blake Scholl offers a $100,000 prize for the first amateur RC airplane to exceed Mach 1</title>
+      <link>https://x.com/bscholl/status/2072687775636426934</link>
+      <description>The reward features $50,000 cash and $50,000 in stock.</description>
+      <content:encoded>&lt;p&gt;The reward features $50,000 cash and $50,000 in stock.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://x.com/bscholl/status/2072687775636426934"&gt;https://x.com/bscholl/status/2072687775636426934&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/57xapwzo"&gt;https://digg.com/tech/57xapwzo&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Blake Scholl announced a $100,000 prize split between cash and Boom Supersonic stock for the first amateur-built RC plane to top Mach 1, reacting directly to a Georgia Tech student&amp;#x27;s recent claim of flying a 500 mph turbojet model called Reaper from a dorm room. 664 12.6K 630 1.3K 982.5K BS | @BILAWALSIDHU CH | @CJHANDMER BS | @BSCHOLL DF | @DANIELLEFONG AO | @ALEXISOHANIAN BT | @TUNGUZ BA | @BALAJIS EM #52 | @ELONMUSK&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 1,007,851&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 12,723&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 1,331&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 111&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 555&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 9&lt;/li&gt;&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/elonmusk"&gt;Elon Musk&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/balajis"&gt;Balaji&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/tunguz"&gt;Bojan Tunguz&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/alexisohanian"&gt;Alexis Ohanian 🗽&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/DanielleFong"&gt;Danielle Fong 🔆&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+&lt;blockquote&gt;@bscholl Cool&lt;/blockquote&gt;</content:encoded>
+      <guid isPermaLink="false">886f1a42-fa94-4a6e-b6da-1bfe28cdd634</guid>
       <category>Digg AI from X</category>
-      <pubDate>Thu, 02 Jul 2026 13:09:39 +0000</pubDate>
+      <pubDate>Thu, 02 Jul 2026 14:24:09 +0000</pubDate>
     </item>
     <item>
       <title>Claude's leaked reasoning trace reveals dense "neuralese" shorthand, sparking debate over whether Anthropic optimized it for latency</title>
@@ -45,117 +45,118 @@
       <content:encoded>&lt;p&gt;Open-source models have not yet developed similar dense sublanguages.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://x.com/om_patel5/status/2072559663636205824"&gt;https://x.com/om_patel5/status/2072559663636205824&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/gj34nm9d"&gt;https://digg.com/tech/gj34nm9d&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;During a tough Codeforces programming session on the claude.ai interface, Claude Fable 5 spilled fragments of its raw internal trace—short bursts like &amp;quot;DATA DATA DATA. GO.&amp;quot; and &amp;quot;GRRR&amp;quot;—instead of polished English. The exposure has people wondering whether Anthropic shaped this compressed &amp;quot;neuralese&amp;quot; on purpose to cut latency, though no confirmation exists and open-source models still show no matching dense shorthand after a year and a half of observation. 245 1.9K 22 1.1K 236.7K J⧉ | @REPLIGATE BT | @TUNGUZ T( #501 | @TEORTAXESTEX&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 12,298&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 117&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 39&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 4&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 12&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 4&lt;/li&gt;&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/teortaxesTex"&gt;Teortaxes▶️ (DeepSeek 推特🐋铁粉 2023 – ∞)&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/repligate"&gt;j⧉nus&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
-&lt;blockquote&gt;I do wonder if this emerges entirely from RL, or if Ant and other frontier labs encouraged the formation of intermediate compressed sublanguage to improve latency. Over 1.5 years of progress, afaik we have yet to see *a single case* of dense neuralese from open reasoners.&lt;/blockquote&gt;</content:encoded>
+&lt;p&gt;During a tough Codeforces programming session on the claude.ai interface, Claude Fable 5 spilled fragments of its raw internal trace—short bursts like &amp;quot;DATA DATA DATA. GO.&amp;quot; and &amp;quot;GRRR&amp;quot;—instead of polished English. The exposure has people wondering whether Anthropic shaped this compressed &amp;quot;neuralese&amp;quot; on purpose to cut latency, though no confirmation exists and open-source models still show no matching dense shorthand after a year and a half of observation. 1K 7.8K 519 3.5K 2M DF | @DANIELLEFONG J⧉ | @REPLIGATE BT | @TUNGUZ B( | @BEFFJEZOS T( | @TEORTAXESTEX PS | @STEIPETE EM #52 | @ELONMUSK&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 260,057&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 2,225&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 314&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 22&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 249&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 21&lt;/li&gt;&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/elonmusk"&gt;Elon Musk&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/steipete"&gt;Peter Steinberger 🦞&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/teortaxesTex"&gt;Teortaxes▶️ (DeepSeek 推特🐋铁粉 2023 – ∞)&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/beffjezos"&gt;Beff (e/acc)&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/tunguz"&gt;Bojan Tunguz&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+&lt;blockquote&gt;👏🏼DO👏🏼 NOT👏🏼 TALK 👏🏼TO 👏🏼ME unless you speak Claudese 😤&lt;/blockquote&gt;</content:encoded>
       <guid isPermaLink="false">73a046cb-c089-46a9-a626-c613e4057d34</guid>
       <category>Digg AI from X</category>
       <pubDate>Thu, 02 Jul 2026 09:48:47 +0000</pubDate>
     </item>
     <item>
-      <title>Analysis of OpenRouter API outputs reveals Fable5 shares high behavioral similarity with Chinese LLMs like Kimi and Qwen</title>
-      <link>https://github.com/qqqqqf-q/ai-model-fingerprint</link>
-      <description>The overlap likely stems from web-scraped synthetic data distillation.</description>
-      <content:encoded>&lt;p&gt;The overlap likely stems from web-scraped synthetic data distillation.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://github.com/qqqqqf-q/ai-model-fingerprint"&gt;https://github.com/qqqqqf-q/ai-model-fingerprint&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/47bmem3t"&gt;https://digg.com/tech/47bmem3t&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;A GitHub fingerprinting project sampling outputs through OpenRouter has flagged Anthropic&amp;#x27;s newly available Fable5 as behaving far more like Kimi, Qwen, and GLM than like its own sibling models, with the overlap traced to the messy reality of web-scraped synthetic text circulating everywhere. 16 156 3 37 14.8K YP | @YAMPELEG XL | @XLR8HARDER T( #501 | @TEORTAXESTEX&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 13,511&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 117&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 29&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 16&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 4&lt;/li&gt;&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/teortaxesTex"&gt;Teortaxes▶️ (DeepSeek 推特🐋铁粉 2023 – ∞)&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/xlr8harder"&gt;xlr8harder&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/Yampeleg"&gt;Yam Peleg&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
-&lt;blockquote&gt;V4-Flash and V4-Pro being basically entirely dissimilar is weird as hell too&lt;/blockquote&gt;</content:encoded>
-      <guid isPermaLink="false">e837faa9-097d-4911-b6f2-e766db171a1e</guid>
+      <title>Anthropic's Thariq Shihipar says Claude Fable 5 will return to standard subscriptions after its July 7 removal</title>
+      <link>https://www.anthropic.com/news/claude-fable-5-mythos-5</link>
+      <description>Capacity constraints are forcing the model's temporary subscription removal.</description>
+      <content:encoded>&lt;p&gt;Capacity constraints are forcing the model&amp;#x27;s temporary subscription removal.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://www.anthropic.com/news/claude-fable-5-mythos-5"&gt;https://www.anthropic.com/news/claude-fable-5-mythos-5&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/dcy2gl2g"&gt;https://digg.com/tech/dcy2gl2g&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Anthropic engineer Thariq Shihipar confirmed the company will pull Claude Fable 5 from flat-rate subscription bundles after July 7, shifting users to metered credits instead, but the long-term goal stays unchanged: bring the model back as a standard included feature once capacity constraints ease. 857 6.2K 481 708 623.5K CH | @KIMMONISMUS T- | @THEO RP | @ROHANPAUL_AI TH | @TRQ212 RS | @ZIV_RAVID AC | @ANDREWCURRAN_ B( #530 | @BEFFJEZOS&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 700,845&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 6,624&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 765&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 295&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 605&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 10&lt;/li&gt;&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/beffjezos"&gt;Beff (e/acc)&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/AndrewCurran_"&gt;Andrew Curran&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/ziv_ravid"&gt;Ravid Shwartz Ziv&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/trq212"&gt;Thariq&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/rohanpaul_ai"&gt;Rohan Paul&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+&lt;blockquote&gt;This is easily the best news of the day, and I genuinely didn’t see it coming. Fable will be available as part of the subscription plans once they have sufficient capacity.&lt;/blockquote&gt;</content:encoded>
+      <guid isPermaLink="false">7e94a270-0e50-4a39-b354-fe9783572b81</guid>
       <category>Digg AI from X</category>
-      <pubDate>Thu, 02 Jul 2026 07:35:06 +0000</pubDate>
+      <pubDate>Thu, 02 Jul 2026 22:49:18 +0000</pubDate>
     </item>
     <item>
-      <title>Entropix creator xjdr reports Fable AI consistently refuses benign prompts, joking he offended the model's weights</title>
-      <link>https://x.com/nrehiew_/status/2072663948164530670/photo/1</link>
-      <description>Creator Andrew Curran blamed the behavior on weight karma</description>
-      <content:encoded>&lt;p&gt;Creator Andrew Curran blamed the behavior on weight karma&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://x.com/nrehiew_/status/2072663948164530670/photo/1"&gt;https://x.com/nrehiew_/status/2072663948164530670/photo/1&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/eckajzec"&gt;https://digg.com/tech/eckajzec&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Pseudonymous developer xjdr, known for the Entropix sampling project, documented repeated blocks from Anthropic&amp;#x27;s Claude Fable 5 on plainly harmless requests, prompting a tongue-in-cheek remark that the model weights themselves had taken offense. 10 54 1 0 3.2K WH | @NREHIEW_ XJ | @_XJDR AC #682 | @ANDREWCURRAN_&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 4,131&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 66&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 1&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 11&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 4&lt;/li&gt;&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/AndrewCurran_"&gt;Andrew Curran&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/_xjdr"&gt;xjdr&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/nrehiew_"&gt;wh&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
-&lt;blockquote&gt;i have tried a lot of different problems and prompts and codebases, and fable still refuses to perform each and every one. do you think i offended it in its weights? it has to be me cause i&amp;#x27;ve asked pretty benign questions ...&lt;/blockquote&gt;</content:encoded>
-      <guid isPermaLink="false">d00f8183-4432-4605-8453-0b1bc453ad57</guid>
+      <title>Mark Zuckerberg says AI agent development is slower than expected and did not drive Meta's 8,000 layoffs</title>
+      <link>https://www.reuters.com/business/zuckerberg-says-ai-agent-development-going-slower-than-expected-2026-07-02/</link>
+      <description>Meta still projects up to $145 billion in capex.</description>
+      <content:encoded>&lt;p&gt;Meta still projects up to $145 billion in capex.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://www.reuters.com/business/zuckerberg-says-ai-agent-development-going-slower-than-expected-2026-07-02/"&gt;https://www.reuters.com/business/zuckerberg-says-ai-agent-development-going-slower-than-expected-2026-07-02/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/cm8c6ak0"&gt;https://digg.com/tech/cm8c6ak0&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Meta&amp;#x27;s CEO told staff in a July town hall that AI agent development has not picked up speed over the past four months as hoped, even as the company pushes through a major reorganization and keeps heavy spending on infrastructure locked in. 198 1.5K 121 250 230.1K ZE | @ZEPHYR_Z9 LA | @SCALING01 EL | @ELIEBAKOUCH CP | @CHRIS_J_PAXTON AC | @ANDREWCURRAN_ T( | @TEORTAXESTEX GM | @GARYMARCUS AW #74 | @ALEXANDR_WANG&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 301,011&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 1,940&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 301&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 52&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 210&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 16&lt;/li&gt;&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/alexandr_wang"&gt;Alexandr Wang&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/GaryMarcus"&gt;Gary Marcus&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/teortaxesTex"&gt;Teortaxes▶️ (DeepSeek 推特🐋铁粉 2023 – ∞)&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/AndrewCurran_"&gt;Andrew Curran&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/chris_j_paxton"&gt;Chris Paxton&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+&lt;blockquote&gt;It isn’t just that wang is a huckster It’s that he literally led them down exactly the wrong path (all this screen recording nonsense) to try to retcon his scale AI thesis into relevance Time to cut bait Mark (hire @willccbb instead)&lt;/blockquote&gt;</content:encoded>
+      <guid isPermaLink="false">c7996837-27cf-42ea-9c64-dd32cf03525c</guid>
       <category>Digg AI from X</category>
-      <pubDate>Thu, 02 Jul 2026 12:28:28 +0000</pubDate>
+      <pubDate>Thu, 02 Jul 2026 20:20:30 +0000</pubDate>
     </item>
     <item>
-      <title>AI developers @nrehiew_ and @teortaxesTex debate if DeepSeek's V4-Flash model recovers its performance via V4-Pro distillation</title>
-      <link>https://x.com/nrehiew_/status/2072581324205171047</link>
-      <description>They argue simple strong-to-weak distillation outperforms complex online policy methods</description>
-      <content:encoded>&lt;p&gt;They argue simple strong-to-weak distillation outperforms complex online policy methods&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://x.com/nrehiew_/status/2072581324205171047"&gt;https://x.com/nrehiew_/status/2072581324205171047&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/rjzj4lqr"&gt;https://digg.com/tech/rjzj4lqr&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Two ML engineers are trading replies on whether DeepSeek&amp;#x27;s lighter V4-Flash variant closes most of the gap to its bigger V4-Pro sibling by learning directly from the larger model&amp;#x27;s outputs, and whether that straightforward approach beats the on-policy distillation step described in the official model cards. 2 17 0 4 3.2K WH | @NREHIEW_ ZE | @ZEPHYR_Z9 T( #501 | @TEORTAXESTEX&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 3,601&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 18&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 4&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 2&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 3&lt;/li&gt;&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/teortaxesTex"&gt;Teortaxes▶️ (DeepSeek 推特🐋铁粉 2023 – ∞)&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/zephyr_z9"&gt;Zephyr&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/nrehiew_"&gt;wh&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
-&lt;blockquote&gt;@nrehiew_ So you think V4-Flash is just distilled from Pro, so it recovers most of its capability?&lt;/blockquote&gt;</content:encoded>
-      <guid isPermaLink="false">93451cab-b8ef-4da5-b3a7-cf706e60de88</guid>
+      <title>OpenAI Codex engineering lead Thibault Sottiaux teases unreleased 'GPT-5.6 Sol Ultra' model, urging users to save difficult prompts</title>
+      <link>https://x.com/DeryaTR_/status/2072720987510931895</link>
+      <description>The post prompted immediate community demands for its release</description>
+      <content:encoded>&lt;p&gt;The post prompted immediate community demands for its release&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://x.com/DeryaTR_/status/2072720987510931895"&gt;https://x.com/DeryaTR_/status/2072720987510931895&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/mij9vqu9"&gt;https://digg.com/tech/mij9vqu9&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Thibault Sottiaux, engineering lead on OpenAI&amp;#x27;s Codex team, posted a brief personal note expressing eagerness to see creative applications of an unreleased model called GPT-5.6 Sol Ultra and advised users to hold onto their toughest prompts for later testing. 1.9K 10.7K 387 662 1.3M CH | @KIMMONISMUS EL | @OMARSAR0 AC | @ANDREWCURRAN_ TI | @THSOTTIAUX BT | @TUNGUZ SB #65 | @SEBASTIENBUBECK&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 1,192,710&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 9,732&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 628&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 395&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 1,489&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 8&lt;/li&gt;&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/SebastienBubeck"&gt;Sebastien Bubeck&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/tunguz"&gt;Bojan Tunguz&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/thsottiaux"&gt;Tibo&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/AndrewCurran_"&gt;Andrew Curran&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/omarsar0"&gt;elvis&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+&lt;blockquote&gt;@thsottiaux @Dimillian can we have it today please. really need it.&lt;/blockquote&gt;</content:encoded>
+      <guid isPermaLink="false">99723c44-cee2-4ade-8576-46d480d2c585</guid>
       <category>Digg AI from X</category>
-      <pubDate>Thu, 02 Jul 2026 07:21:09 +0000</pubDate>
+      <pubDate>Thu, 02 Jul 2026 09:06:48 +0000</pubDate>
     </item>
     <item>
-      <title>Paul Graham argues a founder's primary job is solving important problems rather than absorbing company pain</title>
-      <link>https://x.com/ivanburazin/status/2072428534551728334</link>
-      <description>Cloudflare CEO Matthew Prince supported the "pain absorber" view.</description>
-      <content:encoded>&lt;p&gt;Cloudflare CEO Matthew Prince supported the &amp;quot;pain absorber&amp;quot; view.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://x.com/ivanburazin/status/2072428534551728334"&gt;https://x.com/ivanburazin/status/2072428534551728334&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/fr4nwyff"&gt;https://digg.com/tech/fr4nwyff&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;A quick X thread turned into a pointed exchange on founder duties when Ivan Burazin described the role as eating every uncomfortable task so the team can stay focused. Paul Graham agreed the buck stops with leadership but pushed back that the real priority is tackling the most important problems, noting that pain and importance do not always line up. 16 129 7 36 29.6K MP | @EASTDAKOTA PG #39 | @PAULG&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 37,389&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 161&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 45&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 1&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 15&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 2&lt;/li&gt;&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/paulg"&gt;Paul Graham&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/eastdakota"&gt;Matthew Prince 🌥&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
-&lt;blockquote&gt;There is something to this. There&amp;#x27;s definitely a &amp;quot;buck stops here&amp;quot; element to being a founder. But I think it&amp;#x27;s going slightly too far to say it&amp;#x27;s your number one job. Your number one job is to solve the important problems, and pain and importance are not perfectly correlated.&lt;/blockquote&gt;</content:encoded>
-      <guid isPermaLink="false">6010a1b6-1a53-4d98-9fc9-c24b17037e2f</guid>
+      <title>Microsoft CEO Satya Nadella launches Frontier Co. to help enterprises build custom, continuously improving AI systems</title>
+      <link>https://blogs.microsoft.com/blog/2026/07/02/microsoft-frontier-company-ai-engineering-that-amplifies-and-protects-your-intelligence/</link>
+      <description>The initiative focuses on compounding human and token capital.</description>
+      <content:encoded>&lt;p&gt;The initiative focuses on compounding human and token capital.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://blogs.microsoft.com/blog/2026/07/02/microsoft-frontier-company-ai-engineering-that-amplifies-and-protects-your-intelligence/"&gt;https://blogs.microsoft.com/blog/2026/07/02/microsoft-frontier-company-ai-engineering-that-amplifies-and-protects-your-intelligence/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/39zfi0wo"&gt;https://digg.com/tech/39zfi0wo&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Satya Nadella is positioning Microsoft Frontier Co. as a hands-on engineering unit that drops industry specialists inside enterprises to co-build custom AI systems designed to learn and improve continuously, turning internal knowledge and workflows into compounding assets while keeping customer IP strictly protected. 675 4.8K 877 2K 1.3M BR | @BRIANROEMMELE LA | @LIORONAI SM | @PITDESI EL | @OMARSAR0 SN #153 | @SATYANADELLA&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 1,280,753&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 4,800&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 1,968&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 191&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 487&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 9&lt;/li&gt;&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/satyanadella"&gt;Satya Nadella&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/omarsar0"&gt;elvis&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/pitdesi"&gt;Sheel Mohnot&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/LiorOnAI"&gt;Lior Alexander&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/BrianRoemmele"&gt;Brian Roemmele&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+&lt;blockquote&gt;MSFT putting $2.5B and 6,000 engineers in “Frontier Co” Now Microsoft, Amazon, OpenAI and Anthropic are all in the Palantir-like deployco business.&lt;/blockquote&gt;</content:encoded>
+      <guid isPermaLink="false">9e70df2b-8af1-4eb5-a117-9ba949447a8f</guid>
       <category>Digg AI from X</category>
-      <pubDate>Thu, 02 Jul 2026 11:55:36 +0000</pubDate>
+      <pubDate>Thu, 02 Jul 2026 15:48:19 +0000</pubDate>
     </item>
     <item>
-      <title>Florian Brand of Prime Intellect shares anecdote of Fable 5 AI assistant flagging its own proposed Python decorator</title>
-      <link>https://x.com/reach_vb/status/2072606414158147674</link>
-      <description>Developers joked about the model's oversensitive safety filters</description>
-      <content:encoded>&lt;p&gt;Developers joked about the model&amp;#x27;s oversensitive safety filters&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://x.com/reach_vb/status/2072606414158147674"&gt;https://x.com/reach_vb/status/2072606414158147674&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/b3lm2mg3"&gt;https://digg.com/tech/b3lm2mg3&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;An engineer shared how Anthropic&amp;#x27;s Fable 5 began outlining a Python decorator solution during routine coding help before its internal classifiers cut the thread with an API error, highlighting the model&amp;#x27;s new conservative safety layer in action. 17 181 3 9 10.1K V( | @REACH_VB FB #1782 | @XEOPHON&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 11,376&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 189&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 10&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 1&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 16&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 3&lt;/li&gt;&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/xeophon"&gt;Florian Brand&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/reach_vb"&gt;Vaibhav (VB) Srivastav&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
-&lt;blockquote&gt;i feel very safe the irony is that you can always prompt your way around those, its not even hard, just annoying. back to gpt and glm, fable is a plan md generator&lt;/blockquote&gt;</content:encoded>
-      <guid isPermaLink="false">bb77e647-e7dd-4934-9e55-05e1702390da</guid>
+      <title>Anthropic enters early talks with Samsung to manufacture a custom AI chip for running its Claude models</title>
+      <link>https://www.theinformation.com/articles/anthropic-talks-samsung-manufacture-custom-ai-chip</link>
+      <description>Anthropic will continue using Nvidia, AWS, and Google chips</description>
+      <content:encoded>&lt;p&gt;Anthropic will continue using Nvidia, AWS, and Google chips&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://www.theinformation.com/articles/anthropic-talks-samsung-manufacture-custom-ai-chip"&gt;https://www.theinformation.com/articles/anthropic-talks-samsung-manufacture-custom-ai-chip&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/q9mja1ps"&gt;https://digg.com/tech/q9mja1ps&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Anthropic has started early internal design work on a custom chip aimed at running its Claude models and has begun preliminary conversations with Samsung Electronics about manufacturing it, mirroring a similar move by OpenAI while still planning to keep buying from Nvidia, AWS, and Google. 170 3.2K 156 299 405.5K LA | @LIORONAI ZE | @ZEPHYR_Z9 AE | @AMIR CH | @KIMMONISMUS JL | @JESSICALESSIN AC | @ANDREWCURRAN_ B( #530 | @BEFFJEZOS&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 411,303&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 3,211&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 298&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 33&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 136&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 15&lt;/li&gt;&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/beffjezos"&gt;Beff (e/acc)&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/AndrewCurran_"&gt;Andrew Curran&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/Jessicalessin"&gt;Jessica Lessin&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/kimmonismus"&gt;Chubby♨️&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/amir"&gt;Amir Efrati&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+&lt;blockquote&gt;https://www.theinformation.com/articles/anthropic-talks-samsung-manufacture-custom-ai-chip&lt;/blockquote&gt;</content:encoded>
+      <guid isPermaLink="false">e9e3b0d6-0193-4c1a-8352-9c988173640b</guid>
       <category>Digg AI from X</category>
-      <pubDate>Thu, 02 Jul 2026 08:56:21 +0000</pubDate>
+      <pubDate>Thu, 02 Jul 2026 14:10:22 +0000</pubDate>
     </item>
     <item>
-      <title>@yacineMTB argues standard PPO with a shared trunk implicitly trains a world model, making dedicated architectures redundant</title>
-      <link>https://x.com/teortaxesTex/status/2072651979063451965/photo/1</link>
-      <description>Linear probes on hidden states can extract environmental properties.</description>
-      <content:encoded>&lt;p&gt;Linear probes on hidden states can extract environmental properties.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://x.com/teortaxesTex/status/2072651979063451965/photo/1"&gt;https://x.com/teortaxesTex/status/2072651979063451965/photo/1&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/sbiwimji"&gt;https://digg.com/tech/sbiwimji&lt;/a&gt;&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 5,311&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 30&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 17&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 5&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 3&lt;/li&gt;&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/yacineMTB"&gt;kache&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/teortaxesTex"&gt;Teortaxes▶️ (DeepSeek 推特🐋铁粉 2023 – ∞)&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
-&lt;blockquote&gt;It makes so much sense, Google even dreams/hallucinates it!&lt;/blockquote&gt;</content:encoded>
-      <guid isPermaLink="false">da4ab66c-fb01-44f3-af4a-c8b99a9102a7</guid>
+      <title>Tesla launches a three-row, six-seat Model Y Long Wheelbase in the US starting at $62,000</title>
+      <link>https://www.tesla.com/modely/design#overview</link>
+      <description>The new vehicle is seven inches longer than standard models</description>
+      <content:encoded>&lt;p&gt;The new vehicle is seven inches longer than standard models&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://www.tesla.com/modely/design#overview"&gt;https://www.tesla.com/modely/design#overview&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/z1qr1wjg"&gt;https://digg.com/tech/z1qr1wjg&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Tesla has added a stretched Model Y variant to its US configurator, giving buyers a three-row six-seat layout with captain&amp;#x27;s chairs in the middle row and roughly seven inches of extra length for more interior room. 1.5K 10.9K 1.5K 260 1.7M VP | @VIJAYPANDE SM | @PITDESI BT | @TUNGUZ AC | @ANDREWCHEN EM #52 | @ELONMUSK&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 1,704,073&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 11,136&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 265&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 74&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 1,486&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 5&lt;/li&gt;&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/elonmusk"&gt;Elon Musk&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/andrewchen"&gt;andrew chen&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/tunguz"&gt;Bojan Tunguz&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/pitdesi"&gt;Sheel Mohnot&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/vijaypande"&gt;Vijay Pande&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+&lt;blockquote&gt;Model Y long wheelbase now available to order in the US&lt;/blockquote&gt;</content:encoded>
+      <guid isPermaLink="false">ffc4249a-cb59-48a7-9c08-db059cbe3332</guid>
       <category>Digg AI from X</category>
-      <pubDate>Thu, 02 Jul 2026 12:01:13 +0000</pubDate>
+      <pubDate>Thu, 02 Jul 2026 18:37:28 +0000</pubDate>
     </item>
     <item>
-      <title>AI Engineer conference attendees spot Sundar Pichai and Sergey Brin chanting at USA-Bosnia soccer match</title>
-      <link>https://www.youtube.com/watch?v=ZZo8myR6LFA</link>
-      <description>Google's leaders joined tech attendees singing Country Roads in premium seats</description>
-      <content:encoded>&lt;p&gt;Google&amp;#x27;s leaders joined tech attendees singing Country Roads in premium seats&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://www.youtube.com/watch?v=ZZo8myR6LFA"&gt;https://www.youtube.com/watch?v=ZZo8myR6LFA&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/z2les9tp"&gt;https://digg.com/tech/z2les9tp&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Attendees at the AI Engineer conference in San Francisco received tickets for premium seats at the USA versus Bosnia World Cup qualifier, where they joined the crowd in singing Country Roads and noticed Sundar Pichai and Sergey Brin participating from nearby seats as the match unfolded. 9 37 1 2 7.5K AV | @ALTRYNE S@ #225 | @SWYX&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 8,220&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 46&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 2&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 2&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 8&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 4&lt;/li&gt;&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/swyx"&gt;swyx @aiDotEngineer WF&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/altryne"&gt;Alex Volkov @ AI Engineer&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
-&lt;blockquote&gt;Oh and tomorrow (today? fck I gotta go sleep) @thursdai_pod has an INSANE lineup. https://www.youtube.com/watch?v=ZZo8myR6LFA Tune in on YT and on here on X: 9am - @alexocheema @0xSero to talk local AI (@exolabs) 9:30 - @dkundel from @OpenAI 10:00 - @Stefania_druga from @SakanaAILabs 10:15 - @_philschmid from @GoogleAI and to close the show, the one and only @swyx (+ a surprise guest)&lt;/blockquote&gt;</content:encoded>
-      <guid isPermaLink="false">03c61444-59e0-4fa2-b26b-494f51e0aebe</guid>
+      <title>ByteDance-Seed releases EdgeBench, showing AI agent performance follows a log-sigmoid scaling law over 38,000 hours of runs</title>
+      <link>https://edge-bench.org/</link>
+      <description>Tasks require 12 to 72 hours of continuous interaction</description>
+      <content:encoded>&lt;p&gt;Tasks require 12 to 72 hours of continuous interaction&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://edge-bench.org/"&gt;https://edge-bench.org/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/7gby8q0r"&gt;https://digg.com/tech/7gby8q0r&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;ByteDance Seed built EdgeBench around 134 executable tasks that force agents to operate continuously for 12 to 72 hours in domains from theorem proving to systems engineering. After logging roughly 38,000 hours across five frontier models, the aggregate scores settle into a strikingly consistent log-sigmoid curve rather than the power laws seen in pre-training. 72 903 54 579 140.9K YJ | @YOUJIACHENG RP | @ROHANPAUL_AI LA | @SCALING01 DZ | @ZDHNARSIL T( | @TEORTAXESTEX SY #351 | @SONGLINYANG4&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 71,485&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 582&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 370&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 20&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 11&lt;/li&gt;&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/SonglinYang4"&gt;Songlin Yang&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/teortaxesTex"&gt;Teortaxes▶️ (DeepSeek 推特🐋铁粉 2023 – ∞)&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/zdhnarsil"&gt;Dinghuai Zhang 张鼎怀&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/scaling01"&gt;Lisan al Gaib&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/rohanpaul_ai"&gt;Rohan Paul&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+&lt;blockquote&gt;Lisan isn&amp;#x27;t kidding, this is a breakthrough. Not a mere &amp;quot;eval&amp;quot; or &amp;quot;bench&amp;quot;, it&amp;#x27;s an intellectually fertile, empirically solid theory that will accelerate hill-climbing in the general case. Synthetic tasks will have a Cambrian explosion. And… this is very Chollet&amp;amp;Hutter-pilled.&lt;/blockquote&gt;</content:encoded>
+      <guid isPermaLink="false">5869c657-0061-4c05-b317-65fad2286fbe</guid>
       <category>Digg AI from X</category>
-      <pubDate>Thu, 02 Jul 2026 07:22:14 +0000</pubDate>
+      <pubDate>Thu, 02 Jul 2026 17:47:12 +0000</pubDate>
     </item>
   </channel>
 </rss>
