@@ -7,156 +7,96 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 04 Jul 2026 02:07:07 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 04 Jul 2026 13:05:15 +0000</lastBuildDate>
     <item>
-      <title>Trump administration adviser says he had to brief cabinet officials on dataset contamination and Roko's Basilisk</title>
-      <link>https://x.com/sriramk/status/2073105386878460093/photo/1</link>
-      <description>Other academics recalled explaining rationalist concepts like the Waluigi Effect to military officials</description>
-      <content:encoded>&lt;p&gt;Other academics recalled explaining rationalist concepts like the Waluigi Effect to military officials&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://x.com/sriramk/status/2073105386878460093/photo/1"&gt;https://x.com/sriramk/status/2073105386878460093/photo/1&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/mf4103mt"&gt;https://digg.com/tech/mf4103mt&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;An outgoing tech adviser to the Trump administration described unusual translation duties that included walking cabinet officials through Roko&amp;#x27;s Basilisk and dataset contamination, highlighting how online rationalist thought experiments have surfaced in high-level policy settings. 46 580 34 121 54K SÓ | @S_OHEIGEARTAIGH JC | @JAMESCHAM JA | @JACHIAM0 EM | @EMOSTAQUE SK #143 | @SRIRAMK&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 59,152&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 636&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 134&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 15&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 33&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 12&lt;/li&gt;&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/sriramk"&gt;Sriram Krishnan&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/EMostaque"&gt;Emad&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/jachiam0"&gt;Joshua Achiam&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/jamescham"&gt;James Cham&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/S_OhEigeartaigh"&gt;Seán Ó hÉigeartaigh&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
-&lt;blockquote&gt;I once tried to explain &amp;#x27;the Waluigi Effect&amp;#x27; to a Rear Admiral. It did not go well for either of us.&lt;/blockquote&gt;</content:encoded>
-      <guid isPermaLink="false">d595cc27-835b-4150-80ac-78b997457eb7</guid>
+      <title>ReadBench evaluates bypassing text tokenization by rendering long-context documents as images for vision-language models</title>
+      <link>https://github.com/teamchong/pxpipe</link>
+      <description>The technique builds on Google's pixel-only CLIPPO model design</description>
+      <content:encoded>&lt;p&gt;The technique builds on Google&amp;#x27;s pixel-only CLIPPO model design&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://github.com/teamchong/pxpipe"&gt;https://github.com/teamchong/pxpipe&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/f3hapn0c"&gt;https://digg.com/tech/f3hapn0c&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;ReadBench turns established text benchmarks into image pages to test how well vision-language models handle dense documents without any text tokens at all. The evaluation draws directly from the pixel-only approach first shown in Google&amp;#x27;s CLIPPO work and measures real degradation across short and long contexts when models must read rendered A4 pages instead of receiving clean tokens. 33 581 31 426 50.7K FB | @XEOPHON T( | @TEORTAXESTEX SZ | @SUCHENZANG LB #72 | @GIFFMANA&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 52,547&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 597&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 437&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 6&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 27&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 6&lt;/li&gt;&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/giffmana"&gt;Lucas Beyer (bl16)&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/suchenzang"&gt;Susan Zhang&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/teortaxesTex"&gt;Teortaxes▶️ (DeepSeek 推特🐋铁粉 2023 – ∞)&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/xeophon"&gt;Florian Brand&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+&lt;blockquote&gt;hilarious if labs run DeepSeek-OCR style context compression on the back end, of course derived from much older works&lt;/blockquote&gt;</content:encoded>
+      <guid isPermaLink="false">23d83606-18a3-4d78-8a2f-98972c5f08b1</guid>
       <category>Digg AI from X</category>
-      <pubDate>Fri, 03 Jul 2026 18:03:35 +0000</pubDate>
+      <pubDate>Sat, 04 Jul 2026 08:11:24 +0000</pubDate>
     </item>
     <item>
-      <title>Instructor creator Jason Liu asks developers why they still rely on ChatGPT over OpenAI Codex</title>
-      <link>https://x.com/jxnlco/status/2073133239057961085</link>
-      <description>Engineer Andrew Mayne highlighted ATLAS as his primary reasoning tool</description>
-      <content:encoded>&lt;p&gt;Engineer Andrew Mayne highlighted ATLAS as his primary reasoning tool&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://x.com/jxnlco/status/2073133239057961085"&gt;https://x.com/jxnlco/status/2073133239057961085&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/0wld49f4"&gt;https://digg.com/tech/0wld49f4&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Jason Liu, the Instructor library creator now working on OpenAI&amp;#x27;s Codex team, turned to developers with a direct question about lingering ChatGPT habits even as Codex handles more code-specific work. Early replies surfaced two concrete differences rather than vague preferences, highlighting where the tools still diverge in practice. 782 732 4 112 120.3K CL | @_CHENGLOU HH | @HAMELHUSAIN AM | @ANDREWMAYNE CA | @CHRISALBON JA | @JXNLCO BT #593 | @TUNGUZ&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 126,008&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 745&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 114&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 22&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 774&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 7&lt;/li&gt;&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/tunguz"&gt;Bojan Tunguz&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/jxnlco"&gt;jason&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/chrisalbon"&gt;Chris Albon&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/AndrewMayne"&gt;Andrew Mayne&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/HamelHusain"&gt;Hamel Husain&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
-&lt;blockquote&gt;Codex feels like ChatGPT Pro. That is probably the best way I could describe it.&lt;/blockquote&gt;</content:encoded>
-      <guid isPermaLink="false">3f37b39c-6189-4642-ab10-8371e01a4eb6</guid>
+      <title>Huawei paper reveals Kirin 2026 processor benchmarks, claiming 41% lower power and 37.5% smaller die area</title>
+      <link>https://x.com/poezhao0605/status/2073300079923069104</link>
+      <description>The architectural improvements stem from Huawei's new LogicFolding technique.</description>
+      <content:encoded>&lt;p&gt;The architectural improvements stem from Huawei&amp;#x27;s new LogicFolding technique.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://x.com/poezhao0605/status/2073300079923069104"&gt;https://x.com/poezhao0605/status/2073300079923069104&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/odrhuhww"&gt;https://digg.com/tech/odrhuhww&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Huawei&amp;#x27;s new paper from executive He Tingbo introduces LogicFolding as a circuit-level trick that stacks logic tiers to cut signal delays, delivering the reported gains on the Kirin 2026 versus the Kirin 9030 Pro at iso-performance while tying into a broader Tau scaling framework meant to complement Moore&amp;#x27;s Law. 18 188 12 62 64.3K ZE | @ZEPHYR_Z9 T( #501 | @TEORTAXESTEX&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 66,786&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 196&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 63&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 4&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 14&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 6&lt;/li&gt;&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/teortaxesTex"&gt;Teortaxes▶️ (DeepSeek 推特🐋铁粉 2023 – ∞)&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/zephyr_z9"&gt;Zephyr&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+&lt;blockquote&gt;Tau Law V2. This confused me for a moment but it&amp;#x27;s at iso-performance. So with LogicFolding, Huawei can actually do a pretty cool thing, they raise the ceiling for free while opening a new tier of much colder high-end operation. The current 9030 Pro will be wholly obsolete.&lt;/blockquote&gt;</content:encoded>
+      <guid isPermaLink="false">04dffe3c-5751-480f-8301-4add44960747</guid>
       <category>Digg AI from X</category>
-      <pubDate>Fri, 03 Jul 2026 19:54:15 +0000</pubDate>
+      <pubDate>Sat, 04 Jul 2026 09:16:37 +0000</pubDate>
     </item>
     <item>
-      <title>Mistral AI releases Leanstral 1.5, a 119B MoE model for Lean 4 formal proof engineering</title>
-      <link>https://mistral.ai/news/leanstral-1-5/</link>
-      <description>The open model achieved 100% on the miniF2F benchmark.</description>
-      <content:encoded>&lt;p&gt;The open model achieved 100% on the miniF2F benchmark.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://mistral.ai/news/leanstral-1-5/"&gt;https://mistral.ai/news/leanstral-1-5/&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/7qph702e"&gt;https://digg.com/tech/7qph702e&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Mistral just dropped an open 119B-parameter MoE model tuned specifically for Lean 4 formal proof work, where only about 6B parameters stay active at once. It saturates the miniF2F benchmark at 100 percent while posting 587 solved problems on PutnamBench and fresh highs on the FATE-H and FATE-X sets. 138 1.6K 130 478 192.5K EL | @ELIEBAKOUCH B( | @BEFFJEZOS T( | @TEORTAXESTEX KA | @YACINEMTB AM #256 | @ARTHURMENSCH&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 46,375&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 574&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 202&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 8&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 27&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 12&lt;/li&gt;&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/arthurmensch"&gt;Arthur Mensch&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/yacineMTB"&gt;kache&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/teortaxesTex"&gt;Teortaxes▶️ (DeepSeek 推特🐋铁粉 2023 – ∞)&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/beffjezos"&gt;Beff (e/acc)&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/eliebakouch"&gt;elie&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
-&lt;blockquote&gt;very nice release by mistral (with a tech report!!), they replace the complicated scaffold of previous lean models by a simple coding agent and just scale test time compute budget with compaction every 200k it&amp;#x27;s also quite interesting that you don&amp;#x27;t really see the impact of compaction in this curve (or maybe this is why they see diminishing returns?) ~6B lean mid training token, SFT with 50% lean traces and then RL with CISPO&lt;/blockquote&gt;</content:encoded>
-      <guid isPermaLink="false">8018ba52-7ac2-412b-8dc7-f1603000b1f7</guid>
+      <title>David Sacks warns that enterprises feeding data to AI model providers risk fueling their future competitors</title>
+      <link>https://x.com/TheChiefNerd/status/2073201584251486213</link>
+      <description>Chamath Palihapitiya backed the warning, urging firms to build independent AI systems.</description>
+      <content:encoded>&lt;p&gt;Chamath Palihapitiya backed the warning, urging firms to build independent AI systems.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://x.com/TheChiefNerd/status/2073201584251486213"&gt;https://x.com/TheChiefNerd/status/2073201584251486213&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/myxqr0tn"&gt;https://digg.com/tech/myxqr0tn&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;David Sacks flagged a concrete risk for companies uploading proprietary data, trade secrets, and customer information to frontier AI labs: those same providers could later weaponize the transferred knowledge to launch competing products in verticals like design, code, or security. Chamath Palihapitiya amplified the point, noting the pattern already visible in sectors where AI can accelerate returns on capital employed. 75 2.2K 153 732 196.2K CP | @CHAMATH DS #192 | @DAVIDSACKS&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 89,689&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 456&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 68&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 1&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 28&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 2&lt;/li&gt;&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/DavidSacks"&gt;David Sacks&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/chamath"&gt;Chamath Palihapitiya&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+&lt;blockquote&gt;I believe this 💯.&lt;/blockquote&gt;</content:encoded>
+      <guid isPermaLink="false">e6cd0982-3047-447a-a4d4-80fce812e1cc</guid>
       <category>Digg AI from X</category>
-      <pubDate>Fri, 03 Jul 2026 18:41:30 +0000</pubDate>
+      <pubDate>Sat, 04 Jul 2026 08:16:35 +0000</pubDate>
     </item>
     <item>
-      <title>Industry speculation points to an upcoming Thursday launch for OpenAI's rumored GPT-5.6 Sol model</title>
-      <link>https://x.com/bridgemindai/status/2073008280255774919</link>
-      <description>The launch would precede Google DeepMind's rumored Gemini 3.5 Pro.</description>
-      <content:encoded>&lt;p&gt;The launch would precede Google DeepMind&amp;#x27;s rumored Gemini 3.5 Pro.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://x.com/bridgemindai/status/2073008280255774919"&gt;https://x.com/bridgemindai/status/2073008280255774919&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/tyrwge2n"&gt;https://digg.com/tech/tyrwge2n&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;A cluster of social posts is buzzing about OpenAI potentially rolling out its GPT-5.6 Sol Ultra variant around July 9, yet the only firm event on record remains the limited preview of the broader GPT-5.6 family that began June 26 for roughly twenty trusted partners. 182 2.6K 80 171 179.7K AV | @ALTRYNE CH | @KIMMONISMUS AC | @ANDREWCURRAN_ B( #530 | @BEFFJEZOS&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 181,730&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 2,640&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 172&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 9&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 174&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 6&lt;/li&gt;&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/beffjezos"&gt;Beff (e/acc)&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/AndrewCurran_"&gt;Andrew Curran&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/kimmonismus"&gt;Chubby♨️&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/altryne"&gt;Alex Volkov @ AI Engineer&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
-&lt;blockquote&gt;Sounds like Gemini 3.5 Pro arrives around July 17th with a brand-new pretrain. Unless, of course, the government blocks it. People are pretty down on Google right now, but I think they&amp;#x27;ll be surprised. July is a month for Kaiju fights.&lt;/blockquote&gt;</content:encoded>
-      <guid isPermaLink="false">45702e60-f368-4a2b-bac9-1195d283c3a5</guid>
+      <title>Mikhail Parakhin and Elon Musk argue abundant compute is actively eroding traditional AI technological moats</title>
+      <link>https://x.com/tunguz/status/2073170944357798373</link>
+      <description>They suggest minor hardware scale differences now separate top-tier performers.</description>
+      <content:encoded>&lt;p&gt;They suggest minor hardware scale differences now separate top-tier performers.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://x.com/tunguz/status/2073170944357798373"&gt;https://x.com/tunguz/status/2073170944357798373&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/k76vhzbt"&gt;https://digg.com/tech/k76vhzbt&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Shopify CTO Mikhail Parakhin and Elon Musk are weighing in on how easy access to large-scale compute is flattening the old edges that used to protect top AI labs, with the result that only small hardware differences now separate leaders from the pack. 100 453 41 22 40.1K MP | @MPARAKHIN EM #52 | @ELONMUSK&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 41,801&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 463&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 23&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 5&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 96&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 2&lt;/li&gt;&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/elonmusk"&gt;Elon Musk&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/MParakhin"&gt;Mikhail Parakhin&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+&lt;blockquote&gt;Unfortunately, close to being true. We used to say: “The difference between the champs and the chimps is 20% compute”.&lt;/blockquote&gt;</content:encoded>
+      <guid isPermaLink="false">a7ecc8ee-55e8-4e6f-aa4c-e0371543e532</guid>
       <category>Digg AI from X</category>
-      <pubDate>Fri, 03 Jul 2026 10:14:01 +0000</pubDate>
+      <pubDate>Sat, 04 Jul 2026 08:20:29 +0000</pubDate>
     </item>
     <item>
-      <title>Peter Thiel warns Vatican-backed global AI regulation efforts could undermine the US in its technology race with China</title>
-      <link>https://edition.cnn.com/2026/07/02/us/peter-thiel-aspen-pope-china-ai-cec</link>
-      <description>Thiel also predicted a democratic-socialist takeover of the Democratic Party.</description>
-      <content:encoded>&lt;p&gt;Thiel also predicted a democratic-socialist takeover of the Democratic Party.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://edition.cnn.com/2026/07/02/us/peter-thiel-aspen-pope-china-ai-cec"&gt;https://edition.cnn.com/2026/07/02/us/peter-thiel-aspen-pope-china-ai-cec&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/i47o16du"&gt;https://digg.com/tech/i47o16du&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;At the Aspen Ideas Festival Peter Thiel argued that Pope Leo XIV&amp;#x27;s May encyclical calling for AI to be disarmed could slow American development while leaving Chinese programs untouched, effectively tilting the technology contest in Beijing&amp;#x27;s favor. 109 965 80 212 86.3K CH | @KIMMONISMUS RP | @ROHANPAUL_AI SZ #84 | @SUCHENZANG&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 86,613&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 968&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 213&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 28&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 81&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 5&lt;/li&gt;&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/suchenzang"&gt;Susan Zhang&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/rohanpaul_ai"&gt;Rohan Paul&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/kimmonismus"&gt;Chubby♨️&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
-&lt;blockquote&gt;https://edition.cnn.com/2026/07/02/us/peter-thiel-aspen-pope-china-ai-cec&lt;/blockquote&gt;</content:encoded>
-      <guid isPermaLink="false">5cd5b450-f319-4e31-9f60-fe7f385d8762</guid>
+      <title>Meta's Lucas Beyer and Susan Zhang argue the boundary between self-supervised and unsupervised learning remains contested</title>
+      <link>https://x.com/cloneofsimo/status/2073338859577114747</link>
+      <description>Practitioners say industry terminology marginalizes traditional unsupervised methods.</description>
+      <content:encoded>&lt;p&gt;Practitioners say industry terminology marginalizes traditional unsupervised methods.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://x.com/cloneofsimo/status/2073338859577114747"&gt;https://x.com/cloneofsimo/status/2073338859577114747&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/ad8pg7ja"&gt;https://digg.com/tech/ad8pg7ja&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Prominent AI researchers are resurfacing old internal disagreements about where self-supervised learning ends and unsupervised learning begins, with no clean line emerging from the recollections. The conversation centers on how teams once argued over definitions without reaching black-and-white conclusions, especially as newer frameworks prompt fresh rounds of naming and positioning. 11 123 1 31 21.8K SR | @CLONEOFSIMO SZ | @SUCHENZANG LB #72 | @GIFFMANA&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 477&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 12&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 2&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 4&lt;/li&gt;&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/giffmana"&gt;Lucas Beyer (bl16)&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/suchenzang"&gt;Susan Zhang&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/cloneofsimo"&gt;Simo Ryu&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+&lt;blockquote&gt;@gabriberton JEPA is literally the only new idea in the SSL space in the past 3 years... what other SSL approaches are there? DINO? iBOT? MAE? these are all older than 3 years!&lt;/blockquote&gt;</content:encoded>
+      <guid isPermaLink="false">692b4fbf-625b-4877-b728-27e7044574e3</guid>
       <category>Digg AI from X</category>
-      <pubDate>Fri, 03 Jul 2026 08:46:31 +0000</pubDate>
+      <pubDate>Sat, 04 Jul 2026 08:02:19 +0000</pubDate>
     </item>
     <item>
-      <title>Outgoing White House adviser Sriram Krishnan says Trump administration won't establish centralized FDA-style AI regulator</title>
-      <link>https://ft.trib.al/iVU1cuP</link>
-      <description>Krishnan's duties included briefing officials on DeepSeek and explaining Roko's Basilisk.</description>
-      <content:encoded>&lt;p&gt;Krishnan&amp;#x27;s duties included briefing officials on DeepSeek and explaining Roko&amp;#x27;s Basilisk.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://ft.trib.al/iVU1cuP"&gt;https://ft.trib.al/iVU1cuP&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/pl5n7dbw"&gt;https://digg.com/tech/pl5n7dbw&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Outgoing White House AI adviser Sriram Krishnan told the Financial Times that the Trump administration plans to push back against heavy federal rules and any single centralized AI regulator, favoring instead a lighter touch that lets American companies move fast. 57 535 34 100 125.4K AC | @ANDREWCURRAN_ B( | @BEFFJEZOS T( | @TEORTAXESTEX DK #207 | @DAVIDSKRUEGER&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 23,026&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 142&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 26&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 3&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 9&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 8&lt;/li&gt;&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/DavidSKrueger"&gt;David Krueger 🦥 ⏸️ ⏹️ ⏪&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/teortaxesTex"&gt;Teortaxes▶️ (DeepSeek 推特🐋铁粉 2023 – ∞)&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/beffjezos"&gt;Beff (e/acc)&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/AndrewCurran_"&gt;Andrew Curran&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
-&lt;blockquote&gt;you&amp;#x27;re welcome&lt;/blockquote&gt;</content:encoded>
-      <guid isPermaLink="false">604b11b5-9d83-488c-9f1f-b9e9c0de9b5b</guid>
+      <title>Meta researcher Lucas Beyer says his Fable5 chats haven't been downgraded, sparking debate over silent backend model routing</title>
+      <link>https://x.com/giffmana/status/2073342166135369831/photo/1</link>
+      <description>Engineer Florian Brand questioned if chats are quietly routed to alternative models.</description>
+      <content:encoded>&lt;p&gt;Engineer Florian Brand questioned if chats are quietly routed to alternative models.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://x.com/giffmana/status/2073342166135369831/photo/1"&gt;https://x.com/giffmana/status/2073342166135369831/photo/1&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/eu8expiv"&gt;https://digg.com/tech/eu8expiv&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Meta researcher Lucas Beyer noted steady results across his Fable 5 sessions and shared the observation with a distressed Spongebob meme, yet the comment prompted immediate pushback on whether Anthropic&amp;#x27;s backend might quietly substitute other models without alerting users. 12 94 1 2 4.1K FB | @XEOPHON LB #72 | @GIFFMANA&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 4,230&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 97&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 2&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 1&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 11&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 3&lt;/li&gt;&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/giffmana"&gt;Lucas Beyer (bl16)&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/xeophon"&gt;Florian Brand&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+&lt;blockquote&gt;@giffmana You sure your chats don’t just get routed?&lt;/blockquote&gt;</content:encoded>
+      <guid isPermaLink="false">ab813d96-b664-4686-97a3-f9e15b69e85e</guid>
       <category>Digg AI from X</category>
-      <pubDate>Fri, 03 Jul 2026 18:26:01 +0000</pubDate>
-    </item>
-    <item>
-      <title>Boom Supersonic founder Blake Scholl teases milestone post amid supportive reactions from tech investors</title>
-      <link>https://x.com/bscholl/status/2073113580069892283/photo/1</link>
-      <description>Jason Calacanis and Alexis Ohanian posted public congratulations.</description>
-      <content:encoded>&lt;p&gt;Jason Calacanis and Alexis Ohanian posted public congratulations.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://x.com/bscholl/status/2073113580069892283/photo/1"&gt;https://x.com/bscholl/status/2073113580069892283/photo/1&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/37avg7ui"&gt;https://digg.com/tech/37avg7ui&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Boom Supersonic&amp;#x27;s CEO marked a regulatory turning point with a hangar photo and &amp;#x27;Mission accomplished&amp;#x27; caption, timed right after the FAA floated rules that could finally permit civil supersonic flights over land if sonic booms stay below a strict noise threshold already shown by the company&amp;#x27;s XB-1 demonstrator. 76 3K 123 56 42.1K BS | @BSCHOLL AO | @ALEXISOHANIAN @J #416 | @JASON&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 42,714&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 3,174&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 61&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 8&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 66&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 5&lt;/li&gt;&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/Jason"&gt;@jason&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/alexisohanian"&gt;Alexis Ohanian 🗽&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/bscholl"&gt;Blake Scholl 🛫&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
-&lt;blockquote&gt;Mission accomplished ✅&lt;/blockquote&gt;</content:encoded>
-      <guid isPermaLink="false">f8f79fdf-b26b-4084-8862-076adc5b8331</guid>
-      <category>Digg AI from X</category>
-      <pubDate>Fri, 03 Jul 2026 18:06:54 +0000</pubDate>
-    </item>
-    <item>
-      <title>Chamath Palihapitiya says Tesla's reported $200 weekly AI spending cap suggests higher employee expenditures are likely wasteful</title>
-      <link>https://x.com/Kalshi/status/2072771173767643139</link>
-      <description>Commentators believe the limit sets a new industry budget benchmark.</description>
-      <content:encoded>&lt;p&gt;Commentators believe the limit sets a new industry budget benchmark.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://x.com/Kalshi/status/2072771173767643139"&gt;https://x.com/Kalshi/status/2072771173767643139&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/gv14b0zo"&gt;https://digg.com/tech/gv14b0zo&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Tesla&amp;#x27;s reported internal memo introduces a $200 weekly ceiling on third-party AI tool usage starting July 6, with manager approval needed to exceed it, and Chamath Palihapitiya publicly frames any higher outlay at the company as probable waste given its engineering caliber. 468 8.9K 336 1K 1.3M RP | @ROHANPAUL_AI CP #347 | @CHAMATH&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 1,282,001&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 8,956&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 1,058&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 60&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 410&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 2&lt;/li&gt;&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/chamath"&gt;Chamath Palihapitiya&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/rohanpaul_ai"&gt;Rohan Paul&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
-&lt;blockquote&gt;The new AI budget benchmark for software engineers may have just landed at $800/month. This is Tesla’s new AI spending line. And given these engineers work near the limit of physical machines and code, so this should anchor software budgets everywhere.&lt;/blockquote&gt;</content:encoded>
-      <guid isPermaLink="false">7003ae9c-b207-4a51-ae9b-3b42484b22fe</guid>
-      <category>Digg AI from X</category>
-      <pubDate>Fri, 03 Jul 2026 09:24:17 +0000</pubDate>
-    </item>
-    <item>
-      <title>AI Security Institute says agent benchmarks must report performance curves over compute rather than static scores</title>
-      <link>https://safe.ai/blog/significant-increase-in-digital-labor-automation</link>
-      <description>A 10x increase in agent time horizon requires far more tokens.</description>
-      <content:encoded>&lt;p&gt;A 10x increase in agent time horizon requires far more tokens.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://safe.ai/blog/significant-increase-in-digital-labor-automation"&gt;https://safe.ai/blog/significant-increase-in-digital-labor-automation&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/de1juqfi"&gt;https://digg.com/tech/de1juqfi&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Static scores from fixed token budgets hide how much more agents could achieve with extra test-time compute. The AI Security Institute analysis shows performance often keeps climbing well beyond typical cutoffs, with some tasks only solved after tens of millions of tokens and newer models pulling further ahead as budgets grow. 14 130 10 28 15.1K TO | @TOBYORDOXFORD HB | @HERBIEBRADLEY IH | @SOUNDBOY AK #874 | @AMINKARBASI&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 15,151&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 130&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 28&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 2&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 12&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 11&lt;/li&gt;&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/aminkarbasi"&gt;Amin Karbasi&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/soundboy"&gt;Ian Hogarth&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/herbiebradley"&gt;Herbie Bradley&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/tobyordoxford"&gt;Toby Ord&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
-&lt;blockquote&gt;Because it is a log-log chart and those slopes are all roughly linear, the relationship is roughly a power law. The 80% time horizon is rising as the 2/3 power of the number of tokens. This means every 10x of the tokens buys about 5x the time horizon.&lt;/blockquote&gt;</content:encoded>
-      <guid isPermaLink="false">72a72a65-f767-40ee-b4c2-8a01363c6cad</guid>
-      <category>Digg AI from X</category>
-      <pubDate>Fri, 03 Jul 2026 07:41:58 +0000</pubDate>
-    </item>
-    <item>
-      <title>AI consultant Hamel Husain calls traditional enterprise AI consulting and deployment practices an organizational anti-pattern</title>
-      <link>https://x.com/xlr8harder/status/2073121026439786510</link>
-      <description>Practitioners say corporate bureaucracy frequently bottlenecks advanced AI system integration.</description>
-      <content:encoded>&lt;p&gt;Practitioners say corporate bureaucracy frequently bottlenecks advanced AI system integration.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://x.com/xlr8harder/status/2073121026439786510"&gt;https://x.com/xlr8harder/status/2073121026439786510&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/qtm2toyv"&gt;https://digg.com/tech/qtm2toyv&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Hamel Husain draws on more than a decade of hands-on AI work to argue that the familiar pattern of hiring outsiders to build and run enterprise AI systems tends to lock in the very problems it claims to solve, such as missing internal skills and slow decision processes, rather than building lasting capability inside the organization. 87 218 5 82 20.8K XL | @XLR8HARDER FB | @XEOPHON HH #1686 | @HAMELHUSAIN&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 21,557&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 228&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 82&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 8&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 81&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 7&lt;/li&gt;&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/HamelHusain"&gt;Hamel Husain&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/xeophon"&gt;Florian Brand&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/xlr8harder"&gt;xlr8harder&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
-&lt;blockquote&gt;The great AI paradox. Enterprises don&amp;#x27;t seem to have the brainpower to know how to use AI.&lt;/blockquote&gt;</content:encoded>
-      <guid isPermaLink="false">af30c2ba-3438-486f-8244-6e5f97283b9c</guid>
-      <category>Digg AI from X</category>
-      <pubDate>Fri, 03 Jul 2026 18:40:46 +0000</pubDate>
+      <pubDate>Sat, 04 Jul 2026 09:44:27 +0000</pubDate>
     </item>
   </channel>
 </rss>
