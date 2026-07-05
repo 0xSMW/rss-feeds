@@ -7,7 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 04 Jul 2026 13:05:15 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 05 Jul 2026 02:15:32 +0000</lastBuildDate>
     <item>
       <title>ReadBench evaluates bypassing text tokenization by rendering long-context documents as images for vision-language models</title>
       <link>https://github.com/teamchong/pxpipe</link>
@@ -15,28 +15,73 @@
       <content:encoded>&lt;p&gt;The technique builds on Google&amp;#x27;s pixel-only CLIPPO model design&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://github.com/teamchong/pxpipe"&gt;https://github.com/teamchong/pxpipe&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/f3hapn0c"&gt;https://digg.com/tech/f3hapn0c&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;ReadBench turns established text benchmarks into image pages to test how well vision-language models handle dense documents without any text tokens at all. The evaluation draws directly from the pixel-only approach first shown in Google&amp;#x27;s CLIPPO work and measures real degradation across short and long contexts when models must read rendered A4 pages instead of receiving clean tokens. 33 581 31 426 50.7K FB | @XEOPHON T( | @TEORTAXESTEX SZ | @SUCHENZANG LB #72 | @GIFFMANA&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 52,547&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 597&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 437&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 6&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 27&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 6&lt;/li&gt;&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/giffmana"&gt;Lucas Beyer (bl16)&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/suchenzang"&gt;Susan Zhang&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/teortaxesTex"&gt;Teortaxes▶️ (DeepSeek 推特🐋铁粉 2023 – ∞)&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/xeophon"&gt;Florian Brand&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
-&lt;blockquote&gt;hilarious if labs run DeepSeek-OCR style context compression on the back end, of course derived from much older works&lt;/blockquote&gt;</content:encoded>
+&lt;p&gt;ReadBench turns established text benchmarks into image pages to test how well vision-language models handle dense documents without any text tokens at all. The evaluation draws directly from the pixel-only approach first shown in Google&amp;#x27;s CLIPPO work and measures real degradation across short and long contexts when models must read rendered A4 pages instead of receiving clean tokens. 80 1.6K 124 1.2K 192.6K FB B( BD RP DF RS T( SZ LB #72&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 142,708&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 1,339&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 1,004&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 8&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 42&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 13&lt;/li&gt;&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/giffmana"&gt;Lucas Beyer (bl16)&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/suchenzang"&gt;Susan Zhang&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/teortaxesTex"&gt;Teortaxes▶️ (DeepSeek 推特🐋铁粉 2023 – ∞)&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/ziv_ravid"&gt;Ravid Shwartz Ziv&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/DanielleFong"&gt;Danielle Fong 🔆&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+&lt;blockquote&gt;@suchenzang The trick is to choose the winning team long before anyone knows it&amp;#x27;s the winning team and then later keep rubbing it in with &amp;quot;i told you so&amp;quot;s. ezpz&lt;/blockquote&gt;</content:encoded>
       <guid isPermaLink="false">23d83606-18a3-4d78-8a2f-98972c5f08b1</guid>
       <category>Digg AI from X</category>
       <pubDate>Sat, 04 Jul 2026 08:11:24 +0000</pubDate>
     </item>
     <item>
-      <title>Huawei paper reveals Kirin 2026 processor benchmarks, claiming 41% lower power and 37.5% smaller die area</title>
-      <link>https://x.com/poezhao0605/status/2073300079923069104</link>
-      <description>The architectural improvements stem from Huawei's new LogicFolding technique.</description>
-      <content:encoded>&lt;p&gt;The architectural improvements stem from Huawei&amp;#x27;s new LogicFolding technique.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://x.com/poezhao0605/status/2073300079923069104"&gt;https://x.com/poezhao0605/status/2073300079923069104&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/odrhuhww"&gt;https://digg.com/tech/odrhuhww&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Huawei&amp;#x27;s new paper from executive He Tingbo introduces LogicFolding as a circuit-level trick that stacks logic tiers to cut signal delays, delivering the reported gains on the Kirin 2026 versus the Kirin 9030 Pro at iso-performance while tying into a broader Tau scaling framework meant to complement Moore&amp;#x27;s Law. 18 188 12 62 64.3K ZE | @ZEPHYR_Z9 T( #501 | @TEORTAXESTEX&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 66,786&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 196&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 63&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 4&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 14&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 6&lt;/li&gt;&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/teortaxesTex"&gt;Teortaxes▶️ (DeepSeek 推特🐋铁粉 2023 – ∞)&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/zephyr_z9"&gt;Zephyr&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
-&lt;blockquote&gt;Tau Law V2. This confused me for a moment but it&amp;#x27;s at iso-performance. So with LogicFolding, Huawei can actually do a pretty cool thing, they raise the ceiling for free while opening a new tier of much colder high-end operation. The current 9030 Pro will be wholly obsolete.&lt;/blockquote&gt;</content:encoded>
-      <guid isPermaLink="false">04dffe3c-5751-480f-8301-4add44960747</guid>
+      <title>OpenAI Codex engineering lead Thibault Sottiaux asks developers for tasks the AI coding model still cannot perform</title>
+      <link>https://x.com/thsottiaux/status/2073551549494596079</link>
+      <description>Feedback highlighted failures in context window management and specific benchmark gaps</description>
+      <content:encoded>&lt;p&gt;Feedback highlighted failures in context window management and specific benchmark gaps&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://x.com/thsottiaux/status/2073551549494596079"&gt;https://x.com/thsottiaux/status/2073551549494596079&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/gucdu4mt"&gt;https://digg.com/tech/gucdu4mt&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Thibault Sottiaux, engineering lead for OpenAI&amp;#x27;s Codex agentic coding system, posted on X asking developers to name capabilities that still feel surprisingly out of reach despite years of progress, drawing over 570 replies that zero in on recurring friction points. 1.2K 1.1K 16 107 103.4K BD MC TI BT KA NB DF #233&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 107,858&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 1,132&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 113&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 24&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 1,231&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 7&lt;/li&gt;&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/zoink"&gt;Dylan Field&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/nathanbenaich"&gt;Nathan Benaich&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/yacineMTB"&gt;kache&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/tunguz"&gt;Bojan Tunguz&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/thsottiaux"&gt;Tibo&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+&lt;blockquote&gt;@thsottiaux be better than fable&lt;/blockquote&gt;</content:encoded>
+      <guid isPermaLink="false">55859df5-a50c-4447-9c5c-f46bc5e66afb</guid>
       <category>Digg AI from X</category>
-      <pubDate>Sat, 04 Jul 2026 09:16:37 +0000</pubDate>
+      <pubDate>Sat, 04 Jul 2026 23:36:28 +0000</pubDate>
+    </item>
+    <item>
+      <title>Yann LeCun argues AGI is nonsense, pointing to failure of robotics and autonomous systems to match animal intelligence</title>
+      <link>https://x.com/ylecun/status/2073425439188484351</link>
+      <description>Zachary Lipton joked that making actual children listen is harder.</description>
+      <content:encoded>&lt;p&gt;Zachary Lipton joked that making actual children listen is harder.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://x.com/ylecun/status/2073425439188484351"&gt;https://x.com/ylecun/status/2073425439188484351&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/985oe41y"&gt;https://digg.com/tech/985oe41y&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Yann LeCun&amp;#x27;s claim that AGI is a flawed concept stems directly from the persistent shortfalls in robotics and autonomous systems that still can&amp;#x27;t match even basic animal-level adaptability in the physical world, a critique he has leveled while stepping away from Meta to build AMI Labs around world models designed to close precisely those gaps. 179 2.4K 131 250 137.8K AN AG ZL YL #3&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 143,155&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 2,388&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 257&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 33&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 147&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 8&lt;/li&gt;&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/ylecun"&gt;Yann LeCun&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/zacharylipton"&gt;Zachary Lipton&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/andrewgwils"&gt;Andrew Gordon Wilson&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/aran_nayebi"&gt;Aran Nayebi&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+&lt;blockquote&gt;If @ylecun can really make a 10yr old a first-time listener, this will dwarf his contributions to machine learning. Sign me up for the alpha!&lt;/blockquote&gt;</content:encoded>
+      <guid isPermaLink="false">1e41e001-c719-4cf7-86e4-5d514c36b494</guid>
+      <category>Digg AI from X</category>
+      <pubDate>Sat, 04 Jul 2026 15:15:21 +0000</pubDate>
+    </item>
+    <item>
+      <title>Anthropic will develop its own drugs in-house to test and refine its Claude Science laboratory AI model</title>
+      <link>https://x.com/bryan_johnson/status/2073413863245258806/photo/1</link>
+      <description>The initial programs will target neglected and rare diseases.</description>
+      <content:encoded>&lt;p&gt;The initial programs will target neglected and rare diseases.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://x.com/bryan_johnson/status/2073413863245258806/photo/1"&gt;https://x.com/bryan_johnson/status/2073413863245258806/photo/1&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/jinr7m1s"&gt;https://digg.com/tech/jinr7m1s&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Anthropic is launching an internal preclinical drug discovery effort aimed at neglected and rare diseases, explicitly to gather real lab experience that will feed back into its newly released Claude Science workbench for scientists. 273 3.1K 144 346 214.1K RP JB BJ #316&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 216,092&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 3,112&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 351&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 60&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 213&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 3&lt;/li&gt;&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/bryan_johnson"&gt;Bryan Johnson&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/Plinz"&gt;Joscha Bach&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/rohanpaul_ai"&gt;Rohan Paul&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+&lt;blockquote&gt;cannot wait for better adderall&lt;/blockquote&gt;</content:encoded>
+      <guid isPermaLink="false">951546ac-0d12-4490-b5c1-3974cb98a87a</guid>
+      <category>Digg AI from X</category>
+      <pubDate>Sat, 04 Jul 2026 14:29:21 +0000</pubDate>
+    </item>
+    <item>
+      <title>OpenAI Codex engineering lead Thibault Sottiaux plans to review structured user proposals to guide future interface updates</title>
+      <link>https://x.com/Ananth7e/status/2073356210146030001</link>
+      <description>The move follows a user request to display individual reset expiration dates.</description>
+      <content:encoded>&lt;p&gt;The move follows a user request to display individual reset expiration dates.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://x.com/Ananth7e/status/2073356210146030001"&gt;https://x.com/Ananth7e/status/2073356210146030001&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/d3t0gmmf"&gt;https://digg.com/tech/d3t0gmmf&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;OpenAI Codex engineering lead Thibault Sottiaux has indicated he will evaluate well-organized user suggestions when shaping future interface changes, prompted by one concrete proposal to show separate reset timers and their individual expiration dates rather than a single aggregate figure. 305 3.2K 60 260 195.5K B( JA TI #611&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 214,078&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 3,247&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 262&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 31&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 276&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 3&lt;/li&gt;&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/thsottiaux"&gt;Tibo&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/jxnlco"&gt;jason&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/andersonbcdefg"&gt;Ben (no treats)&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+&lt;blockquote&gt;easiest way to this is to send codex a screenshot and tel lit to use image gen&lt;/blockquote&gt;</content:encoded>
+      <guid isPermaLink="false">9df13421-4b9f-448e-8cd6-fb84ae6d3903</guid>
+      <category>Digg AI from X</category>
+      <pubDate>Sat, 04 Jul 2026 17:59:26 +0000</pubDate>
     </item>
     <item>
       <title>David Sacks warns that enterprises feeding data to AI model providers risk fueling their future competitors</title>
@@ -45,58 +90,73 @@
       <content:encoded>&lt;p&gt;Chamath Palihapitiya backed the warning, urging firms to build independent AI systems.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://x.com/TheChiefNerd/status/2073201584251486213"&gt;https://x.com/TheChiefNerd/status/2073201584251486213&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/myxqr0tn"&gt;https://digg.com/tech/myxqr0tn&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;David Sacks flagged a concrete risk for companies uploading proprietary data, trade secrets, and customer information to frontier AI labs: those same providers could later weaponize the transferred knowledge to launch competing products in verticals like design, code, or security. Chamath Palihapitiya amplified the point, noting the pattern already visible in sectors where AI can accelerate returns on capital employed. 75 2.2K 153 732 196.2K CP | @CHAMATH DS #192 | @DAVIDSACKS&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 89,689&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 456&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 68&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 1&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 28&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 2&lt;/li&gt;&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/DavidSacks"&gt;David Sacks&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/chamath"&gt;Chamath Palihapitiya&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+&lt;p&gt;David Sacks flagged a concrete risk for companies uploading proprietary data, trade secrets, and customer information to frontier AI labs: those same providers could later weaponize the transferred knowledge to launch competing products in verticals like design, code, or security. Chamath Palihapitiya amplified the point, noting the pattern already visible in sectors where AI can accelerate returns on capital employed. 140 3.7K 199 1.1K 407.7K @J CP DS #192&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 206,456&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 1,191&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 155&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 5&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 50&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 3&lt;/li&gt;&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/DavidSacks"&gt;David Sacks&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/chamath"&gt;Chamath Palihapitiya&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/Jason"&gt;@jason&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
 &lt;blockquote&gt;I believe this 💯.&lt;/blockquote&gt;</content:encoded>
       <guid isPermaLink="false">e6cd0982-3047-447a-a4d4-80fce812e1cc</guid>
       <category>Digg AI from X</category>
       <pubDate>Sat, 04 Jul 2026 08:16:35 +0000</pubDate>
     </item>
     <item>
-      <title>Mikhail Parakhin and Elon Musk argue abundant compute is actively eroding traditional AI technological moats</title>
-      <link>https://x.com/tunguz/status/2073170944357798373</link>
-      <description>They suggest minor hardware scale differences now separate top-tier performers.</description>
-      <content:encoded>&lt;p&gt;They suggest minor hardware scale differences now separate top-tier performers.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://x.com/tunguz/status/2073170944357798373"&gt;https://x.com/tunguz/status/2073170944357798373&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/k76vhzbt"&gt;https://digg.com/tech/k76vhzbt&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Shopify CTO Mikhail Parakhin and Elon Musk are weighing in on how easy access to large-scale compute is flattening the old edges that used to protect top AI labs, with the result that only small hardware differences now separate leaders from the pack. 100 453 41 22 40.1K MP | @MPARAKHIN EM #52 | @ELONMUSK&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 41,801&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 463&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 23&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 5&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 96&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 2&lt;/li&gt;&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/elonmusk"&gt;Elon Musk&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/MParakhin"&gt;Mikhail Parakhin&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
-&lt;blockquote&gt;Unfortunately, close to being true. We used to say: “The difference between the champs and the chimps is 20% compute”.&lt;/blockquote&gt;</content:encoded>
-      <guid isPermaLink="false">a7ecc8ee-55e8-4e6f-aa4c-e0371543e532</guid>
+      <title>AI creator @deepfates jokes about maintaining a mental reverse hashmap indexed by punchline for constant-time comedy riffs</title>
+      <link>https://x.com/deepfates/status/2073452702621900964</link>
+      <description>Danielle Fong noted others similarly apply data structures to social interaction</description>
+      <content:encoded>&lt;p&gt;Danielle Fong noted others similarly apply data structures to social interaction&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://x.com/deepfates/status/2073452702621900964"&gt;https://x.com/deepfates/status/2073452702621900964&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/q4gyxcau"&gt;https://digg.com/tech/q4gyxcau&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;An AI-focused creator on X framed rapid joke recall as a constant-time lookup problem, describing a reverse hashmap in the mind that stores punchlines as keys to surface material instantly during live riffing sessions. 40 3.9K 116 364 90.6K 🎭 DF #756&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 101,739&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 4,292&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 412&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 6&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 34&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 3&lt;/li&gt;&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/DanielleFong"&gt;Danielle Fong 🔆&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/deepfates"&gt;🎭&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+&lt;blockquote&gt;many such cases&lt;/blockquote&gt;</content:encoded>
+      <guid isPermaLink="false">dc992632-87de-4c45-8669-19b0a98ad5a1</guid>
       <category>Digg AI from X</category>
-      <pubDate>Sat, 04 Jul 2026 08:20:29 +0000</pubDate>
+      <pubDate>Sat, 04 Jul 2026 17:03:41 +0000</pubDate>
     </item>
     <item>
-      <title>Meta's Lucas Beyer and Susan Zhang argue the boundary between self-supervised and unsupervised learning remains contested</title>
-      <link>https://x.com/cloneofsimo/status/2073338859577114747</link>
-      <description>Practitioners say industry terminology marginalizes traditional unsupervised methods.</description>
-      <content:encoded>&lt;p&gt;Practitioners say industry terminology marginalizes traditional unsupervised methods.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://x.com/cloneofsimo/status/2073338859577114747"&gt;https://x.com/cloneofsimo/status/2073338859577114747&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/ad8pg7ja"&gt;https://digg.com/tech/ad8pg7ja&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Prominent AI researchers are resurfacing old internal disagreements about where self-supervised learning ends and unsupervised learning begins, with no clean line emerging from the recollections. The conversation centers on how teams once argued over definitions without reaching black-and-white conclusions, especially as newer frameworks prompt fresh rounds of naming and positioning. 11 123 1 31 21.8K SR | @CLONEOFSIMO SZ | @SUCHENZANG LB #72 | @GIFFMANA&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 477&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 12&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 2&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 4&lt;/li&gt;&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/giffmana"&gt;Lucas Beyer (bl16)&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/suchenzang"&gt;Susan Zhang&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/cloneofsimo"&gt;Simo Ryu&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
-&lt;blockquote&gt;@gabriberton JEPA is literally the only new idea in the SSL space in the past 3 years... what other SSL approaches are there? DINO? iBOT? MAE? these are all older than 3 years!&lt;/blockquote&gt;</content:encoded>
-      <guid isPermaLink="false">692b4fbf-625b-4877-b728-27e7044574e3</guid>
+      <title>Meta's Lucas Beyer launches anonymous MoE poll, sparking debate over parameter scaling and routing efficiency</title>
+      <link>https://x.com/tenderizzation/status/2073515995139059892</link>
+      <description>Commentators argue active parameters alone do not dictate actual model intelligence.</description>
+      <content:encoded>&lt;p&gt;Commentators argue active parameters alone do not dictate actual model intelligence.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://x.com/tenderizzation/status/2073515995139059892"&gt;https://x.com/tenderizzation/status/2073515995139059892&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/eh1g243l"&gt;https://digg.com/tech/eh1g243l&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Meta AI researcher Lucas Beyer dropped an anonymous X poll to surface unfiltered opinions on Mixture of Experts models, quickly igniting replies that challenge whether intelligence truly tracks only the active parameters while total parameter counts drive loss and knowledge. 37 131 5 18 22.2K VI AD T( KA LB #72&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 23,070&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 95&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 16&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 5&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 28&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 6&lt;/li&gt;&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/giffmana"&gt;Lucas Beyer (bl16)&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/yacineMTB"&gt;kache&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/teortaxesTex"&gt;Teortaxes▶️ (DeepSeek 推特🐋铁粉 2023 – ∞)&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/Dorialexander"&gt;Alexander Doria&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/vikhyatk"&gt;vik&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+&lt;blockquote&gt;I still wish we had something more globally aware than these routers MoEs are frustrating. What do you mean loss and knowledge scale with total params and &amp;quot;intelligence&amp;quot; with active? Wtf is non-knowledge-based intelligence in an LLM? That&amp;#x27;s not true humanlike sparsity.&lt;/blockquote&gt;</content:encoded>
+      <guid isPermaLink="false">5c03df4a-c710-4da1-85ff-707204011829</guid>
       <category>Digg AI from X</category>
-      <pubDate>Sat, 04 Jul 2026 08:02:19 +0000</pubDate>
+      <pubDate>Sat, 04 Jul 2026 20:45:05 +0000</pubDate>
     </item>
     <item>
-      <title>Meta researcher Lucas Beyer says his Fable5 chats haven't been downgraded, sparking debate over silent backend model routing</title>
-      <link>https://x.com/giffmana/status/2073342166135369831/photo/1</link>
-      <description>Engineer Florian Brand questioned if chats are quietly routed to alternative models.</description>
-      <content:encoded>&lt;p&gt;Engineer Florian Brand questioned if chats are quietly routed to alternative models.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://x.com/giffmana/status/2073342166135369831/photo/1"&gt;https://x.com/giffmana/status/2073342166135369831/photo/1&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/eu8expiv"&gt;https://digg.com/tech/eu8expiv&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Meta researcher Lucas Beyer noted steady results across his Fable 5 sessions and shared the observation with a distressed Spongebob meme, yet the comment prompted immediate pushback on whether Anthropic&amp;#x27;s backend might quietly substitute other models without alerting users. 12 94 1 2 4.1K FB | @XEOPHON LB #72 | @GIFFMANA&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 4,230&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 97&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 2&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 1&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 11&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 3&lt;/li&gt;&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/giffmana"&gt;Lucas Beyer (bl16)&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/xeophon"&gt;Florian Brand&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
-&lt;blockquote&gt;@giffmana You sure your chats don’t just get routed?&lt;/blockquote&gt;</content:encoded>
-      <guid isPermaLink="false">ab813d96-b664-4686-97a3-f9e15b69e85e</guid>
+      <title>Georges Harik's startup humans&amp; deploys its third AI training cluster using NVIDIA B300 GPUs</title>
+      <link>https://x.com/DeepInfra/status/2073526243472138388</link>
+      <description>The cluster was built with DeepInfra to scale model training.</description>
+      <content:encoded>&lt;p&gt;The cluster was built with DeepInfra to scale model training.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://x.com/DeepInfra/status/2073526243472138388"&gt;https://x.com/DeepInfra/status/2073526243472138388&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/51igvoaw"&gt;https://digg.com/tech/51igvoaw&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Georges Harik&amp;#x27;s humans&amp;amp; lab has fired up its third dedicated AI training cluster, this time tapping DeepInfra to bring thousands of NVIDIA B300 GPUs online for fully owned in-house model work rather than rented capacity. 13 173 25 22 26.6K GH NO N✈️ EZ #242&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 26,758&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 157&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 21&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 6&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 4&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 6&lt;/li&gt;&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/ericzelikman"&gt;Eric Zelikman&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/niloofar_mire"&gt;Niloofar ✈️ icml&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/noahdgoodman"&gt;noahdgoodman&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/gharik"&gt;Georges Harik&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+&lt;blockquote&gt;I’ve been learning so much about infrastructure and hardware choices and decisions these days @humansand thanks to @ericzelikman @Ani_nlp @zianglih 🚀 hyped for our model! Hiring @ ICML!&lt;/blockquote&gt;</content:encoded>
+      <guid isPermaLink="false">2814d11d-afb1-445c-bda6-96efb698f2de</guid>
       <category>Digg AI from X</category>
-      <pubDate>Sat, 04 Jul 2026 09:44:27 +0000</pubDate>
+      <pubDate>Sat, 04 Jul 2026 22:50:04 +0000</pubDate>
+    </item>
+    <item>
+      <title>Bend creator Victor Taelin says the formal consistency proof for Bend3 fits within a single tweet</title>
+      <link>https://x.com/onehotcoded/status/2073317377303830547</link>
+      <description>Taelin used the AI Fable to assist with the proof.</description>
+      <content:encoded>&lt;p&gt;Taelin used the AI Fable to assist with the proof.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://x.com/onehotcoded/status/2073317377303830547"&gt;https://x.com/onehotcoded/status/2073317377303830547&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/k8n1sd9j"&gt;https://digg.com/tech/k8n1sd9j&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Victor Taelin, creator of the Bend language, has described how the AI system Fable helped him complete a consistency proof for Bend after he resolved an underlying paradox, presenting the result as a straightforward technical step rather than promotional exaggeration. 82 911 30 332 84.4K TA KA #403&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 93,968&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 952&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 358&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 7&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 74&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 4&lt;/li&gt;&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/yacineMTB"&gt;kache&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/VictorTaelin"&gt;Taelin&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+&lt;blockquote&gt;$3c&lt;/blockquote&gt;</content:encoded>
+      <guid isPermaLink="false">97573aa2-344d-493b-948c-b1ef72ccd339</guid>
+      <category>Digg AI from X</category>
+      <pubDate>Sat, 04 Jul 2026 13:39:41 +0000</pubDate>
     </item>
   </channel>
 </rss>
