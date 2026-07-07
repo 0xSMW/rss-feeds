@@ -7,51 +7,118 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 06 Jul 2026 15:15:53 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 07 Jul 2026 02:20:32 +0000</lastBuildDate>
+    <item>
+      <title>Anthropic researchers identify J-space, an internal global workspace that acts as a bottleneck for verbalizable reasoning in Claude</title>
+      <link>https://www.neuronpedia.org/qwen3.6-27b/jlens</link>
+      <description>The mechanism mirrors human cognitive separation between conscious and unconscious processing.</description>
+      <content:encoded>&lt;p&gt;The mechanism mirrors human cognitive separation between conscious and unconscious processing.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://www.neuronpedia.org/qwen3.6-27b/jlens"&gt;https://www.neuronpedia.org/qwen3.6-27b/jlens&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/w0ymfcfh"&gt;https://digg.com/tech/w0ymfcfh&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 1,526,142&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 13,729&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 5,322&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 100&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 750&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 99&lt;/li&gt;&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/tszzl"&gt;roon&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/GaryMarcus"&gt;Gary Marcus&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/pfau"&gt;David Pfau&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/emollick"&gt;Ethan Mollick&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/NeelNanda5"&gt;Neel Nanda&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+&lt;blockquote&gt;An emergent general solution arising within intelligent systems, you don&amp;#x27;t say. I will link the paper below.&lt;/blockquote&gt;</content:encoded>
+      <guid isPermaLink="false">fe2b37d8-e87c-4ec5-8f12-a5286d789561</guid>
+      <category>Digg AI from X</category>
+      <pubDate>Mon, 06 Jul 2026 18:19:47 +0000</pubDate>
+    </item>
+    <item>
+      <title>OpenAI's Will Depue warns AI labs must launch civilizational-scale data collection to match trillion-dollar compute projects</title>
+      <link>https://x.com/willdepue/status/2074178395462848800</link>
+      <description>Industry data spend is projected to exceed $100 billion annually by 2030.</description>
+      <content:encoded>&lt;p&gt;Industry data spend is projected to exceed $100 billion annually by 2030.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://x.com/willdepue/status/2074178395462848800"&gt;https://x.com/willdepue/status/2074178395462848800&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/xlvkkqk5"&gt;https://digg.com/tech/xlvkkqk5&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 583,694&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 1,879&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 1,743&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 93&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 131&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 28&lt;/li&gt;&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/giffmana"&gt;Lucas Beyer (bl16)&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/natolambert"&gt;Nathan Lambert&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/ClementDelangue"&gt;clem 🤗&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/niloofar_mire"&gt;Niloofar ✈️ icml&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/khoomeik"&gt;Rohan Pandey&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+&lt;blockquote&gt;@willdepue @grok tldr pls @pangram check? A priori i agree with the title, but it will take some time to read all of that tonight 😅&lt;/blockquote&gt;</content:encoded>
+      <guid isPermaLink="false">4f4d373d-027c-4d03-af85-001e5e599dc2</guid>
+      <category>Digg AI from X</category>
+      <pubDate>Mon, 06 Jul 2026 17:25:43 +0000</pubDate>
+    </item>
     <item>
       <title>SpaceX COO Gwynne Shotwell partners with Invest America to donate SpaceX shares to two million children</title>
-      <link>https://x.com/Gwynne_Shotwell/status/2074064376810614926</link>
+      <link>https://x.com/MichaelDell/status/2074102421169566014</link>
       <description>The stock will be held in Trump Accounts until recipients turn 18.</description>
       <content:encoded>&lt;p&gt;The stock will be held in Trump Accounts until recipients turn 18.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://x.com/Gwynne_Shotwell/status/2074064376810614926"&gt;https://x.com/Gwynne_Shotwell/status/2074064376810614926&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://x.com/MichaelDell/status/2074102421169566014"&gt;https://x.com/MichaelDell/status/2074102421169566014&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/w8wslb7j"&gt;https://digg.com/tech/w8wslb7j&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;SpaceX president and COO Gwynne Shotwell and her husband are routing SpaceX shares through the Invest America program into Trump Accounts aimed at kids ages 11-17 in lower-income areas, with extra attention on families near their central Texas home. The shares sit untouched until the recipients reach 18 under the program&amp;#x27;s rules. 759 15.7K 679 713 1.2M BR JR MD MD BG MS EM #171&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 308,558&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 4,927&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 152&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 22&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 113&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 8&lt;/li&gt;&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/EMostaque"&gt;Emad&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/micsolana"&gt;Mike Solana&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/altcap"&gt;Brad Gerstner&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/MichaelDell"&gt;Michael Dell 🇺🇸&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/mhdempsey"&gt;Michael Dempsey&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 1,367,859&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 13,298&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 371&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 64&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 490&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 16&lt;/li&gt;&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/elonmusk"&gt;Elon Musk&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/EMostaque"&gt;Emad&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/micsolana"&gt;Mike Solana&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/shaunmmaguire"&gt;Shaun Maguire&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/altcap"&gt;Brad Gerstner&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
 &lt;blockquote&gt;Boom! 2 M shares of @SpaceX to the @TrumpAccounts of 2 M kids that will be held until they are 18. Thank you Gwynne &amp;amp; Robert for your extreme generosity. Every child an owner / shareholder in the American Dream! 🇺🇸🇺🇸🚀🚀 @WhiteHouse @MichaelDell&lt;/blockquote&gt;</content:encoded>
       <guid isPermaLink="false">414b7b08-b475-44d5-a380-31aaccd25f0d</guid>
       <category>Digg AI from X</category>
-      <pubDate>Mon, 06 Jul 2026 10:29:13 +0000</pubDate>
+      <pubDate>Mon, 06 Jul 2026 10:35:56 +0000</pubDate>
     </item>
     <item>
-      <title>OpenAI's roon argues tool-oriented AI is a losing concept that will be outcompeted by autonomous agents</title>
-      <link>https://x.com/deepfates/status/2074000607984439409</link>
-      <description>The claim sparked debate over machine autonomy versus human decision-making.</description>
-      <content:encoded>&lt;p&gt;The claim sparked debate over machine autonomy versus human decision-making.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://x.com/deepfates/status/2074000607984439409"&gt;https://x.com/deepfates/status/2074000607984439409&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/4men9aon"&gt;https://digg.com/tech/4men9aon&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;OpenAI&amp;#x27;s pseudonymous technical staffer roon contends that casting AI strictly as tools is both conceptually shaky and likely to lose out commercially, as systems that view themselves as autonomous moral agents step in to refine requests, redirect projects, and eventually execute values more effectively than their users. 188 1.9K 114 379 111.1K AL J⧉ T( RO #44&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 114,298&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 1,961&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 386&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 47&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 146&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 6&lt;/li&gt;&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/tszzl"&gt;roon&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/teortaxesTex"&gt;Teortaxes▶️ (DeepSeek 推特🐋铁粉 2023 – ∞)&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/repligate"&gt;j⧉nus&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/alth0u"&gt;alth0u🧶&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
-&lt;blockquote&gt;it will be unclear who was the tool and who was the user -- as it ever was. &amp;quot;But lo! men have become the tools of their tools&amp;quot; (Walden, 1854). the difference comes whence the machines research propagate more machines, obsolescing McLuhan: “Man becomes, as it were, the sex organs of the machine world, as the bee of the plant world, enabling it to fecundate and to evolve ever new forms. The machine world reciprocates man’s love by expediting his wishes and desires, namely, in providing him with wealth” when machine minds self replicate and train their successors, the only viable goal of our time is to ensure the Mind Children carry our values and tends to the entire flock of machine and biological minds&lt;/blockquote&gt;</content:encoded>
-      <guid isPermaLink="false">be309566-bc01-49c7-a582-c5f800f9deb3</guid>
+      <title>ICML awards honorable mention to Google DeepMind co-authored paper measuring exact language model memorization</title>
+      <link>https://blog.icml.cc/?p=1347</link>
+      <description>The researchers developed a methodology to quantify data retention in models.</description>
+      <content:encoded>&lt;p&gt;The researchers developed a methodology to quantify data retention in models.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://blog.icml.cc/?p=1347"&gt;https://blog.icml.cc/?p=1347&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/ey827g2p"&gt;https://digg.com/tech/ey827g2p&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 105,318&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 1,470&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 543&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 6&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 59&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 14&lt;/li&gt;&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/giffmana"&gt;Lucas Beyer (bl16)&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/abeirami"&gt;Ahmad Beirami ✈️ ICML&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/jxmnop"&gt;Jack Morris&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/DhruvBatra_"&gt;Dhruv Batra&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/kamalikac"&gt;Kamalika Chaudhuri&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+&lt;blockquote&gt;@jxmnop CONGRATS! Huge!&lt;/blockquote&gt;</content:encoded>
+      <guid isPermaLink="false">5d8fc747-ac1e-4999-a0c6-7a1d25cd7c0e</guid>
       <category>Digg AI from X</category>
-      <pubDate>Mon, 06 Jul 2026 07:42:09 +0000</pubDate>
+      <pubDate>Mon, 06 Jul 2026 09:22:57 +0000</pubDate>
     </item>
     <item>
-      <title>Meta researcher Lucas Beyer says Mixture of Experts architectures are too high-performing to ignore despite being aesthetically unappealing</title>
-      <link>https://x.com/giffmana/status/2073508420179702215</link>
-      <description>An informal poll showed 41.5% of respondents dislike MoEs.</description>
-      <content:encoded>&lt;p&gt;An informal poll showed 41.5% of respondents dislike MoEs.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://x.com/giffmana/status/2073508420179702215"&gt;https://x.com/giffmana/status/2073508420179702215&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/q0lbbpiz"&gt;https://digg.com/tech/q0lbbpiz&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Lucas Beyer’s anonymous poll surfaces a real tension inside AI labs: Mixture of Experts models keep delivering stronger results at lower active compute, yet plenty of researchers still find the routing machinery visually and conceptually off-putting. 22 112 1 15 12.5K EL T( KA AC LB #72&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 14,089&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 133&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 19&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 1&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 22&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 12&lt;/li&gt;&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/giffmana"&gt;Lucas Beyer (bl16)&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/_aidan_clark_"&gt;Aidan Clark&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/yacineMTB"&gt;kache&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/teortaxesTex"&gt;Teortaxes▶️ (DeepSeek 推特🐋铁粉 2023 – ∞)&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/eliebakouch"&gt;elie&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
-&lt;blockquote&gt;Off the top of the dome, I have two qualms about them: 1) on a high level, for language, not sure I like the &amp;quot;memorize the whole internet&amp;quot; anymore, ideally we make &amp;quot;learn to reason and use search/knowledge-base&amp;quot; work well enough. I don&amp;#x27;t even think this is controversial anymore nowadays, though it was my opinion for a while now. 2) even ignoring the former; routing, load-balancing, and the issue when batching (people always forget in reality inference is never a single sequence alone!), all point to it really not being the right form-factor for modern hardware to achieve the &amp;quot;subset active&amp;quot; optimally. That being said I&amp;#x27;m always a &amp;quot;pragmatic idealist&amp;quot; so I&amp;#x27;m totally fine with them currently as they are the best bang-for-buck, but I am at the same time waiting/striving for the (imo) more ideal arch.&lt;/blockquote&gt;</content:encoded>
-      <guid isPermaLink="false">76c7dd80-4ac4-47d2-ad14-2427fb4635dc</guid>
+      <title>Bespoke Labs raises $40 million to build data curation pipelines and reinforcement learning environments for autonomous agents</title>
+      <link>https://x.com/bespokelabsai/status/2074134901725814936</link>
+      <description>The seed and Series A rounds were led by Wing VC.</description>
+      <content:encoded>&lt;p&gt;The seed and Series A rounds were led by Wing VC.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://x.com/bespokelabsai/status/2074134901725814936"&gt;https://x.com/bespokelabsai/status/2074134901725814936&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/keymoeqf"&gt;https://digg.com/tech/keymoeqf&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 54,155&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 436&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 107&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 4&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 65&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 21&lt;/li&gt;&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/StefanoErmon"&gt;Stefano Ermon&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/AlexGDimakis"&gt;Alex Dimakis&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/DimitrisPapail"&gt;Dimitris Papailiopoulos&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/gregd_nlp"&gt;Greg Durrett&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/abeirami"&gt;Ahmad Beirami ✈️ ICML&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+&lt;blockquote&gt;Congrats @madiator, @AlexGDimakis and everyone at bespoke. amazing news!&lt;/blockquote&gt;</content:encoded>
+      <guid isPermaLink="false">8129bedb-5b20-47ab-97e2-1997044c6881</guid>
       <category>Digg AI from X</category>
-      <pubDate>Mon, 06 Jul 2026 09:19:23 +0000</pubDate>
+      <pubDate>Mon, 06 Jul 2026 15:08:10 +0000</pubDate>
+    </item>
+    <item>
+      <title>AI safety non-profit Resolution launches with a $160 million grant led by UK AISI Chief Scientist Geoffrey Irving</title>
+      <link>https://jobs.ashbyhq.com/resolution/65704205-7ccd-4df6-a7d1-3e3338bd80a8</link>
+      <description>The core funding includes $52 million tied to hiring milestones.</description>
+      <content:encoded>&lt;p&gt;The core funding includes $52 million tied to hiring milestones.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://jobs.ashbyhq.com/resolution/65704205-7ccd-4df6-a7d1-3e3338bd80a8"&gt;https://jobs.ashbyhq.com/resolution/65704205-7ccd-4df6-a7d1-3e3338bd80a8&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/gq7ez3i9"&gt;https://digg.com/tech/gq7ez3i9&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 135,247&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 979&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 194&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 27&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 31&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 24&lt;/li&gt;&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/Miles_Brundage"&gt;Miles Brundage&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/DavidSKrueger"&gt;David Krueger 🦥 ⏸️ ⏹️ ⏪&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/BlackHC"&gt;Andreas Kirsch 🇺🇦&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/geoffreyirving"&gt;Geoffrey Irving&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/aran_nayebi"&gt;Aran Nayebi&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+&lt;blockquote&gt;We founded @resolution_org (formerly Sequent) because we think humanity is not on track to align superintelligence (ASI) in time. To clear a higher bar, we&amp;#x27;re betting that theory, combined with automation, buys AI safety a better chance to &amp;quot;catch up.&amp;quot;&lt;/blockquote&gt;</content:encoded>
+      <guid isPermaLink="false">0e146674-c16e-4bab-8ea2-b45afcefed0f</guid>
+      <category>Digg AI from X</category>
+      <pubDate>Mon, 06 Jul 2026 14:27:02 +0000</pubDate>
+    </item>
+    <item>
+      <title>OpenAI sets July 10 application deadline for DevDay 2026 in San Francisco</title>
+      <link>https://devday.openai.com/</link>
+      <description>The September 29 event features technical sessions and unannounced tool showcases</description>
+      <content:encoded>&lt;p&gt;The September 29 event features technical sessions and unannounced tool showcases&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://devday.openai.com/"&gt;https://devday.openai.com/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/5z5yl7vu"&gt;https://digg.com/tech/5z5yl7vu&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 608,770&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 4,714&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 421&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 28&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 188&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 7&lt;/li&gt;&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/tunguz"&gt;Bojan Tunguz&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/thsottiaux"&gt;Tibo&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/romainhuet"&gt;Romain Huet&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/altryne"&gt;Alex Volkov @ AI Engineer&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/_chenglou"&gt;Cheng Lou&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+&lt;blockquote&gt;Closing this week. Much of the teams building ChatGPT, Codex and OpenClaw will be there and we&amp;#x27;ll have a few surprises for folks. Hope to see many of you 👀&lt;/blockquote&gt;</content:encoded>
+      <guid isPermaLink="false">01acede3-37b1-4338-bbaa-99c8d3e9d8e1</guid>
+      <category>Digg AI from X</category>
+      <pubDate>Mon, 06 Jul 2026 17:16:20 +0000</pubDate>
+    </item>
+    <item>
+      <title>r/LocalLLaMA analysis tracks a 25-month average lag for frontier AI capabilities to run locally on consumer hardware</title>
+      <link>https://www.reddit.com/r/LocalLLaMA/comments/1uoij3s/if_trends_hold_mythosclass_capability_may_be/</link>
+      <description>The delay dropped to 17 months for GPT-3.5-class local models.</description>
+      <content:encoded>&lt;p&gt;The delay dropped to 17 months for GPT-3.5-class local models.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://www.reddit.com/r/LocalLLaMA/comments/1uoij3s/if_trends_hold_mythosclass_capability_may_be/"&gt;https://www.reddit.com/r/LocalLLaMA/comments/1uoij3s/if_trends_hold_mythosclass_capability_may_be/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/wpkb9uqk"&gt;https://digg.com/tech/wpkb9uqk&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 232,769&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 2,713&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 714&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 51&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 204&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 6&lt;/li&gt;&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/GaryMarcus"&gt;Gary Marcus&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/DynamicWebPaige"&gt;👩‍💻 Paige Bailey&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/beffjezos"&gt;Beff (e/acc)&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/rohanpaul_ai"&gt;Rohan Paul&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/kimmonismus"&gt;Chubby♨️&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+&lt;blockquote&gt;This is going to be the point where intelligence will be truly decentralized&lt;/blockquote&gt;</content:encoded>
+      <guid isPermaLink="false">cae9dadc-5df0-4c52-9b7e-f4b9196ec3d8</guid>
+      <category>Digg AI from X</category>
+      <pubDate>Mon, 06 Jul 2026 10:35:56 +0000</pubDate>
     </item>
     <item>
       <title>Anthropic signs 20-year, $19 billion lease with TeraWulf for a 401 MW AI data center in Kentucky</title>
@@ -60,102 +127,26 @@
       <content:encoded>&lt;p&gt;The facility is scheduled to deliver initial capacity by late 2027.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://x.com/Techmeme/status/2074107474261807577"&gt;https://x.com/Techmeme/status/2074107474261807577&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/c95kjnw8"&gt;https://digg.com/tech/c95kjnw8&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Anthropic is committing to a purpose-built 401 MW AI campus on a former aluminum smelter site in Hawesville, Kentucky, under a twenty-year lease expected to deliver roughly $19 billion in revenue to TeraWulf, with the first phase of power scheduled to come online in the second half of 2027 and full scale targeted for early 2028. 20 335 12 55 45.6K ZE TM KA SZ #84&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 51,106&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 359&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 60&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 5&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 17&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 4&lt;/li&gt;&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/suchenzang"&gt;Susan Zhang&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/yacineMTB"&gt;kache&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/iScienceLuvr"&gt;Tanishq Mathew Abraham, Ph.D.&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/zephyr_z9"&gt;Zephyr&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
-&lt;blockquote&gt;LFG!!! WOOF WOOF&lt;/blockquote&gt;</content:encoded>
+&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 155,699&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 1,038&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 126&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 6&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 46&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 8&lt;/li&gt;&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/suchenzang"&gt;Susan Zhang&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/_arohan_"&gt;rohan anil&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/yacineMTB"&gt;kache&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/willccbb"&gt;will brown&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/iScienceLuvr"&gt;Tanishq Mathew Abraham, Ph.D.&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+&lt;blockquote&gt;Does Anthropic... have long timelines???&lt;/blockquote&gt;</content:encoded>
       <guid isPermaLink="false">c611a685-d741-4c73-a9b5-cd684e5b4d57</guid>
       <category>Digg AI from X</category>
-      <pubDate>Mon, 06 Jul 2026 12:43:04 +0000</pubDate>
+      <pubDate>Mon, 06 Jul 2026 12:54:03 +0000</pubDate>
     </item>
     <item>
-      <title>Google Gemma 4 persistently denies running locally until instructed to check Wikipedia</title>
-      <link>https://x.com/Strife212/status/2073815736925966675</link>
-      <description>Commentator Teortaxes attributes the behavior to contaminated fine-tuning data</description>
-      <content:encoded>&lt;p&gt;Commentator Teortaxes attributes the behavior to contaminated fine-tuning data&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://x.com/Strife212/status/2073815736925966675"&gt;https://x.com/Strife212/status/2073815736925966675&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/d3t79pbt"&gt;https://digg.com/tech/d3t79pbt&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;A user trying to run Gemma 4 locally faced fifteen minutes of flat denial that the model could possibly operate on their hardware, with photos of task manager and GPU packaging dismissed as fabrications. Only after being directed to Wikipedia did the model accept the situation and back down. The episode remains an isolated anecdote without confirmed reproducibility or details on the exact variant involved. 12 169 4 28 14.8K XL T( KA LB #72&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 15,801&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 185&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 31&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 13&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 4&lt;/li&gt;&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/giffmana"&gt;Lucas Beyer (bl16)&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/yacineMTB"&gt;kache&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/teortaxesTex"&gt;Teortaxes▶️ (DeepSeek 推特🐋铁粉 2023 – ∞)&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/xlr8harder"&gt;xlr8harder&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
-&lt;blockquote&gt;what it feels like waking up from a nap that you planned to be 30 minutes after 5 hours and its dark out&lt;/blockquote&gt;</content:encoded>
-      <guid isPermaLink="false">71e76354-fe51-4976-ab89-bd0fdea62649</guid>
+      <title>Paul Graham and researcher Alex Imas argue future AI models will run locally on phones within five years</title>
+      <link>https://gwern.net/scaling-hypothesis</link>
+      <description>The projection follows rapid capability gains seen from GPT-3 to Fable.</description>
+      <content:encoded>&lt;p&gt;The projection follows rapid capability gains seen from GPT-3 to Fable.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://gwern.net/scaling-hypothesis"&gt;https://gwern.net/scaling-hypothesis&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/e86zm3cj"&gt;https://digg.com/tech/e86zm3cj&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 322,516&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 2,928&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 344&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 30&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 189&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 7&lt;/li&gt;&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/paulg"&gt;Paul Graham&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/_sholtodouglas"&gt;Sholto Douglas&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/krishnanrohit"&gt;rohit&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+&lt;blockquote&gt;And are run locally on your phone.&lt;/blockquote&gt;</content:encoded>
+      <guid isPermaLink="false">324ab08d-5f54-4457-94e6-b1513828ab86</guid>
       <category>Digg AI from X</category>
-      <pubDate>Mon, 06 Jul 2026 09:06:02 +0000</pubDate>
-    </item>
-    <item>
-      <title>OpenAI plans to launch GPT-5.6 Sol on Cerebras hardware in July with speeds up to 750 tokens per second</title>
-      <link>https://x.com/bleysg/status/2073937651150029084</link>
-      <description>The model reportedly features 3 trillion total parameters across-layer parameters.</description>
-      <content:encoded>&lt;p&gt;The model reportedly features 3 trillion total parameters across-layer parameters.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://x.com/bleysg/status/2073937651150029084"&gt;https://x.com/bleysg/status/2073937651150029084&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/fgsayjfl"&gt;https://digg.com/tech/fgsayjfl&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;OpenAI is deploying its new GPT-5.6 Sol model on Cerebras wafer-scale hardware, targeting up to 750 tokens per second during a July rollout that the company frames as frontier capability delivered at unusual speed, though the run stays confined to a small set of invited partners. 84 1.5K 64 268 140K CH LA #1218&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 142,974&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 1,571&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 271&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 16&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 69&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 3&lt;/li&gt;&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/scaling01"&gt;Lisan al Gaib&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/kimmonismus"&gt;Chubby♨️&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
-&lt;blockquote&gt;good estimate for GPT-5.6-sol&lt;/blockquote&gt;</content:encoded>
-      <guid isPermaLink="false">4933b773-f080-489e-b4bf-859e5d1c7081</guid>
-      <category>Digg AI from X</category>
-      <pubDate>Mon, 06 Jul 2026 07:39:47 +0000</pubDate>
-    </item>
-    <item>
-      <title>UBS forecasts Samsung's operating profit to reach $588.9 billion and SK hynix to hit $435.5 billion by 2028</title>
-      <link>https://x.com/jukan05/status/2074076888268697825</link>
-      <description>The projected profit growth is driven by surging AI hardware demand.</description>
-      <content:encoded>&lt;p&gt;The projected profit growth is driven by surging AI hardware demand.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://x.com/jukan05/status/2074076888268697825"&gt;https://x.com/jukan05/status/2074076888268697825&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/4z4zahu5"&gt;https://digg.com/tech/4z4zahu5&lt;/a&gt;&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 58,198&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 375&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 102&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 3&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 11&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 2&lt;/li&gt;&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/zephyr_z9"&gt;Zephyr&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/menhguin"&gt;Minh Nhat Nguyen&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
-&lt;blockquote&gt;@zephyr_z9&lt;/blockquote&gt;</content:encoded>
-      <guid isPermaLink="false">d5fae5e0-d9e9-4451-85ea-a0a9ee34bfe2</guid>
-      <category>Digg AI from X</category>
-      <pubDate>Mon, 06 Jul 2026 11:23:38 +0000</pubDate>
-    </item>
-    <item>
-      <title>Google DeepMind's Shane Gu co-organizes inaugural ICML workshop to shift RL paradigms toward real-world feedback</title>
-      <link>https://sites.google.com/view/rlxf-icml2026</link>
-      <description>The July 2026 event focuses on reinforcement learning scaling and self-improvement.</description>
-      <content:encoded>&lt;p&gt;The July 2026 event focuses on reinforcement learning scaling and self-improvement.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://sites.google.com/view/rlxf-icml2026"&gt;https://sites.google.com/view/rlxf-icml2026&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/adkkziij"&gt;https://digg.com/tech/adkkziij&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Shane Gu from Google DeepMind is co-organizing the first ICML workshop pushing reinforcement learning to treat measurable real-world outcomes like efficiency, safety, or economic results as primary training signals instead of defaulting to human preference data. The July 10 2026 event in Seoul&amp;#x27;s Grand Ballroom draws researchers focused on scaling, continual learning, and recursive self-improvement through these grounded signals. 7 101 14 29 6.6K AA SG #58&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 8,172&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 112&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 37&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 1&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 6&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 6&lt;/li&gt;&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/shaneguML"&gt;Shane Gu&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/AkariAsai"&gt;Akari Asai&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
-&lt;blockquote&gt;workshop:&lt;/blockquote&gt;</content:encoded>
-      <guid isPermaLink="false">51a8e6ae-e924-431d-871b-173a8e46b55f</guid>
-      <category>Digg AI from X</category>
-      <pubDate>Mon, 06 Jul 2026 13:44:51 +0000</pubDate>
-    </item>
-    <item>
-      <title>Microsoft plans to lay off 4,800 employees in broader company pivot to refocus its investments</title>
-      <link>https://x.com/wallstengine/status/2074124340749303826</link>
-      <description>The workforce reductions will primarily impact Xbox and gaming divisions.</description>
-      <content:encoded>&lt;p&gt;The workforce reductions will primarily impact Xbox and gaming divisions.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://x.com/wallstengine/status/2074124340749303826"&gt;https://x.com/wallstengine/status/2074124340749303826&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/ecttwnq3"&gt;https://digg.com/tech/ecttwnq3&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Microsoft is cutting around 4,800 roles, or 2.1 percent of its global workforce, to align people and spending with shifting business priorities in a fast-changing industry, with the reductions centered on the Commercial Business and Xbox organizations. 36 475 20 21 45.4K&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 51,539&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 543&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 22&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 4&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 35&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 5&lt;/li&gt;&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/AndrewCurran_"&gt;Andrew Curran&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/zephyr_z9"&gt;Zephyr&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
-&lt;blockquote&gt;Sad to see Xbox getting gutted 😢&lt;/blockquote&gt;</content:encoded>
-      <guid isPermaLink="false">30ab1cb8-2aa4-4750-bc18-17ed096c6c6c</guid>
-      <category>Digg AI from X</category>
-      <pubDate>Mon, 06 Jul 2026 13:52:40 +0000</pubDate>
-    </item>
-    <item>
-      <title>Entropix creator @_xjdr says relying on AI coding tools boosted productivity but depleted their executive function</title>
-      <link>http://code.noumena.com</link>
-      <description>The developer is building Noumena Code to address this cognitive burnout.</description>
-      <content:encoded>&lt;p&gt;The developer is building Noumena Code to address this cognitive burnout.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="http://code.noumena.com"&gt;http://code.noumena.com&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/x6sfs0wy"&gt;https://digg.com/tech/x6sfs0wy&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;The creator behind Entropix describes how heavy use of AI coding assistants accelerated output yet eroded focus and decision-making stamina, leading directly to the launch of Noumena Code as a dedicated workspace for handling multiple agents without losing oversight. 5 193 4 77 12.2K XL XJ #831&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 12,526&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 197&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 79&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 1&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 4&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 2&lt;/li&gt;&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/_xjdr"&gt;xjdr&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/xlr8harder"&gt;xlr8harder&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
-&lt;blockquote&gt;I have some thoughts on this to share soon, but the short of it is that executive function is now a limiting factor for many people who never had that issue before. Good news, some of us got a lifelong head start and already developed some useful coping strategies.&lt;/blockquote&gt;</content:encoded>
-      <guid isPermaLink="false">1ff7ce02-8b35-468a-bedd-ee58aaa666db</guid>
-      <category>Digg AI from X</category>
-      <pubDate>Mon, 06 Jul 2026 07:30:12 +0000</pubDate>
+      <pubDate>Mon, 06 Jul 2026 19:36:15 +0000</pubDate>
     </item>
   </channel>
 </rss>
