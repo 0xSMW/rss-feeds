@@ -7,146 +7,146 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 08 Jul 2026 01:56:20 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 08 Jul 2026 13:46:06 +0000</lastBuildDate>
     <item>
-      <title>Alexandr Wang, Chief AI Officer at Meta, releases Muse Image to generate complex visuals via agentic pre-planning</title>
-      <link>https://ai.meta.com/blog/introducing-muse-image-muse-video-msl/</link>
-      <description>The model is live alongside an early preview of Muse Video.</description>
-      <content:encoded>&lt;p&gt;The model is live alongside an early preview of Muse Video.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://ai.meta.com/blog/introducing-muse-image-muse-video-msl/"&gt;https://ai.meta.com/blog/introducing-muse-image-muse-video-msl/&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/6pkk4onj"&gt;https://digg.com/tech/6pkk4onj&lt;/a&gt;&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 826,638&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 5,004&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 816&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 169&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 308&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 76&lt;/li&gt;&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/giffmana"&gt;Lucas Beyer (bl16)&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/alexandr_wang"&gt;Alexandr Wang&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/shengjia_zhao"&gt;Shengjia Zhao&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/WenhuChen"&gt;Wenhu Chen&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/DynamicWebPaige"&gt;👩‍💻 Paige Bailey&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
-&lt;blockquote&gt;2/ three things i&amp;#x27;m excited about under the hood: - self-refinement (model improves its own output within its chain of thought — emerged during RL, not by design) - multi-reference composition (many images blended into one coherent generation) - multi-turn editing (iterate without losing coherence or starting over).&lt;/blockquote&gt;</content:encoded>
-      <guid isPermaLink="false">d5a6aad8-9398-459c-a8b9-4392b991f988</guid>
+      <title>OpenAI will launch GPT-5.6 Sol, Terra, and Luna models publicly this Thursday</title>
+      <link>https://cryptobriefing.com/openai-to-launch-gpt-56-sol-terra-luna-models-globally-this-thursday/</link>
+      <description>Early testers report major improvements in math and coding.</description>
+      <content:encoded>&lt;p&gt;Early testers report major improvements in math and coding.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://cryptobriefing.com/openai-to-launch-gpt-56-sol-terra-luna-models-globally-this-thursday/"&gt;https://cryptobriefing.com/openai-to-launch-gpt-56-sol-terra-luna-models-globally-this-thursday/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/65f5lo27"&gt;https://digg.com/tech/65f5lo27&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 47,943&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 1,002&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 46&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 4&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 67&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 7&lt;/li&gt;&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/SebastienBubeck"&gt;Sebastien Bubeck&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/BorisMPower"&gt;Boris Power&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/yacineMTB"&gt;kache&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/scaling01"&gt;Lisan al Gaib&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/altryne"&gt;Alex Volkov @ AI Engineer&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+&lt;blockquote&gt;&amp;quot;I haven’t needed to check the code I’ve written in two months&amp;quot; looks like OpenAI had the model for a while&lt;/blockquote&gt;</content:encoded>
+      <guid isPermaLink="false">e7f49aa2-86cf-41e9-86f3-8fc71b28c52a</guid>
       <category>Digg AI from X</category>
-      <pubDate>Tue, 07 Jul 2026 18:18:31 +0000</pubDate>
+      <pubDate>Wed, 08 Jul 2026 10:14:25 +0000</pubDate>
     </item>
     <item>
-      <title>Anthropic extends Claude Fable 5 access for all paid subscribers through July 12</title>
-      <link>https://www.anthropic.com/news/claude-fable-5-mythos-5</link>
-      <description>The extension applies automatically across all paid subscription tiers.</description>
-      <content:encoded>&lt;p&gt;The extension applies automatically across all paid subscription tiers.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://www.anthropic.com/news/claude-fable-5-mythos-5"&gt;https://www.anthropic.com/news/claude-fable-5-mythos-5&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/zkz3deef"&gt;https://digg.com/tech/zkz3deef&lt;/a&gt;&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 760,630&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 11,357&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 555&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 39&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 581&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 28&lt;/li&gt;&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/deliprao"&gt;Delip Rao e/σ&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/simonw"&gt;Simon Willison&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/Yuchenj_UW"&gt;Yuchen Jin&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/tunguz"&gt;Bojan Tunguz&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/levelsio"&gt;@levelsio&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
-&lt;blockquote&gt;ONE MORE WEEK TO ESCAPE THE UNDERCLASS&lt;/blockquote&gt;</content:encoded>
-      <guid isPermaLink="false">61ed9b6b-fccb-4834-9109-f27069e3418a</guid>
+      <title>Chinese AI startup MiniMax plans to open-source a 2.7 trillion-parameter model named M3 Pro in Q3</title>
+      <link>https://www.theinformation.com/briefings/exclusive-chinas-minimax-plans-launch-2-7-trillion-parameter-model?rc=bfliih</link>
+      <description>The upcoming release was originally reported by The Information.</description>
+      <content:encoded>&lt;p&gt;The upcoming release was originally reported by The Information.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://www.theinformation.com/briefings/exclusive-chinas-minimax-plans-launch-2-7-trillion-parameter-model?rc=bfliih"&gt;https://www.theinformation.com/briefings/exclusive-chinas-minimax-plans-launch-2-7-trillion-parameter-model?rc=bfliih&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/pxtj76la"&gt;https://digg.com/tech/pxtj76la&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 94,148&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 1,189&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 161&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 15&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 78&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 6&lt;/li&gt;&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/teortaxesTex"&gt;Teortaxes▶️ (DeepSeek 推特🐋铁粉 2023 – ∞)&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/scaling01"&gt;Lisan al Gaib&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/kimmonismus"&gt;Chubby♨️&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/zephyr_z9"&gt;Zephyr&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+&lt;blockquote&gt;Huge: China’s MiniMax Plans to Launch 2.7-Trillion Parameter Model (MiniMax Pro) tl;dr MiniMax is preparing a 2.7T parameter open-source model, potentially launching as early as Q3. That would make it far larger than any Chinese model currently on the market, and over 6x bigger than MiniMax’s current M3 model. China’s open-source AI wave is not slowing down. Looks like they just started. Via The Information&lt;/blockquote&gt;</content:encoded>
+      <guid isPermaLink="false">de1f2887-efbd-499a-b2b5-74a55cb5d378</guid>
       <category>Digg AI from X</category>
-      <pubDate>Tue, 07 Jul 2026 17:51:11 +0000</pubDate>
+      <pubDate>Wed, 08 Jul 2026 10:35:02 +0000</pubDate>
     </item>
     <item>
-      <title>Princeton's Sayash Kapoor will join the UC Berkeley School of Information as an Assistant Professor in 2027</title>
-      <link>https://cruxevals.com/</link>
-      <description>He is recruiting PhD students focused on frontier AI evaluation</description>
-      <content:encoded>&lt;p&gt;He is recruiting PhD students focused on frontier AI evaluation&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://cruxevals.com/"&gt;https://cruxevals.com/&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/xink08p5"&gt;https://digg.com/tech/xink08p5&lt;/a&gt;&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 100,338&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 865&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 154&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 10&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 116&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 35&lt;/li&gt;&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/prfsanjeevarora"&gt;Sanjeev Arora&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/Diyi_Yang"&gt;Diyi Yang&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/random_walker"&gt;Arvind Narayanan&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/RishiBommasani"&gt;rishi @ ICML&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/niloofar_mire"&gt;Niloofar ✈️ icml&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
-&lt;blockquote&gt;Congratulations @sayashk !&lt;/blockquote&gt;</content:encoded>
-      <guid isPermaLink="false">308d0bc1-a048-41ca-94b1-daead90cc04b</guid>
+      <title>Albert Gu teases a late-night ICML after-party hosted by AI voice startup Cartesia</title>
+      <link>https://luma.com/gy1b4ryq</link>
+      <description>The social event is scheduled for Thursday night during the conference.</description>
+      <content:encoded>&lt;p&gt;The social event is scheduled for Thursday night during the conference.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://luma.com/gy1b4ryq"&gt;https://luma.com/gy1b4ryq&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/w8yyonr6"&gt;https://digg.com/tech/w8yyonr6&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 15,725&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 97&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 14&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 5&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 6&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 4&lt;/li&gt;&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/yisongyue"&gt;Yisong Yue&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/_albertgu"&gt;Albert Gu&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/iScienceLuvr"&gt;Tanishq, Ph.D. at ICML&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/nanjiang_cs"&gt;Nan Jiang&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+&lt;blockquote&gt;Be there or be cubic.&lt;/blockquote&gt;</content:encoded>
+      <guid isPermaLink="false">a8a5b6a7-954a-4042-b158-de7d6fd36355</guid>
       <category>Digg AI from X</category>
-      <pubDate>Tue, 07 Jul 2026 12:45:19 +0000</pubDate>
+      <pubDate>Wed, 08 Jul 2026 07:24:58 +0000</pubDate>
     </item>
     <item>
-      <title>OpenAI chief futurist Joshua Achiam departs the company after seven years</title>
-      <link>https://www.wired.com/story/openai-chief-futurist-joshua-achiam-is-leaving-the-company/</link>
-      <description>He plans to work on safe AGI outside frontier labs</description>
-      <content:encoded>&lt;p&gt;He plans to work on safe AGI outside frontier labs&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://www.wired.com/story/openai-chief-futurist-joshua-achiam-is-leaving-the-company/"&gt;https://www.wired.com/story/openai-chief-futurist-joshua-achiam-is-leaving-the-company/&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/wantjtpb"&gt;https://digg.com/tech/wantjtpb&lt;/a&gt;&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 233,649&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 1,975&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 273&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 27&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 140&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 30&lt;/li&gt;&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/tszzl"&gt;roon&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/OfficialLoganK"&gt;Logan Kilpatrick&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/jachiam0"&gt;Joshua Achiam&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/kevinweil"&gt;Kevin Weil 🇺🇸&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/karinanguyen"&gt;Karina&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
-&lt;blockquote&gt;Let&amp;#x27;s hope he&amp;#x27;s right.&lt;/blockquote&gt;</content:encoded>
-      <guid isPermaLink="false">5b742b9d-bebe-48e3-8476-b3a9eb4fe786</guid>
+      <title>Twitter co-founder Jack Dorsey argues the optimal workflow for modern content production is ai-fed, human-finished</title>
+      <link>https://fedresources.com/the-human-ai-handshake-redesigning-workflows-for-2026/</link>
+      <description>Investor Jason Calacanis supported the view as directionally correct.</description>
+      <content:encoded>&lt;p&gt;Investor Jason Calacanis supported the view as directionally correct.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://fedresources.com/the-human-ai-handshake-redesigning-workflows-for-2026/"&gt;https://fedresources.com/the-human-ai-handshake-redesigning-workflows-for-2026/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/jd7kzup0"&gt;https://digg.com/tech/jd7kzup0&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 206,754&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 2,281&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 203&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 68&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 408&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 2&lt;/li&gt;&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/jack"&gt;jack&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/Jason"&gt;@jason&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+&lt;blockquote&gt;@jack @Marell_Evans Feels directionally correct&lt;/blockquote&gt;</content:encoded>
+      <guid isPermaLink="false">a62ee5cc-6350-4db2-be36-326c60095c79</guid>
       <category>Digg AI from X</category>
-      <pubDate>Tue, 07 Jul 2026 21:36:41 +0000</pubDate>
+      <pubDate>Wed, 08 Jul 2026 10:58:44 +0000</pubDate>
     </item>
     <item>
-      <title>China considers restricting foreign access to domestic frontier AI models from Alibaba and ByteDance</title>
-      <link>https://www.reuters.com/world/beijing-is-looking-curbing-overseas-access-chinas-top-ai-models-sources-say-2026-07-07/</link>
-      <description>The proposed rules mirror US export controls on critical technology.</description>
-      <content:encoded>&lt;p&gt;The proposed rules mirror US export controls on critical technology.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://www.reuters.com/world/beijing-is-looking-curbing-overseas-access-chinas-top-ai-models-sources-say-2026-07-07/"&gt;https://www.reuters.com/world/beijing-is-looking-curbing-overseas-access-chinas-top-ai-models-sources-say-2026-07-07/&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/nk2jm6dw"&gt;https://digg.com/tech/nk2jm6dw&lt;/a&gt;&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 458,011&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 2,649&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 485&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 70&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 303&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 24&lt;/li&gt;&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/vkhosla"&gt;Vinod Khosla&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/EMostaque"&gt;Emad&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/emollick"&gt;Ethan Mollick&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/nathanbenaich"&gt;Nathan Benaich&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/yacineMTB"&gt;kache&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
-&lt;blockquote&gt;$39&lt;/blockquote&gt;</content:encoded>
-      <guid isPermaLink="false">61cc3ee0-388f-4886-8323-11edf119dfc2</guid>
+      <title>SemiAnalysis projects Anthropic will reach $1 billion in quarterly profit and process 13 quadrillion monthly tokens by late 2026</title>
+      <link>https://newsletter.semianalysis.com/p/anthropic-3q26-profit-over-1b-the</link>
+      <description>The firm's financial model suggests Anthropic could reach a $6 trillion valuation.</description>
+      <content:encoded>&lt;p&gt;The firm&amp;#x27;s financial model suggests Anthropic could reach a $6 trillion valuation.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://newsletter.semianalysis.com/p/anthropic-3q26-profit-over-1b-the"&gt;https://newsletter.semianalysis.com/p/anthropic-3q26-profit-over-1b-the&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/ts9o7y5r"&gt;https://digg.com/tech/ts9o7y5r&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 107,610&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 594&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 230&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 8&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 31&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 5&lt;/li&gt;&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/scaling01"&gt;Lisan al Gaib&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/zephyr_z9"&gt;Zephyr&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+&lt;blockquote&gt;https://newsletter.semianalysis.com/p/anthropic-3q26-profit-over-1b-the&lt;/blockquote&gt;</content:encoded>
+      <guid isPermaLink="false">8aa1dc59-d133-4243-a92d-dad799ce4065</guid>
       <category>Digg AI from X</category>
-      <pubDate>Tue, 07 Jul 2026 12:24:02 +0000</pubDate>
+      <pubDate>Wed, 08 Jul 2026 07:35:20 +0000</pubDate>
     </item>
     <item>
-      <title>Cloudflare opens waitlist for Monetization Gateway to charge for APIs, datasets, and MCP tools using stablecoins</title>
-      <link>https://cfl.re/4eUFdt6</link>
-      <description>The service processes payments over the open x402 protocol.</description>
-      <content:encoded>&lt;p&gt;The service processes payments over the open x402 protocol.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://cfl.re/4eUFdt6"&gt;https://cfl.re/4eUFdt6&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/ns8t0dzg"&gt;https://digg.com/tech/ns8t0dzg&lt;/a&gt;&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 1,052,971&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 5,088&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 1,684&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 32&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 177&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 11&lt;/li&gt;&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/brian_armstrong"&gt;Brian Armstrong&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/signulll"&gt;signüll&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/xuanalogue"&gt;xuan (ɕɥɛn / sh-yen)&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/eastdakota"&gt;Matthew Prince 🌥&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/rohanpaul_ai"&gt;Rohan Paul&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
-&lt;blockquote&gt;Finally, the web has native monetization. Ads were not the only way.&lt;/blockquote&gt;</content:encoded>
-      <guid isPermaLink="false">b4764993-05fa-4640-a42c-a0794036c009</guid>
+      <title>Cloudflare CEO Matthew Prince steps in to resolve account email limit for Nomad List founder Pieter Levels</title>
+      <link>https://x.com/levelsio/status/2074809093030609356/photo/1</link>
+      <description>Prince personally lifted the system-wide sending limit for Levels.</description>
+      <content:encoded>&lt;p&gt;Prince personally lifted the system-wide sending limit for Levels.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://x.com/levelsio/status/2074809093030609356/photo/1"&gt;https://x.com/levelsio/status/2074809093030609356/photo/1&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/gwekiig0"&gt;https://digg.com/tech/gwekiig0&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 78,944&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 602&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 104&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 4&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 126&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 2&lt;/li&gt;&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/levelsio"&gt;@levelsio&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/eastdakota"&gt;Matthew Prince 🌥&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+&lt;blockquote&gt;@levelsio @Cloudflare I just want to nitpick, 10000/10000 is not OVER quota&lt;/blockquote&gt;</content:encoded>
+      <guid isPermaLink="false">08821707-ef1f-4fcd-be05-fbcfa9c014a9</guid>
       <category>Digg AI from X</category>
-      <pubDate>Tue, 07 Jul 2026 07:53:09 +0000</pubDate>
+      <pubDate>Wed, 08 Jul 2026 11:08:21 +0000</pubDate>
     </item>
     <item>
-      <title>Google DeepMind releases Gemma 4 technical report, detailing multimodal open models up to 31B parameters</title>
-      <link>http://huggingface.co/papers/2607.02770</link>
-      <description>The 12B variant uses an encoder-free architecture for raw audio.</description>
-      <content:encoded>&lt;p&gt;The 12B variant uses an encoder-free architecture for raw audio.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="http://huggingface.co/papers/2607.02770"&gt;http://huggingface.co/papers/2607.02770&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/0xnizees"&gt;https://digg.com/tech/0xnizees&lt;/a&gt;&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 136,288&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 1,646&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 654&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 13&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 58&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 16&lt;/li&gt;&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/_akhaliq"&gt;AK&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/teortaxesTex"&gt;Teortaxes▶️ (DeepSeek 推特🐋铁粉 2023 – ∞)&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/PetarV_93"&gt;Petar Veličković&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/osanseviero"&gt;Omar Sanseviero 🇫🇷 @RAISE Paris&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/mblondel_ml"&gt;Mathieu Blondel&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
-&lt;blockquote&gt;seems like gemma 4 was trained on MUCH more tokens than the previous iteration&lt;/blockquote&gt;</content:encoded>
-      <guid isPermaLink="false">2fdd1a59-7e75-4551-a451-882fcbefa27f</guid>
+      <title>Brad Gerstner says enterprise buyers are shifting budget to closed-source frontier models over maintaining multi-model optionality</title>
+      <link>https://x.com/ayus_h/status/2074740322106749000</link>
+      <description>Frontier labs build lock-in using proprietary memory and reasoning layers</description>
+      <content:encoded>&lt;p&gt;Frontier labs build lock-in using proprietary memory and reasoning layers&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://x.com/ayus_h/status/2074740322106749000"&gt;https://x.com/ayus_h/status/2074740322106749000&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/gw3h6qbz"&gt;https://digg.com/tech/gw3h6qbz&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 38,558&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 103&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 39&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 2&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 17&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 3&lt;/li&gt;&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/altcap"&gt;Brad Gerstner&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/nikesharora"&gt;Nikesh Arora&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+&lt;blockquote&gt;@nikesharora Percentage share of wallet / dollars is going up at closed source / frontier models over last 6 months. Decision makers are saying with their choices that the advantages accruing to a single model outweigh the downside of being single threaded for now. 🧐🧐&lt;/blockquote&gt;</content:encoded>
+      <guid isPermaLink="false">b95d6079-2807-4f31-a0d4-dc230105987a</guid>
       <category>Digg AI from X</category>
-      <pubDate>Tue, 07 Jul 2026 10:23:31 +0000</pubDate>
+      <pubDate>Wed, 08 Jul 2026 10:35:02 +0000</pubDate>
     </item>
     <item>
-      <title>DeepSeek is developing a custom inference chip to reduce its reliance on Nvidia and Huawei hardware</title>
-      <link>https://www.reuters.com/world/china/chinas-deepseek-developing-its-own-ai-chip-sources-say-2026-07-07/</link>
-      <description>The company's founder Liang Wenfeng has resumed hiring chip-design engineers.</description>
-      <content:encoded>&lt;p&gt;The company&amp;#x27;s founder Liang Wenfeng has resumed hiring chip-design engineers.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://www.reuters.com/world/china/chinas-deepseek-developing-its-own-ai-chip-sources-say-2026-07-07/"&gt;https://www.reuters.com/world/china/chinas-deepseek-developing-its-own-ai-chip-sources-say-2026-07-07/&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/t0t51kda"&gt;https://digg.com/tech/t0t51kda&lt;/a&gt;&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 386,101&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 2,161&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 289&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 22&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 100&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 17&lt;/li&gt;&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/yacineMTB"&gt;kache&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/teortaxesTex"&gt;Teortaxes▶️ (DeepSeek 推特🐋铁粉 2023 – ∞)&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/iScienceLuvr"&gt;Tanishq, Ph.D. at ICML&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/AndrewCurran_"&gt;Andrew Curran&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/chris_j_paxton"&gt;Chris Paxton&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
-&lt;blockquote&gt;turns out he was right&lt;/blockquote&gt;</content:encoded>
-      <guid isPermaLink="false">6846f6d2-4530-4eac-8b0f-fa15df090697</guid>
+      <title>ZML AI open-sources LLMD, an inference server that streams weights directly from Hugging Face without local storage</title>
+      <link>https://ai.meta.com/blog/llama-4-multimodal-intelligence/</link>
+      <description>The production stack supports NVIDIA, AMD, and TPU hardware.</description>
+      <content:encoded>&lt;p&gt;The production stack supports NVIDIA, AMD, and TPU hardware.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://ai.meta.com/blog/llama-4-multimodal-intelligence/"&gt;https://ai.meta.com/blog/llama-4-multimodal-intelligence/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/rsk9vrjo"&gt;https://digg.com/tech/rsk9vrjo&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 6,949&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 21&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 6&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 5&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 3&lt;/li&gt;&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/ylecun"&gt;Yann LeCun&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/julien_c"&gt;Julien Chaumond&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+&lt;blockquote&gt;Congrats to the @zml_ai team on the release of LLMD One thing I absolutely love is that the model layers are loaded directly from the network (from @huggingface OFC), in streaming mode (no local file) which makes a lot of sense for production deployment&lt;/blockquote&gt;</content:encoded>
+      <guid isPermaLink="false">b186a8ce-b80e-423b-9d64-aecd0122b6f3</guid>
       <category>Digg AI from X</category>
-      <pubDate>Tue, 07 Jul 2026 10:52:58 +0000</pubDate>
+      <pubDate>Wed, 08 Jul 2026 09:07:43 +0000</pubDate>
     </item>
     <item>
-      <title>Patrick O'Shaughnessy releases second Invest Like the Best podcast with Jeremy Giffon, covering Silicon Valley culture and private markets</title>
-      <link>http://giffonsimulator.com</link>
-      <description>The episode analyzes private market trends and secret Silicon Valley philosophies.</description>
-      <content:encoded>&lt;p&gt;The episode analyzes private market trends and secret Silicon Valley philosophies.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="http://giffonsimulator.com"&gt;http://giffonsimulator.com&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/3s84zi7k"&gt;https://digg.com/tech/3s84zi7k&lt;/a&gt;&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 756,156&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 1,073&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 1,776&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 38&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 56&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 8&lt;/li&gt;&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/sriramk"&gt;Sriram Krishnan&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/johncoogan"&gt;John Coogan&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/WillManidis"&gt;Will Manidis&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/patrick_oshag"&gt;Patrick OShaughnessy&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/herbiebradley"&gt;Herbie Bradley&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
-&lt;blockquote&gt;many will post today about Jeremy’s obvious traits- possibly the posting run known in history, octaves outperformance not nearly enough will get to know about what an incredible friend is, his incredible willingness to pick up the phone in the hardest moments, his sincerity&lt;/blockquote&gt;</content:encoded>
-      <guid isPermaLink="false">34aca2d4-0ad8-4b09-8913-98696947d721</guid>
+      <title>AI developer Teortaxes probes Claude-fable-5 on OpenRouter, triggering an immediate content safety block</title>
+      <link>https://x.com/teortaxesTex/status/2074774636219244939/photo/1</link>
+      <description>The model generated a brief thought process before the block.</description>
+      <content:encoded>&lt;p&gt;The model generated a brief thought process before the block.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://x.com/teortaxesTex/status/2074774636219244939/photo/1"&gt;https://x.com/teortaxesTex/status/2074774636219244939/photo/1&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/7cde7wjh"&gt;https://digg.com/tech/7cde7wjh&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 8,442&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 121&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 5&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 1&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 11&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 4&lt;/li&gt;&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/yacineMTB"&gt;kache&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/teortaxesTex"&gt;Teortaxes▶️ (DeepSeek 推特🐋铁粉 2023 – ∞)&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+&lt;blockquote&gt;We urgently need a Fable class model that&amp;#x27;s not from this shit ass company. I don&amp;#x27;t care if it&amp;#x27;s bad at bioweapons and hacking the Three Gorges Dam, I&amp;#x27;ll find other means for that if the need ever arises&lt;/blockquote&gt;</content:encoded>
+      <guid isPermaLink="false">f5a48426-0f2d-48e5-ac31-da2b2c1a76fa</guid>
       <category>Digg AI from X</category>
-      <pubDate>Tue, 07 Jul 2026 12:08:29 +0000</pubDate>
+      <pubDate>Wed, 08 Jul 2026 08:44:17 +0000</pubDate>
     </item>
     <item>
-      <title>Cohere releases Cohere Transcribe Arabic, claiming top accuracy on the Open Universal Arabic ASR Leaderboard</title>
-      <link>https://huggingface.co/CohereLabs/cohere-transcribe-arabic-07-2026</link>
-      <description>The open-source model weights are available on Hugging Face.</description>
-      <content:encoded>&lt;p&gt;The open-source model weights are available on Hugging Face.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://huggingface.co/CohereLabs/cohere-transcribe-arabic-07-2026"&gt;https://huggingface.co/CohereLabs/cohere-transcribe-arabic-07-2026&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/fjk39lgg"&gt;https://digg.com/tech/fjk39lgg&lt;/a&gt;&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 119,677&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 1,510&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 1,091&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 7&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 71&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 8&lt;/li&gt;&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/_akhaliq"&gt;AK&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/aidangomez"&gt;Aidan Gomez&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/yacineMTB"&gt;kache&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/JayAlammar"&gt;Jay Alammar&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/1vnzh"&gt;Ivan Zhang&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
-&lt;blockquote&gt;نطلق اليوم نموذج @cohere Transcribe العربي، أفضل نموذج مفتوح المصدر لتحويل الكلام العربي من الصوت إلى نص، مع مراعاة اللهجات العربية المختلفة. يتصدر معيار Open Universal Arabic ASR Leaderboard. صُمم النموذج لدعم حالات تحويل الكلام بين العربية والانجليزية، والتعرف على اللهجات المختلفة، بالإضافة إلى اللغة الانجليزية باللكنات العربية. هذا يمكّن المطورين والشركات من بناء تجارب صوتية مذهلة لعملائهم. رابط التحميل في التعليقات. نتطلع إلى سماع تجاربكم له!&lt;/blockquote&gt;</content:encoded>
-      <guid isPermaLink="false">24fa1e43-60d6-4bf1-8fd6-c1e70b16d98a</guid>
+      <title>Miles Brundage says the AI capability gap between datacenter and local hardware spans multiple years</title>
+      <link>https://x.com/Miles_Brundage/status/2074756179004441043</link>
+      <description>Local models require optimization for intelligence per token per second.</description>
+      <content:encoded>&lt;p&gt;Local models require optimization for intelligence per token per second.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://x.com/Miles_Brundage/status/2074756179004441043"&gt;https://x.com/Miles_Brundage/status/2074756179004441043&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/1kzzsfek"&gt;https://digg.com/tech/1kzzsfek&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 4,923&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 51&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 8&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 8&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 4&lt;/li&gt;&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/Miles_Brundage"&gt;Miles Brundage&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/deepfates"&gt;🎭&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+&lt;blockquote&gt;@Miles_Brundage definitely. and at least currently this is also the line at which a lot of the inference economics flip right? if you have a cluster you want to be batching as much as possible personal hardware, you probably want to intelligence Max per token second&lt;/blockquote&gt;</content:encoded>
+      <guid isPermaLink="false">141dccb4-e1b4-4bfb-8c86-e2de1939be2a</guid>
       <category>Digg AI from X</category>
-      <pubDate>Tue, 07 Jul 2026 14:57:17 +0000</pubDate>
+      <pubDate>Wed, 08 Jul 2026 07:35:22 +0000</pubDate>
     </item>
   </channel>
 </rss>
