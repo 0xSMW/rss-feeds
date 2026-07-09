@@ -7,146 +7,146 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 09 Jul 2026 02:09:41 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 09 Jul 2026 14:41:56 +0000</lastBuildDate>
     <item>
-      <title>OpenAI launches GPT-Live voice models inside ChatGPT to enable more natural and interruption-resistant conversations</title>
-      <link>https://openai.com/index/introducing-gpt-live/</link>
-      <description>The immediate rollout follows a teaser featuring a 2026 development credit.</description>
-      <content:encoded>&lt;p&gt;The immediate rollout follows a teaser featuring a 2026 development credit.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://openai.com/index/introducing-gpt-live/"&gt;https://openai.com/index/introducing-gpt-live/&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/ffcsue5m"&gt;https://digg.com/tech/ffcsue5m&lt;/a&gt;&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 1,671,057&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 18,972&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 2,127&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 156&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 1,557&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 54&lt;/li&gt;&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/sama"&gt;Sam Altman&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/gdb"&gt;Greg Brockman&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/boazbaraktcs"&gt;Boaz Barak&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/steipete"&gt;Peter Steinberger 🦞&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/Scobleizer"&gt;Robert Scoble&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
-&lt;blockquote&gt;As someone who uses voice (wispr) extensively, I have to say that gpt voice up til now has been terrible. I can barely get a word in. I am hyped they are addressing it.&lt;/blockquote&gt;</content:encoded>
-      <guid isPermaLink="false">e3ca1e63-2d1e-41fe-99b2-211bc34e4283</guid>
+      <title>Meta Releases Muse Spark 1.1 Agentic Coding Model At Low Price</title>
+      <link>https://ai.meta.com/blog/introducing-muse-spark-meta-model-api/</link>
+      <description>Meta Releases Muse Spark 1.1 Agentic Coding Model At Low Price</description>
+      <content:encoded>&lt;p&gt;Meta Releases Muse Spark 1.1 Agentic Coding Model At Low Price&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://ai.meta.com/blog/introducing-muse-spark-meta-model-api/"&gt;https://ai.meta.com/blog/introducing-muse-spark-meta-model-api/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/la5kkotu"&gt;https://digg.com/tech/la5kkotu&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 313,154&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 3,240&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 304&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 281&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 357&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 31&lt;/li&gt;&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/alexandr_wang"&gt;Alexandr Wang&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/suchenzang"&gt;Susan Zhang&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/jack_w_rae"&gt;Jack Rae&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/shengjia_zhao"&gt;Shengjia Zhao&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/teortaxesTex"&gt;Teortaxes▶️ (DeepSeek 推特🐋铁粉 2023 – ∞)&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+&lt;blockquote&gt;(2) Muse Spark 1.1 is strongest at agentic performance, tool use, and computer use. It does well on long-running tasks with 1M token context window, can delegate execution to sub-agents running in parallel, and is trained to use computer interfaces on desktop, mobile, or browser.&lt;/blockquote&gt;</content:encoded>
+      <guid isPermaLink="false">4bf69084-9567-4197-acba-e3cb42aa57f7</guid>
       <category>Digg AI from X</category>
-      <pubDate>Wed, 08 Jul 2026 17:39:41 +0000</pubDate>
+      <pubDate>Thu, 09 Jul 2026 14:16:07 +0000</pubDate>
     </item>
     <item>
-      <title>Prime Intellect raises $130 million Series A from Radical Ventures, NVIDIA, Intel, and Dell to build open AI infrastructure</title>
-      <link>https://techcrunch.com/2026/07/08/prime-intellect-raises-130m-series-a-to-help-enterprises-build-their-own-ai-agents/?utm_source=dlvr.it&amp;utm_medium=twitter</link>
-      <description>The funds will back its enterprise AI training and deployment stack</description>
-      <content:encoded>&lt;p&gt;The funds will back its enterprise AI training and deployment stack&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://techcrunch.com/2026/07/08/prime-intellect-raises-130m-series-a-to-help-enterprises-build-their-own-ai-agents/?utm_source=dlvr.it&amp;amp;utm_medium=twitter"&gt;https://techcrunch.com/2026/07/08/prime-intellect-raises-130m-series-a-to-help-enterprises-build-their-own-ai-agents/?utm_source=dlvr.it&amp;amp;utm_medium=twitter&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/8tasmgcq"&gt;https://digg.com/tech/8tasmgcq&lt;/a&gt;&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 436,978&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 4,075&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 518&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 17&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 328&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 75&lt;/li&gt;&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/Miles_Brundage"&gt;Miles Brundage&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/dwarkesh_sp"&gt;Dwarkesh Patel&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/deliprao"&gt;Delip Rao e/σ&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/swyx"&gt;swyx&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/ysu_nlp"&gt;Yu Su&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
-&lt;blockquote&gt;We&amp;#x27;re excited to be joined by angels who are building the frontier themselves, many of whom we work closely with: @johnschulman2 (Thinking Machines), @dwarkesh_sp, @AravSrinivas (Perplexity), @karimatiyeh (Ramp), @levie (Box), @_milankovac_ (Tesla), @winstonweinberg (Harvey), @amspector100 (Flapping Airplanes), @jeffwang (Cognition), @_arohan_ (Core Automation), @marksaroufim (Core Automation), @mikeknoop (Zapier, Ndea), @eastdakota (Cloudflare), @BrendanFoody (Mercor), @devanshpandey (Standard Intelligence), @hwchase17 (Langchain), @nicoup (Fleet) and many more&lt;/blockquote&gt;</content:encoded>
-      <guid isPermaLink="false">79cec758-5cff-40a9-b2f2-0a4f307891a0</guid>
+      <title>European Parliament passes Chat Control 1.0 to let digital platforms scan private messages and photos without a warrant</title>
+      <link>https://cadeproject.org/updates/european-parliament-rejects-extension-of-chat-control-rules-on-message-scanning/</link>
+      <description>The controversial measure passed during a low-attendance holiday session</description>
+      <content:encoded>&lt;p&gt;The controversial measure passed during a low-attendance holiday session&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://cadeproject.org/updates/european-parliament-rejects-extension-of-chat-control-rules-on-message-scanning/"&gt;https://cadeproject.org/updates/european-parliament-rejects-extension-of-chat-control-rules-on-message-scanning/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/r2gde4np"&gt;https://digg.com/tech/r2gde4np&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 507,015&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 9,109&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 1,435&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 271&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 358&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 11&lt;/li&gt;&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/levelsio"&gt;@levelsio&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/scaling01"&gt;Lisan al Gaib&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/kimmonismus"&gt;Chubby♨️&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+&lt;blockquote&gt;@Fidias0&lt;/blockquote&gt;</content:encoded>
+      <guid isPermaLink="false">03d03d21-b83e-44d2-9772-a4a275e354bf</guid>
       <category>Digg AI from X</category>
-      <pubDate>Wed, 08 Jul 2026 16:30:46 +0000</pubDate>
+      <pubDate>Thu, 09 Jul 2026 11:33:55 +0000</pubDate>
     </item>
     <item>
-      <title>OpenAI will launch GPT-5.6 Sol, Terra, and Luna models publicly this Thursday</title>
-      <link>https://cryptobriefing.com/openai-to-launch-gpt-56-sol-terra-luna-models-globally-this-thursday/</link>
-      <description>Early testers report major improvements in math and coding.</description>
-      <content:encoded>&lt;p&gt;Early testers report major improvements in math and coding.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://cryptobriefing.com/openai-to-launch-gpt-56-sol-terra-luna-models-globally-this-thursday/"&gt;https://cryptobriefing.com/openai-to-launch-gpt-56-sol-terra-luna-models-globally-this-thursday/&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/65f5lo27"&gt;https://digg.com/tech/65f5lo27&lt;/a&gt;&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 213,231&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 3,350&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 247&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 11&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 126&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 16&lt;/li&gt;&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/SebastienBubeck"&gt;Sebastien Bubeck&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/BorisMPower"&gt;Boris Power&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/yacineMTB"&gt;kache&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/beffjezos"&gt;Beff (e/acc)&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/tunguz"&gt;Bojan Tunguz&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
-&lt;blockquote&gt;@OpenAI&lt;/blockquote&gt;</content:encoded>
-      <guid isPermaLink="false">e7f49aa2-86cf-41e9-86f3-8fc71b28c52a</guid>
+      <title>OpenAI model wins AtCoder algorithm contest with a perfect score of 8,300 points in six hours</title>
+      <link>https://the-decoder.com/openais-ai-beats-every-human-at-atcoder-a-top-competitive-programming-contest/</link>
+      <description>The model solved all five problems, outperforming every human competitor.</description>
+      <content:encoded>&lt;p&gt;The model solved all five problems, outperforming every human competitor.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://the-decoder.com/openais-ai-beats-every-human-at-atcoder-a-top-competitive-programming-contest/"&gt;https://the-decoder.com/openais-ai-beats-every-human-at-atcoder-a-top-competitive-programming-contest/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/ktgyhu70"&gt;https://digg.com/tech/ktgyhu70&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 45,516&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 598&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 70&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 7&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 21&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 5&lt;/li&gt;&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/yacineMTB"&gt;kache&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/reach_vb"&gt;Vaibhav (VB) Srivastav&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+&lt;blockquote&gt;OpenAI has solved all 5 problems in the algorithm contest and absolutely dominated Humans are no longer top dogs at competitive programming.&lt;/blockquote&gt;</content:encoded>
+      <guid isPermaLink="false">fb6ac240-fb52-49c2-b3a0-48652d960a59</guid>
       <category>Digg AI from X</category>
-      <pubDate>Wed, 08 Jul 2026 10:14:25 +0000</pubDate>
+      <pubDate>Thu, 09 Jul 2026 09:23:23 +0000</pubDate>
     </item>
     <item>
-      <title>Cognition releases SWE-1.7, scoring 42.3 on FrontierCode benchmark using reinforcement learning on a Kimi base</title>
-      <link>https://devin.ai/cli</link>
-      <description>The model runs at 1,000 tokens per second on Cerebras.</description>
-      <content:encoded>&lt;p&gt;The model runs at 1,000 tokens per second on Cerebras.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://devin.ai/cli"&gt;https://devin.ai/cli&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/29irz4lv"&gt;https://digg.com/tech/29irz4lv&lt;/a&gt;&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 136,472&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 1,520&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 243&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 11&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 80&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 22&lt;/li&gt;&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/teortaxesTex"&gt;Teortaxes▶️ (DeepSeek 推特🐋铁粉 2023 – ∞)&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/ScottWu46"&gt;Scott Wu&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/wolfejosh"&gt;Josh Wolfe&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/DanielleFong"&gt;Danielle Fong 🔆&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/scaling01"&gt;Lisan al Gaib&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
-&lt;blockquote&gt;SWE-1.7 was built on broad improvements in RL pipeline on top of a Kimi K2.7 base model. Our proprietary benchmark FrontierCode evaluates whether a model makes code you’d actually want to merge. SWE-1.7 advances the cost-performance Pareto curve on FrontierCode with a score of 42.3% and cost per task of $1.97 on our Main set.&lt;/blockquote&gt;</content:encoded>
-      <guid isPermaLink="false">fcb32950-02ca-4c7f-acbe-54518bdc34eb</guid>
+      <title>OpenAI's Will Depue proposes a paid 2x speed mode for the newly released GPT-Live voice models</title>
+      <link>https://x.com/collision/status/2075183069137633587</link>
+      <description>The feature would run inference faster and compress audio playback.</description>
+      <content:encoded>&lt;p&gt;The feature would run inference faster and compress audio playback.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://x.com/collision/status/2075183069137633587"&gt;https://x.com/collision/status/2075183069137633587&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/z63zygeq"&gt;https://digg.com/tech/z63zygeq&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 91,672&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 540&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 62&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 8&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 84&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 5&lt;/li&gt;&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/gdb"&gt;Greg Brockman&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/collision"&gt;John Collison&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+&lt;blockquote&gt;It’s really good — feels like the moment where the voice modality for AI apps will finally take off. Upgrade to the latest version of the ChatGPT App to get it. (Also great launch video.)&lt;/blockquote&gt;</content:encoded>
+      <guid isPermaLink="false">badbaee2-9676-4c9f-a736-e6d6017cc80d</guid>
       <category>Digg AI from X</category>
-      <pubDate>Wed, 08 Jul 2026 16:15:15 +0000</pubDate>
+      <pubDate>Thu, 09 Jul 2026 11:25:09 +0000</pubDate>
     </item>
     <item>
-      <title>OpenAI says SWE-Bench Pro has hit a 70% noise ceiling and no longer reliably measures frontier model capabilities</title>
-      <link>https://openai.com/index/separating-signal-from-noise-coding-evaluations/</link>
-      <description>The benchmark's saturation is driving calls for proprietary evaluations.</description>
-      <content:encoded>&lt;p&gt;The benchmark&amp;#x27;s saturation is driving calls for proprietary evaluations.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://openai.com/index/separating-signal-from-noise-coding-evaluations/"&gt;https://openai.com/index/separating-signal-from-noise-coding-evaluations/&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/h8fave4h"&gt;https://digg.com/tech/h8fave4h&lt;/a&gt;&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 105,061&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 1,049&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 79&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 2&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 66&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 15&lt;/li&gt;&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/WenhuChen"&gt;Wenhu Chen&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/yacineMTB"&gt;kache&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/matei_zaharia"&gt;Matei Zaharia&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/Scobleizer"&gt;Robert Scoble&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/teortaxesTex"&gt;Teortaxes▶️ (DeepSeek 推特🐋铁粉 2023 – ∞)&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
-&lt;blockquote&gt;To audit SWE-Bench Pro, we used model-based investigator agents alongside independent reviews from five independent experienced software engineers. That helped us examine tasks at scale while keeping expert judgment at the center.&lt;/blockquote&gt;</content:encoded>
-      <guid isPermaLink="false">fa20a44a-f7c6-4c76-ba21-2202f3d4f86d</guid>
+      <title>Microsoft AI launches Ode Poetry, using proprietary audio models to read poems matched to user emotions</title>
+      <link>https://microsoft.ai/news/ode-poetry-mai/</link>
+      <description>The app recommends poems curated by Poetry Pharmacy author William Sieghart</description>
+      <content:encoded>&lt;p&gt;The app recommends poems curated by Poetry Pharmacy author William Sieghart&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://microsoft.ai/news/ode-poetry-mai/"&gt;https://microsoft.ai/news/ode-poetry-mai/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/geap2ml0"&gt;https://digg.com/tech/geap2ml0&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 77,529&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 202&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 79&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 19&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 33&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 4&lt;/li&gt;&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/mustafasuleyman"&gt;Mustafa Suleyman&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/zephyr_z9"&gt;Zephyr&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+&lt;blockquote&gt;BRUH&lt;/blockquote&gt;</content:encoded>
+      <guid isPermaLink="false">b6eedb66-8d10-4525-b088-10dfe9bf6ca7</guid>
       <category>Digg AI from X</category>
-      <pubDate>Wed, 08 Jul 2026 21:11:36 +0000</pubDate>
+      <pubDate>Thu, 09 Jul 2026 08:24:08 +0000</pubDate>
     </item>
     <item>
-      <title>Bun creator Jarred Sumner announces the JavaScript runtime is being completely rewritten from Zig to Rust</title>
-      <link>https://bun.com/blog/bun-in-rust</link>
-      <description>The migration at Anthropic aims to improve long-term project maintenance.</description>
-      <content:encoded>&lt;p&gt;The migration at Anthropic aims to improve long-term project maintenance.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://bun.com/blog/bun-in-rust"&gt;https://bun.com/blog/bun-in-rust&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/upyr56rx"&gt;https://digg.com/tech/upyr56rx&lt;/a&gt;&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 696,610&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 4,633&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 1,825&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 207&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 275&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 9&lt;/li&gt;&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/srush_nlp"&gt;Sasha Rush&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/bcherny"&gt;Boris Cherny&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/trq212"&gt;Thariq&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/theo"&gt;Theo - t3.gg&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/jarredsumner"&gt;Jarred Sumner&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
-&lt;blockquote&gt;This is pretty epic&lt;/blockquote&gt;</content:encoded>
-      <guid isPermaLink="false">1a54fcee-b6d0-472a-b329-a983ae925371</guid>
+      <title>New Jersey Bill Requires Multi-Sensor Hardware for Robotaxis, Targeting Tesla</title>
+      <link>https://x.com/niccruzpatane/status/2074988847591493639</link>
+      <description>New Jersey Bill Requires Multi-Sensor Hardware for Robotaxis, Targeting Tesla</description>
+      <content:encoded>&lt;p&gt;New Jersey Bill Requires Multi-Sensor Hardware for Robotaxis, Targeting Tesla&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://x.com/niccruzpatane/status/2074988847591493639"&gt;https://x.com/niccruzpatane/status/2074988847591493639&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/sbazhvaf"&gt;https://digg.com/tech/sbazhvaf&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 60,977&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 1,016&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 18&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 3&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 67&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 3&lt;/li&gt;&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/bscholl"&gt;Blake Scholl 🛫&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/jasoncrawford"&gt;Jason Crawford&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+&lt;blockquote&gt;Which self driving car company is feeling threatened by Tesla and trying to use government to win when they couldn’t win fair and square?&lt;/blockquote&gt;</content:encoded>
+      <guid isPermaLink="false">3d9f1f81-eb11-4515-9778-89ab1f1db585</guid>
       <category>Digg AI from X</category>
-      <pubDate>Wed, 08 Jul 2026 21:57:46 +0000</pubDate>
+      <pubDate>Thu, 09 Jul 2026 12:43:39 +0000</pubDate>
     </item>
     <item>
-      <title>Paradigm co-founder Matt Huang launches $1.2 billion fund targeting crypto, AI, and robotics</title>
-      <link>https://x.com/paradigm/status/2074871132805861802/video/1</link>
-      <description>The fourth fund marks an expansion into broader deep tech.</description>
-      <content:encoded>&lt;p&gt;The fourth fund marks an expansion into broader deep tech.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://x.com/paradigm/status/2074871132805861802/video/1"&gt;https://x.com/paradigm/status/2074871132805861802/video/1&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/o7sce980"&gt;https://digg.com/tech/o7sce980&lt;/a&gt;&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 344,655&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 2,135&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 406&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 42&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 287&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 13&lt;/li&gt;&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/brian_armstrong"&gt;Brian Armstrong&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/signulll"&gt;signüll&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/alexisohanian"&gt;Alexis Ohanian 🗽&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/matthuang"&gt;Matt Huang&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/TurnerNovak"&gt;Turner Novak 🍌🧢&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
-&lt;blockquote&gt;Matt’s the best.&lt;/blockquote&gt;</content:encoded>
-      <guid isPermaLink="false">61ace688-afe1-40d1-a583-8e2c6998e6b0</guid>
+      <title>AI commentators hype rumored GPT-5.6 Sol model running at 750 tokens per second on Cerebras hardware</title>
+      <link>https://www.cerebras.ai/blog/introducing-cerebras-inference-ai-at-instant-speed</link>
+      <description>No official benchmarks or technical documentation have been released yet.</description>
+      <content:encoded>&lt;p&gt;No official benchmarks or technical documentation have been released yet.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://www.cerebras.ai/blog/introducing-cerebras-inference-ai-at-instant-speed"&gt;https://www.cerebras.ai/blog/introducing-cerebras-inference-ai-at-instant-speed&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/0qzlzdpd"&gt;https://digg.com/tech/0qzlzdpd&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 51,261&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 837&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 40&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 1&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 50&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 3&lt;/li&gt;&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/rohanpaul_ai"&gt;Rohan Paul&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/kimmonismus"&gt;Chubby♨️&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+&lt;blockquote&gt;I am so freaking ready to use GPT-5.6 Sol at 750 token/s Its release day friends. Get ready. Today is gonna be a great day!&lt;/blockquote&gt;</content:encoded>
+      <guid isPermaLink="false">bbbe1daa-11e2-470a-8700-3de451bf2693</guid>
       <category>Digg AI from X</category>
-      <pubDate>Wed, 08 Jul 2026 15:21:25 +0000</pubDate>
+      <pubDate>Thu, 09 Jul 2026 08:05:45 +0000</pubDate>
     </item>
     <item>
-      <title>Mitchell Hashimoto says Sol 5.6 is faster than Fable and has become his default AI coding agent</title>
-      <link>https://www.reuters.com/technology/openai-gets-us-approval-broad-gpt-56-rollout-axios-reports-2026-07-08/</link>
-      <description>The HashiCorp co-founder still reserves Fable for specialized debugging tasks.</description>
-      <content:encoded>&lt;p&gt;The HashiCorp co-founder still reserves Fable for specialized debugging tasks.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://www.reuters.com/technology/openai-gets-us-approval-broad-gpt-56-rollout-axios-reports-2026-07-08/"&gt;https://www.reuters.com/technology/openai-gets-us-approval-broad-gpt-56-rollout-axios-reports-2026-07-08/&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/yjyltmlm"&gt;https://digg.com/tech/yjyltmlm&lt;/a&gt;&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 427,163&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 5,502&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 1,198&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 82&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 188&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 7&lt;/li&gt;&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/boazbaraktcs"&gt;Boaz Barak&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/ericmitchellai"&gt;Eric&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/omarsar0"&gt;elvis&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/mitchellh"&gt;Mitchell Hashimoto&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/skirano"&gt;Pietro Schirano&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
-&lt;blockquote&gt;mitchell hashmioto, famously also on OpenAI&amp;#x27;s payroll apparently.&lt;/blockquote&gt;</content:encoded>
-      <guid isPermaLink="false">a06a88c3-9caf-4519-ae78-5829eb14038f</guid>
+      <title>Grok 4.5 debuts in fourth place on Voxelbench and the Artificial Analysis Intelligence Index</title>
+      <link>https://artificialanalysis.ai/articles/grok-4-5-brings-spacexai-to-the-the-intelligence-frontier</link>
+      <description>The model scored a 16-point improvement over Grok 4.3.</description>
+      <content:encoded>&lt;p&gt;The model scored a 16-point improvement over Grok 4.3.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://artificialanalysis.ai/articles/grok-4-5-brings-spacexai-to-the-the-intelligence-frontier"&gt;https://artificialanalysis.ai/articles/grok-4-5-brings-spacexai-to-the-the-intelligence-frontier&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/p5pewezr"&gt;https://digg.com/tech/p5pewezr&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 46,819&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 1,102&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 70&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 2&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 25&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 2&lt;/li&gt;&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/yacineMTB"&gt;kache&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/scaling01"&gt;Lisan al Gaib&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+&lt;blockquote&gt;@yacineMTB They were essentially a frontier tier lab without the capital and compute to compete at the frontier. It was the perfect acquisition for both sides.&lt;/blockquote&gt;</content:encoded>
+      <guid isPermaLink="false">64725fea-cd01-47bd-a1af-0a2b5a3ace7c</guid>
       <category>Digg AI from X</category>
-      <pubDate>Wed, 08 Jul 2026 14:39:14 +0000</pubDate>
+      <pubDate>Thu, 09 Jul 2026 11:14:46 +0000</pubDate>
     </item>
     <item>
-      <title>Reports suggest OpenAI plans to release GPT-6 by late summer to compete with Anthropic's Fable 5.1</title>
-      <link>https://help.openai.com/en/articles/9624314-model-release-notes</link>
-      <description>The model is reportedly built on a massive new pretraining run</description>
-      <content:encoded>&lt;p&gt;The model is reportedly built on a massive new pretraining run&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://help.openai.com/en/articles/9624314-model-release-notes"&gt;https://help.openai.com/en/articles/9624314-model-release-notes&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/3y2g53c3"&gt;https://digg.com/tech/3y2g53c3&lt;/a&gt;&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 283,505&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 3,363&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 419&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 23&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 139&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 11&lt;/li&gt;&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/teortaxesTex"&gt;Teortaxes▶️ (DeepSeek 推特🐋铁粉 2023 – ∞)&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/AndrewCurran_"&gt;Andrew Curran&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/scaling01"&gt;Lisan al Gaib&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/kimmonismus"&gt;Chubby♨️&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/ramez"&gt;Ramez Naam&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
-&lt;blockquote&gt;OpenAI is back baby &amp;quot;GPT-6 will be based on a new, significantly larger pretrain than GPT-5.5/GPT-5.6&amp;quot;&lt;/blockquote&gt;</content:encoded>
-      <guid isPermaLink="false">c04c0bd2-4e91-4217-b8bc-65413dbdc1de</guid>
+      <title>OpenAI drops GPT-5.6 Sol and GPT-Live alongside a wave of model releases from ByteDance and Meta</title>
+      <link>https://alignednews.com/ai</link>
+      <description>The sudden rollout includes ByteDance's Seedream 5 Pro image generator.</description>
+      <content:encoded>&lt;p&gt;The sudden rollout includes ByteDance&amp;#x27;s Seedream 5 Pro image generator.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://alignednews.com/ai"&gt;https://alignednews.com/ai&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/06pzv6er"&gt;https://digg.com/tech/06pzv6er&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 4,493&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 21&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 3&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 4&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 5&lt;/li&gt;&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/Scobleizer"&gt;Robert Scoble&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/venturetwins"&gt;Justine Moore&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/altryne"&gt;Alex Volkov @ AI Engineer&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/dwr"&gt;Dan Romero&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+&lt;blockquote&gt;&amp;gt; Today we&amp;#x27;re releasing Muse Spark 1.1&lt;/blockquote&gt;</content:encoded>
+      <guid isPermaLink="false">72fc0a46-01e8-4653-915f-7d39d727c79a</guid>
       <category>Digg AI from X</category>
-      <pubDate>Wed, 08 Jul 2026 16:30:14 +0000</pubDate>
+      <pubDate>Thu, 09 Jul 2026 08:05:25 +0000</pubDate>
     </item>
     <item>
-      <title>Every co-founder Dan Shipper says GPT-5.6 excels at routine tasks while Fable acts as a warp drive for massive projects</title>
-      <link>https://finance.biggo.com/podcast/69b31788e7a62de3</link>
-      <description>The initial model comparison will be followed by a detailed evaluation.</description>
-      <content:encoded>&lt;p&gt;The initial model comparison will be followed by a detailed evaluation.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://finance.biggo.com/podcast/69b31788e7a62de3"&gt;https://finance.biggo.com/podcast/69b31788e7a62de3&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/lyentuzn"&gt;https://digg.com/tech/lyentuzn&lt;/a&gt;&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 582,153&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 5,085&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 983&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 74&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 289&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 17&lt;/li&gt;&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/blader"&gt;Siqi Chen&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/danshipper"&gt;Dan Shipper 📧&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/altryne"&gt;Alex Volkov @ AI Engineer&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/charliermarsh"&gt;Charlie Marsh&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
-&lt;blockquote&gt;@danshipper @every Yes but is 5.6 prose better? It is easy to talk to? Does it write well?&lt;/blockquote&gt;</content:encoded>
-      <guid isPermaLink="false">b9ea9c38-ad20-455f-8b8b-8ecfce50060a</guid>
+      <title>OpenAI schedules a livestream amid rumors of an upcoming GPT-5.6 model release</title>
+      <link>https://x.com/kimmonismus/status/2075219837677089206/photo/1</link>
+      <description>The broadcast is set for today at 10:00 AM PST.</description>
+      <content:encoded>&lt;p&gt;The broadcast is set for today at 10:00 AM PST.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://x.com/kimmonismus/status/2075219837677089206/photo/1"&gt;https://x.com/kimmonismus/status/2075219837677089206/photo/1&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/tbm0h9n0"&gt;https://digg.com/tech/tbm0h9n0&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 15,318&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 342&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 25&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 2&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 24&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 3&lt;/li&gt;&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/AndrewCurran_"&gt;Andrew Curran&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/kimmonismus"&gt;Chubby♨️&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+&lt;blockquote&gt;@AndrewCurran_&lt;/blockquote&gt;</content:encoded>
+      <guid isPermaLink="false">933ce492-103d-4b89-9a39-1070293fdbd8</guid>
       <category>Digg AI from X</category>
-      <pubDate>Wed, 08 Jul 2026 14:26:55 +0000</pubDate>
+      <pubDate>Thu, 09 Jul 2026 13:57:43 +0000</pubDate>
     </item>
   </channel>
 </rss>
