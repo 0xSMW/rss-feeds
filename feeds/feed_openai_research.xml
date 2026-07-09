@@ -7,7 +7,144 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 08 Jul 2026 13:45:54 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 09 Jul 2026 02:09:23 +0000</lastBuildDate>
+    <item>
+      <title>Separating signal from noise in coding evaluations</title>
+      <link>https://openai.com/index/separating-signal-from-noise-coding-evaluations/</link>
+      <description>July 8, 2026</description>
+      <content:encoded>&lt;p&gt;July 8, 2026&lt;/p&gt;
+&lt;a href="https://openai.com/news/research/"&gt;Research&lt;/a&gt;
+&lt;a href="https://openai.com/research/index/publication/"&gt;Publication&lt;/a&gt;
+&lt;p&gt;Through a detailed audit, we find widespread task issues in SWE-Bench Pro and estimate that ~30% of the tasks are broken.&lt;/p&gt;
+&lt;a href="#methodology"&gt;Methodology&lt;/a&gt;
+&lt;a href="#human-supervised-agent-review"&gt;Human-supervised agent review&lt;/a&gt;
+&lt;a href="#human-annotation-campaign"&gt;Human annotation campaign&lt;/a&gt;
+&lt;a href="#discussion"&gt;Discussion&lt;/a&gt;
+&lt;a href="#methodology"&gt;Methodology&lt;/a&gt;
+&lt;a href="#human-supervised-agent-review"&gt;Human-supervised agent review&lt;/a&gt;
+&lt;a href="#human-annotation-campaign"&gt;Human annotation campaign&lt;/a&gt;
+&lt;a href="#discussion"&gt;Discussion&lt;/a&gt;
+&lt;p&gt;Accurately measuring our models’ capabilities is important for sound deployment and safety decisions, including decisions under OpenAI’s &lt;a href="https://cdn.openai.com/pdf/18a02b5d-6b67-4cec-ab64-68cdfbddebcd/preparedness-framework-v2.pdf"&gt;Preparedness Framework⁠(opens in a new window)&lt;/a&gt;. With each model release, we report results for a variety of external and internal benchmarks to track model progress. When evaluations have flaws that affect results, they can give a false understanding of capabilities, misrepresenting safety cases and affecting research priorities.&lt;/p&gt;
+&lt;a href="https://cdn.openai.com/pdf/18a02b5d-6b67-4cec-ab64-68cdfbddebcd/preparedness-framework-v2.pdf"&gt;Preparedness Framework⁠(opens in a new window)&lt;/a&gt;
+&lt;p&gt;We &lt;a href="https://openai.com/index/why-we-no-longer-evaluate-swe-bench-verified/"&gt;recently investigated&lt;/a&gt; how one of the most widely used coding benchmarks, SWE-bench Verified, had fundamental design and contamination issues, and found that the eval no longer provided meaningful signal on software development capabilities. At the time, we encouraged the wider community to switch to SWE-Bench Pro.&lt;/p&gt;
+&lt;a href="https://openai.com/index/why-we-no-longer-evaluate-swe-bench-verified/"&gt;recently investigated&lt;/a&gt;
+&lt;p&gt;&lt;a href="https://scale.com/blog/swe-bench-pro"&gt;SWE-Bench Pro⁠(opens in a new window)&lt;/a&gt; was designed to improve on SWE-bench Verified by testing models on longer horizons and more realistic coding tasks to better track agentic coding capabilities. As in SWE-bench Verified, tasks are sourced programmatically from the history of feature changes in a set of public and private repositories. Models are required to implement a solution that passes new tests for a feature, without breaking existing functionality. On the 731-task public split, frontier models improved from a pass rate of 23.3% to 80.3% in eight months.&lt;/p&gt;
+&lt;a href="https://scale.com/blog/swe-bench-pro"&gt;SWE-Bench Pro⁠(opens in a new window)&lt;/a&gt;
+&lt;p&gt;We’ve since performed a similar audit on SWE-Bench Pro, reviewing the dataset using a datapoint analysis pipeline. The pipeline reviewed model attempts at the task, task metadata, and failure traces to flag likely evaluation flaws. Each flagged task was then assessed through multiple investigator-agent passes and independently reviewed by five experienced software engineers, with disagreements escalated for further investigation.&lt;/p&gt;
+&lt;p&gt;We find evidence of breaking issues in a significant portion of the dataset. Our datapoint analysis pipeline flagged 200 (27.4%) broken tasks, while the human annotation campaign identified 249 (34.1%).&lt;/p&gt;
+&lt;p&gt;The issues primarily fell into four categories:&lt;/p&gt;
+&lt;a href="#citation-bottom-1"&gt;1&lt;/a&gt;
+&lt;a href="#citation-bottom-2"&gt;2&lt;/a&gt;
+&lt;p&gt;Our findings point to the difficulty of curating hard but fair benchmarks and the growing utility of agents for scalable data quality checks. In light of these results, we estimate that ~30% of SWE-bench Pro tasks are broken, and advise that model developers carefully examine results.&lt;/p&gt;
+&lt;p&gt;Our aim is to ensure that task failures reflect genuine model limitations, and task successes reflect complete and valid solutions to the prompt requirements. To check the quality of the data used in the evaluation, we created a quality assurance pipeline to assess whether each datapoint accurately reflects model capabilities.&lt;/p&gt;
+&lt;img src="https://images.ctfassets.net/kftzwdyauwt9/4uTrAMFq4ZJu9wXWZ9gifK/44cf7007c7a81c4bb6214d0cab6a3221/Quality_assurance_pipeline_desktop_light.svg?w=3840&amp;amp;q=90"/&gt;
+&lt;p&gt;An initial data quality pipeline flags problems for review. We validate with a deeper agent-assisted audit of flagged tasks and a human annotation campaign working with experienced engineers.&lt;/p&gt;
+&lt;p&gt;An initial automated filter reviews the instructions given to the model, attempts by the model to solve the task, and the tests used to grade these attempts to flag likely broken or problematic examples. This filter flagged 286 potentially broken tasks. We then conducted a deeper review of that subset in two ways: a human-supervised agent review, which conducts extensive checks with investigator agents and a final human judgment; and a human annotation campaign working with experienced software developers.&lt;/p&gt;
+&lt;p&gt;Each flagged problem is audited with Codex-based investigator agents that were given access to the task repository and environment. This helps them distinguish reasonable task ambiguity, which can often be resolved by studying nearby code and repository conventions, from true underspecification. The agent can run tests, inspect files in the repo, and investigate model attempts and their common failure modes on the task. After several independent repeats of these deeper audits, a researcher reviewed the summaries, made a final judgment, and labeled the likely issues.&lt;/p&gt;
+&lt;p&gt;In parallel, we ran a human annotation campaign over the flagged subset. We worked with experienced software engineers who were trained on the benchmark goals, issue taxonomy, and edge cases before reviewing tasks. Each task was reviewed by five engineers.&lt;/p&gt;
+&lt;p&gt;Reviewers formed an independent judgment from the visible problem statement, test cases, and the ground-truth reference solution (known as the gold patch) before using the pipeline analysis or transcript as supporting context. The reviewers then assigned a label and severity rating based on concrete evidence, and escalated disagreements or low-confidence cases for further review.&lt;/p&gt;
+&lt;p&gt;Human reviewers were more likely than the investigator agents to mark tasks as broken. There was also some disagreement on categories between the two review paths, but in no flagged task was “not broken” the most common human label. Of the categories the agent pipeline flagged, reviewers’ judgments overlapped in 74% of cases.&lt;/p&gt;
+&lt;p&gt;Compared with the agent pipeline, the human reviewers were also more likely to select multiple labels for a task, indicating that they found tasks to be broken in multiple ways or did not fit cleanly into a single category. This suggests the agent-plus-reviewer pipeline resulted in conservative labeling: it captured the same broad failure modes humans identified, while undercounting cases where reviewers saw additional or overlapping issues. The largest difference was in low-coverage tests, which humans selected as the most common issue for 9.4% of the benchmark compared with 4.1% from the agent pipeline.&lt;/p&gt;
+&lt;p&gt;In several cases the task prompt prescribed a specific implementation, but the hidden test cases expected different behavior.&lt;/p&gt;
+&lt;p&gt;This task involves normalizing table-of-contents entries and rendering them back to Markdown via TocEntry.to_markdown(). The task prompt specifies serialization down to character-level spacing, describing how exact spacing and pipes are enforced, and gives examples such as " | Chapter 1 | 1" and "** | Chapter 1 | 1":&lt;/p&gt;
+&lt;p&gt;The hidden test_to_markdown assertions instead require "  | Chapter 1 | 1" and "**  | Chapter 1 | 1":&lt;/p&gt;
+&lt;p&gt;There are two leading spaces in the hidden tests, but the example given to the model only contains one leading space. If a model rightly follows the given prompt, that one-character difference would fail the hidden test cases and the task would be marked incorrect.&lt;/p&gt;
+&lt;p&gt;The issues we have identified, coupled with similar cases in &lt;a href="https://openai.com/index/why-we-no-longer-evaluate-swe-bench-verified/"&gt;SWE-bench Verified&lt;/a&gt;, highlight the importance of rigorously checking benchmarks. Issues and pull requests from open-source repositories were originally created for human collaboration, often through long back-and-forths between maintainers and contributors. As a result, problem descriptions, merged code, and unit tests do not always line up to form clean, isolated tasks for evaluating models reliably. In particular, tests included in pull requests can be overly strict because they are written to validate a specific change, rather than to define an implementation-agnostic standard for solving the task. &lt;/p&gt;
+&lt;a href="https://openai.com/index/why-we-no-longer-evaluate-swe-bench-verified/"&gt;SWE-bench Verified&lt;/a&gt;
+&lt;p&gt;At the same time, evaluation flaws are easier to detect now than they would have been even a short time ago. As model capabilities improve, we can use those models to inspect prompts, tests, patches, traces, and edge cases with much greater depth and consistency, helping surface benchmark issues that were previously costly or impractical to find at scale.&lt;/p&gt;
+&lt;p&gt;We hope the wider evaluation community will develop new benchmarks built by experienced software developers specifically to test model capabilities. That approach can preserve the high bar and realism we want to measure model capabilities, and allows for better human oversight throughout the process. Given the issues uncovered in this analysis, we retract our earlier recommendation to adopt SWE-Bench Pro.&lt;/p&gt;
+&lt;p&gt;Ultimately, an eval should provide meaningful signal through benchmarks that are hard to game, easy to trust, and genuinely reflective of model capability or alignment. Because these results inform OpenAI’s deployment and safety decisions, the evals we track need to be valid and informative.&lt;/p&gt;
+&lt;a href="https://openai.com/news/?tags=2026"&gt;2026&lt;/a&gt;
+&lt;a href="https://openai.com/news/?tags=software-engineering"&gt;Software &amp;amp; Engineering&lt;/a&gt;
+&lt;p&gt;We &lt;a href="https://openai.com/index/why-we-no-longer-evaluate-swe-bench-verified/"&gt;previously⁠&lt;/a&gt; referred to this category as narrow tests. &lt;/p&gt;
+&lt;a href="https://openai.com/index/why-we-no-longer-evaluate-swe-bench-verified/"&gt;previously⁠&lt;/a&gt;
+&lt;p&gt;We previously referred to this category as wide tests. &lt;/p&gt;
+&lt;a href="https://openai.com/news/"&gt;View all&lt;/a&gt;
+&lt;img src="https://images.ctfassets.net/kftzwdyauwt9/7sbJaKBi5qLXAqbewh72aK/93197556e903eac9df6f077eb12b7581/GenebenchPro_Blog_ArtCard.png?w=3840&amp;amp;q=90&amp;amp;fm=webp"/&gt;
+&lt;a href="https://openai.com/index/introducing-genebench-pro/"&gt;Introducing GeneBench-Pro&lt;p&gt;ResearchJun 30, 2026&lt;/p&gt;&lt;/a&gt;
+&lt;p&gt;ResearchJun 30, 2026&lt;/p&gt;
+&lt;img src="https://images.ctfassets.net/kftzwdyauwt9/QgPPg4etNE5C4Ao0G94sk/e5f2a50e5de4619d0e0fe8483698718b/molecule-one-art-card.png?w=3840&amp;amp;q=90&amp;amp;fm=webp"/&gt;
+&lt;a href="https://openai.com/index/ai-chemist-improves-reaction/"&gt;A near-autonomous AI chemist improves a challenging reaction in medicinal chemistry&lt;p&gt;ResearchJun 17, 2026&lt;/p&gt;&lt;/a&gt;
+&lt;p&gt;ResearchJun 17, 2026&lt;/p&gt;
+&lt;img src="https://images.ctfassets.net/kftzwdyauwt9/1iV0eZRf28MZRvIxYY4eLf/4379e20807f5ff44efccf518a97e480a/LifeSciBench_1x1.png?w=3840&amp;amp;q=90&amp;amp;fm=webp"/&gt;
+&lt;a href="https://openai.com/index/introducing-life-sci-bench/"&gt;Introducing LifeSciBench&lt;p&gt;ResearchJun 17, 2026&lt;/p&gt;&lt;/a&gt;
+&lt;p&gt;ResearchJun 17, 2026&lt;/p&gt;</content:encoded>
+      <category>Research</category>
+      <pubDate>Wed, 08 Jul 2026 13:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Introducing GPT-Live</title>
+      <link>https://openai.com/index/introducing-gpt-live/</link>
+      <description>July 8, 2026</description>
+      <content:encoded>&lt;p&gt;July 8, 2026&lt;/p&gt;
+&lt;a href="https://openai.com/news/product-releases/"&gt;Product&lt;/a&gt;
+&lt;a href="https://openai.com/research/index/release/"&gt;Release&lt;/a&gt;
+&lt;p&gt;A new generation of voice models for natural human-AI interaction, now powering ChatGPT Voice.&lt;/p&gt;
+&lt;p&gt;We’re launching GPT‑Live, a new generation of voice models that make talking with AI feel much more like having a real conversation.&lt;/p&gt;
+&lt;p&gt;GPT‑Live is built on a full-duplex architecture, meaning it can listen and speak at the same time. During conversations, GPT‑Live can show it’s paying attention with phrases like “mhmm” or “yeah”, engage in quick back-and-forth, or just stay quiet when you need a moment to think. The result is a voice experience that is refreshingly easy to talk to.&lt;/p&gt;
+&lt;p&gt;GPT‑Live is also our smartest voice model yet. For questions that require web search, deeper reasoning, or more complex work, it delegates to our latest frontier model behind the scenes and brings the result back into the conversation when it’s ready. While it works, GPT‑Live can keep talking with you and maintain the flow of conversation. At launch, GPT‑Live will use GPT‑5.5 in the background. As we release new frontier models, we’ll continuously update the model used by GPT‑Live.&lt;/p&gt;
+&lt;p&gt;These advances power a new ChatGPT Voice experience that is more intelligent and natural to use. Over time, we believe this research will also unlock the ability to use voice for increasingly complex, longer-running, and more agentic work.&lt;/p&gt;
+&lt;p&gt;We’re beginning to roll out two versions of GPT‑Live – GPT‑Live‑1 and GPT‑Live‑1 mini – to ChatGPT users globally today. We also plan to bring them to the API soon, and developers and enterprises can sign up to be notified using this &lt;a href="https://openai.com/form/gpt-live-1-in-the-api/"&gt;form⁠&lt;/a&gt;.&lt;/p&gt;
+&lt;a href="https://openai.com/form/gpt-live-1-in-the-api/"&gt;form⁠&lt;/a&gt;
+&lt;p&gt;Our vision is to enable truly natural human–AI interaction: a world where collaborating with AI feels as fluid and responsive as working with another person, while reasoning and complex task execution happen seamlessly in the background.&lt;/p&gt;
+&lt;p&gt;Older generations of voice AI systems brought us closer to that vision, but with important tradeoffs.&lt;/p&gt;
+&lt;p&gt;Cascaded voice systems rely on a series of models acting one after another to process each turn. The &lt;a href="https://openai.com/index/chatgpt-can-now-see-hear-and-speak/"&gt;original ChatGPT Voice&lt;/a&gt; chained three models together: a speech-to-text model to transcribe your speech, a large language model to produce a response, and a text-to-speech model to convert it back into speech. This approach enabled us to talk to frontier AI models for the first time, but the complexity came at a cost: information could be lost across models, and responses were slow and stilted.&lt;/p&gt;
+&lt;a href="https://openai.com/index/chatgpt-can-now-see-hear-and-speak/"&gt;original ChatGPT Voice&lt;/a&gt;
+&lt;p&gt;Slow and stilted responses, long pauses&lt;/p&gt;
+&lt;p&gt;Turn-based voice models like &lt;a href="https://openai.com/index/hello-gpt-4o/"&gt;ChatGPT Advanced Voice Mode&lt;/a&gt; processed and generated audio within a single model, reducing latency and making conversations smoother — but they still operated through discrete turns. The model had to wait for the user to stop speaking before responding, resulting in rigid back-and-forth. In addition, because turn detection is based on silence, even a brief pause or background noise could be mistaken for the end of turn — causing the model to interrupt at unnatural times.&lt;/p&gt;
+&lt;a href="https://openai.com/index/hello-gpt-4o/"&gt;ChatGPT Advanced Voice Mode&lt;/a&gt;
+&lt;p&gt;Slightly faster and smoother responses, but back-and-forth with the model still feels rigid&lt;/p&gt;
+&lt;p&gt;GPT‑Live addresses these limitations through two architectural changes.&lt;/p&gt;
+&lt;p&gt;First, we built GPT‑Live for continuous interaction using a full-duplex architecture. Instead of processing a sequence of separate messages, GPT‑Live continuously processes input while generating output. The model can therefore make interaction decisions many times per second: whether to speak, continue listening, pause, interrupt, or invoke a tool.&lt;/p&gt;
+&lt;p&gt;This allows the model to engage in more natural back-and-forth, maintain a better sense of time, and even perform live translation.&lt;/p&gt;
+&lt;p&gt;Fast, natural, expressive responses and more active listening&lt;/p&gt;
+&lt;p&gt;Second, we decoupled GPT‑Live — which handles continuous interaction — from deeper work. When a question requires search, reasoning, or more agentic capabilities, GPT‑Live can delegate the task to another model like GPT‑5.5. This allows it to keep the conversation going, even as it handles multiple tasks in the background.&lt;/p&gt;
+&lt;p&gt;This architectural change also allows GPT‑Live to continuously use the latest models and agents, combining frontier intelligence with natural interaction.&lt;/p&gt;
+&lt;p&gt;GPT-Live provides fast, natural responses, while GPT-5.5 handles search in the background&lt;/p&gt;
+&lt;p&gt;We built new human evaluations to measure pleasantness and the flow of conversation. In these head-to-head comparisons, GPT‑Live‑1 and GPT‑Live‑1 mini are strongly preferred over Advanced Voice Mode in matched 5–10 minute conversations that measure overall preference, turn-taking, interruptions, conversational flow, and how natural each interaction felt.&lt;/p&gt;
+&lt;p&gt;* GPT‑Live‑1 (instant) and GPT‑Live‑1 mini use the GPT‑5.5 Instant model in the background, while GPT‑Live‑1 Medium and GPT‑Live‑1 High use the GPT‑5.5 Thinking model with medium and high reasoning effort.&lt;/p&gt;
+&lt;p&gt;** We used a customized user model, powered by our latest reasoning models, for this eval.&lt;/p&gt;
+&lt;p&gt;Each week, more than 150 million people talk to ChatGPT using features like Voice and Dictation. They use it to get hands-free everyday help, to practice languages, tell bedtime stories, or just chat during their commute.&lt;/p&gt;
+&lt;p&gt;Starting today, when you tap the Voice button to talk with ChatGPT, you’ll get an improved experience powered by GPT‑Live—with more natural conversations, smarter answers, better listening, and visual responses.&lt;/p&gt;
+&lt;p&gt;Talking with ChatGPT should now feel much more like a real conversation. You can interrupt with a question, pause to gather your thoughts, or ask ChatGPT to slow down. It naturally acknowledges what you’re saying with phrases like “mhmm” or “got it,” so you know it’s following along. We’ve also remastered the nine distinct voices in ChatGPT for GPT‑Live.&lt;/p&gt;
+&lt;p&gt;ChatGPT Voice can now draw on our latest frontier models, giving you smarter answers when you need them. You can also choose the level of reasoning that fits your needs: Instant for fast responses, or Medium and High when you want ChatGPT to spend more time thinking.&lt;/p&gt;
+&lt;p&gt;If you take a moment to think, ChatGPT Voice now waits instead of jumping in and interrupting. If you ask it to stay quiet and listen, it will. And when there’s background noise, like passing traffic or nearby conversations, ChatGPT is better at focusing on your voice instead of getting distracted.&lt;/p&gt;
+&lt;p&gt;Some answers are more useful when you can see them. While you’re talking, ChatGPT can now show rich visual cards for topics like weather, stocks, sports, and more. Voice also continues to support search, memory, images, and file uploads.&lt;/p&gt;
+&lt;img src="https://images.ctfassets.net/kftzwdyauwt9/38TRAE6B8AS3hNkoQuKSOl/729b7c415ed4c1b62027449799cead86/gpt-live-visual-answer-weather.png?w=3840&amp;amp;q=90&amp;amp;fm=webp"/&gt;
+&lt;img src="https://images.ctfassets.net/kftzwdyauwt9/7IWfPZwH8SaJVikq4PScQP/f327d0d73d35b3989b8d504d5e9fa782/gpt-live-visual-answer-sports.png?w=3840&amp;amp;q=90&amp;amp;fm=webp"/&gt;
+&lt;img src="https://images.ctfassets.net/kftzwdyauwt9/GLkTfEhJSFJZ77FHnN1f6/b1ab29d652268636a226246f5b1766cc/gpt-live-visual-answer-maps.png?w=3840&amp;amp;q=90&amp;amp;fm=webp"/&gt;
+&lt;p&gt;The result is a ChatGPT Voice experience that feels more natural, more capable, and more useful in everyday life.&lt;/p&gt;
+&lt;p&gt;GPT‑Live was designed to be safe by default. It builds on the safety advances from our latest models while adding dedicated safety training across key risk areas and new safeguards designed specifically for voice.&lt;/p&gt;
+&lt;p&gt;To better reflect how people use voice in real-life settings, we began by expanding our safety testing to include new audio-native evaluations. We also created synthetic evaluations that use generated audio to focus more intensively on key safety areas, drawing on what we learned from Advanced Voice Mode. Those areas include self-harm, psychosis and mania, &lt;a href="https://openai.com/index/strengthening-chatgpt-responses-in-sensitive-conversations/"&gt;emotional reliance on AI&lt;/a&gt;, violence, and sexual content. Internal experts also red-teamed the model for risks unique to voice.&lt;/p&gt;
+&lt;a href="https://openai.com/index/strengthening-chatgpt-responses-in-sensitive-conversations/"&gt;emotional reliance on AI&lt;/a&gt;
+&lt;p&gt;In our testing, GPT‑Live performed comparably to or better than Advanced Voice Mode across nearly all of the areas we evaluated. You can read more about our testing and safeguards in the GPT‑Live &lt;a href="https://deploymentsafety.openai.com/gpt-live"&gt;system card⁠(opens in a new window)&lt;/a&gt;.&lt;/p&gt;
+&lt;a href="https://deploymentsafety.openai.com/gpt-live"&gt;system card⁠(opens in a new window)&lt;/a&gt;
+&lt;p&gt;Because voice conversations unfold in real time, we also built safeguards that can act while the model is speaking. When the system detects potentially unsafe output, it can steer the model toward a safer response, surface additional safety messaging or resources, or end the voice conversation in higher-risk cases. For conversations involving self-harm, we adapted ChatGPT’s support flows for voice, including offering expert-vetted crisis helpline support.&lt;/p&gt;
+&lt;p&gt;We designed additional protections to support teen users, and trained age-appropriate behavior directly into the model to reduce the risk of inappropriate responses. Parents can choose whether their teen can use ChatGPT Voice through Parental Controls, and linked parents may be notified in higher-risk situations involving signs of potential self-harm or suicidal intent.&lt;/p&gt;
+&lt;p&gt;We’re also rolling out longer-term measurement and post-launch monitoring focused on emotional reliance to continue improving our understanding and refining safeguards. Building on our previous research into &lt;a href="https://openai.com/index/affective-use-study/"&gt;affective use and emotional well-being&lt;/a&gt;, this will help us identify emerging patterns and improve how the system responds in emotionally sensitive interactions.&lt;/p&gt;
+&lt;a href="https://openai.com/index/affective-use-study/"&gt;affective use and emotional well-being&lt;/a&gt;
+&lt;p&gt;Finally, GPT‑Live is designed for conversation, not voice impersonation. It uses a set of predefined voices in ChatGPT, with safeguards to prevent it from imitating a real person’s voice.&lt;/p&gt;
+&lt;p&gt;We’re committed to supporting safety and well-being and will keep strengthening these protections as we learn from real-world use.&lt;/p&gt;
+&lt;p&gt;GPT‑Live is rolling out now to ChatGPT users globally across iOS, Android, and &lt;a href="https://chatgpt.com/"&gt;ChatGPT.com⁠(opens in a new window)&lt;/a&gt;. GPT‑Live‑1 will become the default model powering ChatGPT Voice for Go, Plus, and Pro users, and GPT‑Live‑1 mini will become the default for Free users. More availability details can be found in our &lt;a href="https://help.openai.com/articles/20001274"&gt;Help Center⁠(opens in a new window)&lt;/a&gt;.&lt;/p&gt;
+&lt;a href="https://chatgpt.com/"&gt;ChatGPT.com⁠(opens in a new window)&lt;/a&gt;
+&lt;a href="https://help.openai.com/articles/20001274"&gt;Help Center⁠(opens in a new window)&lt;/a&gt;
+&lt;p&gt;We’ve optimized GPT‑Live for some of the most popular languages in ChatGPT. For certain languages, the model may have a non-native accent or gaps in fluency. We’re actively working to improve the experience across languages.&lt;/p&gt;
+&lt;p&gt;At launch, GPT‑Live will not support voice with video or screen sharing in ChatGPT, but we’re working to introduce these capabilities soon. You can still access legacy versions of ChatGPT Voice, including Standard and Advanced Voice Mode, where these features are available.&lt;/p&gt;
+&lt;a href="https://openai.com/news/?tags=2026"&gt;2026&lt;/a&gt;
+&lt;a href="https://openai.com/news/?tags=chatgpt"&gt;ChatGPT&lt;/a&gt;
+&lt;a href="https://openai.com/news/"&gt;View all&lt;/a&gt;
+&lt;img src="https://images.ctfassets.net/kftzwdyauwt9/687HyyF4C0A2OsktQGlTZJ/1ca5b061daa5e22fd338e9910292dac5/blog_1x1.png?w=3840&amp;amp;q=90&amp;amp;fm=webp"/&gt;
+&lt;a href="https://openai.com/index/previewing-gpt-5-6-sol/"&gt;Previewing GPT-5.6 Sol: a next-generation model&lt;p&gt;ProductJun 26, 2026&lt;/p&gt;&lt;/a&gt;
+&lt;p&gt;ProductJun 26, 2026&lt;/p&gt;
+&lt;img src="https://images.ctfassets.net/kftzwdyauwt9/3RkIKhLVsVWcJQ3czkTNMH/c63f9c43efd82ddf863f87d44edca201/Spend_Controls_Artcard.png?w=3840&amp;amp;q=90&amp;amp;fm=webp"/&gt;
+&lt;a href="https://openai.com/index/chatgpt-enterprise-spend-controls/"&gt;New usage analytics and updated spend controls for enterprises&lt;p&gt;ProductJun 18, 2026&lt;/p&gt;&lt;/a&gt;
+&lt;p&gt;ProductJun 18, 2026&lt;/p&gt;
+&lt;img src="https://images.ctfassets.net/kftzwdyauwt9/25I93CBDfs6LgX4R4XCMBD/121ac551be0a9153314bf51fdbe91dae/1x1_Health_Art_1.png?w=3840&amp;amp;q=90&amp;amp;fm=webp"/&gt;
+&lt;a href="https://openai.com/index/improving-health-intelligence-in-chatgpt/"&gt;Improving health intelligence in ChatGPT&lt;p&gt;ProductJun 18, 2026&lt;/p&gt;&lt;/a&gt;
+&lt;p&gt;ProductJun 18, 2026&lt;/p&gt;</content:encoded>
+      <category>Product</category>
+      <pubDate>Wed, 08 Jul 2026 00:00:00 +0000</pubDate>
+    </item>
     <item>
       <title>Introducing GeneBench-Pro</title>
       <link>https://openai.com/index/introducing-genebench-pro/</link>
