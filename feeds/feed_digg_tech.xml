@@ -7,146 +7,146 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 09 Jul 2026 14:41:56 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 10 Jul 2026 02:08:27 +0000</lastBuildDate>
     <item>
-      <title>Meta Releases Muse Spark 1.1 Agentic Coding Model At Low Price</title>
-      <link>https://ai.meta.com/blog/introducing-muse-spark-meta-model-api/</link>
-      <description>Meta Releases Muse Spark 1.1 Agentic Coding Model At Low Price</description>
-      <content:encoded>&lt;p&gt;Meta Releases Muse Spark 1.1 Agentic Coding Model At Low Price&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://ai.meta.com/blog/introducing-muse-spark-meta-model-api/"&gt;https://ai.meta.com/blog/introducing-muse-spark-meta-model-api/&lt;/a&gt;&lt;/p&gt;
+      <title>Meta launches Muse Spark 1.1 on its new Model API, claiming strong agentic and coding performance</title>
+      <link>http://meta.ai</link>
+      <description>The model features a 1M token context window.</description>
+      <content:encoded>&lt;p&gt;The model features a 1M token context window.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="http://meta.ai"&gt;http://meta.ai&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/la5kkotu"&gt;https://digg.com/tech/la5kkotu&lt;/a&gt;&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 313,154&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 3,240&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 304&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 281&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 357&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 31&lt;/li&gt;&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/alexandr_wang"&gt;Alexandr Wang&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/suchenzang"&gt;Susan Zhang&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/jack_w_rae"&gt;Jack Rae&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/shengjia_zhao"&gt;Shengjia Zhao&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/teortaxesTex"&gt;Teortaxes▶️ (DeepSeek 推特🐋铁粉 2023 – ∞)&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 18,151,976&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 92,635&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 9,147&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 3,817&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 7,086&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 194&lt;/li&gt;&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/_jasonwei"&gt;Jason Wei&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/elonmusk"&gt;Elon Musk&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/Miles_Brundage"&gt;Miles Brundage&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/giffmana"&gt;Lucas Beyer (bl16)&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/alexandr_wang"&gt;Alexandr Wang&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
 &lt;blockquote&gt;(2) Muse Spark 1.1 is strongest at agentic performance, tool use, and computer use. It does well on long-running tasks with 1M token context window, can delegate execution to sub-agents running in parallel, and is trained to use computer interfaces on desktop, mobile, or browser.&lt;/blockquote&gt;</content:encoded>
       <guid isPermaLink="false">4bf69084-9567-4197-acba-e3cb42aa57f7</guid>
       <category>Digg AI from X</category>
       <pubDate>Thu, 09 Jul 2026 14:16:07 +0000</pubDate>
     </item>
     <item>
-      <title>European Parliament passes Chat Control 1.0 to let digital platforms scan private messages and photos without a warrant</title>
+      <title>OpenAI launches GPT-5.6 model family, claiming Sol is 54% more token-efficient on agentic coding tasks</title>
+      <link>https://openai.com/index/gpt-5-6</link>
+      <description>GPT-5.6 Sol autonomously post-trained the smaller Luna model.</description>
+      <content:encoded>&lt;p&gt;GPT-5.6 Sol autonomously post-trained the smaller Luna model.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://openai.com/index/gpt-5-6"&gt;https://openai.com/index/gpt-5-6&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/8l1la1pl"&gt;https://digg.com/tech/8l1la1pl&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 3,681,115&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 47,242&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 4,864&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 598&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 3,376&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 119&lt;/li&gt;&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/sama"&gt;Sam Altman&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/gdb"&gt;Greg Brockman&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/AravSrinivas"&gt;Aravind Srinivas&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/levie"&gt;Aaron Levie&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/simonw"&gt;Simon Willison&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+&lt;blockquote&gt;GPT-5.6 Sol sets a new standard for intelligence and efficiency, delivering state-of-the-art performance across coding, knowledge work, cybersecurity, and science with fewer tokens and lower cost. https://openai.com/index/gpt-5-6/&lt;/blockquote&gt;</content:encoded>
+      <guid isPermaLink="false">55175301-9923-4443-94db-59e8832408fa</guid>
+      <category>Digg AI from X</category>
+      <pubDate>Thu, 09 Jul 2026 15:20:53 +0000</pubDate>
+    </item>
+    <item>
+      <title>Daniel Kokotajlo and the AI 2027 team propose 'AI 2040: Plan A' for international superintelligence governance</title>
+      <link>https://ai-2040.com/?r=tw</link>
+      <description>The roadmap targets US-China compute negotiation agreements by 2029.</description>
+      <content:encoded>&lt;p&gt;The roadmap targets US-China compute negotiation agreements by 2029.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://ai-2040.com/?r=tw"&gt;https://ai-2040.com/?r=tw&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/k80nzjeh"&gt;https://digg.com/tech/k80nzjeh&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 485,969&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 4,778&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 2,420&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 85&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 197&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 83&lt;/li&gt;&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/Miles_Brundage"&gt;Miles Brundage&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/boazbaraktcs"&gt;Boaz Barak&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/DavidSKrueger"&gt;David Krueger 🦥 ⏸️ ⏹️ ⏪&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/NeelNanda5"&gt;Neel Nanda&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/BlackHC"&gt;Andreas Kirsch 🇺🇦&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+&lt;blockquote&gt;The AI 2027 team has written a new scenario, AI 2040.&lt;/blockquote&gt;</content:encoded>
+      <guid isPermaLink="false">f23fc5eb-7610-4b8f-9ca0-82edfaa6e6ac</guid>
+      <category>Digg AI from X</category>
+      <pubDate>Thu, 09 Jul 2026 16:44:27 +0000</pubDate>
+    </item>
+    <item>
+      <title>OpenAI launches ChatGPT Work, an autonomous agent for long-horizon tasks powered by Codex and GPT-5.6</title>
+      <link>https://help.openai.com/en/articles/20001275-chatgpt-work-and-codex</link>
+      <description>The tool adds a dropdown interface to toggle Codex mode.</description>
+      <content:encoded>&lt;p&gt;The tool adds a dropdown interface to toggle Codex mode.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://help.openai.com/en/articles/20001275-chatgpt-work-and-codex"&gt;https://help.openai.com/en/articles/20001275-chatgpt-work-and-codex&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/7yf6rr7y"&gt;https://digg.com/tech/7yf6rr7y&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 1,024,391&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 11,025&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 1,226&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 89&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 1,266&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 39&lt;/li&gt;&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/sama"&gt;Sam Altman&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/gdb"&gt;Greg Brockman&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/Miles_Brundage"&gt;Miles Brundage&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/emollick"&gt;Ethan Mollick&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/simonw"&gt;Simon Willison&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+&lt;blockquote&gt;ChatGPT Work is powered by GPT-5.6. GPT-5.6 makes ChatGPT state of the art at reasoning through complex tasks and creating materials that match your templates, reference files, and preferred style. Just describe the outcome you want, without having to spell out every step to get there.&lt;/blockquote&gt;</content:encoded>
+      <guid isPermaLink="false">38c3dc39-3130-4f14-adcc-bbf88802cd39</guid>
+      <category>Digg AI from X</category>
+      <pubDate>Thu, 09 Jul 2026 18:04:28 +0000</pubDate>
+    </item>
+    <item>
+      <title>Elon Musk calls Anthropic the AI leader and claims its unreleased Mythos and Fable models are unmatched</title>
+      <link>https://x.com/elonmusk/status/1970537297792651492</link>
+      <description>Musk says he will not cut off Anthropic's leased compute</description>
+      <content:encoded>&lt;p&gt;Musk says he will not cut off Anthropic&amp;#x27;s leased compute&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://x.com/elonmusk/status/1970537297792651492"&gt;https://x.com/elonmusk/status/1970537297792651492&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/83xmdaog"&gt;https://digg.com/tech/83xmdaog&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 4,650,396&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 75,996&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 5,840&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 846&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 2,625&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 13&lt;/li&gt;&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/elonmusk"&gt;Elon Musk&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/amasad"&gt;Amjad Masad&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/yacineMTB"&gt;kache&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/teortaxesTex"&gt;Teortaxes▶️ (DeepSeek 推特🐋铁粉 2023 – ∞)&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/beffjezos"&gt;Beff (e/acc)&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+&lt;blockquote&gt;He was known in his time as Elon the Bridgebuilder.&lt;/blockquote&gt;</content:encoded>
+      <guid isPermaLink="false">04dc3eda-0158-4f83-9a87-9bc386beed16</guid>
+      <category>Digg AI from X</category>
+      <pubDate>Thu, 09 Jul 2026 11:15:16 +0000</pubDate>
+    </item>
+    <item>
+      <title>European Parliament extends Chat Control scanning rules through 2028 despite a majority of voting MEPs opposing the bill</title>
       <link>https://cadeproject.org/updates/european-parliament-rejects-extension-of-chat-control-rules-on-message-scanning/</link>
-      <description>The controversial measure passed during a low-attendance holiday session</description>
-      <content:encoded>&lt;p&gt;The controversial measure passed during a low-attendance holiday session&lt;/p&gt;
+      <description>The measure passed because the 314 opposing votes fell short of the absolute majority.</description>
+      <content:encoded>&lt;p&gt;The measure passed because the 314 opposing votes fell short of the absolute majority.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://cadeproject.org/updates/european-parliament-rejects-extension-of-chat-control-rules-on-message-scanning/"&gt;https://cadeproject.org/updates/european-parliament-rejects-extension-of-chat-control-rules-on-message-scanning/&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/r2gde4np"&gt;https://digg.com/tech/r2gde4np&lt;/a&gt;&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 507,015&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 9,109&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 1,435&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 271&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 358&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 11&lt;/li&gt;&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/levelsio"&gt;@levelsio&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/scaling01"&gt;Lisan al Gaib&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/kimmonismus"&gt;Chubby♨️&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
-&lt;blockquote&gt;@Fidias0&lt;/blockquote&gt;</content:encoded>
+&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 2,141,361&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 28,134&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 4,362&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 658&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 753&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 21&lt;/li&gt;&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/paulg"&gt;Paul Graham&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/julien_c"&gt;Julien Chaumond&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/teortaxesTex"&gt;Teortaxes▶️ (DeepSeek 推特🐋铁粉 2023 – ∞)&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/levelsio"&gt;@levelsio&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/paultoo"&gt;Paul Buchheit&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+&lt;blockquote&gt;&amp;quot;This is How Liberty Dies....With Thunderous Applause.&amp;quot; I never really understood what the Star Wars reference meant. Today, after Brussels, or rather the EU, pushed through the general, suspicionless surveillance of all chats in violation of its own laws and rules, I understand it very well. A dark day. Ironic how a world-famous film foresaw this.&lt;/blockquote&gt;</content:encoded>
       <guid isPermaLink="false">03d03d21-b83e-44d2-9772-a4a275e354bf</guid>
       <category>Digg AI from X</category>
       <pubDate>Thu, 09 Jul 2026 11:33:55 +0000</pubDate>
     </item>
     <item>
-      <title>OpenAI model wins AtCoder algorithm contest with a perfect score of 8,300 points in six hours</title>
-      <link>https://the-decoder.com/openais-ai-beats-every-human-at-atcoder-a-top-competitive-programming-contest/</link>
-      <description>The model solved all five problems, outperforming every human competitor.</description>
-      <content:encoded>&lt;p&gt;The model solved all five problems, outperforming every human competitor.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://the-decoder.com/openais-ai-beats-every-human-at-atcoder-a-top-competitive-programming-contest/"&gt;https://the-decoder.com/openais-ai-beats-every-human-at-atcoder-a-top-competitive-programming-contest/&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/ktgyhu70"&gt;https://digg.com/tech/ktgyhu70&lt;/a&gt;&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 45,516&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 598&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 70&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 7&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 21&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 5&lt;/li&gt;&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/yacineMTB"&gt;kache&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/reach_vb"&gt;Vaibhav (VB) Srivastav&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
-&lt;blockquote&gt;OpenAI has solved all 5 problems in the algorithm contest and absolutely dominated Humans are no longer top dogs at competitive programming.&lt;/blockquote&gt;</content:encoded>
-      <guid isPermaLink="false">fb6ac240-fb52-49c2-b3a0-48652d960a59</guid>
+      <title>OpenAI's GPT-5.6 Sol variant sets an ARC-AGI-3 benchmark record of 7.8%</title>
+      <link>http://arcprize.org/scorecards/model/openai-gpt-5-6-sol-max</link>
+      <description>The frontier model successfully solved ARC-AGI-3 task #su15</description>
+      <content:encoded>&lt;p&gt;The frontier model successfully solved ARC-AGI-3 task #su15&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="http://arcprize.org/scorecards/model/openai-gpt-5-6-sol-max"&gt;http://arcprize.org/scorecards/model/openai-gpt-5-6-sol-max&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/y8mgvhbm"&gt;https://digg.com/tech/y8mgvhbm&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 739,075&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 5,928&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 706&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 30&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 269&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 37&lt;/li&gt;&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/giffmana"&gt;Lucas Beyer (bl16)&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/fchollet"&gt;François Chollet&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/jasondeanlee"&gt;Jason Lee&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/aidan_mclau"&gt;Aidan McLaughlin&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/BorisMPower"&gt;Boris Power&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+&lt;blockquote&gt;GPT-5.6-Sol worse than Fable on the Artificial Analysis Index&lt;/blockquote&gt;</content:encoded>
+      <guid isPermaLink="false">f4473b6a-e7a2-4491-be15-2066062bc02f</guid>
       <category>Digg AI from X</category>
-      <pubDate>Thu, 09 Jul 2026 09:23:23 +0000</pubDate>
+      <pubDate>Thu, 09 Jul 2026 17:24:15 +0000</pubDate>
     </item>
     <item>
-      <title>OpenAI's Will Depue proposes a paid 2x speed mode for the newly released GPT-Live voice models</title>
-      <link>https://x.com/collision/status/2075183069137633587</link>
-      <description>The feature would run inference faster and compress audio playback.</description>
-      <content:encoded>&lt;p&gt;The feature would run inference faster and compress audio playback.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://x.com/collision/status/2075183069137633587"&gt;https://x.com/collision/status/2075183069137633587&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/z63zygeq"&gt;https://digg.com/tech/z63zygeq&lt;/a&gt;&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 91,672&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 540&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 62&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 8&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 84&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 5&lt;/li&gt;&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/gdb"&gt;Greg Brockman&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/collision"&gt;John Collison&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
-&lt;blockquote&gt;It’s really good — feels like the moment where the voice modality for AI apps will finally take off. Upgrade to the latest version of the ChatGPT App to get it. (Also great launch video.)&lt;/blockquote&gt;</content:encoded>
-      <guid isPermaLink="false">badbaee2-9676-4c9f-a736-e6d6017cc80d</guid>
+      <title>OpenAI executive Fidji Simo steps down from full-time role to become a part-time advisor</title>
+      <link>https://www.bloomberg.com/news/articles/2026-07-09/openai-executive-fidji-simo-to-step-down-following-medical-leave?srnd=undefined</link>
+      <description>Simo stepped back following medical leave for a chronic illness.</description>
+      <content:encoded>&lt;p&gt;Simo stepped back following medical leave for a chronic illness.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://www.bloomberg.com/news/articles/2026-07-09/openai-executive-fidji-simo-to-step-down-following-medical-leave?srnd=undefined"&gt;https://www.bloomberg.com/news/articles/2026-07-09/openai-executive-fidji-simo-to-step-down-following-medical-leave?srnd=undefined&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/7kba2m43"&gt;https://digg.com/tech/7kba2m43&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 1,356,178&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 6,817&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 775&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 48&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 384&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 20&lt;/li&gt;&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/sama"&gt;Sam Altman&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/Miles_Brundage"&gt;Miles Brundage&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/sriramk"&gt;Sriram Krishnan&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/lulumeservey"&gt;Lulu Cheng Meservey&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/kevinweil"&gt;Kevin Weil 🇺🇸&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+&lt;blockquote&gt;@sama Thanks for all the support, friendship and opportunities, Sam 💜&lt;/blockquote&gt;</content:encoded>
+      <guid isPermaLink="false">4f4777b2-6639-4a97-9d3f-ff1a835e921a</guid>
       <category>Digg AI from X</category>
-      <pubDate>Thu, 09 Jul 2026 11:25:09 +0000</pubDate>
+      <pubDate>Thu, 09 Jul 2026 23:07:48 +0000</pubDate>
     </item>
     <item>
-      <title>Microsoft AI launches Ode Poetry, using proprietary audio models to read poems matched to user emotions</title>
-      <link>https://microsoft.ai/news/ode-poetry-mai/</link>
-      <description>The app recommends poems curated by Poetry Pharmacy author William Sieghart</description>
-      <content:encoded>&lt;p&gt;The app recommends poems curated by Poetry Pharmacy author William Sieghart&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://microsoft.ai/news/ode-poetry-mai/"&gt;https://microsoft.ai/news/ode-poetry-mai/&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/geap2ml0"&gt;https://digg.com/tech/geap2ml0&lt;/a&gt;&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 77,529&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 202&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 79&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 19&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 33&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 4&lt;/li&gt;&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/mustafasuleyman"&gt;Mustafa Suleyman&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/zephyr_z9"&gt;Zephyr&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
-&lt;blockquote&gt;BRUH&lt;/blockquote&gt;</content:encoded>
-      <guid isPermaLink="false">b6eedb66-8d10-4525-b088-10dfe9bf6ca7</guid>
+      <title>1X releases new tendon-driven humanoid robot hands with 25 degrees of freedom for its NEO robot</title>
+      <link>https://1x.tech/discover/neos-hands</link>
+      <description>The new hardware aims to achieve human-level dexterity and speed.</description>
+      <content:encoded>&lt;p&gt;The new hardware aims to achieve human-level dexterity and speed.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://1x.tech/discover/neos-hands"&gt;https://1x.tech/discover/neos-hands&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/vmkrw4qn"&gt;https://digg.com/tech/vmkrw4qn&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 450,798&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 3,649&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 448&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 46&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 223&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 29&lt;/li&gt;&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/Miles_Brundage"&gt;Miles Brundage&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/BlackHC"&gt;Andreas Kirsch 🇺🇦&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/Scobleizer"&gt;Robert Scoble&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/beffjezos"&gt;Beff (e/acc)&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/elder_plinius"&gt;Pliny the Liberator 🐉󠅫󠄼󠄿󠅆󠄵󠄐󠅀󠄼󠄹󠄾󠅉󠅭&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+&lt;blockquote&gt;@1x_tech i wanna see neo play fur elise on piano&lt;/blockquote&gt;</content:encoded>
+      <guid isPermaLink="false">578f3d63-10ec-488f-99c3-5807664bdbaa</guid>
       <category>Digg AI from X</category>
-      <pubDate>Thu, 09 Jul 2026 08:24:08 +0000</pubDate>
+      <pubDate>Thu, 09 Jul 2026 16:44:28 +0000</pubDate>
     </item>
     <item>
-      <title>New Jersey Bill Requires Multi-Sensor Hardware for Robotaxis, Targeting Tesla</title>
-      <link>https://x.com/niccruzpatane/status/2074988847591493639</link>
-      <description>New Jersey Bill Requires Multi-Sensor Hardware for Robotaxis, Targeting Tesla</description>
-      <content:encoded>&lt;p&gt;New Jersey Bill Requires Multi-Sensor Hardware for Robotaxis, Targeting Tesla&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://x.com/niccruzpatane/status/2074988847591493639"&gt;https://x.com/niccruzpatane/status/2074988847591493639&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/sbazhvaf"&gt;https://digg.com/tech/sbazhvaf&lt;/a&gt;&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 60,977&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 1,016&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 18&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 3&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 67&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 3&lt;/li&gt;&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/bscholl"&gt;Blake Scholl 🛫&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/jasoncrawford"&gt;Jason Crawford&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
-&lt;blockquote&gt;Which self driving car company is feeling threatened by Tesla and trying to use government to win when they couldn’t win fair and square?&lt;/blockquote&gt;</content:encoded>
-      <guid isPermaLink="false">3d9f1f81-eb11-4515-9778-89ab1f1db585</guid>
+      <title>Anthropic resets all Claude usage rate limits following OpenAI GPT-5.6 and SuperApp launches</title>
+      <link>https://x.com/ClaudeDevs/status/2075279141352706215</link>
+      <description>The surprise update clears accumulated limits across all at once.</description>
+      <content:encoded>&lt;p&gt;The surprise update clears accumulated limits across all at once.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://x.com/ClaudeDevs/status/2075279141352706215"&gt;https://x.com/ClaudeDevs/status/2075279141352706215&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/ydrovmo5"&gt;https://digg.com/tech/ydrovmo5&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 765,383&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 15,443&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 463&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 92&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 810&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 16&lt;/li&gt;&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/alexalbert__"&gt;Alex Albert&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/_catwu"&gt;cat&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/growing_daniel"&gt;Daniel&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/AndrewCurran_"&gt;Andrew Curran&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/trq212"&gt;Thariq&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+&lt;blockquote&gt;What a move! Anthropic seriously waited until OpenAI released GPT-5.6 and the SuperApp before announcing they&amp;#x27;d reset the weekly rates. That&amp;#x27;s a clear message to OpenAI.&lt;/blockquote&gt;</content:encoded>
+      <guid isPermaLink="false">f92e04fc-58ce-4035-8fc6-4573ae460910</guid>
       <category>Digg AI from X</category>
-      <pubDate>Thu, 09 Jul 2026 12:43:39 +0000</pubDate>
-    </item>
-    <item>
-      <title>AI commentators hype rumored GPT-5.6 Sol model running at 750 tokens per second on Cerebras hardware</title>
-      <link>https://www.cerebras.ai/blog/introducing-cerebras-inference-ai-at-instant-speed</link>
-      <description>No official benchmarks or technical documentation have been released yet.</description>
-      <content:encoded>&lt;p&gt;No official benchmarks or technical documentation have been released yet.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://www.cerebras.ai/blog/introducing-cerebras-inference-ai-at-instant-speed"&gt;https://www.cerebras.ai/blog/introducing-cerebras-inference-ai-at-instant-speed&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/0qzlzdpd"&gt;https://digg.com/tech/0qzlzdpd&lt;/a&gt;&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 51,261&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 837&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 40&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 1&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 50&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 3&lt;/li&gt;&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/rohanpaul_ai"&gt;Rohan Paul&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/kimmonismus"&gt;Chubby♨️&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
-&lt;blockquote&gt;I am so freaking ready to use GPT-5.6 Sol at 750 token/s Its release day friends. Get ready. Today is gonna be a great day!&lt;/blockquote&gt;</content:encoded>
-      <guid isPermaLink="false">bbbe1daa-11e2-470a-8700-3de451bf2693</guid>
-      <category>Digg AI from X</category>
-      <pubDate>Thu, 09 Jul 2026 08:05:45 +0000</pubDate>
-    </item>
-    <item>
-      <title>Grok 4.5 debuts in fourth place on Voxelbench and the Artificial Analysis Intelligence Index</title>
-      <link>https://artificialanalysis.ai/articles/grok-4-5-brings-spacexai-to-the-the-intelligence-frontier</link>
-      <description>The model scored a 16-point improvement over Grok 4.3.</description>
-      <content:encoded>&lt;p&gt;The model scored a 16-point improvement over Grok 4.3.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://artificialanalysis.ai/articles/grok-4-5-brings-spacexai-to-the-the-intelligence-frontier"&gt;https://artificialanalysis.ai/articles/grok-4-5-brings-spacexai-to-the-the-intelligence-frontier&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/p5pewezr"&gt;https://digg.com/tech/p5pewezr&lt;/a&gt;&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 46,819&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 1,102&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 70&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 2&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 25&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 2&lt;/li&gt;&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/yacineMTB"&gt;kache&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/scaling01"&gt;Lisan al Gaib&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
-&lt;blockquote&gt;@yacineMTB They were essentially a frontier tier lab without the capital and compute to compete at the frontier. It was the perfect acquisition for both sides.&lt;/blockquote&gt;</content:encoded>
-      <guid isPermaLink="false">64725fea-cd01-47bd-a1af-0a2b5a3ace7c</guid>
-      <category>Digg AI from X</category>
-      <pubDate>Thu, 09 Jul 2026 11:14:46 +0000</pubDate>
-    </item>
-    <item>
-      <title>OpenAI drops GPT-5.6 Sol and GPT-Live alongside a wave of model releases from ByteDance and Meta</title>
-      <link>https://alignednews.com/ai</link>
-      <description>The sudden rollout includes ByteDance's Seedream 5 Pro image generator.</description>
-      <content:encoded>&lt;p&gt;The sudden rollout includes ByteDance&amp;#x27;s Seedream 5 Pro image generator.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://alignednews.com/ai"&gt;https://alignednews.com/ai&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/06pzv6er"&gt;https://digg.com/tech/06pzv6er&lt;/a&gt;&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 4,493&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 21&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 3&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 4&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 5&lt;/li&gt;&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/Scobleizer"&gt;Robert Scoble&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/venturetwins"&gt;Justine Moore&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/altryne"&gt;Alex Volkov @ AI Engineer&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/dwr"&gt;Dan Romero&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
-&lt;blockquote&gt;&amp;gt; Today we&amp;#x27;re releasing Muse Spark 1.1&lt;/blockquote&gt;</content:encoded>
-      <guid isPermaLink="false">72fc0a46-01e8-4653-915f-7d39d727c79a</guid>
-      <category>Digg AI from X</category>
-      <pubDate>Thu, 09 Jul 2026 08:05:25 +0000</pubDate>
-    </item>
-    <item>
-      <title>OpenAI schedules a livestream amid rumors of an upcoming GPT-5.6 model release</title>
-      <link>https://x.com/kimmonismus/status/2075219837677089206/photo/1</link>
-      <description>The broadcast is set for today at 10:00 AM PST.</description>
-      <content:encoded>&lt;p&gt;The broadcast is set for today at 10:00 AM PST.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://x.com/kimmonismus/status/2075219837677089206/photo/1"&gt;https://x.com/kimmonismus/status/2075219837677089206/photo/1&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/tbm0h9n0"&gt;https://digg.com/tech/tbm0h9n0&lt;/a&gt;&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 15,318&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 342&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 25&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 2&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 24&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 3&lt;/li&gt;&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/AndrewCurran_"&gt;Andrew Curran&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/kimmonismus"&gt;Chubby♨️&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
-&lt;blockquote&gt;@AndrewCurran_&lt;/blockquote&gt;</content:encoded>
-      <guid isPermaLink="false">933ce492-103d-4b89-9a39-1070293fdbd8</guid>
-      <category>Digg AI from X</category>
-      <pubDate>Thu, 09 Jul 2026 13:57:43 +0000</pubDate>
+      <pubDate>Thu, 09 Jul 2026 18:21:38 +0000</pubDate>
     </item>
   </channel>
 </rss>
