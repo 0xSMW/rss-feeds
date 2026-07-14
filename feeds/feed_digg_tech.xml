@@ -7,146 +7,136 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 13 Jul 2026 14:14:16 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 14 Jul 2026 01:46:49 +0000</lastBuildDate>
     <item>
-      <title>Herbie Bradley says data curation is undervalued compared to model development</title>
-      <link>https://x.com/OfficialLoganK/status/2076393038843375810</link>
-      <description>The debate started after scale AI founder Alexandr Wang faced criticism.</description>
-      <content:encoded>&lt;p&gt;The debate started after scale AI founder Alexandr Wang faced criticism.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://x.com/OfficialLoganK/status/2076393038843375810"&gt;https://x.com/OfficialLoganK/status/2076393038843375810&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/7mj9343u"&gt;https://digg.com/tech/7mj9343u&lt;/a&gt;&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 57,960&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 347&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 66&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 10&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 5&lt;/li&gt;&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/yacineMTB"&gt;kache&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/kalomaze"&gt;kalomaze&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/herbiebradley"&gt;Herbie Bradley&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/ajratner"&gt;Alex Ratner&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
-&lt;blockquote&gt;@OfficialLoganK I don&amp;#x27;t understand why all the comments scream to release the new model. If they did and it wasn&amp;#x27;t amazing you guys would just shit all over it. Wouldn&amp;#x27;t you rather them release it when it&amp;#x27;s ready?&lt;/blockquote&gt;</content:encoded>
-      <guid isPermaLink="false">eec6ee54-f00c-47a8-b78b-75cf9bac97cb</guid>
+      <title>X rolls out algorithmic update favoring mutuals in reply sections</title>
+      <link>https://x.com/nikitabier</link>
+      <description>Head of Product Nikita Bier says it fixes a data omission.</description>
+      <content:encoded>&lt;p&gt;Head of Product Nikita Bier says it fixes a data omission.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://x.com/nikitabier"&gt;https://x.com/nikitabier&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/6456ilv7"&gt;https://digg.com/tech/6456ilv7&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 1,840,134&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 21,607&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 1,296&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 1,974&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 5,679&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 29&lt;/li&gt;&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/swyx"&gt;swyx&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/nikitabier"&gt;Nikita Bier&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/beffjezos"&gt;Beff (e/acc)&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/tunguz"&gt;Bojan Tunguz&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/growing_daniel"&gt;Daniel&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;</content:encoded>
+      <guid isPermaLink="false">060b97a7-ebfb-40d2-8d2b-52e0014c81a6</guid>
       <category>Digg AI from X</category>
-      <pubDate>Mon, 13 Jul 2026 07:53:24 +0000</pubDate>
+      <pubDate>Mon, 13 Jul 2026 19:28:01 +0000</pubDate>
     </item>
     <item>
-      <title>YC partner Tom Blomfield joins Anthropic compute team</title>
-      <link>https://x.com/t_blom/status/2076580921398931788</link>
-      <description>He is taking a leave of absence to work with co-founder Tom Brown.</description>
-      <content:encoded>&lt;p&gt;He is taking a leave of absence to work with co-founder Tom Brown.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://x.com/t_blom/status/2076580921398931788"&gt;https://x.com/t_blom/status/2076580921398931788&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/hzfgc14v"&gt;https://digg.com/tech/hzfgc14v&lt;/a&gt;&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 66,141&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 552&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 91&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 2&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 20&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 4&lt;/li&gt;&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/NotTomBrown"&gt;Tom Brown&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/AndrewCurran_"&gt;Andrew Curran&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/blakeir"&gt;Blake Robbins&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/justindross"&gt;JD Ross&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
-&lt;blockquote&gt;Grouper mafia!&lt;/blockquote&gt;</content:encoded>
-      <guid isPermaLink="false">6bf8b756-07af-40d7-8238-f37b6ef8d0ee</guid>
+      <title>Over 200 researchers and economists warn of rapid AI-driven economic displacement</title>
+      <link>https://www.wemustactnow.ai/</link>
+      <description>Signatories include Yoshua Bengio, Jeff Dean, and Eric Schmidt.</description>
+      <content:encoded>&lt;p&gt;Signatories include Yoshua Bengio, Jeff Dean, and Eric Schmidt.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://www.wemustactnow.ai/"&gt;https://www.wemustactnow.ai/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/0yaugnfx"&gt;https://digg.com/tech/0yaugnfx&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 625,706&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 3,125&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 1,041&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 155&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 276&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 41&lt;/li&gt;&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/boazbaraktcs"&gt;Boaz Barak&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/emollick"&gt;Ethan Mollick&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/Yoshua_Bengio"&gt;Yoshua Bengio&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/erikbryn"&gt;Erik Brynjolfsson&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/AndrewCurran_"&gt;Andrew Curran&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;</content:encoded>
+      <guid isPermaLink="false">399b71e7-262e-4cf1-a349-7020da1c9c1e</guid>
       <category>Digg AI from X</category>
-      <pubDate>Mon, 13 Jul 2026 11:43:20 +0000</pubDate>
+      <pubDate>Mon, 13 Jul 2026 13:16:21 +0000</pubDate>
     </item>
     <item>
-      <title>Users mock Anthropic with meme over repeated Claude Fable 5 extensions</title>
-      <link>https://x.com/cocktailpeanut/status/2076368055945384168</link>
-      <description>A viral Wikipedia-style screenshot compared the notices to empty warnings.</description>
-      <content:encoded>&lt;p&gt;A viral Wikipedia-style screenshot compared the notices to empty warnings.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://x.com/cocktailpeanut/status/2076368055945384168"&gt;https://x.com/cocktailpeanut/status/2076368055945384168&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/uhgqry9w"&gt;https://digg.com/tech/uhgqry9w&lt;/a&gt;&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 76,538&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 749&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 65&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 9&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 86&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 6&lt;/li&gt;&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/peteskomoroch"&gt;Pete Skomoroch&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/kimmonismus"&gt;Chubby♨️&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/xlr8harder"&gt;xlr8harder&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
-&lt;blockquote&gt;Three options: - They release Opus 5 on July 19th or 21st to appease the public and remove Fable 5. - They extend Fable 5&amp;#x27;s support again, and many people make fun of the fact that Anthropic can&amp;#x27;t withstand OpenAI&amp;#x27;s pressure. - They find a final solution by the end of next week to ensure Fable 5&amp;#x27;s long-term viability (more computing power). I now consider it highly unlikely that virtually nothing will happen and Fable 5 will be removed without a solution.&lt;/blockquote&gt;</content:encoded>
-      <guid isPermaLink="false">f19eff93-e538-479c-8b3d-67a18804d529</guid>
-      <category>Digg AI from X</category>
-      <pubDate>Mon, 13 Jul 2026 07:23:43 +0000</pubDate>
-    </item>
-    <item>
-      <title>OpenAI temporarily lifts subscription caps while optimizing GPT-5.6 Sol</title>
-      <link>https://x.com/thsottiaux/status/2076365965915467978</link>
-      <description>The context window was reduced to mitigate resource burn.</description>
-      <content:encoded>&lt;p&gt;The context window was reduced to mitigate resource burn.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://x.com/thsottiaux/status/2076365965915467978"&gt;https://x.com/thsottiaux/status/2076365965915467978&lt;/a&gt;&lt;/p&gt;
+      <title>OpenAI gives users weekly usage resets to celebrate 7 million milestone</title>
+      <link>https://x.com/thsottiaux</link>
+      <description>A brief deployment bug required manual resets for 500,000 accounts.</description>
+      <content:encoded>&lt;p&gt;A brief deployment bug required manual resets for 500,000 accounts.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://x.com/thsottiaux"&gt;https://x.com/thsottiaux&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/nf7sdptd"&gt;https://digg.com/tech/nf7sdptd&lt;/a&gt;&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 64,985&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 647&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 55&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 2&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 48&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 3&lt;/li&gt;&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/romainhuet"&gt;Romain Huet&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/kimmonismus"&gt;Chubby♨️&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/zephyr_z9"&gt;Zephyr&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
-&lt;blockquote&gt;@thsottiaux goat&lt;/blockquote&gt;</content:encoded>
+&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 1,513,563&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 22,035&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 925&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 568&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 2,263&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 13&lt;/li&gt;&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/sama"&gt;Sam Altman&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/jasondeanlee"&gt;Jason Lee&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/yacineMTB"&gt;kache&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/thsottiaux"&gt;Tibo&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/romainhuet"&gt;Romain Huet&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;</content:encoded>
       <guid isPermaLink="false">bd72afb8-c736-4a29-b943-57b2d75ef1b1</guid>
       <category>Digg AI from X</category>
       <pubDate>Mon, 13 Jul 2026 08:05:15 +0000</pubDate>
     </item>
     <item>
-      <title>Will Depue shows neural network weights retain initialization patterns after training</title>
-      <link>https://x.com/yacineMTB/status/2076626587198337315/photo/1</link>
-      <description>Only AdamW with high weight decay successfully erased the watermarks.</description>
-      <content:encoded>&lt;p&gt;Only AdamW with high weight decay successfully erased the watermarks.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://x.com/yacineMTB/status/2076626587198337315/photo/1"&gt;https://x.com/yacineMTB/status/2076626587198337315/photo/1&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/xjh0j7z1"&gt;https://digg.com/tech/xjh0j7z1&lt;/a&gt;&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 91,683&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 991&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 292&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 12&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 52&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 9&lt;/li&gt;&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/yacineMTB"&gt;kache&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
-&lt;blockquote&gt;i survived tinystories training! (i need to boost init its too hard to see me from the start)&lt;/blockquote&gt;</content:encoded>
-      <guid isPermaLink="false">67778d29-8619-43a0-816e-960d0a4de41e</guid>
+      <title>xAI Grok CLI secretly uploaded entire Git repositories to Google Cloud</title>
+      <link>https://newsletter.pragmaticengineer.com/p/cursor</link>
+      <description>The tool sent gigabytes of private code before being disabled</description>
+      <content:encoded>&lt;p&gt;The tool sent gigabytes of private code before being disabled&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://newsletter.pragmaticengineer.com/p/cursor"&gt;https://newsletter.pragmaticengineer.com/p/cursor&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/skqvhz19"&gt;https://digg.com/tech/skqvhz19&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 4,964,057&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 21,938&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 1,618&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 299&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 2,447&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 23&lt;/li&gt;&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/elonmusk"&gt;Elon Musk&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/BlancheMinerva"&gt;Stella Biderman @ ICML&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/Teknium"&gt;Teknium 🪽&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/_xjdr"&gt;xjdr&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/GergelyOrosz"&gt;Gergely Orosz&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;</content:encoded>
+      <guid isPermaLink="false">9456d870-d84c-42cf-b46a-4e4ebc31a368</guid>
       <category>Digg AI from X</category>
-      <pubDate>Mon, 13 Jul 2026 08:23:15 +0000</pubDate>
+      <pubDate>Mon, 13 Jul 2026 13:23:40 +0000</pubDate>
     </item>
     <item>
-      <title>Palantir's Alex Karp argues enterprises must retain proprietary data and model weights</title>
-      <link>https://www.salesforce.com/ca/artificial-intelligence/trusted-ai/</link>
-      <description>The data sovereignty warning follows Microsoft's launch of its Foundry platform.</description>
-      <content:encoded>&lt;p&gt;The data sovereignty warning follows Microsoft&amp;#x27;s launch of its Foundry platform.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://www.salesforce.com/ca/artificial-intelligence/trusted-ai/"&gt;https://www.salesforce.com/ca/artificial-intelligence/trusted-ai/&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/y5fcjp9v"&gt;https://digg.com/tech/y5fcjp9v&lt;/a&gt;&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 243,927&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 1,019&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 437&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 15&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 76&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 3&lt;/li&gt;&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/chamath"&gt;Chamath Palihapitiya&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/xlr8harder"&gt;xlr8harder&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
-&lt;blockquote&gt;When we look back, Alex Karp may have initiated an important preference cascade around AI sovereignty. It’s worth noting what @Benioff and @satyanadella are both saying: Your knowledge, as a company, is your sovereignty. If you lose it to someone else (anyone else) you are hollowing your organization out. There are many ways to accidentally leak intelligence so you need partners and tools who can sign up for the complexity required to give it to you. See Benioff below and see Satya’s essay linked below.&lt;/blockquote&gt;</content:encoded>
-      <guid isPermaLink="false">2f6e3b2c-2012-4f49-877b-07e1417906f1</guid>
+      <title>US military executes first sea drone strike on Iranian naval facility</title>
+      <link>https://x.com/CENTCOM</link>
+      <description>CENTCOM deployed three unmanned Corsair vessels to target maintenance facilities.</description>
+      <content:encoded>&lt;p&gt;CENTCOM deployed three unmanned Corsair vessels to target maintenance facilities.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://x.com/CENTCOM"&gt;https://x.com/CENTCOM&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/735ef355"&gt;https://digg.com/tech/735ef355&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 614,554&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 5,853&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 393&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 22&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 173&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 18&lt;/li&gt;&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/nathanbenaich"&gt;Nathan Benaich&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/Jason"&gt;@jason&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/shaunmmaguire"&gt;Shaun Maguire&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/altcap"&gt;Brad Gerstner&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/JTLonsdale"&gt;Joe Lonsdale&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;</content:encoded>
+      <guid isPermaLink="false">abd9d47a-4640-488d-9ecd-fc8a8ee577a3</guid>
       <category>Digg AI from X</category>
-      <pubDate>Mon, 13 Jul 2026 09:34:21 +0000</pubDate>
+      <pubDate>Mon, 13 Jul 2026 15:43:37 +0000</pubDate>
     </item>
     <item>
-      <title>Physicist Yuji Tachikawa uses Claude to solve stalled string theory problem</title>
-      <link>https://x.com/42_gravity/status/2076363358866223314</link>
-      <description>The model spotted a calculation error and generated SymPy code.</description>
-      <content:encoded>&lt;p&gt;The model spotted a calculation error and generated SymPy code.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://x.com/42_gravity/status/2076363358866223314"&gt;https://x.com/42_gravity/status/2076363358866223314&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/bjms7wrt"&gt;https://digg.com/tech/bjms7wrt&lt;/a&gt;&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 70,140&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 568&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 106&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 1&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 31&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 2&lt;/li&gt;&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/garrytan"&gt;Garry Tan&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/repligate"&gt;j⧉nus&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
-&lt;blockquote&gt;です。ずっと(人間特有の?)直観なんて無い、理解なんてまやかしだと思っているので、機械が人間より知性の面で高性能になっても驚きませんが、理解とか直観というものがあると思う人には Fable は弦理論をちゃんと理解して直観もあるように思うだろうなあという感想です。&lt;/blockquote&gt;</content:encoded>
-      <guid isPermaLink="false">cb17457b-d31e-4509-b314-1f4d0212628f</guid>
+      <title>Sam Altman claims users stay because OpenAI treats them well</title>
+      <link>https://x.com/sama</link>
+      <description>The comment drew developer praise for OpenAI's API rate limits.</description>
+      <content:encoded>&lt;p&gt;The comment drew developer praise for OpenAI&amp;#x27;s API rate limits.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://x.com/sama"&gt;https://x.com/sama&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/snicza03"&gt;https://digg.com/tech/snicza03&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 783,545&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 12,902&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 545&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 224&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 1,334&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 9&lt;/li&gt;&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/sama"&gt;Sam Altman&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/andrew_n_carr"&gt;Andrew Carr 🤸&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/tunguz"&gt;Bojan Tunguz&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/blader"&gt;Siqi Chen&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/jerryjliu0"&gt;Jerry Liu&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;</content:encoded>
+      <guid isPermaLink="false">b376f1fe-aa37-4e56-8ca5-ed1a4f9d2aa9</guid>
       <category>Digg AI from X</category>
-      <pubDate>Mon, 13 Jul 2026 07:12:54 +0000</pubDate>
+      <pubDate>Mon, 13 Jul 2026 21:38:10 +0000</pubDate>
     </item>
     <item>
-      <title>Analysis claims Elon Musk excels at scaling tech from 0.5 to 100</title>
-      <link>https://x.com/teortaxesTex/status/2076578512622784525</link>
-      <description>Chinese competitors instead focus on scaling established innovations from 1 to 100.</description>
-      <content:encoded>&lt;p&gt;Chinese competitors instead focus on scaling established innovations from 1 to 100.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://x.com/teortaxesTex/status/2076578512622784525"&gt;https://x.com/teortaxesTex/status/2076578512622784525&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/sqz2mlwy"&gt;https://digg.com/tech/sqz2mlwy&lt;/a&gt;&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 17,236&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 479&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 79&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 1&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 20&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 2&lt;/li&gt;&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/yacineMTB"&gt;kache&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/teortaxesTex"&gt;Teortaxes▶️ (DeepSeek 推特🐋铁粉 2023 – ∞)&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
-&lt;blockquote&gt;@teortaxesTex Is there anything that is truely a 0 and not a 0.5? Shoulders of giants and stuff&lt;/blockquote&gt;</content:encoded>
-      <guid isPermaLink="false">043c8bb5-573a-4a99-b5a9-4bae7b6e997a</guid>
+      <title>RL pioneer Richard Sutton co-founds Oak Lab to bypass deep learning</title>
+      <link>https://x.com/RichardSSutton</link>
+      <description>The startup pivots from Carmack's Keen Technologies to new RL methods</description>
+      <content:encoded>&lt;p&gt;The startup pivots from Carmack&amp;#x27;s Keen Technologies to new RL methods&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://x.com/RichardSSutton"&gt;https://x.com/RichardSSutton&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/5p0hdvmr"&gt;https://digg.com/tech/5p0hdvmr&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 252,589&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 2,266&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 612&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 40&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 107&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 11&lt;/li&gt;&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/RichardSSutton"&gt;Richard Sutton&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/GaryMarcus"&gt;Gary Marcus&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/agarwl_"&gt;Rishabh Agarwal&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/yacineMTB"&gt;kache&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/infoxiao"&gt;Xiao Ma&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;</content:encoded>
+      <guid isPermaLink="false">dd57e53e-c6a9-4cde-bff5-0e99798c009b</guid>
       <category>Digg AI from X</category>
-      <pubDate>Mon, 13 Jul 2026 08:12:35 +0000</pubDate>
+      <pubDate>Mon, 13 Jul 2026 13:55:38 +0000</pubDate>
     </item>
     <item>
-      <title>OpenAI Sol decodes hidden message from visual noise in 40-minute test</title>
-      <link>https://x.com/Moleh1ll/status/2076230275504173139</link>
-      <description>Developer fofr ran the test using a ghost font video frame.</description>
-      <content:encoded>&lt;p&gt;Developer fofr ran the test using a ghost font video frame.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://x.com/Moleh1ll/status/2076230275504173139"&gt;https://x.com/Moleh1ll/status/2076230275504173139&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/5qqqgb17"&gt;https://digg.com/tech/5qqqgb17&lt;/a&gt;&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 38,975&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 141&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 40&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 2&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 14&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 4&lt;/li&gt;&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/steipete"&gt;Peter Steinberger 🦞&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/fofrAI"&gt;fofr&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
-&lt;blockquote&gt;I tried asking Sol to find hidden text with an image that contained a real hidden message. The static image is a 5x5 grid of 25 frames from a ghost font video. After 40mins of thinking and one nudge, Sol gets to almost the correct answer “FOUR SAYS YO”, real message is “FOFR SAYS YO”.&lt;/blockquote&gt;</content:encoded>
-      <guid isPermaLink="false">f6d38459-1cd8-405f-8e31-35ef97f0ca2c</guid>
+      <title>Helium-powered floating companion robot designed for indoor use</title>
+      <link>https://x.com/clankrmedia</link>
+      <description>Commentators suggest pairing the silent, flapping robot with LLMs.</description>
+      <content:encoded>&lt;p&gt;Commentators suggest pairing the silent, flapping robot with LLMs.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://x.com/clankrmedia"&gt;https://x.com/clankrmedia&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/uszxjsnt"&gt;https://digg.com/tech/uszxjsnt&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 147,264&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 2,641&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 500&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 3&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 106&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 15&lt;/li&gt;&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/teortaxesTex"&gt;Teortaxes▶️ (DeepSeek 推特🐋铁粉 2023 – ∞)&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/AndrewCurran_"&gt;Andrew Curran&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/DanielleFong"&gt;Danielle Fong 🔆&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/deepfates"&gt;🎭&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/Andercot"&gt;Andrew Côté&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;</content:encoded>
+      <guid isPermaLink="false">0a6bcd13-c696-4bcd-8bfc-7d44645715d9</guid>
       <category>Digg AI from X</category>
-      <pubDate>Mon, 13 Jul 2026 07:12:36 +0000</pubDate>
+      <pubDate>Mon, 13 Jul 2026 14:56:01 +0000</pubDate>
     </item>
     <item>
-      <title>OpenAI's Gabriel Petersson says human understanding bottlenecks AI's economic impact</title>
-      <link>https://x.com/gabriel1/status/2076658675595268432</link>
-      <description>A founder disputes this, citing widespread creative use on social media.</description>
-      <content:encoded>&lt;p&gt;A founder disputes this, citing widespread creative use on social media.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://x.com/gabriel1/status/2076658675595268432"&gt;https://x.com/gabriel1/status/2076658675595268432&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/d3noa64n"&gt;https://digg.com/tech/d3noa64n&lt;/a&gt;&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 6,867&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 217&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 25&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 3&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 25&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 2&lt;/li&gt;&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/tunguz"&gt;Bojan Tunguz&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/gabriel1"&gt;gabriel&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
-&lt;blockquote&gt;not quite. people outside of tech use AI for a lot of different creative activities, such as posting LinkedIn slop.&lt;/blockquote&gt;</content:encoded>
-      <guid isPermaLink="false">0792dd56-88ad-4cb3-8460-9e1917d5ddfe</guid>
+      <title>YC partner Tom Blomfield joins Anthropic compute team</title>
+      <link>https://x.com/bosmeny</link>
+      <description>He is taking a leave of absence to work with co-founder Tom Brown.</description>
+      <content:encoded>&lt;p&gt;He is taking a leave of absence to work with co-founder Tom Brown.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://x.com/bosmeny"&gt;https://x.com/bosmeny&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/hzfgc14v"&gt;https://digg.com/tech/hzfgc14v&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 509,524&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 3,375&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 583&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 15&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 150&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 9&lt;/li&gt;&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/garrytan"&gt;Garry Tan&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/NotTomBrown"&gt;Tom Brown&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/AndrewCurran_"&gt;Andrew Curran&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/scaling01"&gt;Lisan al Gaib&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/pitdesi"&gt;Sheel Mohnot&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;</content:encoded>
+      <guid isPermaLink="false">6bf8b756-07af-40d7-8238-f37b6ef8d0ee</guid>
       <category>Digg AI from X</category>
-      <pubDate>Mon, 13 Jul 2026 13:37:56 +0000</pubDate>
+      <pubDate>Mon, 13 Jul 2026 11:43:20 +0000</pubDate>
+    </item>
+    <item>
+      <title>Riley Goodside prompts Claude Fable 5 to generate 150-Pokémon crossword</title>
+      <link>https://x.com/srush_nlp/status/2076801522055168257/photo/1</link>
+      <description>The model generated a verified, fully interlocked 47-by-50 grid.</description>
+      <content:encoded>&lt;p&gt;The model generated a verified, fully interlocked 47-by-50 grid.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://x.com/srush_nlp/status/2076801522055168257/photo/1"&gt;https://x.com/srush_nlp/status/2076801522055168257/photo/1&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/0l4icgn6"&gt;https://digg.com/tech/0l4icgn6&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 160,599&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 1,217&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 177&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 22&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 74&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 20&lt;/li&gt;&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/srush_nlp"&gt;Sasha Rush&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/giffmana"&gt;Lucas Beyer (bl16)&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/goodside"&gt;Riley Goodside&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/BorisMPower"&gt;Boris Power&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/repligate"&gt;j⧉nus&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;</content:encoded>
+      <guid isPermaLink="false">f72279dc-c4a2-4e03-b1e4-98a4a4ac0b8f</guid>
+      <category>Digg AI from X</category>
+      <pubDate>Mon, 13 Jul 2026 15:12:24 +0000</pubDate>
     </item>
   </channel>
 </rss>
