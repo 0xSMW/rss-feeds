@@ -7,71 +7,58 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 15 Jul 2026 13:18:37 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 16 Jul 2026 01:53:01 +0000</lastBuildDate>
     <item>
-      <title>Industry figures challenge Hassabis on AI regulation and AGI distribution</title>
+      <title>Thinking Machines releases Inkling multimodal reasoning model with open weights</title>
+      <link>https://thinkingmachines.ai/news/introducing-inkling/</link>
+      <description>The model processes text, images, and audio via the Tinker platform.</description>
+      <content:encoded>&lt;p&gt;The model processes text, images, and audio via the Tinker platform.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://thinkingmachines.ai/news/introducing-inkling/"&gt;https://thinkingmachines.ai/news/introducing-inkling/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/hrt6ltes"&gt;https://digg.com/tech/hrt6ltes&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 2,247,483&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 25,099&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 5,342&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 188&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 848&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 131&lt;/li&gt;&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/lilianweng"&gt;Lilian Weng&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/johnschulman2"&gt;John Schulman&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/miramurati"&gt;Mira Murati&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/soumithchintala"&gt;Soumith Chintala&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/ericjang11"&gt;Eric Jang&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;</content:encoded>
+      <guid isPermaLink="false">25854998-7e90-42cd-b0d2-f70e8c6ba10a</guid>
+      <category>Digg AI from X</category>
+      <pubDate>Wed, 15 Jul 2026 18:06:57 +0000</pubDate>
+    </item>
+    <item>
+      <title>Thinking Machines Lab releases 975B parameter multimodal MoE model Inkling</title>
+      <link>https://thinkingmachines.ai/news/introducing-inkling/</link>
+      <description>The open-weights model supports a 1M token context window.</description>
+      <content:encoded>&lt;p&gt;The open-weights model supports a 1M token context window.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://thinkingmachines.ai/news/introducing-inkling/"&gt;https://thinkingmachines.ai/news/introducing-inkling/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/h0mkje58"&gt;https://digg.com/tech/h0mkje58&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 281,463&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 3,179&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 607&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 31&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 128&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 45&lt;/li&gt;&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/_akhaliq"&gt;AK&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/soumithchintala"&gt;Soumith Chintala&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/natolambert"&gt;Nathan Lambert&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/_arohan_"&gt;rohan anil&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/ClementDelangue"&gt;clem 🤗&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;</content:encoded>
+      <guid isPermaLink="false">9f342de7-7288-4c12-9242-0ca3e57f2e6c</guid>
+      <category>Digg AI from X</category>
+      <pubDate>Wed, 15 Jul 2026 18:05:01 +0000</pubDate>
+    </item>
+    <item>
+      <title>DeepMind CEO Demis Hassabis proposes third-party testing framework for frontier AI</title>
       <link>https://x.com/demishassabis</link>
-      <description>Critics warn of regulatory capture and incentives against renting AGI.</description>
-      <content:encoded>&lt;p&gt;Critics warn of regulatory capture and incentives against renting AGI.&lt;/p&gt;
+      <description>Satya Nadella, Elon Musk, and Anthropic's Tom Brown endorsed the plan.</description>
+      <content:encoded>&lt;p&gt;Satya Nadella, Elon Musk, and Anthropic&amp;#x27;s Tom Brown endorsed the plan.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://x.com/demishassabis"&gt;https://x.com/demishassabis&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/efz7fwvw"&gt;https://digg.com/tech/efz7fwvw&lt;/a&gt;&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 20,283&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 171&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 29&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 5&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 37&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 6&lt;/li&gt;&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/EMostaque"&gt;Emad&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/beffjezos"&gt;Beff (e/acc)&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/verena_rieser"&gt;Verena Rieser&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/Dan_Jeffries1"&gt;Daniel Jeffries&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;</content:encoded>
-      <guid isPermaLink="false">27dce26a-04b4-473a-9308-ec19c79b2aca</guid>
+&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/cs5k1iy5"&gt;https://digg.com/tech/cs5k1iy5&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 2,718,280&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 10,148&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 2,067&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 90&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 1,326&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 19&lt;/li&gt;&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/demishassabis"&gt;Demis Hassabis&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/jackclarkSF"&gt;Jack Clark&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/elonmusk"&gt;Elon Musk&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/Miles_Brundage"&gt;Miles Brundage&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/jack"&gt;jack&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;</content:encoded>
+      <guid isPermaLink="false">aceee15b-4e9a-465b-80cd-6e9d6399a61e</guid>
       <category>Digg AI from X</category>
-      <pubDate>Wed, 15 Jul 2026 08:32:01 +0000</pubDate>
+      <pubDate>Wed, 15 Jul 2026 11:04:43 +0000</pubDate>
     </item>
     <item>
-      <title>New York Governor signs first statewide data center moratorium</title>
-      <link>https://x.com/AOC</link>
-      <description>The one-year pause aims to establish AI infrastructure safeguards.</description>
-      <content:encoded>&lt;p&gt;The one-year pause aims to establish AI infrastructure safeguards.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://x.com/AOC"&gt;https://x.com/AOC&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/dk8y695w"&gt;https://digg.com/tech/dk8y695w&lt;/a&gt;&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 72,914&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 650&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 10&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 1&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 61&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 5&lt;/li&gt;&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/Jason"&gt;@jason&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/wolfejosh"&gt;Josh Wolfe&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/zacharynado"&gt;Zachary Nado&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;</content:encoded>
-      <guid isPermaLink="false">d77f1a1d-cacd-4888-a3ef-4d97cad2c2c7</guid>
+      <title>Bret Taylor stops using em dashes to avoid AI slop label</title>
+      <link>https://x.com/btaylor</link>
+      <description>OpenAI CPO Kevin Weil echoed the frustration over altered writing styles.</description>
+      <content:encoded>&lt;p&gt;OpenAI CPO Kevin Weil echoed the frustration over altered writing styles.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://x.com/btaylor"&gt;https://x.com/btaylor&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/2miw5pnh"&gt;https://digg.com/tech/2miw5pnh&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 1,356,793&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 24,705&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 910&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 489&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 998&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 15&lt;/li&gt;&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/karpathy"&gt;Andrej Karpathy&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/giffmana"&gt;Lucas Beyer (bl16)&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/sedielem"&gt;Sander Dieleman&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/kevinweil"&gt;Kevin Weil 🇺🇸&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/btaylor"&gt;Bret Taylor&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;</content:encoded>
+      <guid isPermaLink="false">3a1de274-de8b-44a6-9370-3dc0625bdd54</guid>
       <category>Digg AI from X</category>
-      <pubDate>Wed, 15 Jul 2026 07:24:55 +0000</pubDate>
-    </item>
-    <item>
-      <title>Spotify founder's Neko Health raises $700 million Series C</title>
-      <link>https://x.com/HNilsonne</link>
-      <description>The funding will expand its AI preventive health clinics to New York.</description>
-      <content:encoded>&lt;p&gt;The funding will expand its AI preventive health clinics to New York.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://x.com/HNilsonne"&gt;https://x.com/HNilsonne&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/hw5lfptl"&gt;https://digg.com/tech/hw5lfptl&lt;/a&gt;&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 17,151&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 112&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 11&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 18&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 6&lt;/li&gt;&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/alexisohanian"&gt;Alexis Ohanian 🗽&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/eldsjal"&gt;Daniel Ek&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/HarryStebbings"&gt;Harry Stebbings&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/matthewclifford"&gt;Matt Clifford&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;</content:encoded>
-      <guid isPermaLink="false">07c839e4-5d50-485f-b092-dcbd94f33479</guid>
-      <category>Digg AI from X</category>
-      <pubDate>Wed, 15 Jul 2026 10:08:06 +0000</pubDate>
-    </item>
-    <item>
-      <title>OpenAI reportedly develops screen-free AI smart speaker with cameras</title>
-      <link>https://www.bloomberg.com/news/articles/2026-07-14/openai-s-first-device-will-be-moveable-screenless-speaker-built-as-ai-companion?srnd=homepage-americas</link>
-      <description>The rumored device sparked privacy concerns over daily life data collection.</description>
-      <content:encoded>&lt;p&gt;The rumored device sparked privacy concerns over daily life data collection.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://www.bloomberg.com/news/articles/2026-07-14/openai-s-first-device-will-be-moveable-screenless-speaker-built-as-ai-companion?srnd=homepage-americas"&gt;https://www.bloomberg.com/news/articles/2026-07-14/openai-s-first-device-will-be-moveable-screenless-speaker-built-as-ai-companion?srnd=homepage-americas&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/jnft4l51"&gt;https://digg.com/tech/jnft4l51&lt;/a&gt;&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 141,036&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 957&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 46&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 14&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 219&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 4&lt;/li&gt;&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/Jason"&gt;@jason&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/chris_j_paxton"&gt;Chris Paxton&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/PeterDiamandis"&gt;Peter H. Diamandis, MD&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;</content:encoded>
-      <guid isPermaLink="false">c46eb59a-ffd1-44d5-a2a6-241758862708</guid>
-      <category>Digg AI from X</category>
-      <pubDate>Wed, 15 Jul 2026 08:24:22 +0000</pubDate>
-    </item>
-    <item>
-      <title>ChatGPT Work and Codex team plans usage reset near 10 million milestone</title>
-      <link>https://x.com/thsottiaux</link>
-      <description>Co-founder Benjamin Anderson approved resetting the usage limits this Friday.</description>
-      <content:encoded>&lt;p&gt;Co-founder Benjamin Anderson approved resetting the usage limits this Friday.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://x.com/thsottiaux"&gt;https://x.com/thsottiaux&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/d3vwsnw6"&gt;https://digg.com/tech/d3vwsnw6&lt;/a&gt;&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 31,750&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 563&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 15&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 2&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 24&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 4&lt;/li&gt;&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/yacineMTB"&gt;kache&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/kimmonismus"&gt;Chubby♨️&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/andersonbcdefg"&gt;Ben (no treats)&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/reach_vb"&gt;Vaibhav (VB) Srivastav&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;</content:encoded>
-      <guid isPermaLink="false">ca401ed5-f745-4201-9cbb-25e2390e9424</guid>
-      <category>Digg AI from X</category>
-      <pubDate>Wed, 15 Jul 2026 07:05:08 +0000</pubDate>
+      <pubDate>Wed, 15 Jul 2026 13:42:56 +0000</pubDate>
     </item>
     <item>
       <title>Elon Musk says X will open-source its entire codebase after security audit</title>
@@ -80,63 +67,76 @@
       <content:encoded>&lt;p&gt;Third-party reviewers will verify that production code matches the open-source release.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://x.com/elonmusk"&gt;https://x.com/elonmusk&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/wwlwm0bk"&gt;https://digg.com/tech/wwlwm0bk&lt;/a&gt;&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 1,043,338&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 17,357&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 822&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 511&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 1,994&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 2&lt;/li&gt;&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/elonmusk"&gt;Elon Musk&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/BrianRoemmele"&gt;Brian Roemmele&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;</content:encoded>
+&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 4,448,790&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 82,932&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 4,366&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 1,900&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 4,910&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 7&lt;/li&gt;&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/elonmusk"&gt;Elon Musk&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/MicahCarroll"&gt;Micah Carroll&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/rohanpaul_ai"&gt;Rohan Paul&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/BrianRoemmele"&gt;Brian Roemmele&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;</content:encoded>
       <guid isPermaLink="false">1b70eb01-07bc-4be2-b90f-d3a71f4008b7</guid>
       <category>Digg AI from X</category>
       <pubDate>Wed, 15 Jul 2026 11:56:34 +0000</pubDate>
     </item>
     <item>
-      <title>X's Nikita Bier says algorithm update will fix repetitive timelines</title>
-      <link>https://x.com/CosmicChirp</link>
-      <description>X plans to deploy a solution by the end of the week.</description>
-      <content:encoded>&lt;p&gt;X plans to deploy a solution by the end of the week.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://x.com/CosmicChirp"&gt;https://x.com/CosmicChirp&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/euqmfppp"&gt;https://digg.com/tech/euqmfppp&lt;/a&gt;&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 45,906&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 777&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 58&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 15&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 120&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 3&lt;/li&gt;&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/nikitabier"&gt;Nikita Bier&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/yacineMTB"&gt;kache&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/BrianRoemmele"&gt;Brian Roemmele&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;</content:encoded>
-      <guid isPermaLink="false">f8fe9955-7845-419d-b4dd-bc02d03fc508</guid>
+      <title>New York Governor signs first statewide data center moratorium</title>
+      <link>https://www.nvtc.org/press-releases/new-nvtc-report-virginia-data-centers-drive-40-billion-in-statewide-economic-impact/</link>
+      <description>The one-year pause aims to establish AI infrastructure safeguards.</description>
+      <content:encoded>&lt;p&gt;The one-year pause aims to establish AI infrastructure safeguards.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://www.nvtc.org/press-releases/new-nvtc-report-virginia-data-centers-drive-40-billion-in-statewide-economic-impact/"&gt;https://www.nvtc.org/press-releases/new-nvtc-report-virginia-data-centers-drive-40-billion-in-statewide-economic-impact/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/dk8y695w"&gt;https://digg.com/tech/dk8y695w&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 783,924&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 11,764&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 310&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 126&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 1,302&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 20&lt;/li&gt;&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/Miles_Brundage"&gt;Miles Brundage&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/DavidSacks"&gt;David Sacks&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/bgurley"&gt;Bill Gurley&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/typesfast"&gt;Ryan Petersen&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/Jason"&gt;@jason&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;</content:encoded>
+      <guid isPermaLink="false">d77f1a1d-cacd-4888-a3ef-4d97cad2c2c7</guid>
       <category>Digg AI from X</category>
-      <pubDate>Wed, 15 Jul 2026 09:45:34 +0000</pubDate>
+      <pubDate>Wed, 15 Jul 2026 07:24:55 +0000</pubDate>
     </item>
     <item>
-      <title>OpenAI offers $100 Codex credits for GPT-5.6 Sol feedback</title>
-      <link>https://switch-to-codex.openai.chatgpt.site/</link>
-      <description>Users must post feedback on social media to qualify.</description>
-      <content:encoded>&lt;p&gt;Users must post feedback on social media to qualify.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://switch-to-codex.openai.chatgpt.site/"&gt;https://switch-to-codex.openai.chatgpt.site/&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/lzue56ge"&gt;https://digg.com/tech/lzue56ge&lt;/a&gt;&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 44,216&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 504&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 40&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 5&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 48&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 3&lt;/li&gt;&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/romainhuet"&gt;Romain Huet&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/kimmonismus"&gt;Chubby♨️&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/reach_vb"&gt;Vaibhav (VB) Srivastav&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;</content:encoded>
-      <guid isPermaLink="false">dc42da90-e481-4de1-a61e-e2dfd8d4146b</guid>
+      <title>DeepMind scientist Alex Turner resigns over unrestricted military AI sales</title>
+      <link>https://turntrout.com/why-i-left-google-deepmind</link>
+      <description>Google dropped its internal AI weapons ban in 2025.</description>
+      <content:encoded>&lt;p&gt;Google dropped its internal AI weapons ban in 2025.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://turntrout.com/why-i-left-google-deepmind"&gt;https://turntrout.com/why-i-left-google-deepmind&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/8m3y5rky"&gt;https://digg.com/tech/8m3y5rky&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 508,513&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 8,663&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 1,363&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 93&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 223&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 37&lt;/li&gt;&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/giffmana"&gt;Lucas Beyer (bl16)&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/BlackHC"&gt;Andreas Kirsch 🇺🇦&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/mer__edith"&gt;Meredith Whittaker&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/teortaxesTex"&gt;Teortaxes▶️ (DeepSeek 推特🐋铁粉 2023 – ∞)&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/DKokotajlo"&gt;Daniel Kokotajlo&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;</content:encoded>
+      <guid isPermaLink="false">b145f479-8011-494d-89aa-a739a6124d8e</guid>
       <category>Digg AI from X</category>
-      <pubDate>Wed, 15 Jul 2026 07:11:20 +0000</pubDate>
+      <pubDate>Wed, 15 Jul 2026 12:13:11 +0000</pubDate>
     </item>
     <item>
-      <title>Booster Robotics releases T2 bipedal humanoid open development platform</title>
-      <link>https://x.com/boosterobotics</link>
-      <description>The robot features 2070 TFLOPS onboard compute and its own IDE.</description>
-      <content:encoded>&lt;p&gt;The robot features 2070 TFLOPS onboard compute and its own IDE.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://x.com/boosterobotics"&gt;https://x.com/boosterobotics&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/e2tywabz"&gt;https://digg.com/tech/e2tywabz&lt;/a&gt;&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 18,155&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 97&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 25&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 1&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 34&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 3&lt;/li&gt;&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/rohanpaul_ai"&gt;Rohan Paul&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/kimmonismus"&gt;Chubby♨️&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/svpino"&gt;Santiago&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;</content:encoded>
-      <guid isPermaLink="false">0416b43a-c59d-4eed-a616-646be37b2fd0</guid>
+      <title>OpenAI and Work Louder launch $230 hardware deck for AI coding</title>
+      <link>https://openai.com/supply/co-lab/work-louder/</link>
+      <description>The device features a tactile dial to adjust AI reasoning effort</description>
+      <content:encoded>&lt;p&gt;The device features a tactile dial to adjust AI reasoning effort&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://openai.com/supply/co-lab/work-louder/"&gt;https://openai.com/supply/co-lab/work-louder/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/8jsqxlut"&gt;https://digg.com/tech/8jsqxlut&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 681,300&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 3,163&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 1,136&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 50&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 238&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 16&lt;/li&gt;&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/BorisMPower"&gt;Boris Power&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/Scobleizer"&gt;Robert Scoble&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/WillManidis"&gt;Will Manidis&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/signulll"&gt;signüll&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/romainhuet"&gt;Romain Huet&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;</content:encoded>
+      <guid isPermaLink="false">d65e4860-2a33-4135-8183-d3732ff961c2</guid>
       <category>Digg AI from X</category>
-      <pubDate>Wed, 15 Jul 2026 10:48:30 +0000</pubDate>
+      <pubDate>Wed, 15 Jul 2026 16:36:13 +0000</pubDate>
     </item>
     <item>
-      <title>DeepSeek targets $500M annualized sales and plans 2027 STAR Market IPO</title>
-      <link>https://www.theinformation.com/articles/deepseeks-annualized-revenue-nears-500-million-boosting-fundraise-ipo-plans</link>
-      <description>Founder Liang Wenfeng retains control using a limited partnership structure.</description>
-      <content:encoded>&lt;p&gt;Founder Liang Wenfeng retains control using a limited partnership structure.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://www.theinformation.com/articles/deepseeks-annualized-revenue-nears-500-million-boosting-fundraise-ipo-plans"&gt;https://www.theinformation.com/articles/deepseeks-annualized-revenue-nears-500-million-boosting-fundraise-ipo-plans&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/00ekxjxr"&gt;https://digg.com/tech/00ekxjxr&lt;/a&gt;&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 50,634&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 263&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 126&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 5&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 18&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 4&lt;/li&gt;&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/rohanpaul_ai"&gt;Rohan Paul&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/zephyr_z9"&gt;Zephyr&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;</content:encoded>
-      <guid isPermaLink="false">c277eea7-79f9-49c6-a602-302a82555d1c</guid>
+      <title>xAI open-sources Grok Build coding agent harness and TUI</title>
+      <link>https://simonwillison.net/2026/Jul/15/grok-build/</link>
+      <description>The release includes CLI tools to build a robust harness.</description>
+      <content:encoded>&lt;p&gt;The release includes CLI tools to build a robust harness.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://simonwillison.net/2026/Jul/15/grok-build/"&gt;https://simonwillison.net/2026/Jul/15/grok-build/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/7c9rclsa"&gt;https://digg.com/tech/7c9rclsa&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 123,016&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 2,057&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 450&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 16&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 126&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 16&lt;/li&gt;&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/simonw"&gt;Simon Willison&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/billyuchenlin"&gt;Bill Yuchen Lin&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/Scobleizer"&gt;Robert Scoble&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/beffjezos"&gt;Beff (e/acc)&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/eliebakouch"&gt;elie&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;</content:encoded>
+      <guid isPermaLink="false">f08e0146-87f8-4fea-a6e8-3558adbcfc68</guid>
       <category>Digg AI from X</category>
-      <pubDate>Wed, 15 Jul 2026 07:33:35 +0000</pubDate>
+      <pubDate>Wed, 15 Jul 2026 20:44:57 +0000</pubDate>
+    </item>
+    <item>
+      <title>xAI open-sources Grok Build code and resets usage limits</title>
+      <link>http://x.ai/open-source</link>
+      <description>The release includes the platform's CLI tool and harness components.</description>
+      <content:encoded>&lt;p&gt;The release includes the platform&amp;#x27;s CLI tool and harness components.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="http://x.ai/open-source"&gt;http://x.ai/open-source&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/wujsm79k"&gt;https://digg.com/tech/wujsm79k&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 2,306,232&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 11,466&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 824&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 224&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 1,415&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 6&lt;/li&gt;&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/elonmusk"&gt;Elon Musk&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/beffjezos"&gt;Beff (e/acc)&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/omarsar0"&gt;elvis&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;</content:encoded>
+      <guid isPermaLink="false">ec0023d5-3fbb-4021-8583-fcaa5fc5b143</guid>
+      <category>Digg AI from X</category>
+      <pubDate>Wed, 15 Jul 2026 20:48:52 +0000</pubDate>
     </item>
   </channel>
 </rss>
