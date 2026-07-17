@@ -7,136 +7,136 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 17 Jul 2026 01:56:31 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 17 Jul 2026 13:10:25 +0000</lastBuildDate>
     <item>
-      <title>Moonshot AI launches 2.8T parameter Kimi K3 model</title>
+      <title>Moonshot AI releases 2.8T parameter model Kimi K3</title>
       <link>http://Kimi.com</link>
-      <description>The model beats Claude Opus 4.8 at Sonnet-level pricing.</description>
-      <content:encoded>&lt;p&gt;The model beats Claude Opus 4.8 at Sonnet-level pricing.&lt;/p&gt;
+      <description>The model features Delta Attention for 6.3x faster decoding.</description>
+      <content:encoded>&lt;p&gt;The model features Delta Attention for 6.3x faster decoding.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="http://Kimi.com"&gt;http://Kimi.com&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/85c3nzuo"&gt;https://digg.com/tech/85c3nzuo&lt;/a&gt;&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 6,832,635&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 70,849&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 9,170&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 847&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 2,538&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 167&lt;/li&gt;&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/tszzl"&gt;roon&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/natolambert"&gt;Nathan Lambert&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/AravSrinivas"&gt;Aravind Srinivas&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/EMostaque"&gt;Emad&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/emollick"&gt;Ethan Mollick&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;</content:encoded>
+&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 10,612,146&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 101,867&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 14,595&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 1,134&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 4,125&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 261&lt;/li&gt;&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/NandoDF"&gt;Nando de Freitas&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/tszzl"&gt;roon&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/natolambert"&gt;Nathan Lambert&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/AravSrinivas"&gt;Aravind Srinivas&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/OfficialLoganK"&gt;Logan Kilpatrick&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;</content:encoded>
       <guid isPermaLink="false">43c981f4-9361-4ffb-a3da-a3160e5c8e02</guid>
       <category>Digg AI from X</category>
-      <pubDate>Thu, 16 Jul 2026 07:24:00 +0000</pubDate>
+      <pubDate>Thu, 16 Jul 2026 07:51:17 +0000</pubDate>
+    </item>
+    <item>
+      <title>Moonshot AI releases 2.8T multimodal Kimi K3 model</title>
+      <link>https://curiouscats.ai/breaking-news/chinas-moonshot-unveils-kimi-k3-the-worlds-largest?source=reporter</link>
+      <description>It delivers 6.3x decoding speedups at million-token lengths.</description>
+      <content:encoded>&lt;p&gt;It delivers 6.3x decoding speedups at million-token lengths.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://curiouscats.ai/breaking-news/chinas-moonshot-unveils-kimi-k3-the-worlds-largest?source=reporter"&gt;https://curiouscats.ai/breaking-news/chinas-moonshot-unveils-kimi-k3-the-worlds-largest?source=reporter&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/8nb69hcc"&gt;https://digg.com/tech/8nb69hcc&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 422,834&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 4,694&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 688&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 31&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 83&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 36&lt;/li&gt;&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/rsalakhu"&gt;Russ Salakhutdinov&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/soumithchintala"&gt;Soumith Chintala&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/gneubig"&gt;Graham Neubig&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/ClementDelangue"&gt;clem 🤗&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/bgurley"&gt;Bill Gurley&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;</content:encoded>
+      <guid isPermaLink="false">a3d528fc-37db-4c80-806c-d14ca0c54a91</guid>
+      <category>Digg AI from X</category>
+      <pubDate>Fri, 17 Jul 2026 03:51:07 +0000</pubDate>
     </item>
     <item>
       <title>X uses Grok to purge 4,000 engagement-farming accounts</title>
-      <link>https://x.com/nikitabier</link>
+      <link>https://x.com/nikitabier/status/2077774853650944028</link>
       <description>Duplicate post revenue now redirects back to original creators.</description>
       <content:encoded>&lt;p&gt;Duplicate post revenue now redirects back to original creators.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://x.com/nikitabier"&gt;https://x.com/nikitabier&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://x.com/nikitabier/status/2077774853650944028"&gt;https://x.com/nikitabier/status/2077774853650944028&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/7u90oynb"&gt;https://digg.com/tech/7u90oynb&lt;/a&gt;&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 2,494,830&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 23,815&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 3,107&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 3,941&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 6,363&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 18&lt;/li&gt;&lt;/ul&gt;
+&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 3,048,071&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 25,961&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 3,391&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 4,276&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 6,687&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 18&lt;/li&gt;&lt;/ul&gt;
 &lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/lulumeservey"&gt;Lulu Cheng Meservey&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/nikitabier"&gt;Nikita Bier&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/rauchg"&gt;Guillermo Rauch&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/signulll"&gt;signüll&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/AndrewCurran_"&gt;Andrew Curran&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;</content:encoded>
       <guid isPermaLink="false">39de0b30-f9c7-4016-8062-af7b0862e8fb</guid>
       <category>Digg AI from X</category>
-      <pubDate>Thu, 16 Jul 2026 15:18:22 +0000</pubDate>
+      <pubDate>Thu, 16 Jul 2026 15:41:40 +0000</pubDate>
     </item>
     <item>
-      <title>Schema agent harness achieves 95% on ARC-AGI-3 using GPT-5.6</title>
-      <link>https://x.com/HavenFeng</link>
-      <description>The system builds symbolic world models on-the-fly using program synthesis.</description>
-      <content:encoded>&lt;p&gt;The system builds symbolic world models on-the-fly using program synthesis.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://x.com/HavenFeng"&gt;https://x.com/HavenFeng&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/3a488ugi"&gt;https://digg.com/tech/3a488ugi&lt;/a&gt;&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 440,080&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 2,705&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 1,381&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 31&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 134&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 13&lt;/li&gt;&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/naval"&gt;Naval&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/akanazawa"&gt;Angjoo Kanazawa&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/mikeknoop"&gt;Mike Knoop&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/zdhnarsil"&gt;Dinghuai Zhang 张鼎怀&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/scaling01"&gt;Lisan al Gaib&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;</content:encoded>
-      <guid isPermaLink="false">95247a32-c64a-4231-97e3-e9b710ac35c0</guid>
+      <title>Thinking Machines releases Inkling, a 975B parameter open multimodal model</title>
+      <link>https://thinkingmachines.ai/news/introducing-inkling/</link>
+      <description>Early benchmarks show high refusal rates on controversial prompt evaluations.</description>
+      <content:encoded>&lt;p&gt;Early benchmarks show high refusal rates on controversial prompt evaluations.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://thinkingmachines.ai/news/introducing-inkling/"&gt;https://thinkingmachines.ai/news/introducing-inkling/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/hrt6ltes"&gt;https://digg.com/tech/hrt6ltes&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 275,914&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 2,894&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 364&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 13&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 63&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 39&lt;/li&gt;&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/miramurati"&gt;Mira Murati&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/giffmana"&gt;Lucas Beyer (bl16)&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/HannaHajishirzi"&gt;Hanna Hajishirzi&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/dhadfieldmenell"&gt;Dylan HadfieldMenell&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/julien_c"&gt;Julien Chaumond&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;</content:encoded>
+      <guid isPermaLink="false">25854998-7e90-42cd-b0d2-f70e8c6ba10a</guid>
       <category>Digg AI from X</category>
-      <pubDate>Thu, 16 Jul 2026 15:08:18 +0000</pubDate>
+      <pubDate>Wed, 15 Jul 2026 18:20:44 +0000</pubDate>
     </item>
     <item>
-      <title>Meta releases Muse Spark 1.1 model on OpenRouter for US developers</title>
-      <link>https://bit.ly/4vvjSNa</link>
-      <description>The multimodal model features a one-million-token context window.</description>
-      <content:encoded>&lt;p&gt;The multimodal model features a one-million-token context window.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://bit.ly/4vvjSNa"&gt;https://bit.ly/4vvjSNa&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/f99teak6"&gt;https://digg.com/tech/f99teak6&lt;/a&gt;&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 861,781&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 5,915&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 371&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 143&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 657&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 6&lt;/li&gt;&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/alexandr_wang"&gt;Alexandr Wang&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/finkd"&gt;Mark Zuckerberg&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/scaling01"&gt;Lisan al Gaib&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/alexatallah"&gt;Alex Atallah&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;</content:encoded>
-      <guid isPermaLink="false">878582ff-cd1f-447d-9830-ef388a176096</guid>
-      <category>Digg AI from X</category>
-      <pubDate>Thu, 16 Jul 2026 15:41:55 +0000</pubDate>
-    </item>
-    <item>
-      <title>Sunday Robotics co-founder releases ACT-2 Preview robotics model</title>
-      <link>https://x.com/tonyzzhao/status/2077806003308179802/video/1</link>
-      <description>The model achieved a 99% zero-shot success rate in unseen homes.</description>
-      <content:encoded>&lt;p&gt;The model achieved a 99% zero-shot success rate in unseen homes.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://x.com/tonyzzhao/status/2077806003308179802/video/1"&gt;https://x.com/tonyzzhao/status/2077806003308179802/video/1&lt;/a&gt;&lt;/p&gt;
+      <title>Sunday Robotics releases ACT-2 Preview with 99% zero-shot success</title>
+      <link>https://www.sunday.ai/blog/act-2-preview</link>
+      <description>The humanoid robot model learned domestic laundry tasks from single examples.</description>
+      <content:encoded>&lt;p&gt;The humanoid robot model learned domestic laundry tasks from single examples.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://www.sunday.ai/blog/act-2-preview"&gt;https://www.sunday.ai/blog/act-2-preview&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/gbbrru54"&gt;https://digg.com/tech/gbbrru54&lt;/a&gt;&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 231,877&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 1,926&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 574&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 129&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 116&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 7&lt;/li&gt;&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/_sholtodouglas"&gt;Sholto Douglas&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/tonyzzhao"&gt;Tony Zhao&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/xiao_ted"&gt;Ted Xiao&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/g_k_swamy"&gt;Gokul Swamy&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;</content:encoded>
+&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 411,932&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 2,963&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 908&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 160&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 169&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 31&lt;/li&gt;&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/_sholtodouglas"&gt;Sholto Douglas&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/dylan522p"&gt;Dylan Patel&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/furongh"&gt;Furong Huang&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/Scobleizer"&gt;Robert Scoble&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/SongShuran"&gt;Shuran Song&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;</content:encoded>
       <guid isPermaLink="false">ee56b219-1a64-46c6-b61a-bb45150d6727</guid>
       <category>Digg AI from X</category>
-      <pubDate>Thu, 16 Jul 2026 17:22:09 +0000</pubDate>
+      <pubDate>Thu, 16 Jul 2026 21:11:58 +0000</pubDate>
     </item>
     <item>
-      <title>GPT-5.6 disproves 20-year-old Benjamini-Hochberg statistical conjecture</title>
-      <link>https://web.stanford.edu/~lindrew/stats300C.pdf</link>
-      <description>The model constructed a counterexample demonstrating FDR control failure.</description>
-      <content:encoded>&lt;p&gt;The model constructed a counterexample demonstrating FDR control failure.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://web.stanford.edu/~lindrew/stats300C.pdf"&gt;https://web.stanford.edu/~lindrew/stats300C.pdf&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/cgrxwswx"&gt;https://digg.com/tech/cgrxwswx&lt;/a&gt;&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 207,244&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 2,019&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 417&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 24&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 69&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 5&lt;/li&gt;&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/polynoamial"&gt;Noam Brown&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/jasondeanlee"&gt;Jason Lee&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/BlackHC"&gt;Andreas Kirsch 🇺🇦&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/Swarooprm7"&gt;Swaroop Mishra&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/hyhieu226"&gt;Hieu Pham&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;</content:encoded>
-      <guid isPermaLink="false">d3fe7ad4-840e-4102-a9ca-4bc1818ea529</guid>
+      <title>SpaceX aborts thirteenth Starship flight test at last minute</title>
+      <link>https://x.com/OXGrokula</link>
+      <description>The launch would have been the second using v3 hardware.</description>
+      <content:encoded>&lt;p&gt;The launch would have been the second using v3 hardware.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://x.com/OXGrokula"&gt;https://x.com/OXGrokula&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/ic0ptefq"&gt;https://digg.com/tech/ic0ptefq&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 4,940,387&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 55,255&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 1,335&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 688&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 4,119&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 13&lt;/li&gt;&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/elonmusk"&gt;Elon Musk&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/Scobleizer"&gt;Robert Scoble&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/shaunmmaguire"&gt;Shaun Maguire&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/scaling01"&gt;Lisan al Gaib&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/CathieDWood"&gt;Cathie Wood&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;</content:encoded>
+      <guid isPermaLink="false">740f3a6e-fa9f-40de-b49b-ed8d6fff00aa</guid>
       <category>Digg AI from X</category>
-      <pubDate>Thu, 16 Jul 2026 07:30:45 +0000</pubDate>
+      <pubDate>Thu, 16 Jul 2026 13:54:12 +0000</pubDate>
     </item>
     <item>
-      <title>Fireworks AI raises Series D at $17.5B valuation with $1B ARR</title>
-      <link>https://fireworks.ai/blog/series-d-announcement</link>
-      <description>Over 95 percent of its 40 trillion daily tokens run on fine-tuned models.</description>
-      <content:encoded>&lt;p&gt;Over 95 percent of its 40 trillion daily tokens run on fine-tuned models.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://fireworks.ai/blog/series-d-announcement"&gt;https://fireworks.ai/blog/series-d-announcement&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/x2n35uv7"&gt;https://digg.com/tech/x2n35uv7&lt;/a&gt;&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 104,800&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 664&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 158&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 4&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 29&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 7&lt;/li&gt;&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/natolambert"&gt;Nathan Lambert&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/jaltma"&gt;Jack Altman&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/GavinSBaker"&gt;Gavin Baker&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/finbarrtimbers"&gt;finbarr&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/ziv_ravid"&gt;Ravid Shwartz Ziv&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;</content:encoded>
-      <guid isPermaLink="false">86fae05b-d019-45f8-a5c9-171f1208ade0</guid>
+      <title>Debate questions China's strategic policy on open-sourcing Kimi models</title>
+      <link>https://x.com/tenobrus/status/2077837467722629600</link>
+      <description>Commentators point out that Moonshot AI's K3 model remains closed-source</description>
+      <content:encoded>&lt;p&gt;Commentators point out that Moonshot AI&amp;#x27;s K3 model remains closed-source&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://x.com/tenobrus/status/2077837467722629600"&gt;https://x.com/tenobrus/status/2077837467722629600&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/jgdeoogv"&gt;https://digg.com/tech/jgdeoogv&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 609,476&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 3,202&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 507&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 116&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 464&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 29&lt;/li&gt;&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/natolambert"&gt;Nathan Lambert&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/suchenzang"&gt;Susan Zhang&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/yacineMTB"&gt;kache&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/teortaxesTex"&gt;Teortaxes▶️ (DeepSeek 推特🐋铁粉 2023 – ∞)&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/beffjezos"&gt;Beff (e/acc)&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;</content:encoded>
+      <guid isPermaLink="false">55db4557-67d2-4499-ad61-e38e3cdd3331</guid>
       <category>Digg AI from X</category>
-      <pubDate>Thu, 16 Jul 2026 13:57:01 +0000</pubDate>
+      <pubDate>Fri, 17 Jul 2026 03:06:18 +0000</pubDate>
     </item>
     <item>
-      <title>Saronic Technologies plans $3 billion autonomous shipyard in Texas</title>
-      <link>https://www.sfchronicle.com/bayarea/article/california-forever-shipyard-texas-22347278.php?taid=6a587e4ddd3d1b000105dcb5&amp;utm_campaign=trueanthem%2B3988&amp;utm_medium=social&amp;utm_source=twitter</link>
-      <description>The company rejected a California site due to slower regulatory approvals.</description>
-      <content:encoded>&lt;p&gt;The company rejected a California site due to slower regulatory approvals.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://www.sfchronicle.com/bayarea/article/california-forever-shipyard-texas-22347278.php?taid=6a587e4ddd3d1b000105dcb5&amp;amp;utm_campaign=trueanthem%2B3988&amp;amp;utm_medium=social&amp;amp;utm_source=twitter"&gt;https://www.sfchronicle.com/bayarea/article/california-forever-shipyard-texas-22347278.php?taid=6a587e4ddd3d1b000105dcb5&amp;amp;utm_campaign=trueanthem%2B3988&amp;amp;utm_medium=social&amp;amp;utm_source=twitter&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/esm4xago"&gt;https://digg.com/tech/esm4xago&lt;/a&gt;&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 343,821&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 5,566&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 276&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 35&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 64&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 5&lt;/li&gt;&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/Jason"&gt;@jason&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/JTLonsdale"&gt;Joe Lonsdale&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/KTmBoyle"&gt;Katherine Boyle&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;</content:encoded>
-      <guid isPermaLink="false">d8c5e33a-ea27-4683-a25f-a79925b1c07a</guid>
+      <title>Haven Feng releases schema agent harness for abstract reasoning</title>
+      <link>https://x.com/HavenFeng/status/2077770348876247502</link>
+      <description>The system scored 99% on the ARC-AGI-3 public benchmark.</description>
+      <content:encoded>&lt;p&gt;The system scored 99% on the ARC-AGI-3 public benchmark.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://x.com/HavenFeng/status/2077770348876247502"&gt;https://x.com/HavenFeng/status/2077770348876247502&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/3a488ugi"&gt;https://digg.com/tech/3a488ugi&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 574,683&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 3,436&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 1,919&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 38&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 174&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 22&lt;/li&gt;&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/GaryMarcus"&gt;Gary Marcus&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/naval"&gt;Naval&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/akanazawa"&gt;Angjoo Kanazawa&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/beffjezos"&gt;Beff (e/acc)&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/omarsar0"&gt;elvis&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;</content:encoded>
+      <guid isPermaLink="false">95247a32-c64a-4231-97e3-e9b710ac35c0</guid>
       <category>Digg AI from X</category>
-      <pubDate>Thu, 16 Jul 2026 11:30:00 +0000</pubDate>
+      <pubDate>Thu, 16 Jul 2026 16:23:23 +0000</pubDate>
     </item>
     <item>
-      <title>Moonshot Kimi-K3 declines unsolved Erdős math problem over hallucination risks</title>
-      <link>https://x.com/scaling01</link>
-      <description>The model correctly cited established mathematical bounds before refusing the prompt.</description>
-      <content:encoded>&lt;p&gt;The model correctly cited established mathematical bounds before refusing the prompt.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://x.com/scaling01"&gt;https://x.com/scaling01&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/s5g0a9bi"&gt;https://digg.com/tech/s5g0a9bi&lt;/a&gt;&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 189,297&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 1,803&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 181&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 11&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 51&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 9&lt;/li&gt;&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/teortaxesTex"&gt;Teortaxes▶️ (DeepSeek 推特🐋铁粉 2023 – ∞)&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/AndrewCurran_"&gt;Andrew Curran&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/scaling01"&gt;Lisan al Gaib&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/xeophon"&gt;Florian Brand&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;</content:encoded>
-      <guid isPermaLink="false">e3c28580-bf70-40dd-b6e7-abdf6a87571f</guid>
+      <title>Linus Torvalds rejects anti-AI policies in Linux kernel development</title>
+      <link>https://www.pcgamer.com/software/ai/its-not-like-natural-intelligence-is-always-all-that-great-either-linus-torvalds-addresses-anti-ai-sentiment-in-linux-development</link>
+      <description>Torvalds argued developers opposing AI tools can fork the codebase.</description>
+      <content:encoded>&lt;p&gt;Torvalds argued developers opposing AI tools can fork the codebase.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://www.pcgamer.com/software/ai/its-not-like-natural-intelligence-is-always-all-that-great-either-linus-torvalds-addresses-anti-ai-sentiment-in-linux-development"&gt;https://www.pcgamer.com/software/ai/its-not-like-natural-intelligence-is-always-all-that-great-either-linus-torvalds-addresses-anti-ai-sentiment-in-linux-development&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/cgz5jgv6"&gt;https://digg.com/tech/cgz5jgv6&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 631,923&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 7,382&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 1,156&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 135&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 555&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 13&lt;/li&gt;&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/jack"&gt;jack&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/c_valenzuelab"&gt;Cristóbal Valenzuela&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/stevesi"&gt;Steven Sinofsky&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/chris_j_paxton"&gt;Chris Paxton&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/TimSweeneyEpic"&gt;Tim Sweeney&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;</content:encoded>
+      <guid isPermaLink="false">9050a10f-a7b5-45d5-85e7-e82454d30007</guid>
       <category>Digg AI from X</category>
-      <pubDate>Thu, 16 Jul 2026 16:00:56 +0000</pubDate>
+      <pubDate>Thu, 16 Jul 2026 01:58:10 +0000</pubDate>
     </item>
     <item>
-      <title>@signulll claims remote work does not work for early startups</title>
-      <link>https://x.com/signulll</link>
-      <description>Tech figures countered that success depends on digital-native team skills.</description>
-      <content:encoded>&lt;p&gt;Tech figures countered that success depends on digital-native team skills.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://x.com/signulll"&gt;https://x.com/signulll&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/t6wm67fp"&gt;https://digg.com/tech/t6wm67fp&lt;/a&gt;&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 223,670&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 1,624&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 111&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 32&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 230&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 6&lt;/li&gt;&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/signulll"&gt;signüll&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/tunguz"&gt;Bojan Tunguz&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/MatthewBerman"&gt;Matthew Berman&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;</content:encoded>
-      <guid isPermaLink="false">7c53f29b-4cec-4bdb-a3db-17d7ef8e437b</guid>
+      <title>Xi Jinping proposes open-source framework to challenge US AI governance</title>
+      <link>https://scmp.com/tech/policy/article/3360858/chinas-xi-jinping-addresses-world-ai-conference-us-tech-rivalry-heats</link>
+      <description>China will train 5,000 global researchers to counter Western export controls.</description>
+      <content:encoded>&lt;p&gt;China will train 5,000 global researchers to counter Western export controls.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://scmp.com/tech/policy/article/3360858/chinas-xi-jinping-addresses-world-ai-conference-us-tech-rivalry-heats"&gt;https://scmp.com/tech/policy/article/3360858/chinas-xi-jinping-addresses-world-ai-conference-us-tech-rivalry-heats&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/zgurytui"&gt;https://digg.com/tech/zgurytui&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 277,447&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 2,882&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 544&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 43&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 121&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 34&lt;/li&gt;&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/natolambert"&gt;Nathan Lambert&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/deliprao"&gt;Delip Rao e/σ&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/Scobleizer"&gt;Robert Scoble&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/teortaxesTex"&gt;Teortaxes▶️ (DeepSeek 推特🐋铁粉 2023 – ∞)&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/AndrewCurran_"&gt;Andrew Curran&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;</content:encoded>
+      <guid isPermaLink="false">ee54e022-e97f-4d03-b1e7-85e51b219582</guid>
       <category>Digg AI from X</category>
-      <pubDate>Thu, 16 Jul 2026 14:44:13 +0000</pubDate>
+      <pubDate>Fri, 17 Jul 2026 02:47:21 +0000</pubDate>
     </item>
   </channel>
 </rss>
