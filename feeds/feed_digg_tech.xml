@@ -7,136 +7,136 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 19 Jul 2026 01:55:09 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 19 Jul 2026 12:59:38 +0000</lastBuildDate>
     <item>
-      <title>Moonshot AI's Kimi-K3 tops Frontend Code Arena</title>
-      <link>http://Kimi.com</link>
-      <description>It matches Claude Fable 5 performance at 35% cost.</description>
-      <content:encoded>&lt;p&gt;It matches Claude Fable 5 performance at 35% cost.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="http://Kimi.com"&gt;http://Kimi.com&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/hm2wuequ"&gt;https://digg.com/tech/hm2wuequ&lt;/a&gt;&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 3,395,467&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 22,258&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 3,114&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 598&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 2,184&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 45&lt;/li&gt;&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/Thom_Wolf"&gt;Thomas Wolf&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/elonmusk"&gt;Elon Musk&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/ChrSzegedy"&gt;Christian Szegedy&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/YiMaTweets"&gt;Yi Ma&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/teortaxesTex"&gt;Teortaxes▶️ (DeepSeek 推特🐋铁粉 2023 – ∞)&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;</content:encoded>
-      <guid isPermaLink="false">e0cb763c-9a20-42aa-8fdb-c01c06855ece</guid>
+      <title>OpenAI's Dean Ball warns open-weight models delay AGI development</title>
+      <link>https://x.com/deanwball/status/2078133895766114412</link>
+      <description>Critics compared his claims to Steve Ballmer's anti-Linux rhetoric.</description>
+      <content:encoded>&lt;p&gt;Critics compared his claims to Steve Ballmer&amp;#x27;s anti-Linux rhetoric.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://x.com/deanwball/status/2078133895766114412"&gt;https://x.com/deanwball/status/2078133895766114412&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/b438665c"&gt;https://digg.com/tech/b438665c&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 908,681&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 12,714&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 1,231&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 105&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 629&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 66&lt;/li&gt;&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/rsalakhu"&gt;Russ Salakhutdinov&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/ericjang11"&gt;Eric Jang&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/egrefen"&gt;Edward Grefenstette&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/natolambert"&gt;Nathan Lambert&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/gneubig"&gt;Graham Neubig&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;</content:encoded>
+      <guid isPermaLink="false">f406d985-f92a-43cb-b57a-930a16627776</guid>
       <category>Digg AI from X</category>
-      <pubDate>Fri, 17 Jul 2026 04:09:13 +0000</pubDate>
+      <pubDate>Fri, 17 Jul 2026 21:37:16 +0000</pubDate>
     </item>
     <item>
-      <title>Anthropic makes Claude Fable 5 permanent on premium plans</title>
+      <title>Anthropic limits Claude Fable 5 access on premium plans</title>
       <link>https://support.claude.com/en/articles/15910845-claude-code-may-july-2026-weekly-limits-promotion</link>
-      <description>Pro and Team Standard plans receive a $100 credit.</description>
-      <content:encoded>&lt;p&gt;Pro and Team Standard plans receive a $100 credit.&lt;/p&gt;
+      <description>Pro and Team Standard tiers transition to credit-based access.</description>
+      <content:encoded>&lt;p&gt;Pro and Team Standard tiers transition to credit-based access.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://support.claude.com/en/articles/15910845-claude-code-may-july-2026-weekly-limits-promotion"&gt;https://support.claude.com/en/articles/15910845-claude-code-may-july-2026-weekly-limits-promotion&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/41fake4l"&gt;https://digg.com/tech/41fake4l&lt;/a&gt;&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 1,293,565&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 18,705&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 752&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 181&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 1,136&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 31&lt;/li&gt;&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/ericjang11"&gt;Eric Jang&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/simonw"&gt;Simon Willison&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/yacineMTB"&gt;kache&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/teortaxesTex"&gt;Teortaxes▶️ (DeepSeek 推特🐋铁粉 2023 – ∞)&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/thsottiaux"&gt;Tibo&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;</content:encoded>
+&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 1,201,243&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 14,061&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 761&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 153&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 1,272&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 27&lt;/li&gt;&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/giffmana"&gt;Lucas Beyer (bl16)&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/jasondeanlee"&gt;Jason Lee&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/deliprao"&gt;Delip Rao e/σ&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/simonw"&gt;Simon Willison&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/chamath"&gt;Chamath Palihapitiya&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;</content:encoded>
       <guid isPermaLink="false">2ec1649e-34ed-4b7f-95f7-fb054e3ce5eb</guid>
       <category>Digg AI from X</category>
       <pubDate>Sat, 18 Jul 2026 02:25:03 +0000</pubDate>
     </item>
     <item>
-      <title>Moonshot AI releases Kimi K3 2.8T open-weights MoE model</title>
-      <link>http://Kimi.com</link>
-      <description>The model features a native 1-million-token context window</description>
-      <content:encoded>&lt;p&gt;The model features a native 1-million-token context window&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="http://Kimi.com"&gt;http://Kimi.com&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/8nb69hcc"&gt;https://digg.com/tech/8nb69hcc&lt;/a&gt;&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 2,709,741&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 13,143&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 2,423&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 114&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 1,400&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 30&lt;/li&gt;&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/elonmusk"&gt;Elon Musk&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/suchenzang"&gt;Susan Zhang&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/ClementDelangue"&gt;clem 🤗&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/deliprao"&gt;Delip Rao e/σ&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/GaryMarcus"&gt;Gary Marcus&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;</content:encoded>
-      <guid isPermaLink="false">a3d528fc-37db-4c80-806c-d14ca0c54a91</guid>
+      <title>OpenAI's Dean Ball quits public writing on X following backlash</title>
+      <link>https://twitter.com/deanwball/status/2078477218406142429</link>
+      <description>Critics accused him of bias after he criticized open-weight models.</description>
+      <content:encoded>&lt;p&gt;Critics accused him of bias after he criticized open-weight models.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://twitter.com/deanwball/status/2078477218406142429"&gt;https://twitter.com/deanwball/status/2078477218406142429&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/c14pr6bw"&gt;https://digg.com/tech/c14pr6bw&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 171,268&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 1,652&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 180&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 7&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 111&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 25&lt;/li&gt;&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/natolambert"&gt;Nathan Lambert&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/deliprao"&gt;Delip Rao e/σ&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/boazbaraktcs"&gt;Boaz Barak&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/jachiam0"&gt;Joshua Achiam&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/pfau"&gt;David Pfau&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;</content:encoded>
+      <guid isPermaLink="false">70bf9908-911a-4f58-96d7-b5a8adbca07c</guid>
       <category>Digg AI from X</category>
-      <pubDate>Fri, 17 Jul 2026 03:51:07 +0000</pubDate>
+      <pubDate>Sat, 18 Jul 2026 15:57:05 +0000</pubDate>
     </item>
     <item>
-      <title>Dean W. Ball says Chinese Kimi K3 matches leading coding models</title>
-      <link>https://www.transformernews.ai/p/kimi-k3-is-no-reason-for-china-panic-export-controls-xi-jingping</link>
-      <description>The open-weight model is highly token-intensive and expensive.</description>
-      <content:encoded>&lt;p&gt;The open-weight model is highly token-intensive and expensive.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://www.transformernews.ai/p/kimi-k3-is-no-reason-for-china-panic-export-controls-xi-jingping"&gt;https://www.transformernews.ai/p/kimi-k3-is-no-reason-for-china-panic-export-controls-xi-jingping&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/sa0jbth3"&gt;https://digg.com/tech/sa0jbth3&lt;/a&gt;&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 1,721,156&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 11,874&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 2,375&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 229&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 868&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 34&lt;/li&gt;&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/srush_nlp"&gt;Sasha Rush&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/deliprao"&gt;Delip Rao e/σ&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/vkhosla"&gt;Vinod Khosla&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/GaryMarcus"&gt;Gary Marcus&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/bgurley"&gt;Bill Gurley&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;</content:encoded>
-      <guid isPermaLink="false">d3cd9189-f43f-4c7a-868c-4527a5bd059a</guid>
+      <title>Chamath Palihapitiya warns restricting open-source AI harms US competitiveness</title>
+      <link>https://apnews.com/article/kimi-k3-china-ai-0d8a5e268deb11a673f4d444fc597cc5</link>
+      <description>Proprietary tokens could cost US firms 50 times more.</description>
+      <content:encoded>&lt;p&gt;Proprietary tokens could cost US firms 50 times more.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://apnews.com/article/kimi-k3-china-ai-0d8a5e268deb11a673f4d444fc597cc5"&gt;https://apnews.com/article/kimi-k3-china-ai-0d8a5e268deb11a673f4d444fc597cc5&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/vdw2654f"&gt;https://digg.com/tech/vdw2654f&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 1,406,482&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 9,281&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 1,294&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 156&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 615&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 8&lt;/li&gt;&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/ClementDelangue"&gt;clem 🤗&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/EMostaque"&gt;Emad&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/levie"&gt;Aaron Levie&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/jack"&gt;jack&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/chamath"&gt;Chamath Palihapitiya&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;</content:encoded>
+      <guid isPermaLink="false">dbd5206c-72ea-4845-b0df-472b9e1d4eac</guid>
       <category>Digg AI from X</category>
-      <pubDate>Fri, 17 Jul 2026 02:50:13 +0000</pubDate>
+      <pubDate>Sat, 18 Jul 2026 09:22:24 +0000</pubDate>
     </item>
     <item>
-      <title>Russ Salakhutdinov's alumni retrospective sparks academic advising debate</title>
-      <link>https://x.com/rsalakhu/status/2078184317927219284</link>
-      <description>The CMU professor's alumni include founders of Mistral and xAI.</description>
-      <content:encoded>&lt;p&gt;The CMU professor&amp;#x27;s alumni include founders of Mistral and xAI.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://x.com/rsalakhu/status/2078184317927219284"&gt;https://x.com/rsalakhu/status/2078184317927219284&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/bzzse086"&gt;https://digg.com/tech/bzzse086&lt;/a&gt;&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 1,036,382&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 7,174&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 1,901&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 94&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 205&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 28&lt;/li&gt;&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/rsalakhu"&gt;Russ Salakhutdinov&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/suchenzang"&gt;Susan Zhang&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/yisongyue"&gt;Yisong Yue&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/RishiBommasani"&gt;rishi @ ICML&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/docmilanfar"&gt;Peyman Milanfar&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;</content:encoded>
-      <guid isPermaLink="false">93766966-980f-4196-8b16-452ff636749c</guid>
+      <title>Moonshot AI's Kimi-K3 tops Frontend Code Arena</title>
+      <link>https://livebench.ai/</link>
+      <description>It matches Claude Fable 5 performance at 35% cost.</description>
+      <content:encoded>&lt;p&gt;It matches Claude Fable 5 performance at 35% cost.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://livebench.ai/"&gt;https://livebench.ai/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/hm2wuequ"&gt;https://digg.com/tech/hm2wuequ&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 183,897&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 1,144&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 179&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 0&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 56&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 15&lt;/li&gt;&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/NandoDF"&gt;Nando de Freitas&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/AravSrinivas"&gt;Aravind Srinivas&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/garrytan"&gt;Garry Tan&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/EMostaque"&gt;Emad&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/naval"&gt;Naval&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;</content:encoded>
+      <guid isPermaLink="false">e0cb763c-9a20-42aa-8fdb-c01c06855ece</guid>
       <category>Digg AI from X</category>
-      <pubDate>Fri, 17 Jul 2026 18:38:12 +0000</pubDate>
+      <pubDate>Fri, 17 Jul 2026 04:09:13 +0000</pubDate>
     </item>
     <item>
-      <title>Moonshot AI founder's departure sparks US AI immigration debate</title>
-      <link>https://dhs.gov/news/2026/07/16/trump-administration-issues-final-rule-end-foreign-student-visa-abuse</link>
-      <description>David Pfau proposed automatic O-1 visas for ML PhDs.</description>
-      <content:encoded>&lt;p&gt;David Pfau proposed automatic O-1 visas for ML PhDs.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://dhs.gov/news/2026/07/16/trump-administration-issues-final-rule-end-foreign-student-visa-abuse"&gt;https://dhs.gov/news/2026/07/16/trump-administration-issues-final-rule-end-foreign-student-visa-abuse&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/ai6ki2ow"&gt;https://digg.com/tech/ai6ki2ow&lt;/a&gt;&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 344,274&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 3,504&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 377&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 52&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 293&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 24&lt;/li&gt;&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/deliprao"&gt;Delip Rao e/σ&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/vkhosla"&gt;Vinod Khosla&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/pfau"&gt;David Pfau&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/Jason"&gt;@jason&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/teortaxesTex"&gt;Teortaxes▶️ (DeepSeek 推特🐋铁粉 2023 – ∞)&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;</content:encoded>
-      <guid isPermaLink="false">45708960-a127-4841-a3f8-9cfe346a51da</guid>
+      <title>US data centers use 31 times less water than golf courses</title>
+      <link>https://x.com/chamath/status/2078430577544282434</link>
+      <description>Data center presence keeps residential electricity rates 6% lower.</description>
+      <content:encoded>&lt;p&gt;Data center presence keeps residential electricity rates 6% lower.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://x.com/chamath/status/2078430577544282434"&gt;https://x.com/chamath/status/2078430577544282434&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/maaduzvf"&gt;https://digg.com/tech/maaduzvf&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 386,033&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 4,356&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 684&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 10&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 218&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 9&lt;/li&gt;&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/nathanbenaich"&gt;Nathan Benaich&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/chamath"&gt;Chamath Palihapitiya&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/beffjezos"&gt;Beff (e/acc)&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/wolfejosh"&gt;Josh Wolfe&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/lpolovets"&gt;Leo Polovets&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;</content:encoded>
+      <guid isPermaLink="false">cb88a3f1-3871-43b7-8189-d9b8c2810241</guid>
       <category>Digg AI from X</category>
-      <pubDate>Fri, 17 Jul 2026 05:07:06 +0000</pubDate>
+      <pubDate>Sat, 18 Jul 2026 10:52:40 +0000</pubDate>
     </item>
     <item>
-      <title>UK AISI: Open-weight hacking gap shrinks to 4–7 months</title>
-      <link>https://openai.com/daybreak/codex-security-plugin/#desktop-codex</link>
-      <description>GLM-5.2 matched the performance of Anthropic's Claude Opus 4.5.</description>
-      <content:encoded>&lt;p&gt;GLM-5.2 matched the performance of Anthropic&amp;#x27;s Claude Opus 4.5.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://openai.com/daybreak/codex-security-plugin/#desktop-codex"&gt;https://openai.com/daybreak/codex-security-plugin/#desktop-codex&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/b8smnlar"&gt;https://digg.com/tech/b8smnlar&lt;/a&gt;&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 91,894&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 659&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 105&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 9&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 46&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 20&lt;/li&gt;&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/Miles_Brundage"&gt;Miles Brundage&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/natolambert"&gt;Nathan Lambert&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/emollick"&gt;Ethan Mollick&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/BlackHC"&gt;Andreas Kirsch 🇺🇦&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/teortaxesTex"&gt;Teortaxes▶️ (DeepSeek 推特🐋铁粉 2023 – ∞)&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;</content:encoded>
-      <guid isPermaLink="false">d9a1b7c3-cf8b-4b10-b824-7fe50d163704</guid>
+      <title>Analysis claims open-weight models slow AI by eroding capex incentives</title>
+      <link>https://x.com/MinqiJiang/status/2078598091163181342</link>
+      <description>Beff proposes US tariffs on Chinese open-source models.</description>
+      <content:encoded>&lt;p&gt;Beff proposes US tariffs on Chinese open-source models.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://x.com/MinqiJiang/status/2078598091163181342"&gt;https://x.com/MinqiJiang/status/2078598091163181342&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/abosq66a"&gt;https://digg.com/tech/abosq66a&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 89,232&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 592&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 106&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 9&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 84&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 17&lt;/li&gt;&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/jachiam0"&gt;Joshua Achiam&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/BlackHC"&gt;Andreas Kirsch 🇺🇦&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/rapha_gl"&gt;rapha&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/Scobleizer"&gt;Robert Scoble&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/sebgehr"&gt;Sebastian Gehrmann&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;</content:encoded>
+      <guid isPermaLink="false">0bd4d896-2883-446b-ad31-eed09fa774c5</guid>
       <category>Digg AI from X</category>
-      <pubDate>Fri, 17 Jul 2026 13:36:02 +0000</pubDate>
+      <pubDate>Sat, 18 Jul 2026 22:16:36 +0000</pubDate>
     </item>
     <item>
-      <title>OpenClaw's Peter Steinberger questions shift to graph-based agents</title>
-      <link>https://x.com/steipete</link>
-      <description>Engineers debate if graphs scale better than traditional loops.</description>
-      <content:encoded>&lt;p&gt;Engineers debate if graphs scale better than traditional loops.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://x.com/steipete"&gt;https://x.com/steipete&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/mcw7wsyq"&gt;https://digg.com/tech/mcw7wsyq&lt;/a&gt;&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 391,571&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 2,789&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 976&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 155&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 508&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 9&lt;/li&gt;&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/deliprao"&gt;Delip Rao e/σ&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/swyx"&gt;swyx&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/steipete"&gt;Peter Steinberger 🦞&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/chrisalbon"&gt;Chris Albon&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/yoheinakajima"&gt;Yohei&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;</content:encoded>
-      <guid isPermaLink="false">74d2ef7b-e136-44d2-9c9e-cd55636d9be6</guid>
+      <title>OpenAI's Thibault Sottiaux seeks feedback on ChatGPT mobile app</title>
+      <link>https://x.com/thsottiaux/status/2078624985363706343</link>
+      <description>Suggestions include automated project context and email webhooks.</description>
+      <content:encoded>&lt;p&gt;Suggestions include automated project context and email webhooks.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://x.com/thsottiaux/status/2078624985363706343"&gt;https://x.com/thsottiaux/status/2078624985363706343&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/w0q88v7v"&gt;https://digg.com/tech/w0q88v7v&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 306,727&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 3,420&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 283&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 57&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 3,120&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 8&lt;/li&gt;&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/jasondeanlee"&gt;Jason Lee&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/ericmitchellai"&gt;Eric&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/thsottiaux"&gt;Tibo&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/jxnlco"&gt;jason&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/rohanpaul_ai"&gt;Rohan Paul&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;</content:encoded>
+      <guid isPermaLink="false">4574fe50-fdc9-4aad-a88d-8ad2cb073906</guid>
       <category>Digg AI from X</category>
-      <pubDate>Sat, 18 Jul 2026 00:46:30 +0000</pubDate>
+      <pubDate>Sat, 18 Jul 2026 23:43:30 +0000</pubDate>
     </item>
     <item>
-      <title>Pieter Levels switches OpenCode workflow to Kimi K3 over safety blocks</title>
-      <link>http://kimi.com/</link>
-      <description>Claude Code repeatedly blocked his emulator and health query tasks</description>
-      <content:encoded>&lt;p&gt;Claude Code repeatedly blocked his emulator and health query tasks&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="http://kimi.com/"&gt;http://kimi.com/&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/qg9z7tkn"&gt;https://digg.com/tech/qg9z7tkn&lt;/a&gt;&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 1,334,990&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 8,020&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 6,752&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 85&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 484&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 10&lt;/li&gt;&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/deliprao"&gt;Delip Rao e/σ&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/levelsio"&gt;@levelsio&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/growing_daniel"&gt;Daniel&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/TimSweeneyEpic"&gt;Tim Sweeney&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;</content:encoded>
-      <guid isPermaLink="false">75d738df-1b05-4430-8be7-5a4ea63c71dd</guid>
+      <title>Humanoid robots fight in live MMA matches in Shenzhen</title>
+      <link>https://x.com/APompliano/status/2078468771891569078</link>
+      <description>UFKL matches featured a dramatic spinning high-kick knockout.</description>
+      <content:encoded>&lt;p&gt;UFKL matches featured a dramatic spinning high-kick knockout.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://x.com/APompliano/status/2078468771891569078"&gt;https://x.com/APompliano/status/2078468771891569078&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/c6hmmjll"&gt;https://digg.com/tech/c6hmmjll&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 5,725,524&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 77,860&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 6,940&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 1,926&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 9,732&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 2&lt;/li&gt;&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/elonmusk"&gt;Elon Musk&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/APompliano"&gt;Anthony Pompliano 🌪&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;</content:encoded>
+      <guid isPermaLink="false">f56b5272-f578-4fb4-897b-289a471dd77a</guid>
       <category>Digg AI from X</category>
-      <pubDate>Fri, 17 Jul 2026 12:36:18 +0000</pubDate>
+      <pubDate>Sat, 18 Jul 2026 13:22:54 +0000</pubDate>
     </item>
     <item>
-      <title>David Sacks warns US regulations risk ceding AI lead to China</title>
-      <link>https://thehill.com/policy/technology/5975303-david-sacks-us-artificial-intelligence-kimi-k3-moonshot-ai/</link>
-      <description>Kimi K3 topped the Frontend Code Arena benchmark.</description>
-      <content:encoded>&lt;p&gt;Kimi K3 topped the Frontend Code Arena benchmark.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://thehill.com/policy/technology/5975303-david-sacks-us-artificial-intelligence-kimi-k3-moonshot-ai/"&gt;https://thehill.com/policy/technology/5975303-david-sacks-us-artificial-intelligence-kimi-k3-moonshot-ai/&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/7z8iixl1"&gt;https://digg.com/tech/7z8iixl1&lt;/a&gt;&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 345,858&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 3,426&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 297&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 32&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 240&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 9&lt;/li&gt;&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/beffjezos"&gt;Beff (e/acc)&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/shaunmmaguire"&gt;Shaun Maguire&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/LeonDerczynski"&gt;Leon Derczynski ⚒️☁️🏔️🌲&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/peteskomoroch"&gt;Pete Skomoroch&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/BrianRoemmele"&gt;Brian Roemmele&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;</content:encoded>
-      <guid isPermaLink="false">c399351c-fa26-416f-9d71-912633dadd79</guid>
+      <title>François Fleuret doubts eight H100s can run 3-trillion-parameter Kimi 3</title>
+      <link>https://github.com/antirez/ds4</link>
+      <description>Zephyr suggests Huawei SuperPoDs or NVL72 systems are required.</description>
+      <content:encoded>&lt;p&gt;Zephyr suggests Huawei SuperPoDs or NVL72 systems are required.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://github.com/antirez/ds4"&gt;https://github.com/antirez/ds4&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/7q4c62ly"&gt;https://digg.com/tech/7q4c62ly&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 186,569&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 660&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 113&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 2&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 67&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 13&lt;/li&gt;&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/JeffDean"&gt;Jeff Dean&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/giffmana"&gt;Lucas Beyer (bl16)&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/_arohan_"&gt;rohan anil&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/deliprao"&gt;Delip Rao e/σ&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/yacineMTB"&gt;kache&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;</content:encoded>
+      <guid isPermaLink="false">62c7a452-4b0f-42d5-8016-681c04e3bdd4</guid>
       <category>Digg AI from X</category>
-      <pubDate>Fri, 17 Jul 2026 22:17:15 +0000</pubDate>
+      <pubDate>Sat, 18 Jul 2026 10:12:25 +0000</pubDate>
     </item>
   </channel>
 </rss>
