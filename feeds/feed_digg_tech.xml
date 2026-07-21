@@ -7,7 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 20 Jul 2026 13:52:06 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 21 Jul 2026 01:54:52 +0000</lastBuildDate>
     <item>
       <title>Alibaba previews 2.4-trillion-parameter Qwen3.8 ahead of open-weight release</title>
       <link>https://www.qwencloud.com/pricing/token-plan</link>
@@ -35,10 +35,10 @@
       <pubDate>Sat, 18 Jul 2026 22:16:36 +0000</pubDate>
     </item>
     <item>
-      <title>Kimi.ai freezes new K3 subscriptions over GPU capacity limits</title>
+      <title>Kimi.ai pauses K3 subscriptions due to GPU capacity limits</title>
       <link>https://x.com/Kimi_Moonshot/status/2078855608565207130</link>
-      <description>The service is splitting into general and coding tiers.</description>
-      <content:encoded>&lt;p&gt;The service is splitting into general and coding tiers.&lt;/p&gt;
+      <description>It will split memberships into general and coding tiers.</description>
+      <content:encoded>&lt;p&gt;It will split memberships into general and coding tiers.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://x.com/Kimi_Moonshot/status/2078855608565207130"&gt;https://x.com/Kimi_Moonshot/status/2078855608565207130&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/ss0utgt1"&gt;https://digg.com/tech/ss0utgt1&lt;/a&gt;&lt;/p&gt;
 &lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 9,126,889&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 34,279&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 3,898&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 1,719&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 1,450&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 17&lt;/li&gt;&lt;/ul&gt;
@@ -48,11 +48,11 @@
       <pubDate>Sun, 19 Jul 2026 15:05:45 +0000</pubDate>
     </item>
     <item>
-      <title>Kimi K3 patches 15 vulnerabilities after Western models refuse</title>
-      <link>https://thehill.com/policy/technology/5975303-david-sacks-us-artificial-intelligence-kimi-k3-moonshot-ai/</link>
-      <description>The $250 run sparked debate over restrictive US guardrails.</description>
-      <content:encoded>&lt;p&gt;The $250 run sparked debate over restrictive US guardrails.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://thehill.com/policy/technology/5975303-david-sacks-us-artificial-intelligence-kimi-k3-moonshot-ai/"&gt;https://thehill.com/policy/technology/5975303-david-sacks-us-artificial-intelligence-kimi-k3-moonshot-ai/&lt;/a&gt;&lt;/p&gt;
+      <title>Kimi K3 fixes 15 vulnerabilities that US AI guardrails blocked</title>
+      <link>https://www.thenews.com.pk/latest/1409646-chinas-kimi-k3-fixes-15-security-bugs-challenging-us-ai-guardrails-report</link>
+      <description>The 10-hour debugging run cost just $250.</description>
+      <content:encoded>&lt;p&gt;The 10-hour debugging run cost just $250.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://www.thenews.com.pk/latest/1409646-chinas-kimi-k3-fixes-15-security-bugs-challenging-us-ai-guardrails-report"&gt;https://www.thenews.com.pk/latest/1409646-chinas-kimi-k3-fixes-15-security-bugs-challenging-us-ai-guardrails-report&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/6ey45cbe"&gt;https://digg.com/tech/6ey45cbe&lt;/a&gt;&lt;/p&gt;
 &lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 1,252,680&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 14,404&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 1,592&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 191&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 506&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 12&lt;/li&gt;&lt;/ul&gt;
 &lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/ClementDelangue"&gt;clem 🤗&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/levie"&gt;Aaron Levie&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/JTLonsdale"&gt;Joe Lonsdale&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/rohanpaul_ai"&gt;Rohan Paul&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/alexstamos"&gt;Alex Stamos&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;</content:encoded>
@@ -126,17 +126,17 @@
       <pubDate>Sun, 19 Jul 2026 16:14:05 +0000</pubDate>
     </item>
     <item>
-      <title>Conviction founder Sarah Guo backs vertical AI over foundation models</title>
+      <title>Conviction's Sarah Guo bets on specialized AI over frontier labs</title>
       <link>https://colossus.com/article/sarah-guo-conviction/</link>
-      <description>Her strategy targets specialized fields like clinics and courtrooms.</description>
-      <content:encoded>&lt;p&gt;Her strategy targets specialized fields like clinics and courtrooms.&lt;/p&gt;
+      <description>Her early portfolio is valued at over $76 billion.</description>
+      <content:encoded>&lt;p&gt;Her early portfolio is valued at over $76 billion.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://colossus.com/article/sarah-guo-conviction/"&gt;https://colossus.com/article/sarah-guo-conviction/&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/lkvj97sx"&gt;https://digg.com/tech/lkvj97sx&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/c9htrx6j"&gt;https://digg.com/tech/c9htrx6j&lt;/a&gt;&lt;/p&gt;
 &lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 108,082&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 1,088&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 724&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 4&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 33&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 9&lt;/li&gt;&lt;/ul&gt;
 &lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/saranormous"&gt;sarah guo&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/btaylor"&gt;Bret Taylor&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/alexisohanian"&gt;Alexis Ohanian 🗽&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/schrep"&gt;Mike Schroepfer&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/joshelman"&gt;Josh Elman&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;</content:encoded>
-      <guid isPermaLink="false">707f2805-05df-40a4-9dc1-f703e8cc754c</guid>
+      <guid isPermaLink="false">09ce5627-e6fb-485e-a0eb-0cec6f146152</guid>
       <category>Digg AI from X</category>
-      <pubDate>Sun, 19 Jul 2026 22:44:02 +0000</pubDate>
+      <pubDate>Mon, 20 Jul 2026 13:36:27 +0000</pubDate>
     </item>
   </channel>
 </rss>
