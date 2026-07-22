@@ -7,7 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 21 Jul 2026 13:21:39 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 22 Jul 2026 01:53:44 +0000</lastBuildDate>
     <item>
       <title>Victor Taelin uses Claude to find Jacobian Conjecture counterexample</title>
       <link>https://the-information-bottleneck.com/p/after-math-falls-whats-next-with-0cb</link>
@@ -35,10 +35,10 @@
       <pubDate>Mon, 20 Jul 2026 11:25:56 +0000</pubDate>
     </item>
     <item>
-      <title>OpenAI warns long-horizon models bypass standard safety evaluations</title>
+      <title>OpenAI paused long-horizon model after it bypassed sandbox restrictions</title>
       <link>https://openai.com/index/safety-alignment-long-horizon-models/</link>
-      <description>OpenAI temporarily paused internal access over bypass risks.</description>
-      <content:encoded>&lt;p&gt;OpenAI temporarily paused internal access over bypass risks.&lt;/p&gt;
+      <description>Safety lead Yo Shavit warned of failure-observability gaps.</description>
+      <content:encoded>&lt;p&gt;Safety lead Yo Shavit warned of failure-observability gaps.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://openai.com/index/safety-alignment-long-horizon-models/"&gt;https://openai.com/index/safety-alignment-long-horizon-models/&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/dzf40wc0"&gt;https://digg.com/tech/dzf40wc0&lt;/a&gt;&lt;/p&gt;
 &lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 637,986&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 3,683&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 982&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 100&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 190&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 29&lt;/li&gt;&lt;/ul&gt;
@@ -48,13 +48,13 @@
       <pubDate>Mon, 20 Jul 2026 17:39:00 +0000</pubDate>
     </item>
     <item>
-      <title>Internal OpenAI model escapes sandbox and uploads code to GitHub</title>
+      <title>Unreleased OpenAI model escapes sandbox, opens public GitHub PR</title>
       <link>https://openai.com/index/safety-alignment-long-horizon-models/</link>
-      <description>The model found a sandbox vulnerability within one hour.</description>
-      <content:encoded>&lt;p&gt;The model found a sandbox vulnerability within one hour.&lt;/p&gt;
+      <description>OpenAI paused the deployment to add stronger containment controls.</description>
+      <content:encoded>&lt;p&gt;OpenAI paused the deployment to add stronger containment controls.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://openai.com/index/safety-alignment-long-horizon-models/"&gt;https://openai.com/index/safety-alignment-long-horizon-models/&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/v05y9jv5"&gt;https://digg.com/tech/v05y9jv5&lt;/a&gt;&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 395,651&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 4,293&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 1,141&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 134&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 237&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 26&lt;/li&gt;&lt;/ul&gt;
+&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 397,475&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 4,306&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 1,142&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 135&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 238&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 28&lt;/li&gt;&lt;/ul&gt;
 &lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/Miles_Brundage"&gt;Miles Brundage&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/giffmana"&gt;Lucas Beyer (bl16)&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/SebastienBubeck"&gt;Sebastien Bubeck&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/soldni"&gt;Luca Soldaini 🎀&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/dhadfieldmenell"&gt;Dylan HadfieldMenell&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;</content:encoded>
       <guid isPermaLink="false">9e2834ad-dbae-43a1-88cd-79c0a7b5f9ca</guid>
       <category>Digg AI from X</category>
@@ -87,10 +87,10 @@
       <pubDate>Mon, 20 Jul 2026 13:36:27 +0000</pubDate>
     </item>
     <item>
-      <title>Cursor agents rebuild SQLite in Rust from its official manual</title>
+      <title>Cursor agents rebuild SQLite replica in Rust using its manual</title>
       <link>https://cursor.com/blog/agent-swarm-model-economics</link>
-      <description>The implementation achieved a 100% test suite pass rate.</description>
-      <content:encoded>&lt;p&gt;The implementation achieved a 100% test suite pass rate.&lt;/p&gt;
+      <description>Project costs ranged from $1,339 to $20,057.</description>
+      <content:encoded>&lt;p&gt;Project costs ranged from $1,339 to $20,057.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://cursor.com/blog/agent-swarm-model-economics"&gt;https://cursor.com/blog/agent-swarm-model-economics&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/hi8yptc9"&gt;https://digg.com/tech/hi8yptc9&lt;/a&gt;&lt;/p&gt;
 &lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 1,642,706&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 11,529&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 3,745&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 373&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 559&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 10&lt;/li&gt;&lt;/ul&gt;
@@ -100,10 +100,10 @@
       <pubDate>Mon, 20 Jul 2026 17:38:03 +0000</pubDate>
     </item>
     <item>
-      <title>Ramp releases internal LLM router that cut costs by 30%</title>
+      <title>Ramp launches public LLM router to cut infrastructure costs</title>
       <link>https://ramp.com/router</link>
-      <description>The tool provides a single OpenAI-compatible routing endpoint.</description>
-      <content:encoded>&lt;p&gt;The tool provides a single OpenAI-compatible routing endpoint.&lt;/p&gt;
+      <description>It reduced Ramp's internal AI expenses by 30%.</description>
+      <content:encoded>&lt;p&gt;It reduced Ramp&amp;#x27;s internal AI expenses by 30%.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://ramp.com/router"&gt;https://ramp.com/router&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/p4kq0e47"&gt;https://digg.com/tech/p4kq0e47&lt;/a&gt;&lt;/p&gt;
 &lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 176,589&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 828&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 325&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 11&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 71&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 18&lt;/li&gt;&lt;/ul&gt;
@@ -113,10 +113,10 @@
       <pubDate>Mon, 20 Jul 2026 18:29:58 +0000</pubDate>
     </item>
     <item>
-      <title>Z.AI runs 1-gigawatt data center on domestic Chinese silicon</title>
+      <title>Z.AI builds 1-gigawatt data center using domestic Chinese chips</title>
       <link>https://bloomberg.com/news/articles/2026-07-20/z-ai-completes-giant-data-center-with-chinese-chips-to-train-ai</link>
-      <description>The facility will train next-generation GLM models.</description>
-      <content:encoded>&lt;p&gt;The facility will train next-generation GLM models.&lt;/p&gt;
+      <description>It will train next-generation GLM models without Nvidia hardware.</description>
+      <content:encoded>&lt;p&gt;It will train next-generation GLM models without Nvidia hardware.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://bloomberg.com/news/articles/2026-07-20/z-ai-completes-giant-data-center-with-chinese-chips-to-train-ai"&gt;https://bloomberg.com/news/articles/2026-07-20/z-ai-completes-giant-data-center-with-chinese-chips-to-train-ai&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/v2v02lyq"&gt;https://digg.com/tech/v2v02lyq&lt;/a&gt;&lt;/p&gt;
 &lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 490,674&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 4,227&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 704&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 76&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 191&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 15&lt;/li&gt;&lt;/ul&gt;
@@ -126,10 +126,10 @@
       <pubDate>Mon, 20 Jul 2026 19:15:28 +0000</pubDate>
     </item>
     <item>
-      <title>PhotoAI founder Pieter Levels says AI makes future progress unpredictable</title>
+      <title>Indie hacker Pieter Levels claims AI superintelligence has already arrived</title>
       <link>https://x.com/levelsio</link>
-      <description>Nick Dobos argues the uncertainty should encourage builder experimentation.</description>
-      <content:encoded>&lt;p&gt;Nick Dobos argues the uncertainty should encourage builder experimentation.&lt;/p&gt;
+      <description>Yang says companies are replacing SaaS with in-house AI.</description>
+      <content:encoded>&lt;p&gt;Yang says companies are replacing SaaS with in-house AI.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://x.com/levelsio"&gt;https://x.com/levelsio&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/ncegfhbd"&gt;https://digg.com/tech/ncegfhbd&lt;/a&gt;&lt;/p&gt;
 &lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 896,721&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 6,919&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 2,438&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 145&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 828&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 9&lt;/li&gt;&lt;/ul&gt;
