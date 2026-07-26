@@ -5,13 +5,19 @@ import undetected_chromedriver as uc
 import re
 from bs4 import BeautifulSoup
 from datetime import datetime
-from email.utils import parsedate_to_datetime
 import pytz
-from feedgen.feed import FeedGenerator
 import logging
 from pathlib import Path
 from urllib.parse import urljoin
-import xml.etree.ElementTree as ET
+
+from _common import (
+    build_feed,
+    clean_article_html,
+    extract_summary,
+    feed_self_url,
+    load_cached_entries,
+    save_feed,
+)
 
 # Set up logging
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
@@ -124,90 +130,9 @@ def fetch_article_page(url: str) -> str | None:
             return None
 
 
-def _clean_article_html(container, base_url: str) -> str:
-    """Clean article container and absolutize links/media.
-    
-    - Removes script/style/noscript and common non-content elements
-    - Removes interactive elements (input, canvas, link) that don't work in RSS
-    - Converts relative href/src to absolute using base_url
-    - Preserves headings, paragraphs, lists, images, blockquotes, code, tables
-    """
-    if container is None:
-        return ""
-
-    # Remove noisy elements by tag - include interactive elements that don't work in RSS
-    for tag in container.select(
-        "script, style, noscript, svg use[xmlns], form, iframe[aria-hidden='true'], "
-        "input, canvas, link, button, select, textarea"
-    ):
-        tag.decompose()
-
-    # Remove Cloudflare email protection spans and replace with placeholder
-    for cf_email in container.select("span.__cf_email__, [data-cfemail]"):
-        cf_email.replace_with("[email protected]")
-
-    # Remove likely-non-content by class/id hints
-    noisy_patterns = [
-        "share",
-        "social",
-        "breadcrumb",
-        "nav",
-        "header",
-        "footer",
-        "subscribe",
-        "newsletter",
-        "related",
-        "author",
-        "meta",
-        "byline",
-        "tags",
-        "comment",
-        "toc",
-        "table-of-contents",
-        "promo",
-        "cta",
-    ]
-    noisy_re = re.compile("|".join([re.escape(p) for p in noisy_patterns]), re.IGNORECASE)
-    for el in container.find_all(True):
-        cid = (el.get("id") or "") + " " + " ".join(el.get("class", []))
-        if cid and noisy_re.search(cid):
-            if not el.find([
-                "p",
-                "h1",
-                "h2",
-                "h3",
-                "h4",
-                "h5",
-                "h6",
-                "li",
-                "img",
-                "pre",
-                "blockquote",
-                "table",
-            ]):
-                el.decompose()
-
-    # Make links and media absolute - handle all relative URLs, not just those starting with /
-    for a in container.find_all("a", href=True):
-        href = a["href"]
-        if not href.startswith(("http://", "https://", "mailto:", "#")):
-            a["href"] = urljoin(base_url, href)
-    for img in container.find_all("img", src=True):
-        src = img["src"]
-        if not src.startswith(("http://", "https://", "data:")):
-            img["src"] = urljoin(base_url, src)
-    for source in container.find_all("source"):
-        for attr in ["src", "srcset"]:
-            val = source.get(attr)
-            if val and not val.startswith(("http://", "https://", "data:")):
-                source[attr] = urljoin(base_url, val)
-
-    return str(container)
-
-
-def extract_article_content(html: str, page_url: str) -> tuple[str, str]:
+def extract_article_content(html: str, page_url: str, title: str | None = None) -> tuple[str, str]:
     """Extract main article content HTML and a plain-text summary.
-    
+
     Returns (content_html, summary_text)
     """
     soup = BeautifulSoup(html, "html.parser")
@@ -233,19 +158,18 @@ def extract_article_content(html: str, page_url: str) -> tuple[str, str]:
                 parent_scores[parent] = parent_scores.get(parent, 0) + len(p.get_text(strip=True))
         container = max(parent_scores, key=parent_scores.get) if parent_scores else soup.body
 
-    content_html = _clean_article_html(container, base_url=page_url)
+    # Site-specific: Cloudflare email obfuscation placeholders.
+    if container is not None:
+        for cf_email in container.select("span.__cf_email__, [data-cfemail]"):
+            cf_email.replace_with("[email protected]")
+        # Tufte-style margin sidenotes are inlined once unwrapped; make them
+        # read as parentheticals instead of gluing onto the preceding word.
+        for sidenote in container.select("span.sidenote"):
+            sidenote.insert(0, " (")
+            sidenote.append(") ")
 
-    # Summary: first sufficiently long paragraph
-    summary = ""
-    if container:
-        for p in container.find_all("p"):
-            text = p.get_text(" ", strip=True)
-            if text and len(text) > 40:
-                summary = text
-                break
-    if not summary:
-        summary = soup.title.get_text(strip=True) if soup.title else ""
-
+    content_html = clean_article_html(container, page_url, title=title)
+    summary = extract_summary(soup, container, title=title)
     return content_html, summary
 
 
@@ -414,33 +338,14 @@ def parse_blog_html(html_content: str):
 
 def generate_rss_feed(articles, feed_name: str = "thinkingmachines"):
     """Generate RSS feed from parsed articles."""
-    fg = FeedGenerator()
-    fg.title("Thinking Machines Blog")
-    fg.description("Shared science and news from the Thinking Machines team")
-    fg.link(href=BLOG_URL)
-    fg.language("en")
-
-    # Optional metadata
-    fg.author({"name": "Thinking Machines Lab"})
-    fg.link(href=BLOG_URL, rel="alternate")
-
-    # feedgen prepends entries, so iterate in reverse to get newest-first in output
-    for article in reversed(articles):
-        fe = fg.add_entry()
-        fe.title(article["title"])
-        fe.link(href=article["link"])
-        
-        # Use full HTML content if available, otherwise use description
-        content_html = article.get("content_html")
-        summary = article.get("description", article["title"]) or article["title"]
-        
-        if content_html:
-            fe.content(content_html)
-        fe.description(summary)
-        fe.published(article["date"])
-        fe.category(term=article["category"])
-        fe.id(article["link"])
-
+    fg = build_feed(
+        title="Thinking Machines Blog",
+        description="Shared science and news from the Thinking Machines team",
+        site_url=BLOG_URL,
+        feed_url=feed_self_url(f"feed_{feed_name}.xml"),
+        items=articles,
+        author={"name": "Thinking Machines Lab"},
+    )
     logger.info("RSS feed generated successfully")
     return fg
 
@@ -448,52 +353,8 @@ def generate_rss_feed(articles, feed_name: str = "thinkingmachines"):
 def save_rss_feed(feed_generator, feed_name: str = "thinkingmachines") -> Path:
     feeds_dir = ensure_feeds_directory()
     output_file = feeds_dir / f"feed_{feed_name}.xml"
-    feed_generator.rss_file(str(output_file), pretty=True)
-    logger.info(f"RSS feed saved to {output_file}")
+    save_feed(feed_generator, output_file)
     return output_file
-
-
-def get_existing_entries_from_feed(feed_path: Path):
-    """Parse the existing RSS feed and return entries for reuse."""
-    entries = []
-    if not feed_path.exists():
-        return entries
-    try:
-        tree = ET.parse(feed_path)
-        root = tree.getroot()
-        ns = {"content": "http://purl.org/rss/1.0/modules/content/"}
-        for item in root.findall("./channel/item"):
-            link_elem = item.find("link")
-            title_elem = item.find("title")
-            desc_elem = item.find("description")
-            content_elem = item.find("content:encoded", ns)
-            date_elem = item.find("pubDate")
-            category_elem = item.find("category")
-
-            link = link_elem.text.strip() if link_elem is not None and link_elem.text else None
-            if not link:
-                continue
-
-            date = None
-            if date_elem is not None and date_elem.text:
-                try:
-                    date = parsedate_to_datetime(date_elem.text.strip())
-                except Exception:
-                    date = None
-
-            entries.append(
-                {
-                    "title": title_elem.text.strip() if title_elem is not None and title_elem.text else link,
-                    "link": link,
-                    "date": date or datetime.now(pytz.UTC),
-                    "category": category_elem.text.strip() if category_elem is not None and category_elem.text else "Blog",
-                    "description": desc_elem.text if desc_elem is not None and desc_elem.text else "",
-                    "content_html": content_elem.text if content_elem is not None and content_elem.text else "",
-                }
-            )
-    except Exception as e:
-        logger.warning(f"Failed to parse existing feed entries: {str(e)}")
-    return entries
 
 
 def main(feed_name: str = "thinkingmachines", force: bool = False) -> bool:
@@ -504,7 +365,7 @@ def main(feed_name: str = "thinkingmachines", force: bool = False) -> bool:
         existing_entries = []
         existing_links = set()
         if not force:
-            existing_entries = get_existing_entries_from_feed(feed_path)
+            existing_entries, _cache = load_cached_entries(feed_path)
             existing_links = {entry["link"] for entry in existing_entries}
 
         html_content = fetch_blog_content(BLOG_URL)
@@ -518,7 +379,9 @@ def main(feed_name: str = "thinkingmachines", force: bool = False) -> bool:
         for article in new_articles:
             article_html = fetch_article_page(article["link"])
             if article_html:
-                content_html, summary = extract_article_content(article_html, article["link"])
+                content_html, summary = extract_article_content(
+                    article_html, article["link"], title=article.get("title")
+                )
                 article["content_html"] = content_html
                 if summary and summary.strip() and len(summary) > len(article.get("description", "")):
                     article["description"] = summary

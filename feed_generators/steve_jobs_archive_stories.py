@@ -12,7 +12,15 @@ import requests
 import undetected_chromedriver as uc
 from bs4 import BeautifulSoup
 from dateutil import parser as dateparser
-from feedgen.feed import FeedGenerator
+
+from _common import (
+    build_feed,
+    clean_article_html,
+    extract_summary,
+    feed_self_url,
+    load_cached_entries,
+    save_feed,
+)
 
 # Set up logging
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
@@ -258,71 +266,41 @@ def parse_listing(html: str) -> list[dict]:
     return deduped
 
 
-def _absolutize_srcset(value: str, base_url: str) -> str:
-    parts = []
-    for part in value.split(","):
-        chunk = part.strip()
-        if not chunk:
+# Residual text of the site's custom JS video player (no <video> tag is
+# server-rendered, only controls chrome inside a <figure>).
+_PLAYER_TEXT_RE = re.compile(r"video controls|seconds elapsed", re.IGNORECASE)
+
+# Trailing recommendation section headings on story pages.
+_EXPLORE_MORE_MARKERS = {"explore more", "more stories"}
+
+
+def _strip_video_player_ui(container) -> None:
+    for text_node in list(container.find_all(string=_PLAYER_TEXT_RE)):
+        # A previous decompose may have destroyed this node already.
+        if getattr(text_node, "parent", None) is None:
             continue
-        bits = chunk.split()
-        url = bits[0]
-        if not url.startswith(("http://", "https://", "data:")):
-            url = urljoin(base_url, url)
-        bits[0] = url
-        parts.append(" ".join(bits))
-    return ", ".join(parts)
+        target = text_node.find_parent("figure") or text_node.parent
+        if target is not None and target is not container:
+            target.decompose()
 
 
-def _absolutize_url(value: str, base_url: str) -> str:
-    if not value:
-        return value
-    if value.startswith(("http://", "https://", "mailto:", "#", "data:")):
-        return value
-    return urljoin(base_url, value)
-
-
-def _clean_article_html(container, base_url: str) -> None:
-    if container is None:
+def _truncate_explore_more(container) -> None:
+    """Remove the 'Explore more' cross-promo section and everything after it."""
+    marker = None
+    for el in container.find_all(["h2", "h3", "h4", "p", "div", "section"]):
+        if el.get_text(" ", strip=True).lower().rstrip(":") in _EXPLORE_MORE_MARKERS:
+            marker = el
+            break
+    if marker is None:
         return
-
-    for tag in container.select(
-        "script, style, noscript, svg, form, iframe, input, button, select, textarea, "
-        "nav, header, footer, aside"
-    ):
-        tag.decompose()
-
-    for tag in container.find_all(True):
-        if tag.name == "a" and tag.get("href"):
-            tag["href"] = _absolutize_url(tag["href"], base_url)
-        if tag.name == "img" and tag.get("src"):
-            tag["src"] = _absolutize_url(tag["src"], base_url)
-        if tag.name in {"img", "source"} and tag.get("srcset"):
-            tag["srcset"] = _absolutize_srcset(tag["srcset"], base_url)
-        if tag.name in {"video", "audio"}:
-            if tag.get("poster"):
-                tag["poster"] = _absolutize_url(tag["poster"], base_url)
-            if tag.get("src"):
-                tag["src"] = _absolutize_url(tag["src"], base_url)
-
-    for tag in list(container.find_all(["div", "span"])):
-        if tag.find(["p", "img", "figure", "blockquote", "ul", "ol", "li", "h1", "h2", "h3", "h4"]):
-            continue
-        if not tag.get_text(strip=True):
-            tag.decompose()
-
-
-def _extract_summary(container) -> str:
-    if container is None:
-        return ""
-    for tag in container.find_all(["p", "li"]):
-        text = tag.get_text(" ", strip=True)
-        if text:
-            return text
-    for tag in container.find_all(["h2", "h3", "h4"]):
-        text = tag.get_text(" ", strip=True)
-        if text:
-            return text
-    return ""
+    for sibling in list(marker.next_siblings):
+        sibling.extract()
+    node = marker.parent
+    marker.decompose()
+    while node is not None and node is not container:
+        for sibling in list(node.next_siblings):
+            sibling.extract()
+        node = node.parent
 
 
 def _extract_pub_date(container) -> datetime | None:
@@ -347,82 +325,107 @@ def _extract_pub_date(container) -> datetime | None:
     return None
 
 
-def extract_article_content(html: str, page_url: str) -> tuple[str, str, datetime | None]:
+def extract_article_content(
+    html: str, page_url: str, title: str | None = None
+) -> tuple[str, str, datetime | None]:
     soup = BeautifulSoup(html, "html.parser")
     container = soup.find(id="main") or soup.find("main") or soup.find("article")
     if container is None:
         logger.warning("Could not locate article container; using full body.")
         container = soup.body or soup
 
-    _clean_article_html(container, page_url)
-    summary = _extract_summary(container)
     pub_date = _extract_pub_date(container)
-    return str(container), summary, pub_date
+    _strip_video_player_ui(container)
+    _truncate_explore_more(container)
+    content_html = clean_article_html(container, page_url, title=title)
+    summary = extract_summary(soup, container, title=title)
+    return content_html, summary, pub_date
 
 
-def generate_rss_feed(articles: list[dict], feed_name: str) -> FeedGenerator:
-    fg = FeedGenerator()
-    fg.title("Steve Jobs Archive Stories")
-    fg.link(href=LISTING_URL)
-    fg.description("Selections of video and writing drawn from moments in Steve's life.")
-    fg.language("en")
-    fg.author({"name": "Steve Jobs Archive"})
-
-    for article in reversed(articles):
-        fe = fg.add_entry()
-        fe.title(article["title"])
-        fe.link(href=article["link"])
-        fe.description(article.get("description") or article["title"])
-        if article.get("content_html"):
-            fe.content(article["content_html"])
-        if article.get("date"):
-            fe.published(article["date"])
-        fe.category(term=article.get("category", "Stories"))
-        fe.id(article["link"])
-
+def generate_rss_feed(articles: list[dict], feed_name: str):
+    fg = build_feed(
+        title="Steve Jobs Archive Stories",
+        description="Selections of video and writing drawn from moments in Steve's life.",
+        site_url=LISTING_URL,
+        feed_url=feed_self_url(f"feed_{feed_name}.xml"),
+        items=articles,
+        author={"name": "Steve Jobs Archive"},
+    )
     logger.info("RSS feed generated successfully")
     return fg
 
 
-def save_rss_feed(feed_generator: FeedGenerator, feed_name: str) -> Path:
-    feeds_dir = ensure_feeds_directory()
-    output_file = feeds_dir / f"feed_{feed_name}.xml"
-    feed_generator.rss_file(str(output_file), pretty=True)
-    logger.info(f"RSS feed saved to {output_file}")
-    return output_file
-
-
-def _sort_articles(articles: list[dict]) -> list[dict]:
-    with_dates = [article for article in articles if article.get("date")]
-    without_dates = [article for article in articles if not article.get("date")]
-    with_dates.sort(key=lambda x: x["date"], reverse=True)
-    return with_dates + without_dates
-
-
-def main(feed_name: str = "steve_jobs_archive_stories") -> bool:
+def main(feed_name: str = "steve_jobs_archive_stories", force: bool = False) -> bool:
     try:
+        feeds_dir = ensure_feeds_directory()
+        feed_path = feeds_dir / f"feed_{feed_name}.xml"
+
+        # Load the previous feed as cache and fail-safe: a failed listing or
+        # article fetch must never shrink the feed.
+        existing_items, cache = load_cached_entries(feed_path)
+        existing_by_link = {item["link"]: item for item in existing_items}
+
         session = build_requests_session()
-        listing_html = fetch_page(LISTING_URL, session=session)
-        articles = parse_listing(listing_html)
+        articles: list[dict] = []
+        try:
+            listing_html = fetch_page(LISTING_URL, session=session)
+            articles = parse_listing(listing_html)
+        except Exception as e:
+            logger.error(f"Failed to fetch/parse listing page: {e}")
         if not articles:
-            logger.warning("No stories parsed from listing page.")
+            logger.warning("No stories parsed from listing page; keeping cached items.")
 
         for article in articles:
-            article_html = fetch_page(article["link"], session=session)
-            if not article_html:
-                logger.warning(f"Could not fetch article page: {article['link']}")
+            link = article["link"]
+            prior = existing_by_link.get(link)
+            cached = cache.get(link)
+            if prior and prior.get("date"):
+                article["date"] = prior["date"]
+
+            if not force and cached and cached.get("content_html"):
+                article["content_html"] = cached["content_html"]
+                if cached.get("description"):
+                    article["description"] = cached["description"]
                 continue
-            content_html, summary, pub_date = extract_article_content(article_html, article["link"])
-            article["content_html"] = content_html
+
+            try:
+                article_html = fetch_page(link, session=session)
+            except Exception as e:
+                logger.warning(f"Could not fetch article page {link}: {e}")
+                article_html = None
+            if not article_html:
+                # Keep whatever we had for this story rather than dropping it.
+                if cached and cached.get("content_html"):
+                    article["content_html"] = cached["content_html"]
+                    if cached.get("description"):
+                        article["description"] = cached["description"]
+                continue
+
+            content_html, summary, pub_date = extract_article_content(
+                article_html, link, title=article["title"]
+            )
+            if content_html:
+                article["content_html"] = content_html
+            elif cached and cached.get("content_html"):
+                article["content_html"] = cached["content_html"]
             if summary:
                 article["description"] = summary
             if pub_date:
                 article["date"] = pub_date
 
-        sorted_articles = _sort_articles(articles)
-        feed = generate_rss_feed(sorted_articles, feed_name)
-        save_rss_feed(feed, feed_name)
-        logger.info(f"Successfully generated RSS feed with {len(sorted_articles)} items")
+        # Merge: fresh items plus cached items whose pages disappeared from the
+        # listing (or that a failed run could not re-parse).
+        fresh_links = {article["link"] for article in articles}
+        merged = articles + [
+            item for item in existing_items if item["link"] not in fresh_links
+        ]
+        if not merged:
+            logger.error("No articles available (fresh or cached); aborting.")
+            return False
+
+        feed = generate_rss_feed(merged, feed_name)
+        save_feed(feed, feed_path)
+        logger.info(f"Successfully generated RSS feed with {len(merged)} items")
         return True
     except Exception as e:
         logger.error(f"Failed to generate Steve Jobs Archive Stories RSS: {e}")
@@ -436,5 +439,10 @@ if __name__ == "__main__":
         default="steve_jobs_archive_stories",
         help="Output feed name (feed_<name>.xml)",
     )
+    parser.add_argument(
+        "--force",
+        action="store_true",
+        help="Refetch all article pages (cached items whose pages disappeared are kept).",
+    )
     args = parser.parse_args()
-    main(feed_name=args.feed_name)
+    raise SystemExit(0 if main(feed_name=args.feed_name, force=args.force) else 1)

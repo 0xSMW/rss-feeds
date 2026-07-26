@@ -5,6 +5,8 @@ from feedgen.feed import FeedGenerator
 import logging
 from pathlib import Path
 
+from _common import build_feed, feed_self_url, save_feed
+
 # Set up logging
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
 logger = logging.getLogger(__name__)
@@ -137,34 +139,14 @@ def collect_all_items(exclude_feeds: list[str] = None) -> list[dict]:
 
 def generate_meta_feed(items: list[dict], feed_name: str = "ai_research") -> FeedGenerator:
     """Generate combined RSS feed from all items."""
-    fg = FeedGenerator()
-    fg.title("AI Research Feed")
-    fg.description("Combined feed of AI research blogs and news from Anthropic, OpenAI, xAI, Mistral, and Thinking Machines")
-    fg.link(href="https://github.com/0xSMW/rss-feeds")
-    fg.language("en")
-    
-    fg.author({"name": "AI Research Feed Aggregator"})
-    
-    # feedgen prepends entries, so iterate in reverse to get newest-first in output
-    for item in reversed(items):
-        fe = fg.add_entry()
-        fe.title(item["title"])
-        fe.link(href=item["link"])
-        fe.description(item["description"])
-        
-        if item.get("content_html"):
-            fe.content(item["content_html"])
-        
-        if item.get("date"):
-            fe.published(item["date"])
-        
-        fe.category(term=item["category"])
-        
-        if item.get("author"):
-            fe.author({"name": item["author"]})
-        
-        fe.id(item["guid"])
-    
+    fg = build_feed(
+        title="AI Research Feed",
+        description="Combined feed of AI research blogs and news from Anthropic, OpenAI, xAI, Mistral, and Thinking Machines",
+        site_url="https://github.com/0xSMW/rss-feeds",
+        feed_url=feed_self_url(f"feed_{feed_name}.xml"),
+        items=items,
+        author={"name": "AI Research Feed Aggregator"},
+    )
     logger.info("Meta RSS feed generated successfully")
     return fg
 
@@ -173,8 +155,7 @@ def save_rss_feed(feed_generator, feed_name: str = "ai_research") -> Path:
     """Save RSS feed to file."""
     feeds_dir = ensure_feeds_directory()
     output_file = feeds_dir / f"feed_{feed_name}.xml"
-    feed_generator.rss_file(str(output_file), pretty=True)
-    logger.info(f"Meta RSS feed saved to {output_file}")
+    save_feed(feed_generator, output_file)
     return output_file
 
 

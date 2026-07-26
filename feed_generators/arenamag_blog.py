@@ -1,72 +1,32 @@
 import argparse
-import requests
-import time
-import undetected_chromedriver as uc
-import re
-import unicodedata
-from bs4 import BeautifulSoup
-from datetime import datetime
-from dateutil import parser as dateparser
-from email.utils import parsedate_to_datetime
-import pytz
-from feedgen.feed import FeedGenerator
 import logging
+import os
+import re
+import time
+import unicodedata
+from concurrent.futures import ThreadPoolExecutor, as_completed
+from datetime import datetime
 from pathlib import Path
-from urllib.parse import urljoin
-import xml.etree.ElementTree as ET
+from urllib.parse import urljoin, urlparse
+
+import pytz
+import requests
+import undetected_chromedriver as uc
+from bs4 import BeautifulSoup
+from dateutil import parser as dateparser
+
+from _common import (
+    build_feed,
+    clean_article_html,
+    extract_summary,
+    feed_self_url,
+    load_cached_entries,
+    save_feed,
+)
 
 # Set up logging
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
 logger = logging.getLogger(__name__)
-
-
-def normalize_text(text: str) -> str:
-    """Normalize Unicode text - fix smart quotes, dashes, encoding issues."""
-    if not text:
-        return text
-    
-    # Fix mojibake: UTF-8 decoded as Latin-1 creates sequences like â€™ for '
-    # These appear as Unicode chars: â (U+00E2), control chars (U+0080, U+0099), etc.
-    mojibake_map = {
-        "\u00e2\u0080\u0099": "'",   # Right single quote (')
-        "\u00e2\u0080\u0098": "'",   # Left single quote (')
-        "\u00e2\u0080\u009c": '"',   # Left double quote (")
-        "\u00e2\u0080\u009d": '"',   # Right double quote (")
-        "\u00e2\u0080\u0093": "-",   # En dash (–)
-        "\u00e2\u0080\u0094": "-",   # Em dash (—)
-        "\u00e2\u0080\u0091": "-",   # Non-breaking hyphen (‑)
-        "\u00e2\u0080\u00a6": "...", # Ellipsis (…)
-        "\u00c2\u00a0": " ",         # Non-breaking space
-        "\u00e2\u0080\u009a": "'",   # Single low-9 quote (‚)
-        "\u00e2\u0080\u009e": '"',   # Double low-9 quote („)
-    }
-    for mojibake, replacement in mojibake_map.items():
-        text = text.replace(mojibake, replacement)
-    
-    # Also try the Latin-1 re-encoding fix for other cases
-    try:
-        fixed = text.encode("latin-1").decode("utf-8")
-        text = fixed
-    except (UnicodeDecodeError, UnicodeEncodeError):
-        pass
-    
-    # Normalize to NFC form
-    text = unicodedata.normalize("NFC", text)
-    
-    # Replace smart quotes and apostrophes with ASCII equivalents
-    replacements = {
-        "\u2018": "'",  # Left single quote
-        "\u2019": "'",  # Right single quote (apostrophe)
-        "\u201c": '"',  # Left double quote
-        "\u201d": '"',  # Right double quote
-        "\u2013": "-",  # En dash
-        "\u2014": "-",  # Em dash
-        "\u2026": "...",  # Ellipsis
-        "\u00a0": " ",  # Non-breaking space
-    }
-    for old, new in replacements.items():
-        text = text.replace(old, new)
-    return text
 
 BASE_URL = "https://arenamag.com"
 CATEGORY_URLS = [
@@ -76,6 +36,64 @@ CATEGORY_URLS = [
     f"{BASE_URL}/civilization",
     f"{BASE_URL}/greatness",
 ]
+
+# Only URLs shaped like /articles/<slug> are actual articles; everything else
+# (homepage, category indexes, /manage, /about, ...) is site chrome.
+ARTICLE_PATH_RE = re.compile(r"/articles/[^/]+")
+
+# Framer-specific chrome inside/around the article container.
+ARENA_STRIP_SELECTORS = (
+    '[data-framer-name="Header"]',
+    '[data-framer-name="HeaderImage"]',
+    '[data-framer-name="NewsletterCard"]',
+    '[data-framer-name="SubscribePaywall"]',
+    '[data-framer-name="RequiresSubscription"]',
+    '[data-framer-name="MetaItem"]',
+    '[data-framer-name="SidebarActions"]',
+    '[data-framer-name="ActionGroup"]',
+    '[data-framer-name="MenuItem"]',
+    '[class*="paywall"]',
+)
+
+# Subscribe promo copy that has leaked into article bodies before.
+ARENA_CTA_PATTERNS = (
+    r"four (?:beautiful )?100[+-]? ?page issues.*",
+    r"subscribe to arena.*",
+    r"get arena( magazine)?.*",
+)
+ARENA_PROMO_RE = re.compile(
+    r"^(?:subscribe|four (?:beautiful )?100[+-]? ?page issues per year.*|"
+    r"get arena magazine.*|subscribe to arena.*)$",
+    re.IGNORECASE,
+)
+
+# Mojibake markers: 'â'/'Ã'/'Â' followed by a UTF-8 continuation byte decoded
+# as Latin-1 (U+0080-U+00BF), or the cp1252 flavor 'â€¦'. Correct English prose
+# never contains these bigrams.
+_MOJIBAKE_RE = re.compile("[\u00e2\u00c3\u00c2][\u0080-\u00bf]|\u00e2\u20ac")
+
+
+def _repair_mojibake(text: str) -> str:
+    """Reverse a UTF-8-decoded-as-Latin-1/cp1252 mangle. Returns input on failure."""
+    for encoding in ("latin-1", "cp1252"):
+        try:
+            return text.encode(encoding).decode("utf-8")
+        except (UnicodeDecodeError, UnicodeEncodeError):
+            continue
+    return text
+
+
+def normalize_text(text: str) -> str:
+    """Fix mojibake if (and only if) present, then NFC-normalize.
+
+    Correctly encoded text passes through untouched; the Latin-1 round-trip is
+    attempted only when the text actually contains mojibake marker bigrams.
+    """
+    if not text:
+        return text
+    if _MOJIBAKE_RE.search(text):
+        text = _repair_mojibake(text)
+    return unicodedata.normalize("NFC", text)
 
 
 def get_project_root():
@@ -90,21 +108,33 @@ def ensure_feeds_directory():
     return feeds_dir
 
 
+REQUEST_HEADERS = {
+    "User-Agent": (
+        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+        "AppleWebKit/537.36 (KHTML, like Gecko) "
+        "Chrome/123.0.0.0 Safari/537.36"
+    ),
+    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+    "Accept-Language": "en-US,en;q=0.9",
+}
+
+
+def _decode_response(resp: requests.Response) -> str:
+    """Decode a response as UTF-8.
+
+    arenamag.com serves ``Content-Type: text/html`` without a charset, so
+    ``resp.text`` mis-decodes the UTF-8 body as ISO-8859-1 (the source of the
+    old feed's mojibake). The site is UTF-8; decode it explicitly.
+    """
+    return resp.content.decode("utf-8", errors="replace")
+
+
 def fetch_page_requests(url: str) -> str:
     """Fetch HTML using requests."""
-    headers = {
-        "User-Agent": (
-            "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
-            "AppleWebKit/537.36 (KHTML, like Gecko) "
-            "Chrome/123.0.0.0 Safari/537.36"
-        ),
-        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
-        "Accept-Language": "en-US,en;q=0.9",
-    }
     logger.info(f"Fetching page (requests): {url}")
-    resp = requests.get(url, headers=headers, timeout=20)
+    resp = requests.get(url, headers=REQUEST_HEADERS, timeout=20)
     resp.raise_for_status()
-    return resp.text
+    return _decode_response(resp)
 
 
 def setup_selenium_driver():
@@ -138,8 +168,7 @@ def fetch_page_selenium(url: str) -> str:
                 break
             last_height = new_height
 
-        html = driver.page_source
-        return html
+        return driver.page_source
     finally:
         if driver:
             driver.quit()
@@ -154,193 +183,42 @@ def fetch_page(url: str) -> str:
         return fetch_page_selenium(url)
 
 
-def fetch_article_page(url: str) -> str | None:
-    """Fetch HTML for a single article page."""
-    headers = {
-        "User-Agent": (
-            "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
-            "AppleWebKit/537.36 (KHTML, like Gecko) "
-            "Chrome/123.0.0.0 Safari/537.36"
-        )
-    }
+def build_requests_session() -> requests.Session:
+    """Create a configured requests.Session for connection reuse."""
+    s = requests.Session()
+    s.headers.update(REQUEST_HEADERS)
+    return s
+
+
+def fetch_article_page(session: requests.Session, url: str) -> str | None:
+    """Fetch HTML for a single article page via requests; None on failure."""
     try:
         logger.debug(f"Fetching article page: {url}")
-        resp = requests.get(url, headers=headers, timeout=20)
+        resp = session.get(url, timeout=20)
         resp.raise_for_status()
-        return resp.text
+        return _decode_response(resp)
     except Exception as e:
         logger.warning(f"Failed to fetch article page {url}: {e}")
+        return None
+
+
+def fetch_article_page_selenium(url: str) -> str | None:
+    """Fetch a single article page via Selenium; None on failure."""
+    driver = None
+    try:
+        driver = setup_selenium_driver()
+        driver.get(url)
+        time.sleep(3)
+        return driver.page_source
+    except Exception as e:
+        logger.warning(f"Selenium fetch failed for {url}: {e}")
+        return None
+    finally:
         try:
-            driver = setup_selenium_driver()
-            driver.get(url)
-            time.sleep(3)
-            html = driver.page_source
-            driver.quit()
-            return html
-        except Exception as e2:
-            logger.warning(f"Selenium fallback also failed for {url}: {e2}")
-            return None
-
-
-def _clean_article_html(container, base_url: str) -> str:
-    """Clean article container - strip classes, simplify HTML for RSS readers."""
-    if container is None:
-        return ""
-
-    # Remove noisy elements by tag
-    for tag in container.select(
-        "script, style, noscript, svg, form, iframe, "
-        "input, canvas, link, button, select, textarea, nav, header, footer"
-    ):
-        tag.decompose()
-
-    # Remove Arena/Framer specific noise elements
-    framer_noise_patterns = [
-        '[data-framer-name="Header"]',
-        '[data-framer-name="HeaderImage"]',
-        '[data-framer-name="NewsletterCard"]',
-        '[data-framer-name="SubscribePaywall"]',
-        '[data-framer-name="RequiresSubscription"]',
-        '[data-framer-name="MetaItem"]',
-        '[class*="newsletter"]',
-        '[class*="subscribe"]',
-        '[class*="paywall"]',
-    ]
-    for pattern in framer_noise_patterns:
-        for el in container.select(pattern):
-            el.decompose()
-
-    # Remove elements with noisy class/id patterns
-    noisy_patterns = [
-        "share", "social", "breadcrumb", "nav", "header", "footer",
-        "subscribe", "newsletter", "related", "sidebar", "menu",
-        "comment", "ad", "promo", "cta", "signup", "paywall",
-    ]
-    noisy_re = re.compile("|".join([re.escape(p) for p in noisy_patterns]), re.IGNORECASE)
-    for el in container.find_all(True):
-        cid = (el.get("id") or "") + " " + " ".join(el.get("class", []))
-        if cid and noisy_re.search(cid):
-            if not el.find(["p", "h1", "h2", "h3", "h4", "h5", "h6", "li", "img", "pre", "blockquote", "table"]):
-                el.decompose()
-
-    # Make links and media absolute BEFORE stripping attributes
-    for a in container.find_all("a", href=True):
-        href = a["href"]
-        if not href.startswith(("http://", "https://", "mailto:", "#")):
-            a["href"] = urljoin(base_url, href)
-    for img in container.find_all("img", src=True):
-        src = img["src"]
-        if not src.startswith(("http://", "https://", "data:")):
-            img["src"] = urljoin(base_url, src)
-
-    # Strip all attributes except essential ones (href, src, alt)
-    allowed_attrs = {
-        "a": ["href"],
-        "img": ["src", "alt"],
-    }
-    for el in container.find_all(True):
-        tag_name = el.name
-        if tag_name in allowed_attrs:
-            # Keep only allowed attributes for this tag
-            attrs_to_keep = {}
-            for attr in allowed_attrs[tag_name]:
-                if el.has_attr(attr):
-                    attrs_to_keep[attr] = el[attr]
-            el.attrs = attrs_to_keep
-        else:
-            # Remove all attributes from other tags
-            el.attrs = {}
-
-    # Unwrap unnecessary wrapper divs (divs that just contain other content)
-    # Do multiple passes to handle nested wrappers
-    for _ in range(5):
-        for div in container.find_all("div"):
-            # If div has no text directly (only children) and only one child element, unwrap
-            if div.parent and len(list(div.children)) > 0:
-                div.unwrap()
-
-    # Remove any remaining empty elements
-    for el in container.find_all(True):
-        if el.name not in ["img", "br", "hr"] and not el.get_text(strip=True) and not el.find("img"):
-            el.decompose()
-
-    # Build clean HTML with only content tags
-    output_parts = []
-    for el in container.find_all(["p", "h1", "h2", "h3", "h4", "h5", "h6", "ul", "ol", "li", 
-                                   "blockquote", "pre", "code", "em", "strong", "a", "img", "br", "hr"]):
-        # Skip if this element is inside another element we'll process
-        if el.find_parent(["p", "h1", "h2", "h3", "h4", "h5", "h6", "blockquote", "pre", "li"]):
-            continue
-        output_parts.append(str(el))
-    
-    return "\n".join(output_parts)
-
-
-def extract_article_metadata(html: str, page_url: str) -> dict:
-    """Extract article metadata from page: title, date, description, content."""
-    soup = BeautifulSoup(html, "html.parser")
-    result = {}
-    
-    # Extract clean title from <title> tag or og:title
-    if soup.title:
-        result["title"] = normalize_text(soup.title.get_text(strip=True))
-    og_title = soup.find("meta", property="og:title")
-    if og_title and og_title.get("content"):
-        result["title"] = normalize_text(og_title["content"].strip())
-    
-    # Extract description from og:description
-    og_desc = soup.find("meta", property="og:description")
-    if og_desc and og_desc.get("content"):
-        result["description"] = normalize_text(og_desc["content"].strip())
-    
-    # Extract date from article page - Arena uses framer-styles-preset-f8oqe2 for dates
-    # Look for pattern like "Nov 10, 2025" in the header area
-    date_pattern = re.compile(
-        r'(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\s+\d{1,2},\s+202\d'
-    )
-    
-    # Find all p tags with framer-text class
-    for p in soup.find_all("p"):
-        classes = p.get("class", [])
-        if classes and "framer-text" in " ".join(classes):
-            text = p.get_text(strip=True)
-            if date_pattern.match(text):
-                dt = _parse_date(text)
-                if dt:
-                    result["date"] = dt
-                    break
-    
-    # Find main content - look for the FullContent container
-    content_container = soup.select_one('[data-framer-name="FullContent"]')
-    if not content_container:
-        # Fallback: find the content div by looking for the actual article paragraphs
-        content_container = soup.select_one('[data-framer-name="Content"]')
-    
-    if not content_container:
-        # Try to find container with most paragraph content
-        candidates = [
-            soup.select_one("[class*='content']"),
-            soup.select_one("main"),
-            soup.select_one("article"),
-        ]
-        content_container = next((c for c in candidates if c), None)
-    
-    if content_container:
-        content_html = _clean_article_html(content_container, base_url=page_url)
-        # Normalize encoding in content HTML
-        result["content_html"] = normalize_text(content_html)
-        
-        # Extract summary from first substantial paragraph
-        for p in content_container.find_all("p"):
-            text = p.get_text(" ", strip=True)
-            # Skip very short text and metadata-like text
-            if text and len(text) > 80 and not text.startswith(("by", "Subscribe", "Get Arena")):
-                if "description" not in result:
-                    summary = text[:300] + "..." if len(text) > 300 else text
-                    result["description"] = normalize_text(summary)
-                break
-    
-    return result
+            if driver:
+                driver.quit()
+        except Exception:
+            pass
 
 
 def _parse_date(text: str) -> datetime | None:
@@ -359,37 +237,31 @@ def _parse_date(text: str) -> datetime | None:
     return None
 
 
+def canonical_article_link(href: str) -> str | None:
+    """Absolute /articles/<slug> URL (query/fragment stripped), or None."""
+    if not href:
+        return None
+    link = urljoin(BASE_URL + "/", href.strip())
+    parsed = urlparse(link)
+    if parsed.netloc and parsed.netloc != urlparse(BASE_URL).netloc:
+        return None
+    path = parsed.path.rstrip("/")
+    if not ARTICLE_PATH_RE.fullmatch(path):
+        return None
+    return f"{BASE_URL}{path}"
+
+
 def parse_category_page(html_content: str, category_name: str) -> list[dict]:
     """Parse an Arena Magazine category page to extract articles."""
     soup = BeautifulSoup(html_content, "html.parser")
-    articles = []
-    seen = set()
+    by_link: dict[str, dict] = {}
 
-    # Find all article links
-    anchors = soup.select("a[href]")
-    
-    for a in anchors:
+    for a in soup.select("a[href]"):
         try:
-            href = a.get("href", "").strip()
-            if not href:
-                continue
-
-            # Normalize to absolute link
-            link = urljoin(BASE_URL, href)
-
-            # Skip category pages, home page, and non-article links
-            if link in seen:
-                continue
-            if link.rstrip("/") == BASE_URL.rstrip("/"):
-                continue
-            # Skip known non-article paths
-            skip_paths = ["/technology", "/capitalism", "/science", "/civilization", 
-                          "/greatness", "/store", "/issues", "/authors", "/masthead",
-                          "/subscribe", "/careers", "/sign-in"]
-            if any(link.rstrip("/").endswith(p) for p in skip_paths):
-                continue
-            # Must be an arenamag.com link
-            if not link.startswith(BASE_URL):
+            # Only actual article permalinks; skips homepage, category pages,
+            # /manage, /about, /subscribe, and every other non-article link.
+            link = canonical_article_link(a.get("href", ""))
+            if not link:
                 continue
 
             # Extract title from anchor text or nested elements
@@ -397,29 +269,27 @@ def parse_category_page(html_content: str, category_name: str) -> list[dict]:
             title = (title_elem.get_text(strip=True) if title_elem else None)
             if not title:
                 title = a.get_text(" ", strip=True)
-            
-            # Clean up title - remove author suffix like "byMaxwell Meyer"
-            title = re.sub(r'\s*by[A-Z].*$', '', title)
-            title = title.strip()
-            
-            if not title or len(title) < 3:
-                continue
-            # Skip if it looks like a navigation element
-            if title.lower() in ["subscribe", "sign in", "store", "issues", "authors", "masthead", "careers"]:
+
+            # Clean up title - remove "NEW" badge and author suffix
+            # ("by Maxwell Meyer" / legacy "byMaxwell Meyer")
+            title = re.sub(r"\s*\bby\s*[A-Z].*$", "", title)
+            title = re.sub(r"\s+NEW$", "", title)
+            title = normalize_text(title.strip())
+
+            if (not title or len(title) < 3) and link not in by_link:
                 continue
 
-            # Extract author from anchor text if present
+            # Extract author(s) from anchor text if present
             full_text = a.get_text(" ", strip=True)
             author = None
-            author_match = re.search(r'by([A-Z][a-zA-Z\s•·]+?)$', full_text)
+            author_match = re.search(r"\bby\s*([A-Z][a-zA-Z.'\-\s•·]+?)\s*$", full_text)
             if author_match:
-                author = author_match.group(1).strip()
-                # Clean up author - replace bullet characters
-                author = author.replace("•", " & ").replace("·", " & ")
+                names = re.split(r"\s*[•·]\s*", author_match.group(1).strip())
+                author = " & ".join(n.strip() for n in names if n.strip())
+                author = normalize_text(re.sub(r"\s+", " ", author))
 
             # Try to find date - Arena mag articles may have dates in metadata or nearby
             date_dt = None
-            # Look for time element
             time_el = a.find("time")
             if not time_el and a.parent:
                 time_el = a.parent.find("time")
@@ -427,19 +297,29 @@ def parse_category_page(html_content: str, category_name: str) -> list[dict]:
                 dt_attr = (time_el.get("datetime") or time_el.get_text(strip=True) or "").strip()
                 date_dt = _parse_date(dt_attr)
 
-            articles.append({
-                "title": title,
-                "link": link,
-                "date": date_dt,
-                "category": category_name,
-                "author": author,
-                "description": title,
-            })
-            seen.add(link)
+            existing = by_link.get(link)
+            if existing:
+                # The same article is linked several times per listing page
+                # (image anchor, title anchor, byline anchor); backfill fields
+                # the first anchor was missing.
+                if not existing.get("author") and author:
+                    existing["author"] = author
+                if not existing.get("date") and date_dt:
+                    existing["date"] = date_dt
+            else:
+                by_link[link] = {
+                    "title": title,
+                    "link": link,
+                    "date": date_dt,
+                    "category": category_name,
+                    "author": author,
+                    "description": title,
+                }
         except Exception as e:
             logger.warning(f"Skipping an item due to parsing error: {e}")
             continue
 
+    articles = list(by_link.values())
     logger.info(f"Parsed {len(articles)} articles from {category_name}")
     return articles
 
@@ -453,72 +333,217 @@ def collect_all_articles() -> list[dict]:
         f"{BASE_URL}/civilization": "Civilization",
         f"{BASE_URL}/greatness": "Greatness",
     }
-    
+
     by_link: dict[str, dict] = {}
-    
+
     for url in CATEGORY_URLS:
         try:
             html = fetch_page(url)
             category = category_names.get(url, "Article")
             articles = parse_category_page(html, category)
-            
+
             for article in articles:
                 link = article["link"]
                 if link not in by_link:
                     by_link[link] = article
-                # Keep the first category found
+                else:
+                    # Keep the first category found; backfill missing fields.
+                    for key in ("author", "date"):
+                        if not by_link[link].get(key) and article.get(key):
+                            by_link[link][key] = article[key]
         except Exception as e:
             logger.error(f"Failed to fetch category {url}: {e}")
             continue
-    
+
     combined = list(by_link.values())
-    
-    # Sort by date (newest first), articles without dates go last
-    def sort_key(a):
-        if a.get("date"):
-            return (0, a["date"])
-        return (1, datetime.min.replace(tzinfo=pytz.UTC))
-    
-    combined.sort(key=sort_key, reverse=True)
-    
     logger.info(f"Collected {len(combined)} unique articles across all categories")
     return combined
 
 
+def _find_content_container(soup: BeautifulSoup):
+    """Locate the article body container on a Framer article page."""
+    container = soup.select_one('[data-framer-name="FullContent"]')
+    if not container:
+        container = soup.select_one('[data-framer-name="Content"]')
+    if not container:
+        candidates = [
+            soup.select_one("article"),
+            soup.select_one("main"),
+            soup.select_one("[class*='content']"),
+        ]
+        container = next((c for c in candidates if c), None)
+    return container
+
+
+def extract_article_metadata(html: str, page_url: str, title: str | None = None) -> dict:
+    """Extract article metadata from page: title, date, description, content."""
+    soup = BeautifulSoup(html, "html.parser")
+    result = {}
+
+    # Extract clean title from og:title or <title>
+    og_title = soup.find("meta", property="og:title")
+    if og_title and og_title.get("content"):
+        result["title"] = normalize_text(og_title["content"].strip())
+    elif soup.title:
+        result["title"] = normalize_text(soup.title.get_text(strip=True))
+    title = result.get("title") or title
+
+    # Extract date: article:published_time meta, else the header date paragraph
+    # (Arena renders dates like "Nov 10, 2025" in framer-text paragraphs).
+    published = soup.find("meta", property="article:published_time")
+    if published and published.get("content"):
+        result["date"] = _parse_date(published["content"])
+    if not result.get("date"):
+        date_pattern = re.compile(
+            r"(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\s+\d{1,2},\s+202\d"
+        )
+        for p in soup.find_all("p"):
+            classes = p.get("class", [])
+            if classes and "framer-text" in " ".join(classes):
+                text = p.get_text(strip=True)
+                if date_pattern.match(text):
+                    dt = _parse_date(text)
+                    if dt:
+                        result["date"] = dt
+                        break
+
+    # Author(s): article pages link contributors to /authors/<slug>.
+    author_names = []
+    for a in soup.select("a[href*='/authors/']"):
+        name = normalize_text(a.get_text(" ", strip=True))
+        if name and name not in author_names:
+            author_names.append(name)
+    if author_names:
+        result["author"] = " & ".join(author_names)
+
+    container = _find_content_container(soup)
+    if container:
+        content_html = clean_article_html(
+            container,
+            page_url,
+            title=title,
+            strip_selectors=ARENA_STRIP_SELECTORS,
+            extra_cta_patterns=ARENA_CTA_PATTERNS,
+        )
+        content_html = _strip_promo_paragraphs(normalize_text(content_html))
+        if content_html:
+            result["content_html"] = content_html
+
+    # Summary: og:description first (article dek), else first real paragraph.
+    # Some articles set og:description to a bare category list; fall back to
+    # the first substantial content paragraph in that case.
+    summary = extract_summary(soup, container, title=title)
+    if summary and _CATEGORY_ONLY_RE.match(summary.strip()):
+        summary = _first_paragraph_summary(result.get("content_html")) or summary
+    if summary and summary.strip():
+        result["description"] = normalize_text(summary.strip())
+
+    return result
+
+
+# og:description that is nothing but a list of Arena's category names.
+_CATEGORY_ONLY_RE = re.compile(
+    r"^(?:(?:Technology|Capitalism|Science|Civilization|Greatness)[,\s]*)+\.?$"
+)
+
+
+def _first_paragraph_summary(content_html: str | None, min_length: int = 60) -> str | None:
+    """First substantial paragraph of cleaned content, for use as a summary."""
+    if not content_html:
+        return None
+    soup = BeautifulSoup(content_html, "html.parser")
+    for p in soup.find_all("p"):
+        text = re.sub(r"\s+", " ", p.get_text(" ", strip=True))
+        if len(text) >= min_length:
+            return text[:300] + "..." if len(text) > 300 else text
+    return None
+
+
+def _strip_promo_paragraphs(content_html: str) -> str:
+    """Drop leftover subscribe-promo paragraphs from cleaned content."""
+    if not content_html or "ubscri" not in content_html and "issues per year" not in content_html:
+        return content_html
+    soup = BeautifulSoup(content_html, "html.parser")
+    changed = False
+    for p in soup.find_all(["p", "h2", "h3", "h4"]):
+        text = p.get_text(" ", strip=True)
+        if text and ARENA_PROMO_RE.match(text):
+            p.decompose()
+            changed = True
+    return str(soup) if changed else content_html
+
+
+def enrich_article(article: dict, html: str) -> None:
+    """Update an article dict in place from its article-page HTML."""
+    metadata = extract_article_metadata(html, article["link"], title=article.get("title"))
+    if metadata.get("title"):
+        article["title"] = metadata["title"]
+    if metadata.get("date"):
+        article["date"] = metadata["date"]
+    if metadata.get("content_html"):
+        article["content_html"] = metadata["content_html"]
+    if metadata.get("description"):
+        article["description"] = metadata["description"]
+    if metadata.get("author"):
+        article["author"] = metadata["author"]
+
+
+def fetch_contents_parallel(articles: list[dict], cached: dict, max_workers: int = 8) -> None:
+    """Populate content_html/description for uncached articles in parallel.
+
+    Applies the existing-feed cache first, fetches the rest via requests in a
+    thread pool, then falls back to sequential Selenium for stragglers.
+    Mutates the articles list in place.
+    """
+    for a in articles:
+        c = cached.get(a["link"])
+        if c and c.get("content_html"):
+            a["content_html"] = c["content_html"]
+            if c.get("description"):
+                a["description"] = c["description"]
+
+    to_fetch = [a for a in articles if not a.get("content_html")]
+    if not to_fetch:
+        return
+    logger.info(f"Fetching full content for {len(to_fetch)} articles...")
+
+    session = build_requests_session()
+    max_workers = max(1, int(os.getenv("ARENA_FEED_WORKERS", str(max_workers))))
+    with ThreadPoolExecutor(max_workers=max_workers) as exe:
+        futures = {
+            exe.submit(fetch_article_page, session, a["link"]): a for a in to_fetch
+        }
+        for fut in as_completed(futures):
+            art = futures[fut]
+            try:
+                html = fut.result()
+                if html:
+                    enrich_article(art, html)
+            except Exception as e:
+                logger.warning(f"Failed to extract content for {art['link']}: {e}")
+
+    remaining = [a for a in articles if not a.get("content_html")]
+    if remaining:
+        logger.info(f"Falling back to Selenium for {len(remaining)} items (sequential)")
+        for art in remaining:
+            html = fetch_article_page_selenium(art["link"])
+            if html:
+                try:
+                    enrich_article(art, html)
+                except Exception as e:
+                    logger.warning(f"Failed to extract content for {art['link']}: {e}")
+
+
 def generate_rss_feed(articles, feed_name: str = "arenamag"):
     """Generate RSS feed from parsed articles."""
-    fg = FeedGenerator()
-    fg.title("Arena Magazine")
-    fg.description("Technology, Capitalism, Science, Civilization, and Greatness - Arena Magazine")
-    fg.link(href=BASE_URL)
-    fg.language("en")
-
-    fg.author({"name": "Arena Magazine"})
-    fg.link(href=BASE_URL, rel="alternate")
-
-    # feedgen prepends entries, so iterate in reverse to get newest-first in output
-    for article in reversed(articles):
-        fe = fg.add_entry()
-        fe.title(article["title"])
-        fe.link(href=article["link"])
-        
-        content_html = article.get("content_html")
-        summary = article.get("description", article["title"]) or article["title"]
-        
-        if content_html:
-            fe.content(content_html)
-        fe.description(summary)
-        
-        if article.get("date"):
-            fe.published(article["date"])
-        
-        fe.category(term=article["category"])
-        
-        if article.get("author"):
-            fe.author({"name": article["author"]})
-        
-        fe.id(article["link"])
-
+    fg = build_feed(
+        title="Arena Magazine",
+        description="Technology, Capitalism, Science, Civilization, and Greatness - Arena Magazine",
+        site_url=BASE_URL,
+        feed_url=feed_self_url(f"feed_{feed_name}.xml"),
+        items=articles,
+        author={"name": "Arena Magazine"},
+    )
     logger.info("RSS feed generated successfully")
     return fg
 
@@ -526,54 +551,29 @@ def generate_rss_feed(articles, feed_name: str = "arenamag"):
 def save_rss_feed(feed_generator, feed_name: str = "arenamag") -> Path:
     feeds_dir = ensure_feeds_directory()
     output_file = feeds_dir / f"feed_{feed_name}.xml"
-    feed_generator.rss_file(str(output_file), pretty=True)
-    logger.info(f"RSS feed saved to {output_file}")
+    save_feed(feed_generator, output_file)
     return output_file
 
 
-def get_existing_entries_from_feed(feed_path: Path):
-    """Parse the existing RSS feed and return entries for reuse."""
-    entries = []
+def _load_cached_authors(feed_path: Path) -> dict[str, str]:
+    """Map link -> dc:creator from a previously generated feed.
+
+    ``load_cached_entries`` in _common does not round-trip item authors, so
+    read them back here to keep authors on cached items across runs.
+    """
+    authors: dict[str, str] = {}
     if not feed_path.exists():
-        return entries
+        return authors
     try:
-        tree = ET.parse(feed_path)
-        root = tree.getroot()
-        ns = {"content": "http://purl.org/rss/1.0/modules/content/"}
-        for item in root.findall("./channel/item"):
-            link_elem = item.find("link")
-            title_elem = item.find("title")
-            desc_elem = item.find("description")
-            content_elem = item.find("content:encoded", ns)
-            date_elem = item.find("pubDate")
-            category_elem = item.find("category")
-            author_elem = item.find("author")
-
-            link = link_elem.text.strip() if link_elem is not None and link_elem.text else None
-            if not link:
-                continue
-
-            date = None
-            if date_elem is not None and date_elem.text:
-                try:
-                    date = parsedate_to_datetime(date_elem.text.strip())
-                except Exception:
-                    date = None
-
-            entries.append(
-                {
-                    "title": title_elem.text.strip() if title_elem is not None and title_elem.text else link,
-                    "link": link,
-                    "date": date or datetime.now(pytz.UTC),
-                    "category": category_elem.text.strip() if category_elem is not None and category_elem.text else "News",
-                    "author": author_elem.text.strip() if author_elem is not None and author_elem.text else None,
-                    "description": desc_elem.text if desc_elem is not None and desc_elem.text else "",
-                    "content_html": content_elem.text if content_elem is not None and content_elem.text else "",
-                }
-            )
+        soup = BeautifulSoup(feed_path.read_text(encoding="utf-8"), "xml")
+        for item in soup.find_all("item"):
+            link = item.find("link")
+            creator = item.find("creator")
+            if link and link.text and creator and creator.text:
+                authors[link.text.strip()] = creator.text.strip()
     except Exception as e:
-        logger.warning(f"Failed to parse existing feed entries: {str(e)}")
-    return entries
+        logger.warning(f"Failed to load cached authors from {feed_path}: {e}")
+    return authors
 
 
 def main(feed_name: str = "arenamag", force: bool = False) -> bool:
@@ -581,56 +581,51 @@ def main(feed_name: str = "arenamag", force: bool = False) -> bool:
         feeds_dir = ensure_feeds_directory()
         feed_path = feeds_dir / f"feed_{feed_name}.xml"
 
-        existing_entries = []
-        existing_links = set()
-        if not force:
-            existing_entries = get_existing_entries_from_feed(feed_path)
-            existing_links = {entry["link"] for entry in existing_entries}
+        if force:
+            logger.info("Force mode enabled: rebuilding feed from scratch")
+            existing_items, cache = [], {}
+        else:
+            existing_items, cache = load_cached_entries(feed_path)
+            # Drop previously cached junk (homepage, /manage, category pages).
+            existing_items = [
+                it for it in existing_items if canonical_article_link(it["link"])
+            ]
+            cached_authors = _load_cached_authors(feed_path)
+            for it in existing_items:
+                if cached_authors.get(it["link"]):
+                    it["author"] = cached_authors[it["link"]]
+        existing_links = {it["link"] for it in existing_items}
 
         articles = collect_all_articles()
         if not articles:
             logger.warning("No Arena Magazine articles parsed. Selectors may need updating.")
-        
-        # Fetch full content and metadata for each article from the article page
-        new_articles = [article for article in articles if article["link"] not in existing_links]
-        logger.info(f"Fetching full content for {len(new_articles)} articles...")
-        for article in new_articles:
-            article_html = fetch_article_page(article["link"])
-            if article_html:
-                metadata = extract_article_metadata(article_html, article["link"])
-                
-                # Update article with extracted metadata
-                if metadata.get("title"):
-                    article["title"] = metadata["title"]
-                if metadata.get("date"):
-                    article["date"] = metadata["date"]
-                if metadata.get("content_html"):
-                    article["content_html"] = metadata["content_html"]
-                if metadata.get("description"):
-                    article["description"] = metadata["description"]
-            else:
-                logger.warning(f"Could not fetch content for {article['link']}")
+        by_link = {a["link"]: a for a in articles}
 
-        combined_articles = new_articles + existing_entries
-        seen_links = set()
-        deduped_articles = []
-        for article in combined_articles:
-            if article["link"] in seen_links:
-                continue
-            seen_links.add(article["link"])
-            deduped_articles.append(article)
-        
-        # Re-sort by date now that we have dates from article pages
-        def sort_key(a):
-            if a.get("date"):
-                return (0, a["date"])
-            return (1, datetime.min.replace(tzinfo=pytz.UTC))
-        
-        deduped_articles.sort(key=sort_key, reverse=True)
-        
-        feed = generate_rss_feed(deduped_articles, feed_name)
+        # Cached entries lose author/category detail on round-trip; refresh
+        # them from the freshly parsed category listings.
+        for item in existing_items:
+            listed = by_link.get(item["link"])
+            if listed:
+                if not item.get("author") and listed.get("author"):
+                    item["author"] = listed["author"]
+                if not item.get("category") and listed.get("category"):
+                    item["category"] = listed["category"]
+
+        new_articles = [a for a in articles if a["link"] not in existing_links]
+        logger.info(f"Found {len(articles)} listed articles; {len(new_articles)} new since last feed")
+
+        merged = new_articles + existing_items
+        fetch_contents_parallel(
+            merged, cached=cache, max_workers=int(os.getenv("ARENA_FEED_WORKERS", "8"))
+        )
+
+        missing = [a["link"] for a in merged if not a.get("content_html")]
+        if missing:
+            logger.warning(f"{len(missing)} articles still lack content: {missing}")
+
+        feed = generate_rss_feed(merged, feed_name)
         save_rss_feed(feed, feed_name)
-        logger.info(f"Successfully generated RSS feed with {len(deduped_articles)} articles")
+        logger.info(f"Successfully generated RSS feed with {min(len(merged), 50)} articles")
         return True
     except Exception as e:
         logger.error(f"Failed to generate Arena Magazine RSS: {e}")
@@ -640,5 +635,6 @@ def main(feed_name: str = "arenamag", force: bool = False) -> bool:
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Generate Arena Magazine RSS feed.")
     parser.add_argument("--force", action="store_true", help="Refetch all articles and rebuild the feed.")
+    parser.add_argument("--feed-name", dest="feed_name", default="arenamag", help="Feed name suffix (default: arenamag)")
     args = parser.parse_args()
-    main(force=args.force)
+    main(feed_name=args.feed_name, force=args.force)

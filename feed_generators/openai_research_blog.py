@@ -1,21 +1,39 @@
 import argparse
 import logging
 import os
-import xml.etree.ElementTree as ET
 from datetime import datetime
-from email.utils import parsedate_to_datetime
 from pathlib import Path
-from urllib.parse import urljoin
 
 import pytz
 import requests
 import undetected_chromedriver as uc
 from bs4 import BeautifulSoup
-from feedgen.feed import FeedGenerator
+
+from _common import (
+    DEFAULT_MAX_ITEMS,
+    build_feed,
+    clean_article_html,
+    extract_summary,
+    feed_self_url,
+    load_cached_entries,
+    save_feed,
+)
 
 # Set up logging
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
 logger = logging.getLogger(__name__)
+
+# Site-specific junk the generic cleaner misses on openai.com article pages:
+# category-chip links above the title, tag-chip links below the body,
+# screen-reader-only "(opens in a new window)" spans, and the empty
+# listen-to-article audio player.
+STRIP_SELECTORS = (
+    "a.text-meta",
+    'a[href*="news/?tags="]',
+    ".sr-only",
+    "audio",
+)
+
 
 def in_ci() -> bool:
     return os.environ.get("CI", "").lower() == "true"
@@ -155,99 +173,66 @@ def fetch_article_selenium(url: str) -> str | None:
             driver.quit()
 
 
-def _clean_article_html(container, base_url: str) -> str:
-    """Clean article container and keep only <p>, <a>, and <img> tags."""
-    if container is None:
-        return ""
+def _prepare_container(container):
+    """Site-specific fixups before the shared cleaner runs.
 
-    related_markers = (
-        "related articles",
-        "related posts",
-        "more articles",
-        "you might also like",
-    )
-    share_domains = (
-        "linkedin.com/sharing",
-        "facebook.com/sharer",
-        "twitter.com/intent",
-        "x.com/intent",
-        "reddit.com/submit",
-    )
+    openai.com uses Tailwind classes whose arbitrary values embed tokens like
+    ``--toc-button-h`` / ``--header-h`` (e.g. on every section heading), and a
+    literal ``toc-content-heading`` class on in-body headings. Those trip the
+    generic chrome-token filter and would delete real content, so strip such
+    styling-only classes up front. The actual table of contents lives in a
+    <nav>, which the shared cleaner removes by tag name.
 
-    for el in container.find_all(["h2", "h3", "h4", "p", "div", "section", "aside"]):
-        text = el.get_text(" ", strip=True).lower()
-        if any(marker in text for marker in related_markers):
-            parent = el.find_parent(["section", "aside", "div"]) or el
-            parent.decompose()
-
-    for tag in list(container.find_all(True)):
-        if tag.parent is None:
-            continue
-        if tag.name == "a":
-            href = tag.get("href", "")
-            href_l = href.lower()
-            if any(domain in href_l for domain in share_domains):
-                tag.decompose()
-                continue
-            if not href:
-                tag.decompose()
-                continue
-            if not href.startswith(("http://", "https://", "mailto:", "#")):
-                tag["href"] = urljoin(base_url, href)
-            if not tag.get_text(strip=True) and not tag.find("img"):
-                tag.decompose()
-                continue
-            tag.attrs = {"href": tag["href"]}
-            continue
-        if tag.name == "img":
-            if "src" in tag.attrs:
-                src = tag["src"]
-                if not src.startswith(("http://", "https://", "data:")):
-                    tag["src"] = urljoin(base_url, src)
-            else:
-                tag.decompose()
-                continue
-            tag.attrs = {"src": tag["src"]}
-            continue
-
-        if tag.name == "p":
-            if tag.find("img"):
-                for img in tag.find_all("img"):
-                    tag.insert_after(img)
-            tag.attrs = {}
-            continue
-
-        tag.unwrap()
-
-    parts: list[str] = []
-    for tag in container.find_all(["p", "a", "img"], recursive=True):
-        if tag.name == "p" and not tag.get_text(strip=True):
-            continue
-        parts.append(str(tag))
-
-    return "\n".join(parts)
+    Also remove the "Keep reading" recirculation section, a marker the shared
+    related-section pass does not know about.
+    """
+    for tag in container.find_all(True, class_=True):
+        tag["class"] = [
+            c
+            for c in tag["class"]
+            if not any(ch in c for ch in ":[(") and "toc" not in c and "header-h" not in c
+        ]
+    for heading in container.find_all(["h2", "h3"]):
+        if heading.get_text(" ", strip=True).lower().rstrip(":") == "keep reading":
+            section = heading
+            while section.parent is not None and section.parent is not container:
+                section = section.parent
+            section.decompose()
+    return container
 
 
-def extract_article_content(html: str, page_url: str) -> tuple[str, str]:
+def extract_article_content(html: str, page_url: str, title: str | None = None) -> tuple[str, str]:
     """Extract main article content HTML and a plain-text summary."""
     soup = BeautifulSoup(html, "html.parser")
     container = (
-        soup.select_one("article")
-        or soup.select_one("main article")
+        soup.select_one("main article")
+        or soup.select_one("article")
         or soup.select_one("main")
         or soup.select_one("[class*='content']")
     )
-    content_html = _clean_article_html(container, base_url=page_url)
-
-    summary = ""
-    if container:
-        first_p = container.find("p")
-        if first_p:
-            summary = first_p.get_text(" ", strip=True)
-    if not summary:
-        summary = soup.title.get_text(strip=True) if soup.title else ""
-
+    if container is None:
+        return "", ""
+    container = _prepare_container(container)
+    content_html = clean_article_html(
+        container, page_url, title=title, strip_selectors=STRIP_SELECTORS
+    )
+    content_html = _drop_empty_headings(content_html)
+    summary = extract_summary(soup, container, title=title)
     return content_html, summary
+
+
+def _drop_empty_headings(content_html: str) -> str:
+    """Remove headings left empty after cleaning (the shared empty-element
+    pruning does not cover heading tags)."""
+    if not content_html or "<h" not in content_html:
+        return content_html
+    fragment = BeautifulSoup(content_html, "html.parser")
+    changed = False
+    for heading in fragment.find_all(["h2", "h3", "h4", "h5", "h6"]):
+        if not heading.get_text(strip=True) and not heading.find("img"):
+            heading.decompose()
+            changed = True
+    return str(fragment).strip() if changed else content_html
 
 def parse_openai_news_html(html_content):
     """Parse the HTML content from OpenAI's Research News page.
@@ -327,22 +312,14 @@ def parse_openai_news_html(html_content):
 
 def generate_rss_feed(articles, feed_name="openai_research"):
     """Generate RSS feed from parsed articles."""
-    fg = FeedGenerator()
-    fg.title("OpenAI Research News")
-    fg.description("Latest research news and updates from OpenAI")
-    fg.link(href="https://openai.com/news/research")
-    fg.language("en")
-
-    for article in reversed(articles):
-        fe = fg.add_entry()
-        fe.title(article["title"])
-        fe.link(href=article["link"])
-        fe.description(article["description"])
-        if article.get("content_html"):
-            fe.content(article["content_html"])
-        fe.published(article["date"])
-        fe.category(term=article["category"])
-
+    fg = build_feed(
+        title="OpenAI Research News",
+        description="Latest research news and updates from OpenAI",
+        site_url="https://openai.com/news/research/",
+        feed_url=feed_self_url(f"feed_{feed_name}.xml"),
+        items=articles,
+        author={"name": "OpenAI"},
+    )
     logger.info("RSS feed generated successfully")
     return fg
 
@@ -351,52 +328,8 @@ def save_rss_feed(feed_generator, feed_name="openai_research"):
     feeds_dir = Path("feeds")
     feeds_dir.mkdir(exist_ok=True)
     output_file = feeds_dir / f"feed_{feed_name}.xml"
-    feed_generator.rss_file(str(output_file), pretty=True)
-    logger.info(f"RSS feed saved to {output_file}")
+    save_feed(feed_generator, output_file)
     return output_file
-
-
-def get_existing_entries_from_feed(feed_path: Path):
-    """Parse the existing RSS feed and return entries for reuse."""
-    entries = []
-    if not feed_path.exists():
-        return entries
-    try:
-        tree = ET.parse(feed_path)
-        root = tree.getroot()
-        ns = {"content": "http://purl.org/rss/1.0/modules/content/"}
-        for item in root.findall("./channel/item"):
-            link_elem = item.find("link")
-            title_elem = item.find("title")
-            desc_elem = item.find("description")
-            content_elem = item.find("content:encoded", ns)
-            date_elem = item.find("pubDate")
-            category_elem = item.find("category")
-
-            link = link_elem.text.strip() if link_elem is not None and link_elem.text else None
-            if not link:
-                continue
-
-            date = None
-            if date_elem is not None and date_elem.text:
-                try:
-                    date = parsedate_to_datetime(date_elem.text.strip())
-                except Exception:
-                    date = None
-
-            entries.append(
-                {
-                    "title": title_elem.text.strip() if title_elem is not None and title_elem.text else link,
-                    "link": link,
-                    "date": date or datetime.now(pytz.UTC),
-                    "category": category_elem.text.strip() if category_elem is not None and category_elem.text else "Research",
-                    "description": desc_elem.text if desc_elem is not None and desc_elem.text else "",
-                    "content_html": content_elem.text if content_elem is not None and content_elem.text else "",
-                }
-            )
-    except Exception as e:
-        logger.warning(f"Failed to parse existing feed entries: {str(e)}")
-    return entries
 
 
 def main(limit: int = 500, test_first: bool = False, force: bool = False) -> bool:
@@ -410,11 +343,20 @@ def main(limit: int = 500, test_first: bool = False, force: bool = False) -> boo
         feeds_dir.mkdir(exist_ok=True)
         feed_path = feeds_dir / "feed_openai_research.xml"
 
-        existing_entries = []
-        existing_links = set()
-        if not force and not test_first:
-            existing_entries = get_existing_entries_from_feed(feed_path)
-            existing_links = {entry["link"] for entry in existing_entries}
+        # The listing page only server-renders the most recent handful of
+        # posts, so the existing feed is the archive of known items. --force
+        # keeps those item skeletons (title/link/date/category) but drops the
+        # cached content/descriptions so every emitted item is refetched.
+        existing_entries, cache = load_cached_entries(feed_path)
+        if force:
+            logger.info("Force mode: refetching content for all emitted items")
+            cache = {}
+            # load_cached_entries also attaches the old content/description to
+            # the entries themselves; drop those so everything is refetched.
+            for entry in existing_entries:
+                entry["content_html"] = None
+                entry["description"] = entry["title"]
+        existing_links = {entry["link"] for entry in existing_entries}
 
         session = build_requests_session()
         html_content = ""
@@ -441,14 +383,14 @@ def main(limit: int = 500, test_first: bool = False, force: bool = False) -> boo
 
         if not articles:
             logger.warning("No articles were parsed. Check your selectors.")
-            if existing_entries:
-                logger.warning("Falling back to existing feed entries.")
-                feed = generate_rss_feed(existing_entries)
-                save_rss_feed(feed)
-                return True
-            return False
+            if not existing_entries:
+                return False
+            logger.warning("Falling back to existing feed entries.")
 
         if test_first:
+            if not articles:
+                logger.error("No articles available for --test-first.")
+                return False
             article = articles[0]
             article_html = fetch_article_page_requests(article["link"], session=session)
             if not article_html and not in_ci():
@@ -457,7 +399,9 @@ def main(limit: int = 500, test_first: bool = False, force: bool = False) -> boo
                 logger.error("Failed to fetch first article content.")
                 return False
 
-            content_html, summary = extract_article_content(article_html, article["link"])
+            content_html, summary = extract_article_content(
+                article_html, article["link"], title=article["title"]
+            )
             print("TITLE:", article["title"])
             print("LINK:", article["link"])
             print("SUMMARY:", summary)
@@ -465,15 +409,34 @@ def main(limit: int = 500, test_first: bool = False, force: bool = False) -> boo
             return True
 
         new_articles = [article for article in articles if article["link"] not in existing_links]
+        merged = new_articles + existing_entries
+
+        min_dt = datetime.min.replace(tzinfo=pytz.UTC)
+        merged.sort(key=lambda item: item.get("date") or min_dt, reverse=True)
+
+        # Only the newest DEFAULT_MAX_ITEMS make it into the feed, so only
+        # fetch content for those.
+        to_emit = merged[:DEFAULT_MAX_ITEMS]
+        for article in to_emit:
+            cached = cache.get(article["link"])
+            if cached and cached.get("content_html"):
+                article["content_html"] = cached["content_html"]
+                if cached.get("description"):
+                    article["description"] = cached["description"]
+
+        to_fetch = [article for article in to_emit if not article.get("content_html")]
+        logger.info(f"Fetching full content for {len(to_fetch)} of {len(to_emit)} feed items")
         needs_selenium = []
-        for article in new_articles:
+        for article in to_fetch:
             html = None
             if not requests_blocked:
                 html = fetch_article_page_requests(article["link"], session=session)
             if not html:
                 needs_selenium.append(article["link"])
                 continue
-            content_html, summary = extract_article_content(html, article["link"])
+            content_html, summary = extract_article_content(
+                html, article["link"], title=article["title"]
+            )
             if content_html:
                 article["content_html"] = content_html
             if summary:
@@ -481,28 +444,23 @@ def main(limit: int = 500, test_first: bool = False, force: bool = False) -> boo
 
         if needs_selenium and not in_ci():
             selenium_html = fetch_articles_selenium(needs_selenium)
-            for article in new_articles:
+            for article in to_fetch:
                 html = selenium_html.get(article["link"])
                 if not html:
                     continue
-                content_html, summary = extract_article_content(html, article["link"])
+                content_html, summary = extract_article_content(
+                    html, article["link"], title=article["title"]
+                )
                 if content_html:
                     article["content_html"] = content_html
                 if summary:
                     article["description"] = summary
 
-        combined_articles = new_articles + existing_entries
-        seen_links = set()
-        deduped_articles = []
-        for article in combined_articles:
-            if article["link"] in seen_links:
-                continue
-            seen_links.add(article["link"])
-            deduped_articles.append(article)
+        still_missing = [a["link"] for a in to_emit if not a.get("content_html")]
+        if still_missing:
+            logger.warning(f"{len(still_missing)} feed items still lack full content")
 
-        min_dt = datetime.min.replace(tzinfo=pytz.UTC)
-        deduped_articles.sort(key=lambda item: item.get("date") or min_dt, reverse=True)
-        feed = generate_rss_feed(deduped_articles)
+        feed = generate_rss_feed(to_emit)
         save_rss_feed(feed)
     except Exception as e:
         logger.error(f"Failed to generate RSS feed: {e}")
