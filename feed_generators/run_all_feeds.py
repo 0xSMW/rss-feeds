@@ -21,11 +21,15 @@ def run_all_feeds():
     script_paths: list[str] = [
         os.path.join(feed_generators_dir, filename)
         for filename in sorted(os.listdir(feed_generators_dir))
-        if filename.endswith(".py") and filename not in excluded_scripts
+        if filename.endswith(".py")
+        and not filename.startswith("_")
+        and filename not in excluded_scripts
     ]
 
     futures = {}
-    with ThreadPoolExecutor() as executor:
+    # Each generator may spawn a headless Chrome and its own worker threads,
+    # so keep the number of concurrent generators small.
+    with ThreadPoolExecutor(max_workers=4) as executor:
         for script_path in script_paths:
             logger.info(f"Running script: {script_path}")
             futures[executor.submit(_run_script, script_path)] = script_path

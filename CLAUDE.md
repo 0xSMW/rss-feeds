@@ -66,9 +66,11 @@ make test_feed_generate
   - Common utilities: BeautifulSoup for HTML parsing, feedgen for RSS generation, requests for HTTP
   - Output location: `feeds/feed_*.xml`
 
+- **Shared module** (`feed_generators/_common.py`): All generators must use this for content cleaning and feed output. It provides `clean_article_html` (sanitizes scraped article HTML to the reader-safe subset: headings, lists, figures/captions, tables, code blocks; resolves lazy-loaded images; strips nav/CTA/share chrome), `extract_summary` (og:description-based item summaries), `build_feed`/`save_feed` (CDATA content:encoded, permalink guids, media:content lead image, correct channel link order, 50-item cap, skip-write-when-unchanged), and `load_cached_entries` (reads the previous feed XML back as a content cache). Generators keep only site-specific fetching/parsing; never add per-generator HTML cleaning.
+
 - **Orchestration** (`run_all_feeds.py`): Main script that executes all feed generators automatically
 
-- **Automation** (`.github/workflows/run_feeds.yml`): GitHub Action that runs hourly to update all feeds
+- **Automation** (`.github/workflows/run_feeds.yml`): GitHub Action that runs twice daily (midnight and noon UTC) to update all feeds
 
 ### Feed Generator Pattern
 
@@ -94,7 +96,7 @@ Key Python packages:
 1. Create new Python script in `feed_generators/` following existing patterns
 2. Add corresponding make target to Makefile
 3. Script will be automatically included in `run_all_feeds.py` execution
-4. GitHub Actions will run the new script hourly
+4. GitHub Actions will run the new script twice daily
 
 ## File Structure
 
