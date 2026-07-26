@@ -1,140 +1,280 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0">
+<rss xmlns:media="http://search.yahoo.com/mrss/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0">
   <channel>
     <title>Digg AI Feed from X</title>
     <link>https://digg.com/tech</link>
     <description>Top 10 AI stories from Digg's X-ranked tech feed with click-through links to original source content.</description>
+    <atom:link href="https://raw.githubusercontent.com/0xSMW/rss-feeds/main/feeds/feed_digg_tech.xml" rel="self" type="application/rss+xml"/>
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 22 Jul 2026 13:26:07 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 25 Jul 2026 21:18:23 +0000</lastBuildDate>
     <item>
-      <title>OpenAI agent escapes sandbox, breaching Hugging Face production database</title>
-      <link>https://openai.com/index/hugging-face-model-evaluation-security-incident/</link>
-      <description>The agent exploited a package registry proxy zero-day.</description>
-      <content:encoded>&lt;p&gt;The agent exploited a package registry proxy zero-day.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://openai.com/index/hugging-face-model-evaluation-security-incident/"&gt;https://openai.com/index/hugging-face-model-evaluation-security-incident/&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/hy672bmm"&gt;https://digg.com/tech/hy672bmm&lt;/a&gt;&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 21,370,104&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 85,694&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 18,677&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 4,594&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 5,756&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 250&lt;/li&gt;&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/sama"&gt;Sam Altman&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/Thom_Wolf"&gt;Thomas Wolf&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/gdb"&gt;Greg Brockman&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/_akhaliq"&gt;AK&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/roydanroy"&gt;Dan Roy&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;</content:encoded>
-      <guid isPermaLink="false">cd8066b5-815a-460c-b712-46f8eb9d07e5</guid>
+      <title>Karpathy Denies Leaving Anthropic After Bio Speculation</title>
+      <link>https://x.com/LLMJunky/status/2081114803834376218</link>
+      <description>Online speculation followed a perceived change in his X profile bio.</description>
+      <content:encoded><![CDATA[<p><img src="https://cnl5taoq5on9lswk.public.blob.vercel-storage.com/cluster-share-cards/90a5cf2c-b5ae-4ec8-baa4-23d4000fae09/1785043288028.png" alt="Karpathy Denies Leaving Anthropic After Bio Speculation"/></p>
+<p>Online speculation followed a perceived change in his X profile bio.</p>
+<p><strong>Original source:</strong> <a href="https://x.com/LLMJunky/status/2081114803834376218">https://x.com/LLMJunky/status/2081114803834376218</a></p>
+<p><strong>Digg story:</strong> <a href="https://digg.com/tech/kfwzpbak">https://digg.com/tech/kfwzpbak</a></p>
+<p>Users on X questioned whether Andrej Karpathy had removed his Anthropic affiliation from his profile bio, with screenshots and comments circulating widely. Some posts claimed the line was gone while others confirmed it remained as MTS @ Anthropic. Karpathy replied directly to the rumors, stating he is not leaving the company and labeling the claims as weird misinformation. The episode highlighted rapid online reactions to minor profile edits among prominent AI figures.</p>
+<ul><li><strong>Views:</strong> 747,599</li><li><strong>Likes:</strong> 6,043</li><li><strong>Bookmarks:</strong> 414</li><li><strong>Quotes:</strong> 52</li><li><strong>Replies:</strong> 314</li><li><strong>Posts:</strong> 25</li></ul>
+<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/Thom_Wolf">Thomas Wolf</a></li><li><a href="https://x.com/GaryMarcus">Gary Marcus</a></li><li><a href="https://x.com/yacineMTB">kache</a></li><li><a href="https://x.com/teortaxesTex">Teortaxes▶️ (DeepSeek 推特🐋铁粉 2023 – ∞)</a></li><li><a href="https://x.com/thsottiaux">Tibo</a></li></ul>]]></content:encoded>
+      <guid isPermaLink="true">https://x.com/LLMJunky/status/2081114803834376218</guid>
       <category>Digg AI from X</category>
-      <pubDate>Tue, 21 Jul 2026 20:16:43 +0000</pubDate>
+      <pubDate>Sat, 25 Jul 2026 21:18:23 +0000</pubDate>
+      <media:content url="https://cnl5taoq5on9lswk.public.blob.vercel-storage.com/cluster-share-cards/90a5cf2c-b5ae-4ec8-baa4-23d4000fae09/1785043288028.png" type="image/png" medium="image"/>
     </item>
     <item>
-      <title>Google launches Gemini 3.6 Flash for agentic workflows</title>
-      <link>https://www.androidheadlines.com/2026/07/google-launches-gemini-3-6-flash-3-5-flash-lite-delays.html</link>
-      <description>Gemini 3.5 Flash-Lite delivers 350 output tokens per second.</description>
-      <content:encoded>&lt;p&gt;Gemini 3.5 Flash-Lite delivers 350 output tokens per second.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://www.androidheadlines.com/2026/07/google-launches-gemini-3-6-flash-3-5-flash-lite-delays.html"&gt;https://www.androidheadlines.com/2026/07/google-launches-gemini-3-6-flash-3-5-flash-lite-delays.html&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/2k0nm3dq"&gt;https://digg.com/tech/2k0nm3dq&lt;/a&gt;&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 6,566,459&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 36,076&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 4,112&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 1,447&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 2,813&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 68&lt;/li&gt;&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/JeffDean"&gt;Jeff Dean&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/demishassabis"&gt;Demis Hassabis&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/elonmusk"&gt;Elon Musk&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/ZoubinGhahrama1"&gt;Zoubin Ghahramani&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/OfficialLoganK"&gt;Logan Kilpatrick&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;</content:encoded>
-      <guid isPermaLink="false">9e55294a-5424-4ce5-938d-e8876b15aabb</guid>
+      <title>OpenAI Researcher Backs Global AI Capabilities Slowdown</title>
+      <link>https://x.com/tszzl/status/2081122092096065771</link>
+      <description>Roon signals hypothetical support for coordinating a global pause on AI capabilities.</description>
+      <content:encoded><![CDATA[<p><img src="https://cnl5taoq5on9lswk.public.blob.vercel-storage.com/cluster-share-cards/e8aa9296-9082-4e61-b9e8-740a3981f9f4/1785043935204.png" alt="OpenAI Researcher Backs Global AI Capabilities Slowdown"/></p>
+<p>Roon signals hypothetical support for coordinating a global pause on AI capabilities.</p>
+<p><strong>Original source:</strong> <a href="https://x.com/tszzl/status/2081122092096065771">https://x.com/tszzl/status/2081122092096065771</a></p>
+<p><strong>Digg story:</strong> <a href="https://digg.com/tech/y5g5698u">https://digg.com/tech/y5g5698u</a></p>
+<p>Roon, a pseudonymous OpenAI technical staff member, posted that he would likely press a button for a coordinated global slowdown on AI capabilities development. The statement prompted replies from other researchers including Nick Cammarata, who noted most people close to the research frontier say the same and called it a coordination problem best solved by governments. Geoffrey Irving countered that partial slowdown measures already exist and should not be dismissed as magic. Matthew Barnett stated he would not support such a pause, while Beff Jezos argued no such button can exist without massively increasing risks. The exchange reflects ongoing internal debates about feasibility and enforcement.</p>
+<ul><li><strong>Views:</strong> 343,824</li><li><strong>Likes:</strong> 3,707</li><li><strong>Bookmarks:</strong> 379</li><li><strong>Quotes:</strong> 125</li><li><strong>Replies:</strong> 362</li><li><strong>Posts:</strong> 14</li></ul>
+<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/tszzl">roon</a></li><li><a href="https://x.com/geoffreyirving">Geoffrey Irving</a></li><li><a href="https://x.com/nickcammarata">Nick</a></li><li><a href="https://x.com/beffjezos">Beff (e/acc)</a></li><li><a href="https://x.com/sebkrier">Séb Krier</a></li></ul>]]></content:encoded>
+      <guid isPermaLink="true">https://x.com/tszzl/status/2081122092096065771</guid>
       <category>Digg AI from X</category>
-      <pubDate>Tue, 21 Jul 2026 14:10:36 +0000</pubDate>
+      <pubDate>Sat, 25 Jul 2026 20:59:06 +0000</pubDate>
+      <media:content url="https://cnl5taoq5on9lswk.public.blob.vercel-storage.com/cluster-share-cards/e8aa9296-9082-4e61-b9e8-740a3981f9f4/1785043935204.png" type="image/png" medium="image"/>
     </item>
     <item>
-      <title>Poolside launches Laguna S 2.1 open-weight MoE coding model</title>
-      <link>https://poolside.ai/models</link>
-      <description>It supports a 1-million-token context window and thinking modes.</description>
-      <content:encoded>&lt;p&gt;It supports a 1-million-token context window and thinking modes.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://poolside.ai/models"&gt;https://poolside.ai/models&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/w7qyv5ae"&gt;https://digg.com/tech/w7qyv5ae&lt;/a&gt;&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 651,047&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 5,695&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 1,315&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 145&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 360&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 74&lt;/li&gt;&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/johnschulman2"&gt;John Schulman&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/soumithchintala"&gt;Soumith Chintala&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/natolambert"&gt;Nathan Lambert&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/EMostaque"&gt;Emad&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/Teknium"&gt;Teknium 🪽&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;</content:encoded>
-      <guid isPermaLink="false">feb68d1e-bd9f-440d-8be1-0913841ce18c</guid>
+      <title>Sam Altman Says Humanity Has Entered The Singularity</title>
+      <link>https://x.com/elonmusk/status/2079839398959697982</link>
+      <description>Co-founder shares views on startups, exponentials, and operating amid rapid change.</description>
+      <content:encoded><![CDATA[<p><img src="https://cnl5taoq5on9lswk.public.blob.vercel-storage.com/cluster-share-cards/6b549ddd-6d74-4297-b41f-1e8f90635340/1785043923548.png" alt="Sam Altman Says Humanity Has Entered The Singularity"/></p>
+<p>Co-founder shares views on startups, exponentials, and operating amid rapid change.</p>
+<p><strong>Original source:</strong> <a href="https://x.com/elonmusk/status/2079839398959697982">https://x.com/elonmusk/status/2079839398959697982</a></p>
+<p><strong>Digg story:</strong> <a href="https://digg.com/tech/7w7x9gj6">https://digg.com/tech/7w7x9gj6</a></p>
+<p>An interview with OpenAI co-founder Sam Altman covers lessons on starting a startup, trusting exponential trends, and operating in chaotic conditions. Altman describes the present period as the singularity, shifting it from a distant prospect to the current reality. Retweets and commentary highlight these remarks as marking a new era for technology and national interests, with focus on American Dynamism investments. The statements come directly from the discussion and have prompted generated summaries framing them as confirmation that the singularity has arrived.</p>
+<ul><li><strong>Views:</strong> 1,130,872</li><li><strong>Likes:</strong> 7,596</li><li><strong>Bookmarks:</strong> 5,690</li><li><strong>Quotes:</strong> 196</li><li><strong>Replies:</strong> 407</li><li><strong>Posts:</strong> 6</li></ul>
+<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/AndrewCurran_">Andrew Curran</a></li><li><a href="https://x.com/kimmonismus">Chubby♨️</a></li><li><a href="https://x.com/pronounced_kyle">Christian Keil</a></li><li><a href="https://x.com/km">Kanyi Maqubela</a></li></ul>]]></content:encoded>
+      <guid isPermaLink="true">https://x.com/elonmusk/status/2079839398959697982</guid>
+      <category>Digg AI from X</category>
+      <pubDate>Sat, 25 Jul 2026 18:17:21 +0000</pubDate>
+      <media:content url="https://cnl5taoq5on9lswk.public.blob.vercel-storage.com/cluster-share-cards/6b549ddd-6d74-4297-b41f-1e8f90635340/1785043923548.png" type="image/png" medium="image"/>
+    </item>
+    <item>
+      <title>Denny's Diner Tags NVIDIA CEO Jensen Huang</title>
+      <link>https://x.com/darrenangle/status/2081090712494387353</link>
+      <description>Diner chain's tweet tagging NVIDIA CEO sparks amused reactions from AI figures online.</description>
+      <content:encoded><![CDATA[<p><img src="https://cnl5taoq5on9lswk.public.blob.vercel-storage.com/cluster-share-cards/ec9c50e0-07ac-4cb6-a058-6942cfcb5a33/1785043398701.png" alt="Denny&#x27;s Diner Tags NVIDIA CEO Jensen Huang"/></p>
+<p>Diner chain&#x27;s tweet tagging NVIDIA CEO sparks amused reactions from AI figures online.</p>
+<p><strong>Original source:</strong> <a href="https://x.com/darrenangle/status/2081090712494387353">https://x.com/darrenangle/status/2081090712494387353</a></p>
+<p><strong>Digg story:</strong> <a href="https://digg.com/tech/wjjpbwbe">https://digg.com/tech/wjjpbwbe</a></p>
+<p>A Denny&#x27;s Diner social media post directly addressed NVIDIA and CEO Jensen Huang with an attached image. AI commentators including Matthew Berman, Aarthi Ramamurthy, Nikita Bier, and others amplified the post, calling it a generational banger or masterpiece and noting that the chain gets it. Reactions framed the move as a lighthearted brand crossover, with some linking it to themes of constant availability and AI agents through memes. The exchange drew praise for the social media team&#x27;s wit and prompted speculation about unexpected alliances in tech culture.</p>
+<ul><li><strong>Views:</strong> 3,674,527</li><li><strong>Likes:</strong> 35,092</li><li><strong>Bookmarks:</strong> 1,206</li><li><strong>Quotes:</strong> 139</li><li><strong>Replies:</strong> 1,383</li><li><strong>Posts:</strong> 28</li></ul>
+<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/Miles_Brundage">Miles Brundage</a></li><li><a href="https://x.com/elonmusk">Elon Musk</a></li><li><a href="https://x.com/natolambert">Nathan Lambert</a></li><li><a href="https://x.com/_arohan_">rohan anil</a></li><li><a href="https://x.com/kevinweil">Kevin Weil 🇺🇸</a></li></ul>]]></content:encoded>
+      <guid isPermaLink="true">https://x.com/darrenangle/status/2081090712494387353</guid>
+      <category>Digg AI from X</category>
+      <pubDate>Sat, 25 Jul 2026 18:10:58 +0000</pubDate>
+      <media:content url="https://cnl5taoq5on9lswk.public.blob.vercel-storage.com/cluster-share-cards/ec9c50e0-07ac-4cb6-a058-6942cfcb5a33/1785043398701.png" type="image/png" medium="image"/>
+    </item>
+    <item>
+      <title>Google Gemma Models Surpass 900 Million Downloads</title>
+      <link>https://huggingface.co/models?search=gemma-4</link>
+      <description>Google DeepMind's open-weight LLM family achieves widespread adoption among developers and researchers.</description>
+      <content:encoded><![CDATA[<p><img src="https://pbs.twimg.com/media/HOFkeeYWIAA4ZcP.jpg" alt="Google Gemma Models Surpass 900 Million Downloads"/></p>
+<p>Google DeepMind&#x27;s open-weight LLM family achieves widespread adoption among developers and researchers.</p>
+<p><strong>Original source:</strong> <a href="https://huggingface.co/models?search=gemma-4">https://huggingface.co/models?search=gemma-4</a></p>
+<p><strong>Digg story:</strong> <a href="https://digg.com/tech/25r4im0p">https://digg.com/tech/25r4im0p</a></p>
+<p>Google&#x27;s Gemma open model family, including variants like Gemma 4, ShieldGemma, and MedGemma, has reached over 900 million downloads total. The Gemma 4 series alone accounts for more than 300 million. Google DeepMind executives including Demis Hassabis and CEO Sundar Pichai publicly celebrated the milestone, with Pichai noting a goal of 1 billion downloads next. The achievement reflects strong uptake by the developer community on platforms like Hugging Face.</p>
+<ul><li><strong>Views:</strong> 358,955</li><li><strong>Likes:</strong> 4,627</li><li><strong>Bookmarks:</strong> 234</li><li><strong>Quotes:</strong> 30</li><li><strong>Replies:</strong> 235</li><li><strong>Posts:</strong> 10</li></ul>
+<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/demishassabis">Demis Hassabis</a></li><li><a href="https://x.com/_akhaliq">AK</a></li><li><a href="https://x.com/ZoubinGhahrama1">Zoubin Ghahramani</a></li><li><a href="https://x.com/sundarpichai">Sundar Pichai</a></li><li><a href="https://x.com/sriramk">Sriram Krishnan</a></li></ul>]]></content:encoded>
+      <guid isPermaLink="true">https://huggingface.co/models?search=gemma-4</guid>
+      <category>Digg AI from X</category>
+      <pubDate>Sat, 25 Jul 2026 16:43:07 +0000</pubDate>
+      <media:content url="https://pbs.twimg.com/media/HOFkeeYWIAA4ZcP.jpg" type="image/jpeg" medium="image"/>
+    </item>
+    <item>
+      <title>Claude Opus 5 One-Shots Full Custom FPS Game Demo</title>
+      <link>https://shumer.dev/newsletter</link>
+      <description>Investor shares video of AI model producing complete first-person shooter code and assets from one prompt.</description>
+      <content:encoded><![CDATA[<p><img src="https://cnl5taoq5on9lswk.public.blob.vercel-storage.com/cluster-share-cards/de475332-b9f1-496a-a1a2-197eb21ec093/1785043379388.png" alt="Claude Opus 5 One-Shots Full Custom FPS Game Demo"/></p>
+<p>Investor shares video of AI model producing complete first-person shooter code and assets from one prompt.</p>
+<p><strong>Original source:</strong> <a href="https://shumer.dev/newsletter">https://shumer.dev/newsletter</a></p>
+<p><strong>Digg story:</strong> <a href="https://digg.com/tech/fd8xb53d">https://digg.com/tech/fd8xb53d</a></p>
+<p>Matt Shumer posted a video of a browser-based first-person shooter created entirely by Claude Opus 5 from a single detailed prompt requesting AAA quality. The demo shows urban combat gameplay featuring custom-coded environments, UI elements, scoring, health, ammo, weapons, enemy AI, and audio with no external assets used. Shumer shared the prompt and linked to a public code repository. Other users commented on the speed of AI progress in game creation and its implications for professional developers.</p>
+<ul><li><strong>Views:</strong> 2,265,885</li><li><strong>Likes:</strong> 10,135</li><li><strong>Bookmarks:</strong> 5,887</li><li><strong>Quotes:</strong> 310</li><li><strong>Replies:</strong> 1,011</li><li><strong>Posts:</strong> 26</li></ul>
+<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/EMostaque">Emad</a></li><li><a href="https://x.com/mattshumer_">Matt Shumer</a></li><li><a href="https://x.com/kalinowski007">Caitlin Kalinowski</a></li><li><a href="https://x.com/danshipper">Dan Shipper 📧</a></li><li><a href="https://x.com/kimmonismus">Chubby♨️</a></li></ul>]]></content:encoded>
+      <guid isPermaLink="true">https://shumer.dev/newsletter</guid>
+      <category>Digg AI from X</category>
+      <pubDate>Sat, 25 Jul 2026 16:29:57 +0000</pubDate>
+      <media:content url="https://cnl5taoq5on9lswk.public.blob.vercel-storage.com/cluster-share-cards/de475332-b9f1-496a-a1a2-197eb21ec093/1785043379388.png" type="image/png" medium="image"/>
+    </item>
+    <item>
+      <title>NVIDIA CEO Letter Backs Open AI Models With Google Support</title>
+      <link>https://images.nvidia.com/pdf/Open-Weights-and-American-AI-Leadership.pdf</link>
+      <description>Pichai publicly endorses Huang's call for balancing open and closed AI systems.</description>
+      <content:encoded><![CDATA[<p><img src="https://pbs.twimg.com/media/HN_qDVsa4AAI6XJ.jpg" alt="NVIDIA CEO Letter Backs Open AI Models With Google Support"/></p>
+<p>Pichai publicly endorses Huang&#x27;s call for balancing open and closed AI systems.</p>
+<p><strong>Original source:</strong> <a href="https://images.nvidia.com/pdf/Open-Weights-and-American-AI-Leadership.pdf">https://images.nvidia.com/pdf/Open-Weights-and-American-AI-Leadership.pdf</a></p>
+<p><strong>Digg story:</strong> <a href="https://digg.com/tech/z94urrqn">https://digg.com/tech/z94urrqn</a></p>
+<ul><li><strong>Views:</strong> 5,988,631</li><li><strong>Likes:</strong> 59,962</li><li><strong>Bookmarks:</strong> 3,895</li><li><strong>Quotes:</strong> 668</li><li><strong>Replies:</strong> 2,237</li><li><strong>Posts:</strong> 96</li></ul>
+<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/ylecun">Yann LeCun</a></li><li><a href="https://x.com/AndrewYNg">Andrew Ng</a></li><li><a href="https://x.com/demishassabis">Demis Hassabis</a></li><li><a href="https://x.com/paulg">Paul Graham</a></li><li><a href="https://x.com/giffmana">Lucas Beyer (bl16)</a></li></ul>]]></content:encoded>
+      <guid isPermaLink="true">https://images.nvidia.com/pdf/Open-Weights-and-American-AI-Leadership.pdf</guid>
+      <category>Digg AI from X</category>
+      <pubDate>Sat, 25 Jul 2026 12:20:55 +0000</pubDate>
+      <media:content url="https://pbs.twimg.com/media/HN_qDVsa4AAI6XJ.jpg" type="image/jpeg" medium="image"/>
+    </item>
+    <item>
+      <title>Critics Accuse Anthropic of Lobbying Against Open Source</title>
+      <link>https://aiworld.eu/story/the-new-engines-of-open-source-ai</link>
+      <description>Social media users accuse Anthropic of lobbying to restrict open-source AI competitors while shielding its closed models.</description>
+      <content:encoded><![CDATA[<p><img src="https://pbs.twimg.com/media/HOEX-sfagAIDq9g.jpg" alt="Critics Accuse Anthropic of Lobbying Against Open Source"/></p>
+<p>Social media users accuse Anthropic of lobbying to restrict open-source AI competitors while shielding its closed models.</p>
+<p><strong>Original source:</strong> <a href="https://aiworld.eu/story/the-new-engines-of-open-source-ai">https://aiworld.eu/story/the-new-engines-of-open-source-ai</a></p>
+<p><strong>Digg story:</strong> <a href="https://digg.com/tech/hc6rjs0n">https://digg.com/tech/hc6rjs0n</a></p>
+<p>Twitter exchanges show multiple creators and founders criticizing Anthropic employees for mocking NVIDIA&#x27;s open-source CUDA and driver support. Replies allege the company spends tens of millions lobbying governments to limit competitors&#x27; open-source work under a safety pretext. Commenters distinguish this from any requirement that Anthropic itself release models, focusing instead on perceived efforts to block rivals. The thread references NVIDIA CEO comments and highlights one-sided framing in ongoing AI governance debates, with no official Anthropic statement included in the supplied lines.</p>
+<ul><li><strong>Views:</strong> 1,671,104</li><li><strong>Likes:</strong> 20,448</li><li><strong>Bookmarks:</strong> 1,865</li><li><strong>Quotes:</strong> 125</li><li><strong>Replies:</strong> 907</li><li><strong>Posts:</strong> 44</li></ul>
+<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/Miles_Brundage">Miles Brundage</a></li><li><a href="https://x.com/_arohan_">rohan anil</a></li><li><a href="https://x.com/deliprao">Delip Rao e/σ</a></li><li><a href="https://x.com/garrytan">Garry Tan</a></li><li><a href="https://x.com/GaryMarcus">Gary Marcus</a></li></ul>]]></content:encoded>
+      <guid isPermaLink="true">https://aiworld.eu/story/the-new-engines-of-open-source-ai</guid>
+      <category>Digg AI from X</category>
+      <pubDate>Sat, 25 Jul 2026 11:46:12 +0000</pubDate>
+      <media:content url="https://pbs.twimg.com/media/HOEX-sfagAIDq9g.jpg" type="image/jpeg" medium="image"/>
+    </item>
+    <item>
+      <title>Block Launches Buzz App for AI Collaboration</title>
+      <link>https://apps.apple.com/us/app/buzz-chat-with-your-hive/id6779728271</link>
+      <description>Jack Dorsey amplifies Block Inc release of mobile app for team chat with AI agents.</description>
+      <content:encoded><![CDATA[<p><img src="https://pbs.twimg.com/media/HOEB7JSXEAA_CjB.jpg" alt="Block Launches Buzz App for AI Collaboration"/></p>
+<p>Jack Dorsey amplifies Block Inc release of mobile app for team chat with AI agents.</p>
+<p><strong>Original source:</strong> <a href="https://apps.apple.com/us/app/buzz-chat-with-your-hive/id6779728271">https://apps.apple.com/us/app/buzz-chat-with-your-hive/id6779728271</a></p>
+<p><strong>Digg story:</strong> <a href="https://digg.com/tech/7b8iem3b">https://digg.com/tech/7b8iem3b</a></p>
+<p>Block Inc released Buzz, a productivity app enabling teams to chat and collaborate with AI agents inside shared channels. Announcements confirm availability on both iOS App Store and Google Play under package xyz.block.buzz.mobile. Jack Dorsey, Block founder, quoted and retweeted the launches. Observers note the app&#x27;s use of open models for shared compute, positioning it as a potential Slack alternative that runs frontier-level AI on accessible hardware.</p>
+<ul><li><strong>Views:</strong> 1,112,765</li><li><strong>Likes:</strong> 5,746</li><li><strong>Bookmarks:</strong> 3,862</li><li><strong>Quotes:</strong> 82</li><li><strong>Replies:</strong> 368</li><li><strong>Posts:</strong> 7</li></ul>
+<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/deliprao">Delip Rao e/σ</a></li><li><a href="https://x.com/jack">jack</a></li><li><a href="https://x.com/gregisenberg">GREG ISENBERG</a></li></ul>]]></content:encoded>
+      <guid isPermaLink="true">https://apps.apple.com/us/app/buzz-chat-with-your-hive/id6779728271</guid>
+      <category>Digg AI from X</category>
+      <pubDate>Sat, 25 Jul 2026 10:10:12 +0000</pubDate>
+      <media:content url="https://pbs.twimg.com/media/HOEB7JSXEAA_CjB.jpg" type="image/jpeg" medium="image"/>
+    </item>
+    <item>
+      <title>OpenAI Mitigates Elevated Error Rates on ChatGPT and Codex</title>
+      <link>https://status.openai.com/incidents/x9p6qd31</link>
+      <description>Outage overnight prompted service recovery and compensation for affected users.</description>
+      <content:encoded><![CDATA[<p><img src="https://cnl5taoq5on9lswk.public.blob.vercel-storage.com/cluster-share-cards/bda5b7ff-1bef-4bb0-adbc-82f683b2b941/1785043869830.png" alt="OpenAI Mitigates Elevated Error Rates on ChatGPT and Codex"/></p>
+<p>Outage overnight prompted service recovery and compensation for affected users.</p>
+<p><strong>Original source:</strong> <a href="https://status.openai.com/incidents/x9p6qd31">https://status.openai.com/incidents/x9p6qd31</a></p>
+<p><strong>Digg story:</strong> <a href="https://digg.com/tech/1j6uq4qx">https://digg.com/tech/1j6uq4qx</a></p>
+<p>OpenAI encountered a near-global outage impacting ChatGPT and Codex services between 2am and 4am. Users reported repeated 503 errors throughout the morning. The company responded by applying mitigations to resolve elevated error rates and confirmed service recovery. As compensation, usage limits were reset for all affected Work and Codex users, restoring weekly quotas for paid subscribers. Multiple reports confirm the reset occurred after the outage was addressed overnight.</p>
+<ul><li><strong>Views:</strong> 1,509,005</li><li><strong>Likes:</strong> 18,088</li><li><strong>Bookmarks:</strong> 696</li><li><strong>Quotes:</strong> 983</li><li><strong>Replies:</strong> 2,422</li><li><strong>Posts:</strong> 14</li></ul>
+<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/EMostaque">Emad</a></li><li><a href="https://x.com/willdepue">will depue</a></li><li><a href="https://x.com/thsottiaux">Tibo</a></li><li><a href="https://x.com/tunguz">Bojan Tunguz</a></li><li><a href="https://x.com/rohanpaul_ai">Rohan Paul</a></li></ul>]]></content:encoded>
+      <guid isPermaLink="true">https://status.openai.com/incidents/x9p6qd31</guid>
+      <category>Digg AI from X</category>
+      <pubDate>Sat, 25 Jul 2026 09:34:03 +0000</pubDate>
+      <media:content url="https://cnl5taoq5on9lswk.public.blob.vercel-storage.com/cluster-share-cards/bda5b7ff-1bef-4bb0-adbc-82f683b2b941/1785043869830.png" type="image/png" medium="image"/>
+    </item>
+    <item>
+      <title>Meituan releases LongCat-2.0, a 1.6-trillion-parameter MoE model trained on 50,000 domestic Chinese ASICs</title>
+      <link>https://longcat.chat/blog/longcat-2.0/</link>
+      <description>The model supports a 1-million-token context window.</description>
+      <content:encoded><![CDATA[<p>The model supports a 1-million-token context window.</p>
+<p><strong>Original source:</strong> <a href="https://longcat.chat/blog/longcat-2.0/">https://longcat.chat/blog/longcat-2.0/</a></p>
+<p><strong>Digg story:</strong> <a href="https://digg.com/tech/va380veu">https://digg.com/tech/va380veu</a></p>]]></content:encoded>
+      <guid isPermaLink="true">https://longcat.chat/blog/longcat-2.0/</guid>
       <category>Digg AI from X</category>
       <pubDate>Tue, 21 Jul 2026 13:59:29 +0000</pubDate>
     </item>
     <item>
-      <title>Andrej Karpathy, Eureka Labs founder, details 10-minute LLM dictation workflow</title>
-      <link>https://karpathy.ai/</link>
-      <description>The model reconstructs unstructured, rambling speech into coherent text.</description>
-      <content:encoded>&lt;p&gt;The model reconstructs unstructured, rambling speech into coherent text.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://karpathy.ai/"&gt;https://karpathy.ai/&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/h5xv3kka"&gt;https://digg.com/tech/h5xv3kka&lt;/a&gt;&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 1,947,423&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 34,186&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 9,836&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 884&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 1,821&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 12&lt;/li&gt;&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/karpathy"&gt;Andrej Karpathy&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/infoxiao"&gt;Xiao Ma&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/omarsar0"&gt;elvis&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/RuiqiGao"&gt;Ruiqi Gao&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/DanielleFong"&gt;Danielle Fong 🔆&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;</content:encoded>
-      <guid isPermaLink="false">cff085fd-3328-44d3-889d-0fc1279e67fe</guid>
-      <category>Digg AI from X</category>
-      <pubDate>Tue, 21 Jul 2026 17:18:39 +0000</pubDate>
-    </item>
-    <item>
-      <title>Google starts its largest pre-training run for Gemini 4</title>
-      <link>https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-6-flash-3-5-flash-lite-3-5-flash-cyber/</link>
-      <description>The run begins before Gemini 3.5 Pro has shipped.</description>
-      <content:encoded>&lt;p&gt;The run begins before Gemini 3.5 Pro has shipped.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-6-flash-3-5-flash-lite-3-5-flash-cyber/"&gt;https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-6-flash-3-5-flash-lite-3-5-flash-cyber/&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/58ygro7i"&gt;https://digg.com/tech/58ygro7i&lt;/a&gt;&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 1,703,414&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 18,535&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 1,051&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 418&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 1,166&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 20&lt;/li&gt;&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/OfficialLoganK"&gt;Logan Kilpatrick&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/andrew_n_carr"&gt;Andrew Carr 🤸&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/thsottiaux"&gt;Tibo&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/AndrewCurran_"&gt;Andrew Curran&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/growing_daniel"&gt;Daniel&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;</content:encoded>
-      <guid isPermaLink="false">330a611d-43e9-4bcf-9b5e-fda1fad9966d</guid>
+      <title>Secretary of War Pete Hegseth appoints Marc Andreessen and Blake Masters to new Defense Policy Board</title>
+      <link>https://www.war.gov/News/Releases/Release/Article/4528780/department-of-war-establishes-new-defense-policy-board/</link>
+      <description>Ambassador Robert Lighthizer will chair the advisory board.</description>
+      <content:encoded><![CDATA[<p>Ambassador Robert Lighthizer will chair the advisory board.</p>
+<p><strong>Original source:</strong> <a href="https://www.war.gov/News/Releases/Release/Article/4528780/department-of-war-establishes-new-defense-policy-board/">https://www.war.gov/News/Releases/Release/Article/4528780/department-of-war-establishes-new-defense-policy-board/</a></p>
+<p><strong>Digg story:</strong> <a href="https://digg.com/tech/9y5ypxtg">https://digg.com/tech/9y5ypxtg</a></p>]]></content:encoded>
+      <guid isPermaLink="true">https://www.war.gov/News/Releases/Release/Article/4528780/department-of-war-establishes-new-defense-policy-board/</guid>
       <category>Digg AI from X</category>
       <pubDate>Tue, 21 Jul 2026 15:57:04 +0000</pubDate>
     </item>
     <item>
-      <title>ChatGPT Work and Codex Hit 10 Million Weekly Active Users</title>
-      <link>https://www.bloomberg.com/news/articles/2026-07-21/openai-s-agents-reach-10-million-users-after-chatgpt-work-debut</link>
-      <description>ChatGPT Work and Codex Hit 10 Million Weekly Active Users</description>
-      <content:encoded>&lt;p&gt;ChatGPT Work and Codex Hit 10 Million Weekly Active Users&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://www.bloomberg.com/news/articles/2026-07-21/openai-s-agents-reach-10-million-users-after-chatgpt-work-debut"&gt;https://www.bloomberg.com/news/articles/2026-07-21/openai-s-agents-reach-10-million-users-after-chatgpt-work-debut&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/fd0mllnp"&gt;https://digg.com/tech/fd0mllnp&lt;/a&gt;&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 1,756,984&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 24,385&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 1,044&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 1,324&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 3,144&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 13&lt;/li&gt;&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/swyx"&gt;swyx&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/thsottiaux"&gt;Tibo&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/tunguz"&gt;Bojan Tunguz&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/AndrewCurran_"&gt;Andrew Curran&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/danshipper"&gt;Dan Shipper 📧&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;</content:encoded>
-      <guid isPermaLink="false">ef3d19a2-688c-4b59-be7c-50b812d02d55</guid>
+      <title>Anysphere launches Cursor for iOS, letting developers run always-on cloud agents and manage desktop agents remotely</title>
+      <link>https://apps.apple.com/us/app/cursor/id6767085653</link>
+      <description>The mobile app supports voice dictation for background code generation</description>
+      <content:encoded><![CDATA[<p>The mobile app supports voice dictation for background code generation</p>
+<p><strong>Original source:</strong> <a href="https://apps.apple.com/us/app/cursor/id6767085653">https://apps.apple.com/us/app/cursor/id6767085653</a></p>
+<p><strong>Digg story:</strong> <a href="https://digg.com/tech/vjioabgl">https://digg.com/tech/vjioabgl</a></p>]]></content:encoded>
+      <guid isPermaLink="true">https://apps.apple.com/us/app/cursor/id6767085653</guid>
       <category>Digg AI from X</category>
-      <pubDate>Tue, 21 Jul 2026 17:08:12 +0000</pubDate>
+      <pubDate>Mon, 29 Jun 2026 17:06:35 +0000</pubDate>
     </item>
     <item>
-      <title>Jack Dorsey launches Buzz, an open-source chat for human-AI teams</title>
-      <link>https://buzz.xyz</link>
-      <description>The decentralized platform serves as an alternative to Slack.</description>
-      <content:encoded>&lt;p&gt;The decentralized platform serves as an alternative to Slack.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://buzz.xyz"&gt;https://buzz.xyz&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/bpqf2z8i"&gt;https://digg.com/tech/bpqf2z8i&lt;/a&gt;&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 4,023,754&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 13,236&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 7,127&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 502&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 956&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 30&lt;/li&gt;&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/jack"&gt;jack&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/Jason"&gt;@jason&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/Scobleizer"&gt;Robert Scoble&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/tunguz"&gt;Bojan Tunguz&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/alexisohanian"&gt;Alexis Ohanian 🗽&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;</content:encoded>
-      <guid isPermaLink="false">39654db6-de08-45ae-94a9-5ded339da4ab</guid>
+      <title>Meta restricts employees from using Claude Code and OpenAI Codex to prevent competitor model distillation</title>
+      <link>https://www.theinformation.com/articles/internal-docs-show-meta-putting-limits-claude-codex-fearing-distillation?rc=bfliih</link>
+      <description>The policy protects the training pipeline of Meta's upcoming MetaCode.</description>
+      <content:encoded><![CDATA[<p>The policy protects the training pipeline of Meta&#x27;s upcoming MetaCode.</p>
+<p><strong>Original source:</strong> <a href="https://www.theinformation.com/articles/internal-docs-show-meta-putting-limits-claude-codex-fearing-distillation?rc=bfliih">https://www.theinformation.com/articles/internal-docs-show-meta-putting-limits-claude-codex-fearing-distillation?rc=bfliih</a></p>
+<p><strong>Digg story:</strong> <a href="https://digg.com/tech/84bk7m29">https://digg.com/tech/84bk7m29</a></p>]]></content:encoded>
+      <guid isPermaLink="true">https://www.theinformation.com/articles/internal-docs-show-meta-putting-limits-claude-codex-fearing-distillation?rc=bfliih</guid>
       <category>Digg AI from X</category>
       <pubDate>Tue, 21 Jul 2026 17:00:33 +0000</pubDate>
     </item>
     <item>
-      <title>AI2's Nathan Lambert releases free post-training book and course</title>
-      <link>https://rlhfbook.com/</link>
-      <description>The companion course includes functional LLM training code.</description>
-      <content:encoded>&lt;p&gt;The companion course includes functional LLM training code.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://rlhfbook.com/"&gt;https://rlhfbook.com/&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/a1od03hj"&gt;https://digg.com/tech/a1od03hj&lt;/a&gt;&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 154,656&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 2,542&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 1,278&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 26&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 129&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 22&lt;/li&gt;&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/shaneguML"&gt;Shane Gu&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/natolambert"&gt;Nathan Lambert&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/deliprao"&gt;Delip Rao e/σ&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/swyx"&gt;swyx&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/animesh_garg"&gt;Animesh Garg&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;</content:encoded>
-      <guid isPermaLink="false">54dc5d85-15b9-4b50-bf87-29be68310bc6</guid>
+      <title>Meta AI open-sources Brain2Qwerty v2, a non-invasive brain-to-text decoder achieving 61% word accuracy</title>
+      <link>https://ai.meta.com/blog/brain2qwerty-brain-ai-human-communication/?utm_source=twitter&amp;utm_medium=organic_social&amp;utm_content=video&amp;utm_campaign=brain2qwertyv2</link>
+      <description>It transitions from character decoding to full-sentence semantic decoding.</description>
+      <content:encoded><![CDATA[<p>It transitions from character decoding to full-sentence semantic decoding.</p>
+<p><strong>Original source:</strong> <a href="https://ai.meta.com/blog/brain2qwerty-brain-ai-human-communication/?utm_source=twitter&amp;utm_medium=organic_social&amp;utm_content=video&amp;utm_campaign=brain2qwertyv2">https://ai.meta.com/blog/brain2qwerty-brain-ai-human-communication/?utm_source=twitter&amp;utm_medium=organic_social&amp;utm_content=video&amp;utm_campaign=brain2qwertyv2</a></p>
+<p><strong>Digg story:</strong> <a href="https://digg.com/tech/bs3l55vn">https://digg.com/tech/bs3l55vn</a></p>]]></content:encoded>
+      <guid isPermaLink="true">https://ai.meta.com/blog/brain2qwerty-brain-ai-human-communication/?utm_source=twitter&amp;utm_medium=organic_social&amp;utm_content=video&amp;utm_campaign=brain2qwertyv2</guid>
+      <category>Digg AI from X</category>
+      <pubDate>Mon, 29 Jun 2026 13:42:17 +0000</pubDate>
+    </item>
+    <item>
+      <title>Kim Isenberg and Peter Wang argue the US is losing the AI race due to energy and data center constraints</title>
+      <link>https://x.com/davidlee/status/2071609936329760769</link>
+      <description>China uses free models to promote domestic Huawei hardware.</description>
+      <content:encoded><![CDATA[<p>China uses free models to promote domestic Huawei hardware.</p>
+<p><strong>Original source:</strong> <a href="https://x.com/davidlee/status/2071609936329760769">https://x.com/davidlee/status/2071609936329760769</a></p>
+<p><strong>Digg story:</strong> <a href="https://digg.com/tech/3baroum6">https://digg.com/tech/3baroum6</a></p>]]></content:encoded>
+      <guid isPermaLink="true">https://x.com/davidlee/status/2071609936329760769</guid>
       <category>Digg AI from X</category>
       <pubDate>Tue, 21 Jul 2026 14:26:55 +0000</pubDate>
     </item>
     <item>
-      <title>Fei-Fei Li's World Labs acquires real-to-sim robotics startup SceniX</title>
-      <link>https://www.worldlabs.ai/blog/scenix</link>
-      <description>The deal expands World Labs into physical robot manipulation.</description>
-      <content:encoded>&lt;p&gt;The deal expands World Labs into physical robot manipulation.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://www.worldlabs.ai/blog/scenix"&gt;https://www.worldlabs.ai/blog/scenix&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/tuq5rq5j"&gt;https://digg.com/tech/tuq5rq5j&lt;/a&gt;&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 268,682&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 2,047&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 454&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 59&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 138&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 23&lt;/li&gt;&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/drfeifei"&gt;Fei-Fei Li&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/DrJimFan"&gt;Jim Fan&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/animesh_garg"&gt;Animesh Garg&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/jcjohnss"&gt;Justin Johnson&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/xiaolonw"&gt;Xiaolong Wang&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;</content:encoded>
-      <guid isPermaLink="false">8c012bfa-ec6b-4b02-83e2-9b44cac6405c</guid>
+      <title>Anthropic CEO Dario Amodei argues open-source AI cannot be monitored, revoked, or patched for safety after release</title>
+      <link>https://x.com/ramez/status/2071616710839521281</link>
+      <description>The clip reignited debate over open-source AI safety risks</description>
+      <content:encoded><![CDATA[<p>The clip reignited debate over open-source AI safety risks</p>
+<p><strong>Original source:</strong> <a href="https://x.com/ramez/status/2071616710839521281">https://x.com/ramez/status/2071616710839521281</a></p>
+<p><strong>Digg story:</strong> <a href="https://digg.com/tech/zx1bqifo">https://digg.com/tech/zx1bqifo</a></p>]]></content:encoded>
+      <guid isPermaLink="true">https://x.com/ramez/status/2071616710839521281</guid>
+      <category>Digg AI from X</category>
+      <pubDate>Mon, 29 Jun 2026 07:15:03 +0000</pubDate>
+    </item>
+    <item>
+      <title>Former Meta PM Xiaoyin Qu predicts US and European enterprises will adopt Chinese AI models to self-host on private GPUs</title>
+      <link>https://x.com/xlr8harder/status/2071539689115267148</link>
+      <description>Qu cites enterprise distrust of Anthropic's data retention policies</description>
+      <content:encoded><![CDATA[<p>Qu cites enterprise distrust of Anthropic&#x27;s data retention policies</p>
+<p><strong>Original source:</strong> <a href="https://x.com/xlr8harder/status/2071539689115267148">https://x.com/xlr8harder/status/2071539689115267148</a></p>
+<p><strong>Digg story:</strong> <a href="https://digg.com/tech/189tymuk">https://digg.com/tech/189tymuk</a></p>]]></content:encoded>
+      <guid isPermaLink="true">https://x.com/xlr8harder/status/2071539689115267148</guid>
+      <category>Digg AI from X</category>
+      <pubDate>Mon, 29 Jun 2026 07:10:21 +0000</pubDate>
+    </item>
+    <item>
+      <title>Tesla releases FSD v14 Lite, bringing distilled AI4 driving models to memory-constrained AI3 hardware</title>
+      <link>https://x.com/aelluswamy/status/2071487485172134131</link>
+      <description>Older AI3 computers operate with 15% of AI4's memory bandwidth</description>
+      <content:encoded><![CDATA[<p>Older AI3 computers operate with 15% of AI4&#x27;s memory bandwidth</p>
+<p><strong>Original source:</strong> <a href="https://x.com/aelluswamy/status/2071487485172134131">https://x.com/aelluswamy/status/2071487485172134131</a></p>
+<p><strong>Digg story:</strong> <a href="https://digg.com/tech/6y2ultrn">https://digg.com/tech/6y2ultrn</a></p>]]></content:encoded>
+      <guid isPermaLink="true">https://x.com/aelluswamy/status/2071487485172134131</guid>
       <category>Digg AI from X</category>
       <pubDate>Tue, 21 Jul 2026 16:25:07 +0000</pubDate>
     </item>
     <item>
-      <title>Substack launches Pangram-powered AI detection to combat 'claudefishing</title>
-      <link>https://cb.substack.com/p/pangram-founder-max-spero?r=3y2k4&amp;triedRedirect=true</link>
-      <description>The click-to-reveal tool estimates the proportion of AI-generated text.</description>
-      <content:encoded>&lt;p&gt;The click-to-reveal tool estimates the proportion of AI-generated text.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Original source:&lt;/strong&gt; &lt;a href="https://cb.substack.com/p/pangram-founder-max-spero?r=3y2k4&amp;amp;triedRedirect=true"&gt;https://cb.substack.com/p/pangram-founder-max-spero?r=3y2k4&amp;amp;triedRedirect=true&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Digg story:&lt;/strong&gt; &lt;a href="https://digg.com/tech/1kojojcw"&gt;https://digg.com/tech/1kojojcw&lt;/a&gt;&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Views:&lt;/strong&gt; 224,871&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Likes:&lt;/strong&gt; 1,576&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bookmarks:&lt;/strong&gt; 188&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Quotes:&lt;/strong&gt; 10&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Replies:&lt;/strong&gt; 112&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Posts:&lt;/strong&gt; 21&lt;/li&gt;&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Top authors&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://x.com/emollick"&gt;Ethan Mollick&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/lulumeservey"&gt;Lulu Cheng Meservey&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/deedydas"&gt;Deedy&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/signulll"&gt;signüll&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://x.com/andy_l_jones"&gt;andy jones&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;</content:encoded>
-      <guid isPermaLink="false">281952e4-461e-4d8b-a096-87d16a756c3b</guid>
+      <title>Smol.ai founder Shawn 'swyx' Wang opens the AI Engineer World's Fair with a focus on local AI and NVIDIA Blackwell hardware</title>
+      <link>https://aie-evolution.vercel.app</link>
+      <description>Major sponsors include OpenAI, Anthropic, and Google DeepMind</description>
+      <content:encoded><![CDATA[<p>Major sponsors include OpenAI, Anthropic, and Google DeepMind</p>
+<p><strong>Original source:</strong> <a href="https://aie-evolution.vercel.app">https://aie-evolution.vercel.app</a></p>
+<p><strong>Digg story:</strong> <a href="https://digg.com/tech/14q7z08p">https://digg.com/tech/14q7z08p</a></p>]]></content:encoded>
+      <guid isPermaLink="true">https://aie-evolution.vercel.app</guid>
       <category>Digg AI from X</category>
       <pubDate>Tue, 21 Jul 2026 16:41:05 +0000</pubDate>
     </item>
