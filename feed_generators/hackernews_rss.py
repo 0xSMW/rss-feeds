@@ -1,21 +1,58 @@
+import argparse
 import logging
 import re
 import xml.etree.ElementTree as ET
 from datetime import datetime, timezone
 from email.utils import parsedate_to_datetime
 from pathlib import Path
-from urllib.parse import urljoin
+from urllib.parse import parse_qs, urlparse
 
 import requests
-from bs4 import BeautifulSoup
-from feedgen.feed import FeedGenerator
+from bs4 import BeautifulSoup, Comment
+
+from _common import (
+    build_feed,
+    clean_article_html,
+    extract_summary,
+    feed_self_url,
+    load_cached_entries,
+    save_feed,
+)
 
 HN_RSS_URL = "https://news.ycombinator.com/rss"
-HN_BASE_URL = "https://news.ycombinator.com/"
+HN_BASE_URL = "https://news.ycombinator.com"
+HN_API_ITEM_URL = "https://hacker-news.firebaseio.com/v0/item/{item_id}.json"
 
 # Set up logging
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
 logger = logging.getLogger(__name__)
+
+# Heuristic pre-clean of arbitrary third-party pages, applied before the shared
+# normalizer: id/class noise, boilerplate text nodes, avatar/logo images, and
+# short link-dense blocks. The shared cleaner then handles structure, media
+# resolution, and the output allowlist.
+NOISE_ATTR_RE = re.compile(
+    r"(author|byline|avatar|profile|subscribe|newsletter|share|social|comment|"
+    r"footer|header|nav|breadcrumb|related|promo|advert|ads|banner)",
+    re.I,
+)
+NOISE_TEXT_RE = re.compile(
+    r"(written by|posted by|subscribe|newsletter|share|related|sponsored|"
+    r"advertis|promo|sign up|follow|log in|login|comments?)",
+    re.I,
+)
+NOISE_IMG_ALT_RE = re.compile(r"(avatar|profile|author|logo|icon|category)", re.I)
+NOISE_IMG_SRC_RE = re.compile(r"(avatar|profile|gravatar|author|logo|icon|category)", re.I)
+
+# Trailing recirculation blocks whose wording is not covered by _common's
+# related-section markers (e.g. Substack's "Other articles you might like").
+RELATED_TAIL_MARKERS = (
+    "other articles you might like",
+    "other posts you might like",
+    "you might also enjoy",
+    "recommended for you",
+    "more from this author",
+)
 
 
 def get_project_root():
@@ -87,23 +124,40 @@ def parse_rss_items(xml_content: str) -> list[dict]:
         if not title or not link:
             continue
 
-        description = (item.findtext("description") or "").strip() or title
         date = _parse_pub_date((item.findtext("pubDate") or "").strip())
-        guid = (item.findtext("guid") or "").strip() or link
+        comments = (item.findtext("comments") or "").strip() or link
 
         items.append(
             {
                 "title": title,
                 "link": link,
-                "description": description,
+                # HN's own <description> is just a "Comments" link, not prose;
+                # a real summary is filled in from the linked article later.
+                "description": title,
                 "date": date,
                 "category": "Hacker News",
-                "guid": guid,
+                "comments": comments,
             }
         )
 
     logger.info(f"Parsed {len(items)} items from Hacker News RSS")
     return items
+
+
+def fetch_hn_author(comments_url: str) -> str | None:
+    """Look up the HN submitter for a story via the Firebase API (best effort)."""
+    try:
+        item_id = parse_qs(urlparse(comments_url).query).get("id", [None])[0]
+        if not item_id or not item_id.isdigit():
+            return None
+        resp = requests.get(HN_API_ITEM_URL.format(item_id=item_id), timeout=10)
+        resp.raise_for_status()
+        data = resp.json() or {}
+        author = (data.get("by") or "").strip()
+        return author or None
+    except Exception as e:
+        logger.debug(f"HN author lookup failed for {comments_url}: {e}")
+        return None
 
 
 def fetch_article_page(url: str) -> str | None:
@@ -136,101 +190,103 @@ def fetch_article_page(url: str) -> str | None:
             return None
 
 
-def _clean_article_html(container, base_url: str) -> str:
-    """Clean article container and keep feed-friendly tags."""
-    if container is None:
-        return ""
-
-    for tag in container.select("script, style, noscript, svg, form, iframe, nav, header, footer, aside"):
-        tag.decompose()
-
-    noise_pattern = re.compile(
-        r"(author|byline|avatar|profile|subscribe|newsletter|share|social|comment|footer|header|nav|breadcrumb|related|promo|advert|ads|banner)",
-        re.I,
-    )
-    noise_text_pattern = re.compile(
-        r"(written by|posted by|subscribe|newsletter|share|related|sponsored|advertis|promo|sign up|follow|log in|login|comments?)",
-        re.I,
-    )
-
-    def is_low_value_block(tag) -> bool:
-        text = tag.get_text(" ", strip=True)
-        if not text:
-            return True
-        words = text.split()
-        link_text = " ".join(a.get_text(" ", strip=True) for a in tag.find_all("a"))
-        link_density = (len(link_text) / len(text)) if text else 0
-        if len(words) <= 6 and noise_text_pattern.search(text):
-            return True
-        if len(words) <= 12 and link_density > 0.6 and noise_text_pattern.search(text):
-            return True
+def _is_low_value_block(tag) -> bool:
+    """Short, link-dense or boilerplate-flavored blocks are site chrome."""
+    text = tag.get_text(" ", strip=True)
+    if not text:
         return False
+    words = text.split()
+    link_text = " ".join(a.get_text(" ", strip=True) for a in tag.find_all("a"))
+    link_density = (len(link_text) / len(text)) if text else 0
+    if len(words) <= 6 and NOISE_TEXT_RE.search(text):
+        return True
+    if len(words) <= 12 and link_density > 0.6 and NOISE_TEXT_RE.search(text):
+        return True
+    return False
+
+
+def preclean_container(container) -> None:
+    """Heuristic pre-pass for arbitrary third-party pages (mutates in place).
+
+    Removes elements whose id/class look like site chrome, boilerplate text
+    nodes ("written by …", share/subscribe/login/comments labels), avatar and
+    logo images, and short link-dense noise blocks. Structural cleaning and
+    the output allowlist are handled afterwards by _common.clean_article_html.
+    """
+    if container is None:
+        return
+
+    # HTML comments (framework hydration markers etc.) would otherwise survive
+    # into the output.
+    for comment in container.find_all(string=lambda s: isinstance(s, Comment)):
+        comment.extract()
+
+    # Elements with noisy id/class names.
     for tag in list(container.find_all(True)):
-        if tag is None or tag.attrs is None:
+        if tag.decomposed or tag.parent is None:
             continue
         tag_id = tag.get("id") or ""
         tag_class = " ".join(tag.get("class") or [])
-        if noise_pattern.search(tag_id) or noise_pattern.search(tag_class):
+        if NOISE_ATTR_RE.search(tag_id) or NOISE_ATTR_RE.search(tag_class):
             tag.decompose()
 
+    # Boilerplate text nodes.
     for text_node in list(container.find_all(string=True)):
         text = text_node.strip()
         if not text:
             continue
-        if len(text) <= 120 and noise_text_pattern.search(text):
+        if len(text) <= 120 and NOISE_TEXT_RE.search(text):
             lowered = text.lower()
             if lowered.startswith(("written by", "posted by", "author:", "byline:")):
                 text_node.extract()
-            elif re.fullmatch(r".*\\bcomments?\\b.*", text, flags=re.I) and len(text.split()) <= 6:
+            elif re.fullmatch(r".*\bcomments?\b.*", text, flags=re.I) and len(text.split()) <= 6:
                 text_node.extract()
-            elif re.fullmatch(r".*\\b(share|subscribe|newsletter|follow|log in|login)\\b.*", text, flags=re.I):
+            elif re.fullmatch(r".*\b(share|subscribe|newsletter|follow|log in|login)\b.*", text, flags=re.I):
                 text_node.extract()
 
+    # Avatar/logo/icon images.
     for img in list(container.find_all("img")):
-        if img is None or img.attrs is None:
+        if img.decomposed or img.parent is None:
             continue
         alt_text = img.get("alt") or ""
         img_class = " ".join(img.get("class") or [])
         img_src = img.get("src") or ""
-        if re.search(r"(avatar|profile|author|logo|icon|category)", alt_text, re.I) or re.search(
-            r"(avatar|profile|gravatar|author|logo|icon|category)", img_class + " " + img_src, re.I
-        ):
+        if NOISE_IMG_ALT_RE.search(alt_text) or NOISE_IMG_SRC_RE.search(img_class + " " + img_src):
             img.decompose()
 
-    allowed = {"p", "a", "img"}
-    for tag in list(container.find_all(True)):
-        if tag is None or tag.attrs is None:
+    # Short link-dense noise blocks (never ones carrying real media/structure).
+    for tag in list(container.find_all(["p", "div", "li", "span", "section"])):
+        if tag.decomposed or tag.parent is None:
             continue
-        if is_low_value_block(tag):
+        if tag.find(["img", "picture", "iframe", "pre", "table", "figure"]):
+            continue
+        if _is_low_value_block(tag):
             tag.decompose()
+
+    # Recirculation tails: a marker paragraph/heading and everything after it.
+    for el in list(container.find_all(["p", "h2", "h3", "h4", "strong", "em", "div"])):
+        if el.decomposed or el.parent is None:
             continue
-        if tag.name not in allowed:
-            tag.unwrap()
+        text = el.get_text(" ", strip=True).lower().rstrip(":")
+        if text in RELATED_TAIL_MARKERS:
+            target = el if el.name != "em" or el.parent.name not in ("p", "div") else el.parent
+            for sibling in list(target.next_siblings):
+                if getattr(sibling, "decompose", None):
+                    sibling.decompose()
+                else:
+                    sibling.extract()
+            target.decompose()
+
+    # Empty headings (JS-populated placeholders).
+    for heading in list(container.find_all(["h1", "h2", "h3", "h4", "h5", "h6"])):
+        if heading.decomposed or heading.parent is None:
             continue
-        attrs = {}
-        if tag.name == "a" and tag.get("href"):
-            attrs["href"] = tag["href"]
-        elif tag.name == "img" and tag.get("src"):
-            attrs["src"] = tag["src"]
-            if tag.get("alt"):
-                attrs["alt"] = tag["alt"]
-        tag.attrs = attrs
-
-    for a in container.find_all("a", href=True):
-        href = a["href"]
-        if not href.startswith(("http://", "https://", "mailto:", "#")):
-            a["href"] = urljoin(base_url, href)
-
-    for img in container.find_all("img", src=True):
-        src = img["src"]
-        if not src.startswith(("http://", "https://", "data:")):
-            img["src"] = urljoin(base_url, src)
-
-    return str(container)
+        if not heading.get_text(strip=True) and not heading.find("img"):
+            heading.decompose()
 
 
-def extract_article_content(html: str, page_url: str) -> tuple[str, str]:
-    """Extract main article content HTML and a plain-text summary."""
+def extract_article_content(html: str, page_url: str, title: str | None = None) -> tuple[str, str]:
+    """Extract normalized article content HTML and a plain-text summary."""
     soup = BeautifulSoup(html, "html.parser")
     container = (
         soup.find("article")
@@ -238,105 +294,64 @@ def extract_article_content(html: str, page_url: str) -> tuple[str, str]:
         or soup.find("div", class_=re.compile(r"(content|article|post|story|entry|main)", re.I))
         or soup.body
     )
-    content_html = _clean_article_html(container, base_url=page_url)
-
-    summary = ""
-    if container:
-        first_p = container.find("p")
-        if first_p:
-            summary = first_p.get_text(" ", strip=True)
-    if not summary:
-        summary = soup.title.get_text(strip=True) if soup.title else ""
-
+    preclean_container(container)
+    content_html = clean_article_html(container, page_url, title=title)
+    summary = extract_summary(soup, container, title=title)
     return content_html, summary
 
 
-def generate_rss_feed(articles: list[dict], feed_name: str = "hackernews") -> FeedGenerator:
+def _comments_link_html(comments_url: str) -> str:
+    href = comments_url.replace("&", "&amp;").replace('"', "&quot;")
+    return f'<p><a href="{href}">Comments on Hacker News</a></p>'
+
+
+def populate_article_content(article: dict) -> None:
+    """Fill content_html/description/author for a story (mutates in place)."""
+    comments_url = article.get("comments") or article["link"]
+    author = fetch_hn_author(comments_url)
+    if author:
+        article["author"] = author
+
+    content_html = ""
+    summary = ""
+    host = urlparse(article["link"]).netloc.lower()
+    if host != "news.ycombinator.com":
+        page_html = fetch_article_page(article["link"])
+        if page_html:
+            content_html, summary = extract_article_content(
+                page_html, article["link"], title=article["title"]
+            )
+
+    comments_html = _comments_link_html(comments_url)
+    article["content_html"] = (content_html + "\n" + comments_html) if content_html else comments_html
+    if summary and summary.strip():
+        article["description"] = summary.strip()
+
+
+def generate_rss_feed(articles: list[dict], feed_name: str = "hackernews"):
     """Generate RSS feed for Hacker News with full content."""
-    fg = FeedGenerator()
-    fg.title("Hacker News")
-    fg.description("Hacker News front-page links with full article content.")
-    fg.link(href=HN_BASE_URL)
-    fg.language("en")
-
-    for article in reversed(articles):
-        fe = fg.add_entry()
-        fe.title(article["title"])
-        fe.link(href=article["link"])
-        fe.description(article.get("description") or article["title"])
-
-        if article.get("content_html"):
-            fe.content(article["content_html"])
-
-        if article.get("date"):
-            fe.published(article["date"])
-
-        fe.category(term=article.get("category") or "Hacker News")
-        fe.id(article.get("guid") or article["link"])
-
+    fg = build_feed(
+        title="Hacker News",
+        description="Hacker News front-page links with full article content.",
+        site_url=HN_BASE_URL,
+        feed_url=feed_self_url(f"feed_{feed_name}.xml"),
+        items=articles,
+    )
     logger.info("Hacker News RSS feed generated successfully")
     return fg
-
-
-def save_rss_feed(feed_generator: FeedGenerator, feed_name: str = "hackernews") -> Path:
-    """Save RSS feed to file."""
-    feeds_dir = ensure_feeds_directory()
-    output_file = feeds_dir / f"feed_{feed_name}.xml"
-    feed_generator.rss_file(str(output_file), pretty=True)
-    logger.info(f"Hacker News RSS feed saved to {output_file}")
-    return output_file
-
-
-def get_existing_entries_from_feed(feed_path: Path) -> list[dict]:
-    """Parse the existing RSS feed and return entries for reuse."""
-    entries = []
-    if not feed_path.exists():
-        return entries
-
-    try:
-        tree = ET.parse(feed_path)
-        root = tree.getroot()
-        ns = {"content": "http://purl.org/rss/1.0/modules/content/"}
-        for item in root.findall("./channel/item"):
-            link_elem = item.find("link")
-            title_elem = item.find("title")
-            desc_elem = item.find("description")
-            content_elem = item.find("content:encoded", ns)
-            date_elem = item.find("pubDate")
-            category_elem = item.find("category")
-            guid_elem = item.find("guid")
-
-            link = link_elem.text.strip() if link_elem is not None and link_elem.text else None
-            if not link:
-                continue
-
-            date = None
-            if date_elem is not None and date_elem.text:
-                date = _parse_pub_date(date_elem.text.strip())
-
-            entries.append(
-                {
-                    "title": title_elem.text.strip() if title_elem is not None and title_elem.text else link,
-                    "link": link,
-                    "date": date,
-                    "category": category_elem.text.strip() if category_elem is not None and category_elem.text else "Hacker News",
-                    "description": desc_elem.text if desc_elem is not None and desc_elem.text else "",
-                    "content_html": content_elem.text if content_elem is not None and content_elem.text else "",
-                    "guid": guid_elem.text.strip() if guid_elem is not None and guid_elem.text else link,
-                }
-            )
-    except Exception as e:
-        logger.warning(f"Failed to parse existing feed entries: {str(e)}")
-
-    return entries
 
 
 def main(feed_name: str = "hackernews", force: bool = False) -> bool:
     """Main function to generate Hacker News RSS feed."""
     try:
         feed_path = ensure_feeds_directory() / f"feed_{feed_name}.xml"
-        existing_entries = get_existing_entries_from_feed(feed_path)
-        existing_links = {entry["link"] for entry in existing_entries}
+
+        if force:
+            logger.info("Force mode enabled: rebuilding feed from scratch")
+            existing_items, cache = [], {}
+        else:
+            existing_items, cache = load_cached_entries(feed_path)
+        existing_links = {item["link"] for item in existing_items}
 
         rss_xml = fetch_rss_content()
         articles = parse_rss_items(rss_xml)
@@ -344,40 +359,34 @@ def main(feed_name: str = "hackernews", force: bool = False) -> bool:
             logger.warning("No items parsed from Hacker News RSS")
             return False
 
-        if force:
-            new_articles = articles
-        else:
-            new_articles = [article for article in articles if article["link"] not in existing_links]
+        new_articles = [a for a in articles if a["link"] not in existing_links]
         skipped_count = len(articles) - len(new_articles)
         if skipped_count:
             logger.info(f"Skipping {skipped_count} existing links already in feed.")
 
         for article in new_articles:
-            article_html = fetch_article_page(article["link"])
-            if not article_html:
+            cached = cache.get(article["link"])
+            if cached and cached.get("content_html"):
+                article["content_html"] = cached["content_html"]
+                if cached.get("description"):
+                    article["description"] = cached["description"]
                 continue
-            content_html, summary = extract_article_content(article_html, article["link"])
-            if content_html:
-                article["content_html"] = content_html
-            if summary:
-                article["description"] = summary
+            logger.info(f"Fetching article content: {article['link']}")
+            populate_article_content(article)
 
-        combined_articles = new_articles + existing_entries
+        combined = new_articles + existing_items
         seen_links = set()
         deduped_articles = []
-        for article in combined_articles:
+        for article in combined:
             link = article.get("link")
             if not link or link in seen_links:
                 continue
             seen_links.add(link)
             deduped_articles.append(article)
 
-        min_dt = datetime.min.replace(tzinfo=timezone.utc)
-        deduped_articles.sort(key=lambda item: item.get("date") or min_dt, reverse=True)
-
         feed = generate_rss_feed(deduped_articles, feed_name)
-        save_rss_feed(feed, feed_name)
-        logger.info(f"Successfully generated Hacker News feed with {len(deduped_articles)} items")
+        save_feed(feed, feed_path)
+        logger.info(f"Successfully generated Hacker News feed ({len(deduped_articles)} candidate items)")
         return True
     except Exception as e:
         logger.exception(f"Failed to generate Hacker News feed: {e}")
@@ -385,8 +394,6 @@ def main(feed_name: str = "hackernews", force: bool = False) -> bool:
 
 
 if __name__ == "__main__":
-    import argparse
-
     parser = argparse.ArgumentParser(description="Generate Hacker News RSS feed.")
     parser.add_argument("--force", action="store_true", help="Refetch all articles and rebuild the feed.")
     args = parser.parse_args()

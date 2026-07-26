@@ -14,6 +14,15 @@ import argparse
 import os
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
+from _common import (
+    build_feed,
+    clean_article_html,
+    extract_summary,
+    feed_self_url,
+    load_cached_entries,
+    save_feed,
+)
+
 # Set up logging
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
 logger = logging.getLogger(__name__)
@@ -317,99 +326,7 @@ def parse_xai_news_html(html: str):
     return articles
 
 
-def _clean_article_html(container, base_url: str) -> str:
-    """Clean article container and keep only <p>, <a>, and <img> tags."""
-    if container is None:
-        return ""
-
-    related_markers = (
-        "related articles",
-        "related posts",
-        "more articles",
-        "you might also like",
-    )
-    share_domains = (
-        "linkedin.com/sharing",
-        "facebook.com/sharer",
-        "twitter.com/intent",
-        "x.com/intent",
-        "reddit.com/submit",
-    )
-
-    for el in container.find_all(["h2", "h3", "h4", "p", "div", "section", "aside"]):
-        text = el.get_text(" ", strip=True).lower()
-        if any(marker in text for marker in related_markers):
-            parent = el.find_parent(["section", "aside", "div"]) or el
-            parent.decompose()
-
-    for tag in list(container.find_all(True)):
-        if tag.parent is None:
-            continue
-        if tag.name == "a":
-            href = tag.get("href", "")
-            href_l = href.lower()
-            if any(domain in href_l for domain in share_domains):
-                tag.decompose()
-                continue
-            if not href:
-                tag.decompose()
-                continue
-            if not href.startswith(("http://", "https://", "mailto:", "#")):
-                tag["href"] = urljoin(base_url, href)
-            if not tag.get_text(strip=True) and not tag.find("img"):
-                tag.decompose()
-                continue
-            tag.attrs = {"href": tag["href"]}
-            continue
-        if tag.name == "img":
-            if "src" in tag.attrs:
-                src = tag["src"]
-                if not src.startswith(("http://", "https://", "data:")):
-                    tag["src"] = urljoin(base_url, src)
-            else:
-                tag.decompose()
-                continue
-            tag.attrs = {"src": tag["src"]}
-            continue
-
-        if tag.name == "p":
-            if tag.find("img"):
-                for img in tag.find_all("img"):
-                    tag.insert_after(img)
-            tag.attrs = {}
-            continue
-
-        tag.unwrap()
-
-    p_link_hrefs: set[str] = set()
-    for p in container.find_all("p"):
-        for link in p.find_all("a"):
-            href = link.get("href", "")
-            if href:
-                p_link_hrefs.add(href)
-
-    parts: list[str] = []
-    seen_hrefs: set[str] = set()
-    for tag in container.find_all(["p", "a", "img"], recursive=True):
-        if tag.name == "p" and not tag.get_text(strip=True):
-            continue
-        # Skip links/images already contained inside a paragraph or link to avoid duplicates.
-        if tag.find_parent(["p", "a"]):
-            continue
-        if tag.name == "a":
-            href = tag.get("href", "")
-            if href in p_link_hrefs:
-                continue
-            if href in seen_hrefs:
-                continue
-            if href:
-                seen_hrefs.add(href)
-        parts.append(str(tag))
-
-    return "\n".join(parts)
-
-
-def extract_article_content(html: str, page_url: str) -> tuple[str, str]:
+def extract_article_content(html: str, page_url: str, title: str | None = None) -> tuple[str, str]:
     """Extract main article content HTML and a plain-text summary.
 
     Returns (content_html, summary_text)
@@ -437,78 +354,9 @@ def extract_article_content(html: str, page_url: str) -> tuple[str, str]:
                 parent_scores[parent] = parent_scores.get(parent, 0) + len(p.get_text(strip=True))
         container = max(parent_scores, key=parent_scores.get) if parent_scores else soup.body
 
-    content_html = _clean_article_html(container, base_url=page_url)
-
-    # Summary: first sufficiently long paragraph
-    summary = ""
-    if container:
-        for p in container.find_all("p"):
-            text = p.get_text(" ", strip=True)
-            if text and len(text) > 40:
-                summary = text
-                break
-    if not summary:
-        summary = soup.title.get_text(strip=True) if soup.title else ""
-
+    content_html = clean_article_html(container, page_url, title=title)
+    summary = extract_summary(soup, container, title=title)
     return content_html, summary
-
-
-def load_existing_feed(feed_path: Path) -> tuple[list[dict], dict]:
-    """Load existing feed items and a link->cached mapping from an RSS file if present.
-
-    Returns (existing_items, cache_by_link)
-    """
-    items: list[dict] = []
-    cache: dict[str, dict] = {}
-    if not feed_path.exists():
-        return items, cache
-
-    try:
-        with open(feed_path, "r", encoding="utf-8") as f:
-            xml = f.read()
-        soup = BeautifulSoup(xml, "xml")
-        for item in soup.find_all("item"):
-            link_tag = item.find("link")
-            if not link_tag or not link_tag.text:
-                continue
-            link = link_tag.text.strip()
-
-            title = (item.find("title").text if item.find("title") else link)
-            desc_tag = item.find("description")
-            desc = desc_tag.text if desc_tag else title
-            content_tag = item.find("content:encoded") or item.find("encoded")
-            content_html = content_tag.text if content_tag else None
-            # Parse pubDate if present
-            pub = item.find("pubDate")
-            date_obj = None
-            if pub and pub.text:
-                try:
-                    # dateutil handles RFC 2822 format
-                    date_obj = dateparser.parse(pub.text)
-                    if date_obj and date_obj.tzinfo is None:
-                        date_obj = date_obj.replace(tzinfo=pytz.UTC)
-                except Exception:
-                    date_obj = None
-            if date_obj is None:
-                date_obj = datetime.now(pytz.UTC)
-
-            cat_tag = item.find("category")
-            category = cat_tag.text if cat_tag and cat_tag.text else "News"
-
-            article = {
-                "title": title,
-                "link": link,
-                "date": date_obj,
-                "category": category,
-                "description": desc,
-                "content_html": content_html,
-            }
-            items.append(article)
-            cache[link] = {"description": desc, "content_html": content_html}
-    except Exception as e:
-        logger.warning(f"Failed to load existing feed from {feed_path}: {e}")
-
-    return items, cache
 
 
 def fetch_article_page(session: requests.Session, url: str) -> str | None:
@@ -551,7 +399,7 @@ def fetch_contents_parallel(articles: list[dict], cached: dict, max_workers: int
             try:
                 html = fut.result()
                 if html:
-                    content_html, summary = extract_article_content(html, art["link"])
+                    content_html, summary = extract_article_content(html, art["link"], title=art.get("title"))
                     art["content_html"] = content_html
                     if summary and summary.strip():
                         art["description"] = summary
@@ -568,7 +416,7 @@ def fetch_contents_parallel(articles: list[dict], cached: dict, max_workers: int
             html = fetch_article_html_selenium(url)
             if not html:
                 continue
-            content_html, summary = extract_article_content(html, url)
+            content_html, summary = extract_article_content(html, url, title=art.get("title"))
             if content_html:
                 art["content_html"] = content_html
             if summary and summary.strip():
@@ -577,32 +425,14 @@ def fetch_contents_parallel(articles: list[dict], cached: dict, max_workers: int
 
 def generate_rss_feed(articles, feed_name: str = "xai_news"):
     """Generate RSS feed from parsed articles."""
-    fg = FeedGenerator()
-    fg.title("xAI News")
-    fg.description("Latest news and updates from xAI")
-    # Set site link and self-link (order: set self first, then site link as the visible channel link)
-    fg.language("en")
-
-    # Metadata (optional but nice to have)
-    fg.author({"name": "xAI"})
-    fg.link(href=NEWS_URL, rel="alternate")
-    fg.link(href=f"{BASE_URL}/news/feed_{feed_name}.xml", rel="self")
-    fg.link(href=NEWS_URL)
-
-    for article in articles:
-        fe = fg.add_entry()
-        fe.title(article["title"])
-        fe.link(href=article["link"])
-        # Prefer full HTML content via content:encoded, with description as summary
-        content_html = article.get("content_html")
-        summary = article.get("description", article["title"]) or article["title"]
-        if content_html:
-            fe.content(content_html)
-        fe.description(summary)
-        fe.published(article["date"])
-        fe.category(term=article.get("category", "News"))
-        fe.id(article["link"])
-
+    fg = build_feed(
+        title="xAI News",
+        description="Latest news and updates from xAI",
+        site_url=NEWS_URL,
+        feed_url=feed_self_url(f"feed_{feed_name}.xml"),
+        items=articles,
+        author={"name": "xAI"},
+    )
     logger.info("RSS feed generated successfully for xAI News")
     return fg
 
@@ -611,8 +441,7 @@ def save_rss_feed(feed_generator, feed_name: str = "xai_news") -> Path:
     """Save RSS feed to an XML file under feeds/."""
     feeds_dir = ensure_feeds_directory()
     output_path = feeds_dir / f"feed_{feed_name}.xml"
-    feed_generator.rss_file(str(output_path), pretty=True)
-    logger.info(f"RSS feed saved to {output_path}")
+    save_feed(feed_generator, output_path)
     return output_path
 
 
@@ -636,7 +465,7 @@ def main():
             existing_links = set()
         else:
             logger.info("Loading existing feed cache")
-            existing_items, cache = load_existing_feed(existing_feed_path)
+            existing_items, cache = load_cached_entries(existing_feed_path)
             existing_links = {it["link"] for it in existing_items}
 
         # Fetch or read index HTML

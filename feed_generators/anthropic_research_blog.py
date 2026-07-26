@@ -1,7 +1,8 @@
+"""Generate an RSS feed for Anthropic's research blog (https://www.anthropic.com/research)."""
+
 import argparse
 import logging
-from datetime import datetime
-from email.utils import parsedate_to_datetime
+import re
 from pathlib import Path
 from urllib.parse import urljoin
 
@@ -9,12 +10,61 @@ import pytz
 import requests
 import undetected_chromedriver as uc
 from bs4 import BeautifulSoup
-from feedgen.feed import FeedGenerator
-import xml.etree.ElementTree as ET
+from dateutil import parser as dateparser
+
+from _common import (
+    build_feed,
+    clean_article_html,
+    extract_summary,
+    feed_self_url,
+    load_cached_entries,
+    save_feed,
+)
 
 # Set up logging
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
 logger = logging.getLogger(__name__)
+
+BASE_URL = "https://www.anthropic.com"
+INDEX_URL = BASE_URL + "/research"
+PATH_PREFIX = "/research/"
+
+# Category chips shown on listing cards; never valid item titles.
+CATEGORY_LABELS = {
+    "announcement",
+    "announcements",
+    "alignment",
+    "case studies",
+    "case study",
+    "company",
+    "developers",
+    "economic research",
+    "education",
+    "event",
+    "events",
+    "featured",
+    "frontier red team",
+    "interpretability",
+    "news",
+    "policy",
+    "product",
+    "research",
+    "societal impacts",
+}
+
+CTA_TEXT_RE = re.compile(
+    r"^(read more|learn more|see more|see all|view all|back to \S+.*)$", re.IGNORECASE
+)
+DATE_TEXT_RE = re.compile(r"^[A-Za-z]{3,9}\.?\s+\d{1,2},\s+\d{4}$")
+HEADER_DATE_RE = re.compile(r"\b[A-Z][a-z]{2,8}\.?\s+\d{1,2},\s+\d{4}\b")
+
+# Site-specific CTA buttons the generic pass misses ("Read the paper", ...).
+ARTICLE_CTA_PATTERNS = (r"read the \S+(\s+\S+){0,2}",)
+
+# Boilerplate og:description used on pages without a real summary.
+GENERIC_SUMMARY_RE = re.compile(
+    r"anthropic is an ai safety and research company", re.IGNORECASE
+)
 
 
 def get_project_root():
@@ -32,15 +82,17 @@ def ensure_feeds_directory():
 def setup_selenium_driver():
     """Set up Selenium WebDriver with undetected-chromedriver."""
     options = uc.ChromeOptions()
-    options.add_argument("--headless")  # Ensure headless mode is enabled
+    options.add_argument("--headless")
     options.add_argument("--window-size=1920,1080")
     options.add_argument("--disable-blink-features=AutomationControlled")
     options.add_argument(
-        "--user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
+        "--user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+        "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36"
     )
     return uc.Chrome(options=options)
 
-def fetch_research_content_requests(url="https://www.anthropic.com/research"):
+
+def fetch_research_content_requests(url=INDEX_URL):
     """Fetch the research page HTML using requests."""
     headers = {
         "User-Agent": (
@@ -55,7 +107,7 @@ def fetch_research_content_requests(url="https://www.anthropic.com/research"):
     return resp.text
 
 
-def fetch_research_content_selenium(url="https://www.anthropic.com/research"):
+def fetch_research_content_selenium(url=INDEX_URL):
     """Fetch the fully loaded HTML content of the research page using Selenium."""
     driver = None
     try:
@@ -63,22 +115,17 @@ def fetch_research_content_selenium(url="https://www.anthropic.com/research"):
         driver = setup_selenium_driver()
         driver.get(url)
 
-        # Wait for research articles to load by checking for specific elements
         try:
             from selenium.webdriver.common.by import By
             from selenium.webdriver.support.ui import WebDriverWait
             from selenium.webdriver.support import expected_conditions as EC
 
-            # Wait for research articles to be present
             WebDriverWait(driver, 15).until(EC.presence_of_element_located((By.CSS_SELECTOR, "a[href*='/research/']")))
             logger.info("Research articles loaded successfully")
-        except:
+        except Exception:
             logger.warning("Could not confirm articles loaded, proceeding anyway...")
 
-        html_content = driver.page_source
-        logger.info("Successfully fetched HTML content")
-        return html_content
-
+        return driver.page_source
     except Exception as e:
         logger.error(f"Error fetching content: {e}")
         raise
@@ -113,376 +160,161 @@ def fetch_article_page(url: str) -> str | None:
             return None
 
 
-def _clean_article_html(container, base_url: str) -> str:
-    """Clean article container and keep feed-friendly tags."""
-    if container is None:
-        return ""
-
-    for tag in container.select("script, style, noscript, svg, form, iframe, nav, header, footer"):
-        tag.decompose()
-
-    for share_link in container.find_all("a", href=True):
-        href = share_link["href"]
-        if "twitter.com/intent/tweet" in href or "linkedin.com/shareArticle" in href:
-            share_link.decompose()
-
-    for heading in container.find_all(["h1", "h2", "h3", "h4", "h5", "h6"]):
-        if heading.get_text(" ", strip=True).lower() == "related content":
-            for sibling in list(heading.find_all_next()):
-                sibling.decompose()
-            heading.decompose()
-            break
-
-    allowed = {
-        "p",
-        "a",
-        "img",
-        "ul",
-        "ol",
-        "li",
-        "strong",
-        "em",
-        "blockquote",
-        "code",
-        "pre",
-        "h1",
-        "h2",
-        "h3",
-        "h4",
-        "h5",
-        "h6",
-        "br",
-    }
-    for tag in list(container.find_all(True)):
-        if tag.name not in allowed:
-            tag.unwrap()
-            continue
-        attrs = {}
-        if tag.name == "a" and tag.get("href"):
-            attrs["href"] = tag["href"]
-        elif tag.name == "img" and tag.get("src"):
-            attrs["src"] = tag["src"]
-            if tag.get("alt"):
-                attrs["alt"] = tag["alt"]
-        tag.attrs = attrs
-
-    for a in container.find_all("a", href=True):
-        href = a["href"]
-        if not href.startswith(("http://", "https://", "mailto:", "#")):
-            a["href"] = urljoin(base_url, href)
-    for img in container.find_all("img", src=True):
-        src = img["src"]
-        if not src.startswith(("http://", "https://", "data:")):
-            img["src"] = urljoin(base_url, src)
-
-    return str(container)
-
-
-def extract_article_content(html: str, page_url: str) -> tuple[str, str]:
-    """Extract main article content HTML and a plain-text summary."""
-    soup = BeautifulSoup(html, "html.parser")
-    container = (
-        soup.select_one("article")
-        or soup.select_one("main article")
-        or soup.select_one("main")
-        or soup.select_one("[class*='content']")
-    )
-    content_html = _clean_article_html(container, base_url=page_url)
-
-    summary = ""
-    if container:
-        first_p = container.find("p")
-        if first_p:
-            summary = first_p.get_text(" ", strip=True)
-    if not summary:
-        summary = soup.title.get_text(strip=True) if soup.title else ""
-
-    return content_html, summary
-
-
-def parse_date_string(date_str):
-    """Parse various date formats found on Anthropic research pages."""
-    if not date_str or not date_str.strip():
+def _parse_date(text):
+    """Parse a date string into an aware UTC datetime."""
+    if not text or not text.strip():
         return None
+    try:
+        dt = dateparser.parse(text.strip())
+    except (ValueError, OverflowError, TypeError):
+        return None
+    if dt is None:
+        return None
+    if dt.tzinfo is None:
+        dt = dt.replace(tzinfo=pytz.UTC)
+    return dt
 
-    date_str = date_str.strip()
 
-    # Try different date formats
-    date_formats = [
-        "%b %d, %Y",  # Mar 27, 2025
-        "%B %d, %Y",  # March 27, 2025
-        "%Y-%m-%d",  # 2025-03-27
-        "%m/%d/%Y",  # 03/27/2025
-        "%d %b %Y",  # 27 Mar 2025
-        "%d %B %Y",  # 27 March 2025
-    ]
+def _looks_like_label(text):
+    """True when a candidate title is really a category chip, date, or CTA."""
+    t = " ".join((text or "").split()).lower()
+    return (
+        len(t) < 4
+        or t in CATEGORY_LABELS
+        or bool(CTA_TEXT_RE.match(t))
+        or bool(DATE_TEXT_RE.match(t))
+    )
 
-    for date_format in date_formats:
-        try:
-            date = datetime.strptime(date_str, date_format)
-            return date.replace(tzinfo=pytz.UTC)
-        except ValueError:
+
+def _card_title(link):
+    """Real headline of a listing card, never the category chip."""
+    for el in link.select("[class*='title'], [class*='Title'], h1, h2, h3, h4"):
+        if el.find_parent(class_=re.compile("meta", re.IGNORECASE)) is not None:
             continue
-
-    logger.warning(f"Could not parse date: '{date_str}'")
+        text = " ".join(el.get_text(" ", strip=True).split())
+        if text and not _looks_like_label(text):
+            return text
+    text = " ".join(link.get_text(" ", strip=True).split())
+    if len(text) >= 5 and not _looks_like_label(text):
+        return text
     return None
 
 
-def parse_research_html(html_content):
-    """Parse the research HTML content and extract article information."""
-    try:
-        soup = BeautifulSoup(html_content, "html.parser")
-        articles = []
+def _card_category(link):
+    el = link.select_one("[class*='subject']")
+    if el is None:
+        meta = link.select_one("[class*='meta']")
+        if meta is not None:
+            el = meta.find("span")
+    if el is not None:
+        text = " ".join(el.get_text(" ", strip=True).split())
+        if text and len(text) <= 40 and not DATE_TEXT_RE.match(text):
+            return text
+    return None
 
-        # Look for research article links - updated selectors based on the HTML
-        research_links = soup.select("a[href*='/research/']")
-        logger.info(f"Found {len(research_links)} research links")
 
-        found_links = set()  # To avoid duplicates
+def _card_date(link):
+    time_el = link.find("time")
+    if time_el is None:
+        return None
+    return _parse_date(time_el.get("datetime") or time_el.get_text(" ", strip=True))
 
-        for link in research_links:
-            try:
-                href = link.get("href", "")
-                if not href or href in found_links:
-                    continue
 
-                # Skip non-research URLs
-                if not "/research/" in href or href == "/research":
-                    continue
+def _card_description(link):
+    p = link.select_one("p[class*='body']") or link.find("p")
+    if p is not None:
+        text = " ".join(p.get_text(" ", strip=True).split())
+        if len(text) > 20:
+            return text
+    return None
 
-                found_links.add(href)
 
-                # Extract title - try multiple approaches
-                title = None
+def parse_research_html(html_content, base_url=BASE_URL):
+    """Parse the research listing HTML and extract article entries."""
+    soup = BeautifulSoup(html_content, "html.parser")
+    articles = []
+    seen = set()
 
-                # Try to find title in the link itself
-                title_selectors = [
-                    "h3",
-                    "h2",
-                    "h1",
-                    ".Card_headline__reaoT",
-                    "[class*='headline']",
-                    "[class*='title']",
-                ]
-
-                for title_sel in title_selectors:
-                    title_elem = link.select_one(title_sel)
-                    if title_elem and title_elem.text.strip():
-                        title = title_elem.text.strip()
-                        break
-
-                # If no title found in the link, check parent elements
-                if not title:
-                    parent = link.parent
-                    for _ in range(3):  # Check up to 3 parent levels
-                        if parent:
-                            for title_sel in title_selectors:
-                                title_elem = parent.select_one(title_sel)
-                                if title_elem and title_elem.text.strip():
-                                    title = title_elem.text.strip()
-                                    break
-                            if title:
-                                break
-                            parent = parent.parent
-
-                # If still no title, use the link text itself
-                if not title:
-                    title = link.text.strip()
-                    if len(title) < 5:  # Skip very short titles
-                        continue
-
-                # Clean up title
-                title = " ".join(title.split())  # Remove extra whitespace
-
-                # Construct full URL
-                if href.startswith("https://"):
-                    full_url = href
-                elif href.startswith("/"):
-                    full_url = "https://www.anthropic.com" + href
-                else:
-                    continue
-
-                # Extract date - try multiple selectors
-                date = None
-                date_selectors = [
-                    ".detail-m.agate",  # Based on the HTML structure
-                    "[class*='timestamp']",
-                    "[class*='date']",
-                    "time",
-                    ".PostDetail_post-timestamp__TBJ0Z",
-                    ".text-label",
-                ]
-
-                # Look for date in the link or its parents
-                for date_sel in date_selectors:
-                    date_elem = link.select_one(date_sel)
-                    if not date_elem and link.parent:
-                        # Check parent and sibling elements
-                        for parent_level in [link.parent, link.parent.parent if link.parent.parent else None]:
-                            if parent_level:
-                                date_elem = parent_level.select_one(date_sel)
-                                if date_elem:
-                                    break
-
-                    if date_elem:
-                        date_text = date_elem.text.strip()
-                        parsed_date = parse_date_string(date_text)
-                        if parsed_date:
-                            date = parsed_date
-                            break
-
-                # If no date found, don't set a default date - let it be None
-                # This avoids the issue of updating dates to "now"
-
-                # Determine category from URL
-                category = "Research"
-                if "/news/" in href:
-                    category = "News"
-
-                # Skip entries without meaningful titles
-                if not title or len(title.strip()) < 5:
-                    continue
-
-                articles.append(
-                    {
-                        "title": title,
-                        "link": full_url,
-                        "date": date,  # This can be None
-                        "category": category,
-                        "description": title,  # Use title as description
-                    }
-                )
-
-                logger.info(f"Found article: {title} - {date}")
-
-            except Exception as e:
-                logger.warning(f"Skipping article due to parsing error: {str(e)}")
+    for link in soup.select(f"a[href*='{PATH_PREFIX}']"):
+        if link.find_parent(["footer", "nav", "header"]):
+            continue
+        href = (link.get("href") or "").strip()
+        if href.startswith(("http://", "https://")):
+            if not href.startswith(base_url):
                 continue
+            href = href[len(base_url):]
+        if not href.startswith(PATH_PREFIX) or href.rstrip("/") == PATH_PREFIX.rstrip("/"):
+            continue
+        # Team overview pages are navigation, not articles.
+        if href.startswith("/research/team/"):
+            continue
 
-        # Remove duplicates based on link
-        seen_links = set()
-        unique_articles = []
-        for article in articles:
-            if article["link"] not in seen_links:
-                seen_links.add(article["link"])
-                unique_articles.append(article)
+        full_url = urljoin(base_url, href)
+        if full_url in seen:
+            continue
 
-        logger.info(f"Successfully parsed {len(unique_articles)} unique research articles")
-        return unique_articles
+        title = _card_title(link)
+        if not title:
+            # CTA buttons ("Read more") pointing at articles; the real card
+            # for the same URL will be picked up elsewhere in the listing.
+            continue
 
-    except Exception as e:
-        logger.error(f"Error parsing HTML content: {str(e)}")
-        raise
+        seen.add(full_url)
+        articles.append(
+            {
+                "title": title,
+                "link": full_url,
+                "date": _card_date(link),
+                "category": _card_category(link) or "Research",
+                "description": _card_description(link) or title,
+            }
+        )
 
-
-def generate_rss_feed(articles, feed_name="anthropic_research"):
-    """Generate RSS feed from research articles."""
-    try:
-        fg = FeedGenerator()
-        fg.title("Anthropic Research")
-        fg.description("Latest research papers and updates from Anthropic")
-        fg.link(href="https://www.anthropic.com/research")
-        fg.language("en")
-
-        # Set feed metadata
-        fg.author({"name": "Anthropic Research Team"})
-        fg.logo("https://www.anthropic.com/images/icons/apple-touch-icon.png")
-        fg.subtitle("Latest research from Anthropic")
-        fg.link(href="https://www.anthropic.com/research", rel="alternate")
-        fg.link(href=f"https://anthropic.com/research/feed_{feed_name}.xml", rel="self")
-
-        # Sort articles by date (most recent first), but handle None dates
-        # Articles with dates come first, then articles without dates (preserve original order)
-        articles_with_date = [a for a in articles if a["date"] is not None]
-        articles_without_date = [a for a in articles if a["date"] is None]
-
-        articles_with_date.sort(key=lambda x: x["date"], reverse=True)
-        articles_sorted = articles_with_date + articles_without_date
-
-        # Add entries
-        for article in articles_sorted:
-            fe = fg.add_entry()
-            fe.title(article["title"])
-            fe.description(article["description"])
-            fe.link(href=article["link"])
-            if article.get("content_html"):
-                fe.content(article["content_html"])
-
-            # Only set published date if we have a valid date
-            if article["date"]:
-                fe.published(article["date"])
-
-            fe.category(term=article["category"])
-            fe.id(article["link"])
-
-        logger.info("Successfully generated RSS feed")
-        return fg
-
-    except Exception as e:
-        logger.error(f"Error generating RSS feed: {str(e)}")
-        raise
+    logger.info(f"Successfully parsed {len(articles)} unique research articles")
+    return articles
 
 
-def save_rss_feed(feed_generator, feed_name="anthropic_research"):
-    """Save the RSS feed to a file in the feeds directory."""
-    try:
-        # Ensure feeds directory exists and get its path
-        feeds_dir = ensure_feeds_directory()
+def extract_article_data(html: str, page_url: str, listing_title: str | None = None) -> dict:
+    """Extract title, cleaned content HTML, summary, and date from an article page."""
+    soup = BeautifulSoup(html, "html.parser")
 
-        # Create the output file path
-        output_filename = feeds_dir / f"feed_{feed_name}.xml"
+    h1 = soup.select_one("main h1") or soup.find("h1")
+    page_title = " ".join(h1.get_text(" ", strip=True).split()) if h1 else ""
+    if not page_title or _looks_like_label(page_title):
+        og = soup.find("meta", property="og:title")
+        og_title = (og.get("content") or "").strip() if og else ""
+        if og_title and not _looks_like_label(og_title):
+            page_title = og_title
+    title = page_title if page_title and not _looks_like_label(page_title) else (listing_title or page_title)
 
-        # Save the feed
-        feed_generator.rss_file(str(output_filename), pretty=True)
-        logger.info(f"Successfully saved RSS feed to {output_filename}")
-        return output_filename
+    # The page uses an outer <article> (eyebrow, h1, date) wrapping an inner
+    # <article> that holds the actual body copy.
+    outer = soup.select_one("main article") or soup.find("article") or soup.find("main")
+    container = (outer.find("article") if outer else None) or outer
 
-    except Exception as e:
-        logger.error(f"Error saving RSS feed: {str(e)}")
-        raise
+    content_html = clean_article_html(
+        container, page_url, title=title, extra_cta_patterns=ARTICLE_CTA_PATTERNS
+    )
+    summary = extract_summary(soup, container, title=title)
+    if summary and GENERIC_SUMMARY_RE.search(summary):
+        # Site-wide boilerplate; prefer the first real paragraph instead.
+        body = BeautifulSoup(content_html, "html.parser")
+        for p in body.find_all("p"):
+            text = " ".join(p.get_text(" ", strip=True).split())
+            if len(text) >= 60:
+                summary = text
+                break
 
+    date = None
+    meta_time = soup.find("meta", attrs={"property": "article:published_time"})
+    if meta_time and meta_time.get("content"):
+        date = _parse_date(meta_time["content"])
+    if date is None and outer is not None:
+        match = HEADER_DATE_RE.search(outer.get_text(" ", strip=True)[:400])
+        if match:
+            date = _parse_date(match.group(0))
 
-def get_existing_entries_from_feed(feed_path):
-    """Parse the existing RSS feed and return entries for reuse."""
-    entries = []
-    if not feed_path.exists():
-        return entries
-    try:
-        tree = ET.parse(feed_path)
-        root = tree.getroot()
-        ns = {"content": "http://purl.org/rss/1.0/modules/content/"}
-        for item in root.findall("./channel/item"):
-            link_elem = item.find("link")
-            title_elem = item.find("title")
-            desc_elem = item.find("description")
-            content_elem = item.find("content:encoded", ns)
-            date_elem = item.find("pubDate")
-            category_elem = item.find("category")
-
-            link = link_elem.text.strip() if link_elem is not None and link_elem.text else None
-            if not link:
-                continue
-
-            date = None
-            if date_elem is not None and date_elem.text:
-                try:
-                    date = parsedate_to_datetime(date_elem.text.strip())
-                except Exception:
-                    date = None
-
-            entries.append(
-                {
-                    "title": title_elem.text.strip() if title_elem is not None and title_elem.text else link,
-                    "link": link,
-                    "date": date,
-                    "category": category_elem.text.strip() if category_elem is not None and category_elem.text else "Research",
-                    "description": desc_elem.text if desc_elem is not None and desc_elem.text else "",
-                    "content_html": content_elem.text if content_elem is not None and content_elem.text else "",
-                }
-            )
-    except Exception as e:
-        logger.warning(f"Failed to parse existing feed entries: {str(e)}")
-    return entries
+    return {"title": title, "content_html": content_html, "description": summary, "date": date}
 
 
 def main(feed_name="anthropic_research", force: bool = False):
@@ -491,11 +323,12 @@ def main(feed_name="anthropic_research", force: bool = False):
         feeds_dir = ensure_feeds_directory()
         feed_path = feeds_dir / f"feed_{feed_name}.xml"
 
-        existing_entries = []
-        existing_links = set()
-        if not force:
-            existing_entries = get_existing_entries_from_feed(feed_path)
-            existing_links = {entry["link"] for entry in existing_entries}
+        if force:
+            logger.info("Force mode enabled: ignoring cached feed entries")
+            existing_items, cache = [], {}
+        else:
+            existing_items, cache = load_cached_entries(feed_path)
+        existing_links = {item["link"] for item in existing_items}
 
         articles = []
         try:
@@ -509,41 +342,53 @@ def main(feed_name="anthropic_research", force: bool = False):
             articles = parse_research_html(html_content)
 
         if not articles:
-            logger.warning("No articles found. Please check the HTML structure.")
+            logger.error("No articles found; leaving the existing feed untouched.")
             return False
 
         new_articles = [article for article in articles if article["link"] not in existing_links]
+        logger.info(f"Found {len(articles)} listing items; {len(new_articles)} new since last feed")
 
-        for article in new_articles:
-            article_html = fetch_article_page(article["link"])
-            if not article_html:
-                continue
-            content_html, summary = extract_article_content(article_html, article["link"])
-            if content_html:
-                article["content_html"] = content_html
-            if summary:
-                article["description"] = summary
-
-        combined_articles = new_articles + existing_entries
+        merged = []
         seen_links = set()
-        deduped_articles = []
-        for article in combined_articles:
+        for article in new_articles + existing_items:
             if article["link"] in seen_links:
                 continue
             seen_links.add(article["link"])
-            deduped_articles.append(article)
+            merged.append(article)
 
-        # Generate RSS feed
-        feed = generate_rss_feed(deduped_articles, feed_name)
+        # Fetch full content for anything not already captured (new items, plus
+        # cached items whose earlier fetch failed).
+        for article in merged:
+            if article.get("content_html"):
+                continue
+            article_html = fetch_article_page(article["link"])
+            if not article_html:
+                continue
+            data = extract_article_data(article_html, article["link"], listing_title=article["title"])
+            if data.get("title"):
+                article["title"] = data["title"]
+            if data.get("content_html"):
+                article["content_html"] = data["content_html"]
+            if data.get("description"):
+                article["description"] = data["description"]
+            if article.get("date") is None and data.get("date"):
+                article["date"] = data["date"]
 
-        # Save feed to file
-        output_file = save_rss_feed(feed, feed_name)
+        feed = build_feed(
+            title="Anthropic Research",
+            description="Latest research papers and updates from Anthropic",
+            site_url=INDEX_URL,
+            feed_url=feed_self_url(f"feed_{feed_name}.xml"),
+            items=merged,
+            author={"name": "Anthropic"},
+        )
+        save_feed(feed, feed_path)
 
-        logger.info(f"Successfully generated RSS feed with {len(deduped_articles)} articles")
+        logger.info(f"Successfully generated RSS feed with {len(merged)} articles")
         return True
 
     except Exception as e:
-        logger.error(f"Failed to generate RSS feed: {str(e)}")
+        logger.error(f"Failed to generate RSS feed: {e}")
         return False
 
 

@@ -2,10 +2,7 @@ import argparse
 import logging
 import time
 import os
-import re
-import xml.etree.ElementTree as ET
 from datetime import datetime
-from email.utils import parsedate_to_datetime
 from pathlib import Path
 from urllib.parse import urljoin, urlparse
 
@@ -14,7 +11,15 @@ import requests
 import undetected_chromedriver as uc
 from bs4 import BeautifulSoup
 from dateutil import parser as dateparser
-from feedgen.feed import FeedGenerator
+
+from _common import (
+    build_feed,
+    clean_article_html,
+    extract_summary,
+    feed_self_url,
+    load_cached_entries,
+    save_feed,
+)
 
 # Set up logging
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
@@ -65,10 +70,12 @@ def setup_selenium_driver():
     )
     driver_path = os.environ.get("CHROMEDRIVER_PATH")
     browser_path = os.environ.get("CHROME_BINARY")
+    version_main = os.environ.get("UC_VERSION_MAIN")
     return uc.Chrome(
         options=options,
         driver_executable_path=driver_path,
         browser_executable_path=browser_path,
+        version_main=int(version_main) if version_main else None,
         user_multi_procs=True,
     )
 
@@ -260,7 +267,16 @@ def fetch_articles_selenium(urls: list[str]) -> dict[str, str]:
         return results
     driver = None
     try:
-        driver = setup_selenium_driver()
+        for attempt in range(2):
+            try:
+                driver = setup_selenium_driver()
+                break
+            except Exception as e:
+                logger.warning(f"Selenium driver startup failed (attempt {attempt + 1}): {e}")
+                time.sleep(2)
+        if driver is None:
+            logger.warning("Could not start Selenium driver; keeping requests-fetched content")
+            return results
         from selenium.webdriver.common.by import By
         from selenium.webdriver.support import expected_conditions as EC
         from selenium.webdriver.support.ui import WebDriverWait
@@ -298,12 +314,8 @@ def fetch_articles_selenium(urls: list[str]) -> dict[str, str]:
     return results
 
 
-def _clean_article_html(container, base_url: str) -> str:
-    from bs4.element import Tag
-
-    if container is None or not isinstance(container, Tag):
-        return ""
-
+def _strip_paywall_footers(container) -> None:
+    """Remove the sign-up/paywall footer blocks appended to article bodies."""
     footer_markers = (
         "enjoying this story",
         "sign up for free",
@@ -320,77 +332,6 @@ def _clean_article_html(container, base_url: str) -> str:
                 continue
             wrapper = parent.find_parent(["section", "div", "aside"]) or parent
             wrapper.decompose()
-
-    for tag in container.select(
-        "script, style, noscript, svg, form, iframe, "
-        "input, canvas, link, button, select, textarea, nav, header, footer"
-    ):
-        tag.decompose()
-
-    for tag in list(container.find_all(True)):
-        if tag.parent is None:
-            continue
-        if tag.name == "a":
-            href = tag.get("href", "")
-            if not href:
-                tag.decompose()
-                continue
-            if not href.startswith(("http://", "https://", "mailto:", "#")):
-                tag["href"] = urljoin(base_url, href)
-            tag.attrs = {"href": tag["href"]}
-            continue
-        if tag.name == "img":
-            src = tag.get("src")
-            if not src:
-                tag.decompose()
-                continue
-            if not src.startswith(("http://", "https://", "data:")):
-                tag["src"] = urljoin(base_url, src)
-            tag.attrs = {"src": tag["src"], "alt": tag.get("alt", "")}
-            continue
-        if tag.name == "p":
-            tag.attrs = {}
-            continue
-
-        if tag.name in {"h1", "h2", "h3", "h4", "h5", "h6", "ul", "ol", "li", "blockquote", "pre", "code", "em", "strong", "br", "hr"}:
-            tag.attrs = {}
-            continue
-
-        tag.unwrap()
-
-    block_tags = {"p", "h1", "h2", "h3", "h4", "h5", "h6", "ul", "ol", "li", "blockquote", "pre"}
-    inline_single_tags = {"a", "img", "br", "hr"}
-
-    block_link_hrefs: set[str] = set()
-    for block in container.find_all(list(block_tags)):
-        for link in block.find_all("a"):
-            href = link.get("href", "")
-            if href:
-                block_link_hrefs.add(href)
-
-    parts: list[str] = []
-    seen_hrefs: set[str] = set()
-    for tag in container.find_all(list(block_tags | inline_single_tags), recursive=True):
-        if tag.name in block_tags:
-            if tag.name == "p" and not tag.get_text(strip=True) and not tag.find("img"):
-                continue
-            parts.append(str(tag))
-            continue
-
-        if tag.find_parent(list(block_tags)):
-            continue
-
-        if tag.name == "a":
-            href = tag.get("href", "")
-            if href in block_link_hrefs:
-                continue
-            if href in seen_hrefs:
-                continue
-            if href:
-                seen_hrefs.add(href)
-        parts.append(str(tag))
-
-    return "\n".join(parts)
 
 
 def extract_article_metadata(html: str, page_url: str) -> dict:
@@ -426,13 +367,15 @@ def extract_article_metadata(html: str, page_url: str) -> dict:
         if len(paragraphs) < 6 or len(" ".join(paragraphs)) < 1200:
             needs_selenium = True
 
-        content_html = _clean_article_html(content_container, base_url=page_url)
-        result["content_html"] = content_html
+        _strip_paywall_footers(content_container)
+        result["content_html"] = clean_article_html(
+            content_container, page_url, title=result.get("title")
+        )
 
         if "description" not in result:
-            first_p = content_container.find("p")
-            if first_p:
-                result["description"] = first_p.get_text(" ", strip=True)
+            summary = extract_summary(soup, content_container, title=result.get("title"))
+            if summary:
+                result["description"] = summary
 
     if needs_selenium:
         result["needs_selenium"] = True
@@ -484,26 +427,13 @@ def collect_listing_articles(session: requests.Session | None = None) -> list[di
 
 
 def generate_rss_feed(articles, feed_name: str = "piratewires"):
-    fg = FeedGenerator()
-    fg.title("Pirate Wires")
-    fg.description("Pirate Wires - Culture, Politics, and Technology")
-    fg.link(href=BASE_URL)
-    fg.language("en")
-
-    for article in reversed(articles):
-        fe = fg.add_entry()
-        fe.title(article["title"])
-        fe.link(href=article["link"])
-        fe.description(article.get("description") or article["title"])
-        if article.get("content_html"):
-            fe.content(article["content_html"])
-        if article.get("date"):
-            fe.published(article["date"])
-        fe.category(term=article.get("category") or "Pirate Wires")
-        if article.get("author"):
-            fe.author({"name": article["author"]})
-        fe.id(article["link"])
-
+    fg = build_feed(
+        title="Pirate Wires",
+        description="Pirate Wires - Culture, Politics, and Technology",
+        site_url=BASE_URL,
+        feed_url=feed_self_url(f"feed_{feed_name}.xml"),
+        items=articles,
+    )
     logger.info("RSS feed generated successfully")
     return fg
 
@@ -512,59 +442,8 @@ def save_rss_feed(feed_generator, feed_name: str = "piratewires") -> Path:
     feeds_dir = Path("feeds")
     feeds_dir.mkdir(exist_ok=True)
     output_file = feeds_dir / f"feed_{feed_name}.xml"
-    feed_generator.rss_file(str(output_file), pretty=True)
-    logger.info(f"RSS feed saved to {output_file}")
+    save_feed(feed_generator, output_file)
     return output_file
-
-
-def get_existing_entries_from_feed(feed_path: Path):
-    entries = []
-    if not feed_path.exists():
-        return entries
-    try:
-        tree = ET.parse(feed_path)
-        root = tree.getroot()
-        ns = {"content": "http://purl.org/rss/1.0/modules/content/"}
-        for item in root.findall("./channel/item"):
-            link_elem = item.find("link")
-            title_elem = item.find("title")
-            desc_elem = item.find("description")
-            content_elem = item.find("content:encoded", ns)
-            date_elem = item.find("pubDate")
-            category_elem = item.find("category")
-            author_elem = item.find("author")
-
-            link = link_elem.text.strip() if link_elem is not None and link_elem.text else None
-            if not link:
-                continue
-            needs_refresh = False
-            if "piratewires.substack.com/p/" in link:
-                slug = link.split("/p/")[-1]
-                link = f"{BASE_URL}/p/{slug}"
-                needs_refresh = True
-
-            date = None
-            if date_elem is not None and date_elem.text:
-                try:
-                    date = parsedate_to_datetime(date_elem.text.strip())
-                except Exception:
-                    date = None
-
-            entries.append(
-                {
-                    "title": title_elem.text.strip() if title_elem is not None and title_elem.text else link,
-                    "link": link,
-                    "date": date or datetime.now(pytz.UTC),
-                    "category": category_elem.text.strip() if category_elem is not None and category_elem.text else "Pirate Wires",
-                    "author": author_elem.text.strip() if author_elem is not None and author_elem.text else None,
-                    "description": desc_elem.text if desc_elem is not None and desc_elem.text else "",
-                    "content_html": content_elem.text if content_elem is not None and content_elem.text else "",
-                    "needs_refresh": needs_refresh,
-                }
-            )
-    except Exception as e:
-        logger.warning(f"Failed to parse existing feed entries: {str(e)}")
-    return entries
 
 
 def main(force: bool = False) -> bool:
@@ -576,7 +455,7 @@ def main(force: bool = False) -> bool:
         existing_entries = []
         existing_links = set()
         if not force:
-            existing_entries = get_existing_entries_from_feed(feed_path)
+            existing_entries, _cache = load_cached_entries(feed_path)
             existing_links = {entry["link"] for entry in existing_entries}
 
         session = build_requests_session()
@@ -620,13 +499,7 @@ def main(force: bool = False) -> bool:
             seen_links.add(article["link"])
             deduped_articles.append(article)
 
-        def sort_key(a):
-            if a.get("date"):
-                return (0, a["date"])
-            return (1, datetime.min.replace(tzinfo=pytz.UTC))
-
-        deduped_articles.sort(key=sort_key, reverse=True)
-
+        # build_feed sorts newest-first and caps the item count.
         feed = generate_rss_feed(deduped_articles)
         save_rss_feed(feed)
     except Exception as e:

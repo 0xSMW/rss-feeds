@@ -1,7 +1,13 @@
-import json
+"""Generate an RSS feed for Anthropic's red team blog (https://red.anthropic.com).
+
+red.anthropic.com now redirects to the Frontier Red Team page on
+www.anthropic.com (/research/team/frontier-red-team), which lists publications
+as standard listing cards linking to /research/... and /news/... articles.
+"""
+
+import argparse
 import logging
 import re
-from datetime import datetime
 from pathlib import Path
 from urllib.parse import urljoin
 
@@ -9,19 +15,68 @@ import pytz
 import requests
 from bs4 import BeautifulSoup
 from dateutil import parser as dateparser
-from feedgen.feed import FeedGenerator
+
+from _common import (
+    build_feed,
+    clean_article_html,
+    extract_summary,
+    feed_self_url,
+    load_cached_entries,
+    save_feed,
+)
 
 # Set up logging
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
 logger = logging.getLogger(__name__)
 
-BASE_URL = "https://red.anthropic.com"
-BLOG_URL = BASE_URL + "/"
+BLOG_URL = "https://red.anthropic.com/"
+FALLBACK_BASE_URL = "https://www.anthropic.com"
 
-DATE_PATTERN = re.compile(
-    r"\b(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Sept|Oct|Nov|Dec|"
-    r"January|February|March|April|May|June|July|August|September|October|November|December)"
-    r"\s+\d{1,2},\s+\d{4}\b"
+HEADERS = {
+    "User-Agent": (
+        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+        "AppleWebKit/537.36 (KHTML, like Gecko) "
+        "Chrome/123.0.0.0 Safari/537.36"
+    ),
+    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+    "Accept-Language": "en-US,en;q=0.9",
+}
+
+# Category chips shown on listing cards; never valid item titles.
+CATEGORY_LABELS = {
+    "announcement",
+    "announcements",
+    "alignment",
+    "case studies",
+    "case study",
+    "company",
+    "developers",
+    "economic research",
+    "education",
+    "event",
+    "events",
+    "featured",
+    "frontier red team",
+    "interpretability",
+    "news",
+    "policy",
+    "product",
+    "research",
+    "societal impacts",
+}
+
+CTA_TEXT_RE = re.compile(
+    r"^(read more|learn more|see more|see all|view all|back to \S+.*)$", re.IGNORECASE
+)
+DATE_TEXT_RE = re.compile(r"^[A-Za-z]{3,9}\.?\s+\d{1,2},\s+\d{4}$")
+HEADER_DATE_RE = re.compile(r"\b[A-Z][a-z]{2,8}\.?\s+\d{1,2},\s+\d{4}\b")
+
+# Site-specific CTA buttons the generic pass misses ("Read the paper", ...).
+ARTICLE_CTA_PATTERNS = (r"read the \S+(\s+\S+){0,2}",)
+
+# Boilerplate og:description used on pages without a real summary.
+GENERIC_SUMMARY_RE = re.compile(
+    r"anthropic is an ai safety and research company", re.IGNORECASE
 )
 
 
@@ -37,300 +92,248 @@ def ensure_feeds_directory() -> Path:
     return feeds_dir
 
 
-def fetch_page(url: str) -> str:
-    """Fetch HTML content."""
-    headers = {
-        "User-Agent": (
-            "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
-            "AppleWebKit/537.36 (KHTML, like Gecko) "
-            "Chrome/123.0.0.0 Safari/537.36"
-        )
-    }
+def fetch_listing(url: str = BLOG_URL) -> tuple[str, str]:
+    """Fetch the listing page; returns (html, final_url) after redirects."""
     logger.info(f"Fetching page: {url}")
-    resp = requests.get(url, headers=headers, timeout=20)
+    resp = requests.get(url, headers=HEADERS, timeout=30)
     resp.raise_for_status()
-    return resp.text
+    return resp.text, str(resp.url)
 
 
 def fetch_article_page(url: str) -> str | None:
     """Fetch HTML for a single article page."""
     try:
         logger.debug(f"Fetching article page: {url}")
-        return fetch_page(url)
+        resp = requests.get(url, headers=HEADERS, timeout=30)
+        resp.raise_for_status()
+        return resp.text
     except Exception as exc:
         logger.warning(f"Failed to fetch article page {url}: {exc}")
         return None
 
 
-def _parse_date(text: str) -> datetime | None:
-    """Parse date string like 'December 18, 2025'."""
-    if not text:
+def _parse_date(text):
+    """Parse a date string into an aware UTC datetime."""
+    if not text or not text.strip():
         return None
-    text = text.strip()
     try:
-        dt = dateparser.parse(text)
-        if dt:
-            if dt.tzinfo is None:
-                dt = dt.replace(tzinfo=pytz.UTC)
-            return dt
-    except Exception:
-        pass
+        dt = dateparser.parse(text.strip())
+    except (ValueError, OverflowError, TypeError):
+        return None
+    if dt is None:
+        return None
+    if dt.tzinfo is None:
+        dt = dt.replace(tzinfo=pytz.UTC)
+    return dt
+
+
+def _looks_like_label(text):
+    """True when a candidate title is really a category chip, date, or CTA."""
+    t = " ".join((text or "").split()).lower()
+    return (
+        len(t) < 4
+        or t in CATEGORY_LABELS
+        or bool(CTA_TEXT_RE.match(t))
+        or bool(DATE_TEXT_RE.match(t))
+    )
+
+
+def _card_title(link):
+    """Real headline of a listing card, never the category chip."""
+    for el in link.select("[class*='title'], [class*='Title'], h1, h2, h3, h4"):
+        if el.find_parent(class_=re.compile("meta", re.IGNORECASE)) is not None:
+            continue
+        text = " ".join(el.get_text(" ", strip=True).split())
+        if text and not _looks_like_label(text):
+            return text
+    text = " ".join(link.get_text(" ", strip=True).split())
+    if len(text) >= 5 and not _looks_like_label(text):
+        return text
     return None
 
 
-def _parse_listing_date(text: str) -> datetime | None:
-    """Parse month-year strings like 'December 2025'."""
-    if not text:
-        return None
-    match = re.match(r"([A-Za-z]+)\s+(\d{4})", text.strip())
-    if not match:
-        return None
-    month_str, year_str = match.groups()
-    for fmt in ("%B %Y", "%b %Y"):
-        try:
-            dt = datetime.strptime(f"{month_str} {year_str}", fmt)
-            return dt.replace(day=1, tzinfo=pytz.UTC)
-        except ValueError:
-            continue
+def _card_category(link):
+    el = link.select_one("[class*='subject']")
+    if el is None:
+        meta = link.select_one("[class*='meta']")
+        if meta is not None:
+            el = meta.find("span")
+    if el is not None:
+        text = " ".join(el.get_text(" ", strip=True).split())
+        if text and len(text) <= 40 and not DATE_TEXT_RE.match(text):
+            return text
     return None
 
 
-def _extract_date_from_article(container) -> tuple[datetime | None, object | None]:
-    """Find date paragraph in the article body."""
-    if not container:
-        return None, None
-    for p in container.find_all("p", limit=6):
-        text = p.get_text(" ", strip=True)
-        if DATE_PATTERN.search(text):
-            dt = _parse_date(text)
-            if dt:
-                return dt, p
-    return None, None
+def _card_date(link):
+    time_el = link.find("time")
+    if time_el is None:
+        return None
+    return _parse_date(time_el.get("datetime") or time_el.get_text(" ", strip=True))
 
 
-def _clean_article_html(container, base_url: str) -> str:
-    """Clean article container and keep feed-friendly tags."""
-    if container is None:
-        return ""
-
-    for tag in container.select("script, style, noscript, svg, form, iframe, nav, header, footer"):
-        tag.decompose()
-
-    allowed = {
-        "p",
-        "a",
-        "img",
-        "ul",
-        "ol",
-        "li",
-        "strong",
-        "em",
-        "blockquote",
-        "code",
-        "pre",
-        "h2",
-        "h3",
-        "h4",
-        "h5",
-        "h6",
-        "br",
-        "hr",
-        "figure",
-        "figcaption",
-        "sup",
-        "sub",
-    }
-    for tag in list(container.find_all(True)):
-        if tag.name not in allowed:
-            tag.unwrap()
-            continue
-        attrs = {}
-        if tag.name == "a" and tag.get("href"):
-            attrs["href"] = tag["href"]
-        elif tag.name == "img" and tag.get("src"):
-            attrs["src"] = tag["src"]
-            if tag.get("alt"):
-                attrs["alt"] = tag["alt"]
-        tag.attrs = attrs
-
-    for a in container.find_all("a", href=True):
-        href = a["href"]
-        if not href.startswith(("http://", "https://", "mailto:", "#")):
-            a["href"] = urljoin(base_url, href)
-    for img in container.find_all("img", src=True):
-        src = img["src"]
-        if not src.startswith(("http://", "https://", "data:")):
-            img["src"] = urljoin(base_url, src)
-
-    return "".join(str(child) for child in container.contents if str(child).strip())
+def _card_description(link):
+    p = link.select_one("p[class*='body']") or link.find("p")
+    if p is not None:
+        text = " ".join(p.get_text(" ", strip=True).split())
+        if len(text) > 20:
+            return text
+    return None
 
 
-def extract_article_metadata(html: str, page_url: str) -> dict:
-    """Extract article metadata from page: title, date, description, content."""
-    soup = BeautifulSoup(html, "html.parser")
-    result: dict = {}
-
-    title_el = soup.select_one("d-title h1") or soup.find("h1")
-    if title_el:
-        result["title"] = title_el.get_text(strip=True)
-
-    front_matter = soup.find("d-front-matter")
-    if front_matter:
-        script = front_matter.find("script", type="text/json")
-        if script and script.string:
-            try:
-                data = json.loads(script.string)
-                description = data.get("description")
-                if description:
-                    result["description"] = description.strip()
-            except json.JSONDecodeError:
-                logger.debug("Failed to parse front matter JSON")
-
-    content_container = soup.find("d-article") or soup.find("article") or soup.find("main")
-
-    date_dt, date_p = _extract_date_from_article(content_container)
-    if date_dt:
-        result["date"] = date_dt
-    if date_p:
-        date_p.decompose()
-
-    if content_container:
-        first_p = content_container.find("p")
-        if first_p and not result.get("description"):
-            result["description"] = first_p.get_text(" ", strip=True)[:300]
-        result["content_html"] = _clean_article_html(content_container, base_url=page_url)
-
-    return result
-
-
-def parse_blog_html(html_content: str) -> list[dict]:
-    """Parse the red.anthropic.com listing page."""
+def parse_blog_html(html_content: str, base_url: str = FALLBACK_BASE_URL) -> list[dict]:
+    """Parse the Frontier Red Team listing page for publication entries."""
     soup = BeautifulSoup(html_content, "html.parser")
     articles: list[dict] = []
     seen = set()
 
-    toc = soup.select_one("div.toc")
-    if not toc:
-        logger.warning("Could not find listing container.")
-        return articles
-
-    current_date_text = None
-
-    for child in toc.children:
-        if not getattr(child, "name", None):
+    for link in soup.select("a[href*='/research/'], a[href*='/news/']"):
+        if link.find_parent(["footer", "nav", "header"]):
             continue
-        if child.name == "div" and "date" in (child.get("class") or []):
-            current_date_text = child.get_text(" ", strip=True)
+        href = (link.get("href") or "").strip()
+        if href.startswith(("http://", "https://")):
+            match = re.match(r"https?://(?:www\.)?anthropic\.com(/.*)", href)
+            if not match:
+                continue
+            href = match.group(1)
+        if not href.startswith(("/research/", "/news/")):
             continue
-        if child.name == "a" and "note" in (child.get("class") or []):
-            _append_note_article(child, current_date_text, articles, seen)
+        # Navigation, not articles.
+        if href.rstrip("/") in ("/research", "/news") or href.startswith("/research/team/"):
             continue
-        if child.name == "div":
-            for note in child.select("a.note"):
-                _append_note_article(note, current_date_text, articles, seen)
 
-    articles.sort(key=lambda a: a["date"] or datetime.min.replace(tzinfo=pytz.UTC), reverse=True)
+        full_url = urljoin(base_url, href)
+        if full_url in seen:
+            continue
+
+        title = _card_title(link)
+        if not title:
+            # CTA buttons ("Read more") pointing at articles; the real card
+            # for the same URL will be picked up elsewhere in the listing.
+            continue
+
+        seen.add(full_url)
+        articles.append(
+            {
+                "title": title,
+                "link": full_url,
+                "date": _card_date(link),
+                "category": _card_category(link) or "Frontier Red Team",
+                "description": _card_description(link) or title,
+            }
+        )
+
     logger.info(f"Parsed {len(articles)} articles from listing page")
     return articles
 
 
-def _append_note_article(note, date_text: str | None, articles: list[dict], seen: set) -> None:
-    href = note.get("href", "").strip()
-    if not href:
-        return
-    article_url = urljoin(BASE_URL, href)
-    if article_url in seen:
-        return
-    seen.add(article_url)
+def extract_article_data(html: str, page_url: str, listing_title: str | None = None) -> dict:
+    """Extract title, cleaned content HTML, summary, and date from an article page."""
+    soup = BeautifulSoup(html, "html.parser")
 
-    title_el = note.find("h3")
-    if not title_el:
-        return
-    title = title_el.get_text(strip=True)
-    description_el = note.select_one("div.description")
-    description = description_el.get_text(" ", strip=True) if description_el else title
-    date_dt = _parse_listing_date(date_text) if date_text else None
+    h1 = soup.select_one("main h1") or soup.find("h1")
+    page_title = " ".join(h1.get_text(" ", strip=True).split()) if h1 else ""
+    if not page_title or _looks_like_label(page_title):
+        og = soup.find("meta", property="og:title")
+        og_title = (og.get("content") or "").strip() if og else ""
+        if og_title and not _looks_like_label(og_title):
+            page_title = og_title
+    title = page_title if page_title and not _looks_like_label(page_title) else (listing_title or page_title)
 
-    articles.append(
-        {
-            "title": title,
-            "link": article_url,
-            "date": date_dt,
-            "category": "Anthropic Red Teaming",
-            "description": description,
-        }
+    # The page uses an outer <article> (eyebrow, h1, date) wrapping an inner
+    # <article> that holds the actual body copy.
+    outer = soup.select_one("main article") or soup.find("article") or soup.find("main")
+    container = (outer.find("article") if outer else None) or outer
+
+    content_html = clean_article_html(
+        container, page_url, title=title, extra_cta_patterns=ARTICLE_CTA_PATTERNS
     )
+    summary = extract_summary(soup, container, title=title)
+    if summary and GENERIC_SUMMARY_RE.search(summary):
+        # Site-wide boilerplate; prefer the first real paragraph instead.
+        body = BeautifulSoup(content_html, "html.parser")
+        for p in body.find_all("p"):
+            text = " ".join(p.get_text(" ", strip=True).split())
+            if len(text) >= 60:
+                summary = text
+                break
+
+    date = None
+    meta_time = soup.find("meta", attrs={"property": "article:published_time"})
+    if meta_time and meta_time.get("content"):
+        date = _parse_date(meta_time["content"])
+    if date is None and outer is not None:
+        match = HEADER_DATE_RE.search(outer.get_text(" ", strip=True)[:400])
+        if match:
+            date = _parse_date(match.group(0))
+
+    return {"title": title, "content_html": content_html, "description": summary, "date": date}
 
 
-def generate_rss_feed(articles, feed_name: str = "anthropic_red"):
-    """Generate RSS feed from parsed articles."""
-    fg = FeedGenerator()
-    fg.title("Anthropic Red Teaming")
-    fg.description("Research and updates from Anthropic's red teaming work")
-    fg.link(href=BASE_URL)
-    fg.language("en")
-
-    fg.author({"name": "Anthropic"})
-    fg.link(href=BASE_URL, rel="alternate")
-
-    for article in reversed(articles):
-        fe = fg.add_entry()
-        fe.title(article["title"])
-        fe.link(href=article["link"])
-
-        content_html = article.get("content_html")
-        summary = article.get("description", article["title"]) or article["title"]
-
-        if content_html:
-            fe.content(content_html)
-        fe.description(summary)
-
-        if article.get("date"):
-            fe.published(article["date"])
-
-        fe.category(term=article["category"])
-        fe.id(article["link"])
-
-    logger.info("RSS feed generated successfully")
-    return fg
-
-
-def save_rss_feed(feed_generator, feed_name: str = "anthropic_red") -> Path:
-    feeds_dir = ensure_feeds_directory()
-    output_file = feeds_dir / f"feed_{feed_name}.xml"
-    feed_generator.rss_file(str(output_file), pretty=True)
-    logger.info(f"RSS feed saved to {output_file}")
-    return output_file
-
-
-def main(feed_name: str = "anthropic_red") -> bool:
+def main(feed_name: str = "anthropic_red", force: bool = False) -> bool:
     try:
-        html_content = fetch_page(BLOG_URL)
-        articles = parse_blog_html(html_content)
+        feeds_dir = ensure_feeds_directory()
+        feed_path = feeds_dir / f"feed_{feed_name}.xml"
+
+        if force:
+            logger.info("Force mode enabled: ignoring cached feed entries")
+            existing_items, cache = [], {}
+        else:
+            existing_items, cache = load_cached_entries(feed_path)
+        existing_links = {item["link"] for item in existing_items}
+
+        articles = []
+        try:
+            html_content, final_url = fetch_listing(BLOG_URL)
+            articles = parse_blog_html(html_content, base_url=final_url or FALLBACK_BASE_URL)
+        except Exception as exc:
+            logger.error(f"Failed to fetch/parse listing page: {exc}")
+
         if not articles:
-            logger.warning("No articles parsed. Selectors may need updating.")
+            # Fail-safe: never clobber the existing feed with an empty one.
+            logger.error("No articles found; leaving the existing feed untouched.")
+            return False
 
-        logger.info(f"Fetching full content for {len(articles)} articles...")
-        for article in articles:
+        new_articles = [article for article in articles if article["link"] not in existing_links]
+        logger.info(f"Found {len(articles)} listing items; {len(new_articles)} new since last feed")
+
+        merged = []
+        seen_links = set()
+        for article in new_articles + existing_items:
+            if article["link"] in seen_links:
+                continue
+            seen_links.add(article["link"])
+            merged.append(article)
+
+        # Fetch full content for anything not already captured (new items, plus
+        # cached items whose earlier fetch failed).
+        for article in merged:
+            if article.get("content_html"):
+                continue
             article_html = fetch_article_page(article["link"])
-            if article_html:
-                metadata = extract_article_metadata(article_html, article["link"])
-                if metadata.get("title"):
-                    article["title"] = metadata["title"]
-                if metadata.get("date"):
-                    article["date"] = metadata["date"]
-                if metadata.get("content_html"):
-                    article["content_html"] = metadata["content_html"]
-                if metadata.get("description"):
-                    article["description"] = metadata["description"]
-            else:
-                logger.warning(f"Could not fetch content for {article['link']}")
+            if not article_html:
+                continue
+            data = extract_article_data(article_html, article["link"], listing_title=article["title"])
+            if data.get("title"):
+                article["title"] = data["title"]
+            if data.get("content_html"):
+                article["content_html"] = data["content_html"]
+            if data.get("description"):
+                article["description"] = data["description"]
+            if article.get("date") is None and data.get("date"):
+                article["date"] = data["date"]
 
-        articles.sort(key=lambda a: a["date"] or datetime.min.replace(tzinfo=pytz.UTC), reverse=True)
+        feed = build_feed(
+            title="Anthropic Red Teaming",
+            description="Research and updates from Anthropic's red teaming work",
+            site_url=BLOG_URL,
+            feed_url=feed_self_url(f"feed_{feed_name}.xml"),
+            items=merged,
+            author={"name": "Anthropic"},
+        )
+        save_feed(feed, feed_path)
 
-        feed = generate_rss_feed(articles, feed_name)
-        save_rss_feed(feed, feed_name)
-        logger.info(f"Successfully generated RSS feed with {len(articles)} articles")
+        logger.info(f"Successfully generated RSS feed with {len(merged)} articles")
         return True
     except Exception as exc:
         logger.error(f"Failed to generate Anthropic Red RSS: {exc}")
@@ -338,4 +341,7 @@ def main(feed_name: str = "anthropic_red") -> bool:
 
 
 if __name__ == "__main__":
-    main()
+    parser = argparse.ArgumentParser(description="Generate Anthropic Red Teaming RSS feed.")
+    parser.add_argument("--force", action="store_true", help="Refetch all articles and rebuild the feed.")
+    args = parser.parse_args()
+    main(force=args.force)
