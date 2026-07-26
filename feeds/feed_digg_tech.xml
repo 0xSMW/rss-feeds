@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:media="http://search.yahoo.com/mrss/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0">
+<rss xmlns:media="http://search.yahoo.com/mrss/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0">
   <channel>
     <title>Digg AI Feed from X</title>
     <link>https://digg.com/tech</link>
@@ -169,15 +169,37 @@
       <media:content url="https://cnl5taoq5on9lswk.public.blob.vercel-storage.com/cluster-share-cards/bda5b7ff-1bef-4bb0-adbc-82f683b2b941/1785043869830.png" type="image/png" medium="image"/>
     </item>
     <item>
-      <title>Meituan releases LongCat-2.0, a 1.6-trillion-parameter MoE model trained on 50,000 domestic Chinese ASICs</title>
-      <link>https://longcat.chat/blog/longcat-2.0/</link>
-      <description>The model supports a 1-million-token context window.</description>
-      <content:encoded><![CDATA[<p>The model supports a 1-million-token context window.</p>
-<p><strong>Original source:</strong> <a href="https://longcat.chat/blog/longcat-2.0/">https://longcat.chat/blog/longcat-2.0/</a></p>
-<p><strong>Digg story:</strong> <a href="https://digg.com/tech/va380veu">https://digg.com/tech/va380veu</a></p>]]></content:encoded>
-      <guid isPermaLink="true">https://longcat.chat/blog/longcat-2.0/</guid>
+      <title>Meta restricts employees from using Claude Code and OpenAI Codex to prevent competitor model distillation</title>
+      <link>https://www.theinformation.com/articles/internal-docs-show-meta-putting-limits-claude-codex-fearing-distillation?rc=bfliih</link>
+      <description>The policy protects the training pipeline of Meta's upcoming MetaCode.</description>
+      <content:encoded><![CDATA[<p>The policy protects the training pipeline of Meta&#x27;s upcoming MetaCode.</p>
+<p><strong>Original source:</strong> <a href="https://www.theinformation.com/articles/internal-docs-show-meta-putting-limits-claude-codex-fearing-distillation?rc=bfliih">https://www.theinformation.com/articles/internal-docs-show-meta-putting-limits-claude-codex-fearing-distillation?rc=bfliih</a></p>
+<p><strong>Digg story:</strong> <a href="https://digg.com/tech/84bk7m29">https://digg.com/tech/84bk7m29</a></p>]]></content:encoded>
+      <guid isPermaLink="true">https://www.theinformation.com/articles/internal-docs-show-meta-putting-limits-claude-codex-fearing-distillation?rc=bfliih</guid>
       <category>Digg AI from X</category>
-      <pubDate>Tue, 21 Jul 2026 13:59:29 +0000</pubDate>
+      <pubDate>Tue, 21 Jul 2026 17:00:33 +0000</pubDate>
+    </item>
+    <item>
+      <title>Smol.ai founder Shawn 'swyx' Wang opens the AI Engineer World's Fair with a focus on local AI and NVIDIA Blackwell hardware</title>
+      <link>https://aie-evolution.vercel.app</link>
+      <description>Major sponsors include OpenAI, Anthropic, and Google DeepMind</description>
+      <content:encoded><![CDATA[<p>Major sponsors include OpenAI, Anthropic, and Google DeepMind</p>
+<p><strong>Original source:</strong> <a href="https://aie-evolution.vercel.app">https://aie-evolution.vercel.app</a></p>
+<p><strong>Digg story:</strong> <a href="https://digg.com/tech/14q7z08p">https://digg.com/tech/14q7z08p</a></p>]]></content:encoded>
+      <guid isPermaLink="true">https://aie-evolution.vercel.app</guid>
+      <category>Digg AI from X</category>
+      <pubDate>Tue, 21 Jul 2026 16:41:05 +0000</pubDate>
+    </item>
+    <item>
+      <title>Tesla releases FSD v14 Lite, bringing distilled AI4 driving models to memory-constrained AI3 hardware</title>
+      <link>https://x.com/aelluswamy/status/2071487485172134131</link>
+      <description>Older AI3 computers operate with 15% of AI4's memory bandwidth</description>
+      <content:encoded><![CDATA[<p>Older AI3 computers operate with 15% of AI4&#x27;s memory bandwidth</p>
+<p><strong>Original source:</strong> <a href="https://x.com/aelluswamy/status/2071487485172134131">https://x.com/aelluswamy/status/2071487485172134131</a></p>
+<p><strong>Digg story:</strong> <a href="https://digg.com/tech/6y2ultrn">https://digg.com/tech/6y2ultrn</a></p>]]></content:encoded>
+      <guid isPermaLink="true">https://x.com/aelluswamy/status/2071487485172134131</guid>
+      <category>Digg AI from X</category>
+      <pubDate>Tue, 21 Jul 2026 16:25:07 +0000</pubDate>
     </item>
     <item>
       <title>Secretary of War Pete Hegseth appoints Marc Andreessen and Blake Masters to new Defense Policy Board</title>
@@ -191,6 +213,28 @@
       <pubDate>Tue, 21 Jul 2026 15:57:04 +0000</pubDate>
     </item>
     <item>
+      <title>Kim Isenberg and Peter Wang argue the US is losing the AI race due to energy and data center constraints</title>
+      <link>https://x.com/davidlee/status/2071609936329760769</link>
+      <description>China uses free models to promote domestic Huawei hardware.</description>
+      <content:encoded><![CDATA[<p>China uses free models to promote domestic Huawei hardware.</p>
+<p><strong>Original source:</strong> <a href="https://x.com/davidlee/status/2071609936329760769">https://x.com/davidlee/status/2071609936329760769</a></p>
+<p><strong>Digg story:</strong> <a href="https://digg.com/tech/3baroum6">https://digg.com/tech/3baroum6</a></p>]]></content:encoded>
+      <guid isPermaLink="true">https://x.com/davidlee/status/2071609936329760769</guid>
+      <category>Digg AI from X</category>
+      <pubDate>Tue, 21 Jul 2026 14:26:55 +0000</pubDate>
+    </item>
+    <item>
+      <title>Meituan releases LongCat-2.0, a 1.6-trillion-parameter MoE model trained on 50,000 domestic Chinese ASICs</title>
+      <link>https://longcat.chat/blog/longcat-2.0/</link>
+      <description>The model supports a 1-million-token context window.</description>
+      <content:encoded><![CDATA[<p>The model supports a 1-million-token context window.</p>
+<p><strong>Original source:</strong> <a href="https://longcat.chat/blog/longcat-2.0/">https://longcat.chat/blog/longcat-2.0/</a></p>
+<p><strong>Digg story:</strong> <a href="https://digg.com/tech/va380veu">https://digg.com/tech/va380veu</a></p>]]></content:encoded>
+      <guid isPermaLink="true">https://longcat.chat/blog/longcat-2.0/</guid>
+      <category>Digg AI from X</category>
+      <pubDate>Tue, 21 Jul 2026 13:59:29 +0000</pubDate>
+    </item>
+    <item>
       <title>Anysphere launches Cursor for iOS, letting developers run always-on cloud agents and manage desktop agents remotely</title>
       <link>https://apps.apple.com/us/app/cursor/id6767085653</link>
       <description>The mobile app supports voice dictation for background code generation</description>
@@ -202,17 +246,6 @@
       <pubDate>Mon, 29 Jun 2026 17:06:35 +0000</pubDate>
     </item>
     <item>
-      <title>Meta restricts employees from using Claude Code and OpenAI Codex to prevent competitor model distillation</title>
-      <link>https://www.theinformation.com/articles/internal-docs-show-meta-putting-limits-claude-codex-fearing-distillation?rc=bfliih</link>
-      <description>The policy protects the training pipeline of Meta's upcoming MetaCode.</description>
-      <content:encoded><![CDATA[<p>The policy protects the training pipeline of Meta&#x27;s upcoming MetaCode.</p>
-<p><strong>Original source:</strong> <a href="https://www.theinformation.com/articles/internal-docs-show-meta-putting-limits-claude-codex-fearing-distillation?rc=bfliih">https://www.theinformation.com/articles/internal-docs-show-meta-putting-limits-claude-codex-fearing-distillation?rc=bfliih</a></p>
-<p><strong>Digg story:</strong> <a href="https://digg.com/tech/84bk7m29">https://digg.com/tech/84bk7m29</a></p>]]></content:encoded>
-      <guid isPermaLink="true">https://www.theinformation.com/articles/internal-docs-show-meta-putting-limits-claude-codex-fearing-distillation?rc=bfliih</guid>
-      <category>Digg AI from X</category>
-      <pubDate>Tue, 21 Jul 2026 17:00:33 +0000</pubDate>
-    </item>
-    <item>
       <title>Meta AI open-sources Brain2Qwerty v2, a non-invasive brain-to-text decoder achieving 61% word accuracy</title>
       <link>https://ai.meta.com/blog/brain2qwerty-brain-ai-human-communication/?utm_source=twitter&amp;utm_medium=organic_social&amp;utm_content=video&amp;utm_campaign=brain2qwertyv2</link>
       <description>It transitions from character decoding to full-sentence semantic decoding.</description>
@@ -222,17 +255,6 @@
       <guid isPermaLink="true">https://ai.meta.com/blog/brain2qwerty-brain-ai-human-communication/?utm_source=twitter&amp;utm_medium=organic_social&amp;utm_content=video&amp;utm_campaign=brain2qwertyv2</guid>
       <category>Digg AI from X</category>
       <pubDate>Mon, 29 Jun 2026 13:42:17 +0000</pubDate>
-    </item>
-    <item>
-      <title>Kim Isenberg and Peter Wang argue the US is losing the AI race due to energy and data center constraints</title>
-      <link>https://x.com/davidlee/status/2071609936329760769</link>
-      <description>China uses free models to promote domestic Huawei hardware.</description>
-      <content:encoded><![CDATA[<p>China uses free models to promote domestic Huawei hardware.</p>
-<p><strong>Original source:</strong> <a href="https://x.com/davidlee/status/2071609936329760769">https://x.com/davidlee/status/2071609936329760769</a></p>
-<p><strong>Digg story:</strong> <a href="https://digg.com/tech/3baroum6">https://digg.com/tech/3baroum6</a></p>]]></content:encoded>
-      <guid isPermaLink="true">https://x.com/davidlee/status/2071609936329760769</guid>
-      <category>Digg AI from X</category>
-      <pubDate>Tue, 21 Jul 2026 14:26:55 +0000</pubDate>
     </item>
     <item>
       <title>Anthropic CEO Dario Amodei argues open-source AI cannot be monitored, revoked, or patched for safety after release</title>
@@ -255,28 +277,6 @@
       <guid isPermaLink="true">https://x.com/xlr8harder/status/2071539689115267148</guid>
       <category>Digg AI from X</category>
       <pubDate>Mon, 29 Jun 2026 07:10:21 +0000</pubDate>
-    </item>
-    <item>
-      <title>Tesla releases FSD v14 Lite, bringing distilled AI4 driving models to memory-constrained AI3 hardware</title>
-      <link>https://x.com/aelluswamy/status/2071487485172134131</link>
-      <description>Older AI3 computers operate with 15% of AI4's memory bandwidth</description>
-      <content:encoded><![CDATA[<p>Older AI3 computers operate with 15% of AI4&#x27;s memory bandwidth</p>
-<p><strong>Original source:</strong> <a href="https://x.com/aelluswamy/status/2071487485172134131">https://x.com/aelluswamy/status/2071487485172134131</a></p>
-<p><strong>Digg story:</strong> <a href="https://digg.com/tech/6y2ultrn">https://digg.com/tech/6y2ultrn</a></p>]]></content:encoded>
-      <guid isPermaLink="true">https://x.com/aelluswamy/status/2071487485172134131</guid>
-      <category>Digg AI from X</category>
-      <pubDate>Tue, 21 Jul 2026 16:25:07 +0000</pubDate>
-    </item>
-    <item>
-      <title>Smol.ai founder Shawn 'swyx' Wang opens the AI Engineer World's Fair with a focus on local AI and NVIDIA Blackwell hardware</title>
-      <link>https://aie-evolution.vercel.app</link>
-      <description>Major sponsors include OpenAI, Anthropic, and Google DeepMind</description>
-      <content:encoded><![CDATA[<p>Major sponsors include OpenAI, Anthropic, and Google DeepMind</p>
-<p><strong>Original source:</strong> <a href="https://aie-evolution.vercel.app">https://aie-evolution.vercel.app</a></p>
-<p><strong>Digg story:</strong> <a href="https://digg.com/tech/14q7z08p">https://digg.com/tech/14q7z08p</a></p>]]></content:encoded>
-      <guid isPermaLink="true">https://aie-evolution.vercel.app</guid>
-      <category>Digg AI from X</category>
-      <pubDate>Tue, 21 Jul 2026 16:41:05 +0000</pubDate>
     </item>
   </channel>
 </rss>

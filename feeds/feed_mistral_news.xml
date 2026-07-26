@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:media="http://search.yahoo.com/mrss/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0">
+<rss xmlns:media="http://search.yahoo.com/mrss/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0">
   <channel>
     <title>Mistral AI News</title>
     <link>https://mistral.ai/news</link>
@@ -1472,6 +1472,96 @@ $ /usr/local/lib/heaptrack/libexec/heaptrack_interpret &lt; heaptrack.2028233 | 
       <media:content url="https://mistral.ai/_astro/Cover-Model-Devstral_1Ib6un.webp?dpl=6a622da400bba40008995ff8" type="image/webp" medium="image"/>
     </item>
     <item>
+      <title>Introducing: Devstral 2 and Mistral Vibe CLI.</title>
+      <link>https://mistral.ai/news/devstral-2-vibe-cli/</link>
+      <description>Research</description>
+      <content:encoded><![CDATA[<p>  Research  </p>
+<p> December 9, 2025 </p>
+<p> By Mistral AI </p>
+<a href="https://mistral.ai/news/">  
+
+
+
+
+
+
+ <p> Back to Blog </p> 
+
+
+
+
+
+
+  </a>
+<p> Back to Blog </p>
+<p> 5 min read </p>
+<img src="https://mistral.ai/_astro/Cover-Model-Devstral_1Ib6un.webp?dpl=6a33ab76abf8b3000881534a"/>
+<img src="https://mistral.ai/_astro/Cover-Model-Devstral_1Ib6un.webp?dpl=6a33ab76abf8b3000881534a"/>
+<p> Today, we're releasing Devstral 2—our next-generation coding model family available in two sizes: Devstral 2 (123B) and Devstral Small 2 (24B). Devstral 2 ships under a modified MIT license, while Devstral Small 2 uses Apache 2.0. Both are open-source and permissively licensed to accelerate distributed intelligence. </p>
+<p> Devstral 2 is currently free to use via <a href="https://console.mistral.ai/">our API</a>. </p>
+<a href="https://console.mistral.ai/">our API</a>
+<p> We are also introducing Mistral Vibe, a native CLI built for Devstral that enables end-to-end code automation. </p>
+<p> Devstral 2: SOTA open model for code agents with a fraction of the parameters of its competitors and achieving 72.2% on SWE-bench Verified. </p>
+<p> Up to 7x more cost-efficient than Claude Sonnet at real-world tasks. </p>
+<p> Mistral Vibe CLI: Native, open-source agent in your terminal solving software engineering tasks autonomously. </p>
+<p> Devstral Small 2: 24B parameter model available via API or deployable locally on consumer hardware. </p>
+<p> Compatible with on-prem deployment and custom fine-tuning. </p>
+<p> Devstral 2 is a 123B-parameter dense transformer supporting a 256K context window. It reaches 72.2% on SWE-bench Verified—establishing it as one of the best open-weight models while remaining highly cost efficient. Released under a modified MIT license, Devstral sets the open state-of-the-art for code agents. </p>
+<p> Devstral Small 2 scores 68.0% on SWE-bench Verified, and places firmly among models up to five times its size while being capable of running locally on consumer hardware. </p>
+<img src="https://mistral.ai/_astro/9c36eef1-2b4c-4fb8-8ef0-d531116ec53a_1fQRlC.webp?dpl=6a33ab76abf8b3000881534a"/>
+<p> Devstral 2 (123B) and Devstral Small 2 (24B) are 5x and 28x smaller than DeepSeek V3.2, and 8x and 41x smaller than Kimi K2—proving that compact models can match or exceed the performance of much larger competitors. Their reduced size makes deployment practical on limited hardware, lowering barriers for developers, small businesses, and hobbyists.hardware. </p>
+<img src="https://mistral.ai/_astro/49e0d71c-436c-4334-9fff-fa68c9f60380_Z1z9fFe.webp?dpl=6a33ab76abf8b3000881534a"/>
+<p> Devstral 2 supports exploring codebases and orchestrating changes across multiple files while maintaining architecture-level context. It tracks framework dependencies, detects failures, and retries with corrections—solving challenges like bug fixing and modernizing legacy systems. </p>
+<p> The model can be fine-tuned to prioritize specific languages or optimize for large enterprise codebases. </p>
+<p> We evaluated Devstral 2 against DeepSeek V3.2 and Claude Sonnet 4.5 using human evaluations conducted by an independent annotation provider, with tasks scaffolded through Cline. Devstral 2 shows a clear advantage over DeepSeek V3.2, with a 42.8% win rate versus 28.6% loss rate. However, Claude Sonnet 4.5 remains significantly preferred, indicating a gap with closed-source models persists. </p>
+<img src="https://mistral.ai/_astro/48b2b0fc-f8d8-44da-a3a2-4961aad2f10e_1mMVCG.webp?dpl=6a33ab76abf8b3000881534a"/>
+<p> “Devstral 2 is at the frontier of open-source coding models. In Cline, it delivers a tool-calling success rate on par with the best closed models; it's a remarkably smooth driver. This is a massive contribution to the open-source ecosystem.” — Cline. </p>
+<p> “Devstral 2 was one of our most successful stealth launches yet, surpassing 17B tokens in the first 24 hours. Mistral AI is moving at Kilo Speed with a cost-efficient model that truly works at scale.” — Kilo Code. </p>
+<p> Devstral Small 2, a 24B-parameter model with the same 256K context window and released under Apache 2.0, brings these capabilities to a compact, locally deployable form. Its size enables fast inference, tight feedback loops, and easy customization—with fully private, on-device runtime. It also supports image inputs, and can power multimodal agents.  </p>
+<p> Mistral Vibe CLI is an open-source command-line coding assistant powered by Devstral. It explores, modifies, and executes changes across your codebase using natural language—in your terminal or integrated into your preferred IDE via the Agent Communication Protocol. It is released under the Apache 2.0 license. </p>
+<p> Vibe CLI provides an interactive chat interface with tools for file manipulation, code searching, version control, and command execution. Key features: </p>
+<p> Project-aware context: Automatically scans your file structure and Git status to provide relevant context </p>
+<p> Smart references: Reference files with @ autocomplete, execute shell commands with !, and use slash commands for configuration changes </p>
+<p> Multi-file orchestration: Understands your entire codebase—not just the file you're editing—enabling architecture-level reasoning that can halve your PR cycle time </p>
+<p> Persistent history, autocompletion, and customizable themes. </p>
+<p> You can run Vibe CLI programmatically for scripting, toggle auto-approval for tool execution, configure local models and providers through a simple config.toml, and control tool permissions to match your workflow. </p>
+<p> Devstral 2 is currently offered free via <a href="http://console.mistral.ai">our API</a>. After the free period, the API pricing will be $0.40/$2.00 per million tokens (input/output) for Devstral 2 and $0.10/$0.30 for Devstral Small 2. </p>
+<a href="http://console.mistral.ai">our API</a>
+<p> We’ve partnered with leading, open agent tools <a href="https://kilo.ai/">Kilo Code</a> and <a href="https://cline.bot/">Cline</a> to bring Devstral 2 to where you already build. </p>
+<a href="https://kilo.ai/">Kilo Code</a>
+<a href="https://cline.bot/">Cline</a>
+<p> Mistral Vibe CLI is available as an extension in <a href="https://zed.dev/extensions">Zed</a>, so you can use it directly inside your IDE. </p>
+<a href="https://zed.dev/extensions">Zed</a>
+<p> Devstral 2 is optimized for data center GPUs and requires a minimum of 4 H100-class GPUs for deployment. You can try it today on <a href="http://build.nvidia.com">build.nvidia.com</a>. Devstral Small 2 is built for single-GPU operation and runs across a broad range of NVIDIA systems, including DGX Spark and GeForce RTX. NVIDIA NIM support will be available soon. </p>
+<a href="http://build.nvidia.com">build.nvidia.com</a>
+<p> Devstral Small runs on consumer-grade GPUs as well as CPU-only configurations with no dedicated GPU required. </p>
+<p> For optimal performance, we recommend a temperature of 0.2 and following the best practices defined for <a href="https://github.com/mistralai/mistral-vibe/blob/main/README.md">Mistral Vibe CLI</a>. </p>
+<a href="https://github.com/mistralai/mistral-vibe/blob/main/README.md">Mistral Vibe CLI</a>
+<p> We’re excited to see what you will build with Devstral 2, Devstral Small 2, and Vibe CLI! </p>
+<p> Share your projects, questions, or discoveries with us on <a href="https://x.com/mistralai">X/Twitter</a>, <a href="https://discord.com/invite/mistralai">Discord</a>, or <a href="https://github.com/mistralai">GitHub</a>. </p>
+<a href="https://x.com/mistralai">X/Twitter</a>
+<a href="https://discord.com/invite/mistralai">Discord</a>
+<a href="https://github.com/mistralai">GitHub</a>
+<p> If you’re interested in shaping open-source research and building world-class interfaces that bring truly open, frontier AI to users, we welcome you to <a href="https://mistral.ai/careers">apply to join our team</a>. </p>
+<a href="https://mistral.ai/careers">apply to join our team</a>
+<img src="https://mistral.ai/cms-media/api/media/file/icon-m-code-window.svg"/>
+<p> Devstral 2 </p>
+<p>  Open  </p>
+<p> Open-weights agentic coding model for autonomous software engineering. </p>
+<p>  Coding  </p>
+<p>  Agentic  </p>
+<p>  Text-to-text  </p>
+<p> Input (/M tokens)  </p>
+<p>  $0.4   </p>
+<p> Output (/M tokens)  </p>
+<p>  $2   </p>
+<p> 0% </p>]]></content:encoded>
+      <guid isPermaLink="true">https://mistral.ai/news/devstral-2-vibe-cli/</guid>
+      <category>Product</category>
+      <pubDate>Tue, 09 Dec 2025 00:00:00 +0000</pubDate>
+      <media:content url="https://mistral.ai/_astro/Cover-Model-Devstral_1Ib6un.webp?dpl=6a33ab76abf8b3000881534a" type="image/webp" medium="image"/>
+    </item>
+    <item>
       <title>Introducing Mistral 3</title>
       <link>https://mistral.ai/news/mistral-3</link>
       <description>Today, we announce Mistral 3, the next generation of Mistral models. Mistral 3 includes three state-of-the-art small, dense models (14B, 8B, and 3B) and Mistral Large 3 – our most capable model to date – a sparse mixture-of-experts trained with 41B active and 675B total parameters. All models are released under the Apache 2.0 license. Open-sourcing our models in a variety of compressed formats empowers the developer community and puts AI in people’s hands through distributed intelligence.</description>
@@ -1536,129 +1626,40 @@ $ /usr/local/lib/heaptrack/libexec/heaptrack_interpret &lt; heaptrack.2028233 | 
       <pubDate>Wed, 19 Nov 2025 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Introducing: Devstral 2 and Mistral Vibe CLI.</title>
-      <link>https://mistral.ai/news/devstral-2-vibe-cli/</link>
-      <description>Research</description>
-      <content:encoded>&lt;p&gt;  Research  &lt;/p&gt;
-&lt;p&gt; December 9, 2025 &lt;/p&gt;
-&lt;p&gt; By Mistral AI &lt;/p&gt;
-&lt;a href="https://mistral.ai/news/"&gt;  
-
-
-
-
-
-
- &lt;p&gt; Back to Blog &lt;/p&gt; 
-
-
-
-
-
-
-  &lt;/a&gt;
-&lt;p&gt; Back to Blog &lt;/p&gt;
-&lt;p&gt; 5 min read &lt;/p&gt;
-&lt;img src="https://mistral.ai/_astro/Cover-Model-Devstral_1Ib6un.webp?dpl=6a33ab76abf8b3000881534a"/&gt;
-&lt;img src="https://mistral.ai/_astro/Cover-Model-Devstral_1Ib6un.webp?dpl=6a33ab76abf8b3000881534a"/&gt;
-&lt;p&gt; Today, we're releasing Devstral 2—our next-generation coding model family available in two sizes: Devstral 2 (123B) and Devstral Small 2 (24B). Devstral 2 ships under a modified MIT license, while Devstral Small 2 uses Apache 2.0. Both are open-source and permissively licensed to accelerate distributed intelligence. &lt;/p&gt;
-&lt;p&gt; Devstral 2 is currently free to use via &lt;a href="https://console.mistral.ai/"&gt;our API&lt;/a&gt;. &lt;/p&gt;
-&lt;a href="https://console.mistral.ai/"&gt;our API&lt;/a&gt;
-&lt;p&gt; We are also introducing Mistral Vibe, a native CLI built for Devstral that enables end-to-end code automation. &lt;/p&gt;
-&lt;p&gt; Devstral 2: SOTA open model for code agents with a fraction of the parameters of its competitors and achieving 72.2% on SWE-bench Verified. &lt;/p&gt;
-&lt;p&gt; Up to 7x more cost-efficient than Claude Sonnet at real-world tasks. &lt;/p&gt;
-&lt;p&gt; Mistral Vibe CLI: Native, open-source agent in your terminal solving software engineering tasks autonomously. &lt;/p&gt;
-&lt;p&gt; Devstral Small 2: 24B parameter model available via API or deployable locally on consumer hardware. &lt;/p&gt;
-&lt;p&gt; Compatible with on-prem deployment and custom fine-tuning. &lt;/p&gt;
-&lt;p&gt; Devstral 2 is a 123B-parameter dense transformer supporting a 256K context window. It reaches 72.2% on SWE-bench Verified—establishing it as one of the best open-weight models while remaining highly cost efficient. Released under a modified MIT license, Devstral sets the open state-of-the-art for code agents. &lt;/p&gt;
-&lt;p&gt; Devstral Small 2 scores 68.0% on SWE-bench Verified, and places firmly among models up to five times its size while being capable of running locally on consumer hardware. &lt;/p&gt;
-&lt;img src="https://mistral.ai/_astro/9c36eef1-2b4c-4fb8-8ef0-d531116ec53a_1fQRlC.webp?dpl=6a33ab76abf8b3000881534a"/&gt;
-&lt;p&gt; Devstral 2 (123B) and Devstral Small 2 (24B) are 5x and 28x smaller than DeepSeek V3.2, and 8x and 41x smaller than Kimi K2—proving that compact models can match or exceed the performance of much larger competitors. Their reduced size makes deployment practical on limited hardware, lowering barriers for developers, small businesses, and hobbyists.hardware. &lt;/p&gt;
-&lt;img src="https://mistral.ai/_astro/49e0d71c-436c-4334-9fff-fa68c9f60380_Z1z9fFe.webp?dpl=6a33ab76abf8b3000881534a"/&gt;
-&lt;p&gt; Devstral 2 supports exploring codebases and orchestrating changes across multiple files while maintaining architecture-level context. It tracks framework dependencies, detects failures, and retries with corrections—solving challenges like bug fixing and modernizing legacy systems. &lt;/p&gt;
-&lt;p&gt; The model can be fine-tuned to prioritize specific languages or optimize for large enterprise codebases. &lt;/p&gt;
-&lt;p&gt; We evaluated Devstral 2 against DeepSeek V3.2 and Claude Sonnet 4.5 using human evaluations conducted by an independent annotation provider, with tasks scaffolded through Cline. Devstral 2 shows a clear advantage over DeepSeek V3.2, with a 42.8% win rate versus 28.6% loss rate. However, Claude Sonnet 4.5 remains significantly preferred, indicating a gap with closed-source models persists. &lt;/p&gt;
-&lt;img src="https://mistral.ai/_astro/48b2b0fc-f8d8-44da-a3a2-4961aad2f10e_1mMVCG.webp?dpl=6a33ab76abf8b3000881534a"/&gt;
-&lt;p&gt; “Devstral 2 is at the frontier of open-source coding models. In Cline, it delivers a tool-calling success rate on par with the best closed models; it's a remarkably smooth driver. This is a massive contribution to the open-source ecosystem.” — Cline. &lt;/p&gt;
-&lt;p&gt; “Devstral 2 was one of our most successful stealth launches yet, surpassing 17B tokens in the first 24 hours. Mistral AI is moving at Kilo Speed with a cost-efficient model that truly works at scale.” — Kilo Code. &lt;/p&gt;
-&lt;p&gt; Devstral Small 2, a 24B-parameter model with the same 256K context window and released under Apache 2.0, brings these capabilities to a compact, locally deployable form. Its size enables fast inference, tight feedback loops, and easy customization—with fully private, on-device runtime. It also supports image inputs, and can power multimodal agents.  &lt;/p&gt;
-&lt;p&gt; Mistral Vibe CLI is an open-source command-line coding assistant powered by Devstral. It explores, modifies, and executes changes across your codebase using natural language—in your terminal or integrated into your preferred IDE via the Agent Communication Protocol. It is released under the Apache 2.0 license. &lt;/p&gt;
-&lt;p&gt; Vibe CLI provides an interactive chat interface with tools for file manipulation, code searching, version control, and command execution. Key features: &lt;/p&gt;
-&lt;p&gt; Project-aware context: Automatically scans your file structure and Git status to provide relevant context &lt;/p&gt;
-&lt;p&gt; Smart references: Reference files with @ autocomplete, execute shell commands with !, and use slash commands for configuration changes &lt;/p&gt;
-&lt;p&gt; Multi-file orchestration: Understands your entire codebase—not just the file you're editing—enabling architecture-level reasoning that can halve your PR cycle time &lt;/p&gt;
-&lt;p&gt; Persistent history, autocompletion, and customizable themes. &lt;/p&gt;
-&lt;p&gt; You can run Vibe CLI programmatically for scripting, toggle auto-approval for tool execution, configure local models and providers through a simple config.toml, and control tool permissions to match your workflow. &lt;/p&gt;
-&lt;p&gt; Devstral 2 is currently offered free via &lt;a href="http://console.mistral.ai"&gt;our API&lt;/a&gt;. After the free period, the API pricing will be $0.40/$2.00 per million tokens (input/output) for Devstral 2 and $0.10/$0.30 for Devstral Small 2. &lt;/p&gt;
-&lt;a href="http://console.mistral.ai"&gt;our API&lt;/a&gt;
-&lt;p&gt; We’ve partnered with leading, open agent tools &lt;a href="https://kilo.ai/"&gt;Kilo Code&lt;/a&gt; and &lt;a href="https://cline.bot/"&gt;Cline&lt;/a&gt; to bring Devstral 2 to where you already build. &lt;/p&gt;
-&lt;a href="https://kilo.ai/"&gt;Kilo Code&lt;/a&gt;
-&lt;a href="https://cline.bot/"&gt;Cline&lt;/a&gt;
-&lt;p&gt; Mistral Vibe CLI is available as an extension in &lt;a href="https://zed.dev/extensions"&gt;Zed&lt;/a&gt;, so you can use it directly inside your IDE. &lt;/p&gt;
-&lt;a href="https://zed.dev/extensions"&gt;Zed&lt;/a&gt;
-&lt;p&gt; Devstral 2 is optimized for data center GPUs and requires a minimum of 4 H100-class GPUs for deployment. You can try it today on &lt;a href="http://build.nvidia.com"&gt;build.nvidia.com&lt;/a&gt;. Devstral Small 2 is built for single-GPU operation and runs across a broad range of NVIDIA systems, including DGX Spark and GeForce RTX. NVIDIA NIM support will be available soon. &lt;/p&gt;
-&lt;a href="http://build.nvidia.com"&gt;build.nvidia.com&lt;/a&gt;
-&lt;p&gt; Devstral Small runs on consumer-grade GPUs as well as CPU-only configurations with no dedicated GPU required. &lt;/p&gt;
-&lt;p&gt; For optimal performance, we recommend a temperature of 0.2 and following the best practices defined for &lt;a href="https://github.com/mistralai/mistral-vibe/blob/main/README.md"&gt;Mistral Vibe CLI&lt;/a&gt;. &lt;/p&gt;
-&lt;a href="https://github.com/mistralai/mistral-vibe/blob/main/README.md"&gt;Mistral Vibe CLI&lt;/a&gt;
-&lt;p&gt; We’re excited to see what you will build with Devstral 2, Devstral Small 2, and Vibe CLI! &lt;/p&gt;
-&lt;p&gt; Share your projects, questions, or discoveries with us on &lt;a href="https://x.com/mistralai"&gt;X/Twitter&lt;/a&gt;, &lt;a href="https://discord.com/invite/mistralai"&gt;Discord&lt;/a&gt;, or &lt;a href="https://github.com/mistralai"&gt;GitHub&lt;/a&gt;. &lt;/p&gt;
-&lt;a href="https://x.com/mistralai"&gt;X/Twitter&lt;/a&gt;
-&lt;a href="https://discord.com/invite/mistralai"&gt;Discord&lt;/a&gt;
-&lt;a href="https://github.com/mistralai"&gt;GitHub&lt;/a&gt;
-&lt;p&gt; If you’re interested in shaping open-source research and building world-class interfaces that bring truly open, frontier AI to users, we welcome you to &lt;a href="https://mistral.ai/careers"&gt;apply to join our team&lt;/a&gt;. &lt;/p&gt;
-&lt;a href="https://mistral.ai/careers"&gt;apply to join our team&lt;/a&gt;
-&lt;img src="https://mistral.ai/cms-media/api/media/file/icon-m-code-window.svg"/&gt;
-&lt;p&gt; Devstral 2 &lt;/p&gt;
-&lt;p&gt;  Open  &lt;/p&gt;
-&lt;p&gt; Open-weights agentic coding model for autonomous software engineering. &lt;/p&gt;
-&lt;p&gt;  Coding  &lt;/p&gt;
-&lt;p&gt;  Agentic  &lt;/p&gt;
-&lt;p&gt;  Text-to-text  &lt;/p&gt;
-&lt;p&gt; Input (/M tokens)  &lt;/p&gt;
-&lt;p&gt;  $0.4   &lt;/p&gt;
-&lt;p&gt; Output (/M tokens)  &lt;/p&gt;
-&lt;p&gt;  $2   &lt;/p&gt;
-&lt;p&gt; 0% &lt;/p&gt;</content:encoded>
-      <guid isPermaLink="false">https://mistral.ai/news/devstral-2-vibe-cli/</guid>
-      <category>Product</category>
-      <pubDate>Tue, 09 Dec 2025 00:00:00 +0000</pubDate>
-    </item>
-    <item>
       <title>Mistral AI - KI für Deutschland</title>
       <link>https://mistral.ai/news/ki-fur-deutschland/</link>
       <description>Company</description>
-      <content:encoded>&lt;p&gt;  Company  &lt;/p&gt;
-&lt;p&gt; November 19, 2025 &lt;/p&gt;
-&lt;p&gt; By Mistral AI &lt;/p&gt;
-&lt;a href="https://mistral.ai/news/"&gt;  
+      <content:encoded><![CDATA[<p>  Company  </p>
+<p> November 19, 2025 </p>
+<p> By Mistral AI </p>
+<a href="https://mistral.ai/news/">  
 
 
 
 
 
 
- &lt;p&gt; Back to Blog &lt;/p&gt; 
+ <p> Back to Blog </p> 
 
 
 
 
 
 
-  &lt;/a&gt;
-&lt;p&gt; Back to Blog &lt;/p&gt;
-&lt;p&gt; 2 min read &lt;/p&gt;
-&lt;p&gt; At Mistral AI, we’ve believed from the very beginning in building frontier AI that Europe could own, giving people and organizations the ability to shape and determine the role of AI in their future.  &lt;/p&gt;
-&lt;p&gt; As we are expanding our presence, we are proud to expand our commitment to German citizens through several long-term strategic commitments with German enterprises and institutions.  &lt;/p&gt;
-&lt;p&gt; We are building a multiyear partnership with SAP to deliver a fully sovereign AI stack for Germany and Europe, integrating our models into SAP’s AI Foundation, and co-developing industry-specific solutions for Europe’s most complex industries and administrations.  &lt;/p&gt;
-&lt;p&gt; With Helsing, we are accelerating the development of vision-language-action models for real-world defense and security applications. This will support Europe’s strategic autonomy and strengthen its technological independence in critical sectors. &lt;/p&gt;
-&lt;p&gt; As Europe accelerates in its search for more digital autonomy, we have reaffirmed our founding principles to European leaders: at Mistral AI, we want to put AI into everyone’s hands so that our customers can own their AI journey. In Germany, this means benefiting from the best AI solutions and talents, without sacrificing strategic autonomy or sending critical data abroad.  &lt;/p&gt;
-&lt;p&gt; To do so, we are expanding our presence in German, significantly increasing our local team and opening in the coming months an office in Germany. &lt;/p&gt;
-&lt;p&gt; Our work in Germany demonstrates our shared ambitions and Germany’s pivotal role in securing Europe’s AI autonomy. Today marks an important step forward. &lt;/p&gt;
-&lt;p&gt; Read the German version of this blogpost &lt;a href="https://mistral.ai/de/news/ki-fur-deutschland"&gt;here&lt;/a&gt;. &lt;/p&gt;
-&lt;a href="https://mistral.ai/de/news/ki-fur-deutschland"&gt;here&lt;/a&gt;
-&lt;p&gt; 0% &lt;/p&gt;</content:encoded>
-      <guid isPermaLink="false">https://mistral.ai/news/ki-fur-deutschland/</guid>
+  </a>
+<p> Back to Blog </p>
+<p> 2 min read </p>
+<p> At Mistral AI, we’ve believed from the very beginning in building frontier AI that Europe could own, giving people and organizations the ability to shape and determine the role of AI in their future.  </p>
+<p> As we are expanding our presence, we are proud to expand our commitment to German citizens through several long-term strategic commitments with German enterprises and institutions.  </p>
+<p> We are building a multiyear partnership with SAP to deliver a fully sovereign AI stack for Germany and Europe, integrating our models into SAP’s AI Foundation, and co-developing industry-specific solutions for Europe’s most complex industries and administrations.  </p>
+<p> With Helsing, we are accelerating the development of vision-language-action models for real-world defense and security applications. This will support Europe’s strategic autonomy and strengthen its technological independence in critical sectors. </p>
+<p> As Europe accelerates in its search for more digital autonomy, we have reaffirmed our founding principles to European leaders: at Mistral AI, we want to put AI into everyone’s hands so that our customers can own their AI journey. In Germany, this means benefiting from the best AI solutions and talents, without sacrificing strategic autonomy or sending critical data abroad.  </p>
+<p> To do so, we are expanding our presence in German, significantly increasing our local team and opening in the coming months an office in Germany. </p>
+<p> Our work in Germany demonstrates our shared ambitions and Germany’s pivotal role in securing Europe’s AI autonomy. Today marks an important step forward. </p>
+<p> Read the German version of this blogpost <a href="https://mistral.ai/de/news/ki-fur-deutschland">here</a>. </p>
+<a href="https://mistral.ai/de/news/ki-fur-deutschland">here</a>
+<p> 0% </p>]]></content:encoded>
+      <guid isPermaLink="true">https://mistral.ai/news/ki-fur-deutschland/</guid>
       <category>Product</category>
       <pubDate>Wed, 19 Nov 2025 00:00:00 +0000</pubDate>
     </item>
@@ -1726,32 +1727,32 @@ $ /usr/local/lib/heaptrack/libexec/heaptrack_interpret &lt; heaptrack.2028233 | 
       <title>Mistral AI raises 1.7B€ to accelerate technological progress with AI</title>
       <link>https://mistral.ai/news/mistral-ai-raises-1-7-b-to-accelerate-technological-progress-with-ai/</link>
       <description>Company</description>
-      <content:encoded>&lt;p&gt;  Company  &lt;/p&gt;
-&lt;p&gt; September 9, 2025 &lt;/p&gt;
-&lt;p&gt; By Mistral AI &lt;/p&gt;
-&lt;a href="https://mistral.ai/news/"&gt;  
+      <content:encoded><![CDATA[<p>  Company  </p>
+<p> September 9, 2025 </p>
+<p> By Mistral AI </p>
+<a href="https://mistral.ai/news/">  
 
 
 
 
 
 
- &lt;p&gt; Back to Blog &lt;/p&gt; 
+ <p> Back to Blog </p> 
 
 
 
 
 
 
-  &lt;/a&gt;
-&lt;p&gt; Back to Blog &lt;/p&gt;
-&lt;p&gt; 2 min read &lt;/p&gt;
-&lt;p&gt; We are announcing a Series C funding round of 1.7B€ at a 11.7B€ post-money valuation. This investment fuels our scientific research to keep pushing the frontier of AI to tackle the most critical and sophisticated technological challenges faced by strategic industries. &lt;/p&gt;
-&lt;p&gt; The Series C funding round is led by leading semiconductor equipment manufacturer, ASML Holding NV (ASML). &lt;/p&gt;
-&lt;p&gt; It includes participation from existing investors: DST Global, Andreessen Horowitz, Bpifrance, General Catalyst, Index Ventures, Lightspeed and NVIDIA. &lt;/p&gt;
-&lt;p&gt; For the last two years, we have advanced AI through cutting-edge research and strategic partnerships with corporate and industrial champions. We will continue to develop custom decentralized frontier AI solutions that solve the most complex engineering and industrial problems. It empowers enterprises, public sectors, and industries a competitive edge through state-of-the-art models, tailored solutions, and high-performance compute infrastructure. This funding round reaffirms the company’s independence.  &lt;/p&gt;
-&lt;p&gt; 0% &lt;/p&gt;</content:encoded>
-      <guid isPermaLink="false">https://mistral.ai/news/mistral-ai-raises-1-7-b-to-accelerate-technological-progress-with-ai/</guid>
+  </a>
+<p> Back to Blog </p>
+<p> 2 min read </p>
+<p> We are announcing a Series C funding round of 1.7B€ at a 11.7B€ post-money valuation. This investment fuels our scientific research to keep pushing the frontier of AI to tackle the most critical and sophisticated technological challenges faced by strategic industries. </p>
+<p> The Series C funding round is led by leading semiconductor equipment manufacturer, ASML Holding NV (ASML). </p>
+<p> It includes participation from existing investors: DST Global, Andreessen Horowitz, Bpifrance, General Catalyst, Index Ventures, Lightspeed and NVIDIA. </p>
+<p> For the last two years, we have advanced AI through cutting-edge research and strategic partnerships with corporate and industrial champions. We will continue to develop custom decentralized frontier AI solutions that solve the most complex engineering and industrial problems. It empowers enterprises, public sectors, and industries a competitive edge through state-of-the-art models, tailored solutions, and high-performance compute infrastructure. This funding round reaffirms the company’s independence.  </p>
+<p> 0% </p>]]></content:encoded>
+      <guid isPermaLink="true">https://mistral.ai/news/mistral-ai-raises-1-7-b-to-accelerate-technological-progress-with-ai/</guid>
       <category>Product</category>
       <pubDate>Tue, 09 Sep 2025 00:00:00 +0000</pubDate>
     </item>
@@ -2494,139 +2495,6 @@ class RAGEvaluation(BaseModel):    context_relevance: ContextRelevance = Field( 
       <category>Solutions</category>
       <pubDate>Wed, 09 Apr 2025 00:00:00 +0000</pubDate>
       <media:content url="https://mistral.ai/_astro/d0f68ba1-77f4-4d28-ad97-4c62b34e4787_Z1OcHiQ.webp?dpl=6a622da400bba40008995ff8" type="image/webp" medium="image"/>
-    </item>
-    <item>
-      <title>Mistral Small 3.1</title>
-      <link>https://mistral.ai/news/mistral-small-3-1</link>
-      <description>Today we announce Mistral Small 3.1: the best model in its weight class.</description>
-      <content:encoded><![CDATA[<img height="800" src="https://mistral.ai/_astro/Cover-Model-Small_ryVwl.webp?dpl=6a622da400bba40008995ff8" width="1440"/>
-<p>Today we announce Mistral Small 3.1: the best model in its weight class.</p>
-<p>Building on <a href="https://mistral.ai/news/mistral-small-3">Mistral Small 3</a>, this new model comes with improved text performance, multimodal understanding, and an expanded context window of up to 128k tokens. The model outperforms comparable models like Gemma 3 and GPT-4o Mini, while delivering inference speeds of 150 tokens per second.</p>
-<p>Mistral Small 3.1 is released under an Apache 2.0 license. </p>
-<p><figure><img alt="Perf Gpqa Diamond Mistral" height="1050" src="https://mistral.ai/_astro/1977a3f1-eae3-4eed-b2c7-e1701c4692ed_pmVY6.webp?dpl=6a622da400bba40008995ff8" width="1988"/></figure></p>
-<p>Modern AI applications demand a blend of capabilities—handling text, understanding multimodal inputs, supporting multiple languages, and managing long contexts—with low latency and cost efficiency. As shown below, Mistral Small 3.1 is the first open source model that not only meets, but in fact surpasses, the performance of leading small proprietary models across all these dimensions.</p>
-<p>Below you will find more details on model performance. Whenever possible, we show numbers reported previously by other providers, otherwise we evaluate models through our common evaluation harness.</p>
-<h3>Instruct Performance</h3>
-<h4>Text instruct benchmarks</h4>
-<h4>Multimodal Instruct Benchmarks</h4>
-<p><em>MM-MT-Bench scaled to between 0 and 100.</em></p>
-<h4>Multilingual</h4>
-<h4>Long Context</h4>
-<h3>Pretrained Performance</h3>
-<p>We also release the pretrained base model for Mistral Small 3.1.</p>
-<h4>All pretrain</h4>
-<h2>Use cases</h2>
-<p>Mistral Small 3.1 is a versatile model designed to handle a wide range of generative AI tasks, including instruction following, conversational assistance, image understanding, and function calling. It provides a solid foundation for both enterprise and consumer-grade AI applications.</p>
-<h2>Key Features and Capabilities</h2>
-<ul><li><p>Lightweight: Mistral Small 3.1 can run on a single RTX 4090 or a Mac with 32GB RAM. This makes it a great fit for on-device use cases.</p></li><li><p>Fast-response conversational assistance: Ideal for virtual assistants and other applications where quick, accurate responses are essential. </p></li><li><p>Low-latency function calling: Capable of rapid function execution within automated or agentic workflows</p></li><li><p>Fine-tuning for specialized domains: Mistral Small 3.1 can be fine-tuned to specialize in specific domains, creating accurate subject matter experts. This is particularly useful in fields like legal advice, medical diagnostics, and technical support.</p></li><li><p>Foundation for advanced reasoning: We continue to be impressed by how the community builds on top of open Mistral models. Just in the last few weeks, we have seen several excellent reasoning models built on Mistral Small 3, such as the <a href="https://huggingface.co/NousResearch/DeepHermes-3-Mistral-24B-Preview">DeepHermes 24B</a> by Nous Research. To that end, we are releasing both base and instruct checkpoints for Mistral Small 3.1 to enable further downstream customization of the model.</p></li></ul>
-<p>Mistral Small 3.1 can be used across various enterprise and consumer applications that require multimodal understanding, such as document verification, diagnostics, on-device image processing, visual inspection for quality checks, object detection in security systems, image-based customer support, and general purpose assistance.</p>
-<h2>Availability </h2>
-<p>Mistral Small 3.1 is available to download on the huggingface website <a href="https://huggingface.co/mistralai/Mistral-Small-3.1-24B-Base-2503">Mistral Small 3.1 Base</a> and <a href="https://huggingface.co/mistralai/Mistral-Small-3.1-24B-Instruct-2503">Mistral Small 3.1 Instruct</a>. For enterprise deployments with private and optimized inference infrastructure, please <a href="https://mistral.ai/contact">contact us</a>. </p>
-<p>You can also try the model via API on Mistral AI’s developer playground <a href="https://mistral.ai/news/la-plateforme">La Plateforme</a> starting today. The model is also available on <a href="https://cloud.google.com/vertex-ai/generative-ai/docs/partner-models/mistral">Google Cloud Vertex AI</a>. Mistral Small 3.1 will be available on <a href="https://developer.nvidia.com/nim">NVIDIA NIM</a> and <a href="https://ai.azure.com/explore/models?&amp;selectedCollection=mistral">Microsoft Azure AI Foundry</a> in the coming weeks. </p>
-<p>Happy building!</p>]]></content:encoded>
-      <guid isPermaLink="true">https://mistral.ai/news/mistral-small-3-1</guid>
-      <category>Research</category>
-      <pubDate>Mon, 17 Mar 2025 00:00:00 +0000</pubDate>
-      <media:content url="https://mistral.ai/_astro/Cover-Model-Small_ryVwl.webp?dpl=6a622da400bba40008995ff8" type="image/webp" medium="image"/>
-    </item>
-    <item>
-      <title>Mistral OCR</title>
-      <link>https://mistral.ai/news/mistral-ocr</link>
-      <description>Mistral OCR is no longer maintained and has been replaced by our latest, more powerful OCR models.</description>
-      <content:encoded><![CDATA[<p><strong>Heads up: this model is deprecated</strong></p>
-<p>Mistral OCR is no longer maintained and has been replaced by <a href="https://mistral.ai/fr/news/ocr-4/">our latest, more powerful OCR models.</a></p>
-<p>Throughout history, advancements in information abstraction and retrieval have driven human progress. From hieroglyphs to papyri, the printing press to digitization, each leap has made human knowledge more accessible and actionable, fueling further innovation. </p>
-<p>Today, we’re at the precipice of the next big leap—to unlock the collective intelligence of all digitized information. Approximately <a href="https://resources.data.gov/glossary/unstructured-data/">90%</a> of the world’s organizational data is stored as documents, and to harness this potential, we are introducing <a href="https://docs.mistral.ai/studio-api/document-processing/overview">Mistral OCR</a>.<br/><br/>Mistral OCR is an Optical Character Recognition API that sets a new standard in document understanding. Unlike other models, Mistral OCR comprehends each element of documents—media, text, tables, equations—with unprecedented accuracy and cognition. It takes images and PDFs as input and extracts content in an ordered interleaved text and images.</p>
-<p>As a result, Mistral OCR is an ideal model to use in combination with a RAG system taking multimodal documents (such as slides or complex PDFs) as input.</p>
-<p>We have made Mistral OCR as the default model for document understanding across millions of users on Le Chat, and are releasing the API <em>mistral-ocr-latest</em> at 1000 pages / $ (and approximately double the pages per dollar with batch inference). The API is available today on our developer suite <a href="http://console.mistral.ai">la Plateforme</a>, and coming soon to our cloud and inference partners, as well as on-premises.</p>
-<h2>Highlights</h2>
-<ol><li><p>State of the art understanding of complex documents</p></li><li><p>Natively multilingual and multimodal</p></li><li><p>Top-tier benchmarks</p></li><li><p>Fastest in its category</p></li><li><p>Doc-as-prompt, structured output</p></li><li><p>Selectively available to self-host for organizations dealing with highly sensitive or classified information</p></li></ol>
-<p>Let’s dive into each. </p>
-<h3>State of the art understanding of complex documents</h3>
-<p>Mistral OCR excels in understanding complex document elements, including interleaved imagery, mathematical expressions, tables, and advanced layouts such as LaTeX formatting. The model enables deeper understanding of rich documents such as scientific papers with charts, graphs, equations and figures. </p>
-<p>Below is an example of the model extracting text as well as imagery from a given PDF into a markdown file. You can access the notebook <a href="https://colab.research.google.com/github/mistralai/cookbook/blob/main/mistral/ocr/structured_ocr.ipynb">here</a>. </p>
-<iframe allowfullscreen="" height="315" src="https://www.youtube.com/embed/6lRBm0KnzBI?si=qLSblC2rsBdxg4qu" width="560"></iframe>
-<p>Below we have side-by-side comparisons of PDFs and their respective OCR's outputs. Hover the slider  to switch between input and output. </p>
-<p>Tables + Figures</p>
-<p><figure><img alt="3 Exemple" height="1999" src="https://mistral.ai/_astro/3aa243eb-f883-4676-b23a-f69f5227375c_Z1NTEaR.webp?dpl=6a622da400bba40008995ff8" width="1546"/></figure></p>
-<p>OCR result</p>
-<p><figure><img alt="3 Ocr" height="1624" src="https://mistral.ai/_astro/5ec9ef56-c72a-4f6c-bcbc-f2e344909059_2ep0b0.webp?dpl=6a622da400bba40008995ff8" width="1198"/></figure></p>
-<p>Math</p>
-<p><figure><img alt="4 Exemple" height="1024" src="https://mistral.ai/_astro/67e873eb-662a-40fd-921e-ed8ea37c20b6_Z7Eglj.webp?dpl=6a622da400bba40008995ff8" width="791"/></figure></p>
-<p>OCR result</p>
-<p><figure><img alt="4 Ocr" height="1780" src="https://mistral.ai/_astro/e594e7b2-41c2-4a7b-90ca-e1886c477eba_ZbeaJL.webp?dpl=6a622da400bba40008995ff8" width="1894"/></figure></p>
-<p>Hindi</p>
-<p><figure><img alt="5 Exemple" height="1654" src="https://mistral.ai/_astro/4c0ea3e0-0128-45ab-a262-cf489b8d1b1c_1kkT4o.webp?dpl=6a622da400bba40008995ff8" width="1241"/></figure></p>
-<p>OCR result</p>
-<p><figure><img alt="Hindi Ocr" height="1374" src="https://mistral.ai/_astro/2c871d1b-85e0-45a1-b9b3-053db0320ffa_ukhrk.webp?dpl=6a622da400bba40008995ff8" width="1766"/></figure></p>
-<p>Document</p>
-<p><figure><img alt="6 Exemple" height="1999" src="https://mistral.ai/_astro/6a2e2886-1e4e-4bfe-8673-debfff5b0d2b_2okJKV.webp?dpl=6a622da400bba40008995ff8" width="1500"/></figure></p>
-<p>OCR result</p>
-<p><figure><img alt="6 Ocr" height="1838" src="https://mistral.ai/_astro/82aba7f9-6a2f-495f-b4b7-d32e9ee4dd75_Z17FLRk.webp?dpl=6a622da400bba40008995ff8" width="1900"/></figure></p>
-<p>Arabic</p>
-<p><figure><img alt="7 Exemple" height="914" src="https://mistral.ai/_astro/e12333d3-1a58-4650-ae0f-d4ffe595cdfc_Fn8MW.webp?dpl=6a622da400bba40008995ff8" width="736"/></figure></p>
-<p>OCR result</p>
-<p><figure><img alt="Arabic OCR" height="542" src="https://mistral.ai/_astro/a51226e5-fcad-4b10-8306-d89df7013a01_Z1hMGqc.webp?dpl=6a622da400bba40008995ff8" width="488"/></figure></p>
-<h3>Top-tier benchmarks</h3>
-<p>Mistral OCR has consistently outperformed other leading OCR models in rigorous benchmark tests. Its superior accuracy across multiple aspects of document analysis is illustrated below. We extract embedded images from documents along with text. The other LLMs compared below, do not have that capability. For a fair comparison, we evaluate them on our internal “text-only” test-set containing various publication papers, and PDFs from the web; below:</p>
-<table><tbody><tr><th colspan="1" rowspan="1"><p>Model</p></th><th colspan="1" rowspan="1"><p>Overall</p></th><th colspan="1" rowspan="1"><p>Math</p></th><th colspan="1" rowspan="1"><p>Multilingual</p></th><th colspan="1" rowspan="1"><p>Scanned</p></th><th colspan="1" rowspan="1"><p>Tables</p></th></tr><tr><td colspan="1" rowspan="1"><p>Google Document AI</p></td><td colspan="1" rowspan="1"><p>83.42</p></td><td colspan="1" rowspan="1"><p>80.29</p></td><td colspan="1" rowspan="1"><p>86.42</p></td><td colspan="1" rowspan="1"><p>92.77</p></td><td colspan="1" rowspan="1"><p>78.16</p></td></tr><tr><td colspan="1" rowspan="1"><p>Azure OCR</p></td><td colspan="1" rowspan="1"><p>89.52</p></td><td colspan="1" rowspan="1"><p>85.72</p></td><td colspan="1" rowspan="1"><p>87.52</p></td><td colspan="1" rowspan="1"><p>94.65</p></td><td colspan="1" rowspan="1"><p>89.52</p></td></tr><tr><td colspan="1" rowspan="1"><p>Gemini-1.5-Flash-002</p></td><td colspan="1" rowspan="1"><p>90.23</p></td><td colspan="1" rowspan="1"><p>89.11</p></td><td colspan="1" rowspan="1"><p>86.76</p></td><td colspan="1" rowspan="1"><p>94.87</p></td><td colspan="1" rowspan="1"><p>90.48</p></td></tr><tr><td colspan="1" rowspan="1"><p>Gemini-1.5-Pro-002</p></td><td colspan="1" rowspan="1"><p>89.92</p></td><td colspan="1" rowspan="1"><p>88.48</p></td><td colspan="1" rowspan="1"><p>86.33</p></td><td colspan="1" rowspan="1"><p>96.15</p></td><td colspan="1" rowspan="1"><p>89.71</p></td></tr><tr><td colspan="1" rowspan="1"><p>Gemini-2.0-Flash-001</p></td><td colspan="1" rowspan="1"><p>88.69</p></td><td colspan="1" rowspan="1"><p>84.18</p></td><td colspan="1" rowspan="1"><p>85.80</p></td><td colspan="1" rowspan="1"><p>95.11</p></td><td colspan="1" rowspan="1"><p>91.46</p></td></tr><tr><td colspan="1" rowspan="1"><p>GPT-4o-2024-11-20</p></td><td colspan="1" rowspan="1"><p>89.77</p></td><td colspan="1" rowspan="1"><p>87.55</p></td><td colspan="1" rowspan="1"><p>86.00</p></td><td colspan="1" rowspan="1"><p>94.58</p></td><td colspan="1" rowspan="1"><p>91.70</p></td></tr><tr><td colspan="1" rowspan="1"><p>Mistral OCR 2503</p></td><td colspan="1" rowspan="1"><p>94.89</p></td><td colspan="1" rowspan="1"><p>94.29</p></td><td colspan="1" rowspan="1"><p>89.55</p></td><td colspan="1" rowspan="1"><p>98.96</p></td><td colspan="1" rowspan="1"><p>96.12</p></td></tr></tbody></table>
-<h3>Natively multilingual</h3>
-<p>Since Mistral’s founding, we have aspired to serve the world with our models, and consequently strived for multilingual capabilities across our offerings. Mistral OCR takes this to a new level, being able to parse, understand, and transcribe thousands of scripts, fonts, and languages across all continents. This versatility is crucial for both global organizations that handle documents from diverse linguistic backgrounds, as well as hyperlocal businesses serving niche markets.</p>
-<table><tbody><tr><th colspan="1" rowspan="1"><p>Model</p></th><th colspan="1" rowspan="1"><p>Fuzzy Match in Generation</p></th></tr><tr><td colspan="1" rowspan="1"><p>Google-Document-AI</p></td><td colspan="1" rowspan="1"><p>95.88</p></td></tr><tr><td colspan="1" rowspan="1"><p>Gemini-2.0-Flash-001</p></td><td colspan="1" rowspan="1"><p>96.53</p></td></tr><tr><td colspan="1" rowspan="1"><p>Azure OCR</p></td><td colspan="1" rowspan="1"><p>97.31</p></td></tr><tr><td colspan="1" rowspan="1"><p>Mistral OCR 2503</p></td><td colspan="1" rowspan="1"><p>99.02</p></td></tr></tbody></table>
-<p>Benchmarks by language:<br/></p>
-<table><tbody><tr><th colspan="1" rowspan="1"><p>Language</p></th><th colspan="1" rowspan="1"><p>Azure OCR</p></th><th colspan="1" rowspan="1"><p>Google Doc AI</p></th><th colspan="1" rowspan="1"><p>Gemini-2.0-Flash-001</p></th><th colspan="1" rowspan="1"><p>Mistral OCR 2503</p></th></tr><tr><td colspan="1" rowspan="1"><p>ru</p></td><td colspan="1" rowspan="1"><p>97.35</p></td><td colspan="1" rowspan="1"><p>95.56</p></td><td colspan="1" rowspan="1"><p>96.58</p></td><td colspan="1" rowspan="1"><p>99.09</p></td></tr><tr><td colspan="1" rowspan="1"><p>fr</p></td><td colspan="1" rowspan="1"><p>97.50</p></td><td colspan="1" rowspan="1"><p>96.36</p></td><td colspan="1" rowspan="1"><p>97.06</p></td><td colspan="1" rowspan="1"><p>99.20</p></td></tr><tr><td colspan="1" rowspan="1"><p>hi</p></td><td colspan="1" rowspan="1"><p>96.45</p></td><td colspan="1" rowspan="1"><p>95.65</p></td><td colspan="1" rowspan="1"><p>94.99</p></td><td colspan="1" rowspan="1"><p>97.55</p></td></tr><tr><td colspan="1" rowspan="1"><p>zh</p></td><td colspan="1" rowspan="1"><p>91.40</p></td><td colspan="1" rowspan="1"><p>90.89</p></td><td colspan="1" rowspan="1"><p>91.85</p></td><td colspan="1" rowspan="1"><p>97.11</p></td></tr><tr><td colspan="1" rowspan="1"><p>pt</p></td><td colspan="1" rowspan="1"><p>97.96</p></td><td colspan="1" rowspan="1"><p>96.24</p></td><td colspan="1" rowspan="1"><p>97.25</p></td><td colspan="1" rowspan="1"><p>99.42</p></td></tr><tr><td colspan="1" rowspan="1"><p>de</p></td><td colspan="1" rowspan="1"><p>98.39</p></td><td colspan="1" rowspan="1"><p>97.09</p></td><td colspan="1" rowspan="1"><p>97.19</p></td><td colspan="1" rowspan="1"><p>99.51</p></td></tr><tr><td colspan="1" rowspan="1"><p>es</p></td><td colspan="1" rowspan="1"><p>98.54</p></td><td colspan="1" rowspan="1"><p>97.52</p></td><td colspan="1" rowspan="1"><p>97.75</p></td><td colspan="1" rowspan="1"><p>99.54</p></td></tr><tr><td colspan="1" rowspan="1"><p>tr</p></td><td colspan="1" rowspan="1"><p>95.91</p></td><td colspan="1" rowspan="1"><p>93.85</p></td><td colspan="1" rowspan="1"><p>94.66</p></td><td colspan="1" rowspan="1"><p>97.00</p></td></tr><tr><td colspan="1" rowspan="1"><p>uk</p></td><td colspan="1" rowspan="1"><p>97.81</p></td><td colspan="1" rowspan="1"><p>96.24</p></td><td colspan="1" rowspan="1"><p>96.70</p></td><td colspan="1" rowspan="1"><p>99.29</p></td></tr><tr><td colspan="1" rowspan="1"><p>it</p></td><td colspan="1" rowspan="1"><p>98.31</p></td><td colspan="1" rowspan="1"><p>97.69</p></td><td colspan="1" rowspan="1"><p>97.68</p></td><td colspan="1" rowspan="1"><p>99.42</p></td></tr><tr><td colspan="1" rowspan="1"><p>ro</p></td><td colspan="1" rowspan="1"><p>96.45</p></td><td colspan="1" rowspan="1"><p>95.14</p></td><td colspan="1" rowspan="1"><p>95.88</p></td><td colspan="1" rowspan="1"><p>98.79</p></td></tr></tbody></table>
-<p><br/><br/></p>
-<h2>Fastest in its category</h2>
-<p>Being lighter weight than most models in the category, Mistral OCR performs significantly faster than its peers, processing up to 2000 pages per minute on a single node. The ability to rapidly process documents ensures continuous learning and improvement even for high-throughput environments.</p>
-<h3>Doc-as-prompt, structured output</h3>
-<p>Mistral OCR also introduces the use of documents as prompts, enabling more powerful and precise instructions. This capability allows users to extract specific information from documents and format it in structured outputs, such as JSON. Users can chain extracted outputs into downstream function calls and build agents. See this example <a href="https://colab.research.google.com/github/mistralai/cookbook/blob/main/mistral/ocr/structured_ocr.ipynb">notebook</a>. </p>
-<h3>Available to self-host on a selective basis</h3>
-<p>For organizations with stringent data privacy requirements, Mistral OCR offers a self-hosting option. This ensures that sensitive or classified information remains secure within your own infrastructure, providing compliance with regulatory and security standards. If you would like to explore self-deployment with us, please <a href="https://mistral.ai/contact">let us know</a>.</p>
-<h2>Use cases</h2>
-<p>We are empowering our beta customers to elevate their organizational knowledge by transforming their extensive document repositories into actions and solutions. Some of the key use cases where our technology is making a significant impact include:</p>
-<p><strong>Digitizing scientific research</strong>: Leading research institutions have been experimenting with Mistral OCR to convert scientific papers and journals into AI-ready formats, making them accessible to downstream intelligence engines. This has facilitated measurably faster collaboration and accelerated scientific workflows.</p>
-<p><strong>Preserving historical and cultural heritage</strong>: Organizations and nonprofits that are custodians of heritage have been using Mistral OCR to digitize historical documents and artifacts, ensuring their preservation and making them accessible to a broader audience.</p>
-<p><strong>Streamlining customer service</strong>: Customer service departments are exploring Mistral OCR to transform documentation and manuals into indexed knowledge, reducing response times and improving customer satisfaction.</p>
-<p><strong>Making literature across design, education, legal, etc. AI ready</strong>: Mistral OCR has also been helping companies convert technical literature, engineering drawings, lecture notes, presentations, regulatory filings and much more into indexed, answer-ready formats, unlocking intelligence and productivity across millions of documents.</p>
-<h2>Experience it today</h2>
-<p>Mistral OCR capabilities are free to try on <a href="http://chat.mistral.ai">le Chat</a>. To try the API, head over to <a href="http://console.mistral.ai">la Plateforme</a>. We’d love to get your feedback; expect the model to continue to get even better in the weeks to come. As part of our strategic engagement programs, we will also offer on-premises deployment on a <a href="https://mistral.ai/contact">selective basis</a>.</p>]]></content:encoded>
-      <guid isPermaLink="true">https://mistral.ai/news/mistral-ocr</guid>
-      <category>Research</category>
-      <pubDate>Thu, 06 Mar 2025 00:00:00 +0000</pubDate>
-      <media:content url="https://mistral.ai/_astro/3aa243eb-f883-4676-b23a-f69f5227375c_Z1NTEaR.webp?dpl=6a622da400bba40008995ff8" type="image/webp" medium="image"/>
-    </item>
-    <item>
-      <title>Empowering product development with an agentic workflow</title>
-      <link>https://mistral.ai/news/agentic-workflows-from-meetings-to-dev-tickets</link>
-      <description>Product development teams face constant pressure to move quickly while maintaining alignment across stakeholders. Traditional methods of converting stakeholder discussions into actionable development plans often involve manual, time-consuming processes that can introduce errors and delays. By using AI Agents, teams can dramatically accelerate this workflow while improving accuracy and consistency.</description>
-      <content:encoded><![CDATA[<iframe allowfullscreen="" height="315" src="https://www.youtube.com/embed/bPOkEISwuPY?si=We4YFXdvtbsMWJlU" width="560"></iframe>
-<p>Product development teams face constant pressure to move quickly while maintaining alignment across stakeholders. Traditional methods of converting stakeholder discussions into actionable development plans often involve manual, time-consuming processes that can introduce errors and delays. By using AI Agents, teams can dramatically accelerate this workflow while improving accuracy and consistency.</p>
-<p><figure><img alt="Diagram Prd High Level Overview" height="93" src="https://mistral.ai/_astro/72a46eef-f789-48d9-bb0d-8a8773a44088_2e9uYS.webp?dpl=6a622da400bba40008995ff8" width="511"/></figure></p>
-<p>Figure 1: A high-level workflow</p>
-<h3>Eliminating bottlenecks in manual PRD and engineering task creation</h3>
-<p>The journey from initial product discussions to actual development typically involves multiple manual steps: </p>
-<ol><li><p>Transcribing meetings.</p></li><li><p>Drafting Product Requirements Documents (PRDs)</p></li><li><p>Creating individual engineering tickets</p></li></ol>
-<p>Product managers often spend hours converting raw meeting notes into structured documentation, and engineers waste valuable time interpreting requirements and breaking them down into actionable tasks. This process can create bottlenecks, especially as organizations scale and the volume of product initiatives increases.</p>
-<p>But what if we could automate this entire workflow? What if we could take a meeting transcript and automatically generate both a comprehensive PRD and a set of actionable development tickets? This would not only save time but ensure consistent documentation and improved alignment across teams.</p>
-<h3>Automating PRD and engineering ticket generation with AI agents</h3>
-<p>Consider a typical product planning cycle. Stakeholders meet to discuss new features, but the follow-up work of documentation and task creation consumes valuable time that could be spent on actual development. By implementing an automated agentic workflow, teams can dramatically reduce this overhead.</p>
-<p>Using our TranscriptToPRDTicket agentic workflow, powered by Mistral AI LLMs, we have created a system. This system automatically processes meeting transcripts, generates detailed Product Requirements Documents (PRDs), and creates actionable development tickets. This end-to-end automation ensures teams can move from discussion to development with minimal manual intervention.</p>
-<h3>Building an efficient agentic workflow with Mistral AI</h3>
-<p><figure><img alt="Diagram PRD Pipeline" height="1600" src="https://mistral.ai/_astro/e46ccb7f-6602-4d31-9391-048eb35ef529_1quvHf.webp?dpl=6a622da400bba40008995ff8" width="3840"/></figure></p>
-<p>Figure 2: TranscriptToPRDTicket agentic workflow</p>
-<p>At its core, our agentic solution leverages two key components: PRDAgent and TicketCreationAgent, both powered by Mistral Large 2, a state-of-the-art LLM. The workflow follows a clear progression:</p>
-<ol><li><p><a href="https://github.com/mistralai/cookbook/blob/main/mistral/agents/transcript_linearticket_agent/lechat_product_call_trascript.pdf">Meeting transcripts</a> serve as the input, capturing raw stakeholder discussions.</p></li><li><p>PRDAgent processes these transcripts to generate comprehensive PRDs.</p></li><li><p>TicketCreationAgent converts PRD content into structured development tickets.</p></li><li><p>The system automatically creates tickets in project management tools like Linear / Jira.</p></li></ol>
-<p>This automated pipeline ensures consistency and traceability while dramatically reducing manual effort. The entire process is orchestrated by Mistral AI's advanced LLMs understanding capabilities and structured output mechanisms. At the end of the workflow, it automatically generates structured tickets in project management tools like Linear, as illustrated in the image below.</p>
-<p><figure><img alt="Screenshot Linear Tickets" height="839" src="https://mistral.ai/_astro/228d61ba-597f-428a-8e0a-759de45de271_CDhY0.webp?dpl=6a622da400bba40008995ff8" width="1920"/></figure></p>
-<p>Figure 3: Tickets created on Linear</p>
-<h3>Why Mistral AI?</h3>
-<p>Mistral AI's LLMs provide the ideal foundation for this agentic workflow through our powerful natural language understanding and structured output capabilities. Our workflow leverages Mistral Large 2 for:</p>
-<ul><li><p>Advanced natural language processing to accurately interpret meeting transcripts.</p></li><li><p>Intelligent PRD generation with built-in feedback mechanisms for continuous refinement.</p></li><li><p>Structured output formatting for reliable task creation.</p></li></ul>
-<p>If you're interested in implementing this Agentic Workflow in your organization, we've provided a complete implementation in our <a href="https://colab.research.google.com/github/mistralai/cookbook/blob/main/mistral/agents/transcript_linearticket_agent/TranscriptToLinearTicketAgent.ipynb">Google Colab notebook</a>. This resource will help you get started quickly and customize the workflow for your specific needs.</p>]]></content:encoded>
-      <guid isPermaLink="true">https://mistral.ai/news/agentic-workflows-from-meetings-to-dev-tickets</guid>
-      <category>Solutions</category>
-      <pubDate>Tue, 04 Mar 2025 00:00:00 +0000</pubDate>
-      <media:content url="https://mistral.ai/_astro/72a46eef-f789-48d9-bb0d-8a8773a44088_2e9uYS.webp?dpl=6a622da400bba40008995ff8" type="image/webp" medium="image"/>
     </item>
   </channel>
 </rss>
