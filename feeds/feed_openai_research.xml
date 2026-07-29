@@ -8,7 +8,42 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 15 Jul 2026 10:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 28 Jul 2026 10:00:00 -0700</lastBuildDate>
+    <item>
+      <title>Scientific computing in the age of agentic AI</title>
+      <link>https://openai.com/index/scientific-computing-agentic-ai/</link>
+      <description>A new field report shows how scientists use AI coding agents to modernize scientific computing, accelerating software development and discovery in genomics and beyond.</description>
+      <content:encoded><![CDATA[<p>A field report shows how scientists are using coding agents to modernize scientific software for genomics and other data-rich fields.</p>
+<p>Scientific computing is a core pillar of modern research across academia and industry. Yet the software needed to analyze scientific information has struggled to keep pace with the rapid rate of data generation. Many widely used research tools began as code accompanying a research paper, built by small academic teams with limited engineering experience and minimal time for packaging, testing, optimization, or long-term support. The result is scientific infrastructure that often depends on slow, fragile workflows requiring constant maintenance. These constraints impede the pace of discovery.</p>
+<p>AI agents are beginning to change that equation. By lowering the costs of engineering work and taking on tedious implementation tasks, they can help researchers prototype ideas more quickly, pursue projects that were previously impractical, and more easily maintain software over the long term. As a result, scientific software becomes more efficient and better maintained, freeing researchers to spend more time on discovery.</p>
+<p>We’re sharing an exploratory field report of eight agent-assisted scientific computing projects primarily in the life sciences; five using Codex alone, and three using a combination of Codex and Claude Code. The report brings together case studies written by the teams behind each project and identifies recurring themes. The projects range from routine maintenance and targeted optimization to large-scale language migrations and GPU-native redesigns. Contributors report that agents significantly accelerated software development and maintenance, in some cases helping small teams take on work that would otherwise have required far more time or specialized engineering support. But they also highlight the persistent challenge of establishing clear, long-term responsibility and stewardship of the resulting tools.</p>
+<p>Contributors consistently describe a shift in the researchers’ role from implementation to verification and orchestration: specifying what to build, defining how to measure correctness, and deciding when a project is ready to ship. In this emerging model, the researchers remain in control of the scientific direction and quality bar, but with velocity uplift provided by agentic assistance</p>
+<img alt="Diagram mapping agent-assisted scientific software projects across a spectrum from maintenance to workflow redesign." height="276" src="https://images.ctfassets.net/kftzwdyauwt9/1l4AGq9PGmoCMR6wqKwTBY/2f21781b97f5fab792d74e44907feb69/diagram1-desktop-light.svg?w=3840&amp;q=90" width="802"/>
+<h2>Case studies</h2>
+<h4><b>Modernized a widely used library for parsing genomic data</b></h4>
+<p>cyvcf2 is a Python library for reading and writing genomic variant files. GPT‑5.5 replaced the library’s legacy build and packaging system with a modern, unified process designed to make the library easier to install, test, and release.</p>
+<blockquote><p><i>With coding agents, it's quite easy to go fast; for now, to go far in science, there's still a need for expert guidance, understanding, taste, and care.</i></p></blockquote>
+<p>—Brent Pedersen</p>
+<h2>Recurring themes</h2>
+<p>Though the projects varied widely in scope, they demonstrated that coding agents are making engineering labor and expertise less of a constraint in scientific computing. Now, the bottleneck is validating an AI agent’s output, which still depends on human judgement.</p>
+<p>Across case studies, agents handled specific, well-scoped requests effectively but could not reliably judge whether their work was scientifically valid or met expectations. Indeed, agents often expressed confidence even when their work contained clear errors. Human reviewers therefore needed to find reliable ways to validate the results. The strongest approaches used an external reference or measurable acceptance target such as exact output agreement, parity with an existing tool, appropriate statistical behavior, or answers established in advance using simulated data.</p>
+<p>Another recurring theme was that the projects generally proceeded in stages using feedback-driven iterations rather than as one-shot approaches. Contributors broke down broad goals into smaller changes, then used intermediate benchmarks and test systems to evaluate and refine the agents’ work. Agents often produced initial implementations quickly, but resolving edge cases and subtle numerical differences took much longer. Completing the “last mile” of an implementation often took the most work.</p>
+<p>Overall, these case studies suggest that agents are enabling researchers to spend less time on implementation and more time directing the scientific work. People define the goal, break down complex projects into manageable chunks, and judge whether results are scientifically valid. By easing longstanding engineering constraints, agents expand what researchers can build while freeing them to focus on the scientific questions and decisions that matter most.</p>
+<h2>Long-term stewardship remains essential</h2>
+<p>The maintenance gap in research software has long slowed iteration and limited reproducibility and reliability. Published studies of “<a href="https://doi.org/10.1038/s41597-022-01143-6"><u>research code</u>⁠</a>” and <a href="https://doi.org/10.1371/journal.pbio.3000333"><u>omics tools</u>⁠</a> have found that published software often fails to properly install in a fresh computing setup or run as documented, forcing researchers to spend substantial time on configuration and debugging. Even routine improvements can save researchers time and reduce computing demands, while performance-based refactoring and rewrites can deliver larger gains.</p>
+<p>But lower implementation costs also make it easier to produce many similar rewrites, fragmenting users and spreading the expert attention required to keep any one tool reliable. That makes long-term stewardship and attribution essential. Mature scientific software carries undocumented conventions, compatibility requirements, and user trust that translating the source code alone cannot reproduce.</p>
+<p>The case studies illustrate several possible paths forward. Changes to MHCflurry and cyvcf2 were incorporated into their original upstream projects, while rustar-aligner moved under new community stewardship because the original project had been abandoned. Where coordination with existing maintainers is available, it should begin as early as possible. When a separate implementation is necessary, it needs a clear owner and a credible maintenance plan. Without that, today’s modern rewrite can become tomorrow’s abandoned code rather than reliable scientific infrastructure.</p>
+<h2>Toward more durable scientific software</h2>
+<p>This field report is retrospective and exploratory, but the case studies point to a practical shift in how scientific software is developed. Coding agents such as Codex can significantly lower the cost of maintenance, migration, optimization, and new implementations. Their long-term scientific value still depends on human decisions around what to build, how to verify it, and who will maintain it. The deeper change is not simply that researchers can produce more software, but that they can focus more of their effort on defining, validating, and stewarding the tools.</p>
+<p>These case studies show that agents can already accelerate the pace of iteration in scientific computing. As coding agents improve, researchers will be able to spend less time keeping analysis pipelines running and more time advancing their fields.</p>
+<ul><li><a href="https://openai.com/research/index/?tags=2026">2026</a></li><li><a href="https://openai.com/research/index/?tags=software-engineering">Software &amp; Engineering</a></li></ul>
+<h2>Author</h2>
+<p>OpenAI</p>]]></content:encoded>
+      <guid isPermaLink="true">https://openai.com/index/scientific-computing-agentic-ai/</guid>
+      <category>Publication</category>
+      <pubDate>Tue, 28 Jul 2026 10:00:00 -0700</pubDate>
+      <media:content url="https://images.ctfassets.net/kftzwdyauwt9/1l4AGq9PGmoCMR6wqKwTBY/2f21781b97f5fab792d74e44907feb69/diagram1-desktop-light.svg?w=3840&amp;amp;q=90" type="image/svg+xml" medium="image"/>
+    </item>
     <item>
       <title>GPT-Red: Unlocking Self-Improvement for Robustness</title>
       <link>https://openai.com/index/unlocking-self-improvement-gpt-red/</link>
@@ -3090,21 +3125,6 @@ x = \frac{3 \pm \sqrt{33}}{2}
 <p>The Sora team</p>]]></content:encoded>
       <guid isPermaLink="true">https://openai.com/index/sora-2/</guid>
       <category>Research</category>
-      <pubDate>Tue, 30 Sep 2025 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Sora 2 System Card</title>
-      <link>https://openai.com/index/sora-2-system-card/</link>
-      <description>Sora 2 is our new state of the art video and audio generation model. Building on the foundation of Sora, this new model introduces capabilities that have been difficult for prior video models to achieve– such as more accurate physics, sharper realism, synchronized audio, enhanced steerability, and an expanded stylistic range.</description>
-      <content:encoded><![CDATA[<p>Sora 2 is our new state of the art video and audio generation model. Building on the foundation of Sora, this new model introduces capabilities that have been difficult for prior video models to achieve– such as more accurate physics, sharper realism, synchronized audio, enhanced steerability, and an expanded stylistic range. The model follows user direction with high fidelity, enabling the creation of videos that are both imaginative and grounded in real-world dynamics. Sora 2 expands the toolkit for storytelling and creative expression, while also serving as a step toward models that can more accurately simulate the complexity of the physical world. Sora 2 will be available via sora.com, in a new standalone iOS Sora app, and in the future it will be available via our API.<sup>1</sup></p>
-<p>Sora 2’s advanced capabilities require consideration of new potential risks, including nonconsensual use of likeness or misleading generations. To address these, we worked with internal red teamers to identify new challenges and inform corresponding mitigations. We’re taking an iterative approach to safety, focusing on areas where context is especially important or where risks are still emerging and are not fully understood.</p>
-<p>Our iterative deployment includes rolling out initial access to Sora 2 via limited invitations, restricting the use of image uploads that feature a photorealistic person and all video uploads, and placing stringent safeguards and moderation thresholds on content involving minors. We’ll continue to learn from how people use Sora 2 and refine the system to balance safety while maximizing creative potential. This system card describes the model’s capabilities, potential risks, and the safety measures OpenAI has developed for a safe deployment of Sora 2.</p>
-<p><sup>1</sup><i>As of April 26, 2026, the Sora product is no longer available.</i></p>
-<ul><li><a href="https://openai.com/research/index/?tags=2025">2025</a></li><li><a href="https://openai.com/research/index/?tags=system-cards">System Cards</a></li></ul>
-<h2>Author</h2>
-<p>OpenAI</p>]]></content:encoded>
-      <guid isPermaLink="true">https://openai.com/index/sora-2-system-card/</guid>
-      <category>Publication</category>
       <pubDate>Tue, 30 Sep 2025 00:00:00 +0000</pubDate>
     </item>
   </channel>
