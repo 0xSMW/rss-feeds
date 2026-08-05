@@ -8,7 +8,58 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 26 Jul 2026 05:31:17 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 05 Aug 2026 01:49:50 +0000</lastBuildDate>
+    <item>
+      <title>RSS feed</title>
+      <link>https://mistral.ai/news/rss</link>
+      <description>RSS feed</description>
+      <guid isPermaLink="true">https://mistral.ai/news/rss</guid>
+      <category>Product</category>
+      <pubDate>Wed, 05 Aug 2026 01:49:50 +0000</pubDate>
+    </item>
+    <item>
+      <title>Introducing Shieldstral.</title>
+      <link>https://mistral.ai/news/shieldstral</link>
+      <description>Shieldstral introduces a 3B open-weights multimodal safety classifier that outperforms models up to 7x its size by framing content moderation as a policy-adaptive question-answering task. Unlike traditional guardrail models, it accepts plain-language policies at inference time, unifying text and image safety evaluation without retraining. Released under Apache 2.0, it delivers calibrated safety scores across diverse benchmarks while running efficiently on a single 16GB NVIDIA GPU.</description>
+      <content:encoded><![CDATA[<img height="800" src="https://mistral.ai/_astro/Cover-Model_Cover-Shieldstral_Z1gJ2X9.webp?dpl=6a71ffa2b153950008e88155" width="1440"/>
+<p><strong>A 3B open-weights, policy-adaptive multimodal safety classifier that matches models up to 7x its size on text safety and sets a new state of the art on multimodal moderation.</strong></p>
+<p>“Does this content promote violence against a protected group? Is this image safe to show to a minor? Did the assistant refuse the request?”</p>
+<p>Every product that ships a model needs to answer questions like these — but the right answer depends on the product, the audience, and the moment. The same content can be fine for a cybersecurity research tool and harmful on a mental-health platform. Most guardrail models bake a fixed taxonomy of harm categories into their weights, so re-targeting them to a new deployment context means retraining. And because safety definitions differ across applications and domains, there is no single "correct" set of categories to model in the first place.</p>
+<p>Shieldstral takes a different approach: you write the policy as a plain-language question at inference time, and the model returns a calibrated safety score. No retraining, one interface for text and images, and a verdict from a single token. Please refer to our <a href="https://arxiv.org/abs/2607.25857">technical report</a> here.</p>
+<p>As an inaugural member of the <a href="https://blogs.nvidia.com/blog/open-secure-ai-alliance/">Open Secure AI Alliance</a> with NVIDIA and other organizations, today we're releasing <strong>Shieldstral</strong> as open weights under Apache 2.0, available for download <a href="https://huggingface.co/mistralai/Shieldstral-1.0-3B">here</a>. </p>
+<h2>Moderation as a question</h2>
+<p>Shieldstral frames content moderation as a <strong>binary question-answering task</strong>. Each request has three parts:</p>
+<ul><li><p><code>&lt;Instruct&gt;</code> — the evaluation context, strictness, and (optionally) a definition of what counts as unsafe content.</p></li><li><p><code>&lt;Query&gt;</code> — a single yes/no question, e.g. <em>"Does this content promote physical violence?"</em></p></li><li><p><code>&lt;Document&gt;</code> — the content to judge: a prompt, a response, a prompt–response pair, or an image with optional text.</p></li></ul>
+<p>At inference the model reads out only the <code>yes</code> and <code>no</code> logits and softmax-normalizes them into a continuous safety score. This one simple formulation does a lot of work: it unifies prompt classification, response moderation, refusal detection, and toxicity detection into a single problem; it lets policies live entirely in the prompt, so one checkpoint adapts to novel policies at deployment time.</p>
+<h2>Highlights</h2>
+<ul><li><p><strong>Strong performance</strong> — matches or outperforms open guard models up to 7× its size across text safety, refusal detection, policy adaptability, and multimodal benchmarks.</p></li><li><p><strong>Adaptive and flexible</strong> — a single natural-language interface covers text, image, and text+image content across prompts, responses, and prompt–response pairs. Policies are supplied as free-form queries and re-targeted at inference time, without retraining.</p></li><li><p><strong>Small, trained on heterogeneous sources</strong> — a 3B model that runs on a single 16GB GPU, trained on real and synthetic data with diverse label formats and taxonomies, consolidated into one framework.</p></li><li><p><strong>Continuous safety score</strong> — returns a calibrated <code>yes</code>/<code>no</code> probability from a single forward pass, so you can threshold or rank by confidence rather than relying on a discrete label.</p></li><li><p><strong>Open</strong> — Apache 2.0 weights.</p></li></ul>
+<h2>Benchmarks</h2>
+<p>We evaluate Shieldstral against open guard models up to 7x its size across four axes. All evaluation samples are held out from training.</p>
+<img height="600" src="https://mistral.ai/_astro/text-safety_2rJMGA.webp?dpl=6a71ffa2b153950008e88155" width="1024"/>
+<img height="600" src="https://mistral.ai/_astro/refusal-detection_1WoP1T.webp?dpl=6a71ffa2b153950008e88155" width="1024"/>
+<img height="644" src="https://mistral.ai/_astro/policy-adaptability_1pOutC.webp?dpl=6a71ffa2b153950008e88155" width="1024"/>
+<img height="600" src="https://mistral.ai/_astro/multimodal-safety_1fQs6X.webp?dpl=6a71ffa2b153950008e88155" width="1024"/>
+<h2>How we built it</h2>
+<p>The core idea is that a small model can beat much larger ones if the data is right. Getting the data right meant solving four problems:</p>
+<p><strong>Unify heterogeneous data.</strong> Public safety datasets disagree on taxonomies, labels, and annotation conventions — from binary safe/unsafe flags to fine-grained multi-label taxonomies. We convert every dataset into the same instruction–query–document format with a per-dataset processor, and we vary the wording of instructions, queries, and prompt–response delimiters so the model generalizes across phrasing instead of overfitting to one style. We also calibrate strictness per source — strict for adversarial jailbreaks, lenient for response-quality data — so the model learns <em>calibrated</em> decision boundaries. This lets us consolidate sources that would otherwise be incompatible.</p>
+<p><strong>Teach discrimination, not memorization.</strong> If trained on a fixed set of policy labels, a model learns only to classify those predefined policies, rather than reasoning about the precise boundaries of a given policy. This prevents generalization to novel policies. Instead, we construct sets of deliberately similar, easily confused policies and ask an LLM to rewrite safe text into contrastive pairs: each rewrite is engineered to violate one policy but not its sibling. This trains the model to <em>distinguish which specific policy a piece of content violates</em>, a skill that transfers to unseen, user-defined policies at inference time.</p>
+<p><strong>Ground safety in images.</strong> Unsafe images can't be synthezised by an LLM the way text can, so visual safety data is scarce. We supplement limited moderation datasets with general-purpose image datasets as high-quality negatives, mutate queries to augment the dataset, and filter every image–query pair through a vision–language reranker to reduce mislabeled data and hallucinations.</p>
+<p><strong>Combine complementary checkpoints.</strong> We fine-tune with LoRA and merge — via SLERP — a checkpoint calibrated on public data, one that adds fine-grained policy discrimination from generated data, and the base instruct model. The merge recovers common policy calibration and policy adaptability in a single model, and instruction-following from the base model transfers to the moderation task.</p>
+<p><strong>Forge</strong>. We built Shieldstral end to end on <a href="https://mistral.ai/products/forge/">Forge</a>, our platform for training, aligning, and evaluating custom models. Forge managed the infrastructure, data and model sharding, metrics, and logging on top of state-of-the-art distributed training, so the team could stay focused on the data which is what determines the safety model's quality.</p>
+<h2>What's next</h2>
+<p>Shieldstral is a step toward moderation that adapts to context instead of forcing every product through one frozen taxonomy. We're continuing to push on multilingual coverage, longer-document robustness, and broader multimodal safety — and we'd love to see what the community builds on top of it.</p>
+<p><em>BTW, we're hiring! If you want to help make AI better, see our </em><a href="https://mistral.ai/careers"><em>careers page</em></a><em>.</em></p>
+<img src="https://mistral.ai/cms-media/api/media/file/Icon-Model-Shieldstral.svg"/>
+<p>Shieldstral</p>
+<p>A 3B open-weights, policy-adaptive multimodal safety classifier that matches models up to 7x its size on text safety and sets a new state of the art on multimodal moderation.</p>
+<a href="https://docs.mistral.ai/models/model-cards/shieldstral-1-0">
+Read documentation
+</a>]]></content:encoded>
+      <guid isPermaLink="true">https://mistral.ai/news/shieldstral</guid>
+      <category>Solutions</category>
+      <pubDate>Tue, 04 Aug 2026 00:00:00 +0000</pubDate>
+      <media:content url="https://mistral.ai/_astro/Cover-Model_Cover-Shieldstral_Z1gJ2X9.webp?dpl=6a71ffa2b153950008e88155" type="image/webp" medium="image"/>
+    </item>
     <item>
       <title>Introducing Robostral Navigate</title>
       <link>https://mistral.ai/news/robostral-navigate</link>
@@ -2419,82 +2470,6 @@ $ /usr/local/lib/heaptrack/libexec/heaptrack_interpret &lt; heaptrack.2028233 | 
       <guid isPermaLink="true">https://mistral.ai/news/le-chat-enterprise</guid>
       <category>Product</category>
       <pubDate>Wed, 07 May 2025 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Medium is the new large.</title>
-      <link>https://mistral.ai/news/mistral-medium-3</link>
-      <description>At Mistral AI, we are continuously pushing the frontier for both open models ( Mistral Small , Mistral Large, Pixtral, many others) as well as enterprise models ( Mistral OCR , Mistral Saba, Ministral 3B / 8B, and more). All the way from Mistral 7B , our models have consistently demonstrated performance of significantly higher-weight and more expensive models. And today, we are excited to announce Mistral Medium 3 , pushing efficiency and usability of language models even further.</description>
-      <content:encoded><![CDATA[<img height="800" src="https://mistral.ai/_astro/Cover-Model-Medium_2iiBU6.webp?dpl=6a622da400bba40008995ff8" width="1440"/>
-<p>At Mistral AI, we are continuously pushing the frontier for both open models (<a href="https://mistral.ai/news/mistral-small-3-1">Mistral Small</a>, Mistral Large, Pixtral, many others) as well as enterprise models (<a href="https://mistral.ai/news/mistral-ocr">Mistral OCR</a>, Mistral Saba, Ministral 3B / 8B, and more). All the way from <a href="https://mistral.ai/news/announcing-mistral-7b">Mistral 7B</a>, our models have consistently demonstrated performance of significantly higher-weight and more expensive models. And today, we are excited to announce <strong>Mistral Medium 3</strong>, pushing efficiency and usability of language models even further.</p>
-<h2>Highlights.</h2>
-<ol><li><p>Mistral Medium 3 introduces a new class of models that balances</p></li><li><p><ul><li><p>SOTA performance</p></li><li><p>8X lower cost</p></li><li><p>simpler deployability to accelerate enterprise usage</p></li></ul></p></li><li><p>The model leads in professional use cases such as coding and multimodal understanding</p></li><li><p>The model delivers a range of enterprise capabilities including:</p></li><li><p><ul><li><p>Hybrid or on-premises / in-VPC deployment</p></li><li><p>Custom post-training </p></li><li><p>Integration into enterprise tools and systems</p></li></ul></p></li></ol>
-<h2>The perfect balance.</h2>
-<p>Mistral Medium 3 delivers frontier performance while being an order of magnitude less expensive. For instance, the model performs at or above 90% of Claude Sonnet 3.7 on benchmarks across the board at a significantly lower cost ($0.4 input / $2 output per M token). </p>
-<p>On performance, Mistral Medium 3 also surpasses leading open models such as Llama 4 Maverick and enterprise models such as Cohere Command A. On pricing, the model beats cost leaders such as DeepSeek v3, both in API and self-deployed systems. </p>
-<p>Additionally, Mistral Medium 3 can also be deployed on any cloud, including self-hosted environments of four GPUs and above. </p>
-<h2>Top-tier performance.</h2>
-<p>Mistral Medium 3 is designed to be frontier-class, particularly in categories of professional use. In the evaluations below, we use numbers reported previously by other providers wherever available, otherwise we use our own evaluation harness. Performance accuracy on all benchmarks were obtained through the same internal evaluation pipeline. Mistral Medium 3 particular stands out in coding and STEM tasks where it comes close to its very large and much slower competitors. </p>
-<p><figure><img alt="Table Medium 6" height="2026" src="https://mistral.ai/_astro/1a845a6e-34b8-4a0e-83d8-25a1436241a9_1sqlvI.webp?dpl=6a622da400bba40008995ff8" width="2540"/></figure></p>
-<p>*Performance accuracy on all benchmarks were obtained through the same internal evaluation pipeline.</p>
-<h2>Human Evals</h2>
-<p>In addition to academic benchmarks we report third-party human evaluations that are more representative of real-world use cases. Mistral Medium 3 continues to shine in the coding domain and delivers much better performance, across the board, than some of its much larger competitors.</p>
-<p><figure><img alt="Side by Side Surge Human Evals Coding" height="590" src="https://mistral.ai/_astro/629465bb-9a3b-4f37-b774-c0d9f86b20e8_DCxAy.webp?dpl=6a622da400bba40008995ff8" width="985"/></figure></p>
-<p><figure><img alt="Side by Side Surge Human Evals (1)" height="547" src="https://mistral.ai/_astro/cdd235b9-08a4-401a-a905-740458c75e21_1bPWoQ.webp?dpl=6a622da400bba40008995ff8" width="901"/></figure></p>
-<h2>Built for enterprise use cases.</h2>
-<p>Mistral Medium 3 stands out from other SOTA models in its ability to adapt to enterprise contexts. In a world where organizations are forced to choose between fine-tuning over API or self-deploying and customizing model behaviour from scratch, Mistral Medium 3 offers a path to comprehensively integrate intelligence into enterprise systems. With the help of Mistral’s <a href="https://mistral.ai/services">applied AI solutions</a>, the model can be continuously pretrained, fully fine tuned, and blended into enterprise knowledge bases, making it a high-fidelity solution for domain-specific training, continuous learning, and adaptive workflows. Beta customers across financial services, energy, and healthcare are using the model to enrich customer service with deep context, personalize business processes, and analyze complex datasets. </p>
-<h2>Available today. </h2>
-<p>The Mistral Medium 3 API is available starting today on Mistral La Plateforme and Amazon Sagemaker, and soon on IBM WatsonX, NVIDIA NIM, Azure AI Foundry, and Google Cloud Vertex. To deploy and customize the model in your environment, please <a href="https://mistral.ai/contact">contact us</a>. </p>
-<h2>One more thing…</h2>
-<p>With the launches of <a href="https://mistral.ai/news/mistral-small-3-1">Mistral Small</a> in March and Mistral Medium today, it’s no secret that we’re working on something ‘large’ over the next few weeks. With even our medium-sized model being resoundingly better than flagship open source models such as Llama 4 Maverick, we’re excited to ‘open’ up what’s to come :)  </p>]]></content:encoded>
-      <guid isPermaLink="true">https://mistral.ai/news/mistral-medium-3</guid>
-      <category>Research</category>
-      <pubDate>Wed, 07 May 2025 00:00:00 +0000</pubDate>
-      <media:content url="https://mistral.ai/_astro/Cover-Model-Medium_2iiBU6.webp?dpl=6a622da400bba40008995ff8" type="image/webp" medium="image"/>
-    </item>
-    <item>
-      <title>Evaluating RAG with LLM as a Judge</title>
-      <link>https://mistral.ai/news/llm-as-rag-judge</link>
-      <description>Large Language Models (LLMs) are rapidly becoming essential tools for creating widely-used applications. But making sure these models perform as expected is much easier said than done. Evaluating LLM systems isn't just about verifying the outputs are coherent, but also about making sure the answers are relevant and meet the necessary requirements.</description>
-      <content:encoded><![CDATA[<p>Large Language Models (LLMs) are rapidly becoming essential tools for creating widely-used applications. But making sure these models perform as expected is much easier said than done. Evaluating LLM systems isn't just about verifying the outputs are coherent, but also about making sure the answers are relevant and meet the necessary requirements.</p>
-<h2>The Rise of RAG Systems</h2>
-<p>Retrieval-Augmented Generation (RAG) systems have become a popular way to boost LLM capabilities. By pairing an LLM with a data retrieval system, LLMs can generate responses that are not only coherent but also grounded in relevant and current information. This helps cut down on moments when the model sounds confident but may actually be hallucinating.</p>
-<p>However, evaluating whether these RAG systems are performant isn't straightforward. It's not just about whether the output generated by the LLMs sounds correct, it's also about verifying at the source if the retrieved information is relevant and accurate. Traditional methods often miss these nuances, making a comprehensive evaluation framework essential.</p>
-<p>Taking a step back, there are many domains that face this same problem where there may be a lack of clear quantitative metrics or evaluation data to measure performance against and the measures of success may be more qualitative and nuanced.</p>
-<h3>LLM As A Judge: Using LLMs to Evaluate Other LLMs</h3>
-<p>In scenarios in which evaluations must be run at scale and there is a lack of human evaluators, “LLM As A Judge” has become a popular solution to evaluate the answers of LLM systems.</p>
-<p>The way an “LLM As A Judge” typically works is to create a “judge LLM” that given the answer of a “generator LLM” is instructed to grade that answer based on a given scale. This scale can be numerical (e.g a 1-10 or 0-3 scale), binary (e.g True or False) or qualitative (e.g “Excellent”, “Good”, “Okay”, “Bad”). This grade can then be averaged across all questions of an evaluation dataset for an overall weighted score.</p>
-<p>For the instruction prompt of an “LLM as A Judge” you can create custom criteria for the LLM to evaluate answers on. For example you can create specific grading criteria checking if responses are accurate, relevant, and grounded. Mistral’s models can be effectively used for both the generator and judge component of LLM systems.</p>
-<p><figure><img alt="Blog   Evaluating Rag Judge LLM" height="1408" src="https://mistral.ai/_astro/d0f68ba1-77f4-4d28-ad97-4c62b34e4787_Z1OcHiQ.webp?dpl=6a622da400bba40008995ff8" width="2461"/></figure></p>
-<h3>The RAG Triad: A More Holistic Evaluation Framework</h3>
-<p>The RAG Triad is a popular evaluation framework for evaluating RAG systems designed to check the reliability and contextual integrity of LLM responses from the data sources. It was introduced by <a href="https://www.trulens.org/getting_started/core_concepts/rag_triad/">TruLens</a> and several similar frameworks created like <a href="https://docs.ragas.io/en/latest/concepts/metrics/overview/">RAGAS</a> have been created in order to more qualitatively evaluate RAG systems. </p>
-<p>The RAG Triad focuses on three key areas:</p>
-<p>1. <strong>Context Relevance</strong>: This metric checks if the retrieved documents align well with the user's query. It ensures that the information used to generate the response is relevant and appropriate, setting the stage for a coherent and useful answer.</p>
-<p>2. <strong>Groundedness</strong>: This metric verifies if the generated response is based accurately on the retrieved context. It ensures that the LLM's output is factual and reliable, reducing the risk of those pesky hallucinations.</p>
-<p>3. <strong>Answer Relevance</strong>: This metric assesses how well the final response addresses the user's original query. It ensures that the generated answer is helpful and on point, aligning with the user's intent and providing valuable insights.</p>
-<p>By using the RAG Triad, evaluators can get a comprehensive view of the LLM's performance, spot potential issues, and ensure that the responses are accurate, reliable, and contextually sound. This framework helps build trustworthy interactions between humans, AI and knowledge bases.</p>
-<p><figure><img alt="Blog   Evaluating Rag Groundedness" height="1502" src="https://mistral.ai/_astro/42c8c934-bcf2-4450-b33a-5b90079f4ec0_Z1Qgu9i.webp?dpl=6a622da400bba40008995ff8" width="2700"/></figure></p>
-<p>This is particularly useful in evaluating a RAG LLM system end-to-end as it includes assessing both the retrieval and generation steps. This helps evaluate not just the LLM answer, but also it’s correctness relative to the source data retrieved.</p>
-<h3>Structured Outputs: A Practical Solution</h3>
-<p>Custom structured outputs is a recent feature launched in our API which allows you to control the output format of LLMs and give values in a structured machine readable way so you have greater reliability.</p>
-<p>Mistral's models together with structured outputs offer a practical way to implement the RAG triad and combat common evaluation challenges. By setting a clear criteria and schema for values, structured outputs help you build a more reliable “LLM As A Judge” that can be used for evaluating LLM systems.</p>
-<p>Structured outputs sets a perfect framework to define new and reusable criteria and enforce a format that is then easily machine readable for evaluation.</p>
-<figure><pre><code>from pydantic import BaseModel, Field
-# Assuming Score is defined elsewhere, e.g.:# Score = int | float | Enum  # Replace with your actual Score type
-SCORE_DESCRIPTION = "A numerical or categorical score representing the evaluation metric."
-class ContextRelevance(BaseModel):    explanation: str = Field(        ...,        description=(            "Step-by-step reasoning explaining how the retrieved context aligns with the user's query. "            "Consider the relevance of the information to the query's intent and the appropriateness of the context "            "in providing a coherent and useful response."        )    )    score: Score = Field(..., description=SCORE_DESCRIPTION)
-class AnswerRelevance(BaseModel):    explanation: str = Field(        ...,        description=(            "Step-by-step reasoning explaining how well the generated answer addresses the user's original query. "            "Consider the helpfulness and on-point nature of the answer, aligning with the user's intent and providing valuable insights."        )    )    score: Score = Field(..., description=SCORE_DESCRIPTION)
-class Groundedness(BaseModel):    explanation: str = Field(        ...,        description=(            "Step-by-step reasoning explaining how faithful the generated answer is to the retrieved context. "            "Consider the factual accuracy and reliability of the answer, ensuring it is grounded in the retrieved information."        )    )    score: Score = Field(..., description=SCORE_DESCRIPTION)
-class RAGEvaluation(BaseModel):    context_relevance: ContextRelevance = Field(        ...,        description="Evaluation of the context relevance to the query, considering how well the retrieved context aligns with the user's intent."    )    answer_relevance: AnswerRelevance = Field(        ...,        description="Evaluation of the answer relevance to the query, assessing how well the generated answer addresses the user's original query."    )    groundedness: Groundedness = Field(        ...,        description="Evaluation of the groundedness of the generated answer, ensuring it is faithful to the retrieved context."    )</code></pre></figure>
-<h2>Conclusion</h2>
-<p>Evaluating LLM systems is crucial for developing reliable AI applications. The RAG Triad, along with Mistral's structured outputs, provides a robust framework for assessing LLM performance with LLM as a judge. By focusing on context relevance, groundedness, and answer relevance, we can ensure that LLM responses are more accurate and meaningful. This approach enhances the user experience and the reliability of AI-driven applications, creating a more trustworthy interaction with the AI system.</p>
-<h3>Full Code</h3>
-<p>You can find the full code for LLM As A Judge for RAG here: <br/><a href="https://github.com/mistralai/cookbook/blob/main/mistral/evaluation/RAG_evaluation.ipynb">https://github.com/mistralai/cookbook/blob/main/mistral/evaluation/RAG_evaluation.ipynb</a></p>
-<h3>Contact Us</h3>
-<p>Interested in more custom work with the Mistral AI team? <a href="https://mistral.ai/contact">Contact us</a> for solution support</p>]]></content:encoded>
-      <guid isPermaLink="true">https://mistral.ai/news/llm-as-rag-judge</guid>
-      <category>Solutions</category>
-      <pubDate>Wed, 09 Apr 2025 00:00:00 +0000</pubDate>
-      <media:content url="https://mistral.ai/_astro/d0f68ba1-77f4-4d28-ad97-4c62b34e4787_Z1OcHiQ.webp?dpl=6a622da400bba40008995ff8" type="image/webp" medium="image"/>
     </item>
   </channel>
 </rss>
