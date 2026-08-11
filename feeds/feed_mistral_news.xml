@@ -2429,35 +2429,47 @@ $ /usr/local/lib/heaptrack/libexec/heaptrack_interpret &lt; heaptrack.2028233 | 
       <media:content url="https://mistral.ai/_astro/Cover-Model-Devstral_1Ib6un.webp?dpl=6a622da400bba40008995ff8" type="image/webp" medium="image"/>
     </item>
     <item>
-      <title>Medium is the new large.</title>
-      <link>https://mistral.ai/news/mistral-medium-3</link>
-      <description>At Mistral AI, we are continuously pushing the frontier for both open models ( Mistral Small , Mistral Large, Pixtral, many others) as well as enterprise models ( Mistral OCR , Mistral Saba, Ministral 3B / 8B, and more). All the way from Mistral 7B , our models have consistently demonstrated performance of significantly higher-weight and more expensive models. And today, we are excited to announce Mistral Medium 3 , pushing efficiency and usability of language models even further.</description>
-      <content:encoded><![CDATA[<img height="800" src="https://mistral.ai/_astro/Cover-Model-Medium_2iiBU6.webp?dpl=6a72f8954ba1c000088e612d" width="1440"/>
-<p>At Mistral AI, we are continuously pushing the frontier for both open models (<a href="https://mistral.ai/news/mistral-small-3-1">Mistral Small</a>, Mistral Large, Pixtral, many others) as well as enterprise models (<a href="https://mistral.ai/news/mistral-ocr">Mistral OCR</a>, Mistral Saba, Ministral 3B / 8B, and more). All the way from <a href="https://mistral.ai/news/announcing-mistral-7b">Mistral 7B</a>, our models have consistently demonstrated performance of significantly higher-weight and more expensive models. And today, we are excited to announce <strong>Mistral Medium 3</strong>, pushing efficiency and usability of language models even further.</p>
-<h2>Highlights.</h2>
-<ol><li><p>Mistral Medium 3 introduces a new class of models that balances</p></li><li><p><ul><li><p>SOTA performance</p></li><li><p>8X lower cost</p></li><li><p>simpler deployability to accelerate enterprise usage</p></li></ul></p></li><li><p>The model leads in professional use cases such as coding and multimodal understanding</p></li><li><p>The model delivers a range of enterprise capabilities including:</p></li><li><p><ul><li><p>Hybrid or on-premises / in-VPC deployment</p></li><li><p>Custom post-training </p></li><li><p>Integration into enterprise tools and systems</p></li></ul></p></li></ol>
-<h2>The perfect balance.</h2>
-<p>Mistral Medium 3 delivers frontier performance while being an order of magnitude less expensive. For instance, the model performs at or above 90% of Claude Sonnet 3.7 on benchmarks across the board at a significantly lower cost ($0.4 input / $2 output per M token). </p>
-<p>On performance, Mistral Medium 3 also surpasses leading open models such as Llama 4 Maverick and enterprise models such as Cohere Command A. On pricing, the model beats cost leaders such as DeepSeek v3, both in API and self-deployed systems. </p>
-<p>Additionally, Mistral Medium 3 can also be deployed on any cloud, including self-hosted environments of four GPUs and above. </p>
-<h2>Top-tier performance.</h2>
-<p>Mistral Medium 3 is designed to be frontier-class, particularly in categories of professional use. In the evaluations below, we use numbers reported previously by other providers wherever available, otherwise we use our own evaluation harness. Performance accuracy on all benchmarks were obtained through the same internal evaluation pipeline. Mistral Medium 3 particular stands out in coding and STEM tasks where it comes close to its very large and much slower competitors. </p>
-<p><figure><img alt="Table Medium 6" height="2026" src="https://mistral.ai/_astro/1a845a6e-34b8-4a0e-83d8-25a1436241a9_1sqlvI.webp?dpl=6a72f8954ba1c000088e612d" width="2540"/></figure></p>
-<p>*Performance accuracy on all benchmarks were obtained through the same internal evaluation pipeline.</p>
-<h2>Human Evals</h2>
-<p>In addition to academic benchmarks we report third-party human evaluations that are more representative of real-world use cases. Mistral Medium 3 continues to shine in the coding domain and delivers much better performance, across the board, than some of its much larger competitors.</p>
-<p><figure><img alt="Side by Side Surge Human Evals Coding" height="590" src="https://mistral.ai/_astro/629465bb-9a3b-4f37-b774-c0d9f86b20e8_DCxAy.webp?dpl=6a72f8954ba1c000088e612d" width="985"/></figure></p>
-<p><figure><img alt="Side by Side Surge Human Evals (1)" height="547" src="https://mistral.ai/_astro/cdd235b9-08a4-401a-a905-740458c75e21_1bPWoQ.webp?dpl=6a72f8954ba1c000088e612d" width="901"/></figure></p>
-<h2>Built for enterprise use cases.</h2>
-<p>Mistral Medium 3 stands out from other SOTA models in its ability to adapt to enterprise contexts. In a world where organizations are forced to choose between fine-tuning over API or self-deploying and customizing model behaviour from scratch, Mistral Medium 3 offers a path to comprehensively integrate intelligence into enterprise systems. With the help of Mistral’s <a href="https://mistral.ai/services">applied AI solutions</a>, the model can be continuously pretrained, fully fine tuned, and blended into enterprise knowledge bases, making it a high-fidelity solution for domain-specific training, continuous learning, and adaptive workflows. Beta customers across financial services, energy, and healthcare are using the model to enrich customer service with deep context, personalize business processes, and analyze complex datasets. </p>
-<h2>Available today. </h2>
-<p>The Mistral Medium 3 API is available starting today on Mistral La Plateforme and Amazon Sagemaker, and soon on IBM WatsonX, NVIDIA NIM, Azure AI Foundry, and Google Cloud Vertex. To deploy and customize the model in your environment, please <a href="https://mistral.ai/contact">contact us</a>. </p>
-<h2>One more thing…</h2>
-<p>With the launches of <a href="https://mistral.ai/news/mistral-small-3-1">Mistral Small</a> in March and Mistral Medium today, it’s no secret that we’re working on something ‘large’ over the next few weeks. With even our medium-sized model being resoundingly better than flagship open source models such as Llama 4 Maverick, we’re excited to ‘open’ up what’s to come :)  </p>]]></content:encoded>
-      <guid isPermaLink="true">https://mistral.ai/news/mistral-medium-3</guid>
-      <category>Research</category>
+      <title>Introducing Le Chat Enterprise</title>
+      <link>https://mistral.ai/news/le-chat-enterprise</link>
+      <description>Today, we’re proud to introduce Le Chat Enterprise — a feature-rich AI assistant, powered by our brand new Mistral Medium 3 model . Solving enterprise AI challenges, like tool fragmentation, insecure knowledge integration, rigid models, and slow ROI, it delivers a unified AI platform for all organizational work.</description>
+      <content:encoded><![CDATA[<p>Today, we’re proud to introduce <a href="https://mistral.ai/products/le-chat">Le Chat Enterprise</a> — a feature-rich AI assistant, powered by our brand new <a href="https://mistral.ai/news/mistral-medium-3">Mistral Medium 3 model</a>. Solving enterprise AI challenges, like tool fragmentation, insecure knowledge integration, rigid models, and slow ROI, it delivers a unified AI platform for all organizational work.</p>
+<p>Building on the foundation of Le Chat’s productivity tools, the new plan includes:</p>
+<ul><li><p>Enterprise search</p></li><li><p>Agent builders</p></li><li><p>Custom data and tool connectors</p></li><li><p>Document libraries</p></li><li><p>Custom models</p></li><li><p>Hybrid deployments</p></li></ul>
+<p>[All features rolling out over the next two weeks.]</p>
+<p>We’re also announcing several big improvements to Le Chat Pro and Team — our plans for individuals and growing teams.</p>
+<p>Le Chat Enterprise aims to provide AI productivity your team needs, in one platform, is fully private, and deeply customizable. Plus, our world-class AI engineering team offers support all the way through to value delivery.</p>
+<p>Empower your team to be even more productive, more competitive, more everything.</p>
+<iframe allowfullscreen="" height="315" src="https://www.youtube.com/embed/7Ssb4lybDag?si=uDW8R4kbvHmDbMci" width="560"></iframe>
+<h2>Unified AI for all organizational work.</h2>
+<p>Transform complex tasks into achievable outcomes with AI that speaks every professional language.</p>
+<p>Whether your team is analyzing data, writing code, or creating content, they can access cross-domain expertise through intuitive interfaces designed for both technical and non-technical users.</p>
+<h3>Enterprise search with secure data, tool connections and libraries.</h3>
+<p>Unlock intelligence from your enterprise data, starting with Google Drive, Sharepoint, OneDrive, Google Calendar, and Gmail. With more connectors coming soon, including templates to build your own.</p>
+<ul><li><p>Get improved, personalized answers by connecting Le Chat to your knowledge.</p></li><li><p>Organize external data sources, documents, and web content into complete knowledge bases for the most relevant answers.</p></li><li><p>Preview files quickly with Auto Summary for faster consumption.</p></li></ul>
+<iframe allowfullscreen="" height="315" src="https://www.youtube.com/embed/pvsSFUzEfjQ?si=anPGYFJ4xio4BlBb" width="560"></iframe>
+<p>Le Chat enables your team to maintain a handy personal library of frequently used documents across uploaded files as well as Drive / Sharepoint. Cite, extract, and analyze critical information.</p>
+<p>We’re also adding MCP support soon, so your organization can easily connect Le Chat to even more enterprise systems.</p>
+<h3>Build and deploy custom AI agents for precise, automated task handling.</h3>
+<p>Automate routine tasks with AI agents, connected to your apps and libraries for contextual understanding across tools. Le Chat will enable your team to easily build custom assistants that match your own requirements — no code required.</p>
+<iframe allowfullscreen="" height="315" src="https://www.youtube.com/embed/dt8KbVyY_Ek?si=Ws_jwZoM-tXseJkh" width="560"></iframe>
+<h2>Privacy-first.</h2>
+<p>Deploy Le Chat anywhere: self-hosted, in your public or private cloud, or as a service hosted in the Mistral cloud. Privacy-first data connections to enterprise tools —  with strict ACL adherence — ensuring full data protection and safety. </p>
+<p>Build your AI strategy with true flexibility — Mistral AI gives you the independence to choose your ideal infrastructure, without lock-in.</p>
+<h2>Complete control and configurability. </h2>
+<p>We offer deep customizability and full control across the stack, from models and the platform, all the way to the interfaces.</p>
+<p>You can customize your AI experience through bespoke integrations to your team’s enterprise data and custom platform and model capabilities, like personalizing your assistant with stored memories. Or take it further by enabling user feedback loops for continuous model self-improvement.</p>
+<p>You'll have full control of your implementation within your security domain while providing employees access to SOTA intelligence.</p>
+<p>Additionally, we provide comprehensive audit logging and storage.</p>
+<h2>Advanced solutioning and value delivery.</h2>
+<p>Leverage Mistral applied AI expertise to tailor models to fit your exact use case. We provide hands-on assistance by the world’s best AI engineers and scientists across deployment, solutioning, safety, and beyond.</p>
+<h2>Get started today.</h2>
+<p>Experience frontier artificial intelligence with Le Chat Pro, Team Enterprise plans, suited to your organization’s needs.</p>
+<p>Le Chat Enterprise is now available in Google Cloud Marketplace, and will soon be on Azure AI and AWS Marketplace.</p>
+<p><a href="https://mistral.ai/contact/">Contact us</a> to learn more about how Le Chat Enterprise can transform your organization.</p>
+<p>To get started with Le Chat today, try it at <a href="http://chat.mistral.ai">chat.mistral.ai</a>, or download our mobile app from the <a href="https://apps.apple.com/us/app/le-chat-by-mistral-ai/id6740410176">App Store</a> or <a href="https://play.google.com/store/apps/details?id=ai.mistral.chat">Play Store</a> — no credit card needed.</p>]]></content:encoded>
+      <guid isPermaLink="true">https://mistral.ai/news/le-chat-enterprise</guid>
+      <category>Product</category>
       <pubDate>Wed, 07 May 2025 00:00:00 +0000</pubDate>
-      <media:content url="https://mistral.ai/_astro/Cover-Model-Medium_2iiBU6.webp?dpl=6a72f8954ba1c000088e612d" type="image/webp" medium="image"/>
     </item>
   </channel>
 </rss>
