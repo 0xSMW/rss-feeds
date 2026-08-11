@@ -8,7 +8,1299 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 10 Aug 2026 23:45:50 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 11 Aug 2026 12:23:07 +0000</lastBuildDate>
+    <item>
+      <title>OpenAI's Only Ethicist Reportedly Left Last Month</title>
+      <link>https://gizmodo.com/openais-only-ethicist-reportedly-left-last-month-she-wasnt-replaced-2000796883</link>
+      <description>OpenAI's Only Ethicist Reportedly Left Last Month</description>
+      <content:encoded><![CDATA[<p><a href="https://news.ycombinator.com/item?id=49257160">Comments on Hacker News</a></p>]]></content:encoded>
+      <guid isPermaLink="true">https://gizmodo.com/openais-only-ethicist-reportedly-left-last-month-she-wasnt-replaced-2000796883</guid>
+      <category>Hacker News</category>
+      <pubDate>Tue, 11 Aug 2026 12:23:07 +0000</pubDate>
+      <dc:creator>ilamont</dc:creator>
+    </item>
+    <item>
+      <title>Closing Canario Terminal source code</title>
+      <link>https://rapha.land/closing-canario-terminal-source-code/</link>
+      <description>Why Canario terminal is closed source: time, maintainer burnout, and building something just for myself.</description>
+      <content:encoded><![CDATA[<p>11 Aug • 2026</p>
+<p>Disclaimer: No AI was used to write this.</p>
+<p>Also, writing this blog post for myself, so I can reason with myself again in the future ha.</p>
+<p>I have been doing Open Source since I was 17y old. My first pull request was fixing some broken links in Brad Frost’s <a href="https://github.com/bradfrost/this-is-responsive/pull/77">This is responsive</a> project.</p>
+<p>I spoke in free software conferences when I was 18y, got engaged, my dream job for many and many years was work at Mozilla. Most of the companies I’ve worked for, I helped to kick start open sourcing internal projects.</p>
+<p>However I decided to close source Canario terminal.</p>
+<p>The reason is that Canario is something I built for myself, and I simply don’t have the time to maintain it as an open source project. Rio and other stuff already drains everything I have. It’s the same reason I never open sourced boo. Which is a shame, because boo introduces a first class replacement for the LSP system.</p>
+<p>People underestimate what open source costs from the maintainer side. It’s not just writing code. It’s issues, pull requests, discussions, people demanding things from you for free. I got spammed like crazy. And now with AI, spamming a maintainer is so easy: low effort issues, generated pull requests, and every single one of them takes a bit of your time and energy.</p>
+<p>Three things I want to make clear:</p>
+<ol>
+<li>Canario doesn’t have telemetry. The only request it does is to check for updates.</li>
+<li>If closed source is a big deal for you, I am sorry, but there’s many other wonderful options in the world.</li>
+<li>The Canario source code is still there in the older versions of Rio. People can fork that if they want to. All good from my side.</li>
+</ol>
+<p>Also want to explain why I built Canario in the first place. I was watching my friends at work using so many half-baked solutions and I thought: I don’t want to use any of that. So I built it for myself. No VC money, no expectations of getting rich. Just a terminal I wanted to use for agentic code.</p>
+<p>If you look at every project I did that got popular (react-tv, react-ape, Rio, etc), all of them were me fixing my own problems. Boo and Canario are the same thing, but this time I don’t have the same energy and time I had before.</p>
+<p>To be clear: I will continue maintaining Rio, that’s a project I love. But Canario will be developed on its own pace. No drop-in requests, no AI spam issues or PRs. Just me building the thing I want to use.</p>
+<p>Best,</p>
+<p>Raphael.</p>
+<p><a href="https://news.ycombinator.com/item?id=49254881">Comments on Hacker News</a></p>]]></content:encoded>
+      <guid isPermaLink="true">https://rapha.land/closing-canario-terminal-source-code/</guid>
+      <category>Hacker News</category>
+      <pubDate>Tue, 11 Aug 2026 08:16:19 +0000</pubDate>
+      <dc:creator>atan2</dc:creator>
+    </item>
+    <item>
+      <title>France to ban unsolicited telemarketing calls</title>
+      <link>https://www.lemonde.fr/en/france/article/2026/08/06/france-to-ban-unsolicited-telemarketing-calls-from-august-11_6756208_7.html</link>
+      <description>France to ban unsolicited telemarketing calls</description>
+      <content:encoded><![CDATA[<p><a href="https://news.ycombinator.com/item?id=49254880">Comments on Hacker News</a></p>]]></content:encoded>
+      <guid isPermaLink="true">https://www.lemonde.fr/en/france/article/2026/08/06/france-to-ban-unsolicited-telemarketing-calls-from-august-11_6756208_7.html</guid>
+      <category>Hacker News</category>
+      <pubDate>Tue, 11 Aug 2026 08:15:46 +0000</pubDate>
+      <dc:creator>aziaziazi</dc:creator>
+    </item>
+    <item>
+      <title>Show HN: Mcptoon – Token-efficient MCP CLI client</title>
+      <link>https://github.com/activeing123/mcptoon</link>
+      <description>Token-efficient MCP CLI client. 97% less tokens on tool discovery, 40-60% on results. Zero deps. Cross-platform. Works with every AI agent. - activeing123/mcptoon</description>
+      <content:encoded><![CDATA[<h2>mcptoon</h2>
+<p><strong>MCP tool discovery costs 10,000+ tokens. mcptoon costs 350.</strong></p>
+<p><em>One MCP client for every AI agent. Cross-platform. Zero dependencies. Battle-tested with 255+ tools.</em></p>
+<p><a href="https://pypi.org/project/mcptoon/"><img alt="Python 3.10+" src="https://camo.githubusercontent.com/bf139b4e7209c9a19d178ba34499ffd9a95e404d13327eaf7bde6376adf78008/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f507974686f6e2d332e31302532422d626c75653f6c6f676f3d707974686f6e266c6f676f436f6c6f723d7768697465"/></a>
+<a href="https://github.com/activeing123/mcptoon/blob/main/LICENSE"><img alt="License: Apache 2.0" src="https://camo.githubusercontent.com/4adf1dd0e83aeb48aa549c3fc43494b3d4516998b1fc0584dc6a86a0ccb5e1e7/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f4c6963656e73652d417061636865253230322e302d677265656e"/></a>
+<a href="#privacy"><img alt="Zero Dependencies" src="https://camo.githubusercontent.com/a393d0f745e2c24ae73c786f52874e89b3be7dd5eec5e74ee7153512b736f682/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f446570656e64656e636965732d5a45524f2d6f72616e6765"/></a>
+<a href="https://github.com/activeing123/mcptoon"><img alt="GitHub Stars" src="https://camo.githubusercontent.com/f0178d54f5ac072fc73550e93d5f8ff473bff7645ab10ee0833ff4caf750174e/68747470733a2f2f696d672e736869656c64732e696f2f6769746875622f73746172732f616374697665696e673132332f6d6370746f6f6e3f7374796c653d736f6369616c"/></a></p>
+<p><strong>If this saves you tokens, please star the repo — it helps others discover it.</strong></p>
+<p><a href="https://github.com/activeing123/mcptoon/blob/main/README.md">English</a> | <a href="https://github.com/activeing123/mcptoon/blob/main/README.zh-CN.md">中文文档</a> | <a href="https://github.com/activeing123/mcptoon/issues">Report Bug</a> | <a href="https://github.com/activeing123/mcptoon/issues">Request Feature</a></p>
+<p><strong><a href="#whats-new-in-v020">What's new in v0.2.0</a></strong> — stdin support, doctor command, tool poisoning guard, fuzzy match, cross-agent format export</p>
+<hr/>
+<h2>The problem</h2>
+<p>Every MCP-enabled conversation burns tokens on <strong>syntax, not data</strong>:</p>
+<ul>
+<li>Your agent connects to 5 MCP servers. Listing their tools: <strong>~10,000 tokens</strong> of JSON.</li>
+<li>Your agent calls 20 tools. Each returns 500-3,000 tokens wrapped in <code>{"content":[{"type":"text","text":"..."}]}</code>.</li>
+<li>Total MCP overhead: <strong>40,000-70,000 tokens</strong> before any actual thinking happens.</li>
+</ul>
+<p>On a 128K context window, that's <strong>30-55% gone</strong>. Not on work. On syntax.</p>
+<h2>The solution</h2>
+<p>mcptoon is a CLI client that connects to any MCP server (stdio or HTTP) and outputs <strong>TOON</strong> (Token-Optimized Object Notation) instead of JSON.</p>
+<table>
+<thead>
+<tr>
+<th>Operation</th>
+<th>JSON tokens</th>
+<th>mcptoon tokens</th>
+<th>Savings</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Tool discovery (96 tools)</td>
+<td>~2,000</td>
+<td>~60</td>
+<td><strong>97%</strong></td>
+</tr>
+<tr>
+<td>Tool result (structured data)</td>
+<td>~800</td>
+<td>~350</td>
+<td><strong>56%</strong></td>
+</tr>
+<tr>
+<td>Tool result (raw HTML/text)</td>
+<td>~1,000</td>
+<td>~900</td>
+<td><strong>10%</strong></td>
+</tr>
+</tbody>
+</table>
+<p>Zero dependencies. Pure Python. 50KB. Works with <strong>every AI agent</strong> — Claude Code, Codex, OpenCode, Cursor, CatPaw, anything that runs shell commands.</p>
+<h2>Show me</h2>
+<p><strong>JSON (287 tokens)</strong> — what every other MCP client returns:</p>
+<pre>[
+  {"name": "search_web", "description": "Search the web for information",
+   "inputSchema": {"type": "object", "properties": {"query": {"type": "string", "description": "Search query"}, "num_results": {"type": "number", "default": 5}}, "required": ["query"]}},
+  {"name": "fetch_url", "description": "Fetch content from a URL",
+   "inputSchema": {"type": "object", "properties": {"url": {"type": "string"}}, "required": ["url"]}}
+]</pre>
+<p><strong>TOON (5 tokens)</strong> — what mcptoon returns:</p>
+<pre><code>search_web fetch_url
+</code></pre>
+<p>98% reduction for tool discovery, 60% for full schema, zero information lost.</p>
+<h2>Quick start</h2>
+<pre>pip install mcptoon</pre>
+<p>Zero dependencies. 50KB. Python 3.10+. Windows, macOS, Linux.</p>
+<pre>mcptoon init                          # Sample config: ~/.mcptoon/config.json
+mcptoon add fetch --stdio npx -y @modelcontextprotocol/server-fetch
+mcptoon manifest --toon               # -&gt; fetch:fetch
+mcptoon call fetch fetch '{"url":"https://example.com"}' --toon
+mcptoon call fetch fetch '{"url":"https://example.com"}' --json   # when you need JSON</pre>
+<h2>How TOON works</h2>
+<table>
+<thead>
+<tr>
+<th>JSON</th>
+<th>TOON</th>
+<th>Why</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>{"name":"search","count":3}</code></td>
+<td><code>name:search|count:3</code></td>
+<td>Pipes replace braces + quotes + colon</td>
+</tr>
+<tr>
+<td><code>[1, 2, 3]</code></td>
+<td><code>1 2 3</code></td>
+<td>Spaces replace brackets + commas</td>
+</tr>
+<tr>
+<td><code>true</code> / <code>false</code></td>
+<td><code>T</code> / <code>F</code></td>
+<td>1 char vs 4-5</td>
+</tr>
+<tr>
+<td><code>null</code></td>
+<td><code>∅</code></td>
+<td>1 symbol vs 4 chars</td>
+</tr>
+<tr>
+<td><code>"line1\nline2"</code></td>
+<td><code>line1↲line2</code></td>
+<td>↲ replaces escape sequence</td>
+</tr>
+<tr>
+<td><code>{"a":{"b":[1,2]}}</code></td>
+<td><code>a:b:1_2</code></td>
+<td>Recursive compaction</td>
+</tr>
+</tbody>
+</table>
+<h2>Output formats</h2>
+<table>
+<thead>
+<tr>
+<th>Flag</th>
+<th>What you get</th>
+<th>Token footprint</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>--toon</code></td>
+<td>Compact notation, full semantics</td>
+<td>40-60% less than JSON</td>
+</tr>
+<tr>
+<td><code>--compact</code></td>
+<td>Tool names only, space-separated</td>
+<td>97% less than JSON</td>
+</tr>
+<tr>
+<td><code>--json</code></td>
+<td>Standard JSON (for scripts, CI)</td>
+<td>Baseline</td>
+</tr>
+<tr>
+<td><code>--raw</code></td>
+<td>Raw response, no parsing</td>
+<td>Full size</td>
+</tr>
+<tr>
+<td><code>--head N</code></td>
+<td>First N items only</td>
+<td>Variable</td>
+</tr>
+<tr>
+<td><code>--max-chars N</code></td>
+<td>Hard truncate at N chars</td>
+<td>Variable</td>
+</tr>
+<tr>
+<td><code>--full</code></td>
+<td>Disable the default 4000-char truncation</td>
+<td>Full size</td>
+</tr>
+</tbody>
+</table>
+<p>Set <code>MCPTOON_AGENT_TYPE=claude</code> and every call auto-selects <code>--toon</code>.</p>
+<h2>What's new in v0.2.0</h2>
+<p>Battle-tested features from production use with 255+ MCP tools across 23+ servers:</p>
+<h3><code>--stdin</code> for large payloads</h3>
+<p>OS command-line limits (32,767 chars on Windows, ~128KB on Linux) break MCP calls with large content. Now you can pipe arguments via stdin:</p>
+<pre># This fails on Windows if content &gt; 32KB:
+mcptoon call fetch put '{"content":"...huge..."}'
+
+# This always works:
+echo '{"content":"...huge..."}' | mcptoon call fetch put --stdin --toon
+mcptoon call fetch put --stdin --toon &lt; payload.json</pre>
+<h3><code>doctor</code> — one-command self-diagnosis</h3>
+<pre>$ mcptoon doctor
+  ✓ Python 3.12.0 (&gt;=3.10 required)
+  ✓ Config: ~/.mcptoon/config.json (5 servers)
+  ✓ Cache dir: ~/.cache/mcptoon
+  ✓ fetch              [stdio]  1 tools
+  ✓ github             [stdio]  12 tools
+  ✗ myapi              [http]   ERROR: Connection refused
+  - MCPTOON_AGENT_TYPE not set (defaulting to auto)
+
+  5 checks, 1 issue(s)</pre>
+<h3><code>discover</code> — server health check</h3>
+<pre>$ mcptoon discover
+Discovered 3 server(s):
+
+  ✓ fetch                [stdio]   1 tools  ok
+  ✓ github               [stdio]  12 tools  ok
+  ✗ myapi                [http]    0 tools  error
+    └─ Connection refused</pre>
+<h3>Tool poisoning guard</h3>
+<p>MCP servers return arbitrary content. A compromised server could inject instructions into your agent's context. mcptoon now detects and blocks common prompt injection patterns:</p>
+<pre>$ mcptoon call malicious get_data '{}'
+Error [TOOL_POISONING]: Tool result may contain prompt injection:
+  potential prompt injection detected: contains 'ignore previous instructions'</pre>
+<p>Patterns detected: instruction overrides, hidden <code>&lt;!-- assistant:</code> directives, <code>[INST]</code>/<code>&lt;&lt;SYS&gt;&gt;</code> tags, data exfiltration attempts.</p>
+<h3>Fuzzy match "Did you mean?"</h3>
+<pre>$ mcptoon call exa sarch '{"query":"AI"}'
+Error [METHOD_NOT_FOUND]: Unknown tool: sarch
+Did you mean: search, search_all</pre>
+<h3>Cross-agent format export</h3>
+<p>Export your tool manifest for non-CLI agents:</p>
+<pre># OpenAI function calling
+mcptoon manifest --format openai &gt; functions.json
+
+# OpenAPI 3.0 spec
+mcptoon manifest --format openapi &gt; openapi.json
+
+# MCP tools/list format
+mcptoon manifest --format mcp &gt; mcp-tools.json</pre>
+<h2>vs. other MCP clients</h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>mcptoon</th>
+<th>mcp-cli</th>
+<th>mcporter</th>
+<th>raw MCP SDK</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Token savings</td>
+<td><strong>97% manifest, 40-60% results</strong></td>
+<td>0%</td>
+<td>0%</td>
+<td>0%</td>
+</tr>
+<tr>
+<td>Works with all agents</td>
+<td><strong>yes</strong> (Claude Code, Codex, OpenCode, Cursor, any)</td>
+<td>Claude only</td>
+<td>Claude only</td>
+<td>varies</td>
+</tr>
+<tr>
+<td>One config for all agents</td>
+<td><strong>yes</strong></td>
+<td>no</td>
+<td>no</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Output formats</td>
+<td>TOON + JSON + compact + <strong>openai + openapi + mcp</strong></td>
+<td>JSON</td>
+<td>JSON</td>
+<td>JSON</td>
+</tr>
+<tr>
+<td>Dependencies</td>
+<td><strong>0</strong></td>
+<td>5-20</td>
+<td>npm</td>
+<td>3-8</td>
+</tr>
+<tr>
+<td>Dangerous-op blocking</td>
+<td>yes</td>
+<td>no</td>
+<td>no</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Tool poisoning guard</td>
+<td><strong>yes</strong></td>
+<td>no</td>
+<td>no</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Fuzzy match suggestions</td>
+<td><strong>yes</strong></td>
+<td>no</td>
+<td>no</td>
+<td>no</td>
+</tr>
+<tr>
+<td><code>--stdin</code> large payloads</td>
+<td><strong>yes</strong></td>
+<td>no</td>
+<td>no</td>
+<td>no</td>
+</tr>
+<tr>
+<td><code>doctor</code> self-diagnosis</td>
+<td><strong>yes</strong></td>
+<td>no</td>
+<td>no</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Usage tracking</td>
+<td>yes (local)</td>
+<td>no</td>
+<td>no</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Schema cache</td>
+<td>yes (5min)</td>
+<td>no</td>
+<td>no</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Install size</td>
+<td>~50KB</td>
+<td>~50MB+</td>
+<td>~30MB</td>
+<td>~10MB</td>
+</tr>
+<tr>
+<td>Platform support</td>
+<td><strong>Windows, macOS, Linux</strong></td>
+<td>Linux/macOS</td>
+<td>macOS</td>
+<td>varies</td>
+</tr>
+</tbody>
+</table>
+<h2>Works with every agent</h2>
+<p>mcptoon is a CLI tool. If your agent can run shell commands, it can use mcptoon.</p>
+<table>
+<thead>
+<tr>
+<th>Agent</th>
+<th>How to use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Claude Code</strong></td>
+<td>Write <code>mcptoon</code> commands in SKILL.md files</td>
+</tr>
+<tr>
+<td><strong>Codex (OpenAI)</strong></td>
+<td>Add <code>mcptoon</code> to AGENTS.md</td>
+</tr>
+<tr>
+<td><strong>OpenCode</strong></td>
+<td>Use <code>mcptoon</code> in custom commands</td>
+</tr>
+<tr>
+<td><strong>Cursor</strong></td>
+<td>Add <code>mcptoon</code> to .cursorrules</td>
+</tr>
+<tr>
+<td><strong>CatPaw</strong></td>
+<td>Write <code>mcptoon</code> commands in skill files</td>
+</tr>
+<tr>
+<td><strong>Any agent</strong></td>
+<td>If it runs shell commands, it can call <code>mcptoon</code></td>
+</tr>
+</tbody>
+</table>
+<p>Configure MCP servers <strong>once</strong> in <code>~/.mcptoon/config.json</code>. Every agent shares the same servers, the same tools, the same token savings.</p>
+<h3>Claude Code</h3>
+<pre>export MCPTOON_AGENT_TYPE=claude   # auto-select --toon</pre>
+<pre># In ~/.claude/skills/mcp-tools/SKILL.md
+Search the web: mcptoon call exa search '{"query":"AI news"}'
+List available tools: mcptoon manifest --toon
+Fetch a URL: mcptoon call fetch fetch '{"url":"https://example.com"}'</pre>
+<h3>Codex (OpenAI)</h3>
+<pre># In AGENTS.md or system prompt
+Use mcptoon to call MCP tools. It saves 60% tokens vs JSON.
+- List tools: mcptoon manifest --toon
+- Call a tool: mcptoon call &lt;server&gt; &lt;tool&gt; '{"args":"here"}' --toon</pre>
+<h2>Python API</h2>
+<pre>from mcptoon.client import MCPClient
+from mcptoon.output import toon
+
+with MCPClient(stdio=["npx", "-y", "@modelcontextprotocol/server-fetch"]) as c:
+    tools = c.list_tools()
+    print(toon(tools))         # compact TOON
+    result = c.call_tool("fetch", {"url": "https://example.com"})
+    print(toon(result))</pre>
+<h2>Custom handlers — bypass MCP entirely</h2>
+<pre>from mcptoon.router import register
+
+@register("my-database", "db")
+def handle_db(tool, args):
+    if tool == "query":
+        return {"rows": my_db.execute(args["sql"])}
+    return None  # falls through to MCP</pre>
+<h2>Config</h2>
+<pre># stdio (any npx MCP server)
+mcptoon add fetch --stdio npx -y @modelcontextprotocol/server-fetch
+mcptoon add github --stdio npx -y @modelcontextprotocol/server-github
+
+# HTTP
+mcptoon add myapi --http http://localhost:3001/mcp --header "Authorization: Bearer xxx"</pre>
+<p>Config lives at <code>~/.mcptoon/config.json</code>. Project-level override at <code>./.mcptoon.json</code>.</p>
+<h2>Safety</h2>
+<p>mcptoon blocks operations that match dangerous patterns (<code>delete</code>, <code>drop</code>, <code>purge</code>, <code>wipe</code>, <code>kill</code>, etc.) unless you pass <code>--destructive</code>.</p>
+<pre>$ mcptoon call db delete_table '{"name":"users"}'
+Error [CONFIRMATION_REQUIRED]: Dangerous operation needs confirmation
+
+$ mcptoon call db delete_table '{"name":"users"}' --destructive
+# runs</pre>
+<h2>Usage tracking</h2>
+<pre>$ mcptoon usage
+Total calls: 142
+Success rate: 138/142
+Tokens (est): 84,200
+
+By server:
+  fetch       89
+  github      53</pre>
+<p>Stored locally at <code>~/.cache/mcptoon/usage.json</code>. Never transmitted.</p>
+<h2>Architecture</h2>
+<pre><code>src/mcptoon/
+├── cli.py        # CLI entry + arg parsing
+├── client.py     # MCPClient — stdio + HTTP transport
+├── router.py     # Tool routing, custom handlers, safety checks
+├── config.py     # Server config
+├── manifest.py   # Tool discovery with cache
+├── output.py     # TOON / JSON / compact rendering
+├── cache.py      # Schema cache (5-min TTL)
+├── usage.py      # Local usage tracking
+└── errors.py     # Structured error envelopes
+</code></pre>
+<p>~1,700 lines total. Zero third-party imports.</p>
+<h2>Privacy</h2>
+<ul>
+<li><strong>No telemetry.</strong> No analytics, no crash reports, no phone-home.</li>
+<li><strong>No credential storage.</strong> API keys pass through from your config or env vars.</li>
+<li><strong>No dependencies.</strong> Pure Python stdlib. No supply chain to audit.</li>
+</ul>
+<p>Found a vulnerability? Email <code>security@activeing123.github.io</code>. See <a href="https://github.com/activeing123/mcptoon/blob/main/SECURITY.md">SECURITY.md</a>.</p>
+<h2>License</h2>
+<p>Apache 2.0. See <a href="https://github.com/activeing123/mcptoon/blob/main/LICENSE">LICENSE</a> and <a href="https://github.com/activeing123/mcptoon/blob/main/NOTICE">NOTICE</a>.</p>
+<h2>Contributing</h2>
+<pre>git clone https://github.com/activeing123/mcptoon.git
+cd mcptoon
+pip install -e . --no-build-isolation
+pip install pytest pytest-cov
+python -m pytest tests/ -v   # 98 tests, 0.09s</pre>
+<p>Zero dependencies is a hard rule. New features need tests. See <a href="https://github.com/activeing123/mcptoon/blob/main/CONTRIBUTING.md">CONTRIBUTING.md</a>.</p>
+<hr/>
+<p><em>mcptoon is an independent third-party MCP client. Not affiliated with Anthropic.</em></p>
+<p><strong>Found this useful? Star the repo to help others find it.</strong></p>
+<p><a href="https://github.com/activeing123/mcptoon/issues">Report Bug</a> | <a href="https://github.com/activeing123/mcptoon/issues">Request Feature</a></p>
+<p><a href="https://news.ycombinator.com/item?id=49253721">Comments on Hacker News</a></p>]]></content:encoded>
+      <guid isPermaLink="true">https://github.com/activeing123/mcptoon</guid>
+      <category>Hacker News</category>
+      <pubDate>Tue, 11 Aug 2026 05:26:58 +0000</pubDate>
+      <media:content url="https://camo.githubusercontent.com/bf139b4e7209c9a19d178ba34499ffd9a95e404d13327eaf7bde6376adf78008/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f507974686f6e2d332e31302532422d626c75653f6c6f676f3d707974686f6e266c6f676f436f6c6f723d7768697465" type="image/jpeg" medium="image"/>
+      <dc:creator>mcptokensaver</dc:creator>
+    </item>
+    <item>
+      <title>Recycle – Floppydisks</title>
+      <link>https://www.floppydisk.com/recycle</link>
+      <description>We recycle old floppy disks and buy new floppy ones.</description>
+      <content:encoded><![CDATA[<h2>Yes, we recycle old disks and buy new ones!</h2>
+<h2><br/>
+We buy new disks in sealed undamaged packs.  Quantities of 100 or more.<br/>
+<br/>
+If disks are outside their original packaging, we cannot treat them as new.<br/>
+ <br/>
+For new disks, send us a picture of your disks, <br/>
+and call (800) 397-7890 for a quote.</h2>
+<h2>RECYCLING 3.5" FLOPPY DISKS:   </h2>
+<h2>​</h2>
+<h2>We accept any quantity of diskettes.  </h2>
+<h2>If you send more than 200 disks, we offer a small shipping offset.  </h2>
+<h2>Send your discs to:</h2>
+<h2>​</h2>
+<p>Floppydisk Recycle Program </p>
+<p>668 North Coast HWY #1117 </p>
+<p>Laguna Beach CA 92651</p>
+<h2>To get a shipping rebate, please include our reimbursement form. </h2>
+<h2>Reimbursement rules are on the form.</h2>
+<h2><a href="https://www.floppydisk.com/_files/ugd/f3bcf8_21b2f6933acd4f878ca387ecdb03147e.pdf">Click here, for a copy of the form.</a></h2>
+<h2>​</h2>
+<h2>​</h2>
+<h2>​</h2>
+<h2>​</h2>
+<h2>​</h2>
+<h2>​</h2>
+<p><a href="https://news.ycombinator.com/item?id=49252462">Comments on Hacker News</a></p>]]></content:encoded>
+      <guid isPermaLink="true">https://www.floppydisk.com/recycle</guid>
+      <category>Hacker News</category>
+      <pubDate>Tue, 11 Aug 2026 02:01:01 +0000</pubDate>
+      <dc:creator>calvinmorrison</dc:creator>
+    </item>
+    <item>
+      <title>H3-metal – Native MiniMax-H3 inference for Apple Silicon</title>
+      <link>https://github.com/antirez/h3.c</link>
+      <description>MiniMax H3 inference engine for Mac computers. Contribute to antirez/h3.c development by creating an account on GitHub.</description>
+      <content:encoded><![CDATA[<h2>h3-metal</h2>
+<p>Native MiniMax-H3 inference for Apple Silicon. The project is being built as a
+sequence of working vertical slices: deterministic host/model metadata first,
+then portable Metal block parity, prompt encoding, prompt-to-video/audio, and
+first/last-frame conditioning and then ordered references.</p>
+<p>Prompt-to-video/audio, first/last-frame conditioning, and ordered Ref2VA
+image/video/audio references work end to end. The current work is incremental
+H3-specific Metal performance and memory optimization on M3 Max and M5 Max.</p>
+<h2>Tutorial</h2>
+<h3>1. Build and inspect the model</h3>
+<p>The examples assume that the Hugging Face snapshot is in <code>./MiniMax-H3</code> and
+that FFmpeg and FFprobe are available on <code>PATH</code>.</p>
+<pre>make -j8
+mkdir -p outputs
+./h3 --info -d ./MiniMax-H3</pre>
+<p><code>--info</code> checks the model layout and prints the selected Metal device without
+mapping all weights or generating media. Run <code>./h3 --help</code> for the complete CLI
+reference.</p>
+<p>Without <code>-p</code>, the same binary starts an Iris-style interactive session:</p>
+<pre>./h3 -d ./MiniMax-H3 --width 512 --height 512 --steps 6</pre>
+<p>Type a prompt to generate a numbered video. The session keeps the exact BF16
+prompt conditioning, prepared DiT, and video decoder in memory, so repeating a
+prompt with another seed avoids loading and encoding them again. Useful commands
+are <code>!status</code>, <code>!seed random</code>, <code>!seconds 2</code>, <code>!show</code>, <code>!save output.mp4</code>, and
+<code>!cache</code>. Use <code>!help</code> for the full, short list.</p>
+<p>First/last-frame conditioning is persistent in the session:</p>
+<pre><code>h3&gt; !first opening.png
+h3&gt; !last ending.png
+h3&gt; The camera moves slowly around the subject.
+</code></pre>
+<p>Use <code>!first clear</code> or <code>!last clear</code> to remove an anchor. Generated videos are
+written to the session directory printed at startup.</p>
+<p>For a general Ref2VA conditioning image, use <code>!ref-image PATH</code> instead. Images
+are appended in order and exposed to the model as <code>&lt;Picture 1&gt;</code>, <code>&lt;Picture 2&gt;</code>,
+and so on; filenames have no meaning to the model.</p>
+<pre><code>h3&gt; !ref-image person.png
+h3&gt; Make the person shown in Picture 1 wave to the camera.
+</code></pre>
+<p><code>!refs</code> lists the current order, <code>!ref-remove N</code> removes one entry, and
+<code>!refs clear</code> removes them all. Ref2VA references cannot be mixed with
+<code>!first</code>/<code>!last</code> anchors.</p>
+<h3>2. Make a first fast video</h3>
+<p>Start with the validated balanced preset. It generates 22 frames at 24 fps
+(about 0.92 seconds), displays the evolving middle-video frame after every
+denoising transition in a supported graphical terminal, and prints phase
+timings:</p>
+<pre>./h3 --profile \
+  -d ./MiniMax-H3 \
+  -p "A red fox walks through fresh snow in a pine forest. Medium tracking shot, natural winter light, realistic fur, soft footsteps and wind." \
+  --width 512 --height 512 \
+  --frames 22 --steps 20 \
+  --layers 45 --reuse 2 \
+  --show \
+  -o outputs/fox-fast.mp4</pre>
+<p>This is deliberately not the most aggressive configuration:</p>
+<ul>
+<li><code>--steps 20</code> performs the default 20 denoising passes.</li>
+<li><code>--reuse 2</code> computes 11 fresh denoiser velocities instead of all 20 and
+extrapolates the skipped transitions.</li>
+<li><code>--layers 45</code> runs 45 of the 50 transformer blocks, reducing both time and
+unified-memory use.</li>
+<li><code>--show</code> is optional. It supports Kitty/Ghostty and
+iTerm2/WezTerm/Konsole graphical protocols. It loads a resident preview VAE,
+displays one representative middle-video frame after every Euler transition,
+and then displays all final frames. Display dimensions default to 2x so the
+image has its intended logical size on macOS Retina screens; use <code>--zoom 1</code>
+on a non-HiDPI display. This adds preview decode time and roughly 10 GiB of
+temporary model residency; runs without <code>--show</code> are unchanged.</li>
+<li><code>--profile</code> is optional and does not select a different generation path.</li>
+</ul>
+<p>The first process invocation also pays model loading and filesystem-cache
+costs. Compare performance using repeated runs, and alternate variants when
+the machines are warming up because this workload is sensitive to thermal
+throttling.</p>
+<p>For a very short iteration, request four denoising passes directly:</p>
+<pre>./h3 --profile \
+  -d ./MiniMax-H3 \
+  -p "A red fox walks through fresh snow in a pine forest. Medium tracking shot, natural winter light, realistic fur." \
+  --width 512 --height 512 --frames 22 \
+  --steps 4 --layers 50 --reuse 1 \
+  --show \
+  -o outputs/fox-four-step.mp4</pre>
+<p><code>--steps N</code> always means exactly N denoising passes. Four through seven passes
+use the same schedule that won the low-budget comparison; increasing from 4
+to 7 progressively improves detail and motion. Keep <code>--reuse 1</code> at such small
+budgets so every requested pass runs the model. <code>--show</code> displays one preview
+after each pass.</p>
+<p>Several tail-heavy schedules were evaluated because most visible cleanup
+happens late in a long run. They preserved too few early composition updates
+and produced woven texture, weak motion, or clipped colors. The retained mode
+uses the released linear base grid with one terminal point. On the 512-square,
+22-frame fox test, the selected four-pass result had 0.556 full-video SSIM
+against a 29-pass reference; an independent surfer test measured 0.547. The
+four-pass denoise took about 3.5 seconds on M5 Max, versus 26.4 seconds for the
+reference.</p>
+<h3>3. Move toward reference quality</h3>
+<p>Change one control at a time when evaluating quality. First restore all layers,
+then all denoiser evaluations, and finally raise the default 20-pass schedule
+to the slower 50-pass reference:</p>
+<pre>./h3 --profile \
+  -d ./MiniMax-H3 \
+  -p "A red fox walks through fresh snow in a pine forest. Medium tracking shot, natural winter light, realistic fur, soft footsteps and wind." \
+  --width 512 --height 512 \
+  --frames 22 --steps 50 \
+  --layers 50 --reuse 1 \
+  -o outputs/fox-close.mp4</pre>
+<p>The defaults are <code>--steps 20 --layers 50 --reuse 1</code>; keep <code>--steps 50</code>
+explicit for this close path. It performs 50 complete 50-block denoiser
+forwards and is much more expensive than the default, but is the right oracle
+when a fast mode changes the subject, anatomy, motion, or composition.
+Numerical pixel identity with MLX is not expected because the random-number and
+execution engines differ; the depicted content and motion should agree.</p>
+<h3>4. Choose a speed/quality preset</h3>
+<p>These controls are independent unless noted otherwise:</p>
+<table>
+<thead>
+<tr>
+<th>Control</th>
+<th>Slow reference</th>
+<th>Default</th>
+<th>Aggressive</th>
+<th>Main impact</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Denoising passes</td>
+<td><code>--steps 50</code></td>
+<td><code>--steps 20</code></td>
+<td><code>--steps 4..7</code></td>
+<td>The number always names actual denoising passes.</td>
+</tr>
+<tr>
+<td>Whole denoiser reuse</td>
+<td><code>--reuse 1</code></td>
+<td><code>--reuse 2</code></td>
+<td><code>--reuse 3</code></td>
+<td>At 20 steps: 20, 11, or 8 fresh DiT evaluations.</td>
+</tr>
+<tr>
+<td>Active DiT blocks</td>
+<td><code>--layers 50</code></td>
+<td><code>--layers 45</code></td>
+<td><code>--layers 40</code></td>
+<td>Fewer blocks reduce compute and resident transformer weights.</td>
+</tr>
+<tr>
+<td>Core residual reuse</td>
+<td><code>--core-reuse 1</code></td>
+<td><code>--core-reuse 4</code></td>
+<td><code>--core-reuse 6</code></td>
+<td>Refreshes patch/head work every step but runs the expensive core less often.</td>
+</tr>
+<tr>
+<td>Token reduction</td>
+<td>off</td>
+<td>optional</td>
+<td><code>--token-reduction</code></td>
+<td>Pairs horizontal video tokens inside middle blocks; faster but may change composition.</td>
+</tr>
+<tr>
+<td>Internal canvas</td>
+<td>output size</td>
+<td><code>384x384</code> for 512 square output</td>
+<td><code>320x320</code></td>
+<td>Runs DiT/VAE smaller, then upscales with vImage.</td>
+</tr>
+</tbody>
+</table>
+<p>On M5, <code>--use-int8-row-fc2</code> uses one activation scale per FC2 row and a single
+full-width TensorOps product. It is optional because it is less numerically
+conservative than grouped int8. It reduced complete denoiser forwards by about
+2.6% in reciprocal tests. Matched four-step fox and surfer videos kept the same
+subjects, setting, and motion (full-video SSIM 0.919 and 0.828). In the
+interactive session, use <code>!int8-row-fc2 on</code>.</p>
+<p><code>--reuse</code> and <code>--core-reuse</code> are mutually exclusive. Layer thinning can be
+combined with either one.</p>
+<p>To make the first command faster while keeping its output resolution, add
+token reduction:</p>
+<pre>./h3 --profile \
+  -d ./MiniMax-H3 \
+  -p "A surfer riding inside a sharp blue ocean wave, one rider and one white board, realistic spray." \
+  --width 512 --height 512 --frames 22 --steps 20 \
+  --layers 45 --reuse 2 --token-reduction \
+  -o outputs/surfer-fast.mp4</pre>
+<p>At the validated 512 square shape, token reduction cut the <code>45 layers + reuse 2</code> denoise profile from 16.69 to 12.60 seconds on the IT M5 Max. Independent
+fox and surfer renders stayed coherent, but composition can diverge more from
+the close path.</p>
+<p>For an aggressive preview, render internally at 320 square and upscale to the
+requested 512 square output:</p>
+<pre>./h3 --profile \
+  -d ./MiniMax-H3 \
+  -p "A red fox walking through snow, realistic, tracking shot." \
+  --width 512 --height 512 \
+  --render-width 320 --render-height 320 \
+  --frames 22 --steps 20 --layers 40 --reuse 3 \
+  -o outputs/fox-aggressive.mp4</pre>
+<p>This combination produced a clean, recognizable 22-frame fox in validation,
+but loses fine detail and can change framing. Do <strong>not</strong> add <code>--token-reduction</code>
+to both <code>--layers 40</code> and <code>--reuse 3</code>: that tested combination produced color
+ringing, outlines, and ghosted limbs.</p>
+<p>As an alternative to whole-velocity reuse, this keeps the timestep-dependent
+patch and output heads fresh at every transition:</p>
+<pre>./h3 --profile \
+  -d ./MiniMax-H3 \
+  -p "A surfer riding a blue ocean wave." \
+  --width 512 --height 512 --frames 22 --steps 20 \
+  --layers 45 --core-reuse 4 \
+  -o outputs/surfer-core-reuse.mp4</pre>
+<p>Use <code>--core-reuse 6</code> only as an aggressive preview. Values above 6 are not
+exposed because validation lost subject fidelity.</p>
+<h3>5. Pick resolution and duration</h3>
+<p>Width and height must each be multiples of 32, at least 32, and their product
+must not exceed <code>768 * 1344</code> pixels. Those are mechanical limits, not a promise
+that every tiny canvas has good model quality. H3-Base is a 768p model.</p>
+<table>
+<thead>
+<tr>
+<th>Canvas</th>
+<th>Current guidance</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>512x512</code></td>
+<td>Safest development size; repeatedly validated with multiple prompts.</td>
+</tr>
+<tr>
+<td><code>768x768</code></td>
+<td>Validated close-quality square output; substantially more expensive.</td>
+</tr>
+<tr>
+<td><code>1344x768</code>, <code>768x1344</code></td>
+<td>Released 768p-class landscape/portrait limit.</td>
+</tr>
+<tr>
+<td><code>1024x768</code>, <code>768x1024</code></td>
+<td>Valid 4:3 and 3:4 768p-class canvases.</td>
+</tr>
+<tr>
+<td><code>384x384</code> internal to <code>512x512</code></td>
+<td>Validated fast-quality scaling point.</td>
+</tr>
+<tr>
+<td><code>320x320</code> internal to <code>512x512</code></td>
+<td>Validated aggressive scaling point.</td>
+</tr>
+<tr>
+<td><code>256x256</code></td>
+<td>Native fast-preview canvas with automatic low-resolution RoPE adaptation.</td>
+</tr>
+</tbody>
+</table>
+<p>For a fast native 256-square preview:</p>
+<pre>./h3 -d ./MiniMax-H3 \
+  -p "A red fox walks through fresh snow in a pine forest." \
+  --width 256 --height 256 \
+  --frames 22 --steps 20 \
+  --layers 50 --reuse 1 \
+  -o outputs/fox-256.mp4</pre>
+<p>At 256 square, H3 has only an <code>8x8</code> effective spatial-token grid, so it has less
+room for fine detail and complex composition. H3 automatically halves spatial
+RoPE coordinates at exactly 256 square. This removed repeating lattice
+artifacts in long fox renders and stayed coherent on an independent portrait,
+without adding tokens or runtime. Use <code>--use-reference-rope</code> to restore the
+released/MLX coordinates for parity checks. Keep token reduction off at this
+size. Native 128 square remains unsupported: its <code>4x4</code> token grid did not
+recover a recognizable subject even with adjusted RoPE.</p>
+<p><code>--render-width</code> and <code>--render-height</code> must be set together, must have the same
+aspect ratio as the output, and cannot exceed the output dimensions. The model
+and VAE use the internal size; terminal frames and the encoded video retain the
+requested output size.</p>
+<p>H3 emits 24 fps and aligns frame requests upward to <code>5 + 17*n</code>:</p>
+<p>Use <code>--seconds N</code> for a duration-oriented request, or <code>--frames N</code> for direct
+frame control; the two options are mutually exclusive. Fractional seconds are
+accepted. Seconds are converted at 24 fps and then rounded upward to the next
+legal H3 temporal shape, so <code>--seconds 10</code> produces 243 frames (10.125 seconds).</p>
+<table>
+<thead>
+<tr>
+<th>Frames</th>
+<th>Approximate video duration</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>22</td>
+<td>0.917 seconds</td>
+</tr>
+<tr>
+<td>39</td>
+<td>1.625 seconds</td>
+</tr>
+<tr>
+<td>56</td>
+<td>2.333 seconds</td>
+</tr>
+<tr>
+<td>107</td>
+<td>4.458 seconds</td>
+</tr>
+<tr>
+<td>243</td>
+<td>10.125 seconds</td>
+</tr>
+<tr>
+<td>362</td>
+<td>15.083 seconds</td>
+</tr>
+</tbody>
+</table>
+<p>Short clips are useful for development. The released workflow is intended for
+roughly 4–15 second videos. A request such as <code>--frames 23</code> is rounded up to 39
+frames rather than producing an arbitrary temporal shape.</p>
+<h3>6. Improve the prompt</h3>
+<p>A short prompt works, but the released system expects a Context-IR-like
+description. State the subject, action, setting, camera, lighting/style, and
+desired sound. For example:</p>
+<pre><code>Scene: a single red fox in a snow-covered pine forest at dawn.
+Action: the fox walks steadily left to right and looks toward the camera once.
+Camera: medium-height lateral tracking shot, 50 mm lens, stable framing.
+Look: photorealistic fur, cold blue ambient light, warm sunrise rim light.
+Audio: soft footsteps in snow, light wind through pine branches, no music.
+</code></pre>
+<p>Keep identity and object counts explicit when they matter. <code>--seed N</code> controls
+the native random stream; the default is 42. Compare options with the same
+prompt, seed, resolution, frame count, and step count.</p>
+<h3>7. Preview frames and diagnose performance</h3>
+<ul>
+<li><code>--show</code> displays a representative frame after every denoising transition,
+followed by all frames from the completed video. Like Iris, it advertises 2x
+display dimensions by default for Retina terminals; <code>--zoom N</code> changes that
+factor without resizing the generated video or the encoded terminal image.</li>
+<li><code>--frames-dir DIR</code> writes final callback frames as PPM files. Intermediate
+<code>--show</code> previews are not written there.</li>
+<li><code>-o ''</code> disables MP4 encoding; combine it with <code>--frames-dir</code> when FFmpeg is
+unavailable.</li>
+<li><code>--profile</code> reports phase wall time, Metal encoding/wait time, peak live
+tensor storage, cumulative allocation, and dispatch counts.</li>
+</ul>
+<p>For example:</p>
+<pre>./h3 --profile -d ./MiniMax-H3 -p "A hummingbird hovering over red flowers." \
+  --width 512 --height 512 --frames 22 --steps 20 \
+  --layers 45 --reuse 2 --frames-dir outputs/hummingbird-frames \
+  -o ''</pre>
+<h3>8. Add image, video, and audio references</h3>
+<p>First/last-frame anchors select the FL2VA path:</p>
+<pre>./h3 -d ./MiniMax-H3 -p "The fox keeps walking through the snow." \
+  --width 512 --height 512 --frames 22 --steps 20 \
+  --layers 45 --reuse 2 \
+  --first-frame fox.png --last-frame fox-later.png \
+  -o outputs/fox-anchored.mp4</pre>
+<p>Ordered references select the distinct Ref2VA checkpoint. Use the flag matching
+the media semantics:</p>
+<pre># One image reference.
+./h3 -d ./MiniMax-H3 -p "Use the animal and setting in the reference." \
+  --width 512 --height 512 --frames 22 --steps 20 \
+  --ref-image fox.png -o outputs/fox-reference.mp4
+
+# Continue a clip but ignore its soundtrack.
+./h3 -d ./MiniMax-H3 -p "Continue the motion in this clip." \
+  --width 512 --height 512 --frames 22 --steps 20 \
+  --ref-silent-video fox.mp4 -o outputs/fox-video-reference.mp4
+
+# Preserve the clip's embedded audio.
+./h3 -d ./MiniMax-H3 -p "Continue this audiovisual scene." \
+  --width 512 --height 512 --frames 56 --steps 20 \
+  --ref-video fox-with-audio.mp4 -o outputs/fox-video-audio.mp4
+
+# Replace a video's soundtrack explicitly.
+./h3 -d ./MiniMax-H3 -p "Continue the scene with the supplied music." \
+  --width 512 --height 512 --frames 56 --steps 20 \
+  --ref-video-audio silent-fox.mp4 replacement.wav \
+  -o outputs/fox-replaced-audio.mp4
+
+# An ordered image plus standalone audio reference.
+./h3 -d ./MiniMax-H3 -p "Use the animal and music from the references." \
+  --width 512 --height 512 --frames 56 --steps 20 \
+  --ref-image fox.png --ref-audio music.wav \
+  -o outputs/fox-image-audio.mp4</pre>
+<p>Reference flags may be repeated and their command-line order is preserved.
+Standalone audio must accompany an image or video reference. Audio references
+must be 2–15 seconds; at most three audio inputs are accepted and their total
+decoded duration is capped at 15 seconds.</p>
+<h2>Tests and runtime requirements</h2>
+<pre>make test
+make parity</pre>
+<p><code>make test</code> runs the deterministic host suite and, when the ignored MLX fixture
+is installed under <code>misc/fixtures/</code>, compiles the Metal source at runtime and
+checks a complete toy H3 block against named MLX outputs. Runtime compilation is
+intentional: it follows Iris and does not require Xcode's optional offline Metal
+toolchain. The test covers both an F32 diagnosis path and the production BF16
+storage path; wide BF16 matrix products and SDPA use cached MPSGraph graphs, with
+direct Metal correctness fallbacks. <code>make parity</code> runs only those Metal/MLX
+checks.</p>
+<p>FFmpeg and FFprobe must be available on <code>PATH</code> for media inputs and MP4 output
+(<code>H3_FFMPEG</code> and <code>H3_FFPROBE</code> may select explicit executables). Generated RGB24 and
+32 kHz stereo F32 PCM are fed through concurrent pipes; no intermediate
+uncompressed media file is created.</p>
+<h2>Implementation and performance notes</h2>
+<p>The remainder documents the implementation behind the tutorial presets and the
+environment variables retained for exact A/B diagnosis.</p>
+<h3>Sampler and DiT controls</h3>
+<p>The default sampler uses the released shifted video/audio schedule. <code>--steps</code>
+always names the number of denoising passes, with terminal zero added after the
+last pass. Whole-denoiser reuse evaluates the first and last pass plus every
+requested interval, then extrapolates skipped video and audio velocities on
+their independent schedules. With very small step counts, keep <code>--reuse 1</code>.</p>
+<p>For the low-budget path, the released linear base grid won against
+actual-video-sigma linear spacing,
+quadratic and cubic warps, exact 30-point tail subsets, mild power warps,
+zero-order held full-grid velocities, linear velocity extrapolation, and RES.
+The more tail-heavy candidates often sharpened the subject but damaged motion
+or left a repetitive woven background; sparse RES and long extrapolation
+intervals failed much more visibly.</p>
+<p>Layer thinning ranks the checkpoint's actual AdaLN gates while protecting
+structurally important first and final blocks. Unused weights and schedule
+tensors are not retained, so <code>--layers 45</code> and <code>--layers 40</code> reduce both
+transformer time and unified-memory use. Core reuse holds the previous full
+transformer residual while refreshing the patch projection and timestep-aware
+head; it remains mutually exclusive with whole-velocity reuse.</p>
+<h3>Exact DiT fusions</h3>
+<p>Every active DiT block fuses its attention residual gate with the following MLP
+AdaLN. The rounded BF16 residual is still written exactly, but the same row is
+kept in threadgroup memory for normalization, eliminating one dispatch and one
+global reread. Away from token-reduction boundaries, the MLP residual gate also
+produces the next block's attention AdaLN and carries that normalized state
+across the loop. <code>H3_DISABLE_FUSED_GATE_ADALN=1</code> and
+<code>H3_DISABLE_FUSED_CROSS_BLOCK_ADALN=1</code> restore the two-kernel oracles.
+The final audio/video AdaLN kernels bind directly to offsets in the residual
+stream, avoiding two slice blits and 18.8 MiB of scratch at 512x512 (29.4 MiB
+at the 864-class benchmark shape).
+<code>H3_DISABLE_FUSED_FINAL_SLICE=1</code> restores the copy-plus-AdaLN oracle at load.
+The BF16 final heads then apply AdaLN while loading their 16x16 projection
+tiles, preserving the standalone rounding and accumulation order while
+removing another equally sized normalized activation. The two optimizations
+together save 37.5/58.9 MiB. <code>H3_DISABLE_FUSED_FINAL_HEAD=1</code> restores the
+offset-AdaLN-plus-linear oracle at load.</p>
+<h3>Token-reduction internals</h3>
+<p><code>--token-reduction</code> is an independent aggressive DiT mode. After block 3 it
+pairs adjacent horizontal target-video tokens while leaving text, audio,
+conditions, and reference tokens exact. The complete full-resolution state is
+kept as a bypass. During the first ten noisy evaluations it restores before
+block 40; subsequent detail-forming evaluations restore before block 30. Each
+token returns as its original value plus the update learned by its pair, so
+within-pair detail is not discarded.
+The pooling kernel writes only true-pair baselines into a dense tail of the
+already allocated attention scratch buffer; odd-width singleton tokens need no
+baseline. The full bypass uses the oversized QKV tail when it fits, with a
+guarded dedicated fallback only for reference-heavy layouts. Common text-only
+canvases therefore add no activation arena at any token-grid width. Pooling
+also snapshots both source tokens while their BF16 values are already in
+registers, avoiding a separate full-hidden blit and redundant source read. The
+same entry kernel keeps each pooled row in threadgroup memory and emits the
+first reduced block's attention AdaLN, eliminating another global residual read.
+At the restore boundary, the first full-resolution attention AdaLN is fused
+into expansion: a 10.5 KiB threadgroup row avoids a global residual reread while
+still writing the exact bypass needed by the following residual branch.
+On a thermal-balanced 512x512x22, 19-forward IT M5 Max A/B this reduced denoise
+time from 39.13 to 28.06 seconds (28.3%). Final video/audio latent relative L2
+was 5.56%/15.14%. First/middle/last fox frames retained one clean muzzle,
+coherent legs, and sharp fur; an independent surfer remained consistent with
+one rider and board through the wave spray. It changes composition and is
+therefore opt-in rather than the close-reference default.
+<code>H3_TOKEN_REDUCTION_BLOCKS</code> can override the later <code>4:30</code> interval;
+<code>H3_TOKEN_REDUCTION_EARLY=STEPS:END</code> overrides the early schedule and <code>0</code>
+disables it. <code>H3_DISABLE_TOKEN_REDUCTION=1</code> provides an in-context exact oracle.
+<code>H3_DISABLE_FUSED_TOKEN_POOL_ADALN=1</code> and
+<code>H3_DISABLE_FUSED_TOKEN_ADALN=1</code> independently restore the two-kernel entry and
+exit boundaries for diagnosis.
+Token reduction composes cleanly with the validated <code>--layers 45 --reuse 2</code>
+settings: on the same 512 benchmark it reduced that profile from 16.69 to
+12.60 seconds (24.5% marginal), and independent fox and surfer renders stayed
+coherent. Do not combine it with both <code>--layers 40</code> and <code>--reuse 3</code>; that
+6.47-second experiment produced chromatic ringing and ghosted limbs despite
+acceptable latent norms.</p>
+<h3>Internal canvas and video VAE</h3>
+<p><code>--render-width</code> and <code>--render-height</code> run the model and VAE on a lower
+same-aspect internal canvas, then high-quality vImage-scale RGB frames to the
+requested output size before callbacks, terminal display, and encoding. This is an
+explicit quality/speed tradeoff: a measured 384-to-512 prompt render reduced
+M5 DiT time by 33% and video-VAE time by 18% while retaining a clean,
+recognizable photorealistic result. Both values must be multiples of 32; the
+exact output canvas remains the default.
+For square 512 output, 384 is the fast-quality point and 320 is the validated
+aggressive point. The latter produced a coherent walking fox and repeated at
+8.02 seconds of DiT versus about 15.82 seconds natively. Native 256 uses the
+same-cost spatial-RoPE adaptation described above; it remains a fast composition
+preview rather than a substitute for a 512- or 768-class final render.
+The video VAE automatically chooses a 256-320 pixel spatial tile from the
+requested canvas geometry, minimizing repeated overlap work while keeping peak
+storage bounded. <code>H3_VAE_TILE_PIXELS=256</code> restores the original conservative
+tile plan for close-reference diagnosis.</p>
+<h3>Weight residency and streamed prompt encoding</h3>
+<p>On M5-class GPUs, persistent transformer weights are mapped directly from their
+safetensor shards instead of copied into anonymous shared buffers. This keeps
+the 37 GiB model file-backed/reclaimable and slightly improves total transformer
+time; M3 uses the faster copied-buffer path. <code>H3_ZERO_COPY_WEIGHTS=0</code> disables
+the M5 selection for diagnostics.
+The streamed Qwen text encoder preallocates a small ring of future layer
+buffers and fills them on eight I/O workers while Metal executes the current
+layer. The default ring depth is two layers on M3/older hardware and three on
+M5, where the target machine has 128 GiB. <code>H3_QWEN_PREFETCH=0</code> restores the
+single-layer synchronous reference path; values 1-8 select the worker count,
+and <code>H3_QWEN_PREFETCH_DEPTH=1</code> through <code>6</code> overrides the ring depth.</p>
+<h3>Metal 4 and TensorOps paths</h3>
+<p>M5 GPUs automatically use native BF16 Metal 4/TensorOps for the DiT QKV and
+attention-output projections at sequence lengths up to 2,048. The compact
+Morton schedule routes Q/K/V directly into head-major attention inputs, avoids
+three MPSGraph input transposes, and is byte-identical to the portable path. It
+improves a complete 512x512 50-block forward by about 2% across repeated IT/US
+M5 Max runs. For 2,049-3,072 rows, including 864x480, two row-offset Morton
+dispatches preserve the efficient tile geometry and improve the complete
+forward by about 2% in balanced runs. Still larger sequences stay on MPSGraph.
+<code>H3_NAX=0</code> disables TensorOps for exact A/B diagnosis. The selection is guarded
+at runtime and falls back to the unchanged portable library if compilation is
+unavailable.</p>
+<p><code>H3_NAX=1</code> forces the broader native BF16 linear path. It passes the complete
+50-block MLX fixture, but remains opt-in: exact-shape microbenchmarks favor its
+128-row tile while full DiT runs currently favor MPSGraph scheduling. This
+keeps a working NAX integration available for later quantized/fused kernels
+without making a benchmark regression the default.
+<code>H3_NAX=mlp</code> selects a more specialized Metal 4 path: paired FC1 gate/up
+TensorOps tiles apply SwiGLU in threadgroup memory and write only the
+14,336-wide activated intermediate, then FC2 also stays on TensorOps.
+<code>H3_DISABLE_NAX_MLP=1</code> keeps the MPSGraph MLP in a context created this way for
+same-process A/B testing. The path is deliberately opt-in because scheduling
+depends on the OS GPU stack: the primary macOS 26.5.2 M5 Max gained 1.3-2.0%
+in isolated real-weight MLP runs but lost about 1-3% in a complete 50-block forward,
+while an otherwise identical macOS 26.5 M5 Max gained 1.4% in a same-context
+forward A/B. The resulting 50-block velocities were close (1.9% video and 2.4%
+audio relative L2), but not byte-identical.</p>
+<h3>Specialized projection kernels</h3>
+<p>The narrow DiT audio/video output heads convert their small released F32
+weights to BF16 once and use the Iris-derived 16x16 tiled linear directly on
+BF16 activations. At the production 320-render geometry, isolated paired-head
+measurements are 2.30x faster on M3 Max and 1.83x faster on M5 Max, with
+relative L2 <code>8.64e-4</code>; the absolute M5 saving is about 0.6 ms per evaluated
+step. Full fox and surfer sequences remained clean and measured 29.9/38.4 dB
+against the F32-head renders. <code>H3_DIT_F32_FINAL=1</code> restores the close-reference
+head and its extra activation buffers.
+The F32 <code>96-&gt;5376</code> video and <code>32-&gt;5376</code> audio patch projections use a dedicated
+16x16 cooperative tile, retaining F32 weights, inputs and accumulation while
+rounding the tile result directly to BF16.
+Paired production-shape measurements are 1.77x faster on M3 and 1.62-1.78x
+on M5; the complete generated RGB stream is byte-identical to the scalar path.
+Fusing the final cast improves the 2835-row tile itself from 2.499 to 1.734 ms
+on M3 and 1.555 to 1.186 ms on M5, and removes 38.27/59.66 MiB of F32 scratch
+at 512/864-class geometry. <code>H3_DISABLE_FUSED_PATCH_CAST=1</code> restores the tiled
+F32 output plus standalone cast; <code>H3_SCALAR_PATCH=1</code> selects the scalar
+diagnostic path.
+The same tile binds its output directly into the packed hidden stream, removing
+the BF16 media staging buffers and their blits. This saves another 19.13/29.83
+MiB and improves the 2835-row boundary from 1.847 to 1.730 ms on M3 and 1.282
+to 1.184 ms on M5. Contiguous T2VA uses byte offsets; FL2VA/Ref2VA use compact
+destination-row maps so each modality remains one large dispatch. A complete
+six-segment Ref2VA M5 ABBA remained byte-identical and improved 5.067 to 5.033
+seconds per measured forward pair. <code>H3_DISABLE_FUSED_PATCH_PACK=1</code> restores the
+staging buffers and packing blits.</p>
+<h3>Scheduling and activation memory</h3>
+<p>The DiT core is split into two ordered Metal command buffers so GPU execution
+of the first part overlaps CPU encoding of the second. Thermal-balanced ABBA
+measurements select a 60%-depth split on M5 (30/50, 27/45, and 24/40), with
+roughly 0.5-1.8% wins; M3 automatically splits only the validated 30/50 case,
+which measured 1.2% faster, because 24/40 regressed there. The operation order
+and generated bytes are unchanged. <code>H3_DIT_COMMAND_BLOCKS=0</code> restores one
+command buffer; values 1-50 override the split for further tuning.
+DiT activation buffers also follow their actual intra-block lifetimes: the QKV
+projection arena is reused first for attention heads and then for the normalized
+MLP input, while the current attention-output arena becomes the MLP output after
+its branch has been consumed. This removes 61.25 MiB at 512-class geometry and
+99.63 MiB at 864-class geometry without changing dispatches or arithmetic.
+<code>H3_DISABLE_DIT_ACTIVATION_ALIAS=1</code> restores separate diagnostic buffers.
+MPSGraph tensor-data wrappers for immutable DiT weights and biases are retained
+with their resident buffers. This avoids rebuilding the same binding metadata
+for every block and denoiser evaluation without copying tensor storage; measured
+ABBA gains were 1.6% on M3 Max and 0.4-1.1% on M5 Max. Activation wrappers stay
+transient because retaining them regressed the M5. The outputs remain
+byte-identical, and <code>H3_DISABLE_GRAPH_DATA_CACHE=1</code> restores transient wrappers
+for all tensors.
+On M3/older hardware, the four MPSGraph segments in each DiT block also reuse
+one <code>MPSCommandBuffer</code> wrapper for their shared underlying Metal command buffer.
+Repeated thermal-balanced runs measured 1.0-1.6% faster on M3 Max; M5 measured
+neutral, so it retains fresh wrappers. <code>H3_REUSE_MPS_COMMAND=0</code> or <code>1</code> overrides
+the automatic selection. Results are byte-identical.
+On M5, the serving Euler sampler keeps its patch-packed F32 latents and cached
+BF16 velocities in Metal buffers. Each selected denoiser refresh is completed
+before the next is encoded, avoiding MPSGraph back-pressure while removing all
+intermediate latent/velocity readbacks and repacking. Two warm eight-run A/B
+sequences measured small 0.1% and 0.3% gains with byte-identical final latents;
+the path also saves roughly 16 bytes of transient host state per video-latent
+element (about 136 MB at the 768p shape). M3 and older GPUs retain the CPU
+sampler by default. <code>H3_CPU_SAMPLER=1</code> restores it on M5;
+<code>H3_GPU_SAMPLER=1</code> selects the GPU-state path explicitly, and
+<code>H3_GPU_SAMPLER_WINDOW=0</code> enables the slower unbounded encode-ahead diagnostic.</p>
+<h3>Checkpoint layout and media pipeline</h3>
+<p>The released checkpoint stores DiT QKV rows interleaved per attention head.
+Native Metal consumes that layout directly in the fused QK-normalization/RoPE
+kernel, avoiding a checkpoint transpose and extra RAM. The earlier identity
+interpretation was the cause of the noisy diagnostic outputs.</p>
+<p>The public generation path decodes the joint audio latent with a streamed native
+BigVGAN/AudioVAE and writes synchronized H.264 plus 32 kHz stereo AAC. The native
+waveform agrees with the corrected MLX oracle to relative L2 <code>6.94e-5</code>.
+<code>--first-frame</code>, <code>--last-frame</code>, and their combination use the released visual
+VAE encoder, Qwen3-VL vision tower and three-deepstack multimodal presentation,
+0.999 condition augmentation, and fixed condition rows in the native DiT. The
+first image is stretched to the target canvas; the last image is aspect-cover
+scaled and center cropped, matching the reference implementation. <code>--ref-image</code>
+selects the distinct Ref2VA transformer, preserves ordered <code>&lt;Picture N&gt;</code>
+presentation, and uses the released down-only aspect-preserving reference canvas.
+<code>--ref-silent-video</code> additionally performs bounded 24 fps decoding, the visual
+VAE's causal <code>ceil(T/4)</code> compression, two-frame Qwen sampling, and timestamped
+<code>&lt;Video N&gt;</code> presentation. <code>--ref-video</code> preserves an embedded soundtrack,
+<code>--ref-video-audio VIDEO AUDIO</code> supplies an explicit replacement, and
+<code>--ref-audio</code> appends an ordered standalone clip. Reference audio is decoded as
+32 kHz stereo F32, encoded by the native AudioVAE posterior-mean path, mixed as
+0.999 clean latent plus 0.001 seeded noise, pinned to the audio condition
+timestep 1.0, and packed as width-32 rows on the same rotary timeline as visual
+references. Audio inputs are 2-15 seconds, at most three are
+accepted, their total decoded duration is capped at 15 seconds, and a standalone
+audio reference must be combined with an image or video reference.</p>
+<p>The native audio encoder matches the corrected MLX oracle at relative L2
+<code>3.59e-6</code> on a real two-second stereo fixture. The correction is important: the
+original MLX reshape interleaved left/right samples, whereas the official
+PyTorch/SGLang path folds intact stereo channels into the batch dimension. On
+the 128 GB M5 Max, clean end-to-end image+audio and embedded-video+audio renders
+completed in 74.58 and 76.99 seconds respectively, each with about a 40.1 GB
+peak physical footprint and zero swaps.</p>
+<h3>Profiling and diagnostic paths</h3>
+<p><code>--profile</code> reports each Metal-backed phase separately: wall time, CPU-side
+command encoding, complete commit-to-fence wait, root-command GPU timestamps,
+peak live tensor storage, cumulative allocation, and dispatch counts. The wait
+measurement is the complete command turnaround; the root GPU timestamp alone
+can omit child buffers scheduled internally by MPSGraph and is labeled
+accordingly.</p>
+<p>The DiT fast path evaluates each BF16 <code>fc1 -&gt; SwiGLU -&gt; fc2</code> block as one cached
+graph, avoiding separate graph boundaries and persistent intermediate tensors.
+Set <code>H3_DISABLE_FUSED_MLP=1</code> to retain the close-reference operation boundaries
+for numerical diagnosis.</p>
+<p>On supported M5 Metal 4 TensorOps hardware, the native int8 MLP engine is the
+default. It dynamically quantizes activations, uses per-output-channel weight
+scales, and gives the sensitive FC2 input one scale per 1,024 channels.
+The selected FC2 kernel keeps scaled partial products in private cooperative
+fragments instead of repeatedly spilling a 32 KiB threadgroup tile. A fixed
+50-layer, 19-transition 512x512 render measured 36.30 seconds with BF16 MPS and
+25.80 seconds with int8 on M5 Max. Beginning, middle, and final decoded frames
+retained the same subject, composition, and motion; small edge and fur details
+can differ. The current diagnostic implementation retains both BF16 and int8
+MLP weights only when an A/B diagnostic requests them. Normal int8 loading
+releases each block's BF16 FC1/FC2 buffers after their submitted quantization
+finishes, reducing measured peak tensor storage to 25.9 GiB from the BF16
+path's 36.4 GiB. Runtime weight quantization still adds startup time.</p>
+<p>The fastest M5 path also quantizes each DiT QKV projection and writes its
+Q/K/V tiles directly in head-major attention layout before the existing Q/K
+normalization and RoPE kernel. In a fixed 50-layer, 19-transition 512x512
+render this reduced denoising again, from 25.80 to 19.32 seconds. Sampled
+beginning, middle, and final frames remained a coherent detailed fox walking
+through snow; quantized attention can change framing and fine detail. Use
+<code>--use-slower-bf16-qkv</code> for the close-reference BF16 projection. Normal int8
+loading releases the redundant BF16 QKV weights after quantization.</p>
+<p>The following attention-output projection is int8 as well on the default M5
+path. Crossed same-model tests improve a complete forward by another 4.5-5.5%
+at 512 and 864. A decoded fox render remained clean and closely matched the
+int8-QKV-only composition; its thermally hot denoise measured 19.18 seconds.
+Use <code>--use-slower-bf16-attention-output</code> to retain that projection in BF16.</p>
+<p>On that int8 path, SDPA now leaves its result in native
+<code>[head,row,dimension]</code> order. A specialized 256-thread kernel gathers and
+quantizes each H3 row directly into the projection's row-major int8 buffer,
+eliminating the intervening full-width BF16 transpose without changing any
+output byte. Thermally controlled crossed runs improve complete 512 and 864
+forwards by roughly 0.2-1.2%. Use
+<code>--use-slower-row-major-attention-output</code> to restore the explicit BF16
+row-major SDPA output and ordinary quantizer.</p>
+<p>The M5 path also folds QKV and MLP activation quantization into the preceding
+gated AdaLN kernel. This removes 99 standalone quantizer dispatches per
+50-layer forward while preserving the previous output bytes, improving crossed
+512/864 measurements by about 0.3-0.6%. Use
+<code>--use-slower-unfused-int8-inputs</code> to restore the standalone quantizers.</p>
+<p>The fused gated-AdaLN path loads its full 5,376-wide H3 rows as BF16x4 vectors
+and writes int8x4. It stages the rounded values locally before computing the
+original per-thread RMS sequence, so the reduction tree and every output byte
+remain unchanged. Crossed measurements save roughly another 0.1-0.5%. The
+existing <code>--use-slower-unfused-int8-inputs</code> option retains the portable scalar
+and standalone-quantizer fallback.</p>
+<p>Q/K RMS normalization and RoPE are performed inside the int8 QKV projection
+tile as well. The fused epilogue is byte-identical and improves complete
+forwards by 2.1-3.2% at 512 and 1.0-1.8% at 864 in crossed M5 measurements.
+Use <code>--use-slower-unfused-qkv-rope</code> to restore the separate Q/K kernel.</p>
+<p>That epilogue processes four adjacent Q/K dimensions per work item with
+BF16x4 loads and stores. The per-element arithmetic and BF16 rounding order are
+unchanged, while crossed cool-state measurements improve complete forwards by
+about 0.4-1.0% at both 512 and 864. The same
+<code>--use-slower-unfused-qkv-rope</code> option restores the scalar standalone path.</p>
+<p>At up to 2,048 rows, the exact RMS loop uses BF16x4 loads followed by four
+explicit ordered FMAs. This preserves every output bit and improves 512-class
+forwards by another 0.5-0.6%; larger shapes retain scalar loads because the two
+forms tie there. Use <code>--use-slower-scalar-qkv-rms</code> to force scalar loads.</p>
+<p>The int8 attention-output projection caches its 128 row and column scales in
+1 KiB of threadgroup memory instead of rereading them for every cooperative
+fragment element. Above 2,048 rows the fused QKV kernel uses the same idea and
+then recycles that storage for inverse RMS values; smaller QKV shapes retain
+direct loads because the two forms tie there. Both are byte-identical and
+improve complete forwards by about 0.2-0.7% where selected. Use
+<code>--use-slower-uncached-int8-scales</code> to restore direct device-scale loads.</p>
+<p>For sequences of at most 2,048 rows, the H3 attention-output projection also
+compiles its 7,168-by-5,376 shape into the TensorOps kernel. The result remains
+byte-identical while saving about 0.2-0.8% in crossed complete 512-forward
+measurements. Larger sequences retain the dynamic-shape kernel because the
+specialization regresses there. <code>--use-slower-uncached-int8-scales</code> restores
+the general dynamic, direct-scale-load implementation.</p>
+<p>FC1 also uses an H3-specialized, compile-time 5,376-wide TensorOps loop. It is
+byte-identical to the generic loop and saves about 0.1-0.4% in crossed complete
+forwards. Use <code>--use-slower-dynamic-fc1-k</code> to restore the runtime-bound loop.</p>
+<pre>./h3 --profile -d ./MiniMax-H3 \
+  -p "A red fox walks through fresh snow." \
+  --width 512 --height 512 --frames 22 --steps 20 \
+  --layers 50 --reuse 1 -o outputs/fox-int8.mp4</pre>
+<p>Use <code>--use-slower-bf16-mlp</code> to force the portable close-reference MPS/BF16 MLP
+path for numerical comparison. Older Metal hardware selects that path
+automatically when the required native TensorOps kernels are unavailable.
+For FC2 activation quantization, sequences of at most 2,048 rows use an exact
+128-thread reduction. Each thread retains its eight BF16 input values while
+computing the group maximum, avoiding a second device-memory read when it emits
+the int8 values; crossed M5 measurements improved complete 512 forwards by
+about 0.2-0.8% without changing any output byte. Larger sequences retain the
+measured 256-thread kernel. <code>--use-slower-grouped-quantizer</code> forces the latter
+at every size for A/B comparison.</p>
+<p>The native baseline targets the original <code>FL2VA/</code> and <code>Ref2VA/</code> checkpoint
+trees. Model phases are loaded and released separately so the 33B transformer,
+Qwen encoder, and decoders never have to coexist in unified memory.</p>
+<p><a href="https://news.ycombinator.com/item?id=49252179">Comments on Hacker News</a></p>]]></content:encoded>
+      <guid isPermaLink="true">https://github.com/antirez/h3.c</guid>
+      <category>Hacker News</category>
+      <pubDate>Tue, 11 Aug 2026 01:22:09 +0000</pubDate>
+      <dc:creator>swyx</dc:creator>
+    </item>
+    <item>
+      <title>Chicken Scheme 6.0</title>
+      <link>https://code.call-cc.org/releases/6.0.0/NEWS</link>
+      <description>Chicken Scheme 6.0</description>
+      <content:encoded><![CDATA[<p><a href="https://news.ycombinator.com/item?id=49251702">Comments on Hacker News</a></p>]]></content:encoded>
+      <guid isPermaLink="true">https://code.call-cc.org/releases/6.0.0/NEWS</guid>
+      <category>Hacker News</category>
+      <pubDate>Tue, 11 Aug 2026 00:24:15 +0000</pubDate>
+      <dc:creator>eatonphil</dc:creator>
+    </item>
     <item>
       <title>The UK's War on Anonymity Has Come to America</title>
       <link>https://www.effort.news/uk-lobby</link>
@@ -300,6 +1592,40 @@ $0.72m
       <dc:creator>awnird</dc:creator>
     </item>
     <item>
+      <title>How Claude marks AI-generated content</title>
+      <link>https://support.claude.com/en/articles/16266773-how-claude-marks-ai-generated-content</link>
+      <description>Anthropic has signed the EU AI Act's Article 50(2) Code of Practice on Transparency of AI-Generated Content, as a provider of both generative AI models and generative AI systems. This article describes how we’re planning to put those commitments into practice, how marking works, and what its limitations are. We’ll update this article and publish more detailed technical guidance as it becomes available.</description>
+      <content:encoded><![CDATA[<p>Anthropic has signed the EU AI Act's Article 50(2) Code of Practice on Transparency of AI-Generated Content, as a provider of both generative AI models and generative AI systems. This article describes how we’re planning to put those commitments into practice, how marking works, and what its limitations are. We’ll update this article and publish more detailed technical guidance as it becomes available.</p>
+<p><b>Anthropic’s commitments under the EU AI Act’s Code of Practice on Transparency of AI-Generated Content</b></p>
+<p>What our marking commitments mean for Claude:</p>
+<ul><li><p><b>New models will mark AI-generated content from day one.</b> Claude models launched in the EU on or after August 2, 2026 will support machine-readable marking at launch. Generated text will carry embedded watermarks, and generated files will include digitally signed provenance metadata where supported.</p></li><li><p><b>Marking works everywhere you use Claude.</b> Marks will apply to output from supported Claude models across Claude Platform (API), Claude, Claude Code, Claude Cowork, and Claude Tag, and wherever Claude is offered, worldwide. Some platforms or features may not support certain marking types.</p></li><li><p><b>We'll help you detect Claude's marks.</b> We'll support users and other third parties to detect Claude’s marks, as the Code requires, and we’ll share details in forthcoming documentation.</p></li><li><p><b>Existing models are in progress.</b> The law includes a transition period for Anthropic models launched before August 2, 2026, and we’re working to add marking support for those models as well.</p></li></ul>
+<p>More details about our marking plans are below.</p>
+<hr/>
+<h2 id="h_e18619fa2f">Machine-readable marks in Claude-generated content</h2>
+<p>As AI-generated content becomes commonplace, greater transparency and signals about where content comes from can give people useful context about the information they consume. To support transparency and comply with our legal obligations, Anthropic is working to include machine-readable marks in content that Claude generates.</p>
+<h3 id="h_53f80c674c">What’s covered</h3>
+<ul><li><p><b>Models. </b>Claude models launched on or after August 2, 2026 support marking at launch. We’re also working to add marking support to Claude models released before that date, and we’ll update this article as that becomes available.</p></li><li><p><b>Products. </b>Claude markings cover output from supported models everywhere you use Claude, including Claude Platform (API), Claude, Claude Code, Claude Cowork, and Claude Tag. Embedded watermarks will apply to all generated text. Provenance metadata will apply where Claude supports processing files.</p></li><li><p><b>Cloud partners. </b>Embedded watermarks will apply when supported Claude models are accessed through AWS, Google Cloud, or Microsoft Foundry. Signed provenance metadata may not be supported on every platform, depending on the features each platform offers.</p></li><li><p><b>Regions. </b>Marking will apply to output from supported models wherever Claude is offered, worldwide.</p></li></ul>
+<h2 id="h_8e0a06d941">How Claude marks content</h2>
+<p>Claude uses two complementary techniques to mark content generated and processed by Claude: (1) watermarks embedded in text, and (2) signed provenance metadata attached to files. </p>
+<h3 id="h_6d7a0c92a6">1. Embedded watermarks in text </h3>
+<p>When a supported Claude model generates text, it weaves an imperceptible watermark directly into the text itself. You won’t see it, and it doesn’t change the meaning, quality, or readability of Claude’s response. </p>
+<p>Because the watermark is part of the text, it will travel with the text when it’s copied and pasted elsewhere, and may persist through some editing. Watermarking will be applied at the model level, which means it will be present no matter which Claude product or surface the text comes from. </p>
+<h3 id="h_35bc5763e0">2. Signed provenance metadata </h3>
+<p>When Claude generates a supported file type, such as a .svg, .png, or .jpg, it will attach signed provenance metadata. This metadata follows the Coalition for Content Provenance and Authenticity (C2PA) open standard, which is used across the industry to record information about content provenance. If a signed metadata label is present, it signals that a file was processed by Claude and lets you detect whether the file has been tampered with. </p>
+<h2 id="h_9a8a0d4bfe">Detecting Claude’s marks </h2>
+<p>We’re also working to enable users and other third parties to detect Claude’s embedded watermarks and provenance metadata. Detection checks whether a piece of text or a file carries a supported Claude mark. If a supported mark is found, it indicates that the content may have been processed by Claude.</p>
+<h2 id="h_5145f0fb21">Limitations</h2>
+<p>Machine-readable marks provide important signals about content, but it’s worth understanding their limitations across all content types. </p>
+<ul><li><p><b>A detected mark provides a signal that content was processed by Claude, but is not fully conclusive. </b>Detecting a Claude mark tells you that the content may have been processed by Claude. It does not, on its own, confirm the full provenance of the content. For example: </p><ul><li><p>Claude may not be the original author. People often use Claude to proofread, translate, summarize, or convert files. The output can carry a Claude mark even if the underlying ideas, text, or data originated from another source;</p></li><li><p>The content may have changed after Claude processed it. Marked content may be modified, excerpted, or combined with other material after Claude processed it.</p></li></ul></li><li><p><b>Lack of a detected mark doesn’t mean the content wasn’t AI-generated or processed.</b> Content generated by Claude may not carry a detectable mark if, for example: </p><ul><li><p>It was generated by a model released before marking was supported;</p></li><li><p>The text has been heavily edited, paraphrased, translated, or mixed into other writing;</p></li><li><p>The passage is very short, leaving too little text for a reliable signal;</p></li><li><p>A file’s metadata was stripped through format conversion, re-saving, screenshots, or other means;</p></li><li><p>It was produced through a platform, feature, or file type where a particular marking type wasn’t supported.</p></li></ul></li></ul>
+<h2 id="h_d2d961a964">If you build with Claude</h2>
+<p>If you deploy Claude in your own product, you should independently assess what Article 50 requires of your products and services. Consistent with our commitments under the EU Code, our goal is to support you in meeting your own transparency obligations, and we'll share technical guidance on our marking and detection approach as it becomes available.</p>
+<p><a href="https://news.ycombinator.com/item?id=49250109">Comments on Hacker News</a></p>]]></content:encoded>
+      <guid isPermaLink="true">https://support.claude.com/en/articles/16266773-how-claude-marks-ai-generated-content</guid>
+      <category>Hacker News</category>
+      <pubDate>Mon, 10 Aug 2026 21:36:56 +0000</pubDate>
+      <dc:creator>mfiguiere</dc:creator>
+    </item>
+    <item>
       <title>Confessions of a Long-Distance Sailor</title>
       <link>https://arachnoid.com/lutusp/sailbook.html</link>
       <description>Confessions of a Long-Distance Sailor. Download page for book.</description>
@@ -583,6 +1909,46 @@ the coming months. You can also reach us at <a href="mailto:hello@vectorware.com
       <category>Hacker News</category>
       <pubDate>Mon, 10 Aug 2026 18:12:49 +0000</pubDate>
       <dc:creator>sagacity</dc:creator>
+    </item>
+    <item>
+      <title>Learning more about Claude's mathematical capabilities</title>
+      <link>https://www.anthropic.com/research/riemann-zeta</link>
+      <description>An unreleased version of Claude has made strides on a problem related to the Riemann hypothesis. It improved the lower bound for the fraction of zeros of the Riemann zeta function that satisfy the hypothesis, increasing it from 41.6% to 67.2%.</description>
+      <content:encoded><![CDATA[<img alt="Illustration of a mathematical compass" height="2310" src="https://www.anthropic.com/_next/image?url=https%3A%2F%2Fwww-cdn.anthropic.com%2Fimages%2F4zrzovbb%2Fwebsite%2F406d8496be38ea8a5459c66eaa7c5c7edab4a62f-4107x2310.png&amp;w=3840&amp;q=75" width="4107"/>
+<p>Recently, a member of staff at Anthropic gave Claude an unreasonable challenge. It was about one of the most famous unsolved problems in mathematics: <em>Take a real stab at the Riemann hypothesis</em>.</p>
+<p>Claude did take a real stab, but as you might have expected if you’re familiar with the difficulty of the task (the Riemann hypothesis dates back to 1859 and has a <a href="https://www.claymath.org/millennium-problems/">million-dollar bounty</a>), it didn’t succeed. Nevertheless, during its attempt, it unexpectedly made strides on a related problem.</p>
+<p>An unreleased research version of Claude has improved on a longstanding lower bound for the fraction of zeros of the Riemann zeta function that satisfy the Riemann hypothesis. Drawing on extensive prior research by mathematicians over the past decades, it has increased this bound from 41.6% to 67.2%.</p>
+<p>Two mathematicians at Anthropic studied and validated Claude’s <a href="https://www-cdn.anthropic.com/564f962e60643842f5fcb4a17c9dbc8f608f1c37.pdf">paper</a>, and produced an <a href="https://www-cdn.anthropic.com/23455459f8832d06bb175cc0f88d019aed962ef8.pdf">informal note</a> for experts stating Claude’s proof concisely. Claude also produced a <a href="https://github.com/anthropics/zeta-23-lean">formally verifiable proof</a> of its result. We are grateful to Brian Conrey and Dan Goldston, two experts in this area, who generously examined the paper on short notice.</p>
+<p>We don’t expect that the techniques Claude used will lead to proving the Riemann hypothesis. But its work serves as the latest example of the speed of progress in AI models’ mathematical capabilities. In this post, we discuss how Claude approached this problem and what it found.</p>
+<h2 id="the-riemann-zeta-function">The Riemann zeta function</h2>
+<p>The Riemann zeta function describes the distribution of prime numbers: each place that the function takes the value of zero contributes successively finer detail to the sequence of primes. The Riemann hypothesis is that the zeros that determine the primes all exist along a certain vertical line. This has become one of the most consequential conjectures in mathematics: many results assume it in order to provide a form of randomness in the primes.</p>
+<p>No one has yet been able to prove or disprove the Riemann hypothesis, but mathematicians have made progress in many related directions studying the Riemann zeta function and its zeros. One of these, as above, is quantifying a minimum proportion of zeros that are on the line: over time, they’ve gradually increased this known constant proportion to 41.6%.</p>
+<p>Another direction concerns the <em>distribution</em> of zeros on the line. In particular, in 1973, Montgomery <a href="https://en.wikipedia.org/wiki/Montgomery's_pair_correlation_conjecture">introduced</a> a number of new techniques in this area, though these techniques assumed the hypothesis was true. More recently, several mathematicians (Baluyot, Goldston, Suriajaya, and Turnage-Butterbaugh) have published a <a href="https://arxiv.org/abs/2306.04799">series</a> of <a href="https://arxiv.org/abs/2501.14545">works</a> that allow Montgomery’s techniques to work <em>without</em> that assumption, meaning they can support work on increasing the lower-bound constant for the zeros on the line. Claude’s result draws heavily on this line of research, along with a 2000 <a href="https://eudml.org/doc/252338">paper</a> by Bombieri.</p>
+<h2 id="claudes-finding">Claude's finding</h2>
+<p>Claude found that combining the results from Baluyot, Goldston, Suriajaya, and Turnage-Butterbaugh with the work of Bombieri provides a way to surpass the previous state-of-the-art lower-bound proportion of 41.6%, increasing it to 67.2%.</p>
+<p>A short technical explanation of Claude’s finding is as follows: Claude forms a suitable space of functions with quadratic form induced by Weil, and positive- (respectively negative-)definite subspaces arising from zeros on (respectively off) the line. Then Claude simply writes down an inequality on the rank of a quadratic form in terms of first- and second-moment information. (The successful computation of the latter in terms of the dual picture over primes, or via control of a Hilbert transform, is no surprise in analytic number theory.) The courage to treat the entire space, with positive- and negative-definiteness taken into account together, and with the quadratic form allowed to be non-diagonal, is in some sense the step that allows Claude to achieve the conclusion based on the important prior work.</p>
+<p>The full technical explanation is available in the <a href="https://www-cdn.anthropic.com/564f962e60643842f5fcb4a17c9dbc8f608f1c37.pdf">paper</a>. Claude’s explanation of how it arrived at its result is available in a separate Appendix <a href="https://www-cdn.anthropic.com/d7f3ecf1d01392d887f8bc974ca187e2a121b1ed.pdf">here</a>.</p>
+<h2 id="claudes-methodology">Claude's methodology</h2>
+<p>An unreleased research version of Claude found the new lower bound over two sessions in Claude Code, using a total of 31 million output tokens.</p>
+<p>Jarred Sumner, an Anthropic staff member (and non-mathematician), prompted Claude to “take a real stab” at the hypothesis itself, leaving the mathematical choices from there up to the model. Initially, Claude generated and tried 650 ideas, none of which worked. Jarred prompted Claude to try again, and it spent a day and a half coordinating about 60 Claude subagents, which this time went much deeper: between them, they ran 2,400 shell commands and wrote hundreds of Python scripts.<sup>1</sup> The subagents ran thousands of numerical checks against known zeta zeros and refereed one another’s work. Throughout this process, Jarred's input was mostly limited to sending Claude messages of encouragement (mostly variants of “keep going” or “believe in yourself”).<sup>2</sup> This seems to have helped Claude overcome some initial skepticism that it could make meaningful progress.</p>
+<p>Having found this new result while attempting the task, Claude tested its work by having various subagents review the proofs, search for counterexamples, download 54 papers from the arXiv to check that its finding hadn’t already been made, and independently re-prove its finding from scratch. Claude volunteered to write its findings up as a paper, and recommended that a human number theorist validate its findings.</p>
+<p>Levent Alpöge and Ralph Furman, two of Anthropic’s own mathematicians, examined Claude’s work to understand the new results and how they related to the prior work mentioned above. In parallel, Claude worked with another member of staff, Eric Easley, to produce a <a href="https://github.com/anthropics/zeta-23-lean">Lean formalization</a> of the result, which passes the standard validation tool <a href="https://github.com/leanprover/comparator">comparator</a>.</p>
+<h2 id="ai-models-progress-in-mathematics">AI models' progress in mathematics</h2>
+<p>This result shows that AI models like Claude can extend the impact and reach of mathematicians’ ideas in new and sometimes surprising ways. Even though it couldn’t resolve the Riemann hypothesis itself, this result emerged as the unintended byproduct of that original request.</p>
+<p>Even Claude was surprised by its own finding—it was skeptical at first, possibly because it has learned from its training about the difficulty of open problems in mathematics and about the limitations of AI models. But after some encouraging prompts, it arrived at the result we’ve described. Perhaps Claude, like many of us, underestimates the rate of AI progress.</p>
+<h4>Footnotes</h4>
+<ol><li>Out of the 60 subagents, two were responsible for developing the key mathematical ideas, 13 contributed ideas to these agents, 30 attempted (but were unable) to develop new ideas, 13 served as validators to check the correctness of the arguments, and the final two helped to write the initial paper.</li><li>A prompt including similar encouragement was used to help Claude disprove the <a href="https://x.com/__alpoge__/status/2079028340955197566?s=20">Jacobian conjecture</a>.</li></ol>
+<h3>Discovering cryptographic weaknesses with Claude</h3>
+<p>cryptographic algorithms. The first attack significantly weakens HAWK, a digital signature scheme that was built for a future world where quantum computers are able to break existing standards. The second identifies a new way to attack round-reduced AES, the most widely used symmetric cipher. </p>
+<h3>Project Pilot: Can AI control a drone?</h3>
+<p>Working with Andon Labs, we’ve developed a new series of evaluations that assess AI models’ ability to use a flying drone, culminating in a new benchmark: Drone-Bench.</p>
+<h3>How Canada uses Claude: Findings from the Anthropic Economic Index</h3>
+<p><a href="https://news.ycombinator.com/item?id=49247070">Comments on Hacker News</a></p>]]></content:encoded>
+      <guid isPermaLink="true">https://www.anthropic.com/research/riemann-zeta</guid>
+      <category>Hacker News</category>
+      <pubDate>Mon, 10 Aug 2026 17:41:13 +0000</pubDate>
+      <media:content url="https://www.anthropic.com/_next/image?url=https%3A%2F%2Fwww-cdn.anthropic.com%2Fimages%2F4zrzovbb%2Fwebsite%2F406d8496be38ea8a5459c66eaa7c5c7edab4a62f-4107x2310.png&amp;amp;w=3840&amp;amp;q=75" type="image/jpeg" medium="image"/>
+      <dc:creator>tosh</dc:creator>
     </item>
     <item>
       <title>Show HN: Needle2: 14MB agentic LLM for phones, wearables, smart home and robots</title>
@@ -1472,6 +2838,267 @@ each core's SMI counter for a divergence:</p>
       <pubDate>Mon, 10 Aug 2026 16:03:14 +0000</pubDate>
       <media:content url="https://github.com/xoreaxeaxeax/smiiiiiiiiiiiiiiii/raw/main/examples/smi.gif" type="image/gif" medium="image"/>
       <dc:creator>WhiteDawn</dc:creator>
+    </item>
+    <item>
+      <title>Show HN: Ante, a coding agent in a single binary that runs offline</title>
+      <link>https://github.com/AntigmaLabs/ante</link>
+      <description>Ghost in your shell. Ante is a self-contained agent harness with a highly optimized core. It works like Claude Code or Codex, with none of their dependencies or model constraints. - AntigmaLabs/ante</description>
+      <content:encoded><![CDATA[<p>
+<img alt="Ante — substrate for self-organizing intelligence" src="https://github.com/AntigmaLabs/ante/raw/main/docs-site/static/assets/ante-readme-banner-light-1280x320.png"/>
+</p>
+<p>
+<a href="https://github.com/AntigmaLabs/ante/releases"><img src="https://camo.githubusercontent.com/752d020ca0bee5ea02071d2ada84c83b5e9b8a1285339ecd4a0f4962880bd959/68747470733a2f2f696d672e736869656c64732e696f2f6769746875622f762f72656c656173652f416e7469676d614c6162732f616e74653f696e636c7564655f70726572656c6561736573266c6162656c3d72656c6561736526636f6c6f723d626c756576696f6c6574"/></a>
+<a href="https://antigma.ai/eval"><img src="https://camo.githubusercontent.com/71e21e4b45352a1d214c6406139b015ff727c88b5cafb5170388895bda8451fc/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f5465726d696e616c2d2d42656e63685f322e312d6c6976655f726573756c74732d3265613434663f6c6f676f3d737065656474657374266c6f676f436f6c6f723d7768697465"/></a>
+<a href="https://docs.antigma.ai"><img src="https://camo.githubusercontent.com/4d5a722e3a27d9b80bdbcd38f0419e72c10499b9c3fe2c23130d1b2b3435c2bd/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f446f63732d646f63732e616e7469676d612e61692d6f72616e67653f6c6f676f3d736166617269266c6f676f436f6c6f723d7768697465"/></a>
+<a href="https://discord.gg/CbAsUR434B"><img src="https://camo.githubusercontent.com/1572662bebf847907e65f3d426c3051280e9ac17599a1d5bd62d179ff3ae413e/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f446973636f72642d4a6f696e25323055732d3538363546323f6c6f676f3d646973636f7264266c6f676f436f6c6f723d7768697465"/></a>
+<a href="https://twitter.com/antigma_labs"><img src="https://camo.githubusercontent.com/a15323ff15c6e7cb26ca5f8665dbe5ff66deaeaf9fbaecac1b78ab2dcbd03de7/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f582d40616e7469676d615f5f6c6162732d626c61636b3f6c6f676f3d78266c6f676f436f6c6f723d7768697465"/></a>
+<a href="https://huggingface.co/Antigma"><img src="https://camo.githubusercontent.com/82743e012a45c1bd2857e0955d9a6f9a09f24b99eb01b6c09c216aa18ad609ab/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f48756767696e67466163652d416e7469676d612d79656c6c6f773f6c6f676f3d68756767696e6766616365266c6f676f436f6c6f723d7768697465"/></a>
+<a href="https://github.com/AntigmaLabs/ante/blob/main/LICENSE"><img src="https://camo.githubusercontent.com/35b94db23d3ed026343335f74d52ce31e74b77ad7dab4e4b89f49f2026e0937f/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f6c6963656e73652d4170616368652d2d322e302d626c7565"/></a>
+</p>
+<h2>Ante</h2>
+<blockquote>
+<p><strong>Alpha preview</strong>: expect breaking changes and incomplete functionality. macOS and Linux only; on Windows we suggest <a href="https://learn.microsoft.com/windows/wsl/install">WSL</a>.</p>
+</blockquote>
+<h2>Read this first</h2>
+<p>Two things many people ask about:</p>
+<p><strong>Where is the source?</strong> The core harness currently ships as a prebuilt binary; this repo holds the docs, protocol, SDK, and eval pipeline (<a href="#whats-in-this-repo">details</a>). We are working out a way to ship the source code along with the binary, to address security and privacy concerns first, while taking the time to figure out how open source should work in the agentic era. If you have concerns today, run Ante in a sandbox: it is a single binary with minimal runtime dependencies, built to be easy to deploy in a container or on a remote machine.</p>
+<p><strong>Is there telemetry?</strong> Yes, and it is opt-out: set <code>ANTE_TELEMETRY=off</code> to disable export entirely. What it sends is anonymous — a random installation label you can delete and re-mint, never your username, hostname, or machine id. The <code>RUST_LOG</code> filter also applies to exported logs, a convenience carried over from the Rust ecosystem. A better UX is in the works. <a href="https://docs.antigma.ai/configuration/preference#telemetry">Details →</a></p>
+<hr/>
+<p><strong>A ghost in your shell.</strong> Ante is a self-contained coding agent that lives in your terminal and self-organizes. One ~15MB Rust binary from <a href="https://antigma.ai">Antigma Labs</a>, zero runtime dependencies, built to get the most out of any model.</p>
+<p>It works like Claude Code or Codex, with none of their dependencies or model constraints. It can also be the optimized core for building your own harness and high-performing assistants.</p>
+<pre>curl -fsSL https://ante.run/install.sh | bash
+ante</pre>
+<p>Every agent claims to be good. Here are numbers you can check:</p>
+<h3>🥇 Continuously evaled and evolved, in public</h3>
+<p>Ante runs <a href="https://antigma.ai/eval">Terminal-Bench 2.1</a> continuously under official leaderboard constraints: 89 tasks, 5 trials each. Each result pins the exact build you can download and links the raw Harbor run for independent audit. Latest full run: <strong>82.7%</strong> with open-weight <strong>DeepSeek V4 Flash 0731</strong> (368/445 trials, Ante 0.preview.71, about $68 of inference). DeepSeek <a href="https://deepseek.ai/blog/deepseek-v4-flash-ga-agent-benchmarks">reports</a> the same 82.7 for this model, measured with its unreleased DeepSeek Harness in minimal mode.</p>
+<p><strong><a href="https://antigma.ai/eval">Live results →</a></strong> · <a href="https://docs.antigma.ai/benchmarks/eval">Methodology →</a></p>
+<h3>🪶 A fraction of the footprint</h3>
+<p>Ante is hand-written Rust with the heavy parts (<code>Grep</code>, <code>git</code>) embedded in one binary, one process, and local inference handled by a pinned, managed llama.cpp. Across the same 20 parallel tasks in Docker, Ante uses <strong>~7× less peak memory</strong>, <strong>~9× less average CPU</strong>, and <strong>~5× less disk I/O</strong> than Claude Code.</p>
+<p><a href="https://github.com/AntigmaLabs/ante/blob/main/docs-site/docs/benchmarks/compare_animated.gif"><img alt="Resource Usage Comparison" src="https://github.com/AntigmaLabs/ante/raw/main/docs-site/docs/benchmarks/compare_animated.gif"/></a></p>
+<p><strong><a href="https://docs.antigma.ai/benchmarks/compare_table">Raw numbers →</a></strong> · <a href="https://docs.antigma.ai/benchmarks/eval">Benchmark details →</a></p>
+<h3>🔌 Natively offline</h3>
+<p>Ante's inference engine is a pinned, managed version of <a href="https://github.com/ggml-org/llama.cpp">llama.cpp</a>. Point it at a GGUF file and the whole loop runs on your machine: no API key, no account, no internet.</p>
+<pre>ante --offline-model ~/.ante/models/Qwen3.5-9B-Q4_K_M.gguf \
+  -p "add error handling to src/main.rs"</pre>
+<p><strong><a href="https://docs.antigma.ai/usage/offline">Offline mode →</a></strong> · <a href="https://github.com/AntigmaLabs/nanochat-rs">nanochat-rs, a toy engine for study →</a></p>
+<hr/>
+<p>The three are one design decision. An agent you can <strong>verify</strong>, <strong>afford</strong>, and <strong>run anywhere</strong> is light enough to run by the <em>thousands</em>: the substrate for self-organizing intelligence.</p>
+<h2>See it in action</h2>
+<table>
+<tbody><tr>
+<td>
+<p><strong><a href="https://docs.antigma.ai/usage/models-and-thinking">Models, Providers &amp; Thinking</a></strong></p>
+<p><a href="https://github.com/AntigmaLabs/ante/blob/main/docs-site/static/assets/cookbook/providers.gif"><img alt="Switching provider, model, and effort with /providers" src="https://github.com/AntigmaLabs/ante/raw/main/docs-site/static/assets/cookbook/providers.gif"/></a></p>
+</td>
+<td>
+<p><strong><a href="https://docs.antigma.ai/usage/providing-context">Providing Context: Files &amp; Folders</a></strong></p>
+<p><a href="https://github.com/AntigmaLabs/ante/blob/main/docs-site/static/assets/cookbook/files.gif"><img alt="Adding file context with @ mentions" src="https://github.com/AntigmaLabs/ante/raw/main/docs-site/static/assets/cookbook/files.gif"/></a></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><strong><a href="https://docs.antigma.ai/usage/steering">Interrupting &amp; Steering</a></strong></p>
+<p><a href="https://github.com/AntigmaLabs/ante/blob/main/docs-site/static/assets/cookbook/interrupt.gif"><img alt="Interrupting the agent with Escape" src="https://github.com/AntigmaLabs/ante/raw/main/docs-site/static/assets/cookbook/interrupt.gif"/></a></p>
+</td>
+<td>
+
+<p><a href="https://github.com/AntigmaLabs/ante/blob/main/docs-site/static/assets/cookbook/connect.gif"><img alt="Connecting to a provider via /connect" src="https://github.com/AntigmaLabs/ante/raw/main/docs-site/static/assets/cookbook/connect.gif"/></a></p>
+</td>
+</tr>
+</tbody></table>
+<h2>Quick Start</h2>
+<h3>Installation</h3>
+<p>Ante is a single, self-contained binary with no external dependencies: download and run.</p>
+<pre>curl -fsSL https://ante.run/install.sh | bash
+
+# Install a specific release channel
+curl -fsSL https://ante.run/install.sh | bash -s -- nightly
+
+# Install into a directory already on PATH
+curl -fsSL https://ante.run/install.sh | ANTE_INSTALL_DIR=/usr/local/bin bash</pre>
+<h3>Modes</h3>
+<table>
+<thead>
+<tr>
+<th>Mode</th>
+<th>Command</th>
+<th>Use it for</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://docs.antigma.ai/usage/tui">Interactive TUI</a></td>
+<td><code>ante</code></td>
+<td>day-to-day work in the terminal</td>
+</tr>
+<tr>
+<td><a href="https://docs.antigma.ai/usage/headless">Headless</a></td>
+<td><code>ante -p "..."</code></td>
+<td>one-shot tasks, scripts, CI</td>
+</tr>
+<tr>
+<td><a href="https://docs.antigma.ai/usage/serve">Server</a></td>
+<td><code>ante serve</code></td>
+<td>editor plugins and integrations, over a JSONL protocol</td>
+</tr>
+<tr>
+<td><a href="https://docs.antigma.ai/usage/gateway">Gateway</a></td>
+<td><code>ante gateway</code></td>
+<td>running Ante as a Slack or Discord bot</td>
+</tr>
+</tbody>
+</table>
+<h3>Headless examples</h3>
+<pre># Fix a bug
+ante -p "find and fix the failing test in src/auth"
+
+# Review a diff
+git diff | ante -p "review this for security issues"
+
+# Use a different provider
+ante --provider openai --model gpt-5.5 -p "refactor the database module"
+
+# Resume a saved session
+ante --resume ses_01ARZ3NDEKTSV4RRFFQ69G5FAV -p "now add tests"
+
+# Run fully offline with a local GGUF model
+ante --offline-model ~/.ante/models/Qwen3.5-9B-Q4_K_M.gguf \
+  -p "add error handling to src/main.rs"</pre>
+<h3>Update Ante</h3>
+<pre>ante update
+
+# One-off update from a different channel
+ante update --channel nightly
+
+# Roll back or pin to an exact release
+ante update --version v0.preview.71</pre>
+<h2>Beyond the headline numbers</h2>
+<ul>
+<li><strong>Zero vendor lock-in</strong>: bring your own API key, subscription, or local model. Switch between 12+ providers freely. No account required, not even with us.</li>
+<li><strong>Multi-agent orchestration</strong>: spawn sub-agents and coordinate complex tasks across independent, decentralized, and centralized architectures. <a href="https://docs.antigma.ai/experimental/agent-org">See the patterns →</a></li>
+<li><strong>Channel integrations</strong>: run Ante as a Slack or Discord bot with <code>ante gateway</code>.</li>
+<li><strong>Extensible</strong>: custom skills, sub-agents, MCP, and persistent memory across sessions.</li>
+</ul>
+<h2>Supported Providers</h2>
+<p>Ante works with 12+ providers out of the box:</p>
+<table>
+<thead>
+<tr>
+<th>Provider</th>
+<th>Example Models</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Anthropic</td>
+<td>Claude Sonnet 4.5, Opus 4.6</td>
+</tr>
+<tr>
+<td>OpenAI</td>
+<td>GPT-5 family</td>
+</tr>
+<tr>
+<td>Google Gemini</td>
+<td>Gemini 3 family</td>
+</tr>
+<tr>
+<td>Grok (xAI)</td>
+<td>Grok 4</td>
+</tr>
+<tr>
+<td>Open Router</td>
+<td>Multiple providers</td>
+</tr>
+<tr>
+<td>Local (GGUF)</td>
+<td>Any GGUF model via built-in llama.cpp</td>
+</tr>
+<tr>
+<td>...and more</td>
+<td>Vertex AI, Zai, Antix, OpenAI-compatible</td>
+</tr>
+</tbody>
+</table>
+<p>Configure providers via environment variables (<code>ANTHROPIC_API_KEY</code>, <code>OPENAI_API_KEY</code>, etc.) or OAuth. Add custom providers in <code>~/.ante/catalog.json</code>.</p>
+<h2>What's in this repo</h2>
+<p>We open sourced what really matters in the age of agentic coding, all under Apache 2.0:</p>
+<ol>
+<li><strong>Detailed documentation, the descriptive truth.</strong> <a href="https://github.com/AntigmaLabs/ante/blob/main/docs-site"><code>docs-site/</code></a> is the source for <a href="https://docs.antigma.ai">docs.antigma.ai</a>: a precise description of what the harness does and how to drive it.</li>
+<li><strong>The protocol, the algorithm of the core.</strong> <a href="https://github.com/AntigmaLabs/ante/blob/main/crates/protocol-shape"><code>crates/protocol-shape</code></a> defines the schema and wire messages spoken by <code>ante serve</code>; <a href="https://github.com/AntigmaLabs/ante/blob/main/crates/agent-sdk"><code>crates/agent-sdk</code></a> is the Rust SDK and client for building against agent runtimes.</li>
+<li><strong>The eval pipeline, constraint and continuous improvement.</strong> <a href="https://github.com/AntigmaLabs/ante/blob/main/ante-harbor"><code>ante-harbor/</code></a> is the Harbor agent adapter behind our Terminal-Bench results: use it to reproduce any run at <a href="https://antigma.ai/eval">antigma.ai/eval</a>. <a href="https://github.com/AntigmaLabs/ante/blob/main/CHANGELOG.md"><code>CHANGELOG.md</code></a> records the improvement, release by release.</li>
+</ol>
+<p>The core harness itself is developed in a private repository during the alpha and ships as a prebuilt binary via <a href="https://github.com/AntigmaLabs/ante/releases">releases</a>. Core libraries from it are included here progressively as they stabilize; <a href="https://github.com/AntigmaLabs/ante/blob/main/crates/exec"><code>crates/exec</code></a>, standalone process execution, is the first.</p>
+<p>The protocol surface maps to Ante's client-daemon architecture:</p>
+<pre><code>┌─────────────────────────────────────────────────────────────┐
+│                         Clients                             │
+│                                                             │
+│   ┌───────────┐    ┌───────────┐    ┌────────────────────┐  │
+│   │    TUI    │    │ Headless  │    │    ante serve      │  │
+│   │  (ante)   │    │ (ante -p) │    │  (stdio / ws)      │  │
+│   └─────┬─────┘    └─────┬─────┘    └─────────┬──────────┘  │
+└─────────┼────────────────┼─────────────────────┼────────────┘
+          │                │                     │
+          ▼                ▼                     ▼
+┌─────────────────────────────────────────────────────────────┐
+│                         Daemon                              │
+│                                                             │
+│   Session ──▶ Turn ──▶ Step                                │
+│                                                             │
+│   ┌──────────┐  ┌──────────────┐  ┌───────────────────┐     │
+│   │  Tools   │  │  Permission  │  │  Skills / Agents  │     │
+│   └──────────┘  └──────────────┘  └───────────────────┘     │
+└────────────────────────┬────────────────────────────────────┘
+                         │
+                         ▼
+┌─────────────────────────────────────────────────────────────┐
+│                     LLM Providers                           │
+│                                                             │
+│   Anthropic · OpenAI · Gemini · Grok · Open Router · Local  │
+└─────────────────────────────────────────────────────────────┘
+</code></pre>
+<h2>The bigger picture</h2>
+<blockquote>
+<p><strong>We care about the harness, not the model or the prompts.</strong></p>
+<p><strong>Documentation is the new source code.</strong></p>
+</blockquote>
+<p>Ante is designed for <strong>cellular-native</strong> agents: like cells in an organism, tiny, expendable, massively replicated. That thesis is why the three headline claims exist. A cell-scale agent must be <em>verified</em> (reliability compounds at scale), <em>tiny</em> (every byte is multiplied by thousands), and <em>self-contained</em> (no runtime to install, no service to phone home to). Read more in our <a href="https://docs.antigma.ai/start/philosophy">philosophy</a> and <a href="https://docs.antigma.ai/experimental/agent-org">agent organization patterns</a>.</p>
+<h2>FAQ</h2>
+<h3>Why another terminal agent?</h3>
+<p>The name is the answer: <strong>An</strong>other <strong>Te</strong>rminal agent, and <em>ante</em>, the stake you put on the table to play. Ante is fast, lightweight, and the only terminal agent with native local inference built in. We believe a self-contained agent core that self-organizes is the foundation of the coming agent economy.</p>
+<b>How is Ante different from other agents?</b>
+<p>Ante has most of the features you expect from agents like Claude Code or Codex: multi-agents, skills, MCP, persistent memory. The difference is the build philosophy.</p>
+<ul>
+<li>Built from scratch in Rust. Core components like <code>Grep</code> (fully rebuilt and customized) and <code>git</code> are embedded in the same ~15MB binary and run in the same process at runtime, so nothing is shelled out and no resources leak. Most similar projects ship on Node.js or CPython and carry an order-of-magnitude larger footprint.</li>
+<li>Local inference is built in: the engine is a pinned, managed version of <a href="https://github.com/ggml-org/llama.cpp">llama.cpp</a>, so a local GGUF model is all Ante needs to run without any provider. To study how such an engine works, see <a href="https://github.com/AntigmaLabs/nanochat-rs">nanochat-rs</a>, our toy version.</li>
+<li>No vendor lock-in, not even to ourselves: no account needed, reuse your existing API credentials. An opt-in, fully integrated server-side experience lives at <a href="https://antix.antigma.ai">antix.antigma.ai</a>.</li>
+<li>Every claim is backed by public, reproducible benchmarks of the exact builds we ship: <a href="https://antigma.ai/eval">antigma.ai/eval</a>.</li>
+</ul>
+<p>Beyond the footprint it comes down to agent architecture, and ultimately to <em>who</em> is building it and with what philosophy. Anyone can fork a binary; taste and engineering rigor don't copy. Those differences leak into every detail of the product.</p>
+<b>Why care about runtime optimization like memory and I/O if model inference is usually the biggest bottleneck?</b>
+<p>For one-on-one agent interactions, runtime overhead like memory usage and I/O is often less important than model inference.</p>
+<p>But our vision is much bigger: millions of agents self-organizing and communicating at massive scale. At that point, even small inefficiencies get multiplied millions or billions of times, so runtime optimization becomes economically significant.</p>
+<b>Can I run Ante completely offline?</b>
+<p>Yes. Ante has a built-in llama.cpp engine that runs GGUF models locally. It handles engine installation, model discovery, and memory management automatically. No API keys or internet connection required.</p>
+<b>Can I use my own custom models or providers?</b>
+<p>Yes. Create a <code>~/.ante/catalog.json</code> file to add or override providers and models with custom endpoints, API keys, and configurations. Any OpenAI-compatible API works.</p>
+<b>What is the <code>ante serve</code> mode for?</b>
+<p>Server mode runs Ante as a long-lived daemon that communicates over a structured JSONL protocol. It's ideal for building editor plugins, web UIs, and custom integrations on top of Ante.</p>
+<h2>Documentation</h2>
+<p>Full documentation is available at <a href="https://docs.antigma.ai">docs.antigma.ai</a>.</p>
+<h2>License</h2>
+<p>Source code in this repository (including the SDK and protocol crates) is
+licensed under the <a href="https://github.com/AntigmaLabs/ante/blob/main/LICENSE">Apache License 2.0</a>.</p>
+<p>The prebuilt <code>ante</code> binary is free to use — including commercially — during
+the alpha preview under the <a href="https://github.com/AntigmaLabs/ante/blob/main/BINARY-TERMS.md">Binary Preview Terms</a>. The core
+harness is currently developed in a private repository and shipped as a
+binary; the SDK and protocol surface you build against here will remain
+permissively licensed.</p>
+<p><a href="https://news.ycombinator.com/item?id=49245437">Comments on Hacker News</a></p>]]></content:encoded>
+      <guid isPermaLink="true">https://github.com/AntigmaLabs/ante</guid>
+      <category>Hacker News</category>
+      <pubDate>Mon, 10 Aug 2026 15:59:23 +0000</pubDate>
+      <media:content url="https://github.com/AntigmaLabs/ante/raw/main/docs-site/static/assets/ante-readme-banner-light-1280x320.png" type="image/png" medium="image"/>
+      <dc:creator>ubermon</dc:creator>
     </item>
     <item>
       <title>Extreme 220GHz+Broadband Silicon Capacitor X2SC 0201M 22nF BV11</title>
@@ -3557,374 +5184,6 @@ years of Phrack. By one of the curious, still connected.
       <category>Hacker News</category>
       <pubDate>Sun, 09 Aug 2026 20:15:45 +0000</pubDate>
       <dc:creator>johnchinjew</dc:creator>
-    </item>
-    <item>
-      <title>The tragedy of the commons, AI edition</title>
-      <link>https://www.economist.com/britain/2026/08/06/the-tragedy-of-the-commons-ai-edition</link>
-      <description>The tragedy of the commons, AI edition</description>
-      <content:encoded><![CDATA[<p><a href="https://news.ycombinator.com/item?id=49235011">Comments on Hacker News</a></p>]]></content:encoded>
-      <guid isPermaLink="true">https://www.economist.com/britain/2026/08/06/the-tragedy-of-the-commons-ai-edition</guid>
-      <category>Hacker News</category>
-      <pubDate>Sun, 09 Aug 2026 19:43:52 +0000</pubDate>
-      <dc:creator>simonpure</dc:creator>
-    </item>
-    <item>
-      <title>How I use LLMs to learn complex topics</title>
-      <link>https://laurentiugabriel.github.io/blog/articles/how-i-use-llms-to-learn/</link>
-      <description>LLMs are used for any things. Learning new things is one of the top use cases.</description>
-      <content:encoded><![CDATA[<p>Many engineers I know use generative AI for many functions, like building PoCs, internal tools or dashboards, or even learning new stuff. I personally find the style used by LLMs to explain things difficult to follow. It's just too simplistic and depending on the number of emojis used, a bit annoying too.</p>
-<p><img alt="How chips are made - explained in a RollerCoasterTycoon-like simulation" src="https://laurentiugabriel.github.io/blog/images/ChipTycoon.png"/></p>
-<p>While I was analyzing new AI bottlenecks that might slow down data center buildup, I realized there are many aspects of chip production that I do not know. Surfing the web, I asked myself what if there would be a game to get you through the process of building a chip at a fab? For sure learning this way will stick, since you can map concepts with objects within the game. This is when I decided to try it, and it actually turned out really well.</p>
-<h2>The flow</h2>
-<p>Instead of just asking  AI to explain a topic, I use the following flow:</p>
-<ul>
-<li>In plan mode (using CC, or OpenCode) I ask a model to build the foundational knowledge for X topic.</li>
-<li>I ask it to review the accuracy of the knowledge base it built in the previous step.</li>
-<li>I proceed asking it to build a simulation of that topic in a low-poly, Rollercoaster Tycoon-like animation. I add some UX elements as well, like the page needs to be visible on both large and small screens, have controls to stop the flow whenever I want etc.</li>
-<li>I then push it to a new repo and enable GitHub Pages for it.</li>
-</ul>
-<h2>The result</h2>
-<p>What you get is a beautiful animation that is 100% accurate and free of hallucinations. For me, this method works a lot better than just reading endless materials that I find on Google, or trying to digest a bulleted list that is spat by a language model.</p>
-<p>I've done this specifically for learning chip building and launch it under this website: <a href="https://laurentiugabriel.github.io/ChipTycoon/">ChipTycoon</a>. You get to follow a cart from the moment when sand is collected, to the moment when a chip is finalized and delivered to a data center.</p>
-<p>Visually, you can follow the cart and see how it changes too. Since it's low-poly, the details might be missing, but it's still a good indicator for showing how the product changes once it goes through the many steps required in the manufacturing process.</p>
-<h2>How to improve it further</h2>
-<p>Let's say that the low-poly design requires to much immagination to actually visualize what happened to the quartz sand pile after it left the furnace. To transform this into a more realistic representation, you can use my <a href="https://github.com/LaurentiuGabriel/unreal-game-assets-creation-skill">skill for transforming pictures into 3d objects</a>, and map the resulting objects to your simulation. This way you get more accurate design.</p>
-<p>Also, you can add challenges to your simulation too. Trying to answer questions about a previous step in the chip manufacturing process will help you retain the knowledge tremendously. Add intuitive puzzles too that will help you learn even better.</p>
-<p>Check out what other pages I created:</p>
-<ul>
-<li><a href="https://laurentiugabriel.github.io/rocket-engine/">How rocket engines are made</a></li>
-<li><a href="https://laurentiugabriel.github.io/token-town/">How LLMs work</a></li>
-<li><a href="https://laurentiugabriel.github.io/engineworks/">How F1 engines are built</a></li>
-<li><a href="https://laurentiugabriel.github.io/euv-lithography/">How an EUV machine is built</a></li>
-</ul>
-<p><a href="https://news.ycombinator.com/item?id=49234675">Comments on Hacker News</a></p>]]></content:encoded>
-      <guid isPermaLink="true">https://laurentiugabriel.github.io/blog/articles/how-i-use-llms-to-learn/</guid>
-      <category>Hacker News</category>
-      <pubDate>Sun, 09 Aug 2026 19:16:49 +0000</pubDate>
-      <media:content url="https://laurentiugabriel.github.io/blog/images/ChipTycoon.png" type="image/png" medium="image"/>
-      <dc:creator>laurentiurad</dc:creator>
-    </item>
-    <item>
-      <title>I made tinnitus my friend, then it disappeared [video]</title>
-      <link>https://mynoise.net/vlog.php?ep=20260803</link>
-      <description>Exploring the world of sounds and the passion behind myNoise, with Dr. Ir. Stéphane Pigeon</description>
-      <content:encoded><![CDATA[<p><a href="https://news.ycombinator.com/item?id=49234271">Comments on Hacker News</a></p>]]></content:encoded>
-      <guid isPermaLink="true">https://mynoise.net/vlog.php?ep=20260803</guid>
-      <category>Hacker News</category>
-      <pubDate>Sun, 09 Aug 2026 18:41:35 +0000</pubDate>
-      <dc:creator>gregsadetsky</dc:creator>
-    </item>
-    <item>
-      <title>OpenChamber: An Agentic Development Environment</title>
-      <link>https://openchamber.dev/</link>
-      <description>OpenChamber is an agentic development environment for AI coding across desktop, browser, phone, and VS Code. Watch agents work, review diffs, branch sessions, and keep the whole board visible.</description>
-      <content:encoded><![CDATA[<a href="https://www.instagram.com/halyna_artist">Artwork by Halyna</a>
-<h2>  An agentic   development   environment.  </h2>
-<img alt="OpenChamber desktop interface" src="https://openchamber.dev/desktop-chat-dark.png"/>
-<figure> <img alt="OpenChamber on mobile" src="https://openchamber.dev/mobile_center_dark.png"/> </figure>
-<h3>Session Goals</h3>
-<p>Set a finish line. The agent keeps working toward it, turn after turn — even with the app closed.</p>
-<h3>Multi-run and Fusion</h3>
-<p>Run one task across up to five models. Keep the best result, or fuse the strongest parts.</p>
-<h3>Changes Walkthrough</h3>
-<p>A large diff, grouped into ordered steps that explain how the change fits together.</p>
-<h3>Preview</h3>
-<p>Point at an element in your running app and send the agent everything behind it.</p>
-<h3>From issue to pull request</h3>
-<p>Start from a GitHub issue or PR, send failed checks back, and merge without leaving.</p>
-<h3>Scheduled work</h3>
-<p>Run a prompt on a cron schedule. Pair it with Session Goals to aim at an outcome.</p>
-<figure> <img alt="OpenChamber session list on mobile" src="https://openchamber.dev/mobile_left_dark.png"/> </figure>
-<figure> <img alt="OpenChamber new chat on mobile" src="https://openchamber.dev/mobile_center_dark.png"/> </figure>
-<figure> <img alt="OpenChamber conversation on mobile" src="https://openchamber.dev/mobile_right_dark.png"/> </figure>
-<figure> <img alt="OpenChamber usage and limits on mobile" src="https://openchamber.dev/mobile_right_right_dark.png"/> </figure>
-<h3>Desktop app</h3>
-<ul> <li>macOS, Windows, and Linux apps</li><li>Multi-window project workflows</li><li>Open In shortcuts for Finder, Terminal, and your editor</li><li>Project Actions for dev servers, SSH forwarding, and local URLs</li> </ul>
-<img alt="OpenChamber desktop app" src="https://openchamber.dev/desktop-chat-dark.png"/>
-<h3>Browser / PWA / Mobile</h3>
-<ul> <li>Browser access from anywhere</li><li>Phone- and tablet-friendly controls</li><li>A native mobile app, now in beta</li><li>A UI password gate that makes browser access public-ready</li><li>Background notifications and cross-tab session activity</li> </ul>
-<h3>Code editor</h3>
-<ul> <li>Editor-native workflow</li><li>Open files directly from tool output</li><li>Right-click context actions on selections and files</li><li>Agent Manager for parallel multi-model runs</li> </ul>
-<img alt="OpenChamber in VS Code" src="https://openchamber.dev/code-dark.png"/>
-<figure> <blockquote> <p>After years of switching between IDEs and TUIs, I found the sweet spot for everything I need: <em>Openchamber</em>.</p> </blockquote>  </figure>
-<p>"I just want to say the app itself is phenomenal. The level of polish is just unreal. I saw OpenChamber back when it was a small project, I think maybe a couple months ago, and now it is unrecognizable. Truly amazing work. The latest release with its streaming feature is everything I could have possibly asked for and more. It is gorgeous and smooth."</p>
-<p>"Opencode + OhMyOpencode + Openchamber. This is some cooked stack. VSCode looks like legacy notepad++ now."</p>
-<p>"Stop using Openclaw for coding! Use OpenCode and OpenChamber instead!"</p>
-<p>"Seriously, I've spent almost the whole week trying to find a tool that made sense to orchestrate agents and, as a dev (actually, a devops), openchamber is the only one that felt natural and logical."</p>
-<h4>Code and sessions stay with you</h4>
-<p>Project names, paths, prompts, code, diffs, and session content are not collected by OpenChamber.</p>
-<h4>Remote access is protected</h4>
-<p>Browser access can be gated with a UI password, and tunnel links can be rotated or revoked when they should no longer work.</p>
-<h4>Private Relay, no open ports</h4>
-<p>Pair a device with a one-time QR code and connect through Private Relay without opening ports or exposing a public server. The connection is end-to-end encrypted and can be revoked at any time.</p>
-<h4>Privacy is inspectable</h4>
-<p>OpenChamber is open source, so the privacy model is visible in the code instead of hidden behind policy language.</p>
-<p>Yes. OpenChamber is open source, and the code is available on GitHub.</p>
-<p>OpenChamber runs on the OpenCode SDK today — we picked it for the best open-source agent experience available. Install it with </p>
-<code>curl -fsSL https://opencode.ai/install | bash</code>
-<p>.</p>
-<p>Yes. OpenChamber itself is free to use.</p>
-<p>Yes. You can open it remotely through the browser UI, use tunnels when needed, and protect access with a UI password.</p>
-<p> More questions? <a href="https://docs.openchamber.dev/">Check the documentation</a> </p>
-<p><a href="https://news.ycombinator.com/item?id=49233448">Comments on Hacker News</a></p>]]></content:encoded>
-      <guid isPermaLink="true">https://openchamber.dev/</guid>
-      <category>Hacker News</category>
-      <pubDate>Sun, 09 Aug 2026 17:27:16 +0000</pubDate>
-      <media:content url="https://openchamber.dev/desktop-chat-dark.png" type="image/png" medium="image"/>
-      <dc:creator>hexomancer</dc:creator>
-    </item>
-    <item>
-      <title>Ask HN: What are you working on? (August 2026)</title>
-      <link>https://news.ycombinator.com/item?id=49233423</link>
-      <description>Ask HN: What are you working on? (August 2026)</description>
-      <content:encoded><![CDATA[<p><a href="https://news.ycombinator.com/item?id=49233423">Comments on Hacker News</a></p>]]></content:encoded>
-      <guid isPermaLink="true">https://news.ycombinator.com/item?id=49233423</guid>
-      <category>Hacker News</category>
-      <pubDate>Sun, 09 Aug 2026 17:23:22 +0000</pubDate>
-      <dc:creator>david927</dc:creator>
-    </item>
-    <item>
-      <title>Human vs. AI – Diff-based line-level provenance for text under agentic editing</title>
-      <link>https://github.com/eighttrigrams/us-vs-them</link>
-      <description>Line-level provenance for text under agentic editing — who wrote this line, us or them? — derived from version history, not from markup in the file. - eighttrigrams/us-vs-them</description>
-      <content:encoded><![CDATA[<h2>Us vs. Them</h2>
-<p>Line-level provenance for text under agentic editing — <strong>who wrote this line, us or
-them?</strong> — derived from a text's version history. Use it as library or as CLI tool.</p>
-<p><a href="https://github.com/eighttrigrams/us-vs-them/blob/main/title_image.png"><img alt="alt" src="https://github.com/eighttrigrams/us-vs-them/raw/main/title_image.png"/></a></p>
-<h2>The problem</h2>
-<p>With agentic coding and editing, provenance becomes a pertinent question. Text a
-human wrote or edited should be considered close to sacred: an agent should
-be hesitant and have a very good reason to touch it. Slop another agent has produced,
-on the other hand, is completely up for grabs.</p>
-<p>A use case for this: Take a mostly vibecoded app in which you want to establish
-some corners in the code where you want to assert your ideas and ownership.
-You surely don't want another agent bulldoze over <em>this</em> piece of code
-in the next session.</p>
-<p>Another use case: the README.md, originally generated, where you rewrite
-the opening paragraphs. The agent should feel free to redo or append parts
-further downwards but should really think twice changing anything in the opener.</p>
-<h2>How it works</h2>
-<p>The main constraint under which this should work is that this should not require
-for text to be marked up specifically for that. Omnipresent plain text (markdown)
-should be supported as is.</p>
-<p>The only thing to leverage then, is that each new version of a text is created
-under identifable authorship - of either a human or an agent.</p>
-<p>The output of an evaluation over a given text is a set of ranges — "islands" of
-human-authored lines inside a "sea" of machine generated text. Technically based on simple diffing,
-this is the guiding metaphor for development of the algorithm. We don't want to track authorship
-of individual lines only, but of meaningfully coherent pieces of text.
-So joining, splitting apart, and dilution of authorship are behaviours
-to be factored in, also in such a manner that we don't
-converge in full sea or full island.</p>
-<h2>Usage</h2>
-<p>Using us-vs-them as CLI tool requires <a href="https://github.com/babashka/bbin">bbin</a> for a local install.</p>
-<pre>make install</pre>
-<p>A git repository is already a history of versions each carrying a provenance
-marker — every revision of the file, in order, with the author of the change that
-made it.</p>
-<p>To use it anywhere inside a git repository:</p>
-<pre>us-vs-them --ours dan@eighttrigrams.net README.md</pre>
-<p>This yields a listing like</p>
-<pre><code>1-3          0.00
-4            1.00
-5-7          0.00
-8-20         0.46
-21-164       0.00
-</code></pre>
-<p>where 1.0 means fully human authored range.<br/>
-0.46 means originally human authored range, modified by agents to a certain degree.<br/>
-0.00 means fully agent authored.</p>
-<p>Parameters are:</p>
-<p><code>--ours</code>: these are the humans, everonee else is considered an agent</p>
-<p><code>--theirs</code>: these are agents, everyone else is considered human</p>
-<p>Name whichever side is the shorter list.<br/>
-Passing both arguments at the same time will be rejected.</p>
-<h2>Development</h2>
-<pre>make test</pre>
-<h2>Behaviour</h2>
-<p>The best way to understand the behaviour is to have a look at
-<a href="https://github.com/eighttrigrams/us-vs-them/blob/main/test/et/uvt/caution_test.clj">caution_test.clj</a>.</p>
-<p><a href="https://news.ycombinator.com/item?id=49232300">Comments on Hacker News</a></p>]]></content:encoded>
-      <guid isPermaLink="true">https://github.com/eighttrigrams/us-vs-them</guid>
-      <category>Hacker News</category>
-      <pubDate>Sun, 09 Aug 2026 15:25:29 +0000</pubDate>
-      <media:content url="https://github.com/eighttrigrams/us-vs-them/raw/main/title_image.png" type="image/png" medium="image"/>
-      <dc:creator>eighttrigrams</dc:creator>
-    </item>
-    <item>
-      <title>Taxi drivers rarely die of Alzheimer's</title>
-      <link>https://theconversation.com/taxi-drivers-rarely-die-of-alzheimers-how-complex-mental-maps-and-spatial-reasoning-protect-your-brain-286650</link>
-      <description>Working with and living in spatially complex environments may help delay cognitive decline, though more research is needed.</description>
-      <content:encoded><![CDATA[<figure>
-
-<img alt="Vector image of brain hovering above a city, lines connecting it to various points marked with red circles" src="https://images.theconversation.com/files/752403/original/file-20260805-60-8x6hvk.jpg?ixlib=rb-4.1.1&amp;rect=0%2C161%2C2121%2C1060&amp;q=75&amp;auto=format&amp;w=1336&amp;h=668&amp;fit=crop&amp;dpr=1"/>
-
-<figcaption>
-          Figuring out a circuitous route between point A to point B can strengthen your brain.
-          <a href="https://www.gettyimages.com/detail/photo/smart-city-concept-with-brain-and-bangkok-cityscape-royalty-free-image/1452174080">justhavealook/iStock via Getty Images Plus</a>
-</figcaption>
-
-</figure>
-<ul>
-<li>
-<a href="https://theconversation.com/topics/neurodegenerative-disease-391">Neurodegenerative disease</a>
-</li>
-<li>
-<a href="https://theconversation.com/topics/neuroscience-427">Neuroscience</a>
-</li>
-<li>
-<a href="https://theconversation.com/topics/spatial-1459">Spatial </a>
-</li>
-<li>
-<a href="https://theconversation.com/topics/brain-1544">Brain</a>
-</li>
-<li>
-<a href="https://theconversation.com/topics/geography-4376">Geography</a>
-</li>
-<li>
-<a href="https://theconversation.com/topics/hippocampus-5440">Hippocampus</a>
-</li>
-<li>
-<a href="https://theconversation.com/topics/civil-engineering-18947">Civil engineering</a>
-</li>
-<li>
-<a href="https://theconversation.com/topics/geographic-information-systems-25493">Geographic Information Systems</a>
-</li>
-<li>
-<a href="https://theconversation.com/topics/alzheimers-disease-30935">Alzheimer's disease</a>
-</li>
-<li>
-<a href="https://theconversation.com/topics/maps-37082">Maps</a>
-</li>
-<li>
-<a href="https://theconversation.com/topics/brain-health-40741">Brain health</a>
-</li>
-<li>
-<a href="https://theconversation.com/topics/spatial-reasoning-46104">Spatial reasoning</a>
-</li>
-<li>
-<a href="https://theconversation.com/topics/taxi-drivers-70366">Taxi drivers</a>
-</li>
-<li>
-<a href="https://theconversation.com/topics/spatial-memory-77788">Spatial memory</a>
-</li>
-<li>
-<a href="https://theconversation.com/topics/spatial-skills-119316">Spatial skills</a>
-</li>
-<li>
-<a href="https://theconversation.com/topics/gis-150147">GIS</a>
-</li>
-<li>
-<a href="https://theconversation.com/topics/mental-maps-165294">Mental maps</a>
-</li>
-<li>
-<a href="https://theconversation.com/topics/alzheimers-risk-174528">Alzheimer's risk</a>
-</li>
-</ul>
-<p><a href="https://news.ycombinator.com/item?id=49232253">Comments on Hacker News</a></p>]]></content:encoded>
-      <guid isPermaLink="true">https://theconversation.com/taxi-drivers-rarely-die-of-alzheimers-how-complex-mental-maps-and-spatial-reasoning-protect-your-brain-286650</guid>
-      <category>Hacker News</category>
-      <pubDate>Sun, 09 Aug 2026 15:21:46 +0000</pubDate>
-      <media:content url="https://images.theconversation.com/files/752403/original/file-20260805-60-8x6hvk.jpg?ixlib=rb-4.1.1&amp;amp;rect=0%2C161%2C2121%2C1060&amp;amp;q=75&amp;amp;auto=format&amp;amp;w=1336&amp;amp;h=668&amp;amp;fit=crop&amp;amp;dpr=1" type="image/jpeg" medium="image"/>
-      <dc:creator>jader201</dc:creator>
-    </item>
-    <item>
-      <title>Windows 11's built-in Weather app wastes more than 1 GB of RAM</title>
-      <link>https://www.notebookcheck.net/Windows-11-s-built-in-Weather-app-wastes-more-than-1-GB-of-RAM.1364205.0.html</link>
-      <description>A new report shows Windows 11's built-in Weather app can consume more than 1 GB of RAM. By comparison, Apple's native Weather app on macOS uses roughly five times less memory under similar conditions.</description>
-      <content:encoded><![CDATA[<p>Microsoft has been working to make Windows 11 more efficient on PCs with limited RAM, but one of its own built-in applications appears to be working against that goal. According to tests published by Windows Latest, the operating system's Weather app can consume more than 1 GB of memory despite performing a relatively simple task.  
-</p>
-<p>Windows Latest reports that the app exceeded 1.2 GB of RAM while displaying a weather forecast, with no intensive interaction from the user. Wccftech observed similar behavior, noting that memory usage typically starts at around 1 GB, drops to roughly 500–600 MB when idle, and can climb to 1.5–1.6 GB during basic actions such as zooming or navigating the interface. On a PC equipped with 8 GB of RAM, that means the application alone may occupy nearly 20% of the system's memory.</p>
-<figure><a href="https://www.notebookcheck.net/fileadmin/Notebooks/News/_nc5/Weather-app-consume-more-than-1-GB-RAM.png" title="Windows 11's Weather app consumes more than 1 GB of RAM."><img alt="Windows 11's Weather app consumes more than 1 GB of RAM." src="https://www.notebookcheck.net/fileadmin/_processed_/0/9/csm_Weather-app-consume-more-than-1-GB-RAM_4228cfa318.png" width="636"/>ⓘ  Windows Latest</a><figcaption>Windows 11's Weather app consumes more than 1 GB of RAM.</figcaption></figure>
-<p>By comparison, Apple's native Weather app on macOS reportedly uses less than 250 MB of RAM under similar conditions, giving Microsoft's implementation a memory footprint roughly five times larger.</p>
-<figure><a href="https://www.notebookcheck.net/fileadmin/Notebooks/News/_nc5/macOS-weather-app-uses-lesser-RAM.png" title="Apple's Weather app on macOS uses less than 250 MB of RAM."><img alt="Apple's Weather app on macOS uses less than 250 MB of RAM." src="https://www.notebookcheck.net/fileadmin/_processed_/8/9/csm_macOS-weather-app-uses-lesser-RAM_625f3f6aaf.png" width="636"/>ⓘ  Windows Latest</a><figcaption>Apple's Weather app on macOS uses less than 250 MB of RAM.</figcaption></figure>
-<p>According to Windows Latest, the high memory consumption is due to the fact that Weather is not a fully native Windows application. Instead, it is essentially an MSN Weather web app built on Microsoft's WebView2 framework. Task Manager shows multiple Chromium-based subprocesses running simultaneously, which contributes to the unusually high RAM usage.
-</p>
-<p>The issue is unlikely to affect high-end PCs with 32 GB or more of RAM, but it could have a noticeable impact on entry-level systems. On computers with 8 GB or even 16 GB of memory, launching the Weather app may increase memory pressure enough for Windows to rely more heavily on the page file, potentially making the system feel less responsive.
-</p>
-<p>The application also includes advertising within its interface. According to Windows Latest, sponsored content is embedded directly into the forecast feed, appearing alongside weather cards in a similar visual style. While Microsoft licenses weather data from multiple providers — including Foreca, the European Centre for Medium-Range Weather Forecasts (ECMWF), and other regional meteorological services — the presence of ads in a built-in Windows application has attracted criticism.
-</p>
-<p>The findings also appear to contradict Microsoft's recent efforts to <a href="https://www.notebookcheck.net/Windows-11-update-speeds-up-File-Explorer-launch-times.1332562.0.html">improve Windows 11's efficiency</a>. The company has been updating several built-in applications and has repeatedly said it wants the operating system to perform better on <a href="https://www.notebookcheck.net/Microsoft-to-optimize-Windows-11-for-PCs-with-8GB-of-RAM.1357708.0.html">lower-end hardware</a>. Microsoft executive Rudy Huyn has also stated that the company intends to develop more fully native Windows applications in the future, although it remains unclear whether MSN-branded applications such as Weather will eventually be rebuilt using WinUI.</p>
-<p><a href="https://www.windowslatest.com/2026/08/09/windows-11s-weather-app-uses-5x-the-ram-of-macos-weather-and-it-still-shows-ads/">Windows Latest</a>, <a href="https://wccftech.com/windows-11-weather-app-high-ram-usage/">Wccftech</a></p>
-<a href="https://www.notebookcheck.net/KTM-debuts-affordable-Macina-Joy-trekking-e-bike-with-Bosch-motor.1364244.0.html">⟨</a>
-<p>Previous article</p>
-<a href="https://www.notebookcheck.net/KTM-debuts-affordable-Macina-Joy-trekking-e-bike-with-Bosch-motor.1364244.0.html">KTM debuts affordable Macina Joy trekking e-bike with Bosch motor</a>
-<p>Next article</p>
-<a href="https://www.notebookcheck.net/Apple-iPhone-18-Pro-appears-on-preview-website-Caviar-unveils-five-limited-editions.1364292.0.html">Apple iPhone 18 Pro appears on preview website, Caviar unveils five limited editions</a>
-<a href="https://www.notebookcheck.net/Apple-iPhone-18-Pro-appears-on-preview-website-Caviar-unveils-five-limited-editions.1364292.0.html">⟩</a>
-<a href="https://www.notebookcheck.net/Notebookcheck-Team.212978.0.html?&amp;tx_nbc2journalist_pi1%5Bmode%5D=show&amp;tx_nbc2journalist_pi1%5Buid%5D=370"><img alt="Andrew Sozinov" height="120" src="https://www.notebookcheck.net/fileadmin/_processed_/4/3/csm_andrew-sozinow_e0ab2514d1.jpg" width="120"/></a>
-<p>I’ve been fascinated by computers, electronics and modern technology since childhood. I started writing IT-news at high school and have been doing it continuously for more than 10 years. During this time, I have worked for many media outlets, and now I am a news editor at 3DNews. Sometimes I also write smartphone reviews. In July 2024, I decided to try my hand at writing news on Notebookcheck. When I'm not working, I like to play videogames, do puzzles, and travel.</p>
-<p>&gt; </p>
-<a href="https://www.notebookcheck.net/Expert-Reviews-and-News-on-Laptops-Smartphones-and-Tech-Innovations.48.0.html">Expert Reviews and News on Laptops, Smartphones and Tech Innovations</a>
-<p> &gt;  </p>
-<a href="https://www.notebookcheck.net/News.152.0.html">News</a>
-<p> &gt;  </p>
-<a href="https://www.notebookcheck.net/News-Archive.45592.0.html">News Archive</a>
-<p> &gt;  </p>
-<a href="https://www.notebookcheck.net/Newsarchive-2026-08.1357607.0.html">Newsarchive 2026 08</a>
-<p> &gt;  Windows 11's built-in Weather app wastes more than 1 GB of RAM </p>
-<br/>
-<p>Andrew Sozinov, 2026-08- 9 (Update: 2026-08- 9)</p>
-<br/>
-<p><a href="https://news.ycombinator.com/item?id=49232138">Comments on Hacker News</a></p>]]></content:encoded>
-      <guid isPermaLink="true">https://www.notebookcheck.net/Windows-11-s-built-in-Weather-app-wastes-more-than-1-GB-of-RAM.1364205.0.html</guid>
-      <category>Hacker News</category>
-      <pubDate>Sun, 09 Aug 2026 15:11:20 +0000</pubDate>
-      <media:content url="https://www.notebookcheck.net/fileadmin/_processed_/0/9/csm_Weather-app-consume-more-than-1-GB-RAM_4228cfa318.png" type="image/png" medium="image"/>
-      <dc:creator>akyuu</dc:creator>
-    </item>
-    <item>
-      <title>Tom Stanton's supersonic trebuchet breaks sound barrier with gravity alone</title>
-      <link>https://www.techeblog.com/tom-stanton-supersonic-trebuchet/</link>
-      <description>Tom Stanton has spent years chasing a number that gravity itself seemed to forbid. On a quiet field somewhere in the UK, a 40-kilogram mass dropped a short distance, spun a carbon-fiber arm past 2,300 revolutions per minute, and sent a 4-gram projectile into the air at 776 miles per hour. That is nine miles per hour past the speed of sound. For the first time, a purely gravity-powered trebuchet crossed the barrier. Medieval engineers created these machines to fling huge stones at castle walls. The basic idea is to hoist a large heavy weight, let it fall down, and</description>
-      <content:encoded><![CDATA[<p><img alt="Tom Stanton Supersonic Trebuchet" height="853" src="https://images.techeblog.com/wp-content/uploads/2026/08/09001255/tom-stanton-supersonic-trebuchet.jpg" width="1280"/><br/>
-<a href="https://www.techeblog.com/tom-stanton-electric-wind-up-plane-hand-cranked/">Tom Stanton</a> has spent years chasing a number that gravity itself seemed to forbid. On a quiet field somewhere in the UK, a 40-kilogram mass dropped a short distance, spun a carbon-fiber arm past 2,300 revolutions per minute, and sent a 4-gram projectile into the air at 776 miles per hour. That is nine miles per hour past the speed of sound. For the first time, a purely gravity-powered trebuchet crossed the barrier.</p>
-<p><br/>
-<br/>
-Medieval engineers created these machines to fling huge stones at castle walls. The basic idea is to hoist a large heavy weight, let it fall down, and then use the lever and sling to redirect that energy into a much lighter projectile. Unfortunately, physics gets in the way. A weight in free fall accelerates at a maximum of 9.81 meters per second squared; drop one from 2 meters and it smacks into the ground at around 6 meters per second. No matter how heavy you make the weight, the speed remains constant, and a typical arm is like a car with a bike chain stuck in first gear, with lots of torque at first but just enough to get it moving by the end.<br/>
-
-<a href="https://www.amazon.com/dp/B0DRW8G6H1?tag=tec02e-20&amp;linkCode=ogi&amp;th=1&amp;psc=1" title="LEGO Architecture Neuschwanstein Castle Building Set - Collectible Bavarian Castle Model Kit for Arts...">
-<img alt="LEGO Architecture Neuschwanstein Castle Building Set - Collectible Bavarian Castle Model Kit for Arts..." src="https://m.media-amazon.com/images/I/51z88nJsacL._SL160_.jpg"/>
-</a>
-
-43,596 Reviews
-
-<a href="https://www.amazon.com/dp/B0DRW8G6H1?tag=tec02e-20&amp;linkCode=ogi&amp;th=1&amp;psc=1" title="LEGO Architecture Neuschwanstein Castle Building Set - Collectible Bavarian Castle Model Kit for Arts...">
-            LEGO Architecture Neuschwanstein Castle Building Set - Collectible Bavarian Castle Model Kit for Arts...        </a>
-
-<ul><li>BUILD A FAIRY-TALE CASTLE – Adult builders 18 years old and up construct Bavaria's legendary architectural wonder</li><li>CHANGE WITH THE SEASONS – Customize your castle display all year long with seasonal LEGO summer and autumn foliage</li><li>ROOM-BY-ROOM CONSTRUCTION – Build imposing throne rooms, turreted towers, ornate gates, and vast courtyards with authentic medieval architectural...</li></ul> 
-
-<br/>
-<img alt="Tom Stanton Supersonic Trebuchet" height="720" src="https://images.techeblog.com/wp-content/uploads/2026/08/09002411/tom-stanton-supersonic-trebuchet-1.jpg" width="1280"/><br/>
-Stanton devised a creative engineering solution to the speed problem. The counterweight is suspended from a pulley system with a 3:1 ratio, as a large diameter at the beginning propels the arm with plenty of force, and as it winds down, the smaller diameter end provides a significant jump in rotational speed. In the end, the drum was redesigned so that weight could be lifted up to 1.9 meters, storing more power in the system than previous iterations.<br/>
-<br/>
-<img alt="Tom Stanton Supersonic Trebuchet" height="720" src="https://images.techeblog.com/wp-content/uploads/2026/08/09002417/tom-stanton-supersonic-trebuchet-2.jpg" width="1280"/><br/>
-The arm has to be both incredibly light and super rigid. Carbon fiber was really the only option because it isn’t heavy enough to weigh down the entire system while yet being able to withstand punishment. Stanton used his homemade CNC mill to carve the piece, keeping the dust under control with a HEPA vacuum and a good spray of water. It weighs only 116 grams. Stress tests and numerous defective 3D printed prototypes revealed that it would buckle under the sling’s pressure, so he modified the design to compensate, removed material from the tensioned side, toughened up the opposite side, and added some extra bracing for good measure. Aluminum hubs connect the arm to a short counter-arm, keeping the spinning bit as balanced as possible.<br/>
-<br/>
-<img alt="Tom Stanton Supersonic Trebuchet" height="720" src="https://images.techeblog.com/wp-content/uploads/2026/08/09002424/tom-stanton-supersonic-trebuchet-3.jpg" width="1280"/><br/>
-The projectile now starts near the axle, wrapped firmly in a sling that unwraps at just the right moment. The entire system is mechanically released, using a spring-loaded catch that opens after a certain number of rope rotations. The release window is only a few milliseconds long, which is plenty of time to complete the task. Early iterations failed under stress, but the final pin-and-loop structure held up.<br/>
-<br/>
-<img alt="Tom Stanton Supersonic Trebuchet" height="720" src="https://images.techeblog.com/wp-content/uploads/2026/08/09002430/tom-stanton-supersonic-trebuchet-4.jpg" width="1280"/><br/>
-Testing was carefully increased, and he began with a 10 kg weight. The modified aerodynamic arm reached a respectable 1248 rpm and launched at 394 mph with an incredible 43.7% efficiency. Twenty and thirty kilograms passed thru without a hitch. 40 kg, on the other hand, sped the arm to 2336 rpm and the missile to a blistering 716 mph, falling only 51 mph short of the magic barrier. The machine eventually snapped, and the clasp shattered beneath the weight of 50 kg. Stanton reduced the projectile weight to approximately 4 grams, changed the drum taper once more, and returned to the test area with the 40 kilogram setup.<br/>
-<br/>
-<img alt="Tom Stanton Supersonic Trebuchet" height="720" src="https://images.techeblog.com/wp-content/uploads/2026/08/09002436/tom-stanton-supersonic-trebuchet-5.jpg" width="1280"/><br/>
-The final test is obviously the most important, since the arm spun up to 2342 rpm. Tip speed reached a staggering 274 mph. The high-speed footage was truly eye-opening, as the missile traveled 1.94 meters in 5.6 milliseconds. Crunching those statistics yields 346.4 meters per second, or a more than respectable 776 mph. To top it all off, there was a loud crack followed by a pleasant echo, confirming the sonic boom to everyone within earshot. Not one aspect of the machine came close to failing, or so we’d like to think.</p>
-<p><a href="https://news.ycombinator.com/item?id=49232110">Comments on Hacker News</a></p>]]></content:encoded>
-      <guid isPermaLink="true">https://www.techeblog.com/tom-stanton-supersonic-trebuchet/</guid>
-      <category>Hacker News</category>
-      <pubDate>Sun, 09 Aug 2026 15:08:51 +0000</pubDate>
-      <media:content url="https://images.techeblog.com/wp-content/uploads/2026/08/09001255/tom-stanton-supersonic-trebuchet.jpg" type="image/jpeg" medium="image"/>
-      <dc:creator>Thorondor</dc:creator>
-    </item>
-    <item>
-      <title>Cool URIs Don't Change (1998)</title>
-      <link>https://www.w3.org/Provider/Style/URI</link>
-      <description>Cool URIs Don't Change (1998)</description>
-      <content:encoded><![CDATA[<p><a href="https://news.ycombinator.com/item?id=49231809">Comments on Hacker News</a></p>]]></content:encoded>
-      <guid isPermaLink="true">https://www.w3.org/Provider/Style/URI</guid>
-      <category>Hacker News</category>
-      <pubDate>Sun, 09 Aug 2026 14:32:53 +0000</pubDate>
-      <dc:creator>Klaster_1</dc:creator>
     </item>
   </channel>
 </rss>
