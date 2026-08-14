@@ -8,7 +8,380 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 14 Aug 2026 00:14:28 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 14 Aug 2026 10:12:48 +0000</lastBuildDate>
+    <item>
+      <title>Why does Opus 5 feel worse to work with?</title>
+      <link>https://mun-logadan.github.io/why-does-opus-5-feel-worse/</link>
+      <description>In my opinion and that of the colleagues I've spoken with, working with Opus 5 feels like a downgrade compared to Opus 4.7, Opus 4.8, and Fable.</description>
+      <content:encoded><![CDATA[<p>
+                        
+                            Posted on </p>
+<time>2026-08-14</time>
+<p>
+                        
+
+                        
+
+                        
+
+                        
+
+                        
+                        
+                            
+                            
+                                
+                            
+
+                            
+                                
+                                
+                                :: </p>
+<a href="https://github.com/mun-logadan/mun-logadan.github.io/blob/main/content/archive/12026-08-14_why-does-opus-5-feel-worse.md">Source Code</a>
+<p>In my opinion and that of the colleagues I've spoken with, working with Opus 5 feels like a downgrade compared to Opus
+4.7, Opus 4.8, and Fable.</p>
+<p>I'm not claiming a step backwards in capabilities – it <em>is</em> a more capable model than Opus 4.7 and Opus 4.8 and even rivals
+Fable in benchmarks, yet these other models feel better to work with. I believe this is because they:</p>
+<ul>
+<li>stop and ask questions if my intent was unclear,</li>
+<li>don't make assumptions without checking,</li>
+<li>and don't reinterpret or update my plans without asking.</li>
+</ul>
+<p>Because of this, they don't require the careful babysitting that Opus 5 does.</p>
+<h2 id="baseless-speculation">Baseless speculation</h2>
+<p>I suspect this is the result of two compounding forces at Anthropic, and in current frontier labs in general.</p>
+<p>First, the desire to create a self-improving AI that is capable of recursively bootstrapping itself to AGI/ASI.</p>
+<p>Second, the pressure to score highly on benchmarks. Although it's an open secret that many benchmark tasks are
+ill-defined, unfair, hackable, or otherwise broken, a good benchmark task is self-contained. It can be solved. It
+doesn't require hints, reading the task creator's mind, or outside information to pass.</p>
+<p>That doesn't mean a good task can only have one correct answer, just that it should score <em>all</em> unambiguously correct
+answers equally.</p>
+<p>Selecting for models that do well on benchmarks (and indeed training for them or on RLVR tasks in general) inherently
+selects for models that make bold, usually-correct assumptions in the face of ambiguity. It penalizes models with a
+tendency to stop and ask for clarification or direction.</p>
+<p>Unfortunately, that's exactly what most of us want from a coding agent.</p>
+<p>Try as you might, it's nearly impossible to get the entirety of the context, intentions, business implications, budget
+constraints, and what-have-you written down and accessible to a coding agent. There will invariably
+be ambiguity and choices to be made, and it is <em>nice</em> to know that an agent will stop and ask when needed.</p>
+<p>Real life just isn't a benchmark. There isn't a guaranteed right answer to every question, nor even a set of right
+answers, and with real-life consequences on the line, I do not want an agent taking its best guess!</p>
+<p><a href="https://news.ycombinator.com/item?id=49296740">Comments on Hacker News</a></p>]]></content:encoded>
+      <guid isPermaLink="true">https://mun-logadan.github.io/why-does-opus-5-feel-worse/</guid>
+      <category>Hacker News</category>
+      <pubDate>Fri, 14 Aug 2026 10:12:48 +0000</pubDate>
+      <dc:creator>numeri</dc:creator>
+    </item>
+    <item>
+      <title>DeepSeek peak/off-peak pricing update</title>
+      <link>https://api-docs.deepseek.com/news/news260813/</link>
+      <description>Weâre launching DeepSeek-V4-Pro today! ð</description>
+      <content:encoded><![CDATA[<h2>DeepSeek-V4-Pro GA Release</h2>
+<p>Weâre launching DeepSeek-V4-Pro today! ð</p>
+<p>ð· Major Agent upgrades with strong production gains!</p>
+<p>ð· Flexible <a href="https://api-docs.deepseek.com/guides/thinking_mode">reasoning effort</a> for V4-Pro &amp; V4-Flash: low for simple tasks, high for daily Agent workflows, max for complex tasks.</p>
+<p>ð· Native OpenAI Responses API support, optimized for <a href="https://api-docs.deepseek.com/quick_start/agent_integrations/codex">Codex</a> with one-click setup.</p>
+<p>V4 Pro is now available on app/web. Try it via âExpert Modeâ.</p>
+<p>V4 Pro is also available via API. Model names remain unchangedâplease refer to the API docs for setup details.</p>
+<img src="https://api-docs.deepseek.com/img/v4_260813_benchmark_table_en.png" width="600"/>
+<hr/>
+<p>With the V4 lineup release, weâre updating our API pricing and introducing peak and off-peak rates. Off-peak rates are 50% lower than peak, enabling more flexible workload scheduling. ð</p>
+<p>New pricing takes effect at 16:00 UTC, Aug 16, 2026 ð</p>
+<img src="https://api-docs.deepseek.com/img/v4_260813_price_en.png" width="600"/>
+<p><a href="https://news.ycombinator.com/item?id=49296627">Comments on Hacker News</a></p>]]></content:encoded>
+      <guid isPermaLink="true">https://api-docs.deepseek.com/news/news260813/</guid>
+      <category>Hacker News</category>
+      <pubDate>Fri, 14 Aug 2026 09:55:33 +0000</pubDate>
+      <media:content url="https://api-docs.deepseek.com/img/v4_260813_benchmark_table_en.png" type="image/png" medium="image"/>
+      <dc:creator>fagnerbrack</dc:creator>
+    </item>
+    <item>
+      <title>Ruby 4.0 Universal RCE Deserialization Gadget Chain</title>
+      <link>https://www.elttam.com/blog/ruby-4-0-universal-rce-deserialization-gadget-chain</link>
+      <description>This post releases a new universal chain that turns a single Marshal.load into command execution on Ruby, built with new gadgets from untapped sources as well as old gadgets put to new use.</description>
+      <content:encoded><![CDATA[<p>CONTACT US</p>
+<p><a href="https://news.ycombinator.com/item?id=49295238">Comments on Hacker News</a></p>]]></content:encoded>
+      <guid isPermaLink="true">https://www.elttam.com/blog/ruby-4-0-universal-rce-deserialization-gadget-chain</guid>
+      <category>Hacker News</category>
+      <pubDate>Fri, 14 Aug 2026 06:09:04 +0000</pubDate>
+      <dc:creator>pentestercrab</dc:creator>
+    </item>
+    <item>
+      <title>GLM-5.3: Frontier coding with emergent cyber capabilities</title>
+      <link>https://z.ai/blog/glm-5.3</link>
+      <description>GLM-5.3: Frontier coding with emergent cyber capabilities</description>
+      <content:encoded><![CDATA[<p><a href="https://news.ycombinator.com/item?id=49294997">Comments on Hacker News</a></p>]]></content:encoded>
+      <guid isPermaLink="true">https://z.ai/blog/glm-5.3</guid>
+      <category>Hacker News</category>
+      <pubDate>Fri, 14 Aug 2026 05:19:59 +0000</pubDate>
+      <dc:creator>pella</dc:creator>
+    </item>
+    <item>
+      <title>Show HN: Lumabri – Run Moe Models on a P2P Swarm with Colibri</title>
+      <link>https://github.com/JustVugg/lumabri</link>
+      <description>Run huge MoE models from a swarm of peers, with the colibri engine. Pure C. - JustVugg/lumabri</description>
+      <content:encoded><![CDATA[<p>Run huge mixture-of-experts models from a swarm of peers, with the
+<a href="https://github.com/JustVugg/colibri">colibri</a> engine. Pure C, no dependencies.</p>
+<p>One machine shares a model. Any other machine chats with it. Nothing is
+downloaded up front: the bytes an inference actually touches arrive from a peer
+on first use and stay in a local mirror, so the second question is served from
+local disk at full speed. The engine binary is never modified.</p>
+<p>Any machine may join, GPU or not. The engine was built for CPU and SSD first; a
+GPU only makes it faster, never different, and the output is byte-for-byte the
+same either way. Networks that pool GPUs recruit from the few. lumabri recruits
+from everyone.</p>
+<h2>Quick start</h2>
+<pre>make</pre>
+<p>On the machine that has a model (any colibri model directory):</p>
+<pre>./lumabri serve --model /path/to/model</pre>
+<p>On a machine that wants to chat (it needs a colibri build for the engine):</p>
+<pre>./lumabri chat --tracker &lt;server-ip&gt;:7300 --engines-dir /path/to/colibri/c</pre>
+<p>That is all. The first answer is slower while the working set crosses the
+network. Afterwards the mirror in <code>~/.lumabri</code> keeps serving even if the server
+goes offline.</p>
+<p>No model at hand? <code>make fixture</code> builds a tiny synthetic one so every step above
+is real, just small.</p>
+<h3>Just the terminal UI</h3>
+<pre>lumabri</pre>
+<p>No arguments. It asks for the swarm address and, once, for the operator public
+key, finds the engines itself, and remembers all of it in <code>~/.lumabri/config</code>.
+The second time it is Enter, Enter, and you are in. Flags still win when you give
+them, so a script never inherits somebody's saved answers.</p>
+<p>Inside the chat, <code>/swarm</code> shows the network live and anonymous (peers are
+numbered, never named), and <code>/model</code> lists the models on the swarm and switches
+between them on the fly.</p>
+<h2>How it works</h2>
+<p><strong>Sharing bytes.</strong> <code>serve</code> runs two small programs: a tracker, which is only an
+index of who holds which files, and a maintainer, which answers byte-range reads
+on the model directory. A maintainer can hold a slice of a model, and several
+maintainers can share one.</p>
+<p><strong>Reading bytes.</strong> <code>chat</code> mounts the model through <code>liblumabri.so</code>, an
+<code>LD_PRELOAD</code> shim that interposes the handful of libc calls an engine makes on a
+model directory (<code>open</code>, <code>fopen</code>, <code>opendir</code>, <code>pread</code>). Files appear as sparse
+local mirrors of the true size, so <code>fstat</code>, <code>readdir</code> and the page cache work
+natively. A missing block is fetched from a peer, written to the mirror, and
+then the engine's own <code>pread</code> proceeds. A warm read is a table lookup plus a
+normal local read: no FUSE, no daemon on the read path. Every verified MiB is
+also stored by sha256 in a local content-addressed store. The default CLI path,
+<code>~/.lumabri/cas</code>, is shared by every checkpoint, so equal chunks are downloaded
+once and can rebuild a different sparse mirror without a byte server.</p>
+<p><strong>One rule, inherited from colibri:</strong> the network may change where bytes come
+from, never which bytes. Writing a model file returns <code>EROFS</code>. A block no peer
+can serve is a loud <code>EIO</code>, never silent zeros. Byte identity is verified cold,
+warm, and with every peer dead.</p>
+<p><strong>Experts run on peers.</strong> For a mixture-of-experts model the chatter keeps only
+the dense weights, the router and the KV cache, and sends the 4 KB activation to
+the peer that holds each routed expert. Expert weights never reach the chatter.
+Both sides are built from the engine's own source, so the local run and the
+distributed run are one code path and produce identical tokens. A peer also
+advertises its exact build (engine, source hash, ISA, compiler, quantization,
+model root), and a chatter refuses a peer whose build differs before it sends a
+single activation, because a <code>-march=native</code> rebuild can change the last bit and
+that must never happen silently.</p>
+<p><strong>Peers are not trusted.</strong> Every maintainer computes a sha256 per MiB of what it
+holds and sends it with its registration. The origin can sign that truth with an
+ed25519 key it keeps offline; the tracker only carries the signature and cannot
+mint one, so a chatter verifies every block against a key it holds itself. A
+lying peer has its bytes rejected and refetched elsewhere. Remote compute is
+checked the only way it can be: <code>LUMABRI_VERIFY=N</code> reruns N percent of expert
+calls on a second replica and demands identical output. Two honest peers cannot
+disagree, so a disagreement is proof of a lie and the run stops.</p>
+<p>Prefill and target verification already arrive at the MoE as multiple rows.
+lumabri keeps that union intact and sends one multi-row EXEC per selected
+expert, including speculative-draft verification; it never serializes a batch
+into row-sized requests. <code>LUMABRI_HEDGE_MS=N</code> optionally sends a duplicate to
+the next replica when the nearest has not replied after N milliseconds and
+uses the first valid deterministic result. The fixed delay is deliberately the
+public mechanism, not an automatic SLA policy.</p>
+<h2>Engines</h2>
+<p>colibri ships several engines and they do not share a shape, so the expert side
+is per engine: a small patch that hooks the MoE function, and an expert-node
+binary built from that engine's own source. The engine is never touched, the
+patch is applied to a copy, and it is regenerated from source anchors so it
+fails loudly instead of applying in the wrong place.</p>
+<table>
+<thead>
+<tr>
+<th>engine</th>
+<th>model</th>
+<th>chat</th>
+<th>experts on peers</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>olmoe</code></td>
+<td>OLMoE</td>
+<td>yes</td>
+<td><code>expert_node</code>, proven by <code>phase2_test.sh</code></td>
+</tr>
+<tr>
+<td><code>colibri</code></td>
+<td>GLM</td>
+<td>yes</td>
+<td><code>expert_node_glm</code>, proven by <code>phase2_glm_test.sh</code></td>
+</tr>
+<tr>
+<td><code>inkling</code></td>
+<td>Inkling</td>
+<td>yes</td>
+<td><code>expert_node_inkling</code>, proven by <code>phase2_inkling_test.sh</code></td>
+</tr>
+<tr>
+<td><code>kimi_k3</code></td>
+<td>Kimi K3</td>
+<td>yes</td>
+<td><code>expert_node_kimi</code>, proven by <code>phase2_kimi_test.sh</code></td>
+</tr>
+<tr>
+<td><code>deepseek</code></td>
+<td>DeepSeek V4</td>
+<td>yes</td>
+<td><code>expert_node_deepseek</code>, proven by <code>phase2_deepseek_test.sh</code></td>
+</tr>
+</tbody>
+</table>
+<p>"Proven" means the experiment, not the claim: the same engine and the same
+prompt, generated twice, once with the experts local and once with every one of
+them on a peer, and the tokens compared bit for bit. That test caught a real
+bug once. GLM computes an expert over all of its routed rows at once, so feeding
+a peer one row at a time gave different floats and the tokens drifted after four
+positions. Nothing but running it would have found that.</p>
+<p>Build the peers with <code>make engines</code>, the patched chat engines with
+<code>make chatters</code>, or both with <code>make phase2-all ENGINE=/path/to/colibri/c</code>, for
+the engines your colibri checkout actually has.</p>
+<h2>Running a swarm</h2>
+<p>A full server walkthrough (systemd, firewall, operator key, clients) is in
+<strong><a href="https://github.com/JustVugg/lumabri/blob/main/DEPLOY.md">DEPLOY.md</a></strong>. The short version:</p>
+<pre>make &amp;&amp; make phase2-all ENGINE=/path/to/colibri/c   # phase2-all optional
+sudo make install                                    # or PREFIX=$HOME/.local</pre>
+<p>On the server, <code>lumabri serve --model /srv/model</code> opens TCP 7300 to 7302
+(tracker, maintainer, executor). Add <code>--advertise &lt;public-ip&gt;</code> for the fastest
+direct path, and <code>--key swarm.key</code> to sign the model. If a byte or compute donor
+cannot accept inbound traffic, its outbound heartbeat doubles as a tracker
+relay. Direct P2P remains preferred; symmetric NAT no longer excludes it from
+the swarm.</p>
+<p>On every other machine, pick a role:</p>
+<table>
+<thead>
+<tr>
+<th>you want to</th>
+<th>run</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>chat</td>
+<td><code>lumabri chat --tracker SERVER:7300 --engines-dir /path/to/colibri/c</code></td>
+</tr>
+<tr>
+<td>chat on the machine that holds the model</td>
+<td><code>lumabri chat --local DIR</code></td>
+</tr>
+<tr>
+<td>donate disk (hold bytes)</td>
+<td><code>lumabri serve --model ./slice --join SERVER:7300 --model-name NAME --donate GB</code></td>
+</tr>
+<tr>
+<td>donate compute (run experts)</td>
+<td><code>expert_node&lt;engine&gt; --model DIR --tracker SERVER:7300 --cache N</code></td>
+</tr>
+</tbody>
+</table>
+<p>A disk donor is told which files to hold, rarest first, by the tracker. A
+compute donor says only how many experts it can carry (<code>--hold N</code>) and the
+tracker gives it the set nobody else covers. Neither needs to know the others
+exist. While a reply is generating you can kill a donor: you get one failover
+line and the tokens continue, identical.</p>
+<p>For a manual signing-key rotation, distribute a keyring containing one public
+key per line. <code>--pubkey keyring</code> and <code>LUMABRI_PUBKEY=keyring</code> accept every key
+in it (up to 16). First deploy <code>old+new</code>, then restart the origin signing with
+the new secret, and only after clients and donors have moved remove the old
+line. Put the newest key last: the tracker keeps the valid signature made by
+the highest-priority (latest) key, so old donor heartbeats cannot roll it back.
+Comma-separated public keys are accepted too; the low-level tracker and
+maintainer commands also accept repeated <code>--pubkey</code>.
+There is still one signature per object; the overlap belongs to the verifier,
+so the wire format does not change during rotation.</p>
+<h3>Encrypted transport and peer identity</h3>
+<p>Set <code>LUMABRI_ENCRYPT=1</code> on every tracker, maintainer, expert node and chatter
+to encrypt tokens, model blocks and activations with an authenticated
+X25519/Ed25519 handshake and ChaCha20-Poly1305 frames. If a peer key cannot be
+loaded or created, networking fails closed instead of falling back to
+plaintext.</p>
+<p>Each machine keeps its private endpoint identity in <code>~/.lumabri/peer.key</code> and
+prints the public half with <code>lumabri peer-key</code>. Outbound endpoints are recorded
+in <code>~/.lumabri/known_hosts</code>; a changed key is refused on later connections.
+For first-contact MITM protection, distribute an operator-managed file before
+connecting:</p>
+<pre><code>SERVER:7300 64_HEX_PEER_KEY
+SERVER:7301 64_HEX_PEER_KEY
+SERVER:7302 64_HEX_PEER_KEY
+</code></pre>
+<p>Then set <code>LUMABRI_PEER_PINS=/path/to/peer-pins</code>. Strict pin files must list
+every endpoint the process may contact. <code>LUMABRI_REQUIRE_PIN=1</code> applies the
+same no-learning rule to a preseeded <code>known_hosts</code>. The endpoint key is not
+the model-signing key: <code>LUMABRI_PUBKEY</code> authenticates model contents, while
+peer pins authenticate network endpoints. For endpoint-key rotation, publish
+two rows for the same address containing old and new keys, switch the server,
+then remove the old row. Persistent TOFU instead requires an explicit
+<code>known_hosts</code> update after verifying the replacement key out of band.</p>
+<p>The tracker also persists the first key that owns each maintainer/executor
+name. A restart rebuilds placements from heartbeats but does not reopen names
+for takeover. Per-key and per-source live-name quotas limit table exhaustion;
+they are admission controls, not a claim to solve distributed Sybil attacks.</p>
+<p>The server also runs an expert node on the whole model, so a fresh swarm works
+on day zero with the server executing everything, and donors that join later win
+the calls they are nearest for. The nearest replica sets the speed: an expert
+held at 2 ms and at 30 ms runs at 10.5 tok/s, not 1.4, because only your closest
+copy matters.</p>
+<h2>Tests</h2>
+<pre>make test</pre>
+<p>runs the core suites: byte identity, donor integrity, role parsing, security
+(path escape, hostile frame lengths, aggregate receive memory, idle
+connections, durable identities and admission quotas), protocol input
+validation, cryptographic vectors, encrypted transport and prefetch policy.
+Per-engine expert identity runs with fixtures
+(<code>make test-engines</code>), and DeepSeek V4 against a real model
+(<code>make test-phase2-deepseek MODEL=&lt;dir&gt;</code>). Assignment, concurrency and signing
+have their own scripts (<code>assign_test.sh</code>, <code>concurrency_test.sh</code>,
+<code>sign_test.sh</code>). The newer mechanisms have focused targets:
+<code>make test-cas test-key-rotation test-hedge test-relay-exec</code>. Relay EXEC needs
+an OLMoE engine source under <code>ENGINE</code>; its script reports <code>SKIP</code> explicitly
+when that external checkout is absent. Every claim in this README has a script
+behind it.</p>
+<h2>How it compares</h2>
+<p>Peer-to-peer LLM inference exists; this combination does not.
+<a href="https://github.com/bigscience-workshop/petals">Petals</a> and llama.cpp RPC split
+consecutive transformer layers across devices, which needs each slice to run
+fast, in practice a GPU. lumabri splits at expert granularity instead, which
+matches MoE sparsity: only 4 KB travels per expert, a peer is useful holding a
+single one, and a swarm with no GPU is a working swarm. The output is
+byte-identical by construction, because remote and local are the same code, which
+is also what makes spot-check verification of untrusted peers possible at all.</p>
+<h2>Requirements</h2>
+<p>Linux, gcc, GNU make. Python 3 with numpy only for the test fixtures. A
+<a href="https://github.com/JustVugg/colibri">colibri</a> build provides the engine
+binaries.</p>
+<h2>Status</h2>
+<p>Working prototype, deployable. Open swarms verify bytes (sha256 per MiB and a
+signed complete-model root, checked by the chatter against its own trust set)
+and results (spot-check on a second replica). Private swarms add an invite token
+everywhere with <code>LUMABRI_TOKEN</code>; <code>LUMABRI_ENCRYPT=1</code> protects that token and
+activations in transit, using persistent TOFU or strict endpoint pins.
+Multi-row speculative verification, fixed-delay
+hedging, a local cross-checkpoint CAS, manual old+new key rotation and NAT relay
+for both READ and EXEC are implemented. Automatic SLA tuning, distributed/S3
+CAS, KMS/HSM integration and automatic revocation are intentionally not part of
+this dependency-free base. Expert execution is checked by replica agreement,
+not by the operator signature.</p>
+<h2>License</h2>
+<p>Apache 2.0</p>
+<p><a href="https://news.ycombinator.com/item?id=49293523">Comments on Hacker News</a></p>]]></content:encoded>
+      <guid isPermaLink="true">https://github.com/JustVugg/lumabri</guid>
+      <category>Hacker News</category>
+      <pubDate>Fri, 14 Aug 2026 00:47:04 +0000</pubDate>
+      <dc:creator>vforno</dc:creator>
+    </item>
     <item>
       <title>Bluesky Protocol Services</title>
       <link>https://atproto.com/blog/introducing-bluesky-protocol-services</link>
@@ -109,6 +482,48 @@ for await (const evt of js.live({ collections: [app.bsky.feed.post] })) {
       <category>Hacker News</category>
       <pubDate>Fri, 14 Aug 2026 00:10:04 +0000</pubDate>
       <dc:creator>paulnpace</dc:creator>
+    </item>
+    <item>
+      <title>Blog about things you don't understand yet</title>
+      <link>https://www.seangoedecke.com/blog-about-things-you-dont-understand-yet/</link>
+      <description>Every post I publish represents at least two things I’ve learned: the thing that prompted me to write the post, and the thing I learned in the course of writing it. If I don’t learn anything new while I’m writing, it’s not interesting enough to publish.</description>
+      <content:encoded><![CDATA[<p>Every post I publish represents at least two things I’ve learned: the thing that prompted me to write the post, and the thing I learned in the course of writing it. If I don’t learn anything new while I’m writing, it’s not interesting enough to publish.</p>
+<p>Typically I learn way more than two things. For instance, in my <a href="https://www.seangoedecke.com/the-o3-geoguessr-prompt-did-not-work/">o3 geoguessr</a> post, I started out with the idea that most AI prompts probably don’t work, and I ended up learning that newer OpenAI models have lost o3’s ability to geolocate. That’s interesting! In my most recent post on <a href="https://www.seangoedecke.com/c2pa-only-works-if-everything-is-signed/">C2PA</a>, I started out with the idea that C2PA requires near-universal adoption, but I learned a <em>ton</em> of things about PKI, managing private keys on local devices, how C2PA actually works, and so on. In my post on the <a href="https://www.seangoedecke.com/luddites-and-ai-datacenters/">Luddites</a>, I started out with the idea that the Luddite movement was fundamentally decentralized, but ended up fascinated by Luddite culture (which was far more elitist, misogynist, and violent than the pop-Luddism books describe). I could do this for every single post on the blog.</p>
+<h3>Taking a position</h3>
+<p>I think the core reason this works is that <strong>every single one of my blog posts argues a point</strong>. I never publish a post that just gives some scattered thoughts on a topic, or a post that only says “yes, I agree with this other article”. If I write a draft that nobody sensible could disagree with, I scrap the draft. Making sure that everything I write is at least minimally controversial is a forcing function: it forces me to think about what the most interesting part of my position is, and it forces me to do enough research to defend it against the obvious criticisms.</p>
+<p>This is contrary to a lot of advice I read about blogging, which encourages the aspiring blogger to treat their posts as a form of unstructured self-expression. If unstructured self-expression is what you want to do, that’s cool. The point of having a blog is that you get to write what <em>you</em> want. However, this advice isn’t as helpful as it sounds.</p>
+<p>Before I was in tech, I was a philosophy grad student. But before <em>that</em>, I was a poet. One thing you learn when you try to write poetry is that it is way easier to write to a restrictive structure than it is to simply “write what you feel”. This should be obvious when you actually think about it. The task of a poet is to repeatedly choose the next word. Writing to a structure (typically rhyme or meter) narrows that choice to a small set of words, instead of the entire English language. It’s the same with blogging. Forcing yourself to write about specific, potentially-controversial points makes consistently writing easier, not harder.</p>
+<h3>Writing, thinking, and research</h3>
+<p><strong>Writing is the best way to think clearly about a topic.</strong> It’s easy to believe you understand something when you’re just turning it over in your head. When you have to condense that down into words, you find out exactly how much you do or don’t understand. I am constantly having moments where I type something, stop myself, and think “wait, that can’t actually be right”, or “is that really true?”</p>
+<p>By the time I write my way to the end of the post, I’m usually thinking so much more clearly about the topic that my conclusion paragraph is way better than my introduction. In fact, I’ve picked up the habit of going back and immediately rewriting the first paragraph as part of my first-draft process, because I know I’m going to end up doing it anyway.</p>
+<p>I also change my mind a lot while I write. <a href="https://www.seangoedecke.com/space-ai-datacenters-do-not-have-a-cooling-problem/">Here</a> <a href="https://github.com/sgoedecke/gatsby-blog/blob/2841c8504fc0b5f4dd2e8105955350bafec4d904/content/drafts/_icebox/prediction-markets-insider-trading/index.md">are</a> <a href="https://www.seangoedecke.com/the-just-say-no-engineer-was-a-zirp-phenomenon/">a</a> <a href="https://www.seangoedecke.com/giving-llms-a-personality/">bunch</a> <a href="https://www.seangoedecke.com/ai-detection/">of</a> <a href="https://www.seangoedecke.com/tempo-faq/">examples</a> <a href="https://www.seangoedecke.com/impact-of-ai-study/">of</a> <a href="https://www.seangoedecke.com/ai-interpretability/">posts</a> where I began writing them with the opposite opinion to the one that eventually made it into the post. I think this is a good sign, and I hope I never stop doing it. You should be researching and thinking about every post you write, and that means you should frequently learn new things that change your mind.</p>
+<p>Because of all this, I deliberately choose to write blog posts about things I don’t yet quite understand but would like to, like <a href="https://www.seangoedecke.com/steering-vectors/">LLM</a> steering, Stripe’s <a href="https://www.seangoedecke.com/tempo-faq/">Tempo</a> blockchain, <a href="https://www.seangoedecke.com/c2pa-only-works-if-everything-is-signed/">C2PA</a> and <a href="https://www.seangoedecke.com/text-ai-watermarks/">watermarking</a>, space <a href="https://www.seangoedecke.com/space-ai-datacenters-do-not-have-a-cooling-problem/">cooling</a>, <a href="https://www.seangoedecke.com/interaction-models/">interaction models</a>, LLM inference <a href="https://www.seangoedecke.com/fast-llm-inference/">internals</a>, and so on. This is great for me, because I learn a lot. Is it great for my readers?</p>
+<h3>Is blogging to learn irresponsible?</h3>
+<p>I sometimes worry that I should only be writing about areas I already know very well, like <a href="https://www.seangoedecke.com/how-to-ship/">tech company dynamics</a> or <a href="https://www.seangoedecke.com/good-api-design/">working</a> in <a href="https://www.seangoedecke.com/large-established-codebases/">large codebases</a>, rather than presenting myself as an authority on fields I’m actually still learning. Should I let historians of the Luddites write about Luddism, Web3 engineers write about blockchains, and so on? I think this is acceptable for three reasons.</p>
+<p>First, it’s sometimes easier for a beginner to write an introduction to a field than for an expert. Experts routinely <a href="https://xkcd.com/2501/">overestimate</a> the knowledge of the general public, and have often internalized the reasons why their field is important so deeply that they struggle to express them. I think my <a href="https://www.seangoedecke.com/tags/explainers/">explainer posts</a> are valuable because I always spend the first chunk of the post talking about <em>what the original problem is</em> before I get into the technical solution.</p>
+<p>Second, sometimes the public consensus on a topic is just plain wrong, to the point where even a little bit of research is enough to demonstrate why. Many of my posts I’m proudest of have been along these lines: arguing that the “500ml per prompt” water usage figure for LLMs was <a href="https://www.seangoedecke.com/water-impact-of-ai/">ludicrous</a>, or that the popular Apple “Illusion of Thinking” paper was tracking <a href="https://www.seangoedecke.com/illusion-of-thinking/">persistence, not reasoning</a>, that GPUs <a href="https://www.seangoedecke.com/ai-gpus-live-longer-than-three-years/">live longer than three years</a> and the AI companies have large <a href="https://www.seangoedecke.com/ai-inference-is-obviously-profitable/">profit margins</a> on inference, and so on.</p>
+<p>Third, I try to make it clear on my blog who I am and what my credentials actually are. Even if it’s not explicitly described in the post, I have my real name and resume available on my <a href="https://www.seangoedecke.com/about">/about</a> page, so I don’t think a careful reader could be easily fooled into thinking I’m an expert on 19th-century England or space physics or LLM economics or anything like that.</p>
+<h3>Feedback</h3>
+<p>Even if nobody reads what you write, writing is still a good discipline for getting your thoughts in order. But another big reason why writing is a great learning tool is that <strong>you can get feedback</strong>.</p>
+<p>I think it’s obvious why this is useful, but I do want to make two points about feedback. First, if you do make your posts public, you need to have a pretty thick skin. People on the internet often fall over themselves to come up with the most cutting criticism or the harshest dunk. This goes double if you take my previous advice and try to write posts that make a clear, controversial point about a subject you’re learning. If you’re the kind of person whose whole day is ruined when a stranger is cruel to them, you might want to keep your blogging private or only share it among friends.</p>
+<p>Second, even if your blogging is private, <strong>you can get feedback from LLMs</strong>. Like humans, LLMs will often give junk feedback. In my experience, OpenAI models will always tell me to moderate my claims or add caveats and hedges until I’m not saying anything at all. Sometimes their criticism will be straight-up wrong. But — particularly about technical topics — LLMs are great at pointing out areas you’ve genuinely misunderstood, and they’re far kinder than the average Lobsters or Hacker News commenter.</p>
+<h3>Conclusion</h3>
+<p>I’m pleased and grateful that people enjoy reading my posts, but even when nobody did, I still got a lot of value out of blogging. I write as a method of thinking more clearly, as an excuse to do research on topics I want to learn about, and as a way of getting feedback. </p>
+<p>If you’d like to try it yourself, I suggest watching for these two things. First, you should be changing your mind a lot as you write. If not, you probably aren’t doing enough research. Second, your first draft’s conclusion should be much tighter and more expressive than its introduction. If not, you probably haven’t learned anything from the writing process, which means the draft can be scrapped.</p>
+<p>I strongly recommend this practice to anyone with an interest in writing. You will see the benefits even if you don’t publish any of your writing on the internet, particularly now that you can get good technical feedback by pasting your post into an LLM<sup id="fnref-1"><a href="#fn-1">1</a></sup>.</p>
+<hr/>
+<ol>
+<li>
+<p>For what it’s worth, I’ve fiddled with careful “review prompts” and it’s basically as good to just write “review, please:” and paste your article.</p>
+<a href="#fnref-1">↩</a>
+</li>
+</ol>
+<hr><p>If you liked this post, consider <a href="https://buttondown.com/seangoedecke">subscribing</a> to email updates about my new posts, or .</p><p>Here's a preview of a related post that shares tags with this one.</p><blockquote><p>Saying the obvious thing</p><p>Stating the obvious is <a href="https://blog.jim-nielsen.com/2026/blogging-stating-the-obvious/">surprisingly useful</a>. Most of your knowledge lives below the threshold of conscious awareness, so it’s possible for a piece of writing to remind you of what you already know. It’s common to know you don’t like something without being quite sure why, and reading an obvious statement (such as “accuracy <a href="https://www.astralcodexten.com/p/if-its-worth-your-time-to-lie-its">matters</a>, even when you agree with the broad strokes”) can help clarify why you find certain things distasteful.<br/><a href="https://www.seangoedecke.com/saying-the-obvious-thing/">Continue reading...</a></p></blockquote><hr/></hr>
+<p><a href="https://news.ycombinator.com/item?id=49293087">Comments on Hacker News</a></p>]]></content:encoded>
+      <guid isPermaLink="true">https://www.seangoedecke.com/blog-about-things-you-dont-understand-yet/</guid>
+      <category>Hacker News</category>
+      <pubDate>Thu, 13 Aug 2026 23:39:33 +0000</pubDate>
+      <dc:creator>gfysfm</dc:creator>
     </item>
     <item>
       <title>How AI text watermarking works</title>
@@ -4651,2436 +5066,6 @@ My request to you is this, make life simple. For any lofty goals which you have,
       <category>Hacker News</category>
       <pubDate>Wed, 12 Aug 2026 16:04:50 +0000</pubDate>
       <dc:creator>explosion-s</dc:creator>
-    </item>
-    <item>
-      <title>Grok 4.6</title>
-      <link>https://x.ai/news/grok-4-6</link>
-      <description>Grok 4.6 builds on Grok 4.5 with a particular focus on long-running agents and more ambitious interactive and visual work.</description>
-      <content:encoded><![CDATA[<p>Today we are releasing <strong>Grok 4.6</strong>. Grok 4.6 builds on <a href="https://x.ai/news/grok-4-5">Grok 4.5</a> with a particular focus on long-running agents and more ambitious interactive and visual work. It stays with complex tasks across many steps, whether researching a topic, analyzing information, working across a codebase, or turning an idea into a polished application or work artifact.</p>
-<p>Grok 4.6 achieves frontier intelligence across several agentic coding and knowledge work benchmarks. It matches GPT-5.6 Sol on the Artificial Analysis Intelligence Index, which is a composite score of nine benchmarks.</p>
-<p>Grok 4.6 is available today in <a href="https://cursor.com">Cursor</a> and <a href="https://x.ai/build">Grok Build</a>. We’re offering 2x included usage inside <a href="https://x.ai/build">Grok Build</a> and <a href="https://cursor.com">Cursor</a> for the first week so you can start trying 4.6 immediately.</p>
-<h2 id="training-grok-46">Training Grok 4.6</h2>
-<p>Grok 4.6 underwent a longer supplemental training run than Grok 4.5, with curated model-generated data for reasoning and advanced technical concepts, high-quality engineering data, and an improved optimizer and training recipe. This produced a stronger foundation for the SFT and RL stages that followed.</p>
-<p>We then used Grok 4.5 to regenerate the SFT trajectories across reasoning efforts, agent harnesses, and domains such as STEM, software engineering, and knowledge work, and filtered out problematic traces with model-based checks. The resulting SFT checkpoint shows strong performance and improved behavior.</p>
-<p>Grok 4.6 is trained on a wide range of agentic RL tasks, including knowledge work, general coding, and domain-specific environments for kernel optimization, web development, computer-aided design, and more.</p>
-<h2 id="turning-ambitious-ideas-into-working-projects">Turning ambitious ideas into working projects</h2>
-<p>We tested Grok 4.6 on projects designed to stretch its range and ability to sustain work over many steps. We found the model is especially strong at turning a broad product idea into a working first version. It can research unfamiliar domains, structure the application, implement the core interactions, and continue refining the result through several rounds of feedback.</p>
-<p>On longer trajectories, we also started to see more self-testing and verification, with the model checking its own work before moving on.</p>
-<p>Grok 4.6 produces stronger first passes on visual and interactive projects than we typically saw with Grok 4.5. Given a concrete product idea, it is able to establish structure and visual language for an application in one pass. This has made it especially useful for projects where the fastest route to a good result was to begin with something substantial and then iterate in the loop.</p>
-<h2 id="safety-and-capabilities">Safety and capabilities</h2>
-<p>Grok 4.6’s safeguards have been improved and calibrated in line with the model’s capabilities.</p>
-<p>Our safety stack is designed to maximize utility and security across legitimate use cases, allowing Grok 4.6 to be helpful and safe in domains such as vulnerability patching, accelerating the engineering design cycle, and augmenting AI research.</p>
-<p>Our safeguard evaluation work reflects Grok 4.6’s expanded capabilities, with our widest-ever suite of pre-deployment testing for capabilities and safeguard calibration, as well as extensive post-deployment and third-party testing.</p>
-<h2 id="evals">Evals</h2>
-<h2 id="get-started-with-grok-46">Get started with Grok 4.6</h2>
-<p>Grok 4.6 is available today in <a href="https://cursor.com">Cursor</a> and <a href="https://x.ai/build">Grok Build</a>. It’s also available in the <a href="https://console.x.ai">API</a> and other partners like OpenRouter, Vercel, and Cloudflare.</p>
-<p>Pricing starts at $2 per million input tokens and $6 per million output tokens. Additionally, there is a fast variant which is twice the price.</p>
-<p>We’re offering 2x included usage inside <a href="https://x.ai/build">Grok Build</a> and <a href="https://cursor.com">Cursor</a> for the first week so you can start trying 4.6 immediately.</p>
-<p><a href="https://news.ycombinator.com/item?id=49274027">Comments on Hacker News</a></p>]]></content:encoded>
-      <guid isPermaLink="true">https://x.ai/news/grok-4-6</guid>
-      <category>Hacker News</category>
-      <pubDate>Wed, 12 Aug 2026 15:32:50 +0000</pubDate>
-      <dc:creator>iLuddite</dc:creator>
-    </item>
-    <item>
-      <title>Qwen3.8-2.4T</title>
-      <link>https://huggingface.co/Qwen/Qwen3.8-2.4T-A95B</link>
-      <description>We’re on a journey to advance and democratize artificial intelligence through open source and open science.</description>
-      <content:encoded><![CDATA[<h2>
-
-		Qwen3.8-2.4T-A95B
-	
-</h2>
-<blockquote>
-<p>This repository contains model weights and configuration files for the post-trained model in the Hugging Face Transformers format. </p>
-<p>These artifacts are compatible with vLLM, SGLang, TokenSpeed, etc.</p>
-</blockquote>
-<blockquote>
-<p>For users seeking managed, scalable inference without infrastructure maintenance, the official Qwen API service is provided by <a href="https://www.qwencloud.com">Qwen Cloud</a>.</p>
-<p>In particular, <strong>Qwen3.8-Max</strong> is the official version based on Qwen3.8-2.4T-A95B with more features, such as vision input &amp; non-thinking support, 1M context length by default, official built-in tools, etc.
-For more information, please refer to the <a href="https://www.qwencloud.com/models/qwen3.8-max">Qwen3.8-Max Overview</a>.</p>
-</blockquote>
-<p>Following the widespread community adoption of the Qwen3.5 and Qwen3.6 series, we are pleased to introduce Qwen3.8, the most capable generation in the Qwen open-model family to date.</p>
-<p>For the first time, Qwen3.8 brings a Qwen-Max-class model to open release.
-Built on the architectural foundation of Qwen3.5, Qwen3.8 delivers substantial gains across coding, professional work, research, and long-horizon agentic tasks. Beyond answering harder questions, Qwen3.8 is designed to carry complex, multi-step tasks through to completion with greater reliability.</p>
-<h2>
-
-		Qwen3.8 Highlights
-	
-</h2>
-<ul>
-<li><strong>Core Capabilities</strong>: Comprehensive improvements across coding, professional work, research, and long-horizon agentic tasks.</li>
-<li><strong>Agent Execution</strong>: Stronger autonomous planning and better handling of environment feedback, leading to more reliable end-to-end task completion.</li>
-<li><strong>Downstream Compatibility</strong>: Broader support for popular harnesses and development tools, making it easier to integrate into your existing stack.</li>
-<li><strong>Flexible Thinking Control</strong>: Reasoning depth can be tuned with <code>reasoning_effort</code>, and reasoning context from historical messages is retained via <code>preserve_thinking</code>.</li>
-</ul>
-<p>For more details, please refer to our blog post <a href="https://qwen.ai/blog?id=qwen3.8">Qwen3.8-Max</a>.</p>
-<h2>
-
-		Model Overview
-	
-</h2>
-<ul>
-<li>Type: Causal Language Model</li>
-<li>Training Stage: Pre-training &amp; Post-training</li>
-<li>Language Model<ul>
-<li>Number of Parameters: 2.4T in total and 95B activated</li>
-<li>Hidden Dimension: 8192</li>
-<li>Token Embedding: 248,320 (Padded)</li>
-<li>Number of Layers: 92</li>
-<li>Hidden Layout: 23 × (3 × (Gated DeltaNet → MoE) → 1 × (Gated Attention → MoE))</li>
-<li>Gated DeltaNet:<ul>
-<li>Number of Linear Attention Heads: 128 for V and 16 for QK</li>
-<li>Head Dimension: 128</li>
-</ul>
-</li>
-<li>Gated Attention:<ul>
-<li>Number of Attention Heads: 64 for Q and 4 for KV</li>
-<li>Head Dimension: 256</li>
-<li>Rotary Position Embedding Dimension: 64</li>
-</ul>
-</li>
-<li>Mixture of Experts:<ul>
-<li>Number of Experts: 512</li>
-<li>Number of Activated Experts: 10 Routed + 1 Shared</li>
-<li>Expert Intermediate Dimension: 2048</li>
-</ul>
-</li>
-<li>LM Output: 248,320 (Padded)</li>
-<li>MTP (Multi-Token Prediction): trained with multiple steps</li>
-</ul>
-</li>
-<li>Context Length: 262,144 natively and extensible up to 1,010,000 tokens.</li>
-</ul>
-<h2>
-
-		Benchmark Results
-	
-</h2>
-<table>
-<thead><tr>
-<th></th><th>Opus 4.8</th><th>Fable 5</th><th>GPT 5.6 Sol (max)</th><th>Qwen3.7-Max</th><th>Qwen3.8-Max</th></tr></thead>
-<tbody>
-<tr><td colspan="6">Coding Agent</td></tr>
-<tr>
-<td>Terminal Bench 2.1</td>
-<td>84.6</td>
-<td>84.6</td>
-<td>88.8</td>
-<td>74.5</td>
-<td>86.6</td>
-</tr>
-<tr>
-<td>SWE-bench Pro</td>
-<td>69.2</td>
-<td>80.0</td>
-<td>64.6</td>
-<td>60.6</td>
-<td>67.7</td>
-</tr>
-<tr>
-<td>DeepSWE 1.1</td>
-<td>59.0</td>
-<td>70.0</td>
-<td>73.0</td>
-<td>21.6</td>
-<td>56.6</td>
-</tr>
-<tr>
-<td>NL2Repo-Bench</td>
-<td>69.4</td>
-<td>--</td>
-<td>--</td>
-<td>47.2</td>
-<td>55.9</td>
-</tr>
-<tr>
-<td>FrontierSWE</td>
-<td>70.0</td>
-<td>88.8</td>
-<td>--</td>
-<td>40.7</td>
-<td>73.5</td>
-</tr>
-<tr>
-<td>MLS-Bench-Lite</td>
-<td>42.8</td>
-<td>49.9</td>
-<td>46.2</td>
-<td>31.7</td>
-<td>41.0</td>
-</tr>
-<tr>
-<td>PaperBench</td>
-<td>80.3</td>
-<td>88.8</td>
-<td>90.5</td>
-<td>64.8</td>
-<td>93.0</td>
-</tr>
-<tr>
-<td>AndroidBench</td>
-<td>69.8</td>
-<td>84.5</td>
-<td>74.0</td>
-<td>56.5</td>
-<td>75.1</td>
-</tr>
-<tr>
-<td>QwenSWEBench</td>
-<td>84.0</td>
-<td>86.3</td>
-<td>73.5</td>
-<td>63.4</td>
-<td>80.7</td>
-</tr>
-<tr>
-<td>QwenQoderBench</td>
-<td>62.7</td>
-<td>63.1</td>
-<td>53.8</td>
-<td>36.8</td>
-<td>58.4</td>
-</tr>
-<tr>
-<td>QwenReactBench</td>
-<td>1694</td>
-<td>1770</td>
-<td>1564</td>
-<td>1538</td>
-<td>1724</td>
-</tr>
-<tr>
-<td>QwenSVGBench</td>
-<td>1648</td>
-<td>1690</td>
-<td>1758</td>
-<td>1499</td>
-<td>1713</td>
-</tr>
-<tr><td colspan="6">General Agent</td></tr>
-<tr>
-<td>CoWorkBench</td>
-<td>72.3</td>
-<td>75.9</td>
-<td>71.5</td>
-<td>64.6</td>
-<td>74.8</td>
-</tr>
-<tr>
-<td>WorkSpaceBench</td>
-<td>66.8</td>
-<td>68.7</td>
-<td>65.6</td>
-<td>61.4</td>
-<td>67.7</td>
-</tr>
-<tr>
-<td>JobBench</td>
-<td>48.4</td>
-<td>57.4</td>
-<td>45.4</td>
-<td>31.3</td>
-<td>53.4</td>
-</tr>
-<tr>
-<td>SkillsBench</td>
-<td>65.1</td>
-<td>70.9</td>
-<td>73.5</td>
-<td>61.2</td>
-<td>70.2</td>
-</tr>
-<tr>
-<td>Agents' Last Exam (Pass / Score)</td>
-<td>27.0 / 45.1</td>
-<td>-- / --</td>
-<td>30.6 / 53.6</td>
-<td>11.8 / 31.1</td>
-<td>27.0 / 52.4</td>
-</tr>
-<tr>
-<td>Automation-Bench (Pass@1)</td>
-<td>27.2</td>
-<td>29.1</td>
-<td>29.7</td>
-<td>14.2</td>
-<td>27.3</td>
-</tr>
-<tr>
-<td>Toolathlon Verified (Pass@1)</td>
-<td>76.2</td>
-<td>77.9</td>
-<td>74.9</td>
-<td>49.7</td>
-<td>72.5</td>
-</tr>
-<tr>
-<td>WideSearch</td>
-<td>72.9</td>
-<td>81.2</td>
-<td>--</td>
-<td>75.2</td>
-<td>81.9</td>
-</tr>
-<tr>
-<td>HLE w/ tools</td>
-<td>57.9</td>
-<td>64.5</td>
-<td>58.0</td>
-<td>53.5</td>
-<td>56.2</td>
-</tr>
-<tr><td colspan="6">General Capabilities</td></tr>
-<tr>
-<td>GPQA Diamond</td>
-<td>92.0</td>
-<td>92.6</td>
-<td>94.1</td>
-<td>92.4</td>
-<td>92.6</td>
-</tr>
-<tr>
-<td>HLE</td>
-<td>45.7</td>
-<td>53.3</td>
-<td>47.2</td>
-<td>41.4</td>
-<td>43.6</td>
-</tr>
-<tr>
-<td>IFBench</td>
-<td>62.2</td>
-<td>63.5</td>
-<td>72.7</td>
-<td>79.1</td>
-<td>82.8</td>
-</tr>
-<tr>
-<td>$OneMillion-Bench (expert score)</td>
-<td>41.8</td>
-<td>55.9</td>
-<td>53.8</td>
-<td>44.4</td>
-<td>52.5</td>
-</tr>
-<tr>
-<td>HealthBench</td>
-<td>52.4</td>
-<td>--</td>
-<td>55.3</td>
-<td>54.5</td>
-<td>60.2</td>
-</tr>
-<tr>
-<td>PLawBench</td>
-<td>69.6</td>
-<td>70.2</td>
-<td>72.3</td>
-<td>58.9</td>
-<td>73.2</td>
-</tr>
-<tr>
-<td>PRBench-Legal</td>
-<td>52.7</td>
-<td>57.6</td>
-<td>57.6</td>
-<td>48.5</td>
-<td>57.6</td>
-</tr>
-<tr>
-<td>PRBench-Finance</td>
-<td>51.9</td>
-<td>55.8</td>
-<td>55.5</td>
-<td>46.8</td>
-<td>58.3</td>
-</tr>
-<tr>
-<td>MRCR v2 256K (8-needle)</td>
-<td>83.2</td>
-<td>--</td>
-<td>93.8</td>
-<td>86.7</td>
-<td>92.9</td>
-</tr>
-<tr>
-<td>LongBench v2</td>
-<td>69.1</td>
-<td>--</td>
-<td>67.1</td>
-<td>65.3</td>
-<td>66.3</td>
-</tr>
-</tbody>
-</table>
-<p>1. Fable5 results may involve fallbacks.<br/>2. Terminal Bench 2.1: Evaluated with Claude Code (avg@10), using a 5-hour timeout and max_tokens=131,072. For all other models, we report the best published score across harnesses: Claude Opus 4.8 and Claude Fable 5 with Terminus 2 from Artificial Analysis (https://artificialanalysis.ai/evaluations/terminalbench-v2-1); GPT-5.6 Sol with Codex (https://openai.com/index/previewing-gpt-5-6-sol/).<br/>3. SWE-bench Pro: Evaluated with the Claude Code harness, temp=1.0, top_p=0.95, and a 256K context window. Problematic tasks corrected and all baselines evaluated on the refined benchmark.<br/>4. DeepSWE 1.1: Evaluated with the Claude Code and mini-SWE-agent harnesses, temp=1.0, top_p=0.95, and a 256K context window. We report the highest score among both harnesses; notably, Qwen3.8-Max performs best on Claude Code.<br/>5. NL2Repo-Bench: Evaluated with the Claude Code harness. To prevent reward hacking, we disable Bash commands that attempt to access the specific repository, such as pip download, pip install, and git clone.<br/>6. FrontierSWE: Evaluated with the Claude Code harness. All other available MEAN@5 results are taken from the official FrontierSWE leaderboard (https://www.frontierswe.com) as of August 3, 2026. Dominance scores are recomputed from the raw scores using the official evaluation script. "--" indicates that no official MEAN@5 result was available as of that date.<br/>7. MLS-Bench-Lite: Evaluated with Claude Code using a 5-hour timeout and max_tokens=131,072. All other model scores are taken from the official leaderboard.<br/>8. PaperBench: Evaluated in the BasicAgent setting under Code-Dev mode, judged by Claude Opus 4.6, and averaged over 3 runs (max 12 hours per run).<br/>9. AndroidBench: Evaluated on the 95-task public subset, reporting avg@3 scores.<br/>10. QwenSWEBench: Inhouse coding benchmark to evaluate models' software engineering capabilities. Evaluated with the Claude Code harness. Reporting avg@3 with an 8-hour timeout, max_tokens=32,768, temperature=1.0, and a 256K-token context window.<br/>11. QwenQoderBench: Inhouse coding benchmark to evaluate user experience on Qoder. Evaluated with the Claude Code harness. Reporting avg@5 with a 6-hour timeout, max_tokens=32,768, temperature=1.0, and a 256K-token context window.<br/>12. QwenReactBench: Inhouse React project building benchmark using Claude Code as the harness, bilingual (EN/CN), 7 categories; auto-render + multimodal judge; BT/Elo rating.<br/>13. QwenSVGBench: Inhouse SVG code generation benchmark; bilingual (EN/CN), auto-render + multimodal judge; BT/Elo rating.<br/>14. CoWorkBench: Inhouse cowork benchmark for evaluating long-horizon tasks across computer science, finance, law, medical, and other productivity domains.<br/>15. SkillsBench: Evaluated on the public SkillsBench v1.1 benchmark across 87 tasks, reporting the average score over three runs per task. Opus 4.8 and Fable 5 are evaluated on Claude Code; GPT-5.6 Sol is evaluated on Codex; the Qwen-series are evaluated on OpenCode. All results are from our own testing.<br/>16. Automation-Bench: Evaluated on the 600-task public subset.<br/>17. WideSearch: Evaluated with the Claude Code harness for external models and the Qwen-Agent harness for ours, reporting the average item-F1 over four runs.<br/>18. $OneMillion-Bench: Evaluated using gemini-3.1-pro-preview.<br/>19. PLawBench: Evaluated using gemini-3.1-pro-preview.<br/>20. Empty cells (--): Scores are not yet available or are not applicable.</p>
-<h2>
-
-		Quickstart
-	
-</h2>
-<p>For streamlined integration, we recommend using Qwen3.8 via APIs.</p>
-<h3>
-
-		Serving Qwen3.8
-	
-</h3>
-<blockquote>
-<p>Inference efficiency and throughput vary significantly across frameworks. 
-We recommend using the latest framework versions to ensure optimal performance and compatibility.
-For production workloads or high-throughput scenarios, dedicated serving engines such as SGLang, vLLM, or TokenSpeed are recommended.</p>
-</blockquote>
-<p>Qwen3.8 can be deployed with popular inference frameworks, e.g.:</p>
-<ul>
-<li><a href="https://www.sglang.io/">SGLang</a>: <a href="https://docs.sglang.io/cookbook/autoregressive/Qwen/Qwen3.8">Qwen3.8 Cookbook</a></li>
-<li><a href="https://vllm.ai/">vLLM</a>: <a href="https://recipes.vllm.ai/Qwen/Qwen3.8-2.4T-A95B">Qwen3.8 Recipe</a></li>
-<li><a href="https://lightseek.org/tokenspeed/">TokenSpeed</a>: <a href="https://lightseek.org/tokenspeed/recipes/models#qwen3-8">Qwen3.8 Recipe</a></li>
-</ul>
-<h3>
-
-		API Usage
-	
-</h3>
-<blockquote>
-<p>Qwen3.8-2.4T-A95B is a text-only model that requires thinking mode for all interactions. Multimodal inputs are not supported, and thinking cannot be disabled. Every response will automatically begin with reasoning enclosed in <code>&lt;think&gt;\n...&lt;/think&gt;\n\n</code> before the final output.</p>
-</blockquote>
-<blockquote>
-<p>We recommend using the following set of sampling parameters for generation:</p>
-<ul>
-<li><code>temperature=1.0, top_p=0.95, top_k=20, min_p=0.0, presence_penalty=0.0, repetition_penalty=1.0</code></li>
-</ul>
-<p>Please note that the support for sampling parameters varies according to inference frameworks.</p>
-</blockquote>
-<p>Qwen3.8 comes with official support for <code>reasoning_effort</code>, which can be used to adjust reasoning depth and control cost:  </p>
-<ul>
-<li><code>xhigh</code> (default): for complex tasks demanding thorough analysis</li>
-<li><code>medium</code>: balancing accuracy and speed</li>
-<li><code>low</code>: efficient reasoning optimizing for speed and cost</li>
-</ul>
-<p>In addition, <code>preserve_thinking</code> is enabled by default for all workloads for the best out-of-the-box experience.</p>
-<h4>
-
-		Chat Completions API
-	
-</h4>
-<p>The Chat Completions API can be used with most inference frameworks, as well as <a href="https://www.qwencloud.com">Qwen Cloud</a>.
-Before starting, make sure the OpenAI Python SDK is installed and the API key and the API base URL are configured, e.g.:</p>
-<pre><code>pip install -U openai
-
-# 
-export OPENAI_BASE_URL='your-base-url'
-export OPENAI_API_KEY='your-api-key'
-</code></pre>
-<h5>
-
-		Text-Only Input
-	
-</h5>
-<pre><code>from openai import OpenAI
-
-client = OpenAI()
-
-messages = [{"role": "user", "content": "Write a Python function to merge two sorted linked lists."}]
-
-completion = client.chat.completions.create(
-    model="Qwen/Qwen3.8-2.4T-A95B",
-    messages=messages,
-    extra_body={
-        "chat_template_kwargs": {
-            "enable_thinking": True,  
-            "preserve_thinking": True, 
-        },
-    },
-    reasoning_effort="xhigh",  
-    stream=True,
-    stream_options={"include_usage": True},
-)
-
-reasoning_content = ""
-answer_content = ""
-is_answering = False
-print("\n" + "=" * 20 + "Reasoning" + "=" * 20 + "\n")
-
-for chunk in completion:
-    if not chunk.choices:
-        print("\nUsage:")
-        print(chunk.usage)
-        continue
-
-    delta = chunk.choices[0].delta
-
-    if hasattr(delta, "reasoning_content") and delta.reasoning_content is not None:
-        if not is_answering:
-            print(delta.reasoning_content, end="", flush=True)
-        reasoning_content += delta.reasoning_content
-
-    if hasattr(delta, "content") and delta.content:
-        if not is_answering:
-            print("\n" + "=" * 20 + "Answer" + "=" * 20 + "\n")
-            is_answering = True
-        print(delta.content, end="", flush=True)
-        answer_content += delta.content
-</code></pre>
-<blockquote>
-<p>If you are using APIs from Qwen Cloud, in addition to changing <code>model</code>, please pass <code>extra_body={"enable_thinking": True, "preserve_thinking": True}</code> instead of <code>extra_body={"chat_template_kwargs": {"enable_thinking": True, "preserve_thinking": True}}</code>.</p>
-</blockquote>
-<h2>
-
-		Best Practices
-	
-</h2>
-<p>To achieve optimal performance, we recommend the following settings:</p>
-<ol>
-<li><p><strong>Sampling Parameters</strong>:  </p>
-<ul>
-<li>We suggest using the following set of sampling parameters:  <ul>
-<li><code>temperature=1.0</code>, <code>top_p=0.95</code>, <code>top_k=20</code>, <code>min_p=0.0</code>, <code>presence_penalty=0.0</code>, <code>repetition_penalty=1.0</code></li>
-</ul>
-</li>
-<li>For supported frameworks, you can adjust the <code>presence_penalty</code> parameter between 0 and 2 to reduce endless repetition. However, using a higher value may occasionally result in language mixing and a slight decrease in model performance.</li>
-</ul>
-</li>
-<li><p><strong>Adequate Output Length</strong>: To optimize performance on agentic tasks, we recommend allocating sufficient output length to allow the model to generate detailed and comprehensive responses. For frameworks that support separate token limits for internal reasoning and final outputs, we suggest the following configuration within the 1M context length:</p>
-<ul>
-<li><strong>Reasoning Content:</strong> Set the maximum output length to 262,144 tokens.</li>
-<li><strong>Final Response:</strong> Set the maximum output length to 131,072 tokens.</li>
-</ul>
-<p>These settings provide the necessary capacity for complex reasoning while ensuring ample space for high-quality final deliverables.</p>
-</li>
-</ol>
-<h2>
-
-		Citation
-	
-</h2>
-<p>If you find our work helpful, feel free to give us a cite.</p>
-<pre><code>@misc{qwen38,
-    title = {{Qwen3.8-Max}: A New Bar for Coding and Cowork},
-    url = {https://qwen.ai/blog?id=qwen3.8},
-    author = {{Qwen Team}},
-    month = {August},
-    year = {2026}
-}
-</code></pre>
-<dl><dt>Downloads last month</dt> <dd>978</dd> </dl>
-<p>Safetensors</p>
-<p>Model size</p>
-<p>2.4T params</p>
-<p>Tensor type</p>
-<p>BF16 </p>
-<p>·</p>
-<h2> Model tree for Qwen/Qwen3.8-2.4T-A95B </h2>
-<p>Finetunes</p>
-<a href="https://huggingface.co/models?other=base_model:finetune:Qwen/Qwen3.8-2.4T-A95B">2 models</a>
-<p>Quantizations</p>
-<a href="https://huggingface.co/models?other=base_model:quantized:Qwen/Qwen3.8-2.4T-A95B">6 models</a>
-<h2> Space using Qwen/Qwen3.8-2.4T-A95B 1</h2>
-<h2> Evaluation results  </h2>
-<ul><li><a href="https://huggingface.co/datasets/datacurve/deep-swe">datacurve/deep-swe</a> · Deep Swe <a href="https://huggingface.co/Qwen/Qwen3.8-2.4T-A95B/discussions/6">View evaluation results </a>   <a href="https://huggingface.co/datasets/datacurve/deep-swe?eval_result=Qwen/Qwen3.8-2.4T-A95B&amp;leaderboard_task_id=deep_swe">leaderboard </a>    56.6</li><li><a href="https://huggingface.co/datasets/ScaleAI/SWE-bench_Pro">ScaleAI/SWE-bench_Pro</a> · SWE Bench Pro <a href="https://huggingface.co/Qwen/Qwen3.8-2.4T-A95B/discussions/6">View evaluation results </a>   <a href="https://huggingface.co/datasets/ScaleAI/SWE-bench_Pro?eval_result=Qwen/Qwen3.8-2.4T-A95B&amp;leaderboard_task_id=SWE_Bench_Pro">leaderboard </a>    67.7</li><li><a href="https://huggingface.co/datasets/Idavidrein/gpqa">Idavidrein/gpqa</a> · Diamond <a href="https://huggingface.co/Qwen/Qwen3.8-2.4T-A95B/discussions/6">View evaluation results </a>   <a href="https://huggingface.co/datasets/Idavidrein/gpqa?eval_result=Qwen/Qwen3.8-2.4T-A95B&amp;leaderboard_task_id=diamond">leaderboard </a>    92.6</li><li><a href="https://huggingface.co/datasets/cais/hle">cais/hle</a> · Hle <a href="https://huggingface.co/Qwen/Qwen3.8-2.4T-A95B/discussions/6">View evaluation results </a>       43.6</li> </ul>
-<p><a href="https://news.ycombinator.com/item?id=49273478">Comments on Hacker News</a></p>]]></content:encoded>
-      <guid isPermaLink="true">https://huggingface.co/Qwen/Qwen3.8-2.4T-A95B</guid>
-      <category>Hacker News</category>
-      <pubDate>Wed, 12 Aug 2026 15:01:17 +0000</pubDate>
-      <dc:creator>Philpax</dc:creator>
-    </item>
-    <item>
-      <title>Tailscale Traces Database Corruption to 16y/o SQLite WAL-Reset Bug</title>
-      <link>https://tailscale.com/blog/sqlite-wal-reset-bug</link>
-      <description>Tailscale and SQLite developers traced maddening corruption incidents to find the WAL-Reset data race, then uncovered a second stale expression index bug.</description>
-      <content:encoded><![CDATA[<a href="https://tailscale.com/blog">Blog</a>
-<p>|</p>
-<p>insights</p>
-<h2>How we tracked down a 16-year-old SQLite bug</h2>
-<img alt="Light orange and dark yellow shapes, like ovals, squares, circles, and quarter-circles, against a pale yellow background." height="2372" src="https://cdn.sanity.io/images/w77i7m8x/production/6ca0577c6bb689a7af13ec1407ebc8afd2de8136-4608x2372.png?w=3840&amp;q=75&amp;fit=clip&amp;auto=format" width="4608"/>
-<p>At the end of last year, our uptime was <a href="https://tailscale.com/blog/hypergrowth-isnt-always-easy">pretty shaky</a>. You can see this trend on <a href="https://status.tailscale.com/history">our status page</a>, and that instability continued into the new year. Many of these outages were caused by a single bug, deep in <a href="https://sqlite.org/index.html">SQLite</a>. It took months of intense forensics to track it down.</p>
-<p>Now we’re in summer, we’re confident that we’ve found the bug, that we understand it—and more importantly, that we’ve fixed it.</p>
-<p>We know our customers expect Tailscale to be a reliable service, and for several months we didn’t live up to that promise. That’s disruptive, and we’re sorry. We’re publishing this blog post to explain what went wrong, how we responded, and how we ultimately helped to uncover a long-standing bug in the heart of the SQLite database.</p>
-<p>While our clients interact with our <a href="https://tailscale.com/docs/concepts/control-data-planes">control plane</a> as a single public endpoint (<a href="http://controlplane.tailscale.com">controlplane.tailscale.com</a>), internally, our control plane is split into a series of coordination servers (or “shards”). Each tailnet lives on one internal shard at a time, but can migrate seamlessly from one to another. These shards are an internal implementation detail: you don’t know what shard your tailnet is on, and you never need to.</p>
-<p>Each shard has an SQLite database that holds all the information about the tailnets on that shard. A single Go process exclusively accesses that database, and serves the control plane for those tailnets. This single-writer design is exactly how SQLite is meant to be used.</p>
-<figure><img alt="Architecture diagram illustrating how the Tailscale control plane is made of isolated shards, each of which has an individual SQLite database." height="1080" src="https://cdn.sanity.io/images/w77i7m8x/production/6db766d5b5c004085237e7498faf57a0e8d3205a-1920x1080.svg?w=3840&amp;q=75&amp;fit=clip&amp;auto=format" width="1920"/></figure>
-<p>We’ve used SQLite as our primary database <a href="https://tailscale.com/blog/database-for-2022">since 2022</a>, and we chose it because it's well-known, reliable, and widely used. SQLite is <a href="https://mcfunley.com/choose-boring-technology">“boring technology”</a>—in a good way. Many companies use SQLite in much larger deployments without issue, and we expected the same stress-free usage.</p>
-<p>In our current backup pipeline, we take a complete snapshot of the database every few minutes, then upload the entire SQLite file to an S3 bucket. We’d been running this setup without incident since early 2023.</p>
-<p>Fast forward to August last year, when a data pipeline that reads those S3 backups reported an error in one of our databases. We ran SQLite’s <code>PRAGMA integrity_check</code> command against the backup, and found it was indeed corrupted. SQLite corruption <a href="https://www.sqlite.org/howtocorrupt.html">is possible</a>, but it’s highly unusual and not something you should encounter in normal operation. We repaired the affected database, and investigated the cause, but to no avail.</p>
-<p>When operating at scale, even rare events can occur with some frequency, so we should have been unsurprised when it happened again—and again, and again, and again. In total, we faced 19 separate instances of database corruption over six months before we finally resolved the underlying bug.</p>
-<p>When you hear the phrase “database corruption”, it’s natural to worry about data loss. Because our control plane only handles configuration data, these databases contain metadata about your tailnet and devices, but never your private encryption keys or network traffic. In the earliest incidents, the recovery process meant a handful of newly added devices or configuration changes didn’t persist, and a small amount of metadata had to be re-entered.</p>
-<figure><img alt="Architecture diagram illustrating how the Tailscale control plane copes with a database issue on a single shard. When the SQLite database has database corruption, it affects traffic on that shard, but other shards are unaffected." height="1080" src="https://cdn.sanity.io/images/w77i7m8x/production/eec436b49f783f30c56edb32b6eeacff62ebfdf4-1920x1080.svg?w=3840&amp;q=75&amp;fit=clip&amp;auto=format" width="1920"/></figure>
-<p>Whenever corruption occurred, we had to stop the control plane process on the shard while we repaired or restored the database. This was painful for tailnets on that shard, because their entire control plane disappeared during that recovery window. In the early incidents, that downtime was over an hour, but we gradually sped up the recovery process over subsequent incidents.</p>
-<p>Each tailnet is a mesh network, where devices make peer-to-peer WireGuard® connections to each other. When a device joins the tailnet, it has to get a list of other devices from the control plane before it can establish new connections—so if a device came online during the SQLite downtime, it couldn’t connect. While the database was being repaired, devices already online remained connected to each other, but they couldn’t learn about changes to the network. Those tailnets also temporarily lost access to the web-based admin console and the Tailscale API.</p>
-<p>There’s also a broader impact on trust. We post a global incident on <a href="https://status.tailscale.com/">our status page</a> even when only a small number of tailnets are affected. Many people saw a status page event for an incident that didn’t affect them. Indeed, the majority of shards and tailnets were never involved in a database corruption incident! Nonetheless, repeated downtime erodes trust, whether or not you’re directly affected.</p>
-<p>From the very first instance of corruption, we knew this was a serious threat to our reliability, and we threw a lot of engineering time at the problem—but the fix wasn’t easy.</p>
-<p>This bug resisted all our initial attempts to find it.</p>
-<p>We looked at recent changes, but there weren’t any that seemed relevant. Nobody had been working on our low-level code that interacts with SQLite, because it had all been written years ago and presented no issues up until that point. We re-reviewed all of that code with a fine-toothed comb to look for previously missed bugs, but we didn’t find anything that would cause the corruption we were seeing.</p>
-<p>We looked for common factors between corruption incidents, but we couldn’t find any. It wasn’t tied to a single shard, or customer, or tailnet feature, or time of day, or load level. We were at a loss for what might be triggering the behaviour.</p>
-<p>This lack of reliable trigger conditions meant we couldn’t reproduce the bug synthetically. Instead, we had to rely on deploying passive, forensic telemetry in our live environment to catch the corruption red-handed. Gathering live diagnostics for a database issue is the last thing we wanted to do, but we had no choice.</p>
-<p>As an additional complication, the corruption didn’t occur on a regular schedule. Sometimes incidents would be hours apart, other times weeks. This made it difficult to predict progress or plan further work, because we were never sure when we’d get our next diagnostic dump. We had a six-week period between October and December when there were no corruption incidents, before they returned as an unwelcome Christmas present.</p>
-<p>Because this wouldn’t be a quick or easy fix, we reached out to the SQLite developers for a <a href="https://sqlite.org/prosupport.html">professional support contract</a>. This was a great decision. It gave us direct access to their deep expertise and experience, and we had many detailed technical conversations about our architecture and our incidents.</p>
-<p>Between Tailscale engineering and the SQLite core developers, we mapped out several theories for what might be causing the corruption—including <a href="https://www.sqlite.org/howtocorrupt.html#_posix_advisory_locks_canceled_by_a_separate_thread_doing_close_">broken POSIX locks on close()</a>, mismanaging memory owned by SQLite, or accidentally using SQLite from multiple threads <a href="https://sqlite.org/compile.html#threadsafe">while disabling thread safety</a>. After every incident, we gathered more data, added more diagnostics, and systematically ruled out these theories. We were gradually converging on the true bug.</p>
-<p>While we were investigating the root cause, we still had a live platform to run. We took aggressive steps to automate recovery and minimize downtime:</p>
-<ul><li>Configuring our control plane shards to hard-stop immediately upon encountering corruption</li><li>Deploying an automated backup monitor that continuously ran <code>PRAGMA integrity_check</code> over our backups</li><li>Improving our runbooks and on-call training</li></ul>
-<p>These efforts cut our response time to under an hour—and then we discovered an unexpected clue.</p>
-<p>We wanted a way to restore service that didn’t involve rolling back to the last known-good backup (which would lose a lot of data) or repairing the known-corrupted database (which was potentially risky).</p>
-<p>To do this, we built a transaction logging pipeline. We streamed every SQL statement that modified the database to a separate log file. Because SQLite is <a href="https://sqlite.org/faq.html#:~:text=only%20one%20process%20can%20be%20making%20changes%20to%20the%20database%20at%20any%20moment%20in%20time">a single-writer database</a> with <a href="https://www.sqlite.org/isolation.html">serialisable transactions</a>, our transaction history was completely linear and deterministic. (This wouldn’t be true in a multi-writer database like Postgres or MySQL.) Replaying those transactions against the latest known-good backup should restore the database to its most recent state, safely bypassing the corruption.</p>
-<figure><img alt="Diagram illustrating how the changes between two backups can be reconstructed by replaying the transactions that occurred between them." height="1080" src="https://cdn.sanity.io/images/w77i7m8x/production/34832281499b7d1388317372478dc0001770b16e-1920x1080.svg?w=3840&amp;q=75&amp;fit=clip&amp;auto=format" width="1920"/></figure>
-<p>This pipeline worked, but then it did something even better: it gave us a clue.</p>
-<p>In two incidents, our transaction logs failed to replay cleanly. Upon closer inspection, we discovered that data written and committed by one transaction was inexplicably invisible to later transactions. A write had vanished into thin air without raising an error. That should be impossible!</p>
-<p>As these incidents were ongoing, the SQLite developers had been developing a new debugging tool. For a while, we’d suspected that the bug was somewhere in the checkpoint process. They were building a new tool to give better visibility into what was happening during checkpoints.</p>
-<p>To understand what this tool found, we need to briefly explain how SQLite checkpoints work.</p>
-<p>A SQLite database is made of a series of “pages”, tiny blocks of information. When you update the database, some of those pages need to be replaced with new pages with the updated information.</p>
-<p>For better performance and greater concurrency, we run SQLite with Write-Ahead Logging, which means new pages aren't written directly to the database file. Instead, they’re written to the "write-ahead log" or "WAL file".</p>
-<figure><img alt="Architecture diagram illustrating the difference between the database file and the write-ahead log (also known as the “WAL file”). Both are made of individual “pages”, and new pages are written to the WAL file first." height="1080" src="https://cdn.sanity.io/images/w77i7m8x/production/e80993ba5a6df5095f6cad9649545d52c61bd4c6-1920x1080.svg?w=3840&amp;q=75&amp;fit=clip&amp;auto=format" width="1920"/></figure>
-<p>New pages can't be written to the WAL file indefinitely; at some point they have to be copied back to the main database file. This process is called “checkpointing”.</p>
-<figure><img alt="Architecture diagram illustrating the SQLite checkpoint procedure. Pages in the WAL file are copied back into the database file. New pages can replace existing pages anywhere in the database file, or be appended to the end of the file." height="1080" src="https://cdn.sanity.io/images/w77i7m8x/production/9499bb50a8a15bcf41faed009237de042cf3969e-1920x1080.svg?w=3840&amp;q=75&amp;fit=clip&amp;auto=format" width="1920"/></figure>
-<p>In most deployments, SQLite itself decides when to do a checkpoint, and the process is invisible to the end user and developer. In our control plane, we take manual control of the checkpoint process so we can run fast and consistent backups. This non-standard approach seemed suspicious as we steadily eliminated potential causes.</p>
-<p>One clue was that during corruption incidents, our metrics showed that SQLite would report copying more pages from the WAL file than were actually available. If there are 10 pages in the WAL file and 20 pages get copied to the database, something is clearly wrong.</p>
-<p>To understand what was happening during these faulty checkpoints, the SQLite developers created a new debugging tool for the virtual filesystem layer.</p>
-<p>SQLite is split into several layers. The top layer is the parser and code generator, which converts SQL statements into SQLite’s internal data structures. These data structures get passed to the pager, which splits them into the individual pages to be written to disk. Actually writing them to disk is handled by the OS interface, or “virtual filesystem”. Currently SQLite has two mainstream virtual filesystem implementations—Unix and Windows.</p>
-<figure><img alt="Architecture diagram illustrating the internals of SQLite. It receives SQL statements as input, which pass through three layers: the parser/code generator, the pager, and the OS interface/virtual filesystem. The filesystem layer writes the changes to disk." height="1080" src="https://cdn.sanity.io/images/w77i7m8x/production/fc1ab3b4825fab7a103b2023b8122f6f6c8f258c-1920x1080.svg?w=3840&amp;q=75&amp;fit=clip&amp;auto=format" width="1920"/></figure>
-<p>If you're interested in a deeper dive on these internals, I recommend <a href="https://www.youtube.com/watch?v=ZSKLA81tBis">this lecture by Richard Hipp</a>, the primary author of SQLite.</p>
-<p>This approach allows you to replace different layers with different implementations, or wrap an existing layer to get more information. To help diagnose our problem, the SQLite developers created a wrapper around the virtual filesystem that writes additional tracing information and logs about changes to the database. This wrapper is called the <code>tmstmpvfs</code> shim, and the source code is available in the <a href="https://sqlite.org/src/file/ext/misc/tmstmpvfs.c?proof=394548354">SQLite public repository</a>.</p>
-<figure><img alt="Architecture diagram illustrating the internals of SQLite with our new debugging layer. The OS interface/virtual filesystem layer has now been wrapped in a tmstmpvfs shim." height="1080" src="https://cdn.sanity.io/images/w77i7m8x/production/2c42cf49f1419d6d8c07a56873b7ef1d327d1efe-1920x1080.svg?w=3840&amp;q=75&amp;fit=clip&amp;auto=format" width="1920"/></figure>
-<p>We deployed the shim into our live environment, and waited for the next corruption to occur. Fortunately, we didn't have to wait long.</p>
-<p>After our next corruption incident, the additional logs from the new <code>tmstmpvfs</code> shim allowed the SQLite developers to find and fix the bug: a rare data race in the SQLite source code between a checkpoint and a write transaction.</p>
-<p>In particular, if a write occurs at a specific time during a checkpoint, the checkpointing process gets confused—it thinks some of the pages have been copied from the WAL into the main database file, but they haven’t. Those pages never get written to the database file, and that data is permanently lost. The database file becomes corrupt, because other pages which reference those pages—such as an index—are written to the database.</p>
-<p>The SQLite developers named this the <a href="https://sqlite.org/wal.html#the_wal_reset_bug">“WAL-Reset bug”</a>, and they estimate it was present in SQLite for at least 16 years. It could exist that long because it was rare—so rare, the SQLite developers had to add code to deliberately trigger it in their testing environments. Their fix adds <a href="https://sqlite.org/src/info/7168988acbec2d8d">an additional check to the checkpointing function</a> which detects when the WAL has been reset by another thread.</p>
-<p>They confirmed that this bug caused all of the baffling behaviour we’d seen. It explained the corruption, the transaction logs that wouldn’t apply cleanly, and the inconsistent checkpoint statistics. They also explained why we were more likely to hit the bug than other SQLite users: we take manual control of the checkpointing process, and we checkpoint very aggressively. Even a bug triggered by a rare condition was bound to hit us eventually.</p>
-<p>This was an exciting moment. After months of confusion and uncertainty, we finally had a plausible theory for why the corruption was occurring, and a fix we could deploy to prevent it.</p>
-<p>The SQLite developers released the fix as <a href="https://sqlite.org/changes.html#version_3_52_0">SQLite 3.52.0</a>, and we prepared to deploy it as soon as it was available.</p>
-<p>We rolled out SQLite 3.52.0 carefully—first to a few canary shards, then, when we saw it running smoothly, we deployed it to the rest of the control plane.</p>
-<p>Our backup monitor promptly turned red, and reported corruption in <strong>13 different databases</strong>. This was extremely alarming, but we followed our recovery procedures to fix all the supposed corruption, and everything was happy. It turned out these databases had not suffered real corruption, but were subject to a second problem in the version of SQLite.</p>
-<p>We shared our errors with the SQLite developers, which uncovered a bug in SQLite related to <a href="https://sqlite.org/staleexpridx.html">stale expression indexes</a>. If you create an index on a computed value, and then the computation changes, the index will contain mismatched values, which gets reported as corruption by <code>PRAGMA integrity_check</code>.</p>
-<p>In our case, we were storing some high-precision timestamps as text, converting them to a floating-point number in a VIRTUAL generated column, and the SQLite 3.52.0 release that fixed our data race also made <a href="https://research.swtch.com/fp">an optimisation</a> that subtly changed the rounding behaviour for text-to-floating-point conversions. Our canary shards didn’t have any timestamps that triggered the changed rounding behaviour, so we missed this in our phased rollout.</p>
-<p>Because this change caused false corruption warnings, the SQLite developers withdrew the 3.52.0 release and instead published 3.51.3, which only contained a fix for the WAL-Reset bug.</p>
-<p>We fixed the issue on our side by reducing the precision of our timestamps to integer seconds; text-to-integer conversions are unambiguous. Meanwhile, the SQLite developers created an automated, <a href="https://sqlite.org/staleexpridx.html#selfheal">self-healing index feature</a> in 3.53.0, which prevents the stale expression index problem.</p>
-<p>With the fix rolled out to our entire control plane, we were ready to declare victory, but we were still cautious. An absence of corruption incidents doesn’t mean things are fixed—we’d already had one six-week period of deceptive calm.</p>
-<p>We wanted positive proof that this data race was actively occurring in our production environment. Now that we understood the cause of the bug—a collision between a write transaction and a WAL-reset—we patched our SQLite driver to <a href="https://github.com/tailscale/sqlite/commit/070c921dea03f793cbbbd9d39551d0ad26136113#diff-fcff16fa73210758d3a31f4cfa4609ad5b3ca692b66fc7fb7587c08a1ab11048">log a warning</a> when these two operations overlap. If the warning fired but the database remained uncorrupted, we’d know the fix had saved us from a potential corruption incident.</p>
-<p>We deployed the warning, and we waited. And we waited. And waited. And waited. As weeks slipped by, we began to wonder why we didn’t see it. Was the warning broken? Was our theory wrong? Was the true bug still lurking in the darkness?</p>
-<p>Then, two months later, the alert we were waiting for finally fired:</p>
-<figure><img alt="Alert Manager notification showing SQLitePartyMode warning: SQLite attempted corruption on shard2.corp.ts.net:8383 in party mode, but the system prevented it. Details include warning code, host, instance, job, namespace, severity, and shard information. Message advises checking server logs for corruption incident details." height="684" src="https://cdn.sanity.io/images/w77i7m8x/production/19ae089ae209ad7e395e188b7f6e4a81be29c431-1458x684.png?w=3840&amp;q=75&amp;fit=clip&amp;auto=format" width="1458"/></figure>
-<p>This alert proved that the precise conditions for the WAL-Reset bug <em>do</em> occur in our production environment, which means it was the likely culprit for our six months of shaky uptime.</p>
-<p>Since that weirdly joyous alert fired, we’ve run for another four months without any database incidents, as of this writing. Finally, we could breathe a sigh of relief.</p>
-<p>Nobody wanted us to spend six months looking for bugs in SQLite. This was an immensely frustrating experience for both our customers and staff, and we’re all glad to put this instability behind us.</p>
-<p>This investigation is a useful reminder: <strong>running boring technology in a non-standard way is a risk. </strong>The common paths and standard configurations are incredibly well-tested and reliable. Most people use SQLite in a standard configuration and never face this sort of issue. Everything we were doing was a public, documented, supported configuration—but by taking manual control of the checkpointing process and running at our own aggressive pace, we stepped off the well-trodden operational path.</p>
-<p>Resolving these incidents was a massive, cross-functional effort involving dozens of people—including Tailscale's engineering and support teams, and the core maintainers of SQLite. It is to all of their credit that the impact of these incidents was not much worse.</p>
-<p>We know that repeated downtime erodes trust, no matter how many people are affected, and we’re grateful to our customers for their patience and support while we chased this down.</p>
-<p>Frustrating as this period was, we’re left in a stronger position than we were before. The long-standing bug in SQLite has been patched, and we fixed dozens of other incidental issues that we spotted while looking for it. We funded the open-source SQLite VFS shim that helped isolate the race condition almost immediately, and will help track down similar bugs in the future. Finally, we’ve refined our database backup and recovery processes, and live-tested them over a dozen times.</p>
-<p>Hopefully there won’t be another database incident like this—but if there is, we’ll be ready.</p>
-<p>Author</p>
-<img alt="Alex Chan" height="1729" src="https://cdn.sanity.io/images/w77i7m8x/production/7c909f6cf559dc9719380a3557fb7ff48e5db08a-1729x1729.jpg?w=3840&amp;q=75&amp;fit=clip&amp;auto=format" width="1729"/>
-<p>Alex Chan</p>
-<p>Author</p>
-<img alt="Alex Chan" height="1729" src="https://cdn.sanity.io/images/w77i7m8x/production/7c909f6cf559dc9719380a3557fb7ff48e5db08a-1729x1729.jpg?w=3840&amp;q=75&amp;fit=clip&amp;auto=format" width="1729"/>
-<p>Alex Chan</p>
-<p>Loading...</p>
-<p><a href="https://news.ycombinator.com/item?id=49272832">Comments on Hacker News</a></p>]]></content:encoded>
-      <guid isPermaLink="true">https://tailscale.com/blog/sqlite-wal-reset-bug</guid>
-      <category>Hacker News</category>
-      <pubDate>Wed, 12 Aug 2026 14:22:30 +0000</pubDate>
-      <media:content url="https://cdn.sanity.io/images/w77i7m8x/production/6ca0577c6bb689a7af13ec1407ebc8afd2de8136-4608x2372.png?w=3840&amp;amp;q=75&amp;amp;fit=clip&amp;amp;auto=format" type="image/png" medium="image"/>
-      <dc:creator>ropbear</dc:creator>
-    </item>
-    <item>
-      <title>Tim King, AmigaDOS developer, has died</title>
-      <link>https://amiga-news.de/en/news/AN-2026-08-00070-EN.html</link>
-      <description>[ ] [ Register ] [ Forgot your password? ] &lt; Next message Prior message &gt; 11.Aug.2026 Ravi Abbott Obituary: AmigaDOS developer Dr. Tim King has passed away Dr. Tim King passed away at the end of July, his family confirmed upon request. King played a key role in the development of AmigaDOS and thus in an important chapter of the Amiga's software history. King studied computer science at the University of Cambridge and earned his Ph.D. there in 1979. While still a student at the university, he developed the Tripos operating system, a preemptive multitasking system written in BCPL. In 1984, King joined MetaComCo and brought Tripos with him to the company. There, the system was further developed for the Amiga and integrated into the new computer’s operating system as AmigaDOS. After his time at MetaComCo, King founded Perihelion in 1986, a company that focused on operating systems, parallel processing, and transputer technology, among other things. He later founded the Internet service provider UK Online. King has made a significant contribution to the history of the Amiga. ( nba ) [ News message: 11. Aug. 2026, 14:40 ] [ Comments: 3 - 11. Aug. 2026, 19:47 ] [ Send via e-mail ] [ Print version ] [ ASCII version ] &lt; Next message Prior message &gt; Masthead | Privacy policy | Netiquette | Advertising | Contact Copyright © 1998-2026 by amiga-news.de - all rights reserved.</description>
-      <content:encoded><![CDATA[<table><tr>
-<td><a href="https://amiga-news.de/en/"><img alt="amiga-news" height="65" src="https://amiga-news.de/images/kinne300x65.jpg" width="300"/></a></td>
-<td><a href="https://amiga-news.de/">DEUTSCHE VERSION</a></td>
-<td>
-<table>
-<tr><td></td></tr>
-</table>
-</td>
-</tr></table>
-<table>
-<tr><td></td></tr></table>
-<table><tr>
-<td><a href="https://amiga-news.de/en/links/">Links</a></td><td>|</td>
-<td><a href="https://amiga-news.de/en/forum/">Forums</a></td><td>|</td>
-<td></td><td>|</td>
-<td><a href="https://amiga-news.de/en/news/tell-news/">Report news</a></td>
-</tr></table>
-<table>
-<tr><td></td></tr></table>
-<table><tr>
-<td><a href="https://amiga-news.de/en/static/chat.html">Chat</a></td><td>|</td>
-<td><a href="https://amiga-news.de/en/polls/">Polls</a></td><td>|</td>
-<td><a href="https://amiga-news.de/en/static/newsticker.html">Newsticker</a></td><td>|</td>
-<td><a href="https://amiga-news.de/en/news/archiv/">Archive</a></td></tr></table>
-<table>
-<tr><td></td></tr></table>
-<p>
-<table>
-<tr><td>[]
-[<a href="https://amiga-news.de/en/forum/register.php">Register</a>]
-[<a href="https://amiga-news.de/en/forum/send_password.php">Forgot your password?</a>]
-
-</td></tr>
-<tr><td></td></tr>
-</table>
-<p>
-<table>
-<tr><td colspan="2"><table>
-<tr><td><a href="https://amiga-news.de/en/news/AN-2026-08-00071-EN.html">&lt; Next message</a></td><td><a href="https://amiga-news.de/en/news/AN-2026-08-00069-EN.html">Prior message &gt;</a></td></tr></table></td></tr>
-<tr>
-<td>11.Aug.2026<br/>
-Ravi Abbott<br/><br/><br/></td>
-<td>    Obituary: AmigaDOS developer Dr. Tim King has passed away<br/>
-
-Dr. Tim King passed away at the end of July, his family confirmed upon request. King played a key role in the development of AmigaDOS and thus in an important chapter of the Amiga's software history.
-
-<br/><br/>
-King studied computer science at the University of Cambridge and earned his Ph.D. there in 1979. While still a student at the university, he developed the Tripos operating system, a preemptive multitasking system written in BCPL. In 1984, King joined MetaComCo and brought Tripos with him to the company. There, the system was further developed for the Amiga and integrated into the new computer’s operating system as AmigaDOS.
-<br/><br/>
-After his time at MetaComCo, King founded Perihelion in 1986, a company that focused on operating systems, parallel processing, and transputer technology, among other things. He later founded the Internet service provider UK Online.
-<br/><br/>
-King has made a significant contribution to the history of the Amiga. (<a href="https://amiga-news.de/en/static/impressum.html#nba">nba</a>)<br/><br/>
-[<a href="https://amiga-news.de/en/news/AN-2026-08-00070-EN.html">News message: 11. Aug. 2026, 14:40</a>] [<a href="https://amiga-news.de/en/news/comments/thread/AN-2026-08-00070-EN.html">Comments: 3 - 11. Aug. 2026, 19:47</a>]<br/>
-[<a href="https://amiga-news.de/aoiPublishNews/news_email.php?frm_newsID=AN-2026-08-00070-EN&amp;frm_lang=en">Send via e-mail</a>]  [<a href="https://amiga-news.de/aoiPublishNews/news_convert.php?frm_newsID=AN-2026-08-00070-EN&amp;frm_conv=print&amp;frm_lang=en">Print version</a>]  [<a href="https://amiga-news.de/aoiPublishNews/news_convert.php?frm_newsID=AN-2026-08-00070-EN&amp;frm_conv=ascii&amp;frm_lang=en">ASCII version</a>]<br/>
-
-</td></tr>
-<tr><td colspan="2"><table>
-<tr><td><a href="https://amiga-news.de/en/news/AN-2026-08-00071-EN.html">&lt; Next message</a></td><td><a href="https://amiga-news.de/en/news/AN-2026-08-00069-EN.html">Prior message &gt;</a></td></tr></table></td></tr>
-</table>
-<br/>
-<table><tr><td></td></tr></table>
-<table><tr><td> 
-<a href="https://amiga-news.de/en/static/impressum.html">Masthead</a> |
-       <a href="https://amiga-news.de/en/static/datenschutz.html">Privacy policy</a> |
-       <a href="https://amiga-news.de/en/static/netiquette.html">Netiquette</a> |
-       <a href="https://amiga-news.de/en/static/werbung.html">Advertising</a> |
-
-<a href="https://amiga-news.de/en/static/kontakt.html">Contact</a>
-<br/>
-Copyright © 1998-2026 by amiga-news.de - all rights reserved.<br/>
-</td></tr></table>
-<table><tr><td></td></tr></table>
-</p></p>
-<p><a href="https://news.ycombinator.com/item?id=49272655">Comments on Hacker News</a></p>]]></content:encoded>
-      <guid isPermaLink="true">https://amiga-news.de/en/news/AN-2026-08-00070-EN.html</guid>
-      <category>Hacker News</category>
-      <pubDate>Wed, 12 Aug 2026 14:09:11 +0000</pubDate>
-      <media:content url="https://amiga-news.de/images/kinne300x65.jpg" type="image/jpeg" medium="image"/>
-      <dc:creator>doener</dc:creator>
-    </item>
-    <item>
-      <title>Someone is running mass vulnerability scans, spoofing AI bots like ClaudeBot</title>
-      <link>https://knownagents.com/insights</link>
-      <description>A continuously updating analysis of bot vs. human traffic, AI scraping, fetching, search indexing, browsing, robots.txt compliance, and AI chat referrals across 5,000+ websites.</description>
-      <content:encoded><![CDATA[<h2 id="overview">
-Overview
-</h2>
-<p>Key ecosystem metrics across <b>5,000+</b> websites using <a href="https://knownagents.com/products/agent-analytics">Agent Analytics</a> and <a href="https://knownagents.com/products/ai-chat-referral-tracking">AI Chat Referral Tracking</a>.</p>
-<h3>
-Bot vs. Human Traffic
-</h3>
-<p>35%</p>
-<p>↓ 1%
-    
-        </p>
-<p>Compared to the previous 90 days</p>
-<p>The amount of visits from bots vs. humans</p>
-<h3>
-Agentrification
-</h3>
-<p>29%</p>
-<p>↑ 11%
-    
-        </p>
-<p>Compared to the previous 90 days</p>
-<p>The percentage of bot traffic that's AI-related</p>
-<h3>
-AI Chat Referral Volume
-</h3>
-<p>0.1%</p>
-<p>↓ 9%
-    
-        </p>
-<p>Compared to the previous 90 days</p>
-<p>The percentage of human website visits that come from AI chat</p>
-<h3>
-Robots.txt Effectiveness
-</h3>
-<p>98.5%</p>
-<h3>
-Traffic by Agent Type
-</h3>
-<p>AI Agent
-    
-        </p>
-<p>AI Agent</p>
-<p>Uses an actual web browser to autonomously complete complex tasks on behalf of a human user</p>
-<p>AI Assistant
-    
-        </p>
-<p>AI Assistant</p>
-<p>Fetches website content in response to a user prompt, to include in an AI-generated answer</p>
-<p>AI Coding Agent
-    
-        </p>
-<p>AI Coding Agent</p>
-<p>Fetches documentation and other resources to help build software</p>
-<p>AI Data Provider
-    
-        </p>
-<p>AI Data Provider</p>
-<p>Crawls websites to supply structured content to AI systems as a third-party service</p>
-<p>AI Data Scraper
-    
-        </p>
-<p>AI Data Scraper</p>
-<p>Downloads website content to include in datasets used for training AI models such as LLMs</p>
-<p>AI Search Crawler
-    
-        </p>
-<p>AI Search Crawler</p>
-<p>Indexes website content to possibly include as citations in AI-powered search results</p>
-<p>Archiver
-    
-        </p>
-<p>Archiver</p>
-<p>Captures and stores historical website snapshots for long-term digital preservation</p>
-<p>Automated Agent
-    
-        </p>
-<p>Automated Agent</p>
-<p>Automates browser interactions programmatically without direct human supervision</p>
-<p>Developer Helper
-    
-        </p>
-<p>Developer Helper</p>
-<p>Assists with testing, debugging, and ensuring website functionality</p>
-<p>Fetcher
-    
-        </p>
-<p>Fetcher</p>
-<p>Retrieves web page metadata to power app features like link previews or feeds</p>
-<p>Intelligence Gatherer
-    
-        </p>
-<p>Intelligence Gatherer</p>
-<p>Analyzes web content for brand safety, competitive insights, and ad targeting</p>
-<p>Scraper
-    
-        </p>
-<p>Scraper</p>
-<p>Extracts large amounts of web data, often without explicit website permission</p>
-<p>Search Engine Crawler
-    
-        </p>
-<p>Search Engine Crawler</p>
-<p>Systematically scans and indexes web pages to include in search results</p>
-<p>Security Scanner
-    
-        </p>
-<p>Security Scanner</p>
-<p>Scans websites for security vulnerabilities, threats, and configuration weaknesses</p>
-<p>SEO Crawler
-    
-        </p>
-<p>SEO Crawler</p>
-<p>Analyzes website structure and content to identify SEO improvement opportunities</p>
-<p>Uncategorized
-    
-        </p>
-<p>Uncategorized</p>
-<p>Not yet assigned a type</p>
-<p>Undocumented AI Agent
-    
-        </p>
-<p>Undocumented AI Agent</p>
-<p>Crawls websites without disclosing its purpose, collecting data for an unknown AI use case</p>
-<p>Hover over each agent type for more information about what they do</p>
-<h3>
-Top Agent Types
-</h3>
-<a href="https://knownagents.com/agents?agent_type_url_slug=search-engine-crawler">Search Engine Crawlers</a>
-<p>22.8%</p>
-<a href="https://knownagents.com/agents?agent_type_url_slug=seo-crawler">SEO Crawlers</a>
-<p>19.6%</p>
-<p>12.5%</p>
-<a href="https://knownagents.com/agents?agent_type_url_slug=developer-helper">Developer Helpers</a>
-<p>11.0%</p>
-<p>10.9%</p>
-<a href="https://knownagents.com/agents?agent_type_url_slug=fetcher">Fetchers</a>
-<p>7.0%</p>
-<a href="https://knownagents.com/agents?agent_type_url_slug=uncategorized">Uncategorized Agents</a>
-<p>6.1%</p>
-<p>3.8%</p>
-<a href="https://knownagents.com/agents?agent_type_url_slug=intelligence-gatherer">Intelligence Gatherers</a>
-<p>2.7%</p>
-<p>1.0%</p>
-<a href="https://knownagents.com/agents?agent_type_url_slug=security-scanner">Security Scanners</a>
-<p>0.8%</p>
-<a href="https://knownagents.com/agents?agent_type_url_slug=scraper">Scrapers</a>
-<p>0.8%</p>
-<a href="https://knownagents.com/agents?agent_type_url_slug=automated-agent">Automated Agents</a>
-<p>0.4%</p>
-<a href="https://knownagents.com/agents?agent_type_url_slug=archiver">Archivers</a>
-<p>0.3%</p>
-<a href="https://knownagents.com/agents?agent_type_url_slug=undocumented-ai-agent">Undocumented AI Agents</a>
-<p>0.2%</p>
-<p>Agent types with the most activity</p>
-<h3>
-Top Visiting Agents
-</h3>
-<a href="https://knownagents.com/agents/bingbot">bingbot</a>
-<p>SRCH
-    
-        </p>
-<p>Search Engine Crawler</p>
-<p>Systematically scans and indexes web pages to include in search results</p>
-<p>8.2%</p>
-<a href="https://knownagents.com/agents/googlebot">Googlebot</a>
-<p>SRCH
-    
-        </p>
-<p>Search Engine Crawler</p>
-<p>Systematically scans and indexes web pages to include in search results</p>
-<p>7.9%</p>
-<a href="https://knownagents.com/agents/ahrefsbot">AhrefsBot</a>
-<p>SEO
-    
-        </p>
-<p>SEO Crawler</p>
-<p>Analyzes website structure and content to identify SEO improvement opportunities</p>
-<p>6.3%</p>
-<a href="https://knownagents.com/agents/known-agent">Known Agent</a>
-<p>DEV
-    
-        </p>
-<p>Developer Helper</p>
-<p>Assists with testing, debugging, and ensuring website functionality</p>
-<p>5.5%</p>
-<a href="https://knownagents.com/agents/chatgpt-user">ChatGPT-User</a>
-<p>ASST
-    
-        </p>
-<p>AI Assistant</p>
-<p>Fetches website content in response to a user prompt, to include in an AI-generated answer</p>
-<p>3.3%</p>
-<a href="https://knownagents.com/agents/claudebot">ClaudeBot</a>
-<p>SCRP
-    
-        </p>
-<p>AI Data Scraper</p>
-<p>Downloads website content to include in datasets used for training AI models such as LLMs</p>
-<p>3.2%</p>
-<a href="https://knownagents.com/agents/petalbot">PetalBot</a>
-<p>SRCH
-    
-        </p>
-<p>AI Search Crawler</p>
-<p>Indexes website content to possibly include as citations in AI-powered search results</p>
-<p>3.1%</p>
-<a href="https://knownagents.com/agents/semrushbot">SemrushBot</a>
-<p>SEO
-    
-        </p>
-<p>SEO Crawler</p>
-<p>Analyzes website structure and content to identify SEO improvement opportunities</p>
-<p>2.9%</p>
-<a href="https://knownagents.com/agents/facebookexternalhit">facebookexternalhit</a>
-<p>FTCH
-    
-        </p>
-<p>Fetcher</p>
-<p>Retrieves web page metadata to power app features like link previews or feeds</p>
-<p>2.6%</p>
-<a href="https://knownagents.com/agents/meta-externalagent">meta-externalagent</a>
-<p>SCRP
-    
-        </p>
-<p>AI Data Scraper</p>
-<p>Downloads website content to include in datasets used for training AI models such as LLMs</p>
-<p>2.3%</p>
-<a href="https://knownagents.com/agents/amazonbot">Amazonbot</a>
-<p>SCRP
-    
-        </p>
-<p>AI Data Scraper</p>
-<p>Downloads website content to include in datasets used for training AI models such as LLMs</p>
-<p>2.3%</p>
-<a href="https://knownagents.com/agents/amzn-searchbot">Amzn-SearchBot</a>
-<p>SRCH
-    
-        </p>
-<p>AI Search Crawler</p>
-<p>Indexes website content to possibly include as citations in AI-powered search results</p>
-<p>2.2%</p>
-<a href="https://knownagents.com/agents/mj12bot">MJ12bot</a>
-<p>SEO
-    
-        </p>
-<p>SEO Crawler</p>
-<p>Analyzes website structure and content to identify SEO improvement opportunities</p>
-<p>2.2%</p>
-<a href="https://knownagents.com/agents/dotbot">DotBot</a>
-<p>SEO
-    
-        </p>
-<p>SEO Crawler</p>
-<p>Analyzes website structure and content to identify SEO improvement opportunities</p>
-<p>2.1%</p>
-<a href="https://knownagents.com/agents/applebot">Applebot</a>
-<p>SRCH
-    
-        </p>
-<p>AI Search Crawler</p>
-<p>Indexes website content to possibly include as citations in AI-powered search results</p>
-<p>2.1%</p>
-<p>Agents with the most activity</p>
-<h3>
-Top Operators
-</h3>
-<a href="https://knownagents.com/operators/google">Google</a>
-<p>10.5%</p>
-<a href="https://knownagents.com/operators/microsoft">Microsoft</a>
-<p>8.9%</p>
-<a href="https://knownagents.com/operators/ahrefs">Ahrefs</a>
-<p>7.8%</p>
-<a href="https://knownagents.com/operators/meta">Meta</a>
-<p>6.8%</p>
-<a href="https://knownagents.com/operators/openai">OpenAI</a>
-<p>6.4%</p>
-<a href="https://knownagents.com/operators/known-agents">Known Agents</a>
-<p>5.9%</p>
-<a href="https://knownagents.com/operators/anthropic">Anthropic</a>
-<p>5.1%</p>
-<a href="https://knownagents.com/operators/amazon">Amazon</a>
-<p>4.8%</p>
-<a href="https://knownagents.com/operators/semrush">Semrush</a>
-<p>3.9%</p>
-<a href="https://knownagents.com/operators/huawei">Huawei</a>
-<p>3.4%</p>
-<a href="https://knownagents.com/operators/moz">Moz</a>
-<p>2.3%</p>
-<a href="https://knownagents.com/operators/majestic">Majestic</a>
-<p>2.3%</p>
-<a href="https://knownagents.com/operators/baidu">Baidu</a>
-<p>2.3%</p>
-<a href="https://knownagents.com/operators/apple">Apple</a>
-<p>2.2%</p>
-<a href="https://knownagents.com/operators/automattic">Automattic</a>
-<p>2.1%</p>
-<p>Operators with the most activity</p>
-<h2 id="ai-scraping">
-AI Scraping Activity
-</h2>
-<p>These bots scrape website content to train AI models. Some belong to AI companies, while others belong to third-party services that resell the data. <a href="https://knownagents.com/products/automatic-robots-txt">Automatic Robots.txt</a> can block unwanted scraping. Included agent types include <a href="https://knownagents.com/agents?agent_type_url_slug=ai-data-provider">AI Data Providers</a> and <a href="https://knownagents.com/agents?agent_type_url_slug=ai-data-scraper">AI Data Scrapers</a>.</p>
-<h3>
-Traffic by Agent Type
-</h3>
-<p>AI Data Provider
-    
-        </p>
-<p>AI Data Provider</p>
-<p>Crawls websites to supply structured content to AI systems as a third-party service</p>
-<p>AI Data Scraper
-    
-        </p>
-<p>AI Data Scraper</p>
-<p>Downloads website content to include in datasets used for training AI models such as LLMs</p>
-<p>AI scraping activity by agent type over time</p>
-<h3>
-Top Visited Website Categories
-</h3>
-<p>Law and Government</p>
-<p>6.1%</p>
-<p>Online Communities</p>
-<p>5.9%</p>
-<p>Home and Garden</p>
-<p>5.6%</p>
-<p>Computers and Electronics</p>
-<p>5.3%</p>
-<p>Shopping</p>
-<p>5.2%</p>
-<p>Jobs and Education</p>
-<p>5.2%</p>
-<p>Pets and Animals</p>
-<p>5.1%</p>
-<p>Business and Industrial</p>
-<p>5.0%</p>
-<p>Games</p>
-<p>4.8%</p>
-<p>Autos and Vehicles</p>
-<p>4.8%</p>
-<p>Hobbies and Leisure</p>
-<p>4.6%</p>
-<p>Internet and Telecom</p>
-<p>4.5%</p>
-<p>Beauty and Fitness</p>
-<p>4.1%</p>
-<p>Website categories with most activity</p>
-<h3>
-Top Agents
-</h3>
-<p>SCRP
-    
-        </p>
-<p>AI Data Scraper</p>
-<p>Downloads website content to include in datasets used for training AI models such as LLMs</p>
-<p>27.0%</p>
-<p>SCRP
-    
-        </p>
-<p>AI Data Scraper</p>
-<p>Downloads website content to include in datasets used for training AI models such as LLMs</p>
-<p>19.3%</p>
-<p>SCRP
-    
-        </p>
-<p>AI Data Scraper</p>
-<p>Downloads website content to include in datasets used for training AI models such as LLMs</p>
-<p>19.1%</p>
-<a href="https://knownagents.com/agents/gptbot">GPTBot</a>
-<p>SCRP
-    
-        </p>
-<p>AI Data Scraper</p>
-<p>Downloads website content to include in datasets used for training AI models such as LLMs</p>
-<p>9.5%</p>
-<a href="https://knownagents.com/agents/bytespider">Bytespider</a>
-<p>SCRP
-    
-        </p>
-<p>AI Data Scraper</p>
-<p>Downloads website content to include in datasets used for training AI models such as LLMs</p>
-<p>7.3%</p>
-<a href="https://knownagents.com/agents/shapbot">ShapBot</a>
-<p>PVDR
-    
-        </p>
-<p>AI Data Provider</p>
-<p>Crawls websites to supply structured content to AI systems as a third-party service</p>
-<p>5.6%</p>
-<a href="https://knownagents.com/agents/googleother">GoogleOther</a>
-<p>SCRP
-    
-        </p>
-<p>AI Data Scraper</p>
-<p>Downloads website content to include in datasets used for training AI models such as LLMs</p>
-<p>3.8%</p>
-<a href="https://knownagents.com/agents/ccbot">CCBot</a>
-<p>SCRP
-    
-        </p>
-<p>AI Data Scraper</p>
-<p>Downloads website content to include in datasets used for training AI models such as LLMs</p>
-<p>2.3%</p>
-<a href="https://knownagents.com/agents/timpibot">Timpibot</a>
-<p>SCRP
-    
-        </p>
-<p>AI Data Scraper</p>
-<p>Downloads website content to include in datasets used for training AI models such as LLMs</p>
-<p>1.8%</p>
-<a href="https://knownagents.com/agents/youbot">YouBot</a>
-<p>PVDR
-    
-        </p>
-<p>AI Data Provider</p>
-<p>Crawls websites to supply structured content to AI systems as a third-party service</p>
-<p>1.5%</p>
-<a href="https://knownagents.com/agents/velenpublicwebcrawler">VelenPublicWebCrawler</a>
-<p>SCRP
-    
-        </p>
-<p>AI Data Scraper</p>
-<p>Downloads website content to include in datasets used for training AI models such as LLMs</p>
-<p>0.8%</p>
-<a href="https://knownagents.com/agents/diffbot">Diffbot</a>
-<p>PVDR
-    
-        </p>
-<p>AI Data Provider</p>
-<p>Crawls websites to supply structured content to AI systems as a third-party service</p>
-<p>0.6%</p>
-<a href="https://knownagents.com/agents/deepseekbot">DeepSeekBot</a>
-<p>SCRP
-    
-        </p>
-<p>AI Data Scraper</p>
-<p>Downloads website content to include in datasets used for training AI models such as LLMs</p>
-<p>0.5%</p>
-<a href="https://knownagents.com/agents/aiwebindex">AIWebIndex</a>
-<p>PVDR
-    
-        </p>
-<p>AI Data Provider</p>
-<p>Crawls websites to supply structured content to AI systems as a third-party service</p>
-<p>0.2%</p>
-<a href="https://knownagents.com/agents/terracotta">TerraCotta</a>
-<p>PVDR
-    
-        </p>
-<p>AI Data Provider</p>
-<p>Crawls websites to supply structured content to AI systems as a third-party service</p>
-<p>0.2%</p>
-<p>Agents doing the most AI scraping</p>
-<h3>
-Top Operators
-</h3>
-<p>27.0%</p>
-<p>19.4%</p>
-<p>19.1%</p>
-<p>9.5%</p>
-<a href="https://knownagents.com/operators/bytedance">ByteDance</a>
-<p>7.3%</p>
-<a href="https://knownagents.com/operators/parallel">Parallel</a>
-<p>5.6%</p>
-<p>3.8%</p>
-<a href="https://knownagents.com/operators/common-crawl">Common Crawl</a>
-<p>2.3%</p>
-<a href="https://knownagents.com/operators/timpi">Timpi</a>
-<p>1.8%</p>
-<a href="https://knownagents.com/operators/you-com">You.com</a>
-<p>1.5%</p>
-<a href="https://knownagents.com/operators/velen">Velen</a>
-<p>0.8%</p>
-<a href="https://knownagents.com/operators/diffbot">Diffbot</a>
-<p>0.6%</p>
-<a href="https://knownagents.com/operators/deepseek">DeepSeek</a>
-<p>0.5%</p>
-<a href="https://knownagents.com/operators/lyrenth">Lyrenth</a>
-<p>0.2%</p>
-<a href="https://knownagents.com/operators/ceramic">Ceramic</a>
-<p>0.2%</p>
-<p>Operators doing the most AI scraping</p>
-<h2 id="ai-fetching">
-AI Fetching Activity
-</h2>
-<p>These bots fetch website content in real time to power AI assistants, coding agents, and other retrieval-augmented generation (RAG) tasks. Pages inform responses on the spot, such as when an assistant summarizes an article or a coding agent references documentation. Included agent types include <a href="https://knownagents.com/agents?agent_type_url_slug=ai-assistant">AI Assistants</a> and <a href="https://knownagents.com/agents?agent_type_url_slug=ai-coding-agent">AI Coding Agents</a>.</p>
-<h3>
-Traffic by Agent Type
-</h3>
-<p>AI Assistant
-    
-        </p>
-<p>AI Assistant</p>
-<p>Fetches website content in response to a user prompt, to include in an AI-generated answer</p>
-<p>AI Coding Agent
-    
-        </p>
-<p>AI Coding Agent</p>
-<p>Fetches documentation and other resources to help build software</p>
-<p>AI fetching activity by agent type over time</p>
-<h3>
-Top Visited Website Categories
-</h3>
-<p>Reference</p>
-<p>4.0%</p>
-<p>Science</p>
-<p>3.7%</p>
-<p>Finance</p>
-<p>3.4%</p>
-<p>Law and Government</p>
-<p>2.6%</p>
-<p>Computers and Electronics</p>
-<p>2.4%</p>
-<p>Beauty and Fitness</p>
-<p>2.1%</p>
-<p>Travel and Transportation</p>
-<p>1.9%</p>
-<p>Business and Industrial</p>
-<p>1.8%</p>
-<p>Internet and Telecom</p>
-<p>1.7%</p>
-<p>Health</p>
-<p>1.6%</p>
-<p>Autos and Vehicles</p>
-<p>1.3%</p>
-<p>Real Estate</p>
-<p>1.3%</p>
-<p>Sports</p>
-<p>1.3%</p>
-<p>Website categories with most activity</p>
-<h3>
-Top Agents
-</h3>
-<p>ASST
-    
-        </p>
-<p>AI Assistant</p>
-<p>Fetches website content in response to a user prompt, to include in an AI-generated answer</p>
-<p>86.1%</p>
-<a href="https://knownagents.com/agents/duckassistbot">DuckAssistBot</a>
-<p>ASST
-    
-        </p>
-<p>AI Assistant</p>
-<p>Fetches website content in response to a user prompt, to include in an AI-generated answer</p>
-<p>3.2%</p>
-<a href="https://knownagents.com/agents/perplexity-user">Perplexity-User</a>
-<p>ASST
-    
-        </p>
-<p>AI Assistant</p>
-<p>Fetches website content in response to a user prompt, to include in an AI-generated answer</p>
-<p>2.9%</p>
-<a href="https://knownagents.com/agents/claude-user">Claude-User</a>
-<p>ASST
-    
-        </p>
-<p>AI Assistant</p>
-<p>Fetches website content in response to a user prompt, to include in an AI-generated answer</p>
-<p>2.7%</p>
-<a href="https://knownagents.com/agents/mistralai-user">MistralAI-User</a>
-<p>ASST
-    
-        </p>
-<p>AI Assistant</p>
-<p>Fetches website content in response to a user prompt, to include in an AI-generated answer</p>
-<p>2.2%</p>
-<a href="https://knownagents.com/agents/claude-code">Claude-Code</a>
-<p>CODE
-    
-        </p>
-<p>AI Coding Agent</p>
-<p>Fetches documentation and other resources to help build software</p>
-<p>1.1%</p>
-<a href="https://knownagents.com/agents/shap-user">Shap-User</a>
-<p>ASST
-    
-        </p>
-<p>AI Assistant</p>
-<p>Fetches website content in response to a user prompt, to include in an AI-generated answer</p>
-<p>1.0%</p>
-<a href="https://knownagents.com/agents/google-notebooklm">Google-NotebookLM</a>
-<p>ASST
-    
-        </p>
-<p>AI Assistant</p>
-<p>Fetches website content in response to a user prompt, to include in an AI-generated answer</p>
-<p>0.4%</p>
-<a href="https://knownagents.com/agents/cursor">Cursor</a>
-<p>CODE
-    
-        </p>
-<p>AI Coding Agent</p>
-<p>Fetches documentation and other resources to help build software</p>
-<p>0.4%</p>
-<a href="https://knownagents.com/agents/gemini-deep-research">Gemini-Deep-Research</a>
-<p>ASST
-    
-        </p>
-<p>AI Assistant</p>
-<p>Fetches website content in response to a user prompt, to include in an AI-generated answer</p>
-<p>0.0%</p>
-<a href="https://knownagents.com/agents/googleagent-urlcontext">GoogleAgent-URLContext</a>
-<p>ASST
-    
-        </p>
-<p>AI Assistant</p>
-<p>Fetches website content in response to a user prompt, to include in an AI-generated answer</p>
-<p>0.0%</p>
-<a href="https://knownagents.com/agents/meta-externalfetcher">meta-externalfetcher</a>
-<p>ASST
-    
-        </p>
-<p>AI Assistant</p>
-<p>Fetches website content in response to a user prompt, to include in an AI-generated answer</p>
-<p>0.0%</p>
-<a href="https://knownagents.com/agents/code">Code</a>
-<p>CODE
-    
-        </p>
-<p>AI Coding Agent</p>
-<p>Fetches documentation and other resources to help build software</p>
-<p>0.0%</p>
-<a href="https://knownagents.com/agents/kagi-fetcher">kagi-fetcher</a>
-<p>ASST
-    
-        </p>
-<p>AI Assistant</p>
-<p>Fetches website content in response to a user prompt, to include in an AI-generated answer</p>
-<p>0.0%</p>
-<a href="https://knownagents.com/agents/qualifiedbot">QualifiedBot</a>
-<p>ASST
-    
-        </p>
-<p>AI Assistant</p>
-<p>Fetches website content in response to a user prompt, to include in an AI-generated answer</p>
-<p>0.0%</p>
-<p>Agents doing the most AI fetching</p>
-<h3>
-Top Operators
-</h3>
-<p>86.1%</p>
-<p>3.8%</p>
-<a href="https://knownagents.com/operators/duckduckgo">DuckDuckGo</a>
-<p>3.2%</p>
-<a href="https://knownagents.com/operators/perplexity">Perplexity</a>
-<p>2.9%</p>
-<a href="https://knownagents.com/operators/mistral">Mistral</a>
-<p>2.2%</p>
-<p>1.0%</p>
-<p>0.4%</p>
-<a href="https://knownagents.com/operators/xai">xAI</a>
-<p>0.4%</p>
-<p>0.0%</p>
-<a href="https://knownagents.com/operators/github">GitHub</a>
-<p>0.0%</p>
-<p>0.0%</p>
-<a href="https://knownagents.com/operators/kagi">Kagi</a>
-<p>0.0%</p>
-<a href="https://knownagents.com/operators/qualified">Qualified</a>
-<p>0.0%</p>
-<a href="https://knownagents.com/operators/poggio">Poggio</a>
-<p>0.0%</p>
-<p>0.0%</p>
-<p>Operators doing the most AI fetching</p>
-<h2 id="ai-search-indexing">
-AI Search Indexing Activity
-</h2>
-<p>These bots crawl website content so it can be surfaced in AI search engines and AI-generated answers. Those answers often include citations or links back to the source pages. Included agent types include <a href="https://knownagents.com/agents?agent_type_url_slug=ai-search-crawler">AI Search Crawlers</a>.</p>
-<h3>
-Traffic by Agent Type
-</h3>
-<p>AI Search Crawler
-    
-        </p>
-<p>AI Search Crawler</p>
-<p>Indexes website content to possibly include as citations in AI-powered search results</p>
-<p>AI search indexing activity by agent type over time</p>
-<h3>
-Top Visited Website Categories
-</h3>
-<p>Travel and Transportation</p>
-<p>6.8%</p>
-<p>Reference</p>
-<p>6.5%</p>
-<p>Health</p>
-<p>5.6%</p>
-<p>Games</p>
-<p>5.2%</p>
-<p>Food and Drink</p>
-<p>4.9%</p>
-<p>Books and Literature</p>
-<p>4.9%</p>
-<p>Jobs and Education</p>
-<p>4.7%</p>
-<p>Computers and Electronics</p>
-<p>4.6%</p>
-<p>Arts and Entertainment</p>
-<p>4.6%</p>
-<p>People and Society</p>
-<p>4.4%</p>
-<p>Law and Government</p>
-<p>4.3%</p>
-<p>Shopping</p>
-<p>4.3%</p>
-<p>Hobbies and Leisure</p>
-<p>4.2%</p>
-<p>Website categories with most activity</p>
-<h3>
-Top Agents
-</h3>
-<p>SRCH
-    
-        </p>
-<p>AI Search Crawler</p>
-<p>Indexes website content to possibly include as citations in AI-powered search results</p>
-<p>25.3%</p>
-<p>SRCH
-    
-        </p>
-<p>AI Search Crawler</p>
-<p>Indexes website content to possibly include as citations in AI-powered search results</p>
-<p>17.4%</p>
-<p>SRCH
-    
-        </p>
-<p>AI Search Crawler</p>
-<p>Indexes website content to possibly include as citations in AI-powered search results</p>
-<p>16.6%</p>
-<a href="https://knownagents.com/agents/oai-searchbot">OAI-SearchBot</a>
-<p>SRCH
-    
-        </p>
-<p>AI Search Crawler</p>
-<p>Indexes website content to possibly include as citations in AI-powered search results</p>
-<p>11.9%</p>
-<a href="https://knownagents.com/agents/meta-webindexer">meta-webindexer</a>
-<p>SRCH
-    
-        </p>
-<p>AI Search Crawler</p>
-<p>Indexes website content to possibly include as citations in AI-powered search results</p>
-<p>10.7%</p>
-<a href="https://knownagents.com/agents/claude-searchbot">Claude-SearchBot</a>
-<p>SRCH
-    
-        </p>
-<p>AI Search Crawler</p>
-<p>Indexes website content to possibly include as citations in AI-powered search results</p>
-<p>10.4%</p>
-<a href="https://knownagents.com/agents/perplexitybot">PerplexityBot</a>
-<p>SRCH
-    
-        </p>
-<p>AI Search Crawler</p>
-<p>Indexes website content to possibly include as citations in AI-powered search results</p>
-<p>3.5%</p>
-<a href="https://knownagents.com/agents/linkupbot">LinkupBot</a>
-<p>SRCH
-    
-        </p>
-<p>AI Search Crawler</p>
-<p>Indexes website content to possibly include as citations in AI-powered search results</p>
-<p>3.3%</p>
-<a href="https://knownagents.com/agents/google-cloudvertexbot">Google-CloudVertexBot</a>
-<p>SRCH
-    
-        </p>
-<p>AI Search Crawler</p>
-<p>Indexes website content to possibly include as citations in AI-powered search results</p>
-<p>0.3%</p>
-<a href="https://knownagents.com/agents/xai-searchbot">xAI-SearchBot</a>
-<p>SRCH
-    
-        </p>
-<p>AI Search Crawler</p>
-<p>Indexes website content to possibly include as citations in AI-powered search results</p>
-<p>0.2%</p>
-<a href="https://knownagents.com/agents/azureai-searchbot">AzureAI-SearchBot</a>
-<p>SRCH
-    
-        </p>
-<p>AI Search Crawler</p>
-<p>Indexes website content to possibly include as citations in AI-powered search results</p>
-<p>0.2%</p>
-<a href="https://knownagents.com/agents/addsearchbot">AddSearchBot</a>
-<p>SRCH
-    
-        </p>
-<p>AI Search Crawler</p>
-<p>Indexes website content to possibly include as citations in AI-powered search results</p>
-<p>0.0%</p>
-<a href="https://knownagents.com/agents/anomura">Anomura</a>
-<p>SRCH
-    
-        </p>
-<p>AI Search Crawler</p>
-<p>Indexes website content to possibly include as citations in AI-powered search results</p>
-<p>0.0%</p>
-<a href="https://knownagents.com/agents/exasearchbot">ExaSearchBot</a>
-<p>SRCH
-    
-        </p>
-<p>AI Search Crawler</p>
-<p>Indexes website content to possibly include as citations in AI-powered search results</p>
-<p>0.0%</p>
-<a href="https://knownagents.com/agents/mistralai-index">MistralAI-Index</a>
-<p>SRCH
-    
-        </p>
-<p>AI Search Crawler</p>
-<p>Indexes website content to possibly include as citations in AI-powered search results</p>
-<p>0.0%</p>
-<p>Agents doing the most AI search indexing</p>
-<h3>
-Top Operators
-</h3>
-<p>25.3%</p>
-<p>17.4%</p>
-<p>16.6%</p>
-<p>11.9%</p>
-<p>10.7%</p>
-<p>10.4%</p>
-<p>3.5%</p>
-<a href="https://knownagents.com/operators/linkup">Linkup</a>
-<p>3.3%</p>
-<p>0.3%</p>
-<p>0.2%</p>
-<p>0.2%</p>
-<a href="https://knownagents.com/operators/addsearch">AddSearch</a>
-<p>0.0%</p>
-<a href="https://knownagents.com/operators/direqt">Direqt</a>
-<p>0.0%</p>
-<a href="https://knownagents.com/operators/exa">Exa</a>
-<p>0.0%</p>
-<p>0.0%</p>
-<p>Operators doing the most AI search indexing</p>
-<h2 id="ai-browsing">
-AI Browsing Activity
-</h2>
-<p>These bots use browsers to autonomously navigate websites, click through pages, and make decisions to complete tasks for people. <a href="https://web.dev/articles/ai-agent-site-ux">Agentic UX best practices</a> and <a href="https://pagespeed.web.dev/">Google PageSpeed Insights</a> help evaluate how well websites support them. Included agent types include <a href="https://knownagents.com/agents?agent_type_url_slug=ai-agent">AI Agents</a>.</p>
-<h3>
-Average Session Duration
-</h3>
-<p>↓ 2%
-    
-        </p>
-<p>Compared to the previous 90 days</p>
-<p>The average duration of a session</p>
-<h3>
-Average Pages per Session
-</h3>
-<p>8</p>
-<p>↑ 7%
-    
-        </p>
-<p>Compared to the previous 90 days</p>
-<p>The average number of pages visited per session</p>
-<h3>
-Traffic by Agent Type
-</h3>
-<p>AI Agent
-    
-        </p>
-<p>AI Agent</p>
-<p>Uses an actual web browser to autonomously complete complex tasks on behalf of a human user</p>
-<p>AI browsing activity by agent type over time</p>
-<h3>
-Top Visited Website Categories
-</h3>
-<p>Computers and Electronics</p>
-<p>0.0%</p>
-<p>Law and Government</p>
-<p>0.0%</p>
-<p>Autos and Vehicles</p>
-<p>0.0%</p>
-<p>Internet and Telecom</p>
-<p>0.0%</p>
-<p>Business and Industrial</p>
-<p>0.0%</p>
-<p>Shopping</p>
-<p>0.0%</p>
-<p>Travel and Transportation</p>
-<p>0.0%</p>
-<p>Arts and Entertainment</p>
-<p>0.0%</p>
-<p>Beauty and Fitness</p>
-<p>0.0%</p>
-<p>Sports</p>
-<p>0.0%</p>
-<p>Books and Literature</p>
-<p>0.0%</p>
-<p>Finance</p>
-<p>0.0%</p>
-<p>Health</p>
-<p>0.0%</p>
-<p>Website categories with most activity</p>
-<h3>
-Top Agents
-</h3>
-<a href="https://knownagents.com/agents/google-agent">Google-Agent</a>
-<p>AGNT
-    
-        </p>
-<p>AI Agent</p>
-<p>Uses an actual web browser to autonomously complete complex tasks on behalf of a human user</p>
-<p>62.6%</p>
-<a href="https://knownagents.com/agents/manus-user">Manus-User</a>
-<p>AGNT
-    
-        </p>
-<p>AI Agent</p>
-<p>Uses an actual web browser to autonomously complete complex tasks on behalf of a human user</p>
-<p>26.4%</p>
-<a href="https://knownagents.com/agents/chatgpt-agent">ChatGPT Agent</a>
-<p>AGNT
-    
-        </p>
-<p>AI Agent</p>
-<p>Uses an actual web browser to autonomously complete complex tasks on behalf of a human user</p>
-<p>11.1%</p>
-<a href="https://knownagents.com/agents/novaact">NovaAct</a>
-<p>AGNT
-    
-        </p>
-<p>AI Agent</p>
-<p>Uses an actual web browser to autonomously complete complex tasks on behalf of a human user</p>
-<p>0.0%</p>
-<a href="https://knownagents.com/agents/googleagent-mariner">GoogleAgent-Mariner</a>
-<p>AGNT
-    
-        </p>
-<p>AI Agent</p>
-<p>Uses an actual web browser to autonomously complete complex tasks on behalf of a human user</p>
-<p>0.0%</p>
-<a href="https://knownagents.com/agents/amazonbuyforme">AmazonBuyForMe</a>
-<p>AGNT
-    
-        </p>
-<p>AI Agent</p>
-<p>Uses an actual web browser to autonomously complete complex tasks on behalf of a human user</p>
-<p>0.0%</p>
-<a href="https://knownagents.com/agents/twinagent">TwinAgent</a>
-<p>AGNT
-    
-        </p>
-<p>AI Agent</p>
-<p>Uses an actual web browser to autonomously complete complex tasks on behalf of a human user</p>
-<p>0.0%</p>
-<p>Agents doing the most AI browsing</p>
-<h3>
-Top Operators
-</h3>
-<p>62.6%</p>
-<a href="https://knownagents.com/operators/manus">Butterfly Effect</a>
-<p>26.4%</p>
-<p>11.1%</p>
-<p>0.0%</p>
-<a href="https://knownagents.com/operators/twin">Twin</a>
-<p>0.0%</p>
-<p>Operators doing the most AI browsing</p>
-<h2 id="robots-txt-and-compliance">
-Robots.txt &amp; Compliance
-</h2>
-<p><a href="#measuring-robots-txt-effectiveness">Robots.txt Effectiveness</a> measures the effectiveness of a disallow rule for it by estimating how much the agent reduces its traffic after it's blocked.</p>
-<h3>
-Effectiveness (Overall)
-</h3>
-<p>98.5%</p>
-<p>How often </p>
-<h3>
-Effectiveness (AI Scrapers &amp; Data Providers)
-</h3>
-<p>97.4%</p>
-<p>How often </p>
-<p> and </p>
-<h3>
-Top Rule-Following Agents
-</h3>
-<p>SRCH
-    
-        </p>
-<p>AI Search Crawler</p>
-<p>Indexes website content to possibly include as citations in AI-powered search results</p>
-<p>100.0%</p>
-<a href="https://knownagents.com/agents/serpstatbot">serpstatbot</a>
-<p>SEO
-    
-        </p>
-<p>SEO Crawler</p>
-<p>Analyzes website structure and content to identify SEO improvement opportunities</p>
-<p>100.0%</p>
-<a href="https://knownagents.com/agents/proximic">proximic</a>
-<p>INT
-    
-        </p>
-<p>Intelligence Gatherer</p>
-<p>Analyzes web content for brand safety, competitive insights, and ad targeting</p>
-<p>100.0%</p>
-<a href="https://knownagents.com/agents/um-ic">um-IC</a>
-<p>INT
-    
-        </p>
-<p>Intelligence Gatherer</p>
-<p>Analyzes web content for brand safety, competitive insights, and ad targeting</p>
-<p>100.0%</p>
-<a href="https://knownagents.com/agents/claritybot">ClarityBot</a>
-<p>SEO
-    
-        </p>
-<p>SEO Crawler</p>
-<p>Analyzes website structure and content to identify SEO improvement opportunities</p>
-<p>100.0%</p>
-<a href="https://knownagents.com/agents/barkrowler">Barkrowler</a>
-<p>SEO
-    
-        </p>
-<p>SEO Crawler</p>
-<p>Analyzes website structure and content to identify SEO improvement opportunities</p>
-<p>100.0%</p>
-<a href="https://knownagents.com/agents/dragonfly">Dragonfly</a>
-<p>INT
-    
-        </p>
-<p>Intelligence Gatherer</p>
-<p>Analyzes web content for brand safety, competitive insights, and ad targeting</p>
-<p>100.0%</p>
-<a href="https://knownagents.com/agents/affsignalcrawler">AffsignalCrawler</a>
-<p>INT
-    
-        </p>
-<p>Intelligence Gatherer</p>
-<p>Analyzes web content for brand safety, competitive insights, and ad targeting</p>
-<p>100.0%</p>
-<a href="https://knownagents.com/agents/meta-externalads">meta-externalads</a>
-<p>INT
-    
-        </p>
-<p>Intelligence Gatherer</p>
-<p>Analyzes web content for brand safety, competitive insights, and ad targeting</p>
-<p>100.0%</p>
-<a href="https://knownagents.com/agents/seokicks">SEOkicks</a>
-<p>SEO
-    
-        </p>
-<p>SEO Crawler</p>
-<p>Analyzes website structure and content to identify SEO improvement opportunities</p>
-<p>100.0%</p>
-<a href="https://knownagents.com/agents/uptimerobot">UptimeRobot</a>
-<p>DEV
-    
-        </p>
-<p>Developer Helper</p>
-<p>Assists with testing, debugging, and ensuring website functionality</p>
-<p>100.0%</p>
-<a href="https://knownagents.com/agents/leikibot">Leikibot</a>
-<p>INT
-    
-        </p>
-<p>Intelligence Gatherer</p>
-<p>Analyzes web content for brand safety, competitive insights, and ad targeting</p>
-<p>100.0%</p>
-<a href="https://knownagents.com/agents/ttd-content">TTD-Content</a>
-<p>INT
-    
-        </p>
-<p>Intelligence Gatherer</p>
-<p>Analyzes web content for brand safety, competitive insights, and ad targeting</p>
-<p>100.0%</p>
-<a href="https://knownagents.com/agents/sucuri-uptime-monitor">Sucuri Uptime Monitor</a>
-<p>UNC
-    
-        </p>
-<p>Uncategorized</p>
-<p>Not yet assigned a type</p>
-<p>100.0%</p>
-<a href="https://knownagents.com/agents/heritrix">heritrix</a>
-<p>ARCH
-    
-        </p>
-<p>Archiver</p>
-<p>Captures and stores historical website snapshots for long-term digital preservation</p>
-<p>100.0%</p>
-<p>Agents with the best <a href="#measuring-robots-txt-effectiveness">Robots.txt Effectiveness</a> percentages</p>
-<h3>
-Top Rule-Breaking Agents
-</h3>
-<a href="https://knownagents.com/agents/baiduspider">Baiduspider</a>
-<p>SRCH
-    
-        </p>
-<p>Search Engine Crawler</p>
-<p>Systematically scans and indexes web pages to include in search results</p>
-<p>82.6%</p>
-<a href="https://knownagents.com/agents/sirdatabot">SirdataBot</a>
-<p>UNC
-    
-        </p>
-<p>Uncategorized</p>
-<p>Not yet assigned a type</p>
-<p>84.5%</p>
-<a href="https://knownagents.com/agents/yandexbot">YandexBot</a>
-<p>SRCH
-    
-        </p>
-<p>Search Engine Crawler</p>
-<p>Systematically scans and indexes web pages to include in search results</p>
-<p>90.5%</p>
-<p>PVDR
-    
-        </p>
-<p>AI Data Provider</p>
-<p>Crawls websites to supply structured content to AI systems as a third-party service</p>
-<p>90.6%</p>
-<a href="https://knownagents.com/agents/sogou-web-spider">Sogou web spider</a>
-<p>SRCH
-    
-        </p>
-<p>Search Engine Crawler</p>
-<p>Systematically scans and indexes web pages to include in search results</p>
-<p>92.6%</p>
-<a href="https://knownagents.com/agents/peer39-crawler">peer39_crawler</a>
-<p>UNC
-    
-        </p>
-<p>Uncategorized</p>
-<p>Not yet assigned a type</p>
-<p>93.1%</p>
-<a href="https://knownagents.com/agents/mediapartners-google">Mediapartners-Google</a>
-<p>INT
-    
-        </p>
-<p>Intelligence Gatherer</p>
-<p>Analyzes web content for brand safety, competitive insights, and ad targeting</p>
-<p>93.2%</p>
-<a href="https://knownagents.com/agents/scrapy">Scrapy</a>
-<p>SCRP
-    
-        </p>
-<p>Scraper</p>
-<p>Extracts large amounts of web data, often without explicit website permission</p>
-<p>93.8%</p>
-<p>SCRP
-    
-        </p>
-<p>AI Data Scraper</p>
-<p>Downloads website content to include in datasets used for training AI models such as LLMs</p>
-<p>95.2%</p>
-<a href="https://knownagents.com/agents/headlesschrome">HeadlessChrome</a>
-<p>AUTO
-    
-        </p>
-<p>Automated Agent</p>
-<p>Automates browser interactions programmatically without direct human supervision</p>
-<p>95.4%</p>
-<a href="https://knownagents.com/agents/archive-org-bot">archive.org_bot</a>
-<p>ARCH
-    
-        </p>
-<p>Archiver</p>
-<p>Captures and stores historical website snapshots for long-term digital preservation</p>
-<p>95.6%</p>
-<a href="https://knownagents.com/agents/linkfluence">linkfluence</a>
-<p>INT
-    
-        </p>
-<p>Intelligence Gatherer</p>
-<p>Analyzes web content for brand safety, competitive insights, and ad targeting</p>
-<p>96.0%</p>
-<p>SEO
-    
-        </p>
-<p>SEO Crawler</p>
-<p>Analyzes website structure and content to identify SEO improvement opportunities</p>
-<p>96.1%</p>
-<p>SRCH
-    
-        </p>
-<p>AI Search Crawler</p>
-<p>Indexes website content to possibly include as citations in AI-powered search results</p>
-<p>96.4%</p>
-<p>ASST
-    
-        </p>
-<p>AI Assistant</p>
-<p>Fetches website content in response to a user prompt, to include in an AI-generated answer</p>
-<p>96.9%</p>
-<p>Agents with the worst <a href="#measuring-robots-txt-effectiveness">Robots.txt Effectiveness</a> percentages</p>
-<h3>
-Robots.txt Rules by Top Blocked Agent
-</h3>
-<p>The percentage of <a href="https://www.similarweb.com/top-websites">the top 1,000 websites</a> blocking each agent in robots.txt over time</p>
-<h3>
-Top Blocked Agents
-</h3>
-<p>●</p>
-<p>SCRP
-    
-        </p>
-<p>AI Data Scraper</p>
-<p>Downloads website content to include in datasets used for training AI models such as LLMs</p>
-<p>24.5%</p>
-<p>●</p>
-<p>SCRP
-    
-        </p>
-<p>AI Data Scraper</p>
-<p>Downloads website content to include in datasets used for training AI models such as LLMs</p>
-<p>22.7%</p>
-<p>●</p>
-<p>SCRP
-    
-        </p>
-<p>AI Data Scraper</p>
-<p>Downloads website content to include in datasets used for training AI models such as LLMs</p>
-<p>21.6%</p>
-<p>●</p>
-<p>SCRP
-    
-        </p>
-<p>AI Data Scraper</p>
-<p>Downloads website content to include in datasets used for training AI models such as LLMs</p>
-<p>18.8%</p>
-<p>●</p>
-<p>SRCH
-    
-        </p>
-<p>AI Search Crawler</p>
-<p>Indexes website content to possibly include as citations in AI-powered search results</p>
-<p>17.7%</p>
-<p>●</p>
-<p>ASST
-    
-        </p>
-<p>AI Assistant</p>
-<p>Fetches website content in response to a user prompt, to include in an AI-generated answer</p>
-<p>16.0%</p>
-<p>●</p>
-<a href="https://knownagents.com/agents/anthropic-ai">anthropic-ai</a>
-<p>UND
-    
-        </p>
-<p>Undocumented AI Agent</p>
-<p>Crawls websites without disclosing its purpose, collecting data for an unknown AI use case</p>
-<p>15.9%</p>
-<p>●</p>
-<p>SCRP
-    
-        </p>
-<p>AI Data Scraper</p>
-<p>Downloads website content to include in datasets used for training AI models such as LLMs</p>
-<p>15.5%</p>
-<p>●</p>
-<p>SCRP
-    
-        </p>
-<p>AI Data Scraper</p>
-<p>Downloads website content to include in datasets used for training AI models such as LLMs</p>
-<p>15.5%</p>
-<p>●</p>
-<p>PVDR
-    
-        </p>
-<p>AI Data Provider</p>
-<p>Crawls websites to supply structured content to AI systems as a third-party service</p>
-<p>14.0%</p>
-<p>●</p>
-<a href="https://knownagents.com/agents/claude-web">Claude-Web</a>
-<p>UND
-    
-        </p>
-<p>Undocumented AI Agent</p>
-<p>Crawls websites without disclosing its purpose, collecting data for an unknown AI use case</p>
-<p>14.0%</p>
-<p>●</p>
-<a href="https://knownagents.com/agents/cohere-ai">cohere-ai</a>
-<p>UND
-    
-        </p>
-<p>Undocumented AI Agent</p>
-<p>Crawls websites without disclosing its purpose, collecting data for an unknown AI use case</p>
-<p>14.0%</p>
-<p>●</p>
-<a href="https://knownagents.com/agents/omgili">omgili</a>
-<p>SCRP
-    
-        </p>
-<p>AI Data Scraper</p>
-<p>Downloads website content to include in datasets used for training AI models such as LLMs</p>
-<p>13.5%</p>
-<p>Agents blocked by the most top websites</p>
-<h2 id="spoofing-and-security">
-Spoofing &amp; Security
-</h2>
-<p>See which agents are most frequently impersonated, and how spoofing activity changes over time. A visit is considered spoofed when it claims a recognized agent identity but fails that agent's supported authentication method, such as verified IP or Web Bot Auth.</p>
-<p>Active Threat: AI Bot Spoofing Campaign</p>
-<p>We are observing a widespread campaign impersonating AI bots to scan websites for vulnerabilities. The attacker appears to be targeting credential and configuration paths used by AI coding tools. </p>
-<p> for more information, or </p>
-<p>.</p>
-<h3>
-Spoofed Traffic by Agent Identity
-</h3>
-<p>The percentage of impersonated website traffic for each agent identity over time</p>
-<h3>
-Top Spoofed Agent Identities
-</h3>
-<p>●</p>
-<p>SRCH
-    
-        </p>
-<p>Search Engine Crawler</p>
-<p>Systematically scans and indexes web pages to include in search results</p>
-<p>0.5%</p>
-<p>●</p>
-<p>ASST
-    
-        </p>
-<p>AI Assistant</p>
-<p>Fetches website content in response to a user prompt, to include in an AI-generated answer</p>
-<p>0.1%</p>
-<p>●</p>
-<p>SRCH
-    
-        </p>
-<p>AI Search Crawler</p>
-<p>Indexes website content to possibly include as citations in AI-powered search results</p>
-<p>0.1%</p>
-<p>●</p>
-<p>SCRP
-    
-        </p>
-<p>AI Data Scraper</p>
-<p>Downloads website content to include in datasets used for training AI models such as LLMs</p>
-<p>0.1%</p>
-<p>●</p>
-<p>SRCH
-    
-        </p>
-<p>AI Search Crawler</p>
-<p>Indexes website content to possibly include as citations in AI-powered search results</p>
-<p>0.1%</p>
-<p>●</p>
-<p>SCRP
-    
-        </p>
-<p>AI Data Scraper</p>
-<p>Downloads website content to include in datasets used for training AI models such as LLMs</p>
-<p>0.1%</p>
-<p>●</p>
-<p>SRCH
-    
-        </p>
-<p>AI Search Crawler</p>
-<p>Indexes website content to possibly include as citations in AI-powered search results</p>
-<p>0.0%</p>
-<p>●</p>
-<p>SRCH
-    
-        </p>
-<p>Search Engine Crawler</p>
-<p>Systematically scans and indexes web pages to include in search results</p>
-<p>0.0%</p>
-<p>●</p>
-<p>ASST
-    
-        </p>
-<p>AI Assistant</p>
-<p>Fetches website content in response to a user prompt, to include in an AI-generated answer</p>
-<p>0.0%</p>
-<p>●</p>
-<p>ASST
-    
-        </p>
-<p>AI Assistant</p>
-<p>Fetches website content in response to a user prompt, to include in an AI-generated answer</p>
-<p>0.0%</p>
-<p>●</p>
-<p>SCRP
-    
-        </p>
-<p>AI Data Scraper</p>
-<p>Downloads website content to include in datasets used for training AI models such as LLMs</p>
-<p>0.0%</p>
-<p>●</p>
-<p>SEO
-    
-        </p>
-<p>SEO Crawler</p>
-<p>Analyzes website structure and content to identify SEO improvement opportunities</p>
-<p>0.0%</p>
-<p>●</p>
-<p>ASST
-    
-        </p>
-<p>AI Assistant</p>
-<p>Fetches website content in response to a user prompt, to include in an AI-generated answer</p>
-<p>0.0%</p>
-<p>●</p>
-<p>SRCH
-    
-        </p>
-<p>AI Search Crawler</p>
-<p>Indexes website content to possibly include as citations in AI-powered search results</p>
-<p>0.0%</p>
-<p>●</p>
-<p>SRCH
-    
-        </p>
-<p>AI Search Crawler</p>
-<p>Indexes website content to possibly include as citations in AI-powered search results</p>
-<p>0.0%</p>
-<p>The most impersonated agent identities</p>
-<h3>
-Recent Top Targeted Paths
-</h3>
-<p>/.config/anthropic/credentials/default.json
-    
-</p>
-<p>/.claude/settings.json
-    
-</p>
-<p>/.claude.json
-    
-</p>
-<p>/.hermes/.env
-    
-</p>
-<p>/.openclaw/.env
-    
-</p>
-<p>/.codex/config.toml
-    
-</p>
-<p>/.continue/config.json
-    
-</p>
-<p>/.aider.conf.yml
-    
-</p>
-<p>/service-account.json
-    
-</p>
-<p>/serviceaccountkey.json
-    
-</p>
-<p>/service_account.json
-    
-</p>
-<p>/firebase-adminsdk.json
-    
-</p>
-<p>/firebase-service-account.json
-    
-</p>
-<p>/.aws/credentials
-    
-</p>
-<p>/.aws/config
-    
-</p>
-<p>/.s3cfg
-    
-</p>
-<p>/.boto
-    
-</p>
-<p>/.npmrc
-    
-</p>
-<p>/.env.example
-    
-</p>
-<p>/.env.local
-    
-</p>
-<p>/.env.production
-    
-</p>
-<p>/.env.backup
-    
-</p>
-<p>/.env.old
-    
-</p>
-<p>/backend/.env
-    
-</p>
-<p>/api/.env
-    
-</p>
-<p>/admin/.env
-    
-</p>
-<p>/dockerfile
-    
-</p>
-<p>/docker-compose.yaml
-    
-</p>
-<p>/.docker/config.json
-    
-</p>
-<p>/terraform.tfstate
-    
-</p>
-<p>/credentials.json
-    
-</p>
-<p>/secrets.json
-    
-</p>
-<p>/secrets.yml
-    
-</p>
-<p>/key.json
-    
-</p>
-<p>/rclone.conf
-    
-</p>
-<p>Examples of recent top targeted request paths</p>
-<h2 id="ai-chat-referrals">
-AI Chat Referrals
-</h2>
-<p>See which AI platforms like ChatGPT, Perplexity, and Gemini cite websites and send them human referral traffic. Citations are estimated. <a href="https://developers.google.com/search/docs/fundamentals/ai-optimization-guide">Google's guide</a> explains how websites can optimize their content to be more visible in AI chat responses (GEO).</p>
-<h3>
-Traffic by AI Chat Platform
-</h3>
-<p>ChatGPT
-    
-</p>
-<p>Claude
-    
-</p>
-<p>Copilot
-    
-</p>
-<p>DeepSeek
-    
-</p>
-<p>Gemini
-    
-</p>
-<p>Meta AI
-    
-</p>
-<p>Mistral
-    
-</p>
-<p>Perplexity
-    
-</p>
-<p>Referral activity by AI chat platform over time</p>
-<h3>
-Top Mentioned (Cited) Website Categories
-</h3>
-<p>Reference</p>
-<p>4.0%</p>
-<p>Science</p>
-<p>3.7%</p>
-<p>Finance</p>
-<p>3.1%</p>
-<p>Law and Government</p>
-<p>2.6%</p>
-<p>Computers and Electronics</p>
-<p>2.3%</p>
-<p>Beauty and Fitness</p>
-<p>2.1%</p>
-<p>Travel and Transportation</p>
-<p>1.9%</p>
-<p>Business and Industrial</p>
-<p>1.8%</p>
-<p>Internet and Telecom</p>
-<p>1.7%</p>
-<p>Health</p>
-<p>1.6%</p>
-<p>Autos and Vehicles</p>
-<p>1.3%</p>
-<p>Real Estate</p>
-<p>1.3%</p>
-<p>Sports</p>
-<p>1.3%</p>
-<p>Games</p>
-<p>1.2%</p>
-<p>Jobs and Education</p>
-<p>1.0%</p>
-<p>Website categories most frequently cited in AI chat responses</p>
-<h3>
-Top Clicked (Referred) Website Categories
-</h3>
-<p>Travel and Transportation</p>
-<p>0.3%</p>
-<p>Autos and Vehicles</p>
-<p>0.1%</p>
-<p>Beauty and Fitness</p>
-<p>0.1%</p>
-<p>Finance</p>
-<p>0.1%</p>
-<p>Computers and Electronics</p>
-<p>0.1%</p>
-<p>Jobs and Education</p>
-<p>0.1%</p>
-<p>Business and Industrial</p>
-<p>0.1%</p>
-<p>Home and Garden</p>
-<p>0.0%</p>
-<p>Sports</p>
-<p>0.0%</p>
-<p>Health</p>
-<p>0.0%</p>
-<p>Real Estate</p>
-<p>0.0%</p>
-<p>Internet and Telecom</p>
-<p>0.0%</p>
-<p>Science</p>
-<p>0.0%</p>
-<p>Food and Drink</p>
-<p>0.0%</p>
-<p>Shopping</p>
-<p>0.0%</p>
-<p>Website categories receiving the most referrals from AI chat</p>
-<h2 id="methodology">
-Methodology
-</h2>
-<h3>
-Data Scope
-</h3>
-<p>The Index is updated daily with completed days of traffic, security, and referral data from more than 5,000 websites using <a href="https://knownagents.com/products/agent-analytics">Agent Analytics</a> and <a href="https://knownagents.com/products/ai-chat-referral-tracking">AI Chat Referral Tracking</a>. The current partial day is excluded. Percentage-change tags compare the current period with the preceding period of the same duration. Agent names, operators, and classifications come from the <a href="https://knownagents.com/agents">Agent Directory</a>, which is updated as new agents are discovered or existing agents change. Website categories follow the taxonomy used by <a href="https://adsense.google.com/start">Google AdSense</a>. Participating websites are not a random sample of the entire web, and the qualifying set can change as websites connect, disconnect, or cross activity thresholds. Results characterize the observed network and broader directional trends; they should not be interpreted as a precise census of global web traffic.</p>
-<h3>
-Qualification &amp; Aggregation
-</h3>
-<p>Only websites meeting minimum activity and data-quality requirements are included. Internal, test, incomplete, or anomalous data is excluded. Bot traffic percentages use total server traffic as their denominator. AI chat referral percentages use estimated human traffic, calculated by excluding identified bot visits from total server traffic. Rates are calculated for each qualifying website first, then averaged across websites and completed days. This gives each website equal weight regardless of traffic volume and prevents a small number of high-traffic websites from dominating the results. Daily charts are not smoothed, allowing normal seasonality to remain visible.</p>
-<h3>
-Measuring Robots.txt Effectiveness
-</h3>
-<p>An agent's Robots.txt Effectiveness estimates the reduction in its request rate associated with a full disallow rule. For each completed day, Known Agents establishes an agent-specific baseline from qualifying websites where that agent is allowed, adjusts the baseline for the overall traffic of each website where the agent is disallowed, and compares the expected activity with the activity actually observed. Only website-day observations with sufficient site traffic, agent activity, cross-site coverage, and expected volume qualify. Scores also require repeated observations across multiple websites and days. When an agent publishes a supported authentication method, only verified traffic is attributed to it.</p>
-<p>Each qualifying website-day contributes equally. Scores range from 0%, meaning no measurable reduction, to 100%, meaning no qualifying requests were observed where the agent was disallowed. The headline Robots.txt Effectiveness metric gives each qualifying agent equal weight. Because this is an observational estimate rather than a controlled experiment, it measures an association with robots.txt rules but does not claim that robots.txt caused every observed difference. Top Blocked Bots is calculated separately using daily robots.txt scans of <a href="https://www.similarweb.com/top-websites">Similarweb's top 1,000 websites</a>.</p>
-<h3>
-Identifying Spoofed Bots
-</h3>
-<p>Spoofing statistics measure traffic from visits that claim the identity of a known agent but fail a supported authentication method, such as published IP verification or HTTP message signatures. Each agent's daily rate is calculated against total server traffic for every qualifying website, then averaged across websites. A failed check indicates that the visit was likely impersonating the named agent; it does not identify the software or operator that actually made the request. Agents without a supported authentication method are not included in these measurements.</p>
-<h3>
-AI Chat Citations &amp; Referrals
-</h3>
-<p>AI chat referral statistics count directly observed human visits carrying a recognized AI platform in the referring URL or campaign source. Visits without usable referral information cannot be attributed to an AI platform. Citation statistics are estimates based on requests from agents known to retrieve content for AI platforms. Those requests indicate that content may have informed a response, but they do not confirm that a source appeared as a citation to a user. Because AI platforms do not provide a complete public record of their sources, citation results should be interpreted as directional patterns rather than exact citation counts.</p>
-<h2 id="frequently-asked-questions">
-Frequently Asked Questions
-</h2>
-<h3>Can journalists and media organizations use this data?</h3>
-<p>Absolutely. You may cite The Agentic Web Index with attribution and a link to this page. For interviews, fact-checking, background context, or a more specific breakdown for a story, <a href="mailto:contact@knownagents.com">contact us</a> and include your deadline.</p>
-<hr/>
-<h3>Do you work with researchers?</h3>
-<p>Absolutely. We welcome thoughtful research into how agents and bots are changing the web. <a href="mailto:contact@knownagents.com">Tell us about your research question</a>, timeframe, and intended use. Depending on the scope and data constraints, we may be able to provide additional context, compare approaches, or explore a joint analysis.</p>
-<hr/>
-<h3>Can I request a specific analysis?</h3>
-<p>Yes. If you need a breakdown by agent, operator, activity type, website category, or time period that is not shown here, <a href="mailto:contact@knownagents.com">contact us</a>. When the underlying data supports it, we can examine the question and provide a focused analysis.</p>
-<hr/>
-<h3>How do I see these trends on my own website?</h3>
-<p><a href="https://knownagents.com/products/agent-analytics">Agent Analytics</a> shows which agents and bots visit your website, what they access, and how their activity changes over time. <a href="https://knownagents.com/products/ai-chat-referral-tracking">AI Chat Referral Tracking</a> measures the human traffic arriving from AI chat platforms. <a href="https://knownagents.com/products/automatic-robots-txt">Automatic Robots.txt</a> helps manage which bots can access your content.</p>
-<p><a href="https://news.ycombinator.com/item?id=49272569">Comments on Hacker News</a></p>]]></content:encoded>
-      <guid isPermaLink="true">https://knownagents.com/insights</guid>
-      <category>Hacker News</category>
-      <pubDate>Wed, 12 Aug 2026 14:02:46 +0000</pubDate>
-      <dc:creator>gavinhking</dc:creator>
-    </item>
-    <item>
-      <title>Why tiny JPEGs look different in Chrome</title>
-      <link>https://guillaumetech.github.io/posts/jpg-scaling-chrome/</link>
-      <description>Guillaume Técher — Personal website</description>
-      <content:encoded><![CDATA[<p>Monday, August 3, 2026</p>
-<p>What looked like a rendering bug turned out to be a clever JPEG decoding optimization in Chrome.</p>
-<h2 id="this-icon-looks-better-on-my-colleagues-computer">This icon looks better on my colleague’s computer</h2>
-<p>A while back, when chatting with a colleague over their computer, I noticed that a logo did not look exactly the same as it did on mine. It looked thinner on theirs and more faithful to the original image. It was rendered at 15px; here is an upscaled version.</p>
-<p>Note: this was not the original image. It happened a while ago, so I made a new image to demonstrate the issue.</p>
-<p><img alt="illustration of a tree being scaled down" height="500" src="https://guillaumetech.github.io/_astro/compare.DJwphvWD_1VRb2.webp" width="1000"/>
-<em>On the left, Firefox; on the right, Chrome.</em></p>
-<p>If you squint, or take a step back, the one from Chrome looks thicker. A bit weird, but swapping the image for an SVG fixed it. Still, I was curious: why was it rendering like this in the first place?</p>
-<p>I did some digging and found a nifty optimization that Chrome uses when rendering JPEGs at small scales.</p>
-<h2 id="scaling-down-images-can-be-wasteful">Scaling down images can be wasteful</h2>
-<p>The intuitive way to render a small image from a JPEG is to fully decompress it in memory and then scale it down.</p>
-<p>But that is not always efficient.</p>
-<p>Imagine a 2000 × 2000 JPEG that needs to be displayed at 20 × 20. Once uncompressed, the image takes far more memory than the final result. A bitmap of the full image uses roughly 12 MB, while the final 20 × 20 image needs only about 1.2 KB. Most of the information in the large version is lost when scaling down.</p>
-<h2 id="what-information-is-lost-when-scaling-down">What information is lost when scaling down?</h2>
-<p>An interesting insight is that the information lost is not random.</p>
-<p>When an image is scaled down heavily, the information that disappears is mostly the high-frequency detail. This is easy to see intuitively. Think of a tree with lots of leaves and rough bark: those fine details change quickly from pixel to pixel, so they count as high-frequency information.</p>
-<p>If you scale that tree down to something tiny, like 20 × 10, you end up with just a green blob at the top for the foliage and a brown stick at the bottom for the trunk. The scaled-down version has thrown away the fine detail, the high-frequency information.</p>
-<p><img alt="illustration of a tree being scaled down" height="500" src="https://guillaumetech.github.io/_astro/tree-example.DKPmTY7__Z18pM3I.webp" width="1280"/>
-<em>Illustration of a tree being scaled down</em></p>
-<p>Some of that high-frequency information still survives to an extent, because the details get mixed together.</p>
-<h2 id="how-jpeg-stores-image-data">How JPEG stores image data</h2>
-<p>I will keep this explanation light on jargon and math, but I will still mention a few technical terms that can be good starting points if you want to dig deeper. I will also skip a fair chunk of the full JPEG transformation, because it is not needed here.</p>
-<p>During JPEG compression, images are split into 8 × 8 blocks that are converted into the frequency domain. This operation is called a <strong>DCT</strong> (Discrete Cosine Transform).</p>
-<p>In an 8 × 8 block, the lowest possible frequency is a flat color. Strictly speaking, it is not really a frequency because nothing changes; it is the <strong>constant component</strong>. At the opposite end, the highest frequency looks like a checkerboard, where the value changes as much as possible. Everything in between represents the rest of the frequency domain. These are called <strong>basis functions</strong>.</p>
-<p><img alt="Basis functions" height="438" src="https://guillaumetech.github.io/_astro/basisfunctions.JXE3qjuw_Zb0tor.webp" width="438"/>
-<em>The basis functions: you can see the flat color in the top-left, and the checkerboard in the bottom-right.</em></p>
-<p>So converting an 8 × 8 block into the frequency domain is basically asking: how much of each pattern is present in this block? Those amounts are called <strong>coefficients</strong>.</p>
-<p>JPEG compression has a few more steps after that to store those coefficients efficiently, and that is where the lossy compression happens. But that part is not important for what we are discussing here.</p>
-<h2 id="putting-it-together-rendering-a-jpeg-at-18-scale">Putting it together: rendering a JPEG at 1/8 scale</h2>
-<p>Now let’s say you want to shrink an image by a factor of 8.</p>
-<p>Those 8 × 8 blocks I mentioned earlier can now be represented by a single pixel in the downscaled image. At that size, the image mostly needs low-frequency information because, as in the tree example, the high-frequency details mostly disappear during scaling.</p>
-<p>So instead of decompressing the whole JPEG, we can skip the coefficients for the high-frequency parts and use only the ones needed for the coarse version of the image. That gives a scaled-down result without fully expanding the original image first.</p>
-<p>The decoded image takes less space and is faster to uncompress, since we are skipping a good chunk of the coefficients.</p>
-<p>This can be extended to other ratios, as long as they are fractions with a denominator of 8. The technical name for this is <strong>partial IDCT scaling*</strong>. See <a href="https://jpegclub.org/djpeg/">jpegclub.org</a> (if you read a bit on this, you will see that this technique can also be used to upscale images!).</p>
-<p>* Inverse discrete cosine transform: taking the frequency domain back to the image domain.</p>
-<h2 id="how-chrome-fits-in">How Chrome fits in</h2>
-<p>Chrome delegates image decoding and rendering to Skia. For JPEGs, Skia uses libjpeg-turbo, which implements partial IDCT scaling. That lets it decode only the lower-frequency data when the target size is small enough.</p>
-<p>In other words, Chrome/Skia does not always decompress the full image and scale it afterward. It <a href="https://github.com/google/skia/blob/30ad01017a46a31859b580bc907457b0e43907a8/src/codec/SkJpegCodec.cpp#L383">computes the closest fraction with a denominator of 8</a> and decodes the image at that scale. It then scales the image further using a more traditional downsampling algorithm until it reaches the desired size.</p>
-<p>That is why the image looked thicker on my machine. Because it was rendered so small, it was decoded at one-eighth scale using partial IDCT scaling. So the only data from the frequency representation that remained was the constant component; all the edge softening and gradients were not used.</p>
-<p>Really, the moral here is that you should not use JPEG for icons and the like. The format and its optimizations are designed around our perception of photos.</p>
-<p>After all, it is in the name: Joint <strong>Photographic</strong> Experts Group.</p>
-<p><a href="https://news.ycombinator.com/item?id=49272549">Comments on Hacker News</a></p>]]></content:encoded>
-      <guid isPermaLink="true">https://guillaumetech.github.io/posts/jpg-scaling-chrome/</guid>
-      <category>Hacker News</category>
-      <pubDate>Wed, 12 Aug 2026 14:00:54 +0000</pubDate>
-      <media:content url="https://guillaumetech.github.io/_astro/compare.DJwphvWD_1VRb2.webp" type="image/webp" medium="image"/>
-      <dc:creator>gutechh</dc:creator>
     </item>
   </channel>
 </rss>
