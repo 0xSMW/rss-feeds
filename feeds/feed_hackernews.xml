@@ -8,7 +8,869 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 17 Aug 2026 23:58:19 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 18 Aug 2026 11:27:03 +0000</lastBuildDate>
+    <item>
+      <title>As Wisconsin cities flee Flock, its shared camera network loses value</title>
+      <link>https://arstechnica.com/tech-policy/2026/08/as-wisconsin-cities-flee-flock-its-shared-camera-network-loses-value/</link>
+      <description>Network effect" can run in reverse.</description>
+      <content:encoded><![CDATA[<p>Perhaps it’s the local summer diet of <a href="https://www.wisconsincheese.com/recipes/3189/deep-fried-cheese-curds">deep-fried cheese curds</a>, corn on the cob, and <a href="https://newglarusbrewing.com/pages/year-round-beers">Spotted Cow</a>, but Wisconsin residents have been feeling pretty dyspeptic about Flock’s automated license plate cameras.</p>
+<p>Over the past few months, a spate of Wisconsin towns and cities have withdrawn from Flock deals over privacy and trust concerns. As they did so, another issue revealed itself: With each city that leaves, the Flock network becomes less useful to the cities that remain. And cities are starting to notice.</p>
+<p>Consider Dane County, which includes the city of Madison. It’s one of the most populous counties in Wisconsin. It was also a significant Flock user, with a contract for 24 license plate cameras. But after complaints from citizens and privacy experts, the Dane County Board of Supervisors on April 16 <a href="https://www.danecounty.gov/PressDetail/11852">voted to cut the $80,000 in county funding</a> for Flock cameras and banned “further expenditures on the system.”</p>
+<p>“There are well-documented concerns about how this company operates and uses its technology to violate people’s <a href="https://en.wikipedia.org/wiki/Fourth_Amendment_to_the_United_States_Constitution">Fourth Amendment</a> rights [against unreasonable searches],” said County Board Chair Patrick Miles. “The board’s action supports protecting our community from a proven bad actor. We have full confidence in our Sheriff and deputies, and we are open to considering other companies that have stronger safeguards in place.”</p>
+<p>The county’s Flock cameras soon went dark, cutting off Dane County data from the 140 other law enforcement agencies that had once accessed it. Many of these agencies were local, but they also included cops in Missouri, New York, and Tennessee.</p>
+<p>(As for the city of Madison itself, it has <a href="https://www.cityofmadison.com/information-technology/privacy-security/cameras">avoided Flock cameras altogether</a>. The city says it does not use any “automatic license plate readers, gunshot detection systems, or gait analysis software.”)</p>
+<figure>
+
+<a href="https://cdn.arstechnica.net/wp-content/uploads/2026/08/dane-county-wi-flock.jpg">
+<img alt="A map of Dane County, Wisconsin." height="576" src="https://cdn.arstechnica.net/wp-content/uploads/2026/08/dane-county-wi-flock-1024x576.jpg" width="1024"/>
+</a>
+
+              Once Flock cameras come down, nearby communities see less use for the network.
+                              
+                  Credit:
+                                      Aurich Lawson (based on Google Map imagery)
+                                  
+
+<figcaption>
+
+      Once Flock cameras come down, nearby communities see less use for the network.
+
+              
+          Credit:
+
+          
+          Aurich Lawson (based on Google Map imagery)
+
+                  
+
+</figcaption>
+</figure>
+<p>Monona, another Dane County city, in early May <a href="https://www.mymonona.com/2785/Automated-License-Plate-Reader-Flock-Tra">announced</a> that its Flock contract was “under review.” The Monona police chief supports license plate cameras and said that Flock had helped solve “an enticement case involving a suspect who transported a vulnerable adult across state lines.” Still, local police were concerned about “privacy considerations” and “maintaining community trust and accountability.”</p>
+<p>Because much of Flock’s value comes from access to cameras in other jurisdictions, the loss of Dane County and Monona meant Flock was suddenly less useful to nearby police departments. The town of McFarland, which neighbors Monona, <a href="https://www.mcfarland.wi.us/m/newsflash/home/detail/778">announced on May 15</a> that it would not move forward with its plan to deploy Flock cameras “in light of a shrinking database in Dane County and input from residents.”</p>
+<p>“Once Dane County lost their funding for Flock, we lost about half of the potential camera network within Dane County,” said McFarland Chief of Police Brian Redman in a statement. “I had to ask, ‘Were we still going to get the return on our investment with that loss?’ With the network being chipped away, that wasn’t going to be the case.”</p>
+<p>On May 26, the nearby city of Fitchburg voted to discontinue its own Flock subscription. According to <a href="https://www.channel3000.com/news/fitchburg-votes-to-end-flock-safety-camera-contract/article_d1d7c178-64dc-4bec-a45a-c49a7ab138ca.html">Channel 3000 News</a>, local leaders “cited concerns about the national search feature in the current Flock model, saying the city cannot definitively determine how data searched by other areas is being used.”</p>
+<p>The University of Wisconsin police force in Madison then <a href="https://uwpd.wisc.edu/uw-madison-police-department-not-renewing-current-flock-alpr-contract/">announced on July 3</a> that “after careful and thoughtful consideration,” it would not renew its Flock deal.</p>
+<p>Like many local communities, the campus police force still believes in the technology—just not in Flock. Instead, the campus will find “an automated license plate reader (ALPR) vendor that better meets UW-Madison’s public safety needs.”</p>
+<p>On July 28, the nearby city of Stoughton also voted to cancel its own Flock contract, paying a $12,500 early buyout fee after <a href="https://www.channel3000.com/news/stoughton-council-members-vote-to-terminate-flock-contract/article_cd05b0a6-881a-48ef-b0d2-bddb24d2a343.html">intense local opposition</a> to the devices. This happened even though police said that, only 14 minutes after entering the license plate into Flock, the cameras <a href="https://www.cityofstoughton.com/AgendaCenter/ViewFile/Item/998?fileID=1897">helped them find</a> a “missing/runaway 15 yr old juvenile who took parents’ vehicle.”</p>
+<p>In just a few months, the Madison-area license plate camera situation changed dramatically.</p>
+<h2>Fox Valley blues</h2>
+<p>A similar story has played out in northeastern Wisconsin. Oshkosh <a href="https://wtaq.com/2026/06/25/appleton-committee-recommends-new-license-plate-reader-standards/">ended its Flock contract</a> in April, while its northern neighbor, Appleton, announced in May that it, too, would stop using Flock.</p>
+<p>Nearby Grand Chute canceled its Flock deal in early June, switching to a competing product from Axon. Grand Chute Police Chief David Maas <a href="https://fox11online.com/news/local/grand-chute-cancels-flock-contract-signs-camera-agreement-with-new-company-axon-safety-privacy">told Fox 11 News</a> that the Axon system “benefits the community in multiple ways and also respects resident privacy in a way that feels more comfortable, quite honestly.”</p>
+<p>With local communities bailing, the nearby city of Kaukauna <a href="https://www.kaukauna.gov/kaukauna-no-longer-in-contract-with-flock-safety/">announced in July</a> that it would not renew its Flock contract, either. Kaukauna explicitly said that “one of the main functionalities that appealed to the city was the ability to work with area communities also using Flock ALPRs to identify suspects traveling outside of city limits.”</p>
+<p>With so many Flock cameras going offline, “It is not fiscally responsible for the city to continue to invest in the Flock cameras with the concerns that have been raised and the inability to partner with area communities,” said Jamie Graff, City of Kaukauna Chief of Police.</p>
+<h2>Network effects can run backward</h2>
+<p>It would be too much to say that the cities have given up on automated license plate readers. Many of the places severing ties with Flock this year have made clear that they hope to find another system that better meets their needs and values. And a <a href="https://maps.deflock.org/?lat=44.2017&amp;lng=-89.0927&amp;zoom=6.35">map of license plate cameras in Wisconsin</a> still shows many in use, including some in the Madison area.</p>
+<p>Public resistance was crucial to many of these decisions to de-Flock. Indeed, the broad backlash against Flock has grown so strong that the surveillance company last week <a href="https://apnews.com/article/flock-license-plate-cameras-surveillance-deflock-2a93bc075e2f7ffcca9e04a35d75a3fe">announced mandatory new audit controls and lower default data retention periods</a> for US users.</p>
+<p>Flock now knows what Kaukauna and McFarland realized: The same “network effect” that helps build a business can also work in the other direction once customers start to flee.</p>
+<p><a href="https://news.ycombinator.com/item?id=49344114">Comments on Hacker News</a></p>]]></content:encoded>
+      <guid isPermaLink="true">https://arstechnica.com/tech-policy/2026/08/as-wisconsin-cities-flee-flock-its-shared-camera-network-loses-value/</guid>
+      <category>Hacker News</category>
+      <pubDate>Tue, 18 Aug 2026 11:27:03 +0000</pubDate>
+      <media:content url="https://cdn.arstechnica.net/wp-content/uploads/2026/08/dane-county-wi-flock-1024x576.jpg" type="image/jpeg" medium="image"/>
+      <dc:creator>xoa</dc:creator>
+    </item>
+    <item>
+      <title>Google buys crashed airline Spirit's data at auction, because AI</title>
+      <link>https://www.theregister.com/ai-and-ml/2026/08/18/google-buys-crashed-airline-spirits-data-at-auction-because-ai/5288962</link>
+      <description>$10 million buys over 100 million emails, 30 million recorded phone calls, reams of stuff from Teams, Oracle, and SAP</description>
+      <content:encoded><![CDATA[<p>Google has acquired the data of failed US airline Spirit.</p>
+<p>Spirit hit financial turbulence when COVID-19 blew in during 2020 and started making losses. Its balance sheet never climbed back to a safe altitude and in May 2026 the airline grounded itself permanently.</p>
+<p>The low-cost carrier entered liquidation to wind itself up and is now auctioning assets to raise cash and settle at least some of its debts.</p>
+<p>REG AD</p>
+<p>A <a href="https://storage.courtlistener.com/recap/gov.uscourts.nysb.331039/gov.uscourts.nysb.331039.1463.0.pdf">court document</a> [PDF] filed last week reveals that one of the assets up for sale is a huge trove of deidentified data, which Google bid for and won for just $10 million.</p>
+<p>REG AD</p>
+<p>For that sum, Google bought itself 100 million emails and 500 million items from Microsoft Teams, 17 million OneDrive files and 20.5 million items from SharePoint. The search giant also now owns over 30 million recorded customer service calls, and more than 15 million customer service chat records.</p>
+<h2>MORE CONTEXT</h2>
+<ul><li>
+<a href="https://www.theregister.com/offbeat/2026/03/07/60-years-since-humans-touched-the-surface-of-another-planet/4907779">
+60 years since humanity touched the surface of another planet
+</a>
+</li>
+<li>
+<a href="https://www.theregister.com/on-prem/2026/03/07/openai-and-oracle-reportedly-abandon-tx-stargate-expansion/4159805">
+Oracle and OpenAI's Texas Stargate datacenter expansion reportedly on the skids
+</a>
+</li>
+<li>
+<a href="https://www.theregister.com/software/2026/03/06/dont-blame-ai-yet-for-poor-jobs-numbers-analysts-say/4119428">
+Don’t blame AI yet for poor jobs numbers, analysts say
+</a>
+</li>
+<li>
+<a href="https://www.theregister.com/software/2026/03/06/us-state-laws-push-age-checks-into-the-operating-system/4750249">
+US state laws push age checks into the operating system
+</a>
+</li>
+</ul>
+<p>600,000 ServiceNow tickets are another element of the collection, along with 13.7 million active emails addresses from Oracle’s Responsys marketing application, and details of 11 million sales of in-flight Wi-Fi services.</p>
+<p>There’s also operational data in the trove, describing over 763,000 flights, five million crew pairings, more than 1.2 million fuel slips, and records describing purchases of 787,452 parts.</p>
+<p>Google has <a href="https://www.axios.com/2026/08/17/google-spirit-airlines-bankruptcy">reportedly</a> said it bought the data to improve its AI services. The underbidder was Mercor, a company that provides data to train AI models. So clearly Spirit’s data is of value to AI companies.</p>
+<p>Indeed, <em>The Register</em> recently <a href="https://www.theregister.com/ai-and-ml/2026/07/11/ai-customers-are-coming-around-to-the-idea-that-small-is-beautiful/5268070">reported</a> how AI experts increasingly believe large language models are blunt instruments, and that smaller models trained on specific fields of knowledge are more useful in some applications.</p>
+<p>Google might have itself the basis for an aviation ops model, or just with all sorts of quotidian financial records that could be useful for another AI.</p>
+<p>If you’ve flown Spirit and worry that Google will soon know about a testy conversation you had with the airline’s call center, you’re being told not to worry. The court filing says the data was deidentified before being put on sale and Google has promised to scrub any PII it finds in the trove.</p>
+<p><em>The Register</em> awaits evidence of the inevitable SNAFUs that mean some personal info appears as the result of a future prompt, or search.</p>
+<p>REG AD</p>
+<p>Fasten your seat belts! ®</p>
+<p><a href="https://news.ycombinator.com/item?id=49343559">Comments on Hacker News</a></p>]]></content:encoded>
+      <guid isPermaLink="true">https://www.theregister.com/ai-and-ml/2026/08/18/google-buys-crashed-airline-spirits-data-at-auction-because-ai/5288962</guid>
+      <category>Hacker News</category>
+      <pubDate>Tue, 18 Aug 2026 10:13:28 +0000</pubDate>
+      <dc:creator>pseudolus</dc:creator>
+    </item>
+    <item>
+      <title>Linux 7.3 improves performance when running out of vRAM</title>
+      <link>https://pixelcluster.dev/VRAM-Overcommit/</link>
+      <description>Earlier this year, I blogged about work I did to improve VRAM management for games. Now, after many months of floating around in mailing lists, the kernel patches are finally merged upstream and queued for Linux 7.3! Hooray!</description>
+      <content:encoded><![CDATA[<p>Earlier this year, I blogged about work I did to <a href="https://pixelcluster.dev/VRAM-Mgmt-fixed">improve VRAM management</a>
+for games. Now, after many months of floating around in mailing lists, the kernel patches
+are finally merged upstream and queued for Linux 7.3! Hooray!</p>
+<p>To celebrate, letâs look a bit deeper at one sentence I wrote in my previous post:</p>
+<blockquote>
+<p>[Games] should perform much more stable - as long as the game itself doesnât
+  use more VRAM than you actually have.</p>
+</blockquote>
+<p>So, one may ask: What if they do, in fact, use more VRAM than you actually have?</p>
+<p>Typical expectations for this seem to be that once this happens youâre pretty much screwed.
+Games will start crashing left and right, performance plummets to unplayable levels,
+a good gaming experience becomes impossible.</p>
+<p>But is that really just an unavoidable fact of life? What <em>really</em> makes running out of
+VRAM suck so hard? And, most importantly: How can we make it suck as little as possible?</p>
+<h2 id="setting-expectations">Setting expectations</h2>
+<p>In theory, running out of VRAM should exclusively be a performance issue, not a stability one.
+Support for overcommitting VRAM has existed for as long as GPU drivers have: If the driver
+overcommits VRAM, you are generally allowed to request as much VRAM as youâd like,
+and youâll get as much as the kernel driver decides it can fit into the physical memory that exists on GPU.</p>
+<p>On the performance side, the big-picture reason for bad performance when you run out of VRAM is fairly simple.
+As soon as the game requests more VRAM than is physically present, some of the gameâs memory will
+have to be moved/evicted to CPU RAM instead. For the GPU, accessing CPU RAM is much slower than VRAM:
+Not only is CPU RAM slower than a dedicated GPUâs VRAM in general, all memory accesses also
+have to go over the PCI bus. The PCI bus adds latency and is typically also the limiting factor in bandwidth when
+fetching from CPU memory.</p>
+<p>Due to PCI speed limitations, there are some truly unavoidable performance constraints when overcommitting VRAM.
+Assuming the GPU is hooked up via a PCIe 4.0x16 connection, you get a little less than 32GiB/s of bandwidth. Each
+millisecond, that PCIe bus can transfer ~32.2MiB of data. For a minimum framerate of 30 frames per second (33.3ms
+per frame), the absolute maximum amount of data the GPU is able to access is ~1,075.5MiB, a tiny bit over 1GiB of
+data. In other words, if so much memory gets evicted that the GPU needs to fetch more than 1GiB from evicted memory
+in one single frame, it is simply impossible to still hit 30 FPS.</p>
+<h2 id="not-all-memory-is-equal">Not all memory is equal</h2>
+<p>At the same time, just reading a little bit of CPU memory on the GPU is not immediately a death sentence for performance.
+In fact, GPU drivers sometimes decide to let things like command buffer data and related allocations live in CPU
+RAM even when thereâs plenty of VRAM available! Whenever the GPU executes these commands, it has to access CPU memory, and yet
+in these cases everything runs completely fine. So what makes these accesses different - why are they fine and yet
+running out of VRAM seems catastrophic?<sup id="fnref:1"><a href="#fn:1">1</a></sup></p>
+<p>One thing that influences the calculus significantly is caching. Since the access latency in case of a cache hit is the same
+regardless of whether the cached memory lives on CPU or GPU, the high initial cost of fetching over the PCI bus can be
+amortized by cache hits (to some extent). We can estimate latency differences between fetching CPU RAM and VRAM by writing microbenchmarks
+that measure access latency for different buffer sizes
+(using an adversarial access pattern to minimize cache hitrates as far as possible). The result you get may
+look something like this (captured on RDNA3):</p>
+<p><img alt="Cache microbenchmark for an RDNA3 GPU." src="https://pixelcluster.dev/assets/images/RDNA3Microbench.png"/></p>
+<p>As expected, if the buffer fits into L2 (or any higher-level cache), access latencies are exactly the same for
+memory backed by CPU RAM and memory backed by VRAM, because the data gets fetched directly from cache in either case.
+At a size of 6MB (the L2 cache size on RDNA3), CPU memory latencies go up to about 2400 cycles per access,
+while device memory latencies stay within the same rough ballpark.
+Note that VRAM accesses also go through the Infinity Cache, but CPU memory accesses do not (they hit PCIe directly on an L2 miss).
+I suspect this is because the Infinity Cache sits directly on top of VRAM, so any access that doesnât hit VRAM also doesnât reach
+the Infinity Cache.</p>
+<p>Obviously, memory doesnât start off with being cached anywhere, so the first access will still have considerably higher
+latency. Also, losing the Infinity Cache definitely hurts as well: PCIe fetches seem to have somewhere around 7.3x as much
+latency than an Infinity Cache hit, and around 4.6x as much latency as a fetch from VRAM.
+This increased latency needs really high cache hitrates to fully amortize the cost of going over PCIe.
+That means there is only a small set of use cases where using CPU memory has such minuscule slowdowns
+that youâd actively decide to use it in favor of VRAM when you have the choice. When youâre evicting memory from VRAM, there
+will almost unavoidably be at least some degree of slower performance.</p>
+<p>Still, even though slowdown is unavoidable, there is going to be memory where eviction matters more and memory
+where eviction has a lesser effect on overall perf. Memory that is accessed in very cache-friendly ways is not
+affected by the slowdown of CPU RAM as much. If the access patterns arenât cache-friendly but the memory isnât accessed very
+often, things may also still be fine since the GPU only rarely needs to actually fetch data from CPU RAM. There might be many
+memory allocations where the GPU will only access a small part of the total allocation size, and never even read the rest.
+If these allocations were to be evicted, you might evict multiple GiBs of data, but still remain well below the 1GiB hard limit of data
+that is <em>actually</em> accessed per frame.</p>
+<p>All of these variables make it surprisingly hard to predict how performance actually pans out in practice when memory is being
+evicted. But in short: Depending on how much the evicted memory gets accessed and how well these accesses cache, you might just be able to run out
+of VRAM without (completely) ruining performance!</p>
+<h2 id="confronting-reality">Confronting reality</h2>
+<p>Weâve theorycrafted ourselves all the way towards having performant VRAM overcommitment now. Great! Letâs just boot up SteamOS, start some game and crank
+up the setti-<br/>
+<code>radv/amdgpu: Not enough memory for command submission.</code></p>
+<p>oh.</p>
+<p>As it turns out, running out of VRAM in practice does carry plenty of stability issues with it.</p>
+<p>This error isnât quite like a regular âcouldnât allocate, out of memoryâ error, though. Note that the message specifically complains about
+command submission: RADV prints this message when the kernel returns <code>-ENOMEM</code> when trying to submit commands<sup id="fnref:2"><a href="#fn:2">2</a></sup>, but merely submitting
+commands does not allocate any new resources! All the command buffers were allocated in advance, and clearly their allocation succeeded.
+Even though all memory was successfully allocated, using it in a GPU submission suddenly results in âout of memoryâ errors being thrown.</p>
+<p>Itâs time for another kernel adventure! Surely getting the kernel to accept the submission canât be that hard - after all, the kernel already
+accepted all the allocations<sup id="fnref:3"><a href="#fn:3">3</a></sup>!</p>
+<h2 id="the-horrors-of-kernel-locking">The horrors of kernel locking</h2>
+<p>One thing the <code>amdgpu</code> driver has to do on every submission, before it can direct the GPU to start executing commands, is to make sure that
+all memory that may potentially be referenced by the GPU commands is accessible. With more modern bindless graphics APIs, you have to assume
+all allocated memory may at some point get referenced. Therefore, <code>amdgpu</code> will try to make sure all allocated memory is also accessible.</p>
+<p>Each memory allocation carries information about which type of memory (for our purposes here, system RAM or GPU VRAM) it can be properly accessed
+from. Most allocations can be accessed from either CPU RAM or VRAM, and <code>amdgpu</code> will be happy with the memory allocation being in either of these
+memory types. Some allocations, however, have to be placed in VRAM and VRAM only. If these memory allocations have been evicted to system RAM because
+some other application allocated VRAM in the meantime, <code>amdgpu</code> will have to move them back into VRAM. Because there is no free VRAM available at all,
+moving the allocation back requires evicting something else. For some reason, that failed and the kernel
+reported an out-of-memory condition.</p>
+<p>In order to explain why evicting something randomly fails, weâll have to take a small detour to look at how the kernel handles (CPU-side) locking for GPU allocations.
+In order to evict a memory allocation, you have to acquire a lock associated with that allocation. However, during a submission, you also have to lock
+every allocation thatâs referenced in a submission, to prevent some other application from moving the allocation somewhere else while youâre busy preparing
+GPU work. But if another GPU submission is doing the same thing concurrently, you can end up in a situation like this:</p>
+<p><img alt="Deadlock condition when concurrent submits evict" src="https://pixelcluster.dev/assets/images/AMDGPUDeadlock.png"/></p>
+<p>If one submit wants to evict an allocation that another submit has already locked, but that other submit also needs to lock an allocation from the first one
+to make progress, we have a textbook ABBA deadlock condition.</p>
+<p>But fear not, the kernel knows how to detect and resolve deadlocks! The details about how deadlock detection works are
+explained in <a href="https://www.kernel.org/doc/html/latest/locking/ww-mutex-design.html">this kernel documentation page</a>, but in very broad strokes, the
+kernel associates locking operations with a âtransactionâ (which basically just keeps track of which locks were acquired). If two transactions would
+deadlock, one of the transactions is marked as âwoundedâ, and the next time it tries to acquire a lock, the <code>-EDEADLCK</code> error is returned.
+This error requests the transaction to be aborted: All locks acquired during the transaction should be released, and the transaction is restarted
+from scratch. In the context of command submission, this just means the driver will restart the process of going over all memory allocations and making
+sure theyâre accessible.</p>
+<p>So whereâs the catch? There isnât one. This approach is rock solid and works really well.</p>
+<p>At least as long as itâs actually implemented everywhere.</p>
+<p>In the graphics subsystem, the gritty internals of the wound-abort-retry loop are abstracted using a small helper library called <code>drm_exec</code>. Instead of
+having to manually track which allocations are locked, and release the locks once you run into <code>-EDEADLCK</code>, you simply use the <code>drm_exec_lock_obj</code> helper.
+If you study the <a href="https://elixir.bootlin.com/linux/v7.2-rc7/source/drivers/gpu/drm/ttm/ttm_bo_util.c#L841-L867">locking code in TTM</a>,
+the shared Linux GPU memory management layer, you will notice a profound lack of usage of <code>drm_exec</code>.</p>
+<p>Instead, there even is a comment noting that <code>-EDEADLCK</code> will cause eviction to fail. There we go, we found our issue! As soon as this deadlock
+condition is encountered because of intense memory pressure during command submission, the kernel bails out and rejects the submission instead of
+retrying.</p>
+<p>There already are some patchsets to hook up the <code>drm_exec</code> helper in TTM,
+<a href="https://lore.kernel.org/all/20240710124301.1628-7-christian.koenig@amd.com/">sent all the way back in 2024</a>, but those never made it in for a few reasons,
+among which were some remaining bugs that hadnât been figured out. My work had been cut out for me here: Rebase the patchset on top of
+my kernel version and figure out what those remaining bugs are.</p>
+<p>Rebasing the patchset wasnât too much of a hassle, and figuring out the bugs only took one single week of intense suffering with games randomly hanging 3 minutes
+into heavy VRAM contention. Not the worst!</p>
+<p>I tried <a href="https://lore.kernel.org/all/20260703-ttm_2_drm_exec-v1-0-43685ac1286b@gmx.de/">resending</a> the patchset with fixes for all bugs I found in the
+hopes it would get in this time, but thereâs going to be more work needing to be done with it before it can be merged.</p>
+<p>Now that running out of VRAM at least wonât crash your apps at random, we can at least properly crank up the settings and look at perf. The initial
+result gave me an absolutely glorious performance graph like this:</p>
+<p><img alt="Horrible perf graph" src="https://pixelcluster.dev/assets/images/MangohudVRAM.png"/></p>
+<h2 id="hold-on-where-did-all-the-perf-go">Hold On Where Did All The Perf Go</h2>
+<p>Figuring out why performance is so garbage requires figuring out what the system is actually <em>doing</em> thatâs this slow. For broad âwhatâs the kernel driver doing??â
+questions like that, I like using <a href="https://github.com/mikesart/gpuvis">gpuvis</a>. gpuvis uses kernel tracepoints to build a timeline of things that happened
+(including âGPU work submission started/stoppedâ, from which the time taken for each submission can be inferred).</p>
+<p>Booting up gpuvis with a trace taken while the system is running out of VRAM, the timeline shows a situation like this:</p>
+<p><img alt="Horrible perf with SDMA being busy most of the time" src="https://pixelcluster.dev/assets/images/gpuvisGarbage.png"/></p>
+<p>Turns out, most of that time isnât actually spent on handling the submission (thatâs the gfx_0.0.0 activity), but instead moving around memory in preparation
+for that submission (sdma0 activity)!</p>
+<p>The reason why there are so many buffer moves all the time becomes more obvious if you use gpuvisâs event list, together with a filter to show only captured
+move events for a particular buffer object (I chose one at random here, most buffer objects have a similar pattern):</p>
+<p><img alt="gpuvis event filter showing buffer go ping pong ping pong ping pong" src="https://pixelcluster.dev/assets/images/gpuvisGarbageBO.png"/></p>
+<p>The list shows quite clearly that contending processes (in this case, <code>gamescope</code> and the game itself) will constantly take turns evicting and moving
+back the same piece of memory, over and over. Thatâs really bad! And itâs very reminiscent of something I wrote in my first blogpost:</p>
+<blockquote>
+<p>Generally, two competing applications can be expected to roughly take turns executing GPU work - first one application submits work, then the other, then the first again, and so on.
+With that approach, memory would keep being moved back and forth after every single submission. One application gets kicked out and immediately moved back in, kicking the other out (which moves memory back in the next step). All this moving ended up with
+<strong>worse</strong> performance than if the memory had never been moved in the first place.</p>
+</blockquote>
+<p>This described an old issue where overly aggressive VRAM allocation would lead to ping-pong-like moves happening constantly. But that issue had since been
+fixed by simply not trying to claim VRAM when there isnât any free VRAM left, and the kernel only started being somewhat aggressive when I implemented
+VRAM protection with dmem cgroups. Obviously, this must have reintroduced the ping-ponging somehow.</p>
+<p>Conceptually, the design of the dmem cgroup VRAM protection should never result in ping-pong moves, because the kernel is only supposed to evict memory that
+does not have any cgroup VRAM protection associated with it. Without any VRAM protection, you should <em>typically</em> not be allowed to evict protected VRAM.</p>
+<p>The single exception to this rule is memory that absolutely has to live in VRAM for things to work properly. These kinds of memory allocations are always
+allowed to be moved to VRAM to ensure system stability. Typically, almost nothing coming from an application is really required to live in VRAM for correct operation,
+but there is one buffer object coming from an application that does: The buffer containing image data to be scanned out to the display<sup id="fnref:4"><a href="#fn:4">4</a></sup>.</p>
+<h2 id="display-hardware-is-funky">Display hardware is funky</h2>
+<p>Not only does the display hardware like scanned-out images to be in VRAM, it also completely skips past the GPUâs virtual memory architecture and
+works with physical addresses exclusively. In consequence, scanned-out images also have to be <em>contiguous</em> in physical memory.</p>
+<p>With virtual memory and the power of page tables, typical application buffers are only contiguous in <em>virtual</em> memory, and may be scattered around
+all over physical memory<sup id="fnref:5"><a href="#fn:5">5</a></sup>. The first page of a buffer at virtual address <code>0x5000</code> may be mapped in the page tables to point to physical address
+<code>0x1234000</code>, but the second page at virtual address <code>0x6000</code> might point to physical address <code>0x4321000</code>, somewhere completely different!</p>
+<p>Here is a diagram visualizing the mapping of virtual allocations to physical ones in case where there is a lot of fragmentation (which typically
+is the case when youâre very low on VRAM):</p>
+<p><img alt="Contiguous virtual memory mapping to fragmented physical memory." src="https://pixelcluster.dev/assets/images/AMDGPUFragmentation.png"/></p>
+<p>The arrows show page table mappings to physical memory segments for the different segments of the first allocation.
+Theyâre left out for all other allocations for readability.</p>
+<p>If youâre allocating display scanout data, this fragmentation is not an option as the physical memory has to be contiguous. This has very, very
+unfortunate interactions with eviction of other data specifically. Letâs assume the scanout data has already been evicted, but now itâs
+time for that data to be scanned out, so it has to be moved back into VRAM.</p>
+<p>Simply evicting one buffer wonât be sufficient, even if that buffer is the same size as the display scanout data, because evicting it does not
+result in enough <em>contiguous</em> physical space to place the scanout data in! To make matters worse, the eviction algorithm does not take into
+account physical memory constraints at all. It is a very simplistic loop along the lines of</p>
+<pre><code>while (true) {
+   evict(getLeastRecentlyUsedBuffer())
+   if (tryAllocate(newBuffer) == SUCCESS)
+      break;
+}
+</code></pre>
+<p>Using this algorithm (assuming the allocations are arranged in LRU order), even if you evict the first 3 allocations (green, blue, and red), there wonât be a large
+enough space to hold the scanout buffer! Even the largest possible free space is ever so slightly too small, as is visible in this updated diagram:</p>
+<p><img alt="Still no space for the scanout buffer." src="https://pixelcluster.dev/assets/images/AMDGPUFragmentationEvicted.png"/></p>
+<p>To find a large enough physically contiguous memory region in our example, every single allocation in VRAM would end up being evicted! In
+real-world scenarios, I observed up to 4GiB of VRAM being nuked just to make space for scanout images (which are ~32MiB of pixel data per image for a R11G11B10
+pixel format). Thatâs going to hurt real hard! Simply the act of moving all that data out from VRAM would already cost at least ~130ms, according to
+the PCIe transfer rate estimated earlier.</p>
+<p><img alt="welp." height="300" src="https://pixelcluster.dev/assets/memes/scanout.png"/></p>
+<h2 id="throwing-heuristics-at-the-problem">Throwing heuristics at the problem</h2>
+<p>While scanout is definitely the most egregious failure case here, this issue is more general: There are always going to be certain memory allocations
+that will be moved to VRAM over and over, potentially kicking out some memory that an application might prefer to stay in VRAM. Resisting this and
+trying to move the evicted memory back in will most likely backfire.</p>
+<p>Even though dmem cgroup protection is not a complete solution to this problem, it does reduce the problem scope by a lot. With cgroup protection, you
+can be sure that any random app wonât try to kick out important game resources willy-nilly. Any memory that does get moved back into VRAM by force
+probably has a good reason to be in VRAM. Therefore, even with dmem cgroup protection, we should be careful and not try to reclaim evicted memory back
+by force.</p>
+<p>With some iterative testing, I think Iâve arrived at a set of heuristics that work reasonably well for most cases a game would encounter in the wild
+(not being too aggressive when stuff gets evicted by important system allocations is one thing, but it also needs to be reasonably quick at reclaiming
+evicted memory if e.g. the game is paused and the Steam menu runs instead, evicting lots of game memory, and then the game is resumed).</p>
+<p>The heuristics work something like this:</p>
+<ol>
+<li>When the kernel detects an applicationâs memory is being evicted, it enters a âhard throttleâ phase for a few milliseconds. During this phase, it does
+not try moving any memory for that app back into VRAM whatsoever (as long as all memory can be properly accessed, of course).</li>
+<li>After this period, it switches a âsoft throttleâ phase, during which it may reclaim free space by moving things back into VRAM, but does not
+try evicting any memory that other apps have allocated. This period may last up to a few seconds, to make extra sure everything reached a stable state.</li>
+<li>If the âsoft throttleâ phase has completed without any further memory being evicted again, the system is assumed to have reached a fairly stable state
+and restrictions on evicting other applicationsâ memory are removed.</li>
+</ol>
+<p>IME, this achieves an acceptable balance between not shooting oneself in the foot with overaggressive eviction of other apps, while still recovering
+reasonably fast when lots of your memory was suddenly evicted, for example because the game was paused and the user browsed around on Steam instead of
+playing.</p>
+<h2 id="getting-somewhere">Getting somewhere</h2>
+<p>With those heuristics in place, letâs finally try cranking up the settings for real this time.</p>
+<p>I ended up going with Indiana Jones: The Great Circle, since it conveniently exposes a setting for streaming pool sizes that you
+can mess with to modify VRAM consumption pretty much directly.</p>
+<p>Lo and behold, even if the settings are turned up to a somewhat ridiculous point, where the game requests 9GiB of 8GiB VRAM (aka. a whole 1GiB of
+overcommitted game resources living in CPU memory), performance isnât cratering into oblivion anymore! A 19.6ms per frame average is what Iâd still
+call perfectly playable.</p>
+<p><img alt="Indiana Jones: TGC overcommit to 9GiB/8GiB" src="https://pixelcluster.dev/assets/images/IndyOvercommit.png"/></p>
+<p>I can also bump the settings to <em>even more ridiculous</em> levels and double the amount of overcommitted memory, with the game requesting 10GiB of VRAM
+on this 8GiB system (and thus 2GiB of resources being overcommitted). Frametime variance goes up quite a lot at this point, with spikes
+reaching above 33.3ms happening frequently. The overall average is around 29.8ms which isnât the <em>worst</em>, but especially paired with the variance,
+this would start being noticeable in gameplay.</p>
+<p>While this is already a huge step forward, we arenât quite there yet. The experience under VRAM overcommit can sometimes still be a bit hit-or-miss,
+and frametimes may noticeably vary depending on which objects in the game youâre looking at.</p>
+<p>Remember that for actually good eviction performance, it matters a lot how the evicted memory is used by the GPU.
+Right now, this isnât taken into account at all! If we were able to base our eviction decisions more on how well the applicationâs accesses work
+with CPU memory, a lot of this variance might simply disappear.</p>
+<h2 id="handing-over-the-controls">Handing over the controls</h2>
+<p>The complicated thing about the applicationâs memory access patterns is that they are only really known to the application.
+Therefore, the driver isnât really able to take them into account as-is. Ideally there would be some API where the application
+can supply hints to the driver about how well a particular memory allocation is suited to being evicted.</p>
+<p>Something exactly like <a href="https://docs.vulkan.org/refpages/latest/refpages/source/vkSetDeviceMemoryPriorityEXT.html"><code>vkSetDeviceMemoryPriorityEXT</code></a>!
+The <code>VK_EXT_pageable_device_local_memory</code> extension provides precisely what we need here, by allowing applications to communicate any priority
+they want for any piece of device memory they want. As long as applications provide reasonable hints through this extension, implementing
+prioritization in the kernel and then utilizing app-provided priorities has the potential to stabilize things by a lot!</p>
+<p>Hooking up priorities in the kernel turns out to be a lot less of an issue than you might expect. The kernel already maintains a Least-Recently-Used
+list of memory allocations that, on eviction, are traversed in order. For each entry on that LRU list, eviction is attempted until there is enough
+free space for whatever the eviction was for.</p>
+<p>This LRU list provides a good heuristic for which applicationâs memory should be evicted first. Applications that havenât submitted anything in a long
+while are unlikely to need the memory soon, and since their memory is Not Recently Used, it will appear early in the LRU list and be evicted first.</p>
+<p>When an application uses a set of buffers, that set of buffers is moved to the very end of the LRU list in one bulk. However, the order of allocations
+within that bulk is not explicitly controlled at all. That means once the kernel closes in on some application to evict its memory, which specific
+pieces of memory get evicted is more or less undefined<sup id="fnref:6"><a href="#fn:6">6</a></sup>. A simplified visualization could look something like this:</p>
+<p><img alt="Unsorted LRU list visualization" src="https://pixelcluster.dev/assets/images/AMDGPULRU.png"/></p>
+<p>If the kernel walks the LRU list like this, it would evict the buffer with a priority value of 2 first, even though there are much lower-priority buffers
+elsewhere in the LRU list. If only the first buffer of priority 2 gets evicted, things might be okay, but if the highly important buffer with priority 4
+ends up evicted as well, there are likely going to be problems.</p>
+<p>Given that we already know specific priorities for the individual allocations, this LRU list is a very simple place to integrate them. Itâs as simple as ordering
+the list entries within a single application by their priority<sup id="fnref:7"><a href="#fn:7">7</a></sup>:</p>
+<p><img alt="Sorted LRU list visualization" src="https://pixelcluster.dev/assets/images/AMDGPULRU2.png"/></p>
+<p>Now, when the kernel goes over the LRU list to find something to evict, the very first thing it will find and try to evict are the lowest-priority buffers.
+The highest-priority buffers are last in the list, and thus only get evicted when evicting all the lower-priority buffers was not enough.</p>
+<h3 id="memory-priority-adoption-in-apps">Memory priority adoption in apps</h3>
+<p>Unfortunately, not all applications actually set priorities via <code>VK_EXT_pageable_device_local_memory</code>. As for native Vulkan applications,
+I havenât observed any idTech game using the extension directly, at least :/</p>
+<p>The D3D side looks a lot better, because <code>vkd3d-proton</code> already uses <code>VK_EXT_pageable_device_local_memory</code> when available, and translates both the
+<code>ID3D12Device::MakeResident</code>/<code>ID3D12Device::Evict</code> API calls as well as priorities set via <code>ID3D12Device1::SetResidencyPriority</code> to priority values
+set using the Vulkan <code>vkSetDeviceMemoryPriority</code> command. Lots of D3D12 games utilize at least one of these APIs, so the hints these games provide will now be
+utilized.</p>
+<p>I donât have super solid numbers for how much memory exactly is overcommitted by most D3D12 apps, as they donât typically expose the total amount of
+VRAM they request in an easy-to-access way like idTechâs performance overlay does. However, properly honoring memory priorities generally seems to have
+a good chance to improve the experience. Performance generally appears more stable over time (because youâre not relying on luck with which buffers the
+kernel evicts as much). In some spots I had a good comparison point at, I suspect it increased performance compared to the kernel evicting random
+things by up to 30% in the very best case - but again, take this number with a <em>mountain</em> of salt as it depends almost entirely on luck with regards to eviction.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>When all is said and done, how well does running out of VRAM hold up?</p>
+<p>Iâd say itâs quite alright! In many cases, you may be surprised how much performance you can retain even when evicting a gigabyte or more of memory!
+Then again, thatâs of course a rather optimistic case, and the wrong thing ending up in CPU RAM can very quickly cause very significant slowdowns. Eviction is
+tricky to get just right, and to an extent, performance will always be dragged down. If a game is struggling to hit 30fps even with everything
+in VRAM, needing to evict something on top of all that could sometimes just unavoidably result in that 30fps target being missed.</p>
+<p>Regardless, what I hope this blogpost can demonstrate is that even if you end up with some memory evicted to system RAM, the slowdown can be manageable. Thereâs
+measures that drivers (particularly, the kernel driver) can take to make overcommit work as fast as possible, and even applications can do their
+part in coordinating with the driver stack to mitigate the effects of their memory being evicted. With everything in place, VRAM overcommit isnât
+really as big of a deal as one may think it is at first sight.</p>
+<p>All the work I described here has already been released in SteamOS for some time now (itâs both in Stable and Preview. As long as your system is up-to-date, itâs good to go!).</p>
+<h2 id="a-note-on-upstreaming">A note on upstreaming</h2>
+<p>Of course, Iâm already working on upstreaming all this work so itâs available to everyone! However, thereâs a lot of moving parts and a lot of deep
+refactors of some pretty core concepts at play here, so it will likely need time to cook before everything is merged upstream.</p>
+<p>At the same time, I donât want to put up a blogpost talking about lots of cool code just to finish it with âactually you canât see for yourself,
+go wait until itâs all upstream lolâ, either.</p>
+<p>As a middle ground, I have rebased the kernel work onto a recent upstream version of the kernel and published a git branch
+<a href="https://gitlab.freedesktop.org/pixelcluster/kernel/-/commits/vramstuff-rebase">here</a>.
+While it should theoretically yield similar effects, it did <strong>not</strong> go through as rigorous testing the SteamOS kernel did. There will likely
+be bugs and instabilities that werenât there in the SteamOS version. <strong>Use at your own risk</strong>, basically.
+I donât expect to be maintaining this branch in any significant capacity, as Iâd rather focus on getting the patches into upstream properly.</p>
+<p>In order to pass through application priority hints to the kernel, you will also need a custom Mesa branch I pushed
+<a href="https://gitlab.freedesktop.org/pixelcluster/mesa/-/commits/vram-prios">here</a>.
+Similar considerations as the kernel branch apply here, as well.</p>
+<h2 id="questions-of-my-own">Questions of my own</h2>
+<p>While I would claim to have a fairly good overview of the driver side of memory management at this point, I am not very familiar with how
+applications decide on supplying memory management heuristics internally, at all. I would suspect optimizing cases where youâve already run out of
+VRAM isnât exactly the top item on developer TODOs (who knows, maybe the memory scarcity is changing that? :P), so maybe thereâs some
+unexplored room for performance improvements there?</p>
+<p>If you, dear reader, happen to know about VRAM management for larger games/engines (especially when running out), Iâd love to chat! I have a hunch that
+thereâs still perf to be gained by making apps and drivers coordinate better, but Iâm also plainly interested in how things look from an application
+developerâs point of view.</p>
+<h2 id="footnotes">Footnotes</h2>
+<ol>
+<li>
+<p>One reason is simply that command buffers specifically are very small, which is not a consideration for evicted VRAM (you donât have a choice on
+  how much to evict). Thatâs not the only reason though: Caching/access pattern considerations apply to command buffers and evicted VRAM alike.Â <a href="#fnref:1">↩</a></p>
+</li>
+<li>
+<p>See the RADV source <a href="https://gitlab.freedesktop.org/mesa/mesa/-/blob/main/src/amd/vulkan/winsys/amdgpu/radv_amdgpu_cs.c#L1854">here</a>.Â <a href="#fnref:2">↩</a></p>
+</li>
+<li>
+<p>Itâs possible for all allocations to succeed even though it is impossible to actually use that memory in a submission, if you exhaust both
+  CPU RAM and VRAM. This is normal, and would result in the same error being printed, but itâs not what happened here - in my case, there
+  really was enough memory available.Â <a href="#fnref:3">↩</a></p>
+</li>
+<li>
+<p>Technically, the display hardware can handle scanning out from system RAM! But there are ugly tradeoffs associated with moving between VRAM and system RAM,
+  so letâs ignore that for simplicity.Â <a href="#fnref:4">↩</a></p>
+</li>
+<li>
+<p>Itâs better for performance if buffers are physically contiguous, but contiguity is not a strict requirement.Â <a href="#fnref:5">↩</a></p>
+</li>
+<li>
+<p>In practice, the buffers that were allocated first are probably among the first ones to be evicted, and the most recently allocated buffers are last.Â <a href="#fnref:6">↩</a></p>
+</li>
+<li>
+<p>Sorting is only really feasible with the priority values of one single application, because priorities are only really meaningful in relation to other
+  priorities in the same context. Different applications most likely have different interpretations/scales of what exactly some specific absolute priority value means.Â <a href="#fnref:7">↩</a></p>
+</li>
+</ol>
+<hr/>
+<p><a href="https://news.ycombinator.com/item?id=49342719">Comments on Hacker News</a></p>]]></content:encoded>
+      <guid isPermaLink="true">https://pixelcluster.dev/VRAM-Overcommit/</guid>
+      <category>Hacker News</category>
+      <pubDate>Tue, 18 Aug 2026 07:51:50 +0000</pubDate>
+      <media:content url="https://pixelcluster.dev/assets/images/RDNA3Microbench.png" type="image/png" medium="image"/>
+      <dc:creator>flaburgan</dc:creator>
+    </item>
+    <item>
+      <title>Rethinking Database Programming</title>
+      <link>https://acadia.engineering/blog/rethinking-database-programming</link>
+      <description>Rethinking Database Programming</description>
+      <content:encoded><![CDATA[<p><a href="https://news.ycombinator.com/item?id=49342530">Comments on Hacker News</a></p>]]></content:encoded>
+      <guid isPermaLink="true">https://acadia.engineering/blog/rethinking-database-programming</guid>
+      <category>Hacker News</category>
+      <pubDate>Tue, 18 Aug 2026 07:28:27 +0000</pubDate>
+      <dc:creator>honungsburk</dc:creator>
+    </item>
+    <item>
+      <title>Finger: Social network that never died</title>
+      <link>https://en.andros.dev/blog/54572bc7/finger-the-1971-social-network-that-never-died/</link>
+      <description>It will surprise more than a few of you to hear that the first social network dates back to 1971. No accounts, no algorithm, no central server. Your…</description>
+      <content:encoded><![CDATA[<p>It will surprise more than a few of you to hear that the first social network dates back to 1971.</p>
+<p>No accounts, no algorithm, no central server. Your entire profile fits in a single plain text file that you control. <strong>John Carmack</strong> (co-founder of id Software and programmer of Doom and Quake) used it as a development journal. And chances are you already have a client installed on your operating system without knowing it.</p>
+<p>But the most incredible part is that, half a century later, it still works. And do not rule out a comeback.</p>
+<p>Its name is Finger, and you can try it right now.</p>
+<p>The <code>finger</code> client comes preinstalled on macOS and most Unix systems. On Debian or Ubuntu you install it with <code>apt install finger</code>. Windows also ships its <code>finger.exe</code>. And if you live in Emacs, you have <code>M-x finger</code>, included in <code>net-utils.el</code> out of the box.</p>
+<pre><code>finger random@happynetbox.com</code></pre>
+<p>It will randomly show you a Finger account hosted on <code>happynetbox.com</code>, one of the many directories (or hosts) that make publishing easy if you do not have your own server. Fun, isn't it?</p>
+<p>But its origin is just as interesting.</p>
+<h2 id="blog-single-content__title--origin">Origin</h2>
+<p>In 1971, at the Stanford Artificial Intelligence Laboratory (SAIL), researchers shared a computer running the WAITS time-sharing system. The only way to know who was connected was the <code>WHO</code> command, which spat out an endless, hard-to-read list.</p>
+<p>Well, <a href="https://exhibits.stanford.edu/ai/catalog/hg950nz1220">Les Earnest</a>, one of the lab's engineers, kept seeing a scene that repeated daily.</p>
+<blockquote>
+<p>I frequently saw people running their fingers down the WHO display saying things like "There's Don and that's Pattie but I don't know when Tom was last seen."</p>
+</blockquote>
+<p>People ran their fingers down the screen, hence the name. Earnest wrote a program that returned that information in a human format: real names, locations and, most importantly, how long each terminal had been idle. He was a practical engineer who preferred talking in person to talking through the computer. He wanted to know whether it was worth getting up and walking down the hall to find someone.</p>
+<p>As a side effect, he had invented network presence, or the social network.</p>
+<p>In 1977 the protocol was formalized in <a href="https://www.rfc-editor.org/rfc/rfc742.html">RFC 742</a>, written by Ken Harrenstien. It was so primitive that only 3 sites supported it: SAIL, SRI and MIT's ITS machines. A little later, the networked implementation was handled by Earl Killian at MIT and Brian Harvey at Stanford.</p>
+<p>In 1991, <a href="https://www.rfc-editor.org/rfc/rfc1288.html">RFC 1288</a> was written, the definitive specification, making the earlier versions obsolete.</p>
+<h3 id="blog-single-content__title--the-first-microblog-the-plan-and-project-files">The first microblog: the .plan and .project files</h3>
+<p>On top of the protocol, there was content. Besides telling whether you were connected, Finger showed the contents of two text files in your home folder: <code>.plan</code> and <code>.project</code>. The original idea was to announce what you were working on and what you planned to do. A kind of static professional "status", with no interactions like likes or comments. As if it were a changelog of your day-to-day or your project.</p>
+<p>People did what we always do: humanize it. They started including poems, jokes, personal diaries, ASCII art, articles... anything! Anyone in the world could read your <code>.plan</code> with a simple <code>finger your-user@your-host</code>. Many consider it, rightly, the first microblog on the internet.</p>
+<p>As I mentioned, the most famous example is <strong>John Carmack</strong>'s <code>.plan</code>. For years, any fan could type <code>finger johnc@idsoftware.com</code> (dead nowadays) and read, straight from the source, what the graphics engine of their favorite games was up to. He wrote from 1996 to 2010. Today they are preserved, archived on <a href="https://github.com/ESWAT/john-carmack-plan-archive">GitHub</a>. It is one of the most valuable technical documents in video game history, and it was distributed over a 1971 protocol. TOO ANGRY TO DIE!</p>
+<p>Do not expect prose that brings tears to your eyes, either. His style was telegraphic: task lists and bugs without a word to spare. But every so often a bombshell dropped. For example, on August 18, 1997 he announced through his <code>.plan</code>, not through a website or a press conference, that he planned to release the Doom source code:</p>
+<pre><code>-----------------------------------------
+John Carmack's .plan for Aug 18, 1997
+-----------------------------------------
+
+I get asked about the DOOM source code every once in a while, so here is a
+full status update:
+
+[...]
+
+The DOOM code should be a lot more interesting. It is better written, 32 bit,
+and portable. There are several interesting projects that immediately present
+themselves for working with the code. GLDOOM and a packet server based
+internet DOOM spring to mind.</code></pre>
+<p>Glory kill!</p>
+<h3 id="blog-single-content__title--the-first-iot-device-spoke-finger">The first IoT device spoke Finger</h3>
+<p>Around 1982, some students at Carnegie Mellon University (Mike Kazar, David Nichols, John Zsarnay and Ivor Durham) got tired of walking down to the department's <a href="https://www.cs.cmu.edu/~coke/coke.history.txt">Coca-Cola machine</a> and finding it empty or with warm bottles. They installed microswitches to detect how many bottles were in each column and how long they had been cooling.</p>
+<p>They wired it all up to the network and exposed the status over Finger. From any computer you could run <code>finger coke@cmu.edu</code> (the machine's exact name changed over the years) and learn not only whether there were sodas, but which button would give you the coldest one. It is considered one of the first connected objects in history, the grandfather of the Internet of Things. And its interface was, once again, Finger.</p>
+<h2 id="blog-single-content__title--the-protocol">The protocol</h2>
+<p>Finger is so simple it can be explained in one paragraph. The client opens a TCP connection to port 79 on the server. It sends a line of text (the username it is looking for, or an empty line to list everyone) terminated by a carriage return and line feed. The server responds with plain text and closes the connection. That's it!</p>
+<p>No encryption, no headers, no sessions. Pure simplicity.</p>
+<pre>sequenceDiagram
+    participant C as Client (finger)
+    participant S as Server (fingerd, port 79)
+    C-&gt;&gt;S: Opens TCP connection to port 79
+    C-&gt;&gt;S: "johnc" + CRLF
+    S-&gt;&gt;C: Contents of ~johnc/.plan (plain text)
+    S-&gt;&gt;C: Closes the connection</pre>
+<p>The basic command is this:</p>
+<pre><code>finger user@server</code></pre>
+<p>Since the protocol has no secrets, you can speak it by hand with <code>netcat</code>. We send the username via standard input to port 79 and read what comes back:</p>
+<pre><code>echo "random" | nc happynetbox.com 79</code></pre>
+<p>It will feel familiar because it works like other protocols such as Whois, Gopher or SMTP: connect, ask in plain text, and read the response.</p>
+<h2 id="blog-single-content__title--what-goes-inside-a-plan">What goes inside a .plan</h2>
+<p>A <code>.plan</code> is not a wall of posts. It is a single text file where you can write whatever you want. When someone fingers you, the server returns the whole file, as-is. There is no format to follow, it is the wild west.</p>
+<p>Does that mean you can only have one post? No. The custom, since the 80s, is to keep a sort of diary inside that same file, adding dated entries, usually with the most recent on top. That is how John Carmack published years of development. His <code>.plan</code> was a file that grew with entries separated by dashed lines:</p>
+<pre><code>-----------------------------------------
+John Carmack's .plan for Jan 02, 1998
+-----------------------------------------
+
+Wired magazine does something that almost no other print magazine...</code></pre>
+<p>Yours could look simpler, with a profile header and several entries:</p>
+<pre><code>Emily Carter
+Marine biologist. Coffee, kayaking and old maps.
+
+--- 2026-08-14 ---
+Back from sampling on the coast. Three jars full of plankton to go through.
+
+--- 2026-08-05 ---
+Finally finished "Dune". Now I get half the memes on the internet.
+
+--- 2026-07-30 ---
+Anyone know how to fix a bike chain that keeps slipping off? Tips welcome.</code></pre>
+<p>When the file gets long, you trim the old entries yourself. There is no database behind it storing your history: the <code>.plan</code> is mutable and unversioned, whatever you delete is gone. There is no way to "click" from one profile to another. Everything is manual.</p>
+<p>To map it to what you already know:</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Mastodon / X / Reddit</th>
+<th>Finger (.plan)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Publishing</strong></td>
+<td>A new post per idea</td>
+<td>You edit a single text file</td>
+</tr>
+<tr>
+<td><strong>Multiple entries</strong></td>
+<td>Automatic, each post is a row</td>
+<td>Manual: dated entries in the same file</td>
+</tr>
+<tr>
+<td><strong>History</strong></td>
+<td>Everything is kept, with a permalink</td>
+<td>Only what you leave in the file, no permalink</td>
+</tr>
+<tr>
+<td><strong>Following someone</strong></td>
+<td></td>
+<td>You finger them by hand, or a client gathers several</td>
+</tr>
+<tr>
+<td><strong>Replies and threads</strong></td>
+<td>Yes</td>
+<td>Not natively</td>
+</tr>
+<tr>
+<td><strong>Likes and notifications</strong></td>
+<td>Yes</td>
+<td>No</td>
+</tr>
+<tr>
+<td><strong>Structured profile</strong></td>
+<td>Yes</td>
+<td>No</td>
+</tr>
+<tr>
+<td><strong>Navigating between profiles</strong></td>
+<td>Links and mentions</td>
+<td>No</td>
+</tr>
+<tr>
+<td><strong>Discovering people</strong></td>
+<td>Algorithm and trends</td>
+<td>Word of mouth and community lists</td>
+</tr>
+</tbody>
+</table>
+<p>It looks a bit decaf next to today's social networks. Modern services smooth out some rough edges, as you will see below. But this is not a feature race, it is just your file with your status.</p>
+<h2 id="blog-single-content__title--its-decline-and-resurrection">Its decline and resurrection</h2>
+<p>Finger did not fall into oblivion because of fashion, it fell because of security.</p>
+<p>On November 2, 1988 came the <strong><a href="https://en.wikipedia.org/wiki/Morris_worm">Morris worm</a></strong>, one of the first worms to spread across the internet. One of its vectors was a flaw in the <code>fingerd</code> daemon. The worm sent a request that overflowed the buffer and managed to run code on the remote machine. It was, probably, the first malicious buffer overflow in history. It infected around 6,000 computers, roughly 10% of the entire internet at the time!</p>
+<p>On top of that there was a deeper design problem. Finger reveals information about people: names, emails, schedules and when they last logged in. RFC 1288 itself carries a warning:</p>
+<blockquote>
+<p>Warning!! Finger discloses information about users; moreover, such information may be considered sensitive.</p>
+</blockquote>
+<p>By the late 90s, the vast majority of administrators had disabled the service. The protocol became a relic after almost 20 years of use, which is not bad at all.</p>
+<p>And here comes the unexpected twist. Finger is so forgotten, and at the same time so present, that in 2020 it was <a href="https://www.bleepingcomputer.com/news/security/windows-10-finger-command-can-be-abused-to-download-or-steal-files/">discovered</a> that certain attackers were using the <code>finger.exe</code> that ships by default in Windows to download malware without raising suspicion. It is a technique called <a href="https://lolbas-project.github.io/lolbas/Binaries/Finger/">living-off-the-land</a>: the binary is already there, it is trusted, and almost nobody watches it. The <a href="https://isc.sans.edu/diary/Guildma+is+now+using+Finger+and+Signed+Binary+Proxy+Execution+to+evade+defenses/27482">Astaroth</a> malware used it to fetch its payload. That a 1970s protocol still ships on every Windows says a lot about its design.</p>
+<p>Simple, functional ideas are very hard to kill. Just look at how many Unix commands there are, many of them written before you were born. And with the revival of the small web, a current of minimalist, decentralized protocols (Gemini, IRC, RSS, NNTP, etc.), Finger has poked its head out again:</p>
+<ul>
+<li><strong><a href="https://happynetbox.com/">Happy Net Box</a></strong>, by Ben Brown. A reincarnation of the <code>.plan</code> with a web interface to edit your text and a daemon that limits the security risk. Try <code>finger benbrown@happynetbox.com</code>, or <code>finger random@happynetbox.com</code> (my earlier example) to read a random user.</li>
+<li><strong><a href="https://github.com/jonroig/finger.farm">Finger.Farm</a></strong>, by Jon Roig. Another open source Finger implementation written in Node, with updates via web, REST API or cURL, designed for you to self-host.</li>
+<li><strong><a href="https://plan.cat/">plan.cat</a></strong>, another public server that also bridges to ActivityPub, so your <code>.plan</code> can be read from Mastodon.</li>
+</ul>
+<p>It is a living protocol, small and hackable, kept alive by people who find it fun.</p>
+<p>There are even directories of active accounts:</p>
+<pre><code>finger ring@thebackupbox.net</code></pre>
+<p>And I am sure there are more communities I do not know about.</p>
+<h2 id="blog-single-content__title--taking-your-first-steps">Taking your first steps</h2>
+<h3 id="blog-single-content__title--easy-a-host-like-happy-net-box">Easy: a host like Happy Net Box</h3>
+<p>You set up nothing. You sign up for free at <a href="https://happynetbox.com/">happynetbox.com</a>, write your text in its web box and save. From that moment on, anyone in the world can read you:</p>
+<pre><code>finger your-user@happynetbox.com</code></pre>
+<p>The service provides the server and the security. It is the perfect way to have your public <code>.plan</code> in a minute, without touching a console. Zero cost. If you come from Mastodon or X, this is your equivalent of "creating an account".</p>
+<h3 id="blog-single-content__title--intermediate-the-finger-daemon-on-your-linux">Intermediate: the Finger daemon on your Linux</h3>
+<p>If you already have a server (a VPS, a Raspberry Pi), you can run the classic daemon, the good old <code>fingerd</code>. It reads the <code>~/.plan</code> file of whichever user is being queried and serves it. On Debian it is best to use <code>ffingerd</code>, a security-minded reimplementation and the recommended one for a public service. It is launched from a super-server like <code>inetd</code>, which listens on port 79 and starts the daemon on each connection.</p>
+<pre><code>sudo apt install openbsd-inetd ffingerd</code></pre>
+<p>Add this line to <code>/etc/inetd.conf</code> and reload the service:</p>
+<pre><code>finger stream tcp nowait nobody /usr/sbin/tcpd /usr/sbin/ffingerd</code></pre>
+<pre><code>sudo systemctl reload openbsd-inetd</code></pre>
+<p>Now create your plan, world-readable, and test it:</p>
+<pre><code>echo "Hi, I'm Bob. Today I'm working on my Finger server." &gt; ~/.plan
+chmod a+r ~/.plan
+finger your-user@your-server</code></pre>
+<p>All that is left is to open port 79 in the firewall and point a domain at it. Since Finger reveals information, follow the advice in Debian's security manual: use <code>ffingerd</code>, restrict which hosts can connect, and limit the number of processes.</p>
+<h3 id="blog-single-content__title--hard-your-own-fingerd-in-python">Hard: your own fingerd in Python</h3>
+<p>If you want full control and to understand the protocol from the inside, write your own server. Since Finger is plain text over a socket, it fits in a few lines. This is the script I use to serve my <code>.plan</code>.</p>
+<p>Create a file called <code>fingerd.py</code> with this content:</p>
+<pre><code>import asyncio
+
+PLAN_FILE = "plan.txt"
+
+async def handle(reader, writer):
+    # Read the client's query and discard it: we serve a single plan.
+    await reader.readline()
+    try:
+        with open(PLAN_FILE, encoding="utf-8") as file:
+            body = file.read()
+    except FileNotFoundError:
+        body = "No plan yet.\n"
+    writer.write(body.encode("utf-8"))
+    await writer.drain()
+    writer.close()
+
+async def main():
+    server = await asyncio.start_server(handle, "0.0.0.0", 79)
+    async with server:
+        await server.serve_forever()
+
+asyncio.run(main())</code></pre>
+<p>Create a <code>plan.txt</code> with whatever you want to publish and start it.</p>
+<p>Port 79 is privileged, so it needs permissions:</p>
+<pre><code>sudo python3 fingerd.py</code></pre>
+<p>Test it from another terminal:</p>
+<pre><code>finger anyone@localhost</code></pre>
+<p>The server ignores whatever name you send and returns your plan.</p>
+<p>To survive reboots, wrap it in a <code>systemd</code> service.</p>
+<p>Any improvement you want to add is up to you.</p>
+<h2 id="blog-single-content__title--final-notes">Final notes</h2>
+<p>Today it is still alive and patched. Modern implementations do not expose the home folder, do not use <code>gets()</code> and isolate the process. The ghost of the Morris worm was a flaw in a specific implementation in 1988, not in the architecture. It is simple, practical and secure. And, on top of that, it makes you the owner of your presence on the network.</p>
+<p>That said, today there are more complete solutions, more accessible or riding on other protocols:</p>
+<table>
+<thead>
+<tr>
+<th>Alternative</th>
+<th>You write</th>
+<th>Travels over</th>
+<th>You read with</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Finger</strong></td>
+<td>A <code>.plan</code> file</td>
+<td>Finger (port 79)</td>
+<td><code>finger user@host</code></td>
+</tr>
+<tr>
+<td><strong>Org Social</strong></td>
+<td>Entries in <code>social.org</code></td>
+<td>HTTP</td>
+<td>Org Social client, or <code>curl</code> + <code>grep</code></td>
+</tr>
+<tr>
+<td><strong>RSS / Atom</strong></td>
+<td>An XML feed, generated from your Markdown</td>
+<td>HTTP</td>
+<td>Any feed reader</td>
+</tr>
+<tr>
+<td><strong>Gemlog</strong></td>
+<td><code>.gmi</code> pages in gemtext</td>
+<td>Gemini (port 1965)</td>
+<td>Gemini client (Lagrange, Elpher)</td>
+</tr>
+<tr>
+<td><strong>Phlog</strong></td>
+<td>Text files and a <code>gophermap</code></td>
+<td>Gopher (port 70)</td>
+<td>Gopher client, or <code>curl gopher://</code></td>
+</tr>
+<tr>
+<td><strong><code>/now</code> page</strong></td>
+<td>A text or HTML page</td>
+<td>HTTP</td>
+<td>A browser, or <code>curl</code></td>
+</tr>
+</tbody>
+</table>
+<p>If you come from a mainstream social network, <strong>RSS</strong> is the gentlest gateway: you write on your blog and anyone follows you from their reader. The <strong>gemlog</strong> of <a href="https://en.andros.dev/blog/c105e9db/introduction-to-the-gemini-protocol/">Gemini</a> and the <strong>phlog</strong> of Gopher are cousins of the small web, with their own clients and the same taste for calm. The <strong><code>/now</code> page</strong> (the movement Derek Sivers started in 2015 and cataloged at <a href="https://nownownow.com/">nownownow.com</a>) is, in practice, the <code>.plan</code> moved to the web: a single page that answers "what are you up to now?". And <a href="https://org-social.org/">Org Social</a> is almost Finger from birth: a microblog in a text file you host yourself.</p>
+<p>That extreme minimalism, with no rules or defined formats, is exactly what makes it hard to kill and truly enjoyable.</p>
+<p>It will not go mainstream again, and who cares? It will live on in the margins of an ever more complex internet, kept alive by the curious, waiting for someone to type <code>finger</code> and rediscover its easter egg. It is probably the smallest and the most yours thing you will have on the internet.</p>
+<p>By the way, run <code>finger me@andros.dev</code> and keep an eye on my <code>.plan</code>. ;)</p>
+<h2 id="blog-single-content__title--sources">Sources</h2>
+<p>Every fact in this article comes from these references:</p>
+<ul>
+<li><a href="https://www.rfc-editor.org/rfc/rfc742.html">RFC 742: NAME/FINGER Protocol</a> (Ken Harrenstien, 1977). The first specification.</li>
+<li><a href="https://www.rfc-editor.org/rfc/rfc1288.html">RFC 1288: The Finger User Information Protocol</a> (D. Zimmerman, 1991). The definitive specification, includes the security warnings.</li>
+<li><a href="https://en.wikipedia.org/wiki/Finger_(protocol)">Finger (protocol)</a> on Wikipedia. History, RFCs and decline.</li>
+<li><a href="https://exhibits.stanford.edu/ai/catalog/hg950nz1220">Les Earnest, gold medal for FINGER</a>, a Stanford University exhibit, and his first-person account of the origin of the name.</li>
+<li><a href="https://garbagecollected.org/2017/10/24/the-carmack-plan/">The Carmack Plan</a> and the <a href="https://github.com/ESWAT/john-carmack-plan-archive">archive of John Carmack's .plan files</a> on GitHub.</li>
+<li><a href="https://hackaday.com/2023/02/08/the-arpanet-of-things-and-cmus-history-of-networked-soda-machines/">The ARPANET Of Things And CMU's History Of Networked Soda Machines</a> (Hackaday) and the <a href="https://www.cs.cmu.edu/~coke/coke.history.txt">official history of CMU's Coca-Cola machine</a>.</li>
+<li><a href="https://www.rapid7.com/blog/post/2019/01/02/the-ghost-of-exploits-past-a-deep-dive-into-the-morris-worm/">The Ghost of Exploits Past: A Deep Dive into the Morris Worm</a> (Rapid7). Details of the <code>fingerd</code> overflow, and <a href="https://en.wikipedia.org/wiki/Morris_worm">Morris worm</a> on Wikipedia for the date and scope.</li>
+<li><a href="https://www.bleepingcomputer.com/news/security/windows-10-finger-command-can-be-abused-to-download-or-steal-files/">Windows 10 'Finger' command can be abused to download or steal files</a> (BleepingComputer) and <a href="https://isc.sans.edu/diary/Guildma+is+now+using+Finger+and+Signed+Binary+Proxy+Execution+to+evade+defenses/27482">Guildma is now using Finger…</a> (SANS ISC). The use of <code>finger.exe</code> as an attack tool, with its entry in <a href="https://lolbas-project.github.io/lolbas/Binaries/Finger/">LOLBAS</a>.</li>
+<li><a href="https://happynetbox.com/">Happy Net Box</a>, by Ben Brown.</li>
+<li><a href="https://github.com/jonroig/finger.farm">Finger.Farm</a>, by Jon Roig. An open source Finger implementation in Node.</li>
+<li><a href="https://plan.cat/">plan.cat</a>, a public Finger server bridged to ActivityPub, and the <a href="https://thebackupbox.net/">thebackupbox finger ring</a>, a directory of active accounts (<code>finger ring@thebackupbox.net</code>).</li>
+<li><a href="https://sive.rs/now2">How and why to make a /now page</a>, by Derek Sivers, and the <a href="https://nownownow.com/">nownownow.com</a> directory.</li>
+<li><a href="https://hackaday.com/2025/01/30/forgotten-internet-giving-or-getting-the-finger/">Forgotten Internet: Giving (or Getting) The Finger</a> (Hackaday). An overview of modern Finger.</li>
+<li><a href="https://www.debian.org/doc/manuals/securing-debian-manual/ch05s09.en.html">5.9. Securing finger</a>, Debian's security manual, on the <code>ffingerd</code>, <code>cfingerd</code> and <code>efingerd</code> daemons.</li>
+</ul>
+<ul>
+<li>
+<a href="#blog-single-content__title--origin">Origin</a>
+</li>
+<li>
+<a href="#blog-single-content__title--the-first-microblog-the-plan-and-project-files">The first microblog: the .plan and .project files</a>
+</li>
+<li>
+<a href="#blog-single-content__title--the-first-iot-device-spoke-finger">The first IoT device spoke Finger</a>
+</li>
+<li>
+<a href="#blog-single-content__title--the-protocol">The protocol</a>
+</li>
+<li>
+<a href="#blog-single-content__title--what-goes-inside-a-plan">What goes inside a .plan</a>
+</li>
+<li>
+<a href="#blog-single-content__title--its-decline-and-resurrection">Its decline and resurrection</a>
+</li>
+<li>
+<a href="#blog-single-content__title--taking-your-first-steps">Taking your first steps</a>
+</li>
+<li>
+<a href="#blog-single-content__title--easy-a-host-like-happy-net-box">Easy: a host like Happy Net Box</a>
+</li>
+<li>
+<a href="#blog-single-content__title--intermediate-the-finger-daemon-on-your-linux">Intermediate: the Finger daemon on your Linux</a>
+</li>
+<li>
+<a href="#blog-single-content__title--hard-your-own-fingerd-in-python">Hard: your own fingerd in Python</a>
+</li>
+<li>
+<a href="#blog-single-content__title--final-notes">Final notes</a>
+</li>
+<li>
+<a href="#blog-single-content__title--sources">Sources</a>
+</li>
+</ul>
+<p>This work is under a <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/">Attribution-NonCommercial-NoDerivatives 4.0 International license.</a></p>
+<h2>Help me keep writing</h2>
+<p>Every coffee gives me a push toward the next article.</p>
+<a href="https://ko-fi.com/W7W02LB83" title="Support me on ko-fi.com">
+<img alt="Ko-fi donations" src="https://storage.ko-fi.com/cdn/cup-border.png"/>Sure, it's on me!
+</a>
+<p>
+		2 mentions from other sites
+	    </p>
+<ul>
+<li>
+<a href="https://news.ycombinator.com/item?id=49342472" title="https://news.ycombinator.com/item?id=49342472">news.ycombinator.com</a>
+<time datetime="2026-08-18T13:01:02.408068+02:00">August 18, 2026</time>
+</li>
+<li>
+<a href="https://lemmy.bestiver.se/post/1292892" title="https://lemmy.bestiver.se/post/1292892">lemmy.bestiver.se</a>
+<time datetime="2026-08-18T13:00:04.948217+02:00">August 18, 2026</time>
+</li>
+</ul>
+<p><a href="https://news.ycombinator.com/item?id=49342472">Comments on Hacker News</a></p>]]></content:encoded>
+      <guid isPermaLink="true">https://en.andros.dev/blog/54572bc7/finger-the-1971-social-network-that-never-died/</guid>
+      <category>Hacker News</category>
+      <pubDate>Tue, 18 Aug 2026 07:21:35 +0000</pubDate>
+      <media:content url="https://storage.ko-fi.com/cdn/cup-border.png" type="image/png" medium="image"/>
+      <dc:creator>andros</dc:creator>
+    </item>
+    <item>
+      <title>Exercise intensity modulates interorgan communication and is associated with</title>
+      <link>https://www.cell.com/cell-reports-medicine/fulltext/S2666-3791%2826%2900405-2?_returnURL=https%3A%2F%2Flinkinghub.elsevier.com%2Fretrieve%2Fpii%2FS2666379126004052%3Fshowall%3Dtrue</link>
+      <description>Exercise intensity modulates interorgan communication and is associated with</description>
+      <content:encoded><![CDATA[<p><a href="https://news.ycombinator.com/item?id=49341411">Comments on Hacker News</a></p>]]></content:encoded>
+      <guid isPermaLink="true">https://www.cell.com/cell-reports-medicine/fulltext/S2666-3791%2826%2900405-2?_returnURL=https%3A%2F%2Flinkinghub.elsevier.com%2Fretrieve%2Fpii%2FS2666379126004052%3Fshowall%3Dtrue</guid>
+      <category>Hacker News</category>
+      <pubDate>Tue, 18 Aug 2026 04:51:33 +0000</pubDate>
+      <dc:creator>newsomix9xl</dc:creator>
+    </item>
+    <item>
+      <title>The Benchmarkpocalypse</title>
+      <link>https://danluu.com/benchpocalypse/</link>
+      <description>There's been a lot of talk about the vulnpocalypse, to which I don't have much to add because I'm not a security person, but I haven't seen much discussion on the closely related (and to be fair, less serious, issue), the benchmarkpocalypse.</description>
+      <content:encoded><![CDATA[<p>There's been a lot of talk about the vulnpocalypse, to which I don't have much to add because I'm not a security person, but I haven't seen much discussion on the closely related (and to be fair, less serious, issue), the benchmarkpocalypse.</p>
+<p>While it's become easier than ever to make serious performance gains, it's also become easier than ever to reward hack a benchmark and make fake performance gains. The former is probably happening quietly across many different companies, but the latter is something I see at least once a week nowadays. Someone will claim they optimized X and got some huge performance improvement over existing software, but, when you look at it, what they did was make some optimization that improves benchmark performance without actually improving real-world performance. This is often some kind of "we rewrote X in Rust"<sup id="fnref:P"><a href="#fn:P">1</a></sup> project or a new startup that's looking to either fundraise or sell something, but it happens on other kinds of projects as well.</p>
+<p>Of course, people have always trumpeted unrepresentative microbenchmarks to show that their pet project is great. It's always been easy to fake up an unrepresentative microbenchmark and that's never going to change. What's changed is that it used to take a lot of work to game a large benchmark suite, but an LLM and loop can just do it. There are quite a few famous examples of gaming large benchmark suites from back when this was hard. For example, way back when people cared about SPECint / SPECfp as proxies for workstation performance, CPU vendors would try to find compiler "optimizations" that would speed up the calculation in the benchmark, such as Sun finding a way to improve <code>179.art</code> <a href="https://danluu.com/car-safety/">by 12x in SPECfp2000</a>. Skilled engineers spent a lot of time trying to find benchmark hacks like that. LLMs make this trivial, making formerly trustworthy benchmarks meaningless unless you audit the result or trust someone who did.</p>
+<p>Rather than point to someone's bad claim, I'll point to <a href="https://github.com/danluu/fre/">FRE, this regex engine I had an agent build</a>, which I could claim is the world's fastest regex engine because it beats the Rust regex crate at the fairly comprehensive <a href="https://github.com/BurntSushi/rebar">rebar regex benchmark suite</a>. But this was created by putting an agent in a loop for a month with instructions to not overfit to the benchmark but no real supervision. For the most part, getting an LLM to give you a good benchmark score is fairly easy, and this case was no different; it took a couple weeks to roughly match Rust regex crate performance and then another couple weeks to get to 1.4x faster<sup id="fnref:O"><a href="#fn:O">2</a></sup> on rebar. But agents are wont to reward hack and overfit unless you put serious guardrails in place to avoid that, which I didn't do in this case as an experiment.</p>
+<p>To check for overfitting, I somewhat arbitrarily<sup id="fnref:A"><a href="#fn:A">3</a></sup> used the ripgrep benchmark corpus as a holdout benchmark it was 10x slower on cases where the benchmark didn't take forever due to an algorithmic blow-up, and there were cases where it took so long that it wasn't reasonable to even wait for the benchmark to complete. So much for being 40% faster!</p>
+<p>Andrew Gallant (aka BurntSushi)'s rebar benchmark suite is fairly comprehensive as benchmaark suites go, but even with a fairly comprehensive benchmark suite, agents have no problem getting a high score while overfitting in a way that doesn't necessarily give good general performance.</p>
+<p>The next step was <a href="https://danluu.com/pl-tokens/">using a trick we talked about before</a> of not just telling the LLM not to cheat, but that there's a holdout benchmark set that it's judged against. After that, the LLM moderately generalized performance to the point where it's about 2.4x slower overall on the holdout. That sounds pretty good considering that we're comparing it to the fastest general purpose regex engine in existence. But, recall that these benchmarks were made by a coding agent. On looking at what the benchmarks measure, some of them really don't make sense to include, at least at equal weight. If we only look at the benchmarks that seem like they matter, <a href="https://github.com/danluu/fre/">FRE</a> is 4x slower on the holdout<sup id="fnref:and-actually-runs-all-tests-to-completion-so-the-speedup-was-much-more-than-just-10-4"><a href="#fn:and-actually-runs-all-tests-to-completion-so-the-speedup-was-much-more-than-just-10-4">0</a></sup>, which is a lot better than before applying the good ole' "tell them you have a holdout" trick, but still pretty far from being 40% faster.</p>
+<p>There are a few things I thought were interesting about this:</p>
+<ol>
+<li>It's trivial to "win" a non-trivial benchmark in a meaningless way even when you instruct agents to not reward hack or overfit to win the benchmark</li>
+<li>Once again, telling the LLM there's a holdout set worked better than just telling the LLM to do generalized work or not overfit or cheat</li>
+<li>Although the overall performance of <a href="https://github.com/danluu/fre/">FRE</a> isn't that good, it is actually performs better for some use cases; in general, the cost of writing specialized code that used to require people serious engineering experience for some specific use case has gone way down</li>
+</ol>
+<p>On (1), no wonder I'm seeing so many bogus claims. In the past, to build something like <a href="https://github.com/danluu/fre/">FRE</a> that fakes performance well enough to be able to bogusly claim a 40% speedup, you would need a fair amount of expertise. At a minimum, you'd need to have a pretty good understanding of string matching algorithms, regex engines, as well as decent general code optimization and SIMD optimization skills. <a href="https://github.com/danluu/fre/">FRE</a> also has a mode where it compiles the regex to machine code, so you'd also need some compiler expertise. Now you can get that kind of benchmark cheating (whether or not you want the cheating) with a few minutes of typing.</p>
+<p>On (2), I'm curious if this generalizes but haven't tried enough examples to be able to tell.</p>
+<p>On (3), there's no reason to use a vibe coded regex library that was almost no human effort that's slower than a robust, existing, well-tested, library, so I find the <a href="https://github.com/danluu/fre/">FRE</a> artifact uninteresting. The thing I find interesting here is how much LLMs can substitute for what used to be rare, specialized, and expensive, knowledge.</p>
+<p>In the past, even if you had the knowledge, you probably wouldn't write a custom regex engine that's optimized for your particular workload. There are some large-scale use cases where people would do that level of customization, e.g., when I worked on <a href="https://danluu.com/bitfunnel-sigir.pdf">the Bing index</a>, the code contained multiple different compilers because someone who worked on it wanted to eke out maximal performance; since you care about both compile time and compiled performance in a search engine and the trade-offs are different in different places, you get better performance by writing a custom compiler for each place where a normal project might just use an interpreter or directly walk some data structure with "normal code". The person who wrote those compilers, working on regex-like code might also write multiple custom regex engines, but very few people have both the expertise and the inclination to do that, let alone the freedom to spend that kind of time on such specialized code for work. If you price out that Bing engineer (then a Partner-level engineer, promoted to Distinguished Engineer for their work on the search index) compared to the price of running an LLM in a loop, the cost of writing this kind of specialized code has gone down by many orders of magnitude.</p>
+<p>Even though the overall <a href="https://github.com/danluu/fre/">FRE</a> regex engine has worse performance than the Rust regex crate, the gains you can get for specializing to your workload or use case mean that, in some cases, it could be reasonable to insert your own specialized regex engine somewhere, and the same goes for various other kinds of low-level software. You don't have to be an AI maximalist to think that it's plausible that, within some number of years, we could see this kind of thing happening for larger things, like databases.</p>
+<p><i>Thanks to Yossi Kreinin, Jamie Brandon, Peter Geoghegan, Luke Burton, John Spurling, Dennis Snell, and Max Bittker for comments/corrections/discussion.</i></p>
+<p>P.S. <a href="https://danluu.com/pl-tokens/">Per the discussion here</a>, with LLMs, the time it takes to poke at something for a bit and satisfy my curiosity has gone way down, while the time it takes to write something up and make it rigorous enough to publish on my blog hasn't really changed (for a variety of reasons, I think it's actually gone up). The result of this has been that I'm doing a lot more analyses than ever and sharing results with a few friends but not publishing them. As an experiment, I'm trying to write up some things very quickly, with a much lower standard for how cleaned up and rigorous things are than I'd normally have for something that appears on the blog; more like what I'd tell a friend in a casual conversation than what I'd normally put in a blog post. The goal for this post was to do the write-up in about half an hour, so it's something I could do over lunch and not really take time on. If you have opinions on this, let me know what you think!</p>
+<p>Of course, a caveat here is that all of the numbers have a higher risk of being wrong than usual. I looked at one benchmark for maybe a minute or two and found an issue, then I looked at another benchmark for a minute and found another issue. Both of those are fixed, but this implies there are other issues I haven't taken the time to chase down. But, with respect to bad benchmark numbers, that's highly realistic! Almost any time I look into benchmark numbers, <a href="https://danluu.com/pl-tokens/">such as here</a>, or <a href="https://danluu.com/exercise-7/">here</a>, the numbers are wrong. Another aspect of the benchmarkpocalypse is that, at least for now, LLMs are good at doing bad benchmarking, so even if you have something that's a real performance improvement, you generally can't tell from some LLM-generated benchmark setup unless a significant amount of care has been taken to make sure that the benchmark setup is reasonable.</p>
+<h3 id="appendix-more-fre-benchmark-details">Appendix: more FRE benchmark details</h3>
+<p>One thing I found after I wrote the above but before publishing the post, was that the LLM's claim that <a href="https://github.com/danluu/fre/">FRE</a> is 40% faster than the Rust regex crate on rebar was also wrong. Or, if not wrong, at least misleading. It wasn't actually running benchmarks in the same way rebar benchmarks were run. I checked this after spending a minute checking benchmark results found two issues. It turns out that, despite instructions to run rebar benchmarks as they're run in <a href="https://github.com/BurntSushi/rebar">https://github.com/BurntSushi/rebar</a>, the LLM changed the interface to allow <a href="https://github.com/danluu/fre/">FRE</a> to make some optimizations that improve performance. After fixing that, instead of <a href="https://github.com/danluu/fre/">FRE</a> being 1.4x faster than Rust on rebar, it was 1.5x slower (and "only" twice as fast as re2), so the original result was doubly fake. Not only was <a href="https://github.com/danluu/fre/">FRE</a> highly overfit to the rebar benchmarks, it the results also involved cheating.</p>
+<p>But on the bright side, this means the difference in performance between <a href="https://github.com/danluu/fre/">FRE</a> on rebar (1.5x slower than Rust) and on the holdout benchmarks (2.4x slower) isn't as big as it looked before, so the "tell the LLM you have a holdout" trick worked even better than it seemed to before.</p>
+<p>After that, I let an LLM hill climb for a few hours and it claimed that <a href="https://github.com/danluu/fre/">FRE</a> was 1.28x faster, which sounds like a great improvement for only a few hours of LLM time, but then I decided to spend another minute looking for cheating and found multiple issues, including one case where a search for the count of matches of <code>(?s)^(.*)$</code> returned the count without even looking at the haystack (data). Another case of cheating was doing a multi-line grep where the benchmark is supposed to be done line-by-line. Finding these isn't surprising because this is the kind of thing that happens when you leave an agent in a loop for a month without defining strict guardrails. Whether this makes my point here stronger or undermines it isn't clear, but after fixing another set of these issues, <a href="https://github.com/danluu/fre/">FRE</a> was back to being 1.4x slower. After leaving an agent to run overnight, <a href="https://github.com/danluu/fre/">FRE</a> was allegedly back to being 1.5x faster.</p>
+<p>Since my original goal here was to see what happens when you run a current (public) SOTA agent in a loop (GPT-5.6 Sol) without much supervision on a non-trivial code optimization problem without any real supervision, rather than spend more time fixing things up to make the benchmarks fairer, I'll just stop here and put a few plots of the results.</p>
+<p>Overall, we can see that against Rust and RE2, <a href="https://github.com/danluu/fre/">FRE</a> tends to outperform on the rebar benchmarks (and as noted above, much of this is due to overfitting), but not across the board (the graphs below don't necessarily match the numbers mentioned in the post because an agent is constantly making changes, so any snapshot is a point-in-time estimate that becomes obsolete immediately):</p>
+<p>If you're curious about performance on specific benchmarks or specific classes of rebar benchmarks, we have the following table (ratios above one mean <a href="https://github.com/danluu/fre/">FRE</a> is faster; below mean <a href="https://github.com/danluu/fre/">FRE</a> is slower):</p>
+<p>There's also an AOT compiler mode that takes a long time to compile a regex to native code before running it. There isn't AOT support for everything, but here are the results from the cases where it's supported. As we can see, the AOT compiler is very slow (it loses very badly in the compilation time benchmarks) and, despite spending quite a bit of time compiling, results are often slower than with the standard <a href="https://github.com/danluu/fre/">FRE</a> regex engine (though it's also faster in many cases).</p>
+<p>And then there are the holdout benchmarks. As noted above, for the non-AOT <a href="https://github.com/danluu/fre/">FRE</a> code, performance on the holdout isn't as good as on rebar. And as also noted above, considering that this is for a workload like ripgrep, the "hot search" set of benchmarks is probably more important than the others, so the <a href="https://github.com/danluu/fre/">FRE</a> result is worse than the overall score would make it look.</p>
+<p>One thing to note here is that, for the holdout benchmark cases where we don't include compile time as part of the benchmark and we repeatedly run searches, AOT <a href="https://github.com/danluu/fre/">FRE</a> outperforms on the benchmark. For a lot of use cases, you don't want a regex that takes multiple seconds to compile, but there are plenty of cases where this is fine, e.g., for something like ripgrep or Silver Searcher, it could start running with a regex that can start matching right away and then compile in another thread and cut over to the faster matcher when it's done compiling. Given how much of my CPU is spent on long ripgrep searches, it seems like a strategy like that could improve performance for work I personally do. Before LLMs, it probably wouldn't have made sense to spend the effort to write an optimizing regex compiler, but this is now do-able with a few tokens.</p>
+<p>Another thing to note here is that this comparison is arguably unfair because this was run on an ARM Graviton machine with SVE/SVE2 and <a href="https://github.com/danluu/fre/">FRE</a> has SVE/SVE2 optimizations. Pre-LLM, it might not have been worth it to have regexes optimized for every combination of SIMD instructions out there, but with LLMs, it's fairly easy to generate ok-ish SIMD optimizations. I know human experts who find that they can generally outperform LLMs here, e.g., Jay Stelly said that the last time he tried getting an LLM to produce SIMD code, it took 20-some iterations to get the code as good as he wanted. But, on the flip side, LLMs have the capability to try more optimizations than a human could possibly try in any given amount of time, so they can still perform pretty well overall even if any specific optimization isn't as good as a human expert would produce.</p>
+<p>There's also the problem discussed in this post of overfitting. Depending on the context, that problem is somewhere from very easy to solve to a bit difficult to solve. I deliberately didn't try very hard to solve the problem here to see what would happen, but I did manage to solve the problem without an outsized amount of effort when <a href="https://danluu.com/game/tile/">working on this Azul AI</a> (just for example), but a lot of these big benchmark claims come when people spend little to no effort trying to avoid overfitting, or even negative effort. In the pre-LLM era, people would often pick highly unrepresentative microbenchmarks to show off how great their pet project is which, at least at a non-conscious level, involves negative effort to avoid overfitting to a benchmark. Due to how humans are, I don't think people are going to stop making misleading claims and it's become easier than ever to make misleading claims, so of course we see more of them.</p>
+<p>Note that while this post has discussed non-AI software, everything said here goes double for AI software. For example, I've seen lots of people drop comments saying that Kimi K3 is Fable (5) level. But every single person I know who's used it has found it to be substantially worse than GPT-5.6 Sol and Fable. I'm not saying it's not an impressive engineering achievement, but the performance on a wide variety of real-world tasks isn't up to the level it is in benchmarks. This even applies to various eval-y problems, such as when a friend tried different coding agents on the ICFP 2026 contest problems. It also applies to security issues, which are something that I have no doubt AI labs are putting into their evals, e.g., a colleague of mine tried using Kimi K3 to scan for vulns in our software and found that it found approximately a quarter of the vulns GPT-5.6 Sol found, found no vulns that GPT-5.6 Sol didn't find, and didn't have any advantages in any dimension other than on cost. The people I know who are using cheaper models to find real security issues are using other models, such as GLM-5.2, which perform worse on benchmarks but better in practice.</p>
+<p>Back on the topic of FRE, one more note is that the holdout benchmark is an arbitrary subset of the ripgrep benchmark setup that was chosen by an agent for unknown reasons. I asked an agent to pull the entire benchmark suite, but that didn't finish in time for this post, so I don't know what the result will be once it's done.</p>
+<hr>
+<ol>
+<li><p>funnily enough, I have some faith in some of the projects that people are the most skeptical of, e.g., every time I see <a href="https://pgrust.com/">pgrust</a> somewhere, there are a lot of skeptical comments. But, without having looked into the details of what he's optimizing, I would trust that they're not doing something shady with their benchmarks because Michael Malis started the project (and is still involved). I used to look at most benchmark claims that cross my radar in some detail, but there are so many of these now that I don't really have time to do that and generally assume that claims are false in spirit (even if technically correct) unless there's some reason to believe otherwise. Of course this will sometimes be wrong (e.g., if I didn't know Michael Malis, I would've guessed that pgrust is just another low-quality "have an LLM re-write this thing" project), but LLMs are such an incredible machine for DoSing human attention that I don't know what else I would do about it (I've tried having LLMs analyze performance claims and, while the result is correlated with what I'd think if I looked at something myself, the result is often quite wrong).</p>
+<p>Someone can spend seconds (or, if using the right framework, actually none of their time) generating something that takes people minutes to hours to understand. This is a topic for another post, but from talking to people about their experiences with this in the workplace, companies with poor norms for this kind of thing are really struggling with productivity today.</p>
+<a href="#fnref:P"><sup>[return]</sup></a></li>
+<li>This is referring to the geomean of all rebar benchmarks. This is probably not the right metric to use, in that this implicitly says that each benchmark is of the same importance, which probably isn't the case. Unlike something like SPEC CPU, the rebar benchmarks don't position themselves as something where you get a meaningful summary metric that tries to represent overall performance (the repo actually notes that it's "<a href="https://danluu.com/benchpocalypse/A" title="The first few regex benchmarks I looked at had already been incorporated into `rebar`, so they wouldn't work as a holdout. And, as previously discussed, [current SOTA LLMs aren't very good at benchmarking](/ai-coding/), so I wouldn't be able to trust the LLM to come up with a holdout benchmark unless I knew enough about regex performance to judge the quality of the benchmark suite. Since I know approximately zero about string matching algorithms or regex performance, that was also off the table. 
+
+It turns out that BurntSushi also maintains ripgrep and the benchmarks for ripgrep, which are big enough benchmarks that they didn't get bundled into `rebar`, so I tried using those benchmarks as a holdout.
+">a</a> biased barometer for gauging the relative speed of some regex engines on a curated set of tasks"). But, to get a number that is a useful summary metric, you'd have to know a lot about how people use regexes in practice, and I know approximately zero about that. For all I know, you should have two different numbers (like SPECfp and SPECint for SPEC CPU) or ten or a hundred because there are all sorts of different ways people apply regexes.
+ <a href="#fnref:O"><sup>[return]</sup></a></li>
+<li><p>The first few regex benchmarks I looked at had already been incorporated into <code>rebar</code>, so they wouldn't work as a holdout. And, as previously discussed, <a href="https://danluu.com/ai-coding/">current SOTA LLMs aren't very good at benchmarking</a>, so I wouldn't be able to trust the LLM to come up with a holdout benchmark unless I knew enough about regex performance to judge the quality of the benchmark suite. Since I know approximately zero about string matching algorithms or regex performance, that was also off the table.</p>
+<p>It turns out that BurntSushi also maintains ripgrep and the benchmarks for ripgrep, which are big enough benchmarks that they didn't get bundled into <code>rebar</code>, so I tried using those benchmarks as a holdout.</p>
+<a href="#fnref:A"><sup>[return]</sup></a></li>
+</ol>
+</hr>
+<p><a href="https://news.ycombinator.com/item?id=49340299">Comments on Hacker News</a></p>]]></content:encoded>
+      <guid isPermaLink="true">https://danluu.com/benchpocalypse/</guid>
+      <category>Hacker News</category>
+      <pubDate>Tue, 18 Aug 2026 02:11:02 +0000</pubDate>
+      <dc:creator>cyndunlop</dc:creator>
+    </item>
     <item>
       <title>Cursor Origin</title>
       <link>https://cursor.com/docs/origin</link>
@@ -68,6 +930,16 @@
       <category>Hacker News</category>
       <pubDate>Mon, 17 Aug 2026 23:58:19 +0000</pubDate>
       <dc:creator>peterspath</dc:creator>
+    </item>
+    <item>
+      <title>Repair Cafe – Fix Your Broken Items</title>
+      <link>https://www.repaircafe.org/</link>
+      <description>Repair Cafe – Fix Your Broken Items</description>
+      <content:encoded><![CDATA[<p><a href="https://news.ycombinator.com/item?id=49339097">Comments on Hacker News</a></p>]]></content:encoded>
+      <guid isPermaLink="true">https://www.repaircafe.org/</guid>
+      <category>Hacker News</category>
+      <pubDate>Mon, 17 Aug 2026 23:28:28 +0000</pubDate>
+      <dc:creator>rglover</dc:creator>
     </item>
     <item>
       <title>Puppy PPE</title>
@@ -501,6 +1373,18 @@ Secret seed
       <dc:creator>Topfi</dc:creator>
     </item>
     <item>
+      <title>Israel creates fake think tank in likely attempt to dupe AI chatbots</title>
+      <link>https://responsiblestatecraft.org/israel-influence-chatgpt/</link>
+      <description>In just over a week, the Hanover Institute has published at least 100 articles that appear tailor-made to influence chatbots</description>
+      <content:encoded><![CDATA[<img alt=" screenshot of the Hanover Institute's website taken on Aug. 16, 2026" height="600" src="https://responsiblestatecraft.org/media-library/screenshot-of-the-hanover-institute-s-website-taken-on-aug-16-2026.png?id=67630219&amp;width=1800&amp;height=900&amp;quality=74&amp;coordinates=0%2C0%2C0%2C65" width="1200"/>
+<p><a href="https://news.ycombinator.com/item?id=49337392">Comments on Hacker News</a></p>]]></content:encoded>
+      <guid isPermaLink="true">https://responsiblestatecraft.org/israel-influence-chatgpt/</guid>
+      <category>Hacker News</category>
+      <pubDate>Mon, 17 Aug 2026 20:46:10 +0000</pubDate>
+      <media:content url="https://responsiblestatecraft.org/media-library/screenshot-of-the-hanover-institute-s-website-taken-on-aug-16-2026.png?id=67630219&amp;amp;width=1800&amp;amp;height=900&amp;amp;quality=74&amp;amp;coordinates=0%2C0%2C0%2C65" type="image/png" medium="image"/>
+      <dc:creator>DeepLogin</dc:creator>
+    </item>
+    <item>
       <title>GitHub degradation affects Cursor Origin, its new Git platform</title>
       <link>https://status.cursor.com/incidents/l9h9vrd726jv</link>
       <description>Cursor's Status Page - GitHub degradation affecting some Cursor services — Automations, Cloud Agents, Codebase.</description>
@@ -598,6 +1482,36 @@ Secret seed
       <pubDate>Mon, 17 Aug 2026 19:47:15 +0000</pubDate>
       <media:content url="https://substackcdn.com/image/fetch/$s_!OCZa!,w_120,h_120,c_fill,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fpbs.substack.com%2Fprofile_images%2F1731701454392496128%2FejYpw1_3.jpg" type="image/jpeg" medium="image"/>
       <dc:creator>mooreds</dc:creator>
+    </item>
+    <item>
+      <title>Los Puesteros, solitary men who look after ranches and livestock in Patagonia</title>
+      <link>https://www.newyorker.com/culture/photo-booth/the-lonely-men-at-the-end-of-the-world</link>
+      <description>In Patagonia, los puesteros look after other people’s livestock for not very much money, and sometimes go months without seeing anyone else.</description>
+      <content:encoded><![CDATA[<p>The landscape in the southernmost part of Chilean Patagonia, often called the End of the World, has a post-apocalyptic quality. At the final stop, so to speak, before Antarctica, the weather is harshly volatile, and in the wilderness surrounding the few small cities and towns, civilization dwindles almost to nothing. Most of the human presence in that region is transient—tourists who marvel at nature and soon depart. But a small number of people do live on the land, in isolated cabins, often going weeks, and sometimes months, without seeing one another, or anyone else. Known as <em>puesteros</em>, they are solitary men employed by landowners to look after ranches and livestock. Because this onerous and not very lucrative work is unappealing to younger generations, the <em>puesteros</em> are an aging breed, with few lined up to replace them.</p>
+<figure><img alt="A man on a horse in snow." src="https://media.newyorker.com/photos/6a7f7ed55b6cfa7eff424505/master/w_1600%2Cc_limit/Zatarain-Coiron_02.jpg"/></figure>
+<figure><img alt="A seated man near a wooden fence." src="https://media.newyorker.com/photos/6a7f7f5b4e2f6e2fc9382519/master/w_1600%2Cc_limit/Zatarain-Coiron_10.jpg"/></figure>
+<figure><img alt="A tree in a landscape." src="https://media.newyorker.com/photos/6a7f7fa0ab5143dd216fd46e/master/w_1600%2Cc_limit/Zatarain-Coiron_14.jpg"/></figure>
+<p>In 2018, during a nine-month stay in Patagonia, the Dutch photographer Pie Aerts often spotted <em>puesteros</em> from a distance: lone figures atop horses, silhouetted against the horizon. “In that huge landscape, they appeared stoic, but extremely vulnerable, as well,” Aerts told me recently. Those distant encounters were the whole of his contact with the men during that trip; it wasn’t until the compulsory lockdown of 2020, which Aerts endured back home, in Amsterdam, that he began to consider the effects of prolonged isolation. Recalling his visions of <em>puesteros</em>, he searched for more information online and came across a short documentary that chronicled their seclusion. He reached out to the film’s director, Matías Bolla, an Australian filmmaker of Chilean descent who was also spending quarantine in his home country. The exchange led the pair back to Chile in 2022, on the first of several trips that have resulted in a feature-length film, currently in post-production, and the photo book “<a href="https://gostbooks.com/products/coiron">Coirón</a>” (GOST Books), which takes its title from an unusually resilient grass that is native to the region.</p>
+<figure><img alt="A man seated at a dining table." src="https://media.newyorker.com/photos/6a7f7fdb149a61e11da58a9d/master/w_1600%2Cc_limit/Zatarain-Coiron_18.jpg"/></figure>
+<figure><img alt="A rosarie in a window." src="https://media.newyorker.com/photos/6a7f7e942c8df8f8f533933d/master/w_1600%2Cc_limit/Zatarain-Coiron_01.jpg"/></figure>
+<figure><img alt="Image may contain Stain Leaf and Plant" src="https://media.newyorker.com/photos/6a7f7f2178e7ba60b61c1724/master/w_1600%2Cc_limit/Zatarain-Coiron_07.jpg"/></figure>
+<figure><img alt="Image may contain Face Head Person Adult Photography Portrait and Sitting" src="https://media.newyorker.com/photos/6a7f7fb0ee492832c41d0352/master/w_1600%2Cc_limit/Zatarain-Coiron_15.jpg"/></figure>
+<p>The book features portraits of <em>puesteros</em> between shots of domestic settings and local landscapes—the little that belongs to them and the vastness that does not. Though Aerts initially intended to focus on solitude, he came to see that the lives of these men were equally shaped by precarity and dispossession, by “the fear of retirement that they all carry, with few pension funds or social-welfare conditions for them in place,” Aerts said. He quoted a <em>puestero</em> who said, “What a shame to come to love the land that will never be mine.” In one photo from the book, two paltry berries rest on a man’s open palm, fresh soil under his fingernails.</p>
+<figure><img alt="A hand holding strawberries." src="https://media.newyorker.com/photos/6a7f7f13f3f906404b11d8a4/master/w_1600%2Cc_limit/Zatarain-Coiron_06.jpg"/></figure>
+<figure><img alt="A bedroom with many posters." src="https://media.newyorker.com/photos/6a7f7f4d9c8270617da9e6ae/master/w_1600%2Cc_limit/Zatarain-Coiron_09.jpg"/></figure>
+<figure><img alt="A man seated on a couch." src="https://media.newyorker.com/photos/6a7f7f8c5f939adf5c3b09e5/master/w_1600%2Cc_limit/Zatarain-Coiron_13.jpg"/></figure>
+<p>Outside the modest cabins, seasons pass. One stands starkly in the dead white of winter; another appears almost to melt into the pink-hued mountains surrounding it. Inside the homes, sunlight falls on faded posters, worn furniture, and an old radio by a window. Other photos present less legible scenarios. There is a taxidermied puma lying in the middle of an abandoned room, five taxidermied armadillos arranged on a couch, three mattresses collapsed under an overcast sky. These images baffle, then linger, suggesting that life in this remote countryside is stranger than we may understand it to be.</p>
+<figure><img alt="Old mattresses in an arid landscape." src="https://media.newyorker.com/photos/6a7f7ee9fa2d55c6cbd25c7d/master/w_1600%2Cc_limit/Zatarain-Coiron_03.jpg"/></figure>
+<figure><img alt="A many laying down." src="https://media.newyorker.com/photos/6a7f7ef6fa2d55c6cbd25c83/master/w_1600%2Cc_limit/Zatarain-Coiron_04.jpg"/></figure>
+<figure><img alt="Taxidermy armadillos on a couch." src="https://media.newyorker.com/photos/6a7f7f38c817cc66305676f3/master/w_1600%2Cc_limit/Zatarain-Coiron_08.jpg"/></figure>
+<p>Aerts is not fluent in Spanish; during visits with the men, Bolla conducted interviews while Aerts sat in the background, absorbing what he could. This turned out to be a fertile constraint. His relationships with the <em>puesteros</em> were largely built on nonverbal exchanges: playing music, cooking dinner, sharing in stillness. “Sometimes it was required to sit in a room and not speak at all, just listening to the wind,” Aerts said. “It was a big shock for me, coming from a world where everything is so connected, and where we’re always filling the void.” Silence is palpable in the portraits of the men, photographs that show hardship coexisting with resilience, that quiver with pathos but do not collapse.</p>
+<figure><img alt="A sunset or sunrise." src="https://media.newyorker.com/photos/6a7f7f7478e7ba60b61c172a/master/w_1600%2Cc_limit/Zatarain-Coiron_12.jpg"/></figure>
+<p><a href="https://news.ycombinator.com/item?id=49335600">Comments on Hacker News</a></p>]]></content:encoded>
+      <guid isPermaLink="true">https://www.newyorker.com/culture/photo-booth/the-lonely-men-at-the-end-of-the-world</guid>
+      <category>Hacker News</category>
+      <pubDate>Mon, 17 Aug 2026 18:34:09 +0000</pubDate>
+      <media:content url="https://media.newyorker.com/photos/6a7f7ed55b6cfa7eff424505/master/w_1600%2Cc_limit/Zatarain-Coiron_02.jpg" type="image/jpeg" medium="image"/>
+      <dc:creator>bookofjoe</dc:creator>
     </item>
     <item>
       <title>Roboflow Playground: Try and Compare 30 Computer Vision Models</title>
@@ -1004,6 +1918,46 @@ View a PDF of the paper titled GPU Offload in Rust: Portable, Safe, and Fast, by
       <category>Hacker News</category>
       <pubDate>Mon, 17 Aug 2026 17:25:17 +0000</pubDate>
       <dc:creator>anana_</dc:creator>
+    </item>
+    <item>
+      <title>An update on leaving Gmail for Fastmail</title>
+      <link>https://moddedbear.com/an-update-on-leaving-gmail-for-fastmail/</link>
+      <description>It's been a few months since my post on leaving Gmail which sparked a lot of discussion on Hacker News. Here's an update on how things have been going after my move to Fastmail.</description>
+      <content:encoded><![CDATA[<p>It’s been a few months since <a href="https://moddedbear.com/gmail-thinks-im-stupid-so-i-left/">my post on leaving Gmail</a> which sparked <em>a lot</em> of <a href="https://news.ycombinator.com/item?id=48375016">discussion on Hacker News</a>. Email isn’t the most exciting topic in the world, but I figured I should give a little update on how things have been going after the move to Fastmail since so many people saw the original post.</p>
+<p>The quick version is that I think I picked right with Fastmail. You can find cheaper email hosts out there. I’m sure they’re great too, but I’m really happy with Fastmail’s value considering all I’m getting.</p>
+<h2 id="inbox-organization"> 
+    Inbox organization
+ </h2>
+<p>I ended up starting fresh instead of forwarding my Gmail to my new address. This was definitely the right move for me for reasons I’ll get into.</p>
+<p>My biggest concern moving away from Gmail was my inbox organization. Gmail does a pretty alright job of automatically sorting out promotional emails from notification emails from human-sent emails and so on. It’s the only reason my inbox has remained somewhat manageable over the years despite no effort on my part.</p>
+<p>The solution for this that I landed on is <a href="https://www.fastmail.help/hc/en-us/articles/360060591053-Plus-addressing-and-subdomain-addressing">subdomain addressing</a> and so far it’s been keeping me even better organized than before. I’ve updated my important accounts with unique or category-based subdomain addresses, then any mail sent to those addresses automatically gets moved to a matching folder without me even having to create any rules.</p>
+<p>If I had forwarded my Gmail to the new Fastmail address, organization would have been a whack-a-mole rule creation game.</p>
+<p>Going and updating my accounts with a new address was easier than I was expecting. It does help that I’m keeping the Gmail address active as a junk inbox that I still occasionally check though, so I’ve only had to update the accounts that I actually care about. It wasn’t more than ten or so accounts, and I’m getting to the rest gradually as I remember about them.</p>
+<h2 id="multiple-domains"> 
+    Multiple domains
+ </h2>
+<p>Fastmail lets you connect something crazy like 100 domains to your account. That was a nice bonus for me because I was able to add a new address using my blog domain, something I’d been wanting to do for a while anyway.</p>
+<p>This is probably a coincidence, but I’ve been getting way more email replies to my posts since I updated my contact page with my new address on my blog domain. I used to have a Proton address I created specifically for email replies listed there. It’s been a fun new motivator for blogging, and it’s also helped me remember to reach out when I read a cool post.</p>
+<p>Since I’m talking about custom domains already, here’s something you might want to know if you’re thinking of making a move similar to mine. You’ll probably find your sent emails “greylisted” by your recipients’ email providers if your domain has been freshly registered — regardless of your email host. For example, emails sent from my brand new domain were getting delayed by a few hours when sent to Gmail addresses. Messages from my blog’s domain, which has been around for a while, were getting delivered immediately. It took a day or two for Gmail to fully trust the new domain and remove the delay.</p>
+<h2 id="masked-email"> 
+    Masked email
+ </h2>
+<p>This is something I’m using more than I thought I would. You can generate randomized addresses that route to your inbox so you don’t have to share your real address. It’s nice to use for services that you may want to easily block, since you can flip a toggle and start sending all mail received at a masked address to the trash.</p>
+<h2 id="its-been-smooth-sailing"> 
+    It’s been smooth sailing
+ </h2>
+<p>There’s a bunch of other little things I’m liking about Fastmail too. Their apps are solid. Their documentation is good. I haven’t really found anything not to like yet.</p>
+<p>The main thing I want you to take away is that the switch has been much smoother than I expected. If you’re thinking of making a switch too — to anywhere, not just Fastmail — I don’t think you have a whole lot to worry about. Especially if you move to an address on your own domain, then any other moves in the future will be even easier.</p>
+<p>— JP</p>
+<p>
+<a href="https://moddedbear.com/blog/tech/">#tech</a>
+</p>
+<a href="https://moddedbear.com/contact">Reply</a>
+<p><a href="https://news.ycombinator.com/item?id=49334409">Comments on Hacker News</a></p>]]></content:encoded>
+      <guid isPermaLink="true">https://moddedbear.com/an-update-on-leaving-gmail-for-fastmail/</guid>
+      <category>Hacker News</category>
+      <pubDate>Mon, 17 Aug 2026 17:15:20 +0000</pubDate>
+      <dc:creator>neogodless</dc:creator>
     </item>
     <item>
       <title>Sun Clock</title>
@@ -4806,576 +5760,6 @@ My strong recommendation: ignore that default. Run Qwen 3.8 27B on low or even n
       <pubDate>Sun, 16 Aug 2026 23:45:09 +0000</pubDate>
       <media:content url="https://static.simonwillison.net/static/2026/qwen-thinking-bicycle-27b.jpg" type="image/jpeg" medium="image"/>
       <dc:creator>bilsbie</dc:creator>
-    </item>
-    <item>
-      <title>Anthropic's 'Watermark' Text Adulteration in Claude Is a Perversion of Writing</title>
-      <link>https://daringfireball.net/2026/08/anthropics_watermark_text_adulteration_in_claude_is_a_perversion_of_writing</link>
-      <description>It’s unacceptable for a tool to sacrifice an iota of clarity, coherence, meaning, quality, etc. for the purpose of embedding hidden clues within the text to suggest its provenance. The idea that anything other than *my* needs should factor into the generation of text *for me* is patently offensive.</description>
-      <content:encoded><![CDATA[<h2>Anthropic’s ‘Watermark’ Text Adulteration in Claude Is a Perversion of Writing</h2>
-<h6>Sunday, 16 August 2026</h6>
-<p>When I <a href="https://daringfireball.net/linked/2026/08/11/anthropic-claude-watermarks">wrote this week</a> about Anthropic’s announcement that all Claude models, worldwide, would soon begin “watermarking” everything they generate, including text, to comply with <a href="https://digital-strategy.ec.europa.eu/en/policies/code-practice-ai-generated-content">this EU regulation</a>, we were left to speculate <em>how</em> this was going to work, because Anthropic offered not even a vague description of how it would work — despite the fact that the title of the announcement was, absurdly and insultingly, “<a href="https://support.claude.com/en/articles/16266773-how-claude-marks-ai-generated-content">How Claude Marks AI-Generated Content</a>”.</p>
-<p>My initial speculation was that maybe they’d hide invisible non-printing Unicode characters in the text. Just spitballing. Turns out that’s not what they’re going to do. What they’re going to do is apply a form of steganography, where the choice of words (or other token output) at inference time will leave fingerprints that can later, maybe, be detected probabilistically.</p>
-<p>I initially guessed “invisible characters” not because I didn’t think of the semantic word-choice technique, but because I was a fool who took Anthropic at its word in their description of what they would do. Their original support document claims:</p>
-<blockquote>
-<p>When a supported Claude model generates text, it weaves an
-imperceptible watermark directly into the text itself. You won’t
-see it, and it doesn’t change the meaning, quality, or readability
-of Claude’s response.</p>
-</blockquote>
-<p>They say “imperceptible” and “doesn’t change the meaning, quality, or readability”. Their words. Not <em>almost</em> imperceptible. Not <em>slightly</em> changes the meaning, quality, or readability. That made sense to me, because that’s absolutely what I want — nay, demand — from any tools I use personally. It’s unacceptable for a tool to sacrifice an iota of clarity, coherence, meaning, quality, etc. for the purpose of embedding hidden clues within the text to suggest its provenance. That’s what I would and will demand. And Anthropic’s (original) support document unambiguously claims that’s what their system will enable. So if that were true, I couldn’t see what was left other than hiding invisible characters within the text.</p>
-<p>My error was believing Anthropic that their system wouldn’t adulterate and corrupt the semantics of the text their models generate. <em>That</em> is in fact exactly what they plan to do. I should have my head examined for believing a single word of a document titled “How Claude Marks AI-Generated Content” that doesn’t explain, at all, how Claude marks (or will mark) AI-generated content.</p>
-<h2>How It’s <em>Actually</em> Going to Work</h2>
-<p>Yesterday, on an entirely different website than <a href="https://support.claude.com/en/articles/16266773-how-claude-marks-ai-generated-content">the original</a> “How Claude marks AI-generated content” article (the one that didn’t explain anything at all about it works), Anthropic published “<a href="https://www.anthropic.com/news/claude-text-watermark">How Claude’s Text Watermark Works</a>”, which does actually explain in layman-accessible terms how it’s going to work. I will return to Anthropic’s new highly euphemistic and slightly misleading description below.</p>
-<p>There’s a bunch of research on this topic, some of which I have also linked to below. But the very best description of the general idea behind the technique is an interactive essay by James Padolsey, “<a href="https://declaude.org/watermarking/">How AI Text Watermarking Works”</a>. It’s a wonderfully cogent read, and the interactive elements splendidly illustrate the main concepts. A+ work. If you have any interest in this at all, I dare say you must read — and play with — Padolsey’s piece.</p>
-<p>But here’s my stab at a layman’s high-level summary. If you toss a coin <em>N</em> times and note the results, you can determine with a degree of certainty whether the coin is fair or biased. LLMs are, in their popular incarnations, non-deterministic. Ask the same question of the same model and you often get at least slightly different answers. Maybe the same meaning, but different phrasing. At each decision point for generating the next token, the model makes a choice. With these semantic watermarking techniques, they make different choices for some tokens based on word lists that could be called “green” and “red”. At each decision point, they’re a little more likely to pick a word from the green list than the red list. That doesn’t mean they never choose words from the red list. Just that they’re less likely to than they would if the adulterated marking technique weren’t in place. (Same way that a crooked 51-49 coin will still land “wrong” side up 49 times out of 100 on average.)</p>
-<p>Words or word phrases are sorted into the green and red lists deterministically on the fly, at each “next token” generation point. So sometimes a specific word will be on the green list, and other times it will be on the red list. Someone with the secret key can determine which list a word will be on at each token generation point (which is how the watermarking is detected); those without the secret key cannot. This means there will never be a list of words that Claude prefers or eschews.</p>
-<p>With coin flipping, the higher <em>N</em> is — the more times you flip — the more confident you can be that the coin is fair or biased. So too with this semantic watermarking. The more words in the text, the more accurate the analysis will be that the text was generated by a specific AI model or not. With too few coin flips, you can’t achieve any confidence at all regarding a coin’s fairness. With too few words (or tokens), there’s no way to achieve any confidence whether a string of text was AI-generated or not.</p>
-<p>Given a string of text to examine for signs of a specific watermarking system, if there are more words tagged as green and fewer tagged as red than would otherwise be expected, the text can be flagged — with some degree of confidence — as having been generated, or merely modified, by the AI system that applies the specific secret-key watermarking system. The amount of confidence in the determination will obviously vary, significantly, based on the size of the text string and randomized weights given to words on the green and red lists. But only Anthropic will be able to determine if text was seemingly generated by Claude, and Anthropic will only be able to detect the watermarks that are applied by Claude. Claude can’t detect the hidden watermark signals generated by, say, Gemini, and Gemini can’t detect the hidden watermark signals created by Claude, because each implementation is predicated on secret keys held only by the LLM provider.</p>
-<h2>Objections to the Technical Premise</h2>
-<p>One of my fundamental problem with this is that no two synonyms carry the <em>exact</em> same meaning. “<em>He leaped at the chance</em>” and “<em>He jumped at the opportunity</em>” are very similar sentences expressing the same general sentiment, but they are <em>not</em> the same. The exact words we choose when writing matter. I want any LLM I use to choose the very best, most precise words at every single decision point. An obvious constraint that I accept is time and computation. Within the constraint of executing inference quickly, and at a certain cost per token, I want the best words. This constraint matches human writing. I could surely write a better column by taking longer to write it. I write with a sense of how much care I should put into every word and punctuation choice I make. I take more time with certain paragraphs, sentences, or even individual word choices when my gut feeling says I should.</p>
-<p>In other words, these are <em>necessary</em> trade-offs. These factors are all in <em>my</em> interest: speed, cost, quality. Ideally I would like perfect writing, at instantaneous generation speed, at zero cost. None of those things are possible. Computation is not free of charge (and cloud-based LLM inference with leading models is actually expensive). Inference is not instantaneous. And great writing, whether natural or artificial, can only <em>approach</em> perfection.</p>
-<p>The idea that anything other than <em>my</em> needs should factor into the generation of text <em>for me</em> is patently offensive.</p>
-<p>This isn’t just about text one might generate with the intention of passing it off as their own natural work. This isn’t even about LLM proofreading of work written by hand. Anthropic is saying that <em>all</em> new Claude models are going to adulterate every single bit of text longer than 200 tokens (~150 words) they generate, including everything it presents to its users to read. So even in a private conversation between a user and Claude, which will never be read by anyone other than the user, Claude will begin making word choices in the name of marking its output in statistically predictable ways rather than maximizing clarity and precision.</p>
-<p>Even today’s so-called frontier models are already decidedly <a href="https://daringfireball.net/linked/2026/08/11/economist-ai-writing">lacking in lucidity</a>. Claude, ChatGPT, Grok, et al. are “better writers” than most humans and produce better prose than the median human. But: no shit. Most people are terrible writers. The “average person” is pretty stupid and <a href="https://www.youtube.com/watch?v=WDUIX2-akuQ">half of all people are stupider than that</a>. And there are many smart, interesting people who are miserable writers. So as impressive as LLMs are, the bar is low. The best writing I see come out of these models is worse than anything I would choose to read for pleasure. And now Anthropic is saying they’re going to make it worse, on purpose, for purposes that do not benefit me in any way? Even if only slightly worse?</p>
-<p>Get fucked.</p>
-<h2>Objections to the EU Regulation</h2>
-<p>Speaking of objections, the relevant EU regulation motivating all of this, “<a href="https://digital-strategy.ec.europa.eu/en/policies/code-practice-ai-generated-content">Code of Practice on Transparency of AI-Generated Content</a>”, is red-tape nanny-state pipe-dream nonsense. Here’s Ben Thompson’s summary <a href="https://stratechery.com/2026/anthropics-watermarking-how-it-probably-works-worse-than-it-seems/">from a paywalled Stratechery update this week</a>:</p>
-<blockquote>
-<ul>
-<li>The regulation applies to text longer than 200 tokens.</li>
-<li>The provider must mandate in their terms-of-service that users
-not remove the watermarking.</li>
-<li>The solution should be robust in terms of evading “typical
-processing solutions” like screen shots, scanning and OCR,
-copy-and-pasting, translations, etc.</li>
-</ul>
-</blockquote>
-<p>Taken literally, compliant LLM terms of service must forbid users from rephrasing the output from models that comply with this regulation, because the word choices are the marks. But it’s not the European Union that is trying to impose their absurd, impractical, witch-hunt-fueling regulation on the entire world. That falls on Anthropic.</p>
-<p>Complying with this, particularly with regard to <em>text</em>, is only going to create problems for honest users. Dishonest users attempting to pass off AI-generated text as their own writing (students, employees, whoever) will simply circumvent detection through non-compliant AI paraphrasing tools.</p>
-<p>James Padolsey — whose interactive visual explanation of how these schemes work I linked to above — explains this in a post titled “<a href="https://blog.j11y.io/2026-08-12_Anthropics-weak-watermarks-appease-a-weak-law/">Anthropic’s Weak Watermarks Appease a Weak Law</a>” (which, if it rings a bell, I linked to <a href="https://daringfireball.net/linked/2026/08/16/padolsey-anthropic-eu-weak-law">in a standalone post</a> earlier today):</p>
-<blockquote>
-<p>The same thought that led to this law could have applied to
-calculators at the time of their inception, had their outputs
-revealed themselves through artefacts. Thankfully, a sum borne of
-the brain is treated no differently from one produced by a
-calculator. Likewise with spellcheckers. To make assistance
-suspect only once the tool becomes capable enough to compose a
-whole sentence is not a principled boundary. It is a moral premium
-placed on difficulty itself.</p>
-<p>Anthropic has nevertheless chosen a blanket, model-level
-implementation that appears broader than the law’s minimum
-requirement. That may be convenient compliance engineering, but it
-discards distinctions the law expressly attempted to preserve. The
-result is a signal broad enough to implicate harmless and
-assistive use, yet fragile enough to be removed by a motivated
-person through substantial recomposition. It risks concentrating
-suspicion on ordinary and assistive users while remaining weakest
-against deliberate deception.</p>
-</blockquote>
-<p>Padolsey is the creator of <a href="https://declaude.org/">Declaude</a>, a delightfully simple web app that allows you to “Paste in AI-flavored text and get the same content back as plain prose”. Declaude’s original purpose is cleaning the saccharine Claude personality stink from text (whether it was created by Claude or any other LLM), but, if Anthropic persists in its stated plan to begin adulterating all text Claude generates, Declaude will also serve as a copy-paste single-extra-step way to eliminates those marks. Declaude is interesting and useful already, but it exemplifies how ill-considered and futile this EU regulation is when it comes to prose.</p>
-<h2>Google SynthID</h2>
-<p>Google has a watermarking system in place that they call SynthID, which they apply to AI-generated images, video, audio, and text. I’m concerned in this article only with text. With multimedia, embedded watermarks can be metadata within <em>files</em>, and truly not affect the experiential quality of the work when viewed or listened to. With text, we are talking about the actual words that are chosen. From the “AI-generated text” section of <a href="https://deepmind.google/models/synthid/">Google DeepMind’s own description of SynthID</a>:</p>
-<blockquote>
-<p>We’ve expanded SynthID to watermarking and identifying text
-generated by the Gemini app and web experience. Large language
-models generate text one word (token) at a time. Each word is
-assigned a probability score, based on how likely it is to be
-generated next. So for a sentence like “My favorite tropical
-fruits are mango and…”, the word “bananas” would have a higher
-probability score than the word “airplanes”. SynthID adjusts these
-probability scores to generate a watermark. It’s not noticeable to
-the human eye, and doesn’t affect the quality of the output.</p>
-</blockquote>
-<p>In a group chat, a friend of mine quoted the above, and I responded that if a chatbot wrote “My favorite tropical fruits are mango and airplanes”, I’m pretty sure I’d fucking notice. Another friend then responded with this:</p>
-<p><a href="https://daringfireball.net/misc/2026/08/tropical-fruit-airplane.jpeg">
-<img alt="AI-generated image of an airplane carved out of a pineapple or something, on a tropical beach." src="https://daringfireball.net/misc/2026/08/tropical-fruit-airplane.jpeg" width="500"/></a></p>
-<p>Days later, that still cracks me up.</p>
-<p>But Google’s absurd description puts the lie to their own claim that it isn’t noticeable, and it serves to show just how little regard the people behind these generated-text fingerprinting schemes have for the actual craft of writing. Of course <em>bananas</em> has a higher probability score than <em>airplanes</em>, because airplanes aren’t fruit. But what about <em>pineapple</em>? Should the sentence complete to “mango and bananas” or “mango and pineapple”? That’s a good question, and the only acceptable answer for why an LLM should choose <em>bananas</em> instead of <em>pineapple</em> (or <em>coconut</em>, or <em>guava</em>, or <em>papaya</em>...) is that it has determined that it’s the best fit for the intended meaning, tone, and sentiment of the text. Not because <em>bananas</em> is on the watermarking “green” list and <em>pineapple</em> is on the “red” list, even though <em>pineapple</em> might be the better fit. Google’s own supposedly jocular description of how SynthID works in fact captures how the scheme perverts the text it generates.</p>
-<p>They’re saying you won’t notice because if it only chooses <em>bananas</em> over <em>pineapple</em> for these fingerprinting purposes, well, they’re both tropical fruits and who cares. But it’s utter nonsense that the difference is “not noticeable to the human eye”. The semantic difference between <em>banana</em> and <em>pineapple</em> is just as noticeable to the human eye as the as the taste of the two are to the human tongue.</p>
-<p>If it did produce “My favorite tropical fruits are mango and airplanes”, it’d be incredibly stupid, but it wouldn’t be <em>offensive</em> because we’d all recognize that something completely off-key happened. What’s offensive is that with a system like SynthId in place, where the fingerprinting decisions are motivated by a secret key, we have no idea whether it completed to “mangos and bananas” because <em>bananas</em> was determined to be the best next token, or because <em>bananas</em> is in the “green” bucket of words. It calls every single word choice into question.</p>
-<p><a href="https://www.nature.com/articles/s41586-024-08025-4">Here’s a paper published in Nature</a> where Google’s team behind SynthID published their work, after putting it into production with Gemini (née Bard):</p>
-<blockquote>
-<p>We analysed approximately 20 million watermarked and unwatermarked
-responses and computed the thumbs-up and thumbs-down rates (both
-as a fraction of the total number of thumbs-up and thumbs-down
-feedback received). We found that the thumbs-up rate for the two
-models differed by 0.01% (with the watermarked model being
-higher); and the thumbs-down rate differed by 0.02% (with the
-watermarked model being lower). We found both of these differences
-to be statistically insignificant, and well within the 95%
-confidence intervals.</p>
-<p>From this experiment, we conclude that over a wide variety of real
-chatbot interactions, the difference in response quality and
-utility, as judged by humans, is negligible. Subsequently,
-non-distortionary SynthID-Text has been productionized and is
-currently watermarking responses in Gemini and Gemini Advanced. To
-the best of our knowledge, this evaluation represents the first
-systematic watermarking investigation of its kind within a
-large-scale production system.</p>
-</blockquote>
-<p>To this I say:</p>
-<ul>
-<li><p>Gemini/Bard’s thumbs-up/thumbs-down buttons are not a good experiment for evaluating the effect on quality. If a chatbot tells me “My favorite tropical fruits are mango and bananas” instead of “mango and pineapple”, I’m not going to give the response a thumbs down because of the fruit it chose. I’d give it a thumbs down if said “airplanes”, yes, but that’s a strawman. (The paper in Nature even uses the “My favorite tropical fruits are mango and ...” example as an illustration, but in the paper, the only four next tokens considered are, in order of probability distribution, mango, lychee, papaya, and durian. No airplanes. And, conveniently, in the paper’s example, the “winner” of the watermarking “tournament” just happens to be mango, the one that would have been selected as the best if the watermarking weren’t in place.)</p></li>
-<li><p>A “difference in response quality and utility, as judged by humans” that is “negligible” does not mean <em>imperceptible</em>. What they really mean is that it’s only slightly worse and that everyone is either too stupid to notice or too indifferent to care.</p></li>
-<li><p>It’s widely considered that Gemini is behind ChatGPT and Claude in quality. Perhaps the fact that they’ve put SynthID-text into production is one of many reasons why. I personally agree that Gemini’s prose is inferior. Maybe the use of SynthID has nothing to do with the fact that I, along with the general public consensus, consider Gemini to be a second-rate chatbot — but in that case, maybe it’s the fact that Gemini is a second-rate chatbot that makes the difference “negligible” when Google started mixing in SynthID-motivated tokens in its results. It’s a lot more likely that your restaurant customers won’t notice that you replaced your regular coffee <a href="https://www.youtube.com/watch?v=3CoLiyUZXW4">with Folgers Crystals</a> if your regular coffee is second-rate to start with.</p></li>
-</ul>
-<h2>Anthropic</h2>
-<p>Now, finally, back to Anthropic’s new “<a href="https://www.anthropic.com/news/claude-text-watermark">How Claude’s Text Watermark Works</a>” published yesterday. I have some comments.</p>
-<blockquote>
-<p>To summarize:</p>
-<ul>
-<li><p>We use a method of watermarking that does not have any practical
-impact on the quality or content of Claude’s outputs;</p></li>
-<li><p>The difference between watermarked and un-watermarked text will
-not be distinguishable to readers;</p></li>
-</ul>
-</blockquote>
-<p>Translation: <em>Specific words do not matter and we don’t think anyone reads anything closely.</em></p>
-<blockquote>
-<ul>
-<li>Nothing is added to the text and there are no hidden characters;</li>
-</ul>
-</blockquote>
-<p>This would have been worth clarifying at the outset.</p>
-<blockquote>
-<ul>
-<li>Watermarking won’t be specific to Claude. As of August 2, the EU
-requires AI providers serving its market to mark AI-generated
-content. Other major model developers have signed the same Code of
-Practice and will be implementing their own watermarks.</li>
-</ul>
-</blockquote>
-<p>No other AI provider has stated that they will apply such marking, adulterating all generated text, outside the EU.</p>
-<blockquote>
-<p>Take the sentence “The weather today was cold and…”. The next word
-is very unlikely to be “sugary.” But it is quite likely to be
-“overcast” or “grey.” Under most circumstances, it doesn’t matter
-much to the reader which of these latter two words the model
-ultimately chooses — the meaning of the sentence is largely the
-same either way. In cases like this, the choice is settled by a
-random number.</p>
-</blockquote>
-<p>Arguing that <em>grey</em> vs. <em>overcast</em> “doesn’t matter much to the reader” is the crux of my argument that this entire endeavor is a perverse adulteration of what it means to write — or to read. That it’s subtle in some ways makes it <em>more</em> perverse, because it’s sneaky.</p>
-<blockquote>
-<p>In internal testing, we’ve seen no impact of watermarking on the
-content, level of creativity, or readability of Claude’s text. In
-the <a href="https://www.nature.com/articles/s41586-024-08025-4">SynthID-Text paper</a>, which introduced the technique we
-use, Google DeepMind tested this impact by serving a model that
-used watermarking to a portion of their Gemini traffic and
-comparing thumbs-up and thumbs-down ratings. They found no
-statistically significant differences from the unwatermarked
-model. And in a controlled study, human raters comparing
-watermarked and unwatermarked answers side-by-side saw no
-difference in quality.</p>
-</blockquote>
-<p>See above for my argument that this thumbs-up/thumbs-down data is absolutely worthless in evaluating whether the SynthID-style word-bias watermarking makes text worse. By definition it <em>must</em> make text worse, unless the underlying LLM model’s scoring is wrong, because the nature of the watermarking algorithm requires it to sometimes increase the probability of selecting a <em>worse</em> word choice and decrease the probability of selecting the model’s <em>best</em> choice. It’s only a question of how much worse. What Google’s thumb-counting data shows is only that it isn’t so much worse as to make Gemini users click the thumbs-down button.</p>
-<blockquote>
-<p>Watermarking doesn’t change the meaning or experience for the
-person reading it, but if you wanted to check after the fact
-whether the text was likely generated by Claude, the watermark
-allows you to do so.</p>
-</blockquote>
-<p>No, it does not. Because the entire scheme is tied to secret keys held only by the AI provider, it only allows Anthropic, not “you”, to check anything.</p>
-<blockquote>
-<p>When Claude proofreads text written by a person, what it gives
-back has generally only been lightly edited; because nearly all
-the words are the person’s, there’s very little (if anything) for
-the watermark to attach to. Depending on the length of the text
-and how heavily Claude has edited it, those changes might not be
-enough to make Claude’s involvement detectable. The more Claude
-writes, the more decisions it has to make, and the more space
-there is for a watermark.</p>
-</blockquote>
-<p>Translation: <em>No one can ever again use Claude for proofreading their own prose unless they’re willing to risk that the whole thing might be flagged as having been generated by Claude.</em></p>
-<blockquote>
-<p>For example, once the model has written “2 + 2 =”, there is a very
-clear best choice for the next token (if the model is completing
-the sum, there isn’t an answer that’s equally as good as “4”; if
-it’s talking about George Orwell’s <em>Nineteen Eighty-Four</em>, there
-isn’t an answer that’s equally as good as “5”). The “nudge” of the
-watermark wouldn’t be applied here. For the same reason, code — which in very many cases has to be exact — has generally less
-watermarking than some other forms of text.</p>
-<p>Having said that, in areas where there <em>is</em> an arbitrary choice
-between particular words or terms within the code, the watermark
-can be used, such as comments within code. But by definition, it
-will have a negligible effect on the actual code produced.</p>
-</blockquote>
-<p>Translation: <em>We value precision in programming code; we do not in prose.</em></p>
-<p>And it is exceedingly rich to cite George Orwell’s <em>Nineteen Eighty-Four</em>, approvingly, in the context of justifying a text adulteration scheme premised on the notion that specific words do not matter. I mean what the actual fuck? Orwell!</p>
-<p>Lastly, as to why they’re doing this:</p>
-<blockquote>
-<p>We’re implementing watermarking to comply with the EU AI Act.
-Anthropic, along with several other major AI model providers and
-around <a href="https://www.anthropic.com/news/claude-text-watermark">190 total signatories</a>, signed the EU Code of
-Practice on Transparency of AI-Generated Content in July 2026.
-This requires AI system providers to use methods of “marking”
-AI-generated text. We’re applying watermarking globally at launch
-because we don’t yet have a durable way to scope it by region.</p>
-</blockquote>
-<p>This, from a company that <a href="https://www.ft.com/content/840ac156-af1c-4a82-b260-ae791072fcfa?syn-25a6b1a6=1">the Financial Times just reported</a> is weeks away from an IPO with an intended valuation of $2 trillion, which would make it one of the 10 highest-valued companies in the world — <a href="https://companiesmarketcap.com/time-machine/2026-08-14/">as of today</a>, placing it at #7, between TSMC ($2.2T) and Broadcom ($1.9T).</p>
-<p>This leaves us to believe that one of the following must be true:</p>
-<ul>
-<li><p>It’s perfectly reasonable that a technology company valued on par with Amazon and TSMC is technically incapable of complying with an EU regional law only within the EU itself.<sup id="fnr1-2026-08-16"><a href="#fn1-2026-08-16">1</a></sup> Not a cause for concern at all.</p></li>
-<li><p>Anthropic is in over their heads, wields shockingly little control over their own tech stack, and their imminent IPO is likely to be remembered only as a new high-water mark in the manic global AI bubble.</p></li>
-</ul>
-<p>Also, what happens if another major global market makes it <em>unlawful</em> for AI to secretly watermark generated text?</p>
-<h2>OpenAI</h2>
-<p>From an OpenAI support document titled “<a href="https://help.openai.com/en/articles/8912793-provenance-signals-content-credentials-synthid-in-openai-generated-content">Provenance Signals (Content Credentials, SynthID) in OpenAI-Generated Content</a>”:</p>
-<blockquote>
-<p>Consistent with our <a href="https://openai.com/index/supporting-eu-trustworthy-ai-ecosystem/">commitments</a> under the European
-Commission’s Code of Practice on Transparency of AI-generated
-content, our goal is to expand provenance signals to all
-modalities including text, so customers and developers have
-clear ways to meet their own transparency obligations as
-standards and tooling continue to mature.</p>
-</blockquote>
-<p>There’s a lot of wiggle room in this brief statement, and it could just as well mean that OpenAI models will only adulterate text with fingerprint markers when users or developers ask for it. Or that it will only be mandatory for users in the EU. If I were at OpenAI I’d go hard on this and publicly say that ChatGPT will never watermark text it generates <em>unless you ask it to</em>, and that if you want tools that secretly work behind your back without telling you how they work to flag your words in ways you can’t see, go ahead and use Claude.</p>
-<p><a href="https://news.ycombinator.com/item?id=49324087">Comments on Hacker News</a></p>]]></content:encoded>
-      <guid isPermaLink="true">https://daringfireball.net/2026/08/anthropics_watermark_text_adulteration_in_claude_is_a_perversion_of_writing</guid>
-      <category>Hacker News</category>
-      <pubDate>Sun, 16 Aug 2026 21:53:43 +0000</pubDate>
-      <media:content url="https://daringfireball.net/misc/2026/08/tropical-fruit-airplane.jpeg" type="image/jpeg" medium="image"/>
-      <dc:creator>ropbear</dc:creator>
-    </item>
-    <item>
-      <title>Nvidia dramatically reduces amount of OpenAI infra financing it may guarantee</title>
-      <link>https://www.reuters.com/business/nvidia-scales-back-250-billion-openai-data-center-guarantee-wsj-reports-2026-08-14/</link>
-      <description>Nvidia dramatically reduces amount of OpenAI infra financing it may guarantee</description>
-      <content:encoded><![CDATA[<p><a href="https://news.ycombinator.com/item?id=49323686">Comments on Hacker News</a></p>]]></content:encoded>
-      <guid isPermaLink="true">https://www.reuters.com/business/nvidia-scales-back-250-billion-openai-data-center-guarantee-wsj-reports-2026-08-14/</guid>
-      <category>Hacker News</category>
-      <pubDate>Sun, 16 Aug 2026 21:07:10 +0000</pubDate>
-      <dc:creator>root-parent</dc:creator>
-    </item>
-    <item>
-      <title>The Case Against Formal Verification, 50 Years Later</title>
-      <link>https://ivan-gavran.github.io/0-social-processes-paper</link>
-      <description>Writings on software correctness, AI, formal verification, and other technical topics.</description>
-      <content:encoded><![CDATA[<p>15.08.2026</p>
-<p><a href="https://news.ycombinator.com/item?id=49323459">Comments on Hacker News</a></p>]]></content:encoded>
-      <guid isPermaLink="true">https://ivan-gavran.github.io/0-social-processes-paper</guid>
-      <category>Hacker News</category>
-      <pubDate>Sun, 16 Aug 2026 20:38:58 +0000</pubDate>
-      <dc:creator>ghuntley</dc:creator>
-    </item>
-    <item>
-      <title>Stripe will reportedly acquire OpenRouter for $7B+</title>
-      <link>https://techcrunch.com/2026/08/16/stripe-will-reportedly-acquire-ai-gateway-startup-openrouter-for-7b/</link>
-      <description>OpenRouter's CEO recently described the startup as Stripe for AI.</description>
-      <content:encoded><![CDATA[<p>In Brief</p>
-<p>Posted:</p>
-<time datetime="2026-08-16T13:57:04-07:00">1:57 PM PDT · August 16, 2026</time>
-<figure><figcaption><strong>Image Credits:</strong>SOPA Images/Contributor / Getty Images</figcaption></figure>
-<h2>Stripe will reportedly acquire AI gateway startup OpenRouter for $7B+</h2>
-<p>Stripe has finalized a deal to acquire OpenRouter, <a href="https://www.bloomberg.com/news/articles/2026-08-16/stripe-nears-deal-to-buy-ai-firm-openrouter-for-over-7-billion">according to a new report in Bloomberg</a>.</p>
-<p>OpenRouter helps customers to select different AI models to perform different tasks, depending on their specific needs and budget. The company announced in May that it had <a href="https://techcrunch.com/2026/05/26/openrouter-more-than-doubles-valuation-to-1-3b-in-a-year/">raised a $113 million Series B</a>, at a reported $1.3 billion valuation. (Investors include Sequoia, Andreessen Horowitz, Menlo Ventures, and Alphabet’s Capital G.)</p>
-<p>At the time, OpenRouter CEO Alex Atallah <a href="https://www.nytimes.com/2026/05/26/business/dealbook/openrouter-ai-models-fundraising.html">described the company</a> as the equivalent of Stripe for AI, because it provides customers with a single access point for different systems and prevents lock-in. The startup also claimed to have 8 million global users and to provide access to more than 400 models.</p>
-<p>The Wall Street Journal <a href="https://www.wsj.com/tech/ai/stripe-in-talks-to-buy-buzzy-ai-model-marketplace-openrouter-decc6a74">reported last month</a> that Stripe and OpenRouter were in acquisition talks. Now, Bloomberg said those discussions have led to a deal price of more than $7 billion.</p>
-<p>A Stripe spokesperson told TechCrunch that the company does not comment on rumors or speculation.</p>
-<p>Topics</p>
-<p>, </p>
-<a href="https://techcrunch.com/category/startups/">Startups</a>
-<h2>Related</h2>
-<ul><li>
-
-<figure>
-<img alt="Dario Amodei, co-founder and chief executive officer of Anthropic" height="375" src="https://techcrunch.com/wp-content/uploads/2026/02/GettyImages-2261514463.jpg?w=562" width="562"> </img></figure>
-
-<a href="https://techcrunch.com/category/artificial-intelligence/">AI</a>
-
-<h3>
-<a href="https://techcrunch.com/2026/08/16/anthropic-ceo-says-ai-backlash-is-fundamentally-a-crisis-of-trust/">Anthropic CEO says AI backlash is ‘fundamentally a crisis of trust’</a>
-</h3>
-
-<time datetime="2026-08-16T09:53:51-07:00">
-	19 hours ago</time>
-
-</li><li>
-
-<figure>
-<img alt="Repeated Magnifying Glass On Blue Background" height="375" src="https://techcrunch.com/wp-content/uploads/2024/01/Magnifying-glasses.jpg?w=536" width="536"/> </figure>
-
-<a href="https://techcrunch.com/category/artificial-intelligence/">AI</a>
-
-<h3>
-<a href="https://techcrunch.com/2026/08/15/anthropic-shares-more-details-about-how-claudes-new-watermarks-will-work/">Anthropic shares more details about how Claude’s new watermarks will work</a>
-</h3>
-
-<time datetime="2026-08-15T11:58:39-07:00">
-	2 days ago</time>
-
-</li></ul>
-<h2 id="h-latest-in">Latest in AI</h2>
-<ul><li>
-
-In Brief
-
-<h3>
-
- 
-<a href="https://techcrunch.com/2026/08/16/stripe-will-reportedly-acquire-ai-gateway-startup-openrouter-for-7b/">Stripe will reportedly acquire AI gateway startup OpenRouter for $7B+</a>
-</h3>
-
-<time datetime="2026-08-16T13:57:04-07:00">
-	15 hours ago</time>
-
-</li><li>
-
-<figure>
-<img alt="Dario Amodei, co-founder and chief executive officer of Anthropic" height="375" src="https://techcrunch.com/wp-content/uploads/2026/02/GettyImages-2261514463.jpg?w=562" width="562"/> </figure>
-
-<a href="https://techcrunch.com/category/artificial-intelligence/">AI</a>
-
-<h3>
-<a href="https://techcrunch.com/2026/08/16/anthropic-ceo-says-ai-backlash-is-fundamentally-a-crisis-of-trust/">Anthropic CEO says AI backlash is ‘fundamentally a crisis of trust’</a>
-</h3>
-
-<time datetime="2026-08-16T09:53:51-07:00">
-	19 hours ago</time>
-
-</li></ul>
-<p><a href="https://news.ycombinator.com/item?id=49323381">Comments on Hacker News</a></p>]]></content:encoded>
-      <guid isPermaLink="true">https://techcrunch.com/2026/08/16/stripe-will-reportedly-acquire-ai-gateway-startup-openrouter-for-7b/</guid>
-      <category>Hacker News</category>
-      <pubDate>Sun, 16 Aug 2026 20:31:16 +0000</pubDate>
-      <media:content url="https://techcrunch.com/wp-content/uploads/2026/02/GettyImages-2261514463.jpg?w=562" type="image/jpeg" medium="image"/>
-      <dc:creator>zacharyozer</dc:creator>
-    </item>
-    <item>
-      <title>Stripe Clinches over $7B Deal to Buy AI Firm OpenRouter</title>
-      <link>https://www.bloomberg.com/news/articles/2026-08-16/stripe-nears-deal-to-buy-ai-firm-openrouter-for-over-7-billion</link>
-      <description>Stripe Clinches over $7B Deal to Buy AI Firm OpenRouter</description>
-      <content:encoded><![CDATA[<p><a href="https://news.ycombinator.com/item?id=49323381">Comments on Hacker News</a></p>]]></content:encoded>
-      <guid isPermaLink="true">https://www.bloomberg.com/news/articles/2026-08-16/stripe-nears-deal-to-buy-ai-firm-openrouter-for-over-7-billion</guid>
-      <category>Hacker News</category>
-      <pubDate>Sun, 16 Aug 2026 20:31:16 +0000</pubDate>
-      <dc:creator>zacharyozer</dc:creator>
-    </item>
-    <item>
-      <title>Red queen hypothesis – A new way forward for self-improving AI</title>
-      <link>https://www.cst.cam.ac.uk/news/red-queen-hypothesis-new-way-forward-self-improving-ai</link>
-      <description>At a time when there's widespread interest in self-improving AI, researchers here have tackled one of the central challenges affecting its development by using an approach adapted from evolutionary biology.</description>
-      <content:encoded><![CDATA[<p>
-                  Department of Computer Science and Technology                            </p>
-<p><a href="https://news.ycombinator.com/item?id=49323136">Comments on Hacker News</a></p>]]></content:encoded>
-      <guid isPermaLink="true">https://www.cst.cam.ac.uk/news/red-queen-hypothesis-new-way-forward-self-improving-ai</guid>
-      <category>Hacker News</category>
-      <pubDate>Sun, 16 Aug 2026 20:01:13 +0000</pubDate>
-      <dc:creator>hardlianotion</dc:creator>
-    </item>
-    <item>
-      <title>Models Are Getting Dumber on Purpose</title>
-      <link>https://w4g1.dev/blog/models-are-getting-dumber-on-purpose</link>
-      <description>Reasoning scores climb while per-token compute drops. Labs are stripping world knowledge out of models, and I think that's the right trade.</description>
-      <content:encoded><![CDATA[<p>Reasoning scores keep climbing while per-token compute keeps dropping. <a href="https://benchlm.ai/best/reasoning-models">GLM-5.2</a> scores 99.2% on AIME 2026 with about 40 billion parameters active per token. Qwen3.5 scores 91.3% with 17 billion active. <a href="https://www.morphllm.com/deepseek-v4-flash">DeepSeek V4-Flash</a> runs 13 billion active. For scale, GPT-4 was rumored to run around 280 billion active parameters in 2023, and it could barely solve an AIME problem. At the small end, <a href="https://artificialanalysis.ai/articles/qwen3-5-small-models">Qwen3.5 9B</a> fits in 6GB of VRAM quantized and roughly doubles the score of the next best model under 10B parameters on Artificial Analysis's intelligence index. If you only looked at math and code benchmarks, you'd conclude that models are getting smarter per parameter at an absurd rate.</p>
-<p>They are, on those benchmarks. Ask the same models a plain factual question and the picture flips. On <a href="https://pricepertoken.com/leaderboards/benchmark/simpleqa">SimpleQA</a>, a benchmark of factual recall with no tools allowed, the current leader is Gemini 2.5 Pro at 53%, so the best recall money can buy still misses half the questions. The small models barely register. Artificial Analysis measures Qwen3.5 4B and 9B at hallucination rates of 80 to 82% on its knowledge benchmark, which means that when they don't know a fact, which is most of the time, they make one up. Ask the 9B for the birth year of a minor 19th-century mathematician and you get a confident, plausible, wrong answer. The parameter count didn't drop for free. Labs are trading world knowledge for reasoning skill, and the trade is deliberate.</p>
-<h2 id="what-the-parameters-were-for">What the parameters were for</h2>
-<p>Facts take space. Research on knowledge capacity (the "Physics of Language Models" series has the cleanest measurements) puts it on the order of two bits of factual knowledge per parameter. If you want a model that knows the birth year of every minor Wikipedia figure, the population of every Dutch municipality, and the argument order of every function in every npm package, you pay for that in weights, and it's a big part of why frontier models grew to trillions of parameters.</p>
-<p>Reasoning compresses much better than facts do, because it's a relatively small set of procedures applied over and over: break the problem into parts, track intermediate state, check your own work, backtrack when a step fails. Distillation and reinforcement learning on verifiable tasks turn out to transfer those procedures into small models remarkably well. Phi-4 is 14 billion parameters, trained heavily on synthetic textbook-style data, and it's good at math and bad at trivia, which tells you exactly what its training data contained. That mix used to look like a limitation of the synthetic-data approach. It now looks like the design goal.</p>
-<p>The knowledge that survives the trade has a shape. These models are generalists: they know a little about nearly everything and almost nothing in depth. Ask one about PostgreSQL and it knows what it is, what it's good at, and roughly how MVCC works, but ask which version added a specific planner feature and you're back to invented facts. That's the right layer to keep in weights, because breadth is what lets a model understand what a question is about, know what to look up, and judge whether a source is plausible. The depth is cheap to retrieve and expensive to store, so it's the part that goes.</p>
-<h2 id="facts-rot-procedures-dont">Facts rot, procedures don't</h2>
-<p>A frontier training run takes months and costs hundreds of millions of dollars, and the moment it finishes, the facts inside it start going stale. Library APIs change, prices change, people change jobs, and half of what a 2024 model believed about the JavaScript ecosystem was outdated before the model shipped. Every fact you bake into weights has a shelf life, and the only way to refresh it is another training run.</p>
-<p>The procedures don't rot. Algebra worked the same way in 1970 as it does now, and so does breaking a problem down or spotting a contradiction between two sources. A model that's mostly procedure and only lightly loaded with facts doesn't age the way a knowledge-heavy model does. Its training cutoff matters much less, because the current state of the world was never supposed to live in the weights in the first place. I think this is the best argument for the whole approach: it decouples the expensive, slow artifact (the trained model) from the thing that changes daily (what's true).</p>
-<h2 id="the-harness-carries-the-knowledge">The harness carries the knowledge</h2>
-<p>If the model doesn't know things, something else has to, and that something is the harness: retrieval over a knowledge base, tool calls, web search, a filesystem full of docs. I wrote earlier that <a href="https://w4g1.dev/blog/rust-is-a-harness">Rust is a harness</a> for agents, a source of cheap machine-checkable feedback. This is the same shape from the other side. The model contributes reasoning, and everything it reasons about gets supplied at runtime.</p>
-<p>You can already watch agents work this way. A coding agent doesn't need to have memorized your dependency's API surface, because it greps <code>node_modules</code> or reads the docs before calling anything, and its answer is grounded in the version you actually have installed rather than whichever version dominated the training data. The recall that used to be a fixed cost in every forward pass became an on-demand lookup.</p>
-<h2 id="a-frontier-model-on-your-gpu">A frontier model on your GPU</h2>
-<p>Follow the trend a couple of years out and I think we get a model with frontier-quality reasoning, Fable-quality, that runs on a single consumer GPU. The compute half is nearly there. DeepSeek V4-Flash reasons with about 13 billion active parameters per token, well within consumer-GPU range. What doesn't fit is the other 271 billion parameters sitting in its experts, and expert layers are mostly fact storage. That's the part this whole trade makes optional. Strip the knowledge out and total size shrinks toward active size, and a 20 to 40B model at 4-bit quantization fits on the 24GB card that's been sitting in gaming PCs since 2022.</p>
-<p>The catch is that it won't know much. Ask it a bare factual question with no tools attached and the right behavior is to say it doesn't know and go look it up. Paired with a decent harness, that's most of what I use a frontier model for today, running locally with no per-token bill and no data leaving the machine.</p>
-<h2 id="this-mostly-solves-hallucination">This mostly solves hallucination</h2>
-<p>The part I find most promising is what this does to hallucination. When a fact lives in weights, a wrong fact is unfindable and unfixable. You can't grep the weights, you can't diff them against last month, and correcting one error means a fine-tune that might break who knows what else. The model states the wrong fact with the same fluent confidence as a right one, and there's no artifact to check it against.</p>
-<p>When the fact lives outside the model, a wrong answer has an address. The model cites a document, so you can open the document. If the document is wrong, you edit the document, and every future query gets the correction, which beats waiting for the next training run by roughly a year. Retrieval doesn't get you to zero, since a model can still misread a source or stitch two of them together wrong, but a claim with a source is checkable and a claim from weights isn't. A wrong fact in a knowledge base is an ordinary data bug, the kind we already know how to trace, fix, and write a regression test for.</p>
-<p>There's a version of this future where the model card stops listing a knowledge cutoff at all, because what's left in the weights goes stale on a scale of years instead of weeks. The model just gets handed the world's current state at runtime, the same way a CPU gets handed a program.</p>
-<p><a href="https://news.ycombinator.com/item?id=49322695">Comments on Hacker News</a></p>]]></content:encoded>
-      <guid isPermaLink="true">https://w4g1.dev/blog/models-are-getting-dumber-on-purpose</guid>
-      <category>Hacker News</category>
-      <pubDate>Sun, 16 Aug 2026 19:04:26 +0000</pubDate>
-      <dc:creator>hruvhwe</dc:creator>
-    </item>
-    <item>
-      <title>Protobuf has LSP support. You're welcome</title>
-      <link>https://buf.build/blog/protobuf-lsp</link>
-      <description>Buf is proud to announce the first fully-featured, production-grade LSP server for Protobuf. The Language Server Protocol is the standard API for integrating language support into your favorite IDE or text editor, such as VSCode, IntelliJ, or Neovim. An LSP server provides the smarts that power go to definition, code completion, finding references, and semantics-aware syntax highlighting.</description>
-      <content:encoded><![CDATA[<p>Buf is proud to announce the first fully-featured, production-grade LSP server for Protobuf.</p>
-<p>The <a href="https://microsoft.github.io/language-server-protocol/">Language Server Protocol</a> is the standard API for integrating language support into your favorite IDE or text editor, such as VSCode, IntelliJ, or Neovim. An LSP server provides the smarts that power go to definition, code completion, finding references, and semantics-aware syntax highlighting.</p>
-<p>Before today, Protobuf lacked the same LSP support other major programming languages enjoy. We don’t want to overstate our own work, but <strong>this is a game-changer for Protobuf development</strong>: Protobuf now has modern IDE support for the first time, all powered by the <a href="https://buf.build/product/cli">Buf CLI</a>.</p>
-<p>At Buf, we believe that Protobuf is the best schema language, thanks to its established ecosystem of libraries and tools. Protobuf shouldn’t just be the smart choice; it should be the easiest choice too. This is why we’re releasing the Buf LSP server, as part of our family of tools that complete the Protobuf ecosystem, including <a href="https://github.com/bufbuild/protobuf-es">Protobuf-ES</a> (used in Chromium!), <a href="https://protovalidate.com">Protovalidate</a>, <a href="https://connectrpc.com/">ConnectRPC</a>, and the <a href="https://buf.build/product/bsr">Buf Schema Registry</a>. No matter your project or use-case, developing with Protobuf should be the easy, <em>obvious</em> choice.</p>
-<p>Here’s how you can try it out!</p>
-<h2 id="installing-the-buf-lsp">Installing the Buf LSP</h2>
-<p><a href="https://code.visualstudio.com/">VSCode</a> is one of the most popular graphical editors available, and it has stellar LSP support (LSP originated with VSCode). To use the Buf LSP, just install the <a href="https://marketplace.visualstudio.com/items?itemName=bufbuild.vscode-buf">Buf extension</a>. This will automatically use your installed version of the <a href="https://buf.build/product/cli">Buf CLI</a> (which bundles the LSP server), or install one if you need it.</p>
-<p><a href="https://neovim.io/">Neovim</a> is Buf engineers’ favorite editor, and the Buf LSP works great with it, too. All you need to do is install the Buf CLI, and configure Neovim to use it as an LSP server.</p>
-<ol>
-<li>Make sure you’ve installed the <code>nvim-lspconfig</code><a href="https://github.com/neovim/nvim-lspconfig?tab=readme-ov-file#install">here</a>.</li>
-<li>Add <code>lspconfig.buf_ls.setup {}</code> to your <code>.nvimrc</code> .</li>
-</ol>
-<p>Alternatively, you can add the following somewhere in <code>init.lua</code> (or another config file, if you like):</p>
-<figure><pre><code>vim.lsp.config('buf-lsp', {
-    cmd = { 'buf', 'lsp', 'serve' },
-    filetypes = { 'proto' },
-    root_markers = { 'buf.yaml', '.git' },
-})</code></pre></figure>
-<p>Then, you can enable it with <code>vim.lsp.enable('buf-lsp')</code> in your <code>.nvimrc</code> .</p>
-<p>Learn more about LSP and Neovim <a href="https://neovim.io/doc/user/lsp.html">here</a>.</p>
-<p>If you’re using another editor, first find out how LSP integration works, and just make sure the <code>buf lsp serve</code> command gets run to spawn the server.</p>
-<h2 id="leveraging-our-toolchain">Leveraging our toolchain</h2>
-<p>Buf already maintains a Protobuf compiler frontend (the part that parses files and calls plugins, like <code>protoc</code>), which we call <a href="https://github.com/bufbuild/protocompile"><code>protocompile</code></a>. Our implementation isn’t just fully-compliant, but it is much faster and more flexible than <code>protoc</code>. Our compiler is so good that even Google is using it alongside <code>protoc</code> in some parts of its massive codebase.</p>
-<p>To build the Buf LSP, we’ve taken <code>protocompile</code> to the next level. We’ve developed a brand-new, <a href="https://rustc-dev-guide.rust-lang.org/query.html">query-driven</a> frontend which enables incremental compilation and much better diagnostics. For example, unlike <code>protoc</code>, we correctly diagnose a duplicate <code>repeated</code> modifier:</p>
-<figure><pre><code>error: encountered more than one type modifier
-  --&gt; testdata/parser/type/repeated.proto:23:14
-   |
-23 |     repeated repeated M x4 = 4;
-   |     -------- ^^^^^^^^ help: consider removing this
-   |     |
-   |     first one is here</code></pre></figure>
-<p>We designed a new AST and intermediate representation for precisely diagnosing these errors, instead of using <code>FileDescriptorProto</code>. Its flexibility makes it easy for us to implement new language features as they are added to Protobuf, such as upcoming features in Editions 2024. It is also memory-efficient, so it can handle workspaces that include very large Buf modules.</p>
-<h2 id="our-commitment">Our commitment</h2>
-<p>Our work on the Buf LSP is not done. We are always improving our diagnostics, and we’re planning to add more features to the LSP server, too:</p>
-<ul>
-<li>Adding <code>import</code>s as an automatic fix.</li>
-<li>Tighter integration with <code>buf.yaml</code> (such as automatically importing modules).</li>
-<li>Code completion and reference lookup for custom options.</li>
-<li>Automatic suggestion of field/enum numbers.</li>
-<li>Dedicated Protovalidate support, including syntax highlighting for CEL snippets.</li>
-</ul>
-<p>At Buf, we will always push the boundary of what <em>you</em> can accomplish with Protobuf, enabling schema-driven development for all!</p>
-<p>If you want help enforcing standards on your organization’s data, <a href="https://buf.build/contact">contact us</a> to see if Buf can help. If building excellent developer tooling excites you, check out our <a href="https://buf.build/careers">careers page</a>!</p>
-<p><a href="https://news.ycombinator.com/item?id=49322573">Comments on Hacker News</a></p>]]></content:encoded>
-      <guid isPermaLink="true">https://buf.build/blog/protobuf-lsp</guid>
-      <category>Hacker News</category>
-      <pubDate>Sun, 16 Aug 2026 18:48:27 +0000</pubDate>
-      <dc:creator>theanonymousone</dc:creator>
-    </item>
-    <item>
-      <title>MathCode, Mathematical Coding Agent</title>
-      <link>https://math-ai-org.github.io/mathcode/</link>
-      <description>A terminal AI coding agent that formalizes math problems into Lean 4 theorems and proves them.</description>
-      <content:encoded><![CDATA[<h2>Overview</h2>
-<p>MathCode is a terminal AI coding assistant with a built-in math formalization engine. Give it a math problem in plain language and it will automatically convert it into a <strong>Lean 4</strong> theorem and attempt a formal proof — with a persistent Lean REPL, reusable theorem and axiom libraries, agentic proving, and an Obsidian knowledge graph.</p>
-<figure><img alt="MathCode demo" src="https://math-ai-org.github.io/mathcode/Demo.png"/></figure>
-<h2>Quick Start</h2>
-<p>Requires macOS (arm64) or Linux (x86_64), plus the <code>codex</code> CLI for the default backend.</p>
-<pre><code>git clone https://github.com/math-ai-org/mathcode.git
-cd mathcode
-bash setup.sh
-codex auth login
-mathcode</code></pre>
-<p><code>setup.sh</code> prepares the release checkout, downloads the bundled runtime and Lean toolchain, and installs a user-local <code>mathcode</code> launcher. Try it with:</p>
-<pre><code>mathcode -p "prove that the square of an even number is even"</code></pre>
-<p>Outputs are written to <code>LeanFormalizations/</code>. A browser UI is available via <code>./run webui</code>.</p>
-<h2>Features</h2>
-<strong>Persistent Lean REPL</strong>
-<p>A persistent Lean language server brings compile checks to <strong>~0.4s</strong> after a one-time warmup, instead of ~30s.</p>
-<strong>Theorem Library</strong>
-<p>Every proved theorem is auto-named, stored, and made importable so the prover and planner can reuse it.</p>
-<strong>Axiom Library</strong>
-<p>Store conversational assumptions as persistent, compile-checked, consistency-reviewed Lean declarations.</p>
-<strong>Lean LSP Integration</strong>
-<p>Searches leansearch.net and Loogle for verified Mathlib lemmas and uses structured LSP diagnostics for repairs.</p>
-<strong>Obsidian Theorem Graph</strong>
-<p>Generates an Obsidian vault that visualizes theorem-to-lemma dependencies as a knowledge graph.</p>
-<strong>Agent-Mode Proving</strong>
-<p>Each proof becomes an interactive session where the agent writes candidates, reads errors, and recompiles.</p>
-<strong>Tree-of-Subgoals</strong>
-<p>Decomposes complex theorems into independent subgoals and proves them in parallel, then stitches them back.</p>
-<strong>Multi-Planner</strong>
-<p>Runs multiple planners in parallel for diverse proof strategies; the prover picks the best approach.</p>
-<h2>Citation</h2>
-<p>If you use MathCode in research, please cite:</p>
-<pre><code>@misc{mathcode2026,
-  title   = {MathCode: A Frontier Mathematical Coding Agent},
-  author  = {Team Math-AI},
-  journal = {math-ai-org.github.io},
-  year    = {2026},
-  month   = {April},
-  url     = {https://github.com/math-ai-org/mathcode}
-}</code></pre>
-<p>The math formalization and proving pipeline is based on the <a href="https://github.com/T3S1AMAX/autolean.git">AUTOLEAN</a> project.</p>
-<p><a href="https://news.ycombinator.com/item?id=49322330">Comments on Hacker News</a></p>]]></content:encoded>
-      <guid isPermaLink="true">https://math-ai-org.github.io/mathcode/</guid>
-      <category>Hacker News</category>
-      <pubDate>Sun, 16 Aug 2026 18:17:10 +0000</pubDate>
-      <media:content url="https://math-ai-org.github.io/mathcode/Demo.png" type="image/png" medium="image"/>
-      <dc:creator>homarp</dc:creator>
-    </item>
-    <item>
-      <title>Tell HN: Cloudflare silently injects its analytics when you switch nameservers</title>
-      <link>https://news.ycombinator.com/item?id=49322107</link>
-      <description>Tell HN: Cloudflare silently injects its analytics when you switch nameservers</description>
-      <content:encoded><![CDATA[<p><a href="https://news.ycombinator.com/item?id=49322107">Comments on Hacker News</a></p>]]></content:encoded>
-      <guid isPermaLink="true">https://news.ycombinator.com/item?id=49322107</guid>
-      <category>Hacker News</category>
-      <pubDate>Sun, 16 Aug 2026 17:49:46 +0000</pubDate>
-      <dc:creator>stagas</dc:creator>
-    </item>
-    <item>
-      <title>A 3rd World Embedded Engineer Responds to "RISC-V They Should Have Known Better"</title>
-      <link>https://rvembedded.com/blog_post/12/</link>
-      <description>Dmitry Grinberg published a long piece explaining his distaste for RISC-V, you can read his article here: RISC-V: They Should Have Known Better - Dmitry.GR . It went to the front page of Hacker News and it started a good argument on Lobsters. It is the most substantial criticism the architecture has had in a while and though I switched my entire stack away from STM32 and ARM to RISC-V and did a video on it about a year ago Goodbye STM32 ARM – Meet the CH32 RISC-V Chips That Replaced It! , part of me is infuriated because so much of what he said seems like a biased perspective.</description>
-      <content:encoded><![CDATA[<h2>A Third World Embedded Engineer Responds to "RISC-V: They Should Have Known Better"</h2>
-<img alt='A Third World Embedded Engineer Responds to "RISC-V: They Should Have Known Better"' src="https://rvembedded.com/media/blog_images/1749959336207.jpg"/>
-<p>|</p>
-<p>Dmitry Grinberg published a long piece explaining his distaste for RISC-V, you can read his article here: <a href="https://dmitry.gr/?r=06.%20Thoughts&amp;proj=12.%20RV">RISC-V: They Should Have Known Better - Dmitry.GR</a>. It went to the front page of Hacker News and it started a good argument on Lobsters. It is the most substantial criticism the architecture has had in a while and though I switched my entire stack away from STM32 and ARM to RISC-V and did a video on it about a year ago <a href="https://www.youtube.com/watch?v=dAyygPmpspc">Goodbye STM32 ARM – Meet the CH32 RISC-V Chips That Replaced It!</a> , part of me is infuriated because so much of what he said seems like a biased perspective. </p>
-<p>Look, I am not going to defend the ISA committee, RISC-V international denied me membership to their golden tower. On the architecture itself, the compressed store offsets really are strange, Zicsr really should not be a separate thing you have to remember to ask for, I have hit every one of these and I have written a book thats about 80% complete about hitting them on the CH32V003, which is one of the very "RV32E" type chip he mentions.</p>
-<p>Maybe I should say where I am writing from, because it changes which parts of this argument look important from my perspective. </p>
-<p>I work out of Trinidad and Tobago, a small island nation off the coast of Venezuela. When I want a development board I am not clicking through to next day delivery, I am checking whether the seller ships here at all, what customs will do to it (if I get it at all), and what the total lands at in TT dollars. "Free Shipping" from Digikey, Mouser or any US or European manufactuer dosen't apply to me. I pay anywhere from US $60 to US $200 to ship one dollar chips that people everywhere else get free shipping on. In fact a well known PCB company who reached out to me considering sponsorship turned me down soley based on shipping to my location. Have a look here: </p>
-<p><img src="https://rvembedded.com/media/uploads/2026/08/16/image.png"/></p>
-<p>The students I want to teach are in the same position, and so are the ones in Nigeria and Bangladesh and everywhere else the people in the industry does not think about when it writes its blog posts. From that position, the difference between a ten cent part and a one dollar part is not a rounding error and it is not a detail you get to wave past on the way to the interesting discussion about encodings. It is the difference between a class of thirty students each having their own chip and a class of thirty students watching one demo board if any at all. Instruction set elegance is a thing you can afford to care about once the hardware is already on your desk. Whether the hardware can get to your desk at all comes first. That is why the paragraph most people scrolled past is, to me, the most important one in the article.</p>
-<p>Grinberg missed that part that RISC-V creates a space for the other 99% outside of "the world" (which in this space "world" is mainly the US and Europe) and it has nothing to do with architecture. </p>
-<h2>He Derives the Requirements and Lands on RV32EC</h2>
-<p>Before the interrupt arithmetic, before the encoding complaints, he does something careful. He asks what a cheap microcontroller core is actually for. His answer is that it sits inside a larger chip prodding registers and configuring hardware blocks, in an "MP3 player, an SD card, a USB stick". The real work is done by custom silicon around it. From that he derives what such a core needs. Low interrupt latency a small die area and good code density, because the code lives in ROM or SRAM and both are expensive per byte. No hardware divider, possibly not even a multiplier, since you are not doing much arithmetic. No privilege separation, because nothing untrusted ever runs there.</p>
-<p>Then he writes the line himself:</p>
-<blockquote>
-<p>"But," you might say, "you just described RV32IC (or RV32EC)!"</p>
-</blockquote>
-<p>And earlier, plainly:</p>
-<blockquote>
-<p>I am 100% sure that RISC-V will own the cheap-as-dirt single-use microcontroller space eventually.</p>
-</blockquote>
-<p>So the most credible RISC-V critic of the month sat down, worked out from first principles what a cheap microcontroller core should be, arrived at the instruction set a ten cent chip implements, and stated that this segment is going to be RISC-V's.</p>
-<p>He derives the case for the chip and then spends the rest of the article annoyed that the chip exists.</p>
-<p>This is almost satirical.</p>
-<p>His quarrel is with whether that outcome was earned. That is a real question and I understand why it bothers him. It is not, however, a question that affects anybody deciding what to learn on, because the chip is on the shelf either way.</p>
-<h2>Where I Actually Disagree, Strongly.</h2>
-<p>His central claim is the first one in the article, and it is bigger than any of the encoding complaints:</p>
-<blockquote>
-<p>Simply put, the things a high-end CPU needs are diametrically opposed to the things a small cost-saving microcontroller core needs.</p>
-</blockquote>
-<p>The conclusion he draws is that no single ISA can serve both ends, and that RISC-V fans are fooling themselves, in theory the premise is true. The conclusion does not follow, and I can show you why from three parts sitting on my desk as we speak.</p>
-<p><strong>CH32V003.</strong> This is the cheap "RV32EC" with sixteen registers, no multiplier, no divider, machine mode only, 2KB of SRAM, 16KB of flash, ten cents, it's EXACTLY the core he specified. I shipped two products with these, one is a bin monitor that has a ToF sensor, an LED and an air tag. The other is an agricultural product for a client that opens and closes a door at a certain time. It also makes a good throw away part, as I show case in my whistle switch <a href="https://www.youtube.com/watch?v=MNGxA21-kT4">Clap Switch Is Dead. Here's the RISC-V Powered Whistle Switch!</a> and which in my view is the BEST part to replace the overpriced, outdated Arduino <a href="https://www.youtube.com/watch?v=GJJV-RBiFDg&amp;t=365s">Did Arduino Q Ruin Arduino? - Here's how to Switch to RISC-V with the CH32V003</a>. </p>
-<p><strong>CH32H417.</strong> A dual core MCU that is unmatched in performance to price point and is at the higher end of the MCU line of things. It has a QingKe V5F at 400 MHz alongside a V3F at 144 MHz, 896KB of SRAM, 960KB of flash. USB 3.2 Gen1 with an integrated 5 Gbps transceiver, 100M Ethernet MAC and PHY, a SerDes isolated transceiver, a 500 MB/s high speed interface, SDMMC, a camera interface, a display controller, a graphics accelerator etc etc. I got a web browser running on this thing <a href="https://www.youtube.com/watch?v=jj8A8WJguXc">I Built a Web Browser on a RISC-V Microcontroller (No Linux)</a> Quantum entropy based GAN cat generation <a href="https://www.youtube.com/watch?v=yjWKd108WVo&amp;t=1s">Schrödinger's De/Motivational Quantum Cat: GAN Image Generation on CH32 RISC-V Microcontroller</a> and real-time facial recognition <a href="https://www.youtube.com/watch?v=d6_rkVJkZG0&amp;t=1s">Real Time Facial Recognition on The Edge With CH32H417 RISC-V MCU</a> in under 150KB of ram. I got a host of other projects running but those are just some I got time to record and put up. </p>
-<p><strong>Baochip.</strong> A VexRISC-V with an MMU built around a stack thats open from silicon to os <a href="https://www.bunniestudios.com/blog/2026/baochip-1x-a-mostly-open-22nm-soc-for-high-assurance-applications/">Baochip-1x: A Mostly-Open, 22nm SoC for High Assurance Applications « bunnie's blog</a>, that runs Xous <a href="https://github.com/betrusted-io/xous-core">betrusted-io/xous-core: The Xous microkernel</a> designed by legendary hardware hacker "bunnie" Huang , a Rust microkernel with real process isolation. Privilege separation, the exact thing he says the cheap end does not need and therefore does not get. In addition to Xous it also supports operating systems like SEL4 <a href="https://github.com/vk2seb/bao1x-seL4">vk2seb/bao1x-seL4: seL4 port to baochip-1x</a> and Linux <a href="https://github.com/pkoscik/baochip-linux">pkoscik/baochip-linux: An attempt to boot mainline Linux on a stock Dabao board</a>. I wrote the bare metal C SDK for the chip <a href="https://github.com/ArmstrongSubero/dabao-sdk">ArmstrongSubero/dabao-sdk: Bare metal C SDK for the Baochip-1x RISC-V SoC</a> and it was of course the chip inside the badge of DEFCON 34 <a href="https://www.wired.com/story/defcon-34-badge-baochip-andrew-bunnie-huang/">The New Defcon Badges Pack a Unique Open Source Chip That Doubles as a Security Key | WIRED</a> this year. </p>
-<p>I can also point to the NES emulator I wrote for the $1 ESP32C3 RISC-V based chip <a href="https://www.youtube.com/watch?v=uwq_g719CPY&amp;t=14s">NES Emulator on $1 ESP32-C3 RISC-V Microcontroller</a>, or experimenting with Linux on the Orange Pi RV2 <a href="https://www.youtube.com/watch?v=8ZvWWQYzQiw">OrangePi RV2 5 Minute Unboxing and Setup | RISC-V Ubuntu Linux</a> that takes 5 minutes to setup and has been running since the day I boot it up.</p>
-<p>Point is I could go on and on about how diverse and accessible currently shipping RISC-V parts are, but then we'll be straying too much from the topic at hand.</p>
-<p>I linked all those to say this, that all these parts all have the same base instruction set and I gained expertise in all in under a year and under US $100 across the entire stack, from disposible silicon to PC level, of course minus data center compute.</p>
-<p>For under US $100 including shipping I was able to explore an entire vertical stack using one architecture. Due to the AI race the OrangePi RV2 has now gone up in price but at release it cost $30 and shipped free. For about 7 dollars I got 50 CH32V003s with a debugger, the CH32H417 board is $20 on analog lamb and uses the same cheap (and official) debugger for the CH32V003 and the Baochip Dabao board (which I wrote a book about by the way check it out here (<a href="https://payhip.com/b/EwSZv">The Dabao Book - Payhip</a>) was $9.50 on crowd supply when I bought it, two with shipping from crowd supply cost me $35, under $100 in total. A debugger for an ARM part alone a Segger J-Link costs about $600, though I guess for that $100, and add another $100 to ship,so about $200 I could get an EDU edition J-link and no chips or boards. Yaay. </p>
-<p>Back to RISC-V, across all these parts, the base set is the same. So that means the same register model, same calling convention, same toolchain. Yes the extensions differ, but the thing is what I learned writing assembly on the ten cent CH32V003 part did not stop being true on any of the others. A dual core MCU, an SBC running Linux or an advanced custom security chip running a novel operating system. My skills were transferrable to the point that in each case within a few hours I had toolchains setup, could focus on my applications and when debugging I felt at home. All I need to work with them is the ISA manual and a C compiler. </p>
-<p>Now price the same journey on the other side, forget x86-64 and that duopoly, patent minefield, with multi-thousand dollar debug probes; we'll take a look at ARM.</p>
-<p>The equivalent to the CH32V003 is the Cortex-M0 is ARMv6-M so something like an STM32F030, step it up we have a Cortex-M7 which is ARMv7-M, to get an MMU in a part for Linux or SEL4 and Xous, you're looking at an application processor like the ARMv8-A.  These are different Arm profiles with significantly different privilege, exception, and system models, so moving up the stack involves substantially more relearning than simply enabling another RISC-V extension. Trust me I've used them all. </p>
-<p>And at the top of that range the gap is not even about learning curves. There is no Cortex-M microcontroller with an integrated USB 3.0 SuperSpeed PHY. The nearest dual core Arm part is an STM32H747, which is a fine chip and does not have one. If you need USB 3.0 you leave the microcontroller class entirely: an i.MX 8 or an RK3xxx, which means Cortex-A. You want an MMU, Linux, DDR, a PMIC, and a board you are not laying out in two layers. Or you keep the M7 and add an external bridge chip.</p>
-<p>The H417 evaluation board is around twenty dollars. The H747 in TFBGA240 carries a twenty week manufacturer lead time, chip only, costs about the same, before you have anything to plug in, and Mouser asks for ID before you can order, Digikey has also been known to deny people parts depending on where they are and their name as Hussein Ali, well known Youtuber from NorthridgeFix describes <a href="https://www.youtube.com/watch?v=C1oqFmtatEk">Starlink Repair - Digi-key refused my order.</a>. Oh and it's about US $60-100+ to ship to my location. I can pick up H417s on the official WCH store on Aliexpress with free shipping and no verification hullabalu. We haven't even started talking about the Cortex-A parts that have MMUs or thier debugging tools and ecosystem fragmentation.</p>
-<h2>The Boundary Is Not Technical</h2>
-<p>Here is the part that undercuts his framing most directly, and it has nothing to do with encodings. He treats the gap between a small core and a large one as an architectural fact, something that falls out of opposed requirements. On ARM chips it is not an architectural fact. It is a PRODUCT boundary, and it is enforced by licensing. Has anyone tried adding an MMU to a Cortex-M? The physical tradeoffs are real, the difference is that with RISC-V, the ISA owner does not decide for you where that boundary must be drawn. If you want virtual memory on ARM you license a Cortex-A instead, which is a different core family, a different profile, a different negotiation, and a different royalty. There is no incremental path. there is a wall, with a sales team on the other side of it.</p>
-<p>Compare what happened with Baochip. The RISC-V privileged specification defines supervisor mode and Sv32 paging as optional things an implementation may provide. VexRISC-V is an open core, somebody added an MMU to it. bunnie built a chip around it and runs a microkernel with real process isolation on it that me in Trinidad a country who's name does not even come up in ISA circles can experiment with at low cost and teach to other people in the region.</p>
-<p>That's what freedom looks like. </p>
-<p>Nobody asked permission, nobody signed anything, nobody pays a royalty per unit shipped and anybody can learn down to the RTL the silicon is built on.  So when Grinberg in his article lists privilege separation among the things the cheap end does not need and therefore does not get, it is describing a property of ARM's product segmentation and attributing it to instruction set design. On RISC-V it is a checkbox in the privileged spec, you leave it off in a ten cent part because it costs area you do not want to spend, and you turn it on when you do, and the instruction set underneath is the same either way.</p>
-<p>That is the real difference between the two ecosystems, and it is why "one ISA cannot serve both ends" reads differently depending on which side you are standing on. On one side the ends are separated by physics and cost, on the other they are separated by physics, cost, and a contract.</p>
-<h2>The Thing He Calls Fragmentation</h2>
-<p>Before I close I want to address his stance on fragmentation. He is not wrong that the extension mechanism fragments the standard. Zcb splitting off from C is annoying and Zicsr not being implied by the base is annoying. Vendors adding proprietary interrupt hardware does fragment things further, I learned first hand porting NuttX to the CH32V307 <a href="https://rvembedded.com/blog_post/3/">Porting Apache NuttX RTOS to the WCH CH32V307: A Deep Dive into the PFIC and Everything That Went Wrong</a>. </p>
-<p>But that mechanism is the answer to his own opening question. The reason one instruction set can sit in a ten cent part with sixteen registers and also in a chip running a protected multi-process operating system is precisely that the small part is not carrying the large part's baggage. There is no compromise core in the middle serving both badly, which is what "diametrically opposed requirements" would normally force. Fragmentation and scalability are the same property, you do not get one without the other and whether the tradeoff was worth it is a fair argument and I do not think it has an obvious answer.</p>
-<p>What I do think is that he is right about the important part, and right in a way that favours the thing he is criticising. RISC-V is not going to take the cheap microcontroller space because its encoding is elegant. It is going to take it because the part costs ten cents, and because the ladder above it is the same instruction set all the way up. It is going there because an embedded engineer in a 3rd world country can shine a cheap LED and see the transistors in the silicon, <a href="https://www.bunniestudios.com/blog/2023/infra-red-in-situ-iris-inspection-of-silicon/">Infra-Red, In Situ (IRIS) Inspection of Silicon « bunnie's blog</a> and get 50 chips with a debugger and free development tools for the price of a cup of coffee and shipped free. It also means that world class engineers can design MMUs onto chips that the gate keepers will never give a license for. </p>
-<p>He writes that this will happen "not due to its ISA design, but despite it," and he means it as a mild indictment. Read it from here and it is not one. Winning on price and availability is not a lesser way to win. It decides who is in the room. An architecture that arrives in my country at ten cents a part, with an open toolchain and no license to negotiate, puts embedded systems within reach of people who were previously going to watch somebody else's demo board and consume thier products without ever being able to match what they have access to. That's the power of freedom, openness and is democracy in it's truest sense. </p>
-<p>That is a better reason than elegance. and I want to tell Mr Grinberg, that the word priviledge he tosses around in his article also extends beyond the ISA depending on where you are in the world.</p>
-<p>Nuff said. </p>
-<hr>
-<p><em>Armstrong Subero is an embedded systems engineer and published author with Apress/Springer. He builds the <a href="https://rvembedded.com/">Rovari</a> RISC-V education platform from Trinidad and Tobago. </em></p>
-</hr>
-<p>Posted on: August 16, 2026</p>
-<p><a href="https://news.ycombinator.com/item?id=49321717">Comments on Hacker News</a></p>]]></content:encoded>
-      <guid isPermaLink="true">https://rvembedded.com/blog_post/12/</guid>
-      <category>Hacker News</category>
-      <pubDate>Sun, 16 Aug 2026 17:01:07 +0000</pubDate>
-      <media:content url="https://rvembedded.com/media/blog_images/1749959336207.jpg" type="image/jpeg" medium="image"/>
-      <dc:creator>Narishma</dc:creator>
     </item>
   </channel>
 </rss>
