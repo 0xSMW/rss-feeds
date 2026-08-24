@@ -8,7 +8,23 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 23 Aug 2026 22:29:54 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 24 Aug 2026 07:52:25 +0000</lastBuildDate>
+    <item>
+      <title>Users Question TSMC Role in Xiaomi XRING Chips</title>
+      <link>https://www.digitimes.com/news/a20260115VL209/xiaomi-xring-3nm-processor-tsmc.html</link>
+      <description>Replies question TSMC fabrication of Xiaomi XRING O100 and related chips.</description>
+      <content:encoded><![CDATA[<p><img src="https://digg.com/tech/7pyrtpmc/opengraph-image" alt="Users Question TSMC Role in Xiaomi XRING Chips"/></p>
+<p>Replies question TSMC fabrication of Xiaomi XRING O100 and related chips.</p>
+<p><strong>Original source:</strong> <a href="https://www.digitimes.com/news/a20260115VL209/xiaomi-xring-3nm-processor-tsmc.html">https://www.digitimes.com/news/a20260115VL209/xiaomi-xring-3nm-processor-tsmc.html</a></p>
+<p><strong>Digg story:</strong> <a href="https://digg.com/tech/7pyrtpmc">https://digg.com/tech/7pyrtpmc</a></p>
+<p>@zephyr_z9 asked whether the XRING O100 is TSMC fabbed after a generated headline described a 6nm AI accelerator using wafer-on-wafer NPU-DRAM bonding at 1.4µm pitch for 1.22 TB/s bandwidth and 330 tokens-per-second inference in a new Local AI Host device. @teortaxesTex raised the same question about the 3nm SoC and referenced Codex commentary on legality while noting a generated headline on XRING O100 and D100 chips that highlighted 6nm specs with 3D stacking plus a 3nm intelligent-driving chip and TSMC speculation.</p>
+<ul><li><strong>Views:</strong> 3,257</li><li><strong>Likes:</strong> 17</li><li><strong>Bookmarks:</strong> 1</li><li><strong>Replies:</strong> 1</li><li><strong>Posts:</strong> 2</li></ul>
+<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/teortaxesTex">Teortaxes▶️ (DeepSeek 推特🐋铁粉 2023 – ∞)</a></li><li><a href="https://x.com/zephyr_z9">Zephyr</a></li></ul>]]></content:encoded>
+      <guid isPermaLink="true">https://www.digitimes.com/news/a20260115VL209/xiaomi-xring-3nm-processor-tsmc.html</guid>
+      <category>Digg AI from X</category>
+      <pubDate>Mon, 24 Aug 2026 07:52:25 +0000</pubDate>
+      <media:content url="https://digg.com/tech/7pyrtpmc/opengraph-image" type="image/jpeg" medium="image"/>
+    </item>
     <item>
       <title>RL-Trained Coding Model Generates JavaScript Paintings</title>
       <link>https://x.com/kickingkeys/status/2091570990048276897</link>
