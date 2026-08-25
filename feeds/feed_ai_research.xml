@@ -863,23 +863,124 @@ the point where they asked me why I kept asking so many questions.</p><p>Now I l
       <pubDate>Wed, 12 Aug 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Imagine Video 1.5 with References</title>
-      <link>https://x.ai/news/grok-imagine-video-1-5-references</link>
-      <description>Our best video model, now with text, image, and voice references — generating up to 1080p.</description>
-      <content:encoded><![CDATA[<p>When we launched <a href="https://x.ai/news/grok-imagine-video-1-5">Imagine Video 1.5</a> last month, it was our best video model yet — better motion, better physics, and better audio. Today it goes further: image and voice references, video from a prompt alone, and native 1080p generation.</p>
-<p>Image and voice references start today in the US for SuperGrok Heavy and SuperGrok Plus on <a href="https://grok.com/imagine?referrer=website&amp;campaign=imagine-video-1-5-references-blog">grok.com/imagine</a> and <a href="https://apps.apple.com/app/grok-ai-chat-video/id6670324846">iOS</a>, rolling out to all tiers over the next few days.</p>
-<h2 id="text-to-video-and-native-1080p">Text-to-Video and native 1080p</h2>
-<p>Describe the shot — no starting image needed. Text-to-video pairs our image generation with image-to-video. Native 1080p is now supported with text-to-video and image-to-video. Text-to-video and native 1080p are generally available on grok.com/imagine, iOS, and <a href="https://play.google.com/store/apps/details?id=ai.x.grok">Android</a>.</p>
-<h2 id="voice-consistency">Voice consistency</h2>
-<p>Pass in a character image and a voice reference, and both hold — the same face and the same voice in every scene.</p>
-<img alt="Reference photo of the character" src="https://x.ai/_next/image?url=https%3A%2F%2Fmedia.x.ai%2Fv1%2Fwebsite%2Fonevoice-character-f7d66216.jpg&amp;w=3840&amp;q=75"/>
-<h2 id="multi-reference">Multi-Reference</h2>
-<p>Each reference image locks one thing in place — a face, a product, a location. Keep a character and swap the scene, keep the scene and swap the character, or hold both and change only the action. Up to seven references per generation.</p>
-<figure><img alt="Reference photo of a man" src="https://x.ai/_next/image?url=https%3A%2F%2Fmedia.x.ai%2Fv1%2Fwebsite%2Fpodcaster-character-f50cf3a1.jpg&amp;w=3840&amp;q=75"/><p>Character</p><img alt="Reference photo of a podcast studio" src="https://x.ai/_next/image?url=https%3A%2F%2Fmedia.x.ai%2Fv1%2Fwebsite%2Fpodcaster-scene-5d14579c.jpg&amp;w=3840&amp;q=75"/><p>Scene</p></figure>
-<figure><img alt="Reference photo of a man" src="https://x.ai/_next/image?url=https%3A%2F%2Fmedia.x.ai%2Fv1%2Fwebsite%2Fpodcaster-character-f50cf3a1.jpg&amp;w=3840&amp;q=75"/><p>Character</p><img alt="Reference photo of a warmly lit podcast studio with a leather armchair" src="https://x.ai/_next/image?url=https%3A%2F%2Fmedia.x.ai%2Fv1%2Fwebsite%2Fpodcaster-2-scene-6ac920e9.png&amp;w=3840&amp;q=75"/><p>Scene</p></figure>
-<figure><img alt="Reference photo of a woman in a grey sweater" src="https://x.ai/_next/image?url=https%3A%2F%2Fmedia.x.ai%2Fv1%2Fwebsite%2Fpodcaster-3-character-12939291.jpg&amp;w=3840&amp;q=75"/><p>Character</p><img alt="Reference photo of a warmly lit podcast studio with a leather armchair" src="https://x.ai/_next/image?url=https%3A%2F%2Fmedia.x.ai%2Fv1%2Fwebsite%2Fpodcaster-2-scene-6ac920e9.png&amp;w=3840&amp;q=75"/><p>Scene</p></figure>
-<h2 id="in-the-api">In the API</h2>
-<p>Image references, text-to-video, and native 1080p are live in the <a href="https://docs.x.ai/developers/model-capabilities/video/generation">xAI API</a> with our best video model, <code>grok-imagine-video-1.5</code>. Voice reference support is available <a href="https://x.ai/contact-sales?interest=imagine">on request</a>.</p>
+      <title>Introducing Grok Voice Think Fast 2.0</title>
+      <link>https://x.ai/news/grok-voice-think-fast-2</link>
+      <description>Introducing our most capable speech-to-speech voice model.</description>
+      <content:encoded><![CDATA[<p>Today, we're announcing Grok Voice Think Fast 2.0, our next-generation voice model with improved intelligence, transcription accuracy, and conversational capabilities.</p>
+<h2 id="intelligence">Intelligence</h2>
+<p>Grok Voice Think Fast 2.0 is our most intelligent voice model yet, building on its predecessor with meaningful gains in speech reasoning, conversational ability, and tool use reliability.</p>
+<table><caption>Speech-to-speech benchmark comparison between Grok Voice Think Fast 2.0 and competing models, per Artificial Analysis.</caption><thead><tr><th>Benchmark</th><th>Grok Voice Think Fast 2.0 (this release)</th><th>Grok Voice Think Fast 1.0</th><th>GPT-Realtime-2.1 (High)</th><th>Gemini 3.1 Flash (High)</th></tr></thead><tbody><tr><th>OverallAA Speech-to-Speech Quality Index</th><td>82.9%</td><td>75.7%</td><td>79.1%</td><td>69.5%</td></tr><tr><th>Speech ReasoningBig Bench Audio</th><td>97.2%</td><td>97.1%</td><td>96.0%</td><td>96.6%</td></tr><tr><th>Conversational DynamicsFull Duplex Bench</th><td>95.1%</td><td>77.8%</td><td>95.7%</td><td>74.3%</td></tr><tr><th>Agentic Performanceτ-voice Bench</th><td>56.5%</td><td>52.1%</td><td>45.7%</td><td>37.7%</td></tr><tr><th>SpeedTime to First Audio</th><td>0.70s</td><td>1.25s</td><td>—</td><td>2.98s</td></tr></tbody></table>
+<h2 id="transcription-accuracy">Transcription Accuracy</h2>
+<p>Grok Voice Think Fast 2.0 outperforms even dedicated, state of the art transcription models when it comes to accuracy. In our evaluation across thousands of short phrases in 24 different languages, we've demonstrated a 1.5–2.0× improvement relative to Deepgram Nova 3 and ElevenLabs Scribe v2, and a 1.4× improvement relative to Grok Voice Think Fast 1.0.</p>
+<p>The gap between Grok Voice Think Fast 2.0 and dedicated speech-to-text models widens to ~10× in noisy settings. We've focused on making Grok Voice Think Fast 2.0 perform exceptionally well in real-world settings, with substantial background noise and telephony compression.</p>
+<h2 id="reasoning-efficiency">Reasoning Efficiency</h2>
+<p>Grok Voice Think Fast models have a unique characteristic: they reason through queries while speaking. Reasoning in parallel with speech makes the model substantially smarter than other speech-to-speech models with no impact on latency.</p>
+<p>Grok Voice Think Fast 2.0 has been trained to be very efficient with reasoning tokens relative to its predecessor. In production settings, this means that tool calls are snappier, usually executing before the end of the agent's first sentence.</p>
+<h2 id="conversational-capability">Conversational Capability</h2>
+<p>We've trained Grok Voice Think Fast 2.0 to be a better conversationalist. By using extensive reinforcement learning to push the model towards patterns we see in real human conversation, we've found that broadly the model speaks in shorter sentences, asks one question at a time, and avoids fluff. From the user's perspective, conversations with the agent are simple and fluid, even though the model is often guiding the conversation through complex workflows and thinking several steps ahead behind the scenes.</p>
+<h2 id="migration--pricing">Migration &amp; Pricing</h2>
+<p>Grok Voice Think Fast 2.0 is expected to result in improved performance across almost all use cases without any edits to existing prompts. In A/B testing this model on Starlink (<a href="tel:+18884678275">+1 888 GO STARLINK</a>), we've seen a significant increase in sales conversion rate and support containment rate.</p>
+<p>On August 5, 2026, <code>grok-voice-latest</code> will move from <code>grok-voice-think-fast-1.0</code> to <code>grok-voice-think-fast-2.0</code>. No action needed to upgrade. To stay on Grok Voice Think Fast 1.0, pin <code>grok-voice-think-fast-1.0</code> before then.</p>
+<p>We believe pricing should be predictable and transparent. Grok Voice Think Fast 2.0 is priced at <a href="https://docs.x.ai/developers/pricing?campaign=think-fast-2-blog#voice-api-pricing">$0.08 / min of audio</a>.</p>]]></content:encoded>
+      <guid isPermaLink="true">https://x.ai/news/grok-voice-think-fast-2</guid>
+      <category>News</category>
+      <pubDate>Wed, 12 Aug 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Introducing Build Mode</title>
+      <link>https://x.ai/news/grok-build-mode</link>
+      <description>Create and share websites, apps, games, and interactive dashboards. Now in Early Beta for SuperGrok Heavy subscribers on grok.com, iOS, and Android.</description>
+      <content:encoded><![CDATA[<p>Today we're introducing <strong>Build Mode</strong>, a new way to create with <a href="https://grok.com/?referrer=website">Grok</a>. Tell Grok an idea, and it builds a working version live in your chat, on the web or your phone. When it's ready, publish it to a link anyone can open. Build Mode is available today in Early Beta for <strong>SuperGrok Heavy</strong> subscribers on the web, iOS, and Android.</p>
+<h2 id="describe-what-you-want">Describe what you want</h2>
+<p>Grok writes the code and builds a working preview inside the conversation. From there it keeps building with you: change the layout, add a feature, restyle anything.</p>
+<p>There's nothing to install and nothing to configure, and you never have to touch the code unless you want to.</p>
+<h2 id="what-people-are-building">What people are building</h2>
+<ul>
+<li><strong>Websites.</strong> Landing pages, portfolios, and business sites.</li>
+<li><strong>Apps.</strong> Working tools with real state and logic: planners, trackers, calculators, simulations, and internal utilities.</li>
+<li><strong>Games.</strong> Arcade racers, puzzles, and interactive 3D worlds.</li>
+<li><strong>Interactive dashboards.</strong> Leverage connectors so Grok can pull in the data that matters to your business and turn it into live charts and filterable views you can explore and share immediately.</li>
+</ul>
+<p>Publish to a grok.me link or a custom domain you own, then share it with your team or anyone else who needs it.</p>
+<h2 id="available-today-in-early-beta">Available today in Early Beta</h2>
+<p>During the Early Beta, Build Mode is available to <strong>SuperGrok Heavy</strong> subscribers. To try it, open <a href="https://grok.com/?referrer=website">grok.com</a> or the Grok app on iOS and Android and choose <strong>Build</strong> from the mode switcher. You can also learn more on the <a href="https://x.ai/grok/build-mode">Build Mode page</a>.</p>]]></content:encoded>
+      <guid isPermaLink="true">https://x.ai/news/grok-build-mode</guid>
+      <category>News</category>
+      <pubDate>Wed, 12 Aug 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Grok 4.5 in GitHub Copilot</title>
+      <link>https://x.ai/news/grok-github-copilot</link>
+      <description>Grok 4.5, our smartest coding model, is now available in GitHub Copilot.</description>
+      <content:encoded><![CDATA[<p>Grok 4.5 is now available in GitHub Copilot for millions of developers who use VSCode and GitHub products every day.</p>
+<h3 id="getting-started">Getting started</h3>
+<p>GitHub Copilot spans multiple products, including cloud agents, the Copilot CLI, and the VSCode IDE. From the model picker, simply pick "Grok 4.5" to start using our latest coding model. For some businesses and enterprises, you will need to enable the model from Copilot settings.</p>
+<p>Grok 4.5 is also available directly from the <a href="https://console.x.ai/?utm_source=website&amp;utm_medium=referral&amp;utm_campaign=grok-github-copilot-blog">SpaceXAI console</a> at $2 per million input tokens and $6 per million output tokens. For more on the model, including coding performance, read the <a href="https://x.ai/news/grok-4-5">Grok 4.5 announcement</a>.</p>]]></content:encoded>
+      <guid isPermaLink="true">https://x.ai/news/grok-github-copilot</guid>
+      <category>News</category>
+      <pubDate>Wed, 12 Aug 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Grok Build is Now Open Source</title>
+      <link>https://x.ai/news/grok-build-open-source</link>
+      <description>Explore the harness behind our coding agent and TUI.</description>
+      <content:encoded><![CDATA[<p>We're open-sourcing Grok Build, SpaceXAI's coding agent and TUI. The source is now available on <a href="https://github.com/xai-org/grok-build">GitHub</a>.</p>
+<p>Publishing the code is the most direct way to build toward a robust and reliable harness. You can read the source to see exactly how it works, from context assembly to tool-call dispatch.</p>
+<p>Open-sourcing also makes the harness easier to explore and extend: if you're working with skills, plugins, hooks, MCP servers, or subagents, the source is the definitive reference for how each is loaded and invoked.</p>
+<p>Finally, Grok Build can now run fully local-first: compile it yourself, point it at your own local inference, and drive everything from your <code>config.toml</code>.</p>
+<h2 id="about-the-codebase">About the codebase</h2>
+<p>The published source includes:</p>
+<ul>
+<li>The agent loop: how context is assembled, how model responses are parsed, and how tool calls are dispatched</li>
+<li>The tools: how the agent reads, edits, and searches code, and how it runs commands</li>
+<li>The terminal UI: rendering, input handling, plan review, and the inline diff viewer</li>
+<li>The extension system: skills, plugins, hooks, MCP servers, and subagents</li>
+</ul>
+<p>Explore the source on <a href="https://github.com/xai-org/grok-build">GitHub</a>.</p>]]></content:encoded>
+      <guid isPermaLink="true">https://x.ai/news/grok-build-open-source</guid>
+      <category>News</category>
+      <pubDate>Wed, 12 Aug 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>21 New Flagship Grok Voices</title>
+      <link>https://x.ai/news/new-flagship-voices</link>
+      <description>New multilingual voices for Grok Voice, plus improved naturalness for the original five.</description>
+      <content:encoded><![CDATA[<p>Today, we're releasing <strong>21 new flagship voices</strong> for Grok Voice, joining the original five. All of them are multilingual and available now in the realtime <a href="https://docs.x.ai/developers/model-capabilities/audio/speech-to-speech?campaign=new-voices-blog">Voice Agent API</a>, the <a href="https://docs.x.ai/developers/model-capabilities/audio/text-to-speech?campaign=new-voices-blog">Text to Speech API</a>, and the new <a href="https://console.x.ai/team/default/voice/agents?campaign=new-voices-blog&amp;utm_source=website&amp;utm_medium=referral&amp;utm_campaign=new-voices-blog"><strong>Grok Voice Agent Builder</strong></a>. Meet the newcomers in the lineup:</p>
+<h2 id="a-voice-for-every-use-case">A voice for every use case</h2>
+<p>Each voice was cast for a specific job: support, characters, commentary, advertising, education. <a href="https://docs.x.ai/developers/model-capabilities/audio/text-to-speech?campaign=new-voices-blog">Speech tags</a> like <code>[pause]</code> and <code>&lt;whisper&gt;</code> can be used to control the delivery. Hear five of them in their element:</p>
+<p>Every voice is natively multilingual, supporting all of Grok Voice's 25+ languages.</p>
+<h2 id="improved-naturalness-for-the-original-five">Improved naturalness for the original five</h2>
+<p>Ara, Eve, Leo, Rex, and Sal got an upgrade alongside the new voices. They've been retrained with an improved recipe, so pacing, phrasing, and emphasis are more natural.</p>
+<p>To build a custom voice agent with one of the new voices, use the <strong>Grok Voice Agent Builder</strong> in the <a href="https://console.x.ai/team/default/voice/agents?campaign=new-voices-blog&amp;utm_source=website&amp;utm_medium=referral&amp;utm_campaign=new-voices-blog">xAI console</a>. You can also <a href="https://docs.x.ai/developers/model-capabilities/audio/custom-voices?campaign=new-voices-blog">clone your own voice</a> from about a minute of audio.</p>]]></content:encoded>
+      <guid isPermaLink="true">https://x.ai/news/new-flagship-voices</guid>
+      <category>News</category>
+      <pubDate>Wed, 12 Aug 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Grok Imagine Video 1.5</title>
+      <link>https://x.ai/news/grok-imagine-video-1-5</link>
+      <description>Improved quality at even faster speeds.</description>
+      <content:encoded><![CDATA[<p>Grok Imagine Video 1.5 is now generally available on the <a href="https://console.x.ai/team/default/video?flow=explore&amp;campaign=imagine-video-1-5-blog&amp;utm_source=website&amp;utm_medium=referral&amp;utm_campaign=imagine-video-1-5-blog">Imagine API</a>. We've also rolled out Video 1.5 Fast on <a href="https://grok.com/imagine?referrer=website&amp;campaign=imagine-video-1-5-blog">grok.com/imagine</a> and our <a href="https://apps.apple.com/app/grok-ai-chat-video/id6670324846">iOS</a> and <a href="https://play.google.com/store/apps/details?id=ai.x.grok">Android</a> apps. These are our best image-to-video models yet: better motion, better physics, better audio, at the fastest speeds. We’re also adding features to enhance your creative workflow in Grok Imagine.</p>
+<p>Compared to the previous model, 1.5 improves across every dimension that matters for real creative work:</p>
+<h2 id="audio-and-speech">Audio and speech</h2>
+<p>Sound effects, ambience, and dialogue are generated in the same pass and land on the action. Speech is clearer and better synced.</p>
+<h2 id="motion-and-physics">Motion and physics</h2>
+<p>Movement holds together over the length of a clip — fewer warps, more believable weight and momentum.</p>
+<h2 id="speed">Speed</h2>
+<p>Grok Imagine Video 1.5 Fast almost doubles generation speed: it produces 6-second, 720p videos in about 25 seconds, down from 40+ seconds in our previous model.</p>
+<h2 id="behind-the-scenes---odyssey">Behind the Scenes - Odyssey</h2>
+<p>Take a look behind the scenes at how David Thompson (<a href="https://x.com/heavypulp">@heavypulp</a>) made a trailer worthy of the big screen entirely with Grok Imagine 1.5:</p>
+<img src="https://x.ai/_next/image?url=https%3A%2F%2Fdata.x.ai%2Freleases%2Fimagine%2Fvideo-1-5%2Fodyssey-trailer-poster.jpg&amp;w=3840&amp;q=75"/>
+<h2 id="enhanced-productivity">Enhanced productivity</h2>
+<p>Alongside Imagine Video 1.5, we're rolling out new features over the next few days to improve your creative workflow:</p>
+<h3 id="projects">Projects</h3>
+<p>Organize your work into Projects that appear on the left sidebar.</p>
+<h3 id="multiple-agents">Multiple agents</h3>
+<p>Kick off multiple agents in parallel on your projects. Instead of waiting for one generation to finish before starting the next, you can run several prompts at once and let them work for you.</p>
+<h3 id="search">Search</h3>
+<p>Find any image or video you've made by searching your library — no more scrolling to track down that one clip.</p>
+<h2 id="now-out-of-preview-in-the-api">Now out of preview in the API</h2>
+<p>Imagine Video 1.5 is out of preview and generally available in the <a href="https://docs.x.ai/developers/model-capabilities/video/generation">xAI API</a> as <code>grok-imagine-video-1.5</code>. Give it a starting image, describe the motion, and choose your resolution and duration.</p>
 <pre><code>import os
 import xai_sdk
 
@@ -888,9 +989,8 @@ client = xai_sdk.Client(api_key=os.getenv("XAI_API_KEY"))
 response = client.video.generate(
     prompt="Slow cinematic push-in as embers drift across the battlefield and the helmet's crest stirs in the wind",
     model="grok-imagine-video-1.5",
-    reference_image_urls=["https://example.com/helmet.jpg"],
-    duration=6,
-    aspect_ratio="16:9",
+    image_url="https://your-host.com/helmet.jpg",
+    duration=10,
     resolution="720p",
 )
 
@@ -898,334 +998,188 @@ print(response.url)
 </code></pre>
 <h2 id="try-it-today">Try it today</h2>
 <img alt="iOS App Store Icon" height="21" src="https://media.x.ai/cdn-cgi/image/fit=scale-down,onerror=redirect,width=21,height=21,f=auto/v1/website/app-store-cfb2b588.png" width="21"/>
-<img alt="Android Play Store Icon" height="21" src="https://media.x.ai/cdn-cgi/image/fit=scale-down,onerror=redirect,width=21,height=21,f=auto/v1/website/play-store-0a6de758.png" width="21"/>]]></content:encoded>
-      <guid isPermaLink="true">https://x.ai/news/grok-imagine-video-1-5-references</guid>
+<img alt="Android Play Store Icon" height="21" src="https://media.x.ai/cdn-cgi/image/fit=scale-down,onerror=redirect,width=21,height=21,f=auto/v1/website/play-store-0a6de758.png" width="21"/>
+<p>We can't wait to see what you make.</p>]]></content:encoded>
+      <guid isPermaLink="true">https://x.ai/news/grok-imagine-video-1-5</guid>
       <category>News</category>
       <pubDate>Wed, 12 Aug 2026 00:00:00 +0000</pubDate>
-      <media:content url="https://x.ai/_next/image?url=https%3A%2F%2Fmedia.x.ai%2Fv1%2Fwebsite%2Fonevoice-character-f7d66216.jpg&amp;amp;w=3840&amp;amp;q=75" type="image/jpeg" medium="image"/>
+      <media:content url="https://x.ai/_next/image?url=https%3A%2F%2Fdata.x.ai%2Freleases%2Fimagine%2Fvideo-1-5%2Fodyssey-trailer-poster.jpg&amp;amp;w=3840&amp;amp;q=75" type="image/jpeg" medium="image"/>
     </item>
     <item>
-      <title>Grok in Google Workspace</title>
-      <link>https://x.ai/news/introducing-google-workspace-addon</link>
-      <description>Use the Grok add-on for Google Workspace to work directly in Sheets, Slides, and Docs.</description>
-      <content:encoded><![CDATA[<p><strong>Today we're bringing Grok into Google Workspace.</strong> One add-on puts Grok beside the file you have open in Sheets, Slides, and Docs.</p>
-<h2 id="sheets">Sheets</h2>
-<p>Ask a question and Grok answers from the spreadsheet itself, citing the cells it used. It writes and fills formulas, inserts charts, and reruns scenarios when an assumption changes, so updating a model no longer means rebuilding it. Every change is a normal edit you can check and undo.</p>
-<h2 id="slides">Slides</h2>
-<p>Grok turns an outline into a working presentation, researching from the web or X and adding diagrams or images where they help. It extends a deck in its existing theme and rewrites titles so each slide makes its point. The result is regular, editable slides, not an export to fix up.</p>
-<h2 id="docs">Docs</h2>
-<p>Grok writes where the writing happens. It turns rough notes into a structured draft with real headings and lists, fixes grammar in place, and keeps style consistent across a long file. With <a href="https://grok.com/connectors">connectors</a> enabled, it can pull from recent emails or files in Google Drive.</p>
+      <title>Grok for PowerPoint</title>
+      <link>https://x.ai/news/introducing-powerpoint-addin</link>
+      <description>Grok now works inside Microsoft PowerPoint — turn outlines into slides, expand the deck, and tighten the narrative without leaving the app.</description>
+      <content:encoded><![CDATA[<p><strong>Today we're bringing Grok into Microsoft PowerPoint.</strong> Using the add-in next to your deck, use Grok to research, write, and perfect your slides.</p>
+<h2 id="go-from-prompts-to-powerpoints">Go from prompts to PowerPoints</h2>
+<p>Share an outline with Grok to generate full slide decks, complete with research from web or X searches, diagrams, and even images. Or, work with Grok to add single slides, apply styles and themes, or restructure sections with a single instruction. Grok will come back to you to ask clarifying questions.</p>
+<h3 id="research-writing-and-styling">Research, writing, and styling</h3>
+<p>Grok can help you improve styling, tighten slide narratives, and even search for up-to-date information from the web. The add-in is also able to leverage your <a href="https://grok.com/connectors">Grok connectors</a> - ask it to write slides based on recent emails, or files in your SharePoint or Google Drive.</p>
 <h2 id="get-started">Get started</h2>
-<p>Grok for Google Workspace is a free add-on, and one install from the <a href="https://workspace.google.com/marketplace/app/grok/660927092109">Google Workspace Marketplace</a> covers Sheets, Slides, and Docs. Also available for Microsoft 365 in <a href="https://x.ai/grok/word">Word</a>, <a href="https://x.ai/grok/excel">Excel</a>, <a href="https://x.ai/grok/powerpoint">PowerPoint</a>, and <a href="https://x.ai/grok/outlook">Outlook</a>.</p>]]></content:encoded>
-      <guid isPermaLink="true">https://x.ai/news/introducing-google-workspace-addon</guid>
+<p>Grok for PowerPoint is a free Microsoft 365 add-in. <a href="https://marketplace.microsoft.com/en-us/product/office/WA200011057?tab=Overview">Add it from the Microsoft Marketplace</a>, and work directly with Grok in your presentations. Also available for <a href="https://x.ai/grok/word">Word</a> and <a href="https://x.ai/grok/excel">Excel</a>.</p>]]></content:encoded>
+      <guid isPermaLink="true">https://x.ai/news/introducing-powerpoint-addin</guid>
       <category>News</category>
       <pubDate>Wed, 12 Aug 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Workflows in Grok Build</title>
-      <link>https://x.ai/news/workflows</link>
-      <description>Grok Build can now write and run workflows: orchestration scripts that fan a task out across hundreds of parallel agents, verify the results, and report back in one background run.</description>
-      <content:encoded><![CDATA[<p>Grok Build can now run <strong>workflows</strong>: describe a large task in plain language, and Grok plans it, fans it out across hundreds of parallel agents in the background, and reports back when everything is done. Your session stays free the whole time.</p>
-<h2 id="when-to-use-a-workflow">When to use a workflow</h2>
-<p>Workflows are built for complex, multi-faceted tasks a single conversation can't hold: reviewing every feature in a large PR, triaging the last 100 issues, auditing a codebase for one class of bug. If the work splits into many independent pieces and should end in one clear report, ask for a workflow.</p>
-<h2 id="how-it-works">How it works</h2>
-<p>Grok plans the task as a small script: the phases of work, the agents in each phase, and how their results roll up. Each agent starts with a clean, focused context, and the plan can build in checks a single pass can't, like independent skeptics verifying every finding before it reaches the final report.</p>
-<p>Runs get a budget of 128 agents, and up to 1,024 for big jobs. Progress is saved as the run goes, so pausing and resuming never redoes finished work. Run <code>/workflows</code> to watch it live, phase by phase, with per-agent token counts.</p>
-<h2 id="saving-and-reusing-workflows">Saving and reusing workflows</h2>
-<p>Grok authors the workflow from your request, smoke-checks it before launching, and improves it between runs; you never write the script yourself. When one works, keep it: workflows in <code>.grok/workflows/</code> are shared with your team, and ones in <code>~/.grok/workflows/</code> follow you everywhere. Each saved workflow becomes its own slash command that takes arguments, so once you keep the PR review from the demo above, the next review is just <code>/pr-review 5137</code>.</p>
-<p><code>/deep-research</code> ships built in: it fans research questions out to parallel investigators, verifies every claim against its sources, and returns a cited report.</p>
-<h2 id="try-it-today">Try it today</h2>
-<p>Some examples to try:</p>
-<ul>
-<li>"use a workflow to review each feature in this PR"</li>
-<li>"triage the last 100 Linear issues and give me a top-10 action list"</li>
-<li>"audit every route handler for missing auth checks, and verify each finding"</li>
-</ul>]]></content:encoded>
-      <guid isPermaLink="true">https://x.ai/news/workflows</guid>
-      <category>News</category>
-      <pubDate>Wed, 12 Aug 2026 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Bringing Grok 4.5 to iOS, Android, Web, and X</title>
-      <link>https://x.ai/news/grok-4-5-everywhere</link>
-      <description>Grok 4.5, our most intelligent model yet, is now on grok.com, X, iOS, and Android.</description>
-      <content:encoded><![CDATA[<p><strong>Grok 4.5 now powers Grok wherever you use it</strong>, live today on <a href="https://grok.com/?referrer=website">grok.com</a>, on X, and in the Grok apps for iOS and Android.</p>
-<h2 id="smarter-answers-to-any-question">Smarter answers to any question</h2>
-<p>Grok 4.5 is our most capable model yet. In everyday use, it follows what you're actually asking, keeps track of longer conversations, and gives clearer, more reliable answers. Ask it to explain something unfamiliar, weigh a big purchase, plan a trip, or dig into a topic you're curious about. And on harder questions, it reasons more efficiently, so the answer arrives sooner.</p>
-<h2 id="for-all-your-knowledge-work">For all your knowledge work</h2>
-<p>Grok 4.5 can also take a task from start to finish. It can build out a working spreadsheet, turn an outline into clean slides and diagrams, draft clear prose, and pull the key points from a long PDF, whether you're at your desk or on your phone.</p>
-<p>Grok also works directly inside <a href="https://x.ai/grok/word">Word</a>, <a href="https://x.ai/grok/excel">Excel</a>, <a href="https://x.ai/grok/powerpoint">PowerPoint</a>, and <a href="https://x.ai/grok/outlook">Outlook</a> with our Microsoft 365 add-ins. For more details on the model itself, read the <a href="https://x.ai/news/grok-4-5">Grok 4.5 announcement</a>.</p>]]></content:encoded>
-      <guid isPermaLink="true">https://x.ai/news/grok-4-5-everywhere</guid>
-      <category>News</category>
-      <pubDate>Wed, 12 Aug 2026 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Grok for Outlook</title>
-      <link>https://x.ai/news/introducing-outlook-addin</link>
-      <description>Use the Grok add-in for Microsoft Outlook to summarize long email threads, draft replies in your voice, and keep your inbox organized.</description>
-      <content:encoded><![CDATA[<p><strong>Today we're bringing Grok into Microsoft Outlook.</strong> The add-in puts an agent beside your inbox: it summarizes long threads, drafts replies in your voice, and keeps your mailbox organized.</p>
-<h2 id="catch-up-on-threads-and-clear-the-backlog">Catch up on threads and clear the backlog</h2>
-<p>Open a thread that ran all week and ask what happened. Grok comes back with the decisions, the owners, and what is still waiting on you. When the backlog builds up, it can sweep recent mail in one pass — archiving finished conversations, junking the noise, and calling out the messages that need a reply. The add-in also reads attachments and searches the web and X, so you can look things up without leaving Outlook.</p>
-<h3 id="replies-that-sound-like-you">Replies that sound like you</h3>
-<p>A few rough words are enough. Grok turns them into a reply that matches how you write, or composes a new message from scratch. From there, ask for tweaks: a tighter subject line, different recipients, a warmer tone. Nothing sends until you hit send.</p>
+      <title>Agent Dashboard in Grok Build</title>
+      <link>https://x.ai/news/agent-dashboard</link>
+      <description>Manage many coding sessions at once. See what each is doing, reply to the ones that need you, and dispatch new work.</description>
+      <content:encoded><![CDATA[<p>The Agent Dashboard puts every Grok Build session on one screen. See what each is doing, run them in parallel, and step in only when input is needed.</p>
+<p>Run <code>grok dashboard</code> from your shell, or <code>/dashboard</code> (<code>Ctrl+\</code>) from inside any session.</p>
+<h2 id="see-every-session-at-a-glance">See every session at a glance</h2>
+<p>The dashboard sorts sessions by state, with anything waiting for input pulled to the top, so you handle blockers first and leave the rest running. A quick scan shows what each session is doing and for how long, so you stay oriented without opening anything.</p>
+<p>Spread across repos? Group by working directory with <code>Ctrl+S</code>. Subagents roll up under the session that launched them, so the list shows the work you dispatched, not the fan-out beneath it.</p>
+<h2 id="peek-and-reply">Peek and reply</h2>
+<p>Select a row to peek at its latest output without leaving the dashboard, then reply from there. Idle sessions send immediately; active ones queue your message until the current turn ends.</p>
+<p>When a session requests approval or asks a question, its options appear inline. Answer with the arrow or number keys to continue. Multi-part questions arrive one at a time.</p>
+<h2 id="dispatch-new-sessions">Dispatch new sessions</h2>
+<p>The input at the bottom starts a new session. <code>Enter</code> dispatches it and keeps you on the dashboard; <code>Shift+Enter</code> dispatches and opens it right away. Before sending, set the model, start in plan mode, or let the session approve its own edits.</p>
+<h2 id="take-over-any-session">Take over any session</h2>
+<p>Open any session to take over its full conversation. Cycle to the next or previous session without returning to the list, then drop back to the dashboard when you're done. Closing the dashboard leaves every session running, and they're all there when you reopen it.</p>
 <h2 id="get-started">Get started</h2>
-<p>Grok for Outlook is a Microsoft 365 add-in, available today to all paid X and SuperGrok users. <a href="https://marketplace.microsoft.com/en-us/product/office/WA200011330?tab=Overview">Add it from the Microsoft Marketplace</a>, and work directly with Grok in your mailbox. Also available for <a href="https://x.ai/grok/word">Word</a>, <a href="https://x.ai/grok/excel">Excel</a>, and <a href="https://x.ai/grok/powerpoint">PowerPoint</a>.</p>]]></content:encoded>
-      <guid isPermaLink="true">https://x.ai/news/introducing-outlook-addin</guid>
+<p>The Agent Dashboard ships with Grok Build. Install it with a single command, then run <code>grok dashboard</code>, or <code>/dashboard</code> from any session you already have open.</p>]]></content:encoded>
+      <guid isPermaLink="true">https://x.ai/news/agent-dashboard</guid>
       <category>News</category>
       <pubDate>Wed, 12 Aug 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Grok for Excel</title>
-      <link>https://x.ai/news/introducing-excel-addin</link>
-      <description>Use the Grok add-in for Microsoft Excel to ask questions in plain English, write formulas, and run scenarios without leaving the workbook.</description>
-      <content:encoded><![CDATA[<p><strong>Today we're bringing Grok into Microsoft Excel.</strong> Install the add-in to ask questions in plain English, write formulas from a description, or run scenarios in the workbook you already have open.</p>
-<h2 id="ask-questions-about-your-data">Ask questions about your data</h2>
-<p>Select a range and ask Grok what moved, why, and what stands out. Answers cite the cells they came from, and charts can drop directly into the sheet beside the data.</p>
-<h3 id="write-formulas-and-run-scenarios">Write formulas and run scenarios</h3>
-<p>Describe the outcome and Grok handles the syntax — averages, sorts, and fills land as normal edits in the formula bar. Test a downside case, rerun a forecast, or close out month-end without rebuilding the sheet by hand. The add-in can also leverage <a href="https://grok.com/connectors">connectors</a>; ask it to pull context from recent emails or files in SharePoint or Google Drive.</p>
-<h2 id="get-started">Get started</h2>
-<p>Grok for Excel is a free Microsoft 365 add-in. <a href="https://marketplace.microsoft.com/en-us/product/office/WA200011056?tab=Overview">Add it from the Microsoft Marketplace</a>, and work directly with Grok in your workbooks. Also available for <a href="https://x.ai/grok/word">Word</a> and <a href="https://x.ai/grok/powerpoint">PowerPoint</a>.</p>]]></content:encoded>
-      <guid isPermaLink="true">https://x.ai/news/introducing-excel-addin</guid>
-      <category>News</category>
-      <pubDate>Wed, 12 Aug 2026 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Introducing Grok 4.5</title>
-      <link>https://x.ai/news/grok-4-5</link>
-      <description>Grok 4.5 is SpaceXAI's smartest model built for coding, agentic tasks, and knowledge work.</description>
-      <content:encoded><![CDATA[<p>Today, we're launching <strong>Grok 4.5</strong>, SpaceXAI's smartest model built to excel at coding, agentic tasks, and knowledge work. It's our strongest model ever and was trained alongside <a href="https://cursor.com/blog/spacex-model-training">Cursor</a>.</p>
-<h2 id="real-world-engineering-excellence">Real-world engineering excellence</h2>
-<p>Grok 4.5 was trained on datasets spanning knowledge in coding, science, engineering, and math. With both intelligent and efficient reasoning, Grok 4.5 excels at real engineering tasks and exceeds comparable leading models at these tasks.</p>
-<h2 id="training-grok-45">Training Grok 4.5</h2>
-<p>Grok 4.5 was trained across tens of thousands of NVIDIA GB300 GPUs, with training and stability techniques designed for large-scale runs. Beyond raw token volume, we invested heavily in data filtering and curation: deduplication, quality scoring, and domain-focused selection so that the data mixture stayed high-coverage and high-signal.</p>
-<p>We scaled reinforcement learning with a strong focus on per-token intelligence. Our RL training covers hundreds of thousands of tasks, centered on multi-step software engineering and other technical work, with automated and model-based grading. Our stack is built for highly asynchronous training, so agentic rollouts can run for many hours while learning continues across tens of thousands of GPUs. The result is more intelligent and efficient reasoning on real engineering and agentic tasks.</p>
-<h2 id="faster-than-flash-models">Faster than flash models</h2>
-<p>Grok 4.5 is served at fast-model speeds of <strong>80 TPS</strong>. Combined with twice greater token efficiency than the latest leading models at the same tasks, the model delivers intelligent results to you more quickly and at far lower costs.</p>
-<h2 id="excels-at-office-work">Excels at Office work</h2>
-<p>Grok 4.5 is now the default model in <a href="https://x.ai/build">Grok Build</a>. In addition to its coding proficiency, Grok Build is capable of building complex Excel models that involve research from the web, multi-sheet formula use, and even leaves stickies or notes behind for future reference.</p>
-<p>In PowerPoint and Word, Grok 4.5 is similarly meticulous. The model is capable of using native PowerPoint shapes to build complex diagrams, designing intuitive slide content, and writing clear prose in Word.</p>
-<p>Learn more about our plugins for <a href="https://marketplace.microsoft.com/en-us/product/office/WA200011055?tab=Overview">Word</a>, <a href="https://marketplace.microsoft.com/en-us/product/office/WA200011057?tab=Overview">PowerPoint</a>, <a href="https://marketplace.microsoft.com/en-us/product/office/WA200011056?tab=Overview">Excel</a>, and <a href="https://marketplace.microsoft.com/en-us/product/office/WA200011330?tab=Overview">Outlook</a>.</p>
-<h2 id="pricing">Pricing</h2>
-<p>Grok 4.5 is delivered at an incredibly competitive cost compared to other leading models. Grok 4.5 is priced at $2 per million input tokens and $6 per million output tokens. The model also achieves roughly 2x the token efficiency of comparable leading models, solving tasks in under half the number of steps. Overall, Grok 4.5 delivers the highest intelligence per unit of time and cost.</p>
-<h2 id="getting-started">Getting started</h2>
-<p>Grok 4.5 is available today in Grok Build, in Cursor on all plans, and from the <a href="https://console.x.ai/?utm_source=website&amp;utm_medium=referral&amp;utm_campaign=grok-4-5-blog">SpaceXAI console</a>. Simply grab an API key and get started in a few lines of code:</p>
-<pre><code>curl -s https://api.x.ai/v1/responses \
-  -H "Authorization: Bearer $XAI_API_KEY" \
-  -H "Content-Type: application/json" \
-  -d '{
-    "model": "grok-4.5",
-    "input": "Find and fix the bug, then explain it: function median(a){a.sort();return a[a.length/2]}"
-  }'
-</code></pre>]]></content:encoded>
-      <guid isPermaLink="true">https://x.ai/news/grok-4-5</guid>
-      <category>News</category>
-      <pubDate>Wed, 12 Aug 2026 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Introducing the Voice Agent Builder</title>
-      <link>https://x.ai/news/grok-voice-agent-builder</link>
-      <description>Create a personalized voice agent in under 2 minutes without a single line of code.</description>
-      <content:encoded><![CDATA[<p>Today, we’re announcing Voice Agent Builder in beta: a no-code platform to configure production voice agents on <a href="https://x.ai/news/grok-voice-think-fast-1">Grok Voice</a>.</p>
-<p>It’s for operators and developers who want high-volume production voice agents without building the surrounding stack from scratch. Out of the box you get telephony, knowledge retrieval, tools, guardrails, MCPs, and observability in one place. You can also keep what you already have: bring existing phone numbers over SIP, wire tools to your APIs and MCP servers, or connect your own client over WebSocket.</p>
-<p>Most voice stacks stitch together three APIs—speech-to-text, a language model, and text-to-speech—often with each stage hosted by a different provider. Every hop adds cost, latency, and new failure modes. Voice Agent Builder is one interface on a speech-to-speech path built for Grok Voice, tightly coupled to the model rather than assembled from three.</p>
-<h2 id="trained-on-the-hardest-calls-we-could-find">Trained on the hardest calls we could find</h2>
-<p>Real calls come with low-quality telephony audio, background noise, strong accents, interruptions, and callers who change their minds mid-sentence. The workflows behind them are ambiguous, run across dozens of tools, and happen in any of 25+ languages.</p>
-<p>We trained <a href="https://x.ai/news/grok-voice-think-fast-1">Grok Voice</a> on those calls. τ-voice Bench measures agents under the same conditions.</p>
-<h2 id="two-minutes-to-an-agent">Two minutes to an agent</h2>
-<p>Setup is simple: write a plain-language description of how calls should flow, then attach your documents, tools, and guardrails. You can go from zero to a working agent in about two minutes.</p>
-<h3 id="teach-it-your-business">Teach it your business</h3>
-<p>An agent starts with a prompt that describes how calls should go. The model reasons in real time, so it can follow long instructions and work through ambiguous requests.</p>
-<p>What it <em>knows</em> comes from the <strong>knowledge base</strong>. You upload documents in common formats (plain text, Markdown, Word, PowerPoint, Excel, HTML, JSON, and others), and the agent retrieves from them during calls. Documents are organized into <strong>collections</strong>, which you can attach to one or more agents and share across agents so policies, product specs, and runbooks stay in one place instead of being pasted into every prompt.</p>
-<h3 id="take-action">Take action</h3>
-<p>Knowing the business is only half of a support or sales call. Agents also need to <strong>act</strong>. They look things up, change records, hand off, or close the loop after the conversation.</p>
-<p><strong>Tools</strong> and <strong>connectors</strong> are how that happens. On a booking line, the agent might schedule appointments in Google Calendar or Outlook Calendar, then send a confirmation through your email provider. On support, an API request can check order status or issue a refund in your own systems. When the answer isn't only in your documents, web search or X search can pull current public information. Tickets can be managed in Linear or Notion, and files come from Google Drive or OneDrive.</p>
-<p>If the caller needs a human, the agent can transfer the call to your team. When the task is complete, it can end the call cleanly. Throughout the conversation, it sends real-time notifications so your team can see what the agent did and step in if needed.</p>
-<h3 id="give-it-a-voice-and-a-number">Give it a voice and a number</h3>
-<p>Agents can use any of the built-in voices, or a clone of your brand's voice made from about two minutes of audio. Each account includes a free phone number, ready for anything from a first test call to production traffic, and direct SIP connects an existing number from any major telephony provider. You can also test changes in the browser without a phone.</p>
-<h3 id="review-the-calls">Review the calls</h3>
-<p>Every call is recorded and transcribed. You can play back the audio, read the transcript, and see which tools the agent used. Guardrails set limits on what the agent shouldn't do, like reading back card numbers or discussing topics off script.</p>
-<h2 id="what-it-costs">What it costs</h2>
-<p>We believe that pricing should be simple and transparent. Agents are billed at our API rate (currently <a href="https://docs.x.ai/developers/pricing#voice-api-pricing">$0.05 / min of audio</a>), with voices included and no separate platform fee. Telephony on a free provisioned number is an additional $0.01 / min.</p>
-<p>Other voice stacks commonly bill for each individual component (recognition, reasoning, synthesis, and platform), each with its own meter and pricing. We wanted a small number of meters you can multiply by call volume and be done.</p>
-<h2 id="try-it">Try it</h2>
-<p>A voice agent is easier to judge by ear than by benchmark. Build one, give it your hardest workflow, and call it.</p>]]></content:encoded>
-      <guid isPermaLink="true">https://x.ai/news/grok-voice-agent-builder</guid>
-      <category>News</category>
-      <pubDate>Wed, 12 Aug 2026 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Grok Build 0.1 on API</title>
-      <link>https://x.ai/news/grok-build-0-1</link>
-      <description>Grok Build 0.1, our fastest coding model, is now available via the xAI API in public beta.</description>
-      <content:encoded><![CDATA[<p>Our latest coding model, <code>grok-build-0.1</code>, is now available via the xAI API in public beta.</p>
-<p><code>grok-build-0.1</code> is a coding model specifically trained for agentic coding tasks, including web development, debugging, and MCP support. It's the same model that powers <a href="https://docs.x.ai/build/overview#getting-started">Grok Build</a>.</p>
-<p>The model is served at a blazing-fast 100+ tokens/second and is priced at $1/m tokens in and $2/m tokens out. Outside of coding, it’s also a speedy, economical option for general-purpose agentic and tool calling use cases.</p>
-<pre><code>curl https://api.x.ai/v1/responses \
-  -H "Content-Type: application/json" \
-  -H "Authorization: Bearer $XAI_API_KEY" \
-  -d '{
-    "model": "grok-build-0.1",
-    "input": [
-        {
-            "role": "user",
-            "content": "Generate a clean, tasteful, and minimalist personal website design with elegant typography"
-        }
-    ]
-}'
-</code></pre>
-<p><code>grok-build-0.1</code> performs best in agentic harness like <a href="https://docs.x.ai/build/overview">Grok Build</a>, Cursor, <a href="https://x.ai/news/grok-hermes">Hermes Agent</a>, <a href="https://x.ai/news/grok-openclaw">OpenClaw</a>, <a href="https://x.ai/news/grok-kilocode">Kilo Code</a>, or <a href="https://x.ai/news/grok-opencode">OpenCode</a>. It’s also available via <a href="https://openrouter.ai/x-ai/grok-build-0.1">OpenRouter</a> and <a href="https://vercel.com/changelog/grok-build-0-1-now-available-on-vercel-ai-gateway">Vercel AI Gateway</a>.</p>]]></content:encoded>
-      <guid isPermaLink="true">https://x.ai/news/grok-build-0-1</guid>
-      <category>News</category>
-      <pubDate>Wed, 12 Aug 2026 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Use Grok in Kilo Code</title>
-      <link>https://x.ai/news/grok-kilocode</link>
-      <description>Use your SuperGrok or X Premium+ subscription inside Kilo Code, the open-source agentic coding platform.</description>
-      <content:encoded><![CDATA[<p>Starting today, you can use your Grok subscription directly inside <a href="https://kilo.ai/">Kilo Code</a>.</p>
-<p>Kilo Code is the open-source agentic engineering platform for VS Code, JetBrains IDEs, and the terminal. It offers specialized modes for planning, coding, debugging, and orchestration, along with powerful tool use, browser automation, MCP extensibility, and support for 500+ models. Kilo is designed for real software engineering workflows and agentic use cases.</p>
-<p>With your X Premium+ or SuperGrok subscription, connect your Grok account to use the latest Grok models — including Grok Build for agentic coding — inside Kilo Code with no separate API key.</p>
+      <title>Use Grok in Warp</title>
+      <link>https://x.ai/news/grok-warp</link>
+      <description>Use your Grok and X Premium subscription inside Warp.</description>
+      <content:encoded><![CDATA[<p>You can now use your Grok or X Premium subscription inside <a href="https://www.warp.dev/">Warp</a>, an agentic development environment built on the terminal and used by almost one million developers.</p>
+<p>Your existing subscription provides access to Grok models, including <code>grok-build-0.1</code>, the model powering <a href="https://x.ai/build">Grok Build</a>.</p>
 <h3 id="setup">Setup</h3>
-<p>Kilo Code offers IDE extensions, a CLI, and a web surface. To connect your xAI account, follow the instructions below:</p>
-<p><strong>VS Code:</strong></p>
 <ol>
-<li>Install <a href="https://marketplace.visualstudio.com/items?itemName=kilocode.Kilo-Code">Kilo Code</a> from the VS Code Marketplace.</li>
-<li>Open <strong>Settings</strong> (gear icon) and go to the <strong>Providers</strong> tab.</li>
-<li>Click <strong>Show more providers</strong>, then search for or select <strong>xAI</strong>.</li>
-<li>Choose the <strong>xAI Grok OAuth (SuperGrok Subscription)</strong> sign-in option and complete the OAuth flow in your browser.</li>
+<li>Download Warp from <a href="https://www.warp.dev/download">warp.dev/download</a> and open it.</li>
+<li>Open the "Agent &gt; Warp Agent" settings page and click "Connect SuperGrok subscription"</li>
+<li>Switch to the <code>grok-build-0.1</code> model and start prompting.</li>
 </ol>
-<p>For headless or remote environments (VPS, SSH, Docker, WSL), choose <strong>xAI Grok OAuth (Headless / Remote / VPS)</strong> instead.</p>
-<p><strong>CLI:</strong></p>
-<pre><code>npm install -g @kilocode/cli
-</code></pre>
-<p>Run <code>kilo</code> in your project directory and use the <code>/connect</code> command to add xAI.</p>
-<p>For more details, see the <a href="https://kilo.ai/docs/ai-providers/xai">Kilo Code xAI provider documentation</a>.</p>
-<p>More open-source agents and integrations are coming soon.</p>]]></content:encoded>
-      <guid isPermaLink="true">https://x.ai/news/grok-kilocode</guid>
+<p>That's it! More agents and integrations are coming soon to SuperGrok and X Premium subscribers. To subscribe, visit the <a href="https://x.ai/pricing">pricing page</a>.</p>]]></content:encoded>
+      <guid isPermaLink="true">https://x.ai/news/grok-warp</guid>
       <category>News</category>
       <pubDate>Wed, 12 Aug 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Introducing Grok Build</title>
-      <link>https://x.ai/news/grok-build-cli</link>
-      <description>Now in early beta for all SuperGrok and X Premium Plus subscribers — Grok Build is a new coding agent that runs right from your terminal.</description>
-      <content:encoded><![CDATA[<p>Today we're launching an early beta of Grok Build, a powerful new coding agent for professional software engineering and complex coding work.</p>
-<p>Available now to all SuperGrok and X Premium Plus subscribers. Install Grok Build with a single command and sign in with your account:</p>
-<h2 id="plan-review-approve">Plan, review, approve</h2>
-<p>For complex tasks, start Grok Build in plan mode. You can approve the plan, comment on individual steps, or rewrite it entirely before execution begins.
-Once a plan is approved, every change shows up as a clean diff.</p>
-<h2 id="works-with-what-you-already-use">Works with what you already use</h2>
-<p>Your AGENTS.md, plugins, hooks, skills, and MCP servers all work out of the box. Start Grok Build in your repo and it picks up your conventions instantly.</p>
-<h2 id="subagents-that-work-in-parallel">Subagents that work in parallel</h2>
-<p>For larger tasks, Grok Build delegates work to specialized subagents that run in parallel. Grok Build also supports deep worktree integrations, and you can launch subagents in their own worktrees.</p>
-<h2 id="built-to-fit-your-workflow">Built to fit your workflow</h2>
-<p>Headless mode (<code>-p</code>) allows easily running agents inside scripts and automations. Grok Build also provides full ACP support to build your own  bots and agent orchestration apps.</p>
-<h2 id="try-it-today">Try it today</h2>
-<p>This is an early beta, and your feedback is the fastest way to make it better. Type <code>/feedback</code> in Grok Build to send bugs, requests, and reactions straight to the team.</p>
-<p>SuperGrok and X Premium Plus subscribers can install Grok Build with the command above and start building. If you don't have SuperGrok yet, <a href="https://grok.com/supergrok?referrer=grok-build">upgrade here</a> — we're excited to see what you create.</p>]]></content:encoded>
-      <guid isPermaLink="true">https://x.ai/news/grok-build-cli</guid>
-      <category>News</category>
-      <pubDate>Wed, 12 Aug 2026 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Use Grok in OpenCode</title>
-      <link>https://x.ai/news/grok-opencode</link>
-      <description>Use your SuperGrok or X Premium subscription inside OpenCode.</description>
-      <content:encoded><![CDATA[<p>After connecting your Grok account, start coding with Grok Build, the same model that powers xAI's <a href="https://x.ai/build">terminal-based coding agent</a>.</p>
-<h3 id="setup">Setup</h3>
-<p>Install OpenCode:</p>
-<pre><code>curl -fsSL https://opencode.ai/install | bash
-</code></pre>
-<p>Launch OpenCode:</p>
-<pre><code>opencode
-</code></pre>
-<p>Inside OpenCode, run <code>/connect</code> and pick <strong>xAI</strong>:</p>
-<pre><code>/connect
-</code></pre>
-<p>Pick the sign-in method that fits your setup — both use your Grok subscription:</p>
+      <title>Grok Build Plugin Marketplace</title>
+      <link>https://x.ai/news/grok-plugin-marketplace</link>
+      <description>Launching the built-in plugin marketplace for Grok Build.</description>
+      <content:encoded><![CDATA[<p>Today we're launching the <a href="https://github.com/xai-org/plugin-marketplace">Grok Build Plugin Marketplace</a> - a set of built-in plugins for <a href="https://x.ai/build">Grok Build</a>.</p>
+<p>A plugin bundles <a href="https://x.ai/news/grok-skills">skills</a>, slash commands, agents, hooks, MCP servers, and LSPs into one installable package. The marketplace is built into Grok Build, so you can browse, install, and update plugins without leaving your terminal.</p>
+<h2 id="available-at-launch">Available at launch</h2>
+<p>The marketplace opens with plugins from partners across the stack:</p>
 <ul>
-<li><strong>xAI Grok OAuth (SuperGrok Subscription)</strong> — opens your browser to sign in.</li>
-<li><strong>xAI Grok OAuth (Headless / Remote / VPS)</strong> — prints a code and URL for SSH or remote hosts.</li>
+<li><strong><a href="https://www.mongodb.com/docs/mcp-server/overview/">MongoDB</a></strong> — Explore data, manage collections, and optimize queries.</li>
+<li><strong><a href="https://github.com/vercel/vercel-plugin">Vercel</a></strong> — Manage deployments, check build status, and configure domains.</li>
+<li><strong><a href="https://github.com/getsentry/sentry-for-ai">Sentry</a></strong> — Analyze stack traces and debug production errors.</li>
+<li><strong><a href="https://github.com/ChromeDevTools/chrome-devtools-mcp">Chrome DevTools</a></strong> — Control a live browser, record performance traces, and inspect network requests.</li>
+<li><strong><a href="https://github.com/cloudflare/skills">Cloudflare</a></strong> — Skills for Workers, Durable Objects, and more.</li>
+<li><strong><a href="https://github.com/obra/superpowers">Superpowers</a></strong> — Popular agent-driven workflows.</li>
 </ul>
-<p>More open-source agents and integrations are coming soon.</p>]]></content:encoded>
-      <guid isPermaLink="true">https://x.ai/news/grok-opencode</guid>
+<h2 id="install-in-seconds">Install in seconds</h2>
+<p>Inside Grok Build, type <code>/marketplace</code> to browse the catalog and press <code>i</code> to install a plugin. Or from the terminal:</p>
+<pre><code>grok plugin marketplace list
+grok plugin install &lt;name&gt; --trust
+</code></pre>
+<p>Every remote plugin in the catalog is pinned to a specific commit SHA, and Grok Build verifies the pin at install time.</p>
+<h2 id="publish-your-own">Publish your own</h2>
+<p>The marketplace is an open catalog. If you've built a plugin you want to share, submit a pull request to <a href="https://github.com/xai-org/plugin-marketplace">xai-org/plugin-marketplace</a>.</p>
+<h2 id="getting-started">Getting started</h2>
+<p>New to Grok Build? Visit <a href="https://x.ai/build">x.ai/build</a> to get started.</p>]]></content:encoded>
+      <guid isPermaLink="true">https://x.ai/news/grok-plugin-marketplace</guid>
       <category>News</category>
       <pubDate>Wed, 12 Aug 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Use Grok in OpenClaw</title>
-      <link>https://x.ai/news/grok-openclaw</link>
-      <description>Use your SuperGrok or X Premium subscription inside OpenClaw, an open-source, local-first agent and personal assistant.</description>
-      <content:encoded><![CDATA[<p>Starting today, log in and use your SuperGrok or X Premium subscription inside OpenClaw.</p>
-<p>OpenClaw is an open-source, local-first agent and personal assistant. It runs on any hardware — a Mac Mini, laptop, server, VPS, or even a Raspberry Pi — and keeps persistent memory across sessions.</p>
-<p>OpenClaw connects to WhatsApp, Telegram, Slack, Discord, Signal, iMessage, and many other messaging platforms, so you can interact with your agent wherever you already chat.</p>
-<p>If you already have a Grok or X Premium subscription, you can now use Grok models inside OpenClaw. Connecting Grok to your OpenClaw agent is available on every tier.</p>
-<h3 id="setup">Setup</h3>
-<p>Install OpenClaw:</p>
-<pre><code>curl -fsSL https://openclaw.ai/install.sh | bash
-</code></pre>
-<p>Run the guided onboarding:</p>
-<pre><code>openclaw onboard --install-daemon
-</code></pre>
-<p>On a VPS or over SSH, use device-code. OpenClaw prints a short code and URL you can open in any browser to finish sign-in:</p>
-<pre><code>openclaw onboard --auth-choice xai-device-code
-</code></pre>
-<p>Or connect a messaging app — Telegram, WhatsApp, Slack, Discord, Signal, iMessage, and more — and talk to your agent there.</p>
-<p>For more, see <a href="https://docs.openclaw.ai/start/getting-started">OpenClaw getting started</a> and the <a href="https://docs.openclaw.ai/providers/xai">xAI provider docs</a>.</p>
-<p>More open-source agents and integrations are coming soon.</p>]]></content:encoded>
-      <guid isPermaLink="true">https://x.ai/news/grok-openclaw</guid>
+      <title>Bringing real-time market sentiment to Tori, from eToro</title>
+      <link>https://x.ai/news/grok-etoro</link>
+      <description>Tori, eToro’s AI agent, uses models from SpaceXAI to embed real-time market sentiment directly into Tori’s investing workflow.</description>
+      <content:encoded><![CDATA[<p>Tori, eToro’s AI agent, uses models from SpaceXAI to embed real-time market sentiment directly into Tori’s investing workflow.</p>
+<p>SpaceXAI and <a href="https://www.etoro.com/">eToro</a> are proud to announce that Tori, an AI agent, is now powered by real-time information from X. Tori can now read market moods as they shift, track live signals and analyze information with SpaceXAI's state-of-the-art text models.</p>
+<h2 id="markets-move-at-the-speed-of-x">Markets Move at the Speed of X</h2>
+<p>The latest information is out first on X. SpaceXAI's models and platform bring first party support to that platform, thereby enabling eToro users to ask and analyze market sentiment using Tori.</p>
+<p>For close to two decades, eToro has built a place where people invest together, and today has more than 40 million registered users across 75 countries. Powering Tori with SpaceXAI models furthers this vision to bring the best information on demand to all users.</p>
+<h2 id="built-on-spacexai-apis">Built on SpaceXAI APIs</h2>
+<p>The same real-time intelligence and live X awareness helping to power Tori is available to any team through the <a href="https://console.x.ai/?utm_source=website&amp;utm_medium=referral&amp;utm_campaign=grok-etoro-blog">API console</a>. Whether you're building a research copilot, a sentiment dashboard, or an assistant for your daily briefings, you can get set up in minutes through the API console.</p>]]></content:encoded>
+      <guid isPermaLink="true">https://x.ai/news/grok-etoro</guid>
       <category>News</category>
       <pubDate>Wed, 12 Aug 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Skills in web, iOS, and Android</title>
-      <link>https://x.ai/news/grok-skills</link>
-      <description>Persistent expertise for Grok. Generate documents, decks, and spreadsheets. Automate workflows. Build and share your own skills.</description>
-      <content:encoded><![CDATA[<p><strong>Today, we're launching Skills.</strong> Teach Grok something once and it remembers across every conversation. No more repeating your preferences, formatting rules, or workflow steps.</p>
-<h2 id="ready-out-of-the-box">Ready Out of the Box</h2>
-<p>Every Grok account ships with built-in skills from xAI, with no setup required. If you want to customize one, just override it with your own version. Yours always takes priority.</p>
-<h2 id="instant-office-documents">Instant Office Documents</h2>
-<p>Need a formatted invoice, a pitch deck, or a budget spreadsheet? Grok generates production-ready Word docs, PowerPoint slides, Excel files, and PDFs, all styled and ready to share. You can also upload existing files and Grok will restructure, polish, or expand them.</p>
-<img alt="Presentations" src="https://media.x.ai/cdn-cgi/image/fit=scale-down,onerror=redirect,width=1862,height=1046,f=auto/v1/website/leadership-thinking-4b221716.png"/>
-<img alt="Word Documents" src="https://media.x.ai/cdn-cgi/image/fit=scale-down,onerror=redirect,width=1276,height=1316,f=auto/v1/website/enterprise-invoice-e9cfe87e.png"/>
-<img alt="Spreadsheets" src="https://media.x.ai/cdn-cgi/image/fit=scale-down,onerror=redirect,width=1333,height=1740,f=auto/v1/website/monthly-budget-tracker-082b7e85.png"/>
-<img alt="PDF Reports" src="https://media.x.ai/cdn-cgi/image/fit=scale-down,onerror=redirect,width=1294,height=1834,f=auto/v1/website/ai-interpretability-report-f732f53d.png"/>
-<h2 id="build-your-own">Build Your Own</h2>
-<p>Creating a skill takes seconds. Describe it in conversation, upload a file, or write one from scratch. Invested time perfecting a format or workflow? Just ask Grok to save everything it learned as a skill so you never have to explain it again.</p>
-<h2 id="get-started">Get Started</h2>
-<p>Skills are live now on Grok 4.3 across <a href="https://grok.com">grok.com</a>, iOS, and Android.</p>]]></content:encoded>
-      <guid isPermaLink="true">https://x.ai/news/grok-skills</guid>
+      <title>Powering Gopuff's Go agent</title>
+      <link>https://x.ai/news/grok-gopuff</link>
+      <description>Gopuff and SpaceXAI launched Go, an AI-powered shopping assistant built into the Gopuff app and powered by Grok text, audio, and image models.</description>
+      <content:encoded><![CDATA[<p>The SpaceXAI team has collaborated closely with Gopuff to launch the Go agent - a personal shopping assistant that knows what you want and delivers in minutes - using frontier text, image, and audio models.</p>
+<p>Go pairs Grok's frontier reasoning, voice, and image generation with Gopuff's 13 years of demand intelligence based on hundreds of millions of orders. Through SpaceXAI API tools, Go also leverages real-time signals from X and the web. The result is a shopping experience that anticipates what you need and delivers it in minutes from Gopuff's network of micro-fulfillment centers.</p>
+<p><a href="https://data.x.ai/news/news_gopuff_xai_agent.mp4">▶ Watch video</a></p>
+<h3 id="building-go">Building Go</h3>
+<p>Gopuff and SpaceXAI worked closely to build multimodal capabilities into the new Go agent. Go can build personalized carts for you before you open the app using past preferences and external signals like the weather. Over time, Go learns what you like and dislike, helping you order critical necessities when you need them.</p>
+<p>Go also includes a new, visual shopping feed based on Grok Imagine. Using state-of-the-art image models, Go generates hyper-realistic scenes from Gopuff inventory, helping you visualize shopping carts and orders.</p>
+<p>Go learns on every order to help you shop faster and more efficiently in the future. Go is available now in the Gopuff app on iOS and Android, starting in the US with the UK to follow.</p>]]></content:encoded>
+      <guid isPermaLink="true">https://x.ai/news/grok-gopuff</guid>
       <category>News</category>
       <pubDate>Wed, 12 Aug 2026 00:00:00 +0000</pubDate>
-      <media:content url="https://media.x.ai/cdn-cgi/image/fit=scale-down,onerror=redirect,width=1862,height=1046,f=auto/v1/website/leadership-thinking-4b221716.png" type="image/png" medium="image"/>
     </item>
     <item>
-      <title>Connect Grok to Hermes Agent</title>
-      <link>https://x.ai/news/grok-hermes</link>
-      <description>Use your Grok account and subscription inside Nous Research’s open-source, self-improving Hermes agent.</description>
-      <content:encoded><![CDATA[<p>Starting today, you can use your Grok subscription directly inside Hermes Agent.</p>
-<p>Hermes Agent is Nous Research’s open-source, self-improving agent. It runs persistently on any computer, sandbox, or VPS and creates long-term memory across sessions, learning as you use it. Like other open-source personal agents, Hermes can connect to WhatsApp, Discord, Telegram, Signal, or other messaging providers.</p>
-<p>With your Grok subscription in Hermes, you can use:</p>
-<ul>
-<li>Grok 4.3 for text conversations and advanced reasoning</li>
-<li>Grok Text-to-Speech for spoken responses</li>
-<li>Grok Imagine for your agent to create images and videos</li>
-</ul>
-<p>Connecting Grok to your Hermes agent is available on every tier.</p>
-<h3 id="setup">Setup</h3>
-<p>Install Hermes Agent:</p>
-<pre><code># Linux / macOS / WSL2 / Android (Termux)
-curl -fsSL https://raw.githubusercontent.com/NousResearch/hermes-agent/main/scripts/install.sh | bash
-</code></pre>
-<p>Pick the Grok provider:</p>
-<pre><code>hermes model
-</code></pre>
-<p>Select <strong>xAI Grok OAuth (SuperGrok Subscription)</strong>, sign in through the browser, and start chatting:</p>
-<pre><code>hermes --tui
-</code></pre>
-<p>For more, see the <a href="https://hermes-agent.nousresearch.com/docs/guides/xai-grok-oauth">Hermes Agent xAI Grok OAuth docs</a>.</p>
-<p>More open-source agents and integrations are coming soon.</p>]]></content:encoded>
-      <guid isPermaLink="true">https://x.ai/news/grok-hermes</guid>
+      <title>Grok Imagine 1.5 Preview</title>
+      <link>https://x.ai/news/grok-imagine-1-5</link>
+      <description>grok-imagine-video-1.5-preview, our latest image-to-video model, is now available via the xAI API in preview.</description>
+      <content:encoded><![CDATA[<p>Our latest image-to-video model, <code>grok-imagine-video-1.5-preview</code>, is now available via the xAI API in preview.</p>
+<p><code>grok-imagine-video-1.5-preview</code> turns a single still image into fluid, cinematic video. Give it a starting frame and a prompt describing the motion, and it animates the scene, including camera moves, atmosphere, and physics, while staying faithful to your source image. You can generate clips at up to 720p.</p>
+<img alt="Video preview" src="https://media.x.ai/v1/website/prompt-to-video-poster-958d77cf.jpg"/>
+<p><a href="https://x.ai/images/news/grok-imagine-1-5/prompt-to-video.mp4">▶ Watch video</a></p>
+<p>Direct the shot with natural-language prompts. Describe the camera move, the pacing, and the sound design, then set your resolution and clip length. The model holds detail and lighting from the input frame, so the result continues the original image rather than reinterpreting it.</p>
+<p>The model also works well for sequences. Stage each frame, animate it, and chain the shots together into longer scenes that keep a consistent look across an entire project.</p>
+<img alt="Video preview" src="https://media.x.ai/v1/website/imagine-gallery-poster-aea1724c.jpg"/>
+<p><a href="https://x.ai/images/news/grok-imagine-1-5/imagine-gallery.webm">▶ Watch video</a></p>
+<p>Animate an image in a few lines of code.</p>
+<pre><code>import os
+import xai_sdk
+
+client = xai_sdk.Client(api_key=os.getenv("XAI_API_KEY"))
+
+response = client.video.generate(
+    prompt="Slow cinematic push-in as embers drift across the battlefield and the helmet's crest stirs in the wind",
+    model="grok-imagine-video-1.5-preview",
+    image_url="https://your-host.com/helmet.jpg",
+    duration=10,
+    resolution="720p",
+)
+
+print(response.url)
+</code></pre>]]></content:encoded>
+      <guid isPermaLink="true">https://x.ai/news/grok-imagine-1-5</guid>
+      <category>News</category>
+      <pubDate>Wed, 12 Aug 2026 00:00:00 +0000</pubDate>
+      <media:content url="https://media.x.ai/v1/website/prompt-to-video-poster-958d77cf.jpg" type="image/jpeg" medium="image"/>
+    </item>
+    <item>
+      <title>Grok Becomes the Voice of Vapi</title>
+      <link>https://x.ai/news/grok-vapi</link>
+      <description>Bringing frontier voice quality to millions of Vapi agents.</description>
+      <content:encoded><![CDATA[<p>Today, we're excited to announce a partnership with <a href="https://vapi.ai">Vapi</a> to serve as the default engine for Vapi's 12 core voices, bringing a new level of naturalness and emotional range to the 2.5M+ voice agents built on the Vapi platform.</p>
+<h2 id="quality-that-wins">Quality That Wins</h2>
+<p>Vapi conducted an independent, blind evaluation comparing Grok Voice against other providers. In their head-to-head arena, Grok took the #1 spot.</p>
+<p>The results aligned with what we've seen. In a side-by-side poll on X, over 4,500 users were split 50/50 when guessing which voice was the Grok AI clone versus the human original.</p>
+<h2 id="decide-for-yourself">Decide for Yourself</h2>
+<p>Don't take our word for it. Listen to how this new Grok-powered voice compares to the previous generation.</p>
+<h2 id="what-this-means-for-vapi-developers">What This Means for Vapi Developers</h2>
+<p>If you're already building on Vapi, your agents can now use Grok to power Vapi's text-to-speech. Select it from the dropdown and take it for a spin. You'll immediately get more natural, emotionally resonant conversations.</p>
+<p>Additionally, Grok Speech-to-Text and Text-to-Speech are now available in the Vapi Dashboard.</p>
+<p>New voices and advanced customization options (including custom voice cloning) are also available through the Grok Voice API for teams that want to integrate it directly in use cases like narration, podcasts, advertising, voiceover, and more.</p>
+<h2 id="ready-to-start-building">Ready To Start Building?</h2>
+<p>Head over to your Vapi dashboard — the new default voices are live now. Or try Grok Voice directly via the API if you're building outside of Vapi.</p>
+<p>We're thrilled to be powering the voice layer for one of the leading voice AI platforms and can't wait to see what you build with it.</p>]]></content:encoded>
+      <guid isPermaLink="true">https://x.ai/news/grok-vapi</guid>
+      <category>News</category>
+      <pubDate>Wed, 12 Aug 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Composer 2.5</title>
+      <link>https://x.ai/news/composer-2-5</link>
+      <description>Composer 2.5 is now available in Grok Build. Try it from the /models menu.</description>
+      <content:encoded><![CDATA[<p>Composer 2.5 is now available in Grok Build. Composer 2.5 is a fast, state-of-the-art model that excels on long-running tasks and following complex instructions.</p>
+<p>Try it by typing <code>/model</code> and then selecting Composer 2.5 in the menu.</p>]]></content:encoded>
+      <guid isPermaLink="true">https://x.ai/news/composer-2-5</guid>
       <category>News</category>
       <pubDate>Wed, 12 Aug 2026 00:00:00 +0000</pubDate>
     </item>
