@@ -8,7 +8,24 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 20 Aug 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 24 Aug 2026 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Mistral x HUMAIN</title>
+      <link>https://mistral.ai/news/mistral-x-humain</link>
+      <description>Over the past few weeks, we have announced several important steps to expand sovereign AI by increasing access to local infrastructure capacity. Earlier this summer, we announced an expanded partnership with Microsoft to increase compute capacity in Europe. In early August, we introduced European Compute Units , a structure designed to bring together long-term enterprise commitments so the capacity Europe needs gets built and can support its global competitiveness. Today, we are announcing a new strategic collaboration with HUMAIN to support sovereign AI in Saudi Arabia and across the Middle East. See more below.</description>
+      <content:encoded><![CDATA[<figure><img height="627" src="https://mistral.ai/_astro/Linkedin-Partnership-Humain_Z1Gyz6.webp?dpl=6a8c94cb03ea0c6dc53ae243" width="1200"/></figure>
+<p><em>Over the past few weeks, we have announced several important steps to expand sovereign AI by increasing access to local infrastructure capacity. Earlier this summer, we announced an </em><a href="https://www.youtube.com/watch?v=xr4VUV-7rN0"><em>expanded partnership with Microsoft</em></a><em> to increase compute capacity in Europe. In early August, we introduced </em><a href="https://mistral.ai/news/regional-inference-open-models-new-compute/"><em>European Compute Units</em></a><em>, a structure designed to bring together long-term enterprise commitments so the capacity Europe needs gets built and can support its global competitiveness. Today, we are announcing a new strategic collaboration with HUMAIN to support sovereign AI in Saudi Arabia and across the Middle East. See more below.</em></p>
+<h3>Mistral and HUMAIN Announce Strategic Collaboration to Advance Sovereign AI in Saudi Arabia and Regionally</h3>
+<p>Mistral and HUMAIN today announced a strategic collaboration spanning AI infrastructure, advanced model development, and the deployment of AI solutions in Saudi Arabia and across the region. Together, the companies will pursue the development and localization of advanced AI models, with initial areas of focus including cybersecurity and voice. The companies also plan to develop frontier models that perform strongly in Arabic language to help support the broader region. This represents a collaboration in the hundreds of millions of Euros. As part of the collaboration, Mistral will explore using HUMAIN’s data center infrastructure to support growing local compute needs. HUMAIN and Mistral also plan to develop a joint go-to-market strategy in Saudi Arabia focused on bringing advanced AI solutions to regulated industries.</p>
+<p>The collaboration is designed to meet growing demand for sovereign AI: AI that keeps data, intelligence, compute, and operations under the customer's control. That means data can remain within customer-defined boundaries, models can be adapted and owned on open weights, training and inference can run on infrastructure and in jurisdictions the customer chooses, and AI systems can be deployed, governed, observed, and improved over time without ceding control of the learning loop to an external platform. This is especially important in financial services, manufacturing, telecommunications, cybersecurity, and the public sector, where security, compliance, resilience, and operational autonomy are non-negotiable.</p>
+<p>This collaboration also reflects a broader shift in how AI is being adopted globally, through partnerships that combine local infrastructure, market knowledge, and sovereign AI capabilities. Mistral and HUMAIN believe that supporting AI innovation in the region requires both the compute capacity to meet demand over time and the open, customizable AI models that allow organizations to innovate on their own terms. This collaboration will support long-term AI innovation, performance, cost control, and operational sovereignty.</p>
+<h3>Forward-Looking Statement:</h3>
+<p>This announcement may contain forward-looking statements based on current expectations and assumptions. Actual results may differ materially due to various risks and uncertainties and subsequent commercial agreements. HUMAIN and MISTRAL undertake no obligation to update these statements.</p>]]></content:encoded>
+      <guid isPermaLink="true">https://mistral.ai/news/mistral-x-humain</guid>
+      <category>Company</category>
+      <pubDate>Mon, 24 Aug 2026 00:00:00 +0000</pubDate>
+      <media:content url="https://mistral.ai/_astro/Linkedin-Partnership-Humain_Z1Gyz6.webp?dpl=6a8c94cb03ea0c6dc53ae243" type="image/webp" medium="image"/>
+    </item>
     <item>
       <title>Agentic Search. More accurate and efficient results from your AI systems.</title>
       <link>https://mistral.ai/news/agentic-search</link>
@@ -2465,57 +2482,6 @@ $ /usr/local/lib/heaptrack/libexec/heaptrack_interpret &lt; heaptrack.2028233 | 
       <category>Research</category>
       <pubDate>Wed, 28 May 2025 00:00:00 +0000</pubDate>
       <media:content url="https://mistral.ai/_astro/Cover-Model-Codestral%20Embed_PmtrA.webp?dpl=6a622da400bba40008995ff8" type="image/webp" medium="image"/>
-    </item>
-    <item>
-      <title>Build AI agents with the Mistral Agents API</title>
-      <link>https://mistral.ai/news/agents-api</link>
-      <description>Today we announce our new Agents API, a major step forward in making AI more capable, useful, and an active problem-solver.</description>
-      <content:encoded><![CDATA[<p><figure><img alt="Cover" height="457" src="https://mistral.ai/_astro/f2a4b295-ff64-4c16-a42a-14f858c65766_ZHm3tW.webp?dpl=6a622da400bba40008995ff8" width="1080"/></figure></p>
-<p>Today we announce our new Agents API, a major step forward in making AI more capable, useful, and an active problem-solver.</p>
-<p>Traditional language models excel at generating text but are limited in their ability to perform actions or maintain context. Our new Agents API addresses these limitations by combining Mistral's powerful language models with:</p>
-<ul><li><p>Built-in connectors for code execution, web search, image generation, and MCP tools </p></li><li><p>Persistent memory across conversations </p></li><li><p>Agentic orchestration capabilities</p></li></ul>
-<p>The Agents API complements our <a href="https://docs.mistral.ai/capabilities/completion/">Chat Completion API</a> by offering a dedicated framework that simplifies implementing agentic use cases. It serves as the backbone of enterprise-grade agentic platforms.</p>
-<p>By providing a reliable framework for AI agents to handle complex tasks, maintain context, and coordinate multiple actions, the Agents API enables enterprises to use AI in more practical and impactful ways.</p>
-<hr/>
-<h2>Mistral agents in action.</h2>
-<p>Explore the diverse applications of Mistral’s Agents API across various sectors:</p>
-<h3>Coding assistant with Github.</h3>
-<p>An agentic workflow built with Mistral's agents API where an agent interacts with Github and oversees a developer agent, powered by DevStral to write code. The agent is granted full authority over Github, showcasing automated software development task management.</p>
-<iframe allowfullscreen="" src="https://www.youtube.com/embed/1Tt9Fq1pUPQ?si=QI2N7R-4-PoGvo4_"></iframe>
-<p><a href="https://github.com/mistralai/cookbook/tree/main/mistral/agents/agents_api/github_agent">Read our cookbook</a></p>
-<h3>Linear tickets assistant.</h3>
-<p>An intelligent task coordination assistant powered by our Agents API, using multi-server MCP architecture to transform call transcripts to PRDs to actionable Linear issues and track project deliverables.<br/></p>
-<iframe allowfullscreen="" src="https://www.youtube.com/embed/4UPP-JEjcKo"></iframe>
-<p><a href="https://github.com/mistralai/cookbook/tree/main/mistral/agents/agents_api/prd_linear_ticket">Read our cookbook</a></p>
-<h3>Financial analyst.</h3>
-<p>A financial advisory agent constructed with our Agents API, orchestrating multiple MCP servers to source financial metrics, compile insights, and archive results securely.</p>
-<iframe allowfullscreen="" src="https://www.youtube.com/embed/ocxRKz73UJw"></iframe>
-<p><a href="https://github.com/mistralai/cookbook/tree/main/mistral/agents/agents_api/financial_analyst">Read our cookbook</a></p>
-<h3>Travel assistant.</h3>
-<p>A powerful AI travel assistant that helps users plan their trips, book accommodations, and manage travel needs.</p>
-<iframe allowfullscreen="" src="https://www.youtube.com/embed/DSYlhtG2UNM"></iframe>
-<p><a href="https://github.com/mistralai/cookbook/tree/main/mistral/agents/agents_api/travel_assistant">Read our cookbook</a></p>
-<h3>Nutrition assistant.</h3>
-<p>An AI-powered food diet companion designed to help users establish goals, log meals, receive personalized food suggestions, track their daily achievements, and discover dining options that align with their nutritional targets.</p>
-<iframe allowfullscreen="" src="https://www.youtube.com/embed/uEG2z2esl14"></iframe>
-<p><a href="https://github.com/mistralai/cookbook/tree/main/mistral/agents/agents_api/food_diet_companion">Read our cookbook</a></p>
-<hr/>
-<h2>Create an agent with built-in connectors and MCP tools.</h2>
-<p>Each agent can be equipped with powerful built-in connectors, which are tools that are deployed and ready for Agents to call on demand, and MCP tools: </p>
-<ul><li><p><h3><a href="https://docs.mistral.ai/agents/connectors/code_interpreter/">Code execution</a></h3>The Agents API can use the code execution connector, empowering developers to create agents that execute Python code in a secure sandboxed environment. This enables agents to tackle a wide range of tasks, including mathematical calculations and analysis, data visualization and plotting, and scientific computing.</p></li><li><p><h3><a href="https://docs.mistral.ai/agents/connectors/image_generation/">Image generation</a></h3>The image generation connector tool, powered by Black Forest Lab FLUX1.1 [pro] Ultra, enables agents to create images for diverse applications. This feature can be leveraged for various use cases such as generating visual aids for educational content, creating custom graphics for marketing materials, or even producing artistic images.</p></li><li><p><h3><a href="https://docs.mistral.ai/agents/connectors/document_library/">Document library</a></h3>Document Library is a built-in connector tool that enables agents to access documents from Mistral Cloud. It powers the integrated RAG functionality, strengthening agents’ knowledge by leveraging the content of user-uploaded documents.</p></li><li><p><h3><a href="https://docs.mistral.ai/agents/connectors/websearch/">Web search</a></h3>The Agents API offers web search as a connector, enabling developers to combine Mistral models with diverse, up-to-date information from web search, reputable news, and other sources. This integration facilitates the delivery of up-to-date, informed, evidence-supported responses.<br/>Agents with web search capabilities show a significant improvement in performance. In the SimpleQA benchmark, Mistral Large and Mistral Medium with web search achieve scores of 75% and 82.32%, respectively, compared to 23% and 22.08% without web search (see figure below).<h4>SimpleQA Accuracy (Higher is better)</h4> </p></li><li><p><h3><a href="https://docs.mistral.ai/agents/mcp/">MCP tools</a></h3>The Agents API SDK can also leverage tools built on the Model Context Protocol (MCP)—an open, standardized protocol that enables seamless integration between agents and external systems. MCP tools provide a flexible and extensible interface for agents to access real-world context, including APIs, databases, user data, documents, and other dynamic resources. Check out the <a href="#demo-github">Github</a>, <a href="#demo-finance">Financial Analyst</a>, and <a href="#demo-linear">Linear</a> MCP demos to learn how to use MCP tools with Mistral Agents in action.<br/><figure><img alt="Mcp Mistral" src="https://cms.globalaegis.net/api/legacy-media/file/5a0eb67b-819c-4a3f-9cc0-7dba190d58d2.svg"/></figure></p></li></ul>
-<h2>Memory and context with stateful conversations.</h2>
-<p>The Agents API provides robust conversation management through a flexible and stateful conversation system. Each conversation retains its context, allowing for seamless and coherent interactions over time.</p>
-<ul><li><p><h3><a href="https://docs.mistral.ai/agents/agents_basics/#conversations">Conversation management</a></h3>There are two ways to start a conversation:<br/>Each conversation maintains a structured history through conversation entries, ensuring that the context is preserved across interactions.</p></li><li><p><ol><li><p>With an Agent: Create a conversation with a specific agent_id to leverage its specialized capabilities.</p></li><li><p>Direct Access: Start a conversation by directly specifying the model and completion parameters, providing quick access to built-in connectors.</p></li></ol></p></li><li><p><h3><a href="https://docs.mistral.ai/agents/agents_basics/#continue-a-conversation-working">Stateful interactions and conversation branching</a></h3>Developers are no longer required to monitor conversion history; they have the ability to view past conversations. They can always continue any conversation or initiate new conversation paths from any point. </p></li><li><p><h3><a href="https://docs.mistral.ai/agents/agents_basics/#streaming-output-working">Streaming output</a></h3>The API also supports streaming outputs, both when starting a conversation and continuing a previous one. This feature allows for real-time updates and interactions. </p></li></ul>
-<h2>Agent orchestration.</h2>
-<p>The true power of our Agents API lies in its ability to orchestrate multiple agents to solve complex problems. Through dynamic orchestration, agents can be added or removed from a conversation as needed—each one contributing its unique capabilities to tackle different parts of a problem.</p>
-<p><figure><img alt="Agents" src="https://cms.globalaegis.net/api/legacy-media/file/55ca02be-4dfa-4f0e-ba6a-adc7c54dce4c.svg"/></figure></p>
-<ul><li><p><h3><a href="https://docs.mistral.ai/agents/handoffs/#create-an-agentic-workflow">Creating an agentic workflow</a></h3>To build a workflow with handoffs, start by creating all necessary agents. You can create as many agents as needed, each with specific tools and models, to form a tailored workflow.</p></li><li><p><h3><a href="https://docs.mistral.ai/agents/handoffs/">Agent handoffs</a></h3>Once agents are created, define which agents can hand off tasks to others. For example, a finance agent might delegate tasks to a web search agent or a calculator agent based on the conversation's needs.<br/>Handoffs enable a seamless chain of actions. A single request can trigger tasks across multiple agents, each handling specific parts of the request. This collaborative approach allows for efficient and effective problem-solving, unlocking powerful possibilities for real-world applications.</p></li></ul>
-<h2>Get started.</h2>
-<p>To get started, check out our <a href="https://docs.mistral.ai/agents/introduction">docs</a>, create your first agent, and start building! </p>]]></content:encoded>
-      <guid isPermaLink="true">https://mistral.ai/news/agents-api</guid>
-      <category>Product</category>
-      <pubDate>Tue, 27 May 2025 00:00:00 +0000</pubDate>
-      <media:content url="https://mistral.ai/_astro/f2a4b295-ff64-4c16-a42a-14f858c65766_ZHm3tW.webp?dpl=6a622da400bba40008995ff8" type="image/webp" medium="image"/>
     </item>
   </channel>
 </rss>

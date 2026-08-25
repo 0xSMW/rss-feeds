@@ -8,7 +8,167 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 24 Aug 2026 07:52:25 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 24 Aug 2026 21:00:38 +0000</lastBuildDate>
+    <item>
+      <title>SemiAnalysis Reports Rubin Ultra Memory Cut to 192GB</title>
+      <link>https://developer.nvidia.com/blog/inside-nvidia-rubin-gpu-architecture-powering-the-era-of-agentic-ai</link>
+      <description>SemiAnalysis says the chip will use 192GB HBM4, below earlier plans and regular Rubin.</description>
+      <content:encoded><![CDATA[<p><img src="https://digg.com/tech/x1oaqnr2/opengraph-image" alt="SemiAnalysis Reports Rubin Ultra Memory Cut to 192GB"/></p>
+<p>SemiAnalysis says the chip will use 192GB HBM4, below earlier plans and regular Rubin.</p>
+<p><strong>Original source:</strong> <a href="https://developer.nvidia.com/blog/inside-nvidia-rubin-gpu-architecture-powering-the-era-of-agentic-ai">https://developer.nvidia.com/blog/inside-nvidia-rubin-gpu-architecture-powering-the-era-of-agentic-ai</a></p>
+<p><strong>Digg story:</strong> <a href="https://digg.com/tech/x1oaqnr2">https://digg.com/tech/x1oaqnr2</a></p>
+<p>SemiAnalysis posted that Nvidia Rubin Ultra will ship with 192GB of HBM4 in an 8-hi stack. The account called the amount a massive downgrade from the 1TB originally previewed and noted it falls below the 288GB in regular Rubin. The post attributed the reduction to fewer memory cubes, a lower stack height, and the switch to HBM4 dies. AI commentator scaling01 replied with a bearish take on model scaling limits. Replies on X split between concerns over constrained supply and arguments that efficiency gains offset the cut. The packet contains no first-party Nvidia confirmation.</p>
+<ul><li><strong>Views:</strong> 344,625</li><li><strong>Likes:</strong> 1,067</li><li><strong>Bookmarks:</strong> 423</li><li><strong>Quotes:</strong> 63</li><li><strong>Replies:</strong> 104</li><li><strong>Posts:</strong> 4</li></ul>
+<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/SemiAnalysis_">SemiAnalysis</a></li><li><a href="https://x.com/scaling01">Lisan al Gaib</a></li><li><a href="https://x.com/__tinygrad__">the tiny corp</a></li></ul>]]></content:encoded>
+      <guid isPermaLink="true">https://developer.nvidia.com/blog/inside-nvidia-rubin-gpu-architecture-powering-the-era-of-agentic-ai</guid>
+      <category>Digg AI from X</category>
+      <pubDate>Mon, 24 Aug 2026 21:00:38 +0000</pubDate>
+      <media:content url="https://digg.com/tech/x1oaqnr2/opengraph-image" type="image/jpeg" medium="image"/>
+    </item>
+    <item>
+      <title>Thinking Machines Lab Launches Tinker Grants for Open-Weight Safety</title>
+      <link>https://thinkingmachines.ai/news/tinker-research-and-teaching-grants</link>
+      <description>Startup offers up to $50,000 in credits to researchers working on AI safety for open-weight models.</description>
+      <content:encoded><![CDATA[<p><img src="https://digg.com/tech/flcxwwqw/opengraph-image" alt="Thinking Machines Lab Launches Tinker Grants for Open-Weight Safety"/></p>
+<p>Startup offers up to $50,000 in credits to researchers working on AI safety for open-weight models.</p>
+<p><strong>Original source:</strong> <a href="https://thinkingmachines.ai/news/tinker-research-and-teaching-grants">https://thinkingmachines.ai/news/tinker-research-and-teaching-grants</a></p>
+<p><strong>Digg story:</strong> <a href="https://digg.com/tech/flcxwwqw">https://digg.com/tech/flcxwwqw</a></p>
+<p>Thinking Machines posted on X that it is launching Tinker grants of up to $50,000 in credits for safety research on open-weight models. The company said it would share project ideas and invited researchers whose safety work could use extra credits to apply. Engineer Clare Birch described the effort as funding safety research to aid adaptation to AI. Anthropic researcher Ethan Perez called the opportunity promising for open-weights safety. EleutherAI director Stella Biderman noted the listed focus areas matched her research agenda. Co-founder Luke Drago highlighted the need to reduce openness versus safety tradeoffs.</p>
+<ul><li><strong>Views:</strong> 92,609</li><li><strong>Likes:</strong> 899</li><li><strong>Bookmarks:</strong> 393</li><li><strong>Quotes:</strong> 20</li><li><strong>Replies:</strong> 28</li><li><strong>Posts:</strong> 7</li></ul>
+<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/thinkymachines">Thinking Machines</a></li><li><a href="https://x.com/EthanJPerez">Ethan Perez</a></li><li><a href="https://x.com/BlancheMinerva">Stella Biderman</a></li><li><a href="https://x.com/ZhongRuiqi">Ruiqi Zhong</a></li><li><a href="https://x.com/clarejtbirch">clare ❤️‍🔥</a></li></ul>]]></content:encoded>
+      <guid isPermaLink="true">https://thinkingmachines.ai/news/tinker-research-and-teaching-grants</guid>
+      <category>Digg AI from X</category>
+      <pubDate>Mon, 24 Aug 2026 20:03:24 +0000</pubDate>
+      <media:content url="https://digg.com/tech/flcxwwqw/opengraph-image" type="image/jpeg" medium="image"/>
+    </item>
+    <item>
+      <title>Epoch AI Says US GDP Growth Understated by 0.3 Points</title>
+      <link>https://www.bea.gov/news/2026/gdp-third-estimate-industries-corporate-profits-state-gdp-and-state-personal-income-4th</link>
+      <description>Researchers argue official statistics miss Nvidia profits from fabless chip sales.</description>
+      <content:encoded><![CDATA[<p><img src="https://digg.com/tech/9xvou3ac/opengraph-image" alt="Epoch AI Says US GDP Growth Understated by 0.3 Points"/></p>
+<p>Researchers argue official statistics miss Nvidia profits from fabless chip sales.</p>
+<p><strong>Original source:</strong> <a href="https://www.bea.gov/news/2026/gdp-third-estimate-industries-corporate-profits-state-gdp-and-state-personal-income-4th">https://www.bea.gov/news/2026/gdp-third-estimate-industries-corporate-profits-state-gdp-and-state-personal-income-4th</a></p>
+<p><strong>Digg story:</strong> <a href="https://digg.com/tech/9xvou3ac">https://digg.com/tech/9xvou3ac</a></p>
+<p>Epoch AI researcher Yafah Edelman stated that US GDP fails to track over 100 billion dollars in Nvidia profit. The organization estimates this gap causes reported annual GDP growth to be understated by 0.3 percentage points. The discrepancy traces to accounting for fabless AI chip sales. Researcher Josh You posted that GDP is undercounted by tens of basis points due to this method. Multiple AI researchers shared the Epoch post on X and described the analysis as notable.</p>
+<ul><li><strong>Views:</strong> 59,294</li><li><strong>Likes:</strong> 612</li><li><strong>Bookmarks:</strong> 102</li><li><strong>Quotes:</strong> 4</li><li><strong>Replies:</strong> 46</li><li><strong>Posts:</strong> 17</li></ul>
+<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/Miles_Brundage">Miles Brundage</a></li><li><a href="https://x.com/soldni">Luca Soldaini 🎀</a></li><li><a href="https://x.com/iamtrask">⿻ Andrew Trask</a></li><li><a href="https://x.com/ziv_ravid">Ravid Shwartz Ziv</a></li><li><a href="https://x.com/altryne">Alex Volkov</a></li></ul>]]></content:encoded>
+      <guid isPermaLink="true">https://www.bea.gov/news/2026/gdp-third-estimate-industries-corporate-profits-state-gdp-and-state-personal-income-4th</guid>
+      <category>Digg AI from X</category>
+      <pubDate>Mon, 24 Aug 2026 18:55:20 +0000</pubDate>
+      <media:content url="https://digg.com/tech/9xvou3ac/opengraph-image" type="image/jpeg" medium="image"/>
+    </item>
+    <item>
+      <title>Founders Announce Nonprofit for Safe Superintelligence</title>
+      <link>https://resi.org</link>
+      <description>Shafi Goldwasser, Adam Kalai, and Vinod Vaikuntanathan founded the Institute for Responsible Superintelligence.</description>
+      <content:encoded><![CDATA[<p><img src="https://digg.com/tech/jdu6sgas/opengraph-image" alt="Founders Announce Nonprofit for Safe Superintelligence"/></p>
+<p>Shafi Goldwasser, Adam Kalai, and Vinod Vaikuntanathan founded the Institute for Responsible Superintelligence.</p>
+<p><strong>Original source:</strong> <a href="https://resi.org">https://resi.org</a></p>
+<p><strong>Digg story:</strong> <a href="https://digg.com/tech/jdu6sgas">https://digg.com/tech/jdu6sgas</a></p>
+<p>Shafi Goldwasser, Adam Kalai, and Vinod Vaikuntanathan founded the Institute for Responsible Superintelligence as a nonprofit. The group posted on X that its goal is to build scientific foundations needed to make superintelligence safe by design. Its site at resi.org states the same purpose. Jonathan Frankle retweeted the announcement. Academics Patrick Shafto and Samuel Albanie replied with expressions of support.</p>
+<ul><li><strong>Views:</strong> 48,109</li><li><strong>Likes:</strong> 197</li><li><strong>Bookmarks:</strong> 52</li><li><strong>Quotes:</strong> 10</li><li><strong>Replies:</strong> 7</li><li><strong>Posts:</strong> 4</li></ul>
+<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/jefrankle">Jonathan Frankle</a></li><li><a href="https://x.com/SamuelAlbanie">Samuel Albanie 🇬🇧</a></li><li><a href="https://x.com/patrickshafto">Patrick Shafto</a></li></ul>]]></content:encoded>
+      <guid isPermaLink="true">https://resi.org</guid>
+      <category>Digg AI from X</category>
+      <pubDate>Mon, 24 Aug 2026 17:59:38 +0000</pubDate>
+      <media:content url="https://digg.com/tech/jdu6sgas/opengraph-image" type="image/jpeg" medium="image"/>
+    </item>
+    <item>
+      <title>Grok Ports Doom to ESP32-S Microcontroller</title>
+      <link>https://x.com/yunta_tsai/status/2091727077871591760</link>
+      <description>Posts from Musk and others claim Grok completed the Doom port rapidly on embedded hardware.</description>
+      <content:encoded><![CDATA[<p><img src="https://digg.com/tech/1ohjipbv/opengraph-image" alt="Grok Ports Doom to ESP32-S Microcontroller"/></p>
+<p>Posts from Musk and others claim Grok completed the Doom port rapidly on embedded hardware.</p>
+<p><strong>Original source:</strong> <a href="https://x.com/yunta_tsai/status/2091727077871591760">https://x.com/yunta_tsai/status/2091727077871591760</a></p>
+<p><strong>Digg story:</strong> <a href="https://digg.com/tech/1ohjipbv">https://digg.com/tech/1ohjipbv</a></p>
+<p>Elon Musk posted that Grok ported Doom to a new device in 10 minutes, linking to a source tweet about an ESP32-S microcontroller. Separate posts from Beff Jezos and Brian Roemmele amplified the claim and highlighted AI&#x27;s potential to compile software for varied hardware. The posts center on the reported speed of the port. No code, testing details, or independent verification appear in the visible material.</p>
+<ul><li><strong>Views:</strong> 2,966,896</li><li><strong>Likes:</strong> 5,689</li><li><strong>Bookmarks:</strong> 411</li><li><strong>Quotes:</strong> 39</li><li><strong>Replies:</strong> 533</li><li><strong>Posts:</strong> 3</li></ul>
+<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/elonmusk">Elon Musk</a></li><li><a href="https://x.com/beffjezos">Beff (e/acc)</a></li><li><a href="https://x.com/BrianRoemmele">Brian Roemmele</a></li></ul>]]></content:encoded>
+      <guid isPermaLink="true">https://x.com/yunta_tsai/status/2091727077871591760</guid>
+      <category>Digg AI from X</category>
+      <pubDate>Mon, 24 Aug 2026 16:58:23 +0000</pubDate>
+      <media:content url="https://digg.com/tech/1ohjipbv/opengraph-image" type="image/jpeg" medium="image"/>
+    </item>
+    <item>
+      <title>Andrew Wilson Joins Perplexity AI as Research Lead</title>
+      <link>https://research.perplexity.ai/articles</link>
+      <description>Perplexity founders confirm appointment with focus on open research in continual learning and multi-agent systems.</description>
+      <content:encoded><![CDATA[<p><img src="https://digg.com/tech/f9dqe1ax/opengraph-image" alt="Andrew Wilson Joins Perplexity AI as Research Lead"/></p>
+<p>Perplexity founders confirm appointment with focus on open research in continual learning and multi-agent systems.</p>
+<p><strong>Original source:</strong> <a href="https://research.perplexity.ai/articles">https://research.perplexity.ai/articles</a></p>
+<p><strong>Digg story:</strong> <a href="https://digg.com/tech/f9dqe1ax">https://digg.com/tech/f9dqe1ax</a></p>
+<p>Andrew Gordon Wilson posted that he is joining Perplexity AI as research lead to pursue ambitious open work on continual learning and agent collaboration. CEO Aravind Srinivas confirmed the hire, noting Wilson will report to CTO Denis Yarats and lead efforts on continual learning, synthetic data, and long-horizon RL environments and architectures. Yarats added the team is building large-scale RL infrastructure, will share a research agenda soon, and plans to open source much of the work. Wilson invited researchers to reach out. The company is hiring. Replies on X offered congratulations and one pun about renaming the firm Epiplexity.</p>
+<ul><li><strong>Views:</strong> 84,460</li><li><strong>Likes:</strong> 680</li><li><strong>Bookmarks:</strong> 69</li><li><strong>Quotes:</strong> 2</li><li><strong>Replies:</strong> 22</li><li><strong>Posts:</strong> 9</li></ul>
+<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/AravSrinivas">Aravind Srinivas</a></li><li><a href="https://x.com/sirbayes">Kevin Patrick Murphy</a></li><li><a href="https://x.com/TacoCohen">Taco Cohen</a></li><li><a href="https://x.com/SuryaGanguli">Surya Ganguli</a></li><li><a href="https://x.com/LakeBrenden">Brenden Lake @ CCN2026</a></li></ul>]]></content:encoded>
+      <guid isPermaLink="true">https://research.perplexity.ai/articles</guid>
+      <category>Digg AI from X</category>
+      <pubDate>Mon, 24 Aug 2026 14:55:53 +0000</pubDate>
+      <media:content url="https://digg.com/tech/f9dqe1ax/opengraph-image" type="image/jpeg" medium="image"/>
+    </item>
+    <item>
+      <title>Pieter Levels Launches Hotelist.com for Honest Ratings</title>
+      <link>http://Hotelist.com</link>
+      <description>Founder promotes AI site to surface negative hotel feedback suppressed elsewhere.</description>
+      <content:encoded><![CDATA[<p><img src="https://digg.com/tech/x8y9a544/opengraph-image" alt="Pieter Levels Launches Hotelist.com for Honest Ratings"/></p>
+<p>Founder promotes AI site to surface negative hotel feedback suppressed elsewhere.</p>
+<p><strong>Original source:</strong> <a href="http://Hotelist.com">http://Hotelist.com</a></p>
+<p><strong>Digg story:</strong> <a href="https://digg.com/tech/x8y9a544">https://digg.com/tech/x8y9a544</a></p>
+<p>Pieter Levels posted about Hotelist.com, his project to aggregate real hotel reviews using AI and counter high ratings on platforms like Airbnb. He noted that removing negative reviews creates booking anxiety because users cannot verify listings. Researcher Ivan Vendrov quoted the discussion and highlighted the incentive problem of suppressing feedback after decades of e-commerce. Vendrov asked why profitable honest info-brokers have not appeared and suggested projecting hospitality onto one dimension may be unnecessary.</p>
+<ul><li><strong>Views:</strong> 476,990</li><li><strong>Likes:</strong> 2,678</li><li><strong>Bookmarks:</strong> 518</li><li><strong>Quotes:</strong> 31</li><li><strong>Replies:</strong> 214</li><li><strong>Posts:</strong> 4</li></ul>
+<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/levelsio">@levelsio</a></li><li><a href="https://x.com/IvanVendrov">ivan</a></li></ul>]]></content:encoded>
+      <guid isPermaLink="true">http://Hotelist.com</guid>
+      <category>Digg AI from X</category>
+      <pubDate>Mon, 24 Aug 2026 14:17:36 +0000</pubDate>
+      <media:content url="https://digg.com/tech/x8y9a544/opengraph-image" type="image/jpeg" medium="image"/>
+    </item>
+    <item>
+      <title>Anthropic Questions Candidates on Safety Priority and Share Value</title>
+      <link>https://www.axios.com/2026/08/24/scoop-anthropic-candidates-face-blunt-money-question</link>
+      <description>Social posts reference an Axios scoop on culture interviews testing mission alignment over equity value.</description>
+      <content:encoded><![CDATA[<p><img src="https://digg.com/tech/3wawarxp/opengraph-image" alt="Anthropic Questions Candidates on Safety Priority and Share Value"/></p>
+<p>Social posts reference an Axios scoop on culture interviews testing mission alignment over equity value.</p>
+<p><strong>Original source:</strong> <a href="https://www.axios.com/2026/08/24/scoop-anthropic-candidates-face-blunt-money-question">https://www.axios.com/2026/08/24/scoop-anthropic-candidates-face-blunt-money-question</a></p>
+<p><strong>Digg story:</strong> <a href="https://digg.com/tech/3wawarxp">https://digg.com/tech/3wawarxp</a></p>
+<p>Madison Mills posted on X linking to an Axios report that Anthropic asks job candidates during culture interviews how they would react if the company&#x27;s share value crashed to zero. Alex Heath confirmed the question and called the interview process unusual. Miles Brundage noted the screening helps mission fit yet warned that groupthink can still emerge among aligned teams. Posts on X include praise from Gary Marcus for testing motivations and criticism that the question pressures conformity or belongs in salary talks. the available reporting only contains social references to the Axios scoop and does not include independent details on frequency or candidate answers.</p>
+<ul><li><strong>Views:</strong> 126,674</li><li><strong>Likes:</strong> 1,205</li><li><strong>Bookmarks:</strong> 107</li><li><strong>Quotes:</strong> 2</li><li><strong>Replies:</strong> 54</li><li><strong>Posts:</strong> 9</li></ul>
+<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/Miles_Brundage">Miles Brundage</a></li><li><a href="https://x.com/tszzl">roon</a></li><li><a href="https://x.com/GaryMarcus">Gary Marcus</a></li><li><a href="https://x.com/beffjezos">Beff (e/acc)</a></li><li><a href="https://x.com/TurnerNovak">Turner Novak 🍌🧢</a></li></ul>]]></content:encoded>
+      <guid isPermaLink="true">https://www.axios.com/2026/08/24/scoop-anthropic-candidates-face-blunt-money-question</guid>
+      <category>Digg AI from X</category>
+      <pubDate>Mon, 24 Aug 2026 11:13:22 +0000</pubDate>
+      <media:content url="https://digg.com/tech/3wawarxp/opengraph-image" type="image/jpeg" medium="image"/>
+    </item>
+    <item>
+      <title>Horace He Calls Cached Token Counts Incredibly Dumb</title>
+      <link>https://www.youtube.com/watch?v=tECAkJAI_Vk</link>
+      <description>Researchers note that visible dashboard numbers lead users to include cached inputs when reporting token usage.</description>
+      <content:encoded><![CDATA[<p><img src="https://digg.com/tech/onfl2d4w/opengraph-image" alt="Horace He Calls Cached Token Counts Incredibly Dumb"/></p>
+<p>Researchers note that visible dashboard numbers lead users to include cached inputs when reporting token usage.</p>
+<p><strong>Original source:</strong> <a href="https://www.youtube.com/watch?v=tECAkJAI_Vk">https://www.youtube.com/watch?v=tECAkJAI_Vk</a></p>
+<p><strong>Digg story:</strong> <a href="https://digg.com/tech/onfl2d4w">https://digg.com/tech/onfl2d4w</a></p>
+<p>Horace He posted on X that people discussing LLM token usage usually include cached input tokens and called the practice incredibly dumb. Hieu Pham replied that users read the most visible dashboard number rather than seeking a breakdown. Lucas Beyer joked that a &quot;kv tokens&quot; metric multiplying by layer count would make the numbers even bigger. Horace He followed up suggesting counting every decode step load of cached tokens. The posts discuss reported LLM token counts that include cached inputs.</p>
+<ul><li><strong>Views:</strong> 35,946</li><li><strong>Likes:</strong> 512</li><li><strong>Bookmarks:</strong> 37</li><li><strong>Quotes:</strong> 4</li><li><strong>Replies:</strong> 35</li><li><strong>Posts:</strong> 4</li></ul>
+<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/giffmana">Lucas Beyer (bl16)</a></li><li><a href="https://x.com/cHHillee">Horace He</a></li><li><a href="https://x.com/hyhieu226">Hieu Pham</a></li></ul>]]></content:encoded>
+      <guid isPermaLink="true">https://www.youtube.com/watch?v=tECAkJAI_Vk</guid>
+      <category>Digg AI from X</category>
+      <pubDate>Mon, 24 Aug 2026 11:07:11 +0000</pubDate>
+      <media:content url="https://digg.com/tech/onfl2d4w/opengraph-image" type="image/jpeg" medium="image"/>
+    </item>
+    <item>
+      <title>Sander Dieleman Blog on Continuous Diffusion Language Models</title>
+      <link>https://sander.ai/2026/08/24/continuous-dlms.html?v=1</link>
+      <description>Google DeepMind researcher posts historical perspective on the approach's recent resurgence.</description>
+      <content:encoded><![CDATA[<p><img src="https://digg.com/tech/s6pfd84o/opengraph-image" alt="Sander Dieleman Blog on Continuous Diffusion Language Models"/></p>
+<p>Google DeepMind researcher posts historical perspective on the approach&#x27;s recent resurgence.</p>
+<p><strong>Original source:</strong> <a href="https://sander.ai/2026/08/24/continuous-dlms.html?v=1">https://sander.ai/2026/08/24/continuous-dlms.html?v=1</a></p>
+<p><strong>Digg story:</strong> <a href="https://digg.com/tech/s6pfd84o">https://digg.com/tech/s6pfd84o</a></p>
+<p>Sander Dieleman announced a new blog post on continuous diffusion for language models. The Research Engineer at Google DeepMind notes the direction receded for a while but returned as a hot topic this year. The post supplies historical perspective and thoughts on the revival. Linked sources state fully discrete methods dominated for a few years while continuous diffusion language models are making a comeback. The blog appears at the link shared in the post.</p>
+<ul><li><strong>Views:</strong> 31,579</li><li><strong>Likes:</strong> 513</li><li><strong>Bookmarks:</strong> 351</li><li><strong>Quotes:</strong> 9</li><li><strong>Replies:</strong> 11</li><li><strong>Posts:</strong> 2</li></ul>
+<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/sedielem">Sander Dieleman</a></li><li><a href="https://x.com/kastnerkyle">Kyle Kastner</a></li></ul>]]></content:encoded>
+      <guid isPermaLink="true">https://sander.ai/2026/08/24/continuous-dlms.html?v=1</guid>
+      <category>Digg AI from X</category>
+      <pubDate>Mon, 24 Aug 2026 10:04:13 +0000</pubDate>
+      <media:content url="https://digg.com/tech/s6pfd84o/opengraph-image" type="image/jpeg" medium="image"/>
+    </item>
     <item>
       <title>Users Question TSMC Role in Xiaomi XRING Chips</title>
       <link>https://www.digitimes.com/news/a20260115VL209/xiaomi-xring-3nm-processor-tsmc.html</link>
