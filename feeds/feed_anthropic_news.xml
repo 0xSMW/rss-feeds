@@ -8,7 +8,25 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 14 Aug 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 25 Aug 2026 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Funding better evaluations of AI’s impact on wellbeing</title>
+      <link>https://www.anthropic.com/news/wellbeing-research-grants</link>
+      <description>Anthropic is launching a $5 million grant program to fund independent research into how AI impacts users’ wellbeing.</description>
+      <content:encoded><![CDATA[<p>We’re launching a $5 million grant program to fund independent research into how AI impacts users’ wellbeing. The program will provide direct funding, access to our models, and technical support to grantees building open-source evaluations that help the AI industry measure how our models affect those who use them. Grantees will work fully independently, and will publish their work as open-source projects that any developer can make use of.</p>
+<p>AI systems have become central to how many people work, learn, and solve problems. They’ve also become conversational partners and can be <a href="https://www.anthropic.com/news/how-people-use-claude-for-support-advice-and-companionship">sources of emotional support</a> during difficult times. But as an industry, we are still working towards developing clear standards for how models should behave in these conversations, for example, when a user begins to seek companionship from a model, or uses AI to navigate a mental health crisis.</p>
+<p>Furthermore, wellbeing is a particularly difficult area to evaluate. For most model behaviors, we can look at a single answer and determine whether it is accurate and appropriate. But assessing wellbeing requires much more context. For example, a user in distress might not share thoughts of self-harm right away; the need for a more cautious response might only become clear over the course of a long conversation. And a response that might be reasonable in one context might be harmful in another. For example, Claude might give advice on balanced diets and workout routines to a user who asks about losing weight, but if the user has demonstrated a history of disordered eating, that response could be inappropriate, and potentially actively harmful.</p>
+<p>We work to <a href="https://www.anthropic.com/news/protecting-well-being-of-users">develop safeguards</a> to identify such conversations and help ensure Claude responds appropriately, and we <a href="https://www.anthropic.com/research/claude-personal-guidance">publish research</a> into the types of conversations people have with Claude to better inform how we develop our safeguards, how we evaluate them, and other measures we can take to protect users’ wellbeing. But these are nuanced considerations, and the stakes are significant. The right approach will need to evolve alongside our models and their uses.</p>
+<p>By funding the creation of independent evaluations and benchmarks of user wellbeing, we hope to invite more people to lend their expertise to this emerging and critical field, including clinicians, psychologists, methodologists, and others.</p>
+<h2 id="towards-more-effective-wellbeing-evaluations-and-benchmarks">Towards more effective wellbeing evaluations and benchmarks</h2>
+<p>As part of this program, we’re <a href="https://www-cdn.anthropic.com/files/4zrzovbb/website/5ecb637cb206057cb93cf4a9e72e843fda5e9892.pdf">sharing guidance</a> from our Safeguards team on what we believe makes a wellbeing evaluation rigorous enough to build on, along with the common challenges that can limit an evaluation’s usefulness.</p>
+<p>In brief, we’re seeking evaluations that:</p>
+<ul><li>State clearly what they are measuring (i.e., what counts as a pass or fail, and why it matters);</li><li>Involve clinical and subject-matter experts in the design and validation;</li><li>Test both precautions and harms (i.e., evaluate the risk of both overcompliance and overrefusal);</li><li>Reflect how users actually use AI (often, this means constructing scenarios that represent multi-turn conversations, where risk escalates and context shifts over the course of a long conversation);</li><li>Validate their graders against real subject-matter experts.</li></ul>
+<p>To learn more about the grant program and apply, <a href="https://docs.google.com/forms/d/e/1FAIpQLSfmUDtpfg-ztmQPkCbwx-VAe_urX48sthbqs8GmZUT9irRSDQ/viewform?usp=dialog">see our application form</a>. For more on building strong wellbeing evaluations and benchmarks, <a href="https://www-cdn.anthropic.com/files/4zrzovbb/website/5ecb637cb206057cb93cf4a9e72e843fda5e9892.pdf">read our guidance</a>. Applications are due by September 21; applicants who are selected to submit full proposals will be notified by October 5.</p>]]></content:encoded>
+      <guid isPermaLink="true">https://www.anthropic.com/news/wellbeing-research-grants</guid>
+      <category>Announcements</category>
+      <pubDate>Tue, 25 Aug 2026 00:00:00 +0000</pubDate>
+    </item>
     <item>
       <title>How Claude’s text watermark works</title>
       <link>https://www.anthropic.com/news/claude-text-watermark</link>
