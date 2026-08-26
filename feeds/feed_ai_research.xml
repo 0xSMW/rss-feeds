@@ -1041,146 +1041,99 @@ the point where they asked me why I kept asking so many questions.</p><p>Now I l
       <pubDate>Wed, 12 Aug 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Imagine Image 2.0</title>
-      <link>https://x.ai/news/grok-imagine-image-2</link>
-      <description>Precise image generation and editing, built for real creative work.</description>
-      <content:encoded><![CDATA[<p>Imagine Image 2.0 is now generally available as the new Quality Mode on <a href="https://grok.com/imagine?referrer=website&amp;campaign=imagine-image-2-blog">grok.com/imagine</a>, and our <a href="https://apps.apple.com/app/grok-ai-chat-video/id6670324846">iOS</a> and <a href="https://play.google.com/store/apps/details?id=ai.x.grok">Android</a> apps.</p>
-<p>We built Image 2.0 around a simple goal: make images you can use in real work. 2.0 follows instructions closely, down to the details. It plans typography and layout the way a designer would, so dense, multi-part visuals hold together and small text comes out sharp. And it preserves what you put in across generations and edits.</p>
-<h2 id="precise-editing">Precise editing</h2>
-<p>Real work is iterative. The first generation is rarely the final asset, so Image 2.0 adds tools for changing exactly what you mean and nothing else.</p>
-<p>The magic wand edits the region you point at and leaves the rest untouched. Segmentation selects precise areas of the image to change. Background removal exports any subject with a transparent background, ready to drop into other work. Multi-ref editing accepts up to 5 input images in a single generation, removing the need for manual compositing.</p>
-<h3 id="smart-resize">Smart resize</h3>
-<p>One image, any size: pick a ratio and the model fills in the frame.</p>
-<img alt="The same scene recomposed to a 1:2 tall banner frame" src="https://x.ai/_next/image?url=https%3A%2F%2Fmedia.x.ai%2Fv1%2Fwebsite%2Fsmart-resize_1x2-a845c06b.jpg&amp;w=3840&amp;q=75"/>
-<img alt="The same scene recomposed to a 9:16 vertical frame" src="https://x.ai/_next/image?url=https%3A%2F%2Fmedia.x.ai%2Fv1%2Fwebsite%2Fsmart-resize_9x16-2670f47f.jpg&amp;w=3840&amp;q=75"/>
-<img alt="The same scene recomposed to a 2:3 portrait frame" src="https://x.ai/_next/image?url=https%3A%2F%2Fmedia.x.ai%2Fv1%2Fwebsite%2Fsmart-resize_2x3-77ccf010.jpg&amp;w=3840&amp;q=75"/>
-<img alt="The same scene recomposed to a 3:4 portrait frame" src="https://x.ai/_next/image?url=https%3A%2F%2Fmedia.x.ai%2Fv1%2Fwebsite%2Fsmart-resize_3x4-75f18baf.jpg&amp;w=3840&amp;q=75"/>
-<img alt="The same scene recomposed to a 1:1 square frame" src="https://x.ai/_next/image?url=https%3A%2F%2Fmedia.x.ai%2Fv1%2Fwebsite%2Fsmart-resize_1x1-cbd45e6d.jpg&amp;w=3840&amp;q=75"/>
-<img alt="The same scene recomposed to a 4:3 landscape frame" src="https://x.ai/_next/image?url=https%3A%2F%2Fmedia.x.ai%2Fv1%2Fwebsite%2Fsmart-resize_4x3-be7d8976.jpg&amp;w=3840&amp;q=75"/>
-<img alt="The same scene recomposed to a 3:2 landscape frame" src="https://x.ai/_next/image?url=https%3A%2F%2Fmedia.x.ai%2Fv1%2Fwebsite%2Fsmart-resize_3x2-f1f70bf6.jpg&amp;w=3840&amp;q=75"/>
-<img alt="The same scene recomposed to a 16:9 widescreen frame" src="https://x.ai/_next/image?url=https%3A%2F%2Fmedia.x.ai%2Fv1%2Fwebsite%2Fsmart-resize_16x9-9cde5cf2.jpg&amp;w=3840&amp;q=75"/>
-<img alt="The same scene recomposed to a 2:1 wide banner frame" src="https://x.ai/_next/image?url=https%3A%2F%2Fmedia.x.ai%2Fv1%2Fwebsite%2Fsmart-resize_2x1-f5dac009.jpg&amp;w=3840&amp;q=75"/>
-<h2 id="real-world-performance">Real-world performance</h2>
-<p>Image 2.0 was trained for fidelity across photography, design, and illustration, with editing treated as a first-class capability. It ranks second in the world in both text-to-image generation and image editing.</p>
-<h2 id="templates">Templates</h2>
-<p>We’re also introducing new templates, which package common image workflows into ready-made starting points. Each one covers a specific task — photo editing, product shots, headshots, icons, game assets, and more — with the workflow already configured, so you supply the inputs and get a finished result.</p>
-<figure><img alt="Photo Edit template cover" src="https://media.x.ai/cdn-cgi/image/fit=scale-down,onerror=redirect,f=auto/v1/website/imagine-photo-edit-cb975bb5.jpg"/><figcaption><p>Photo Tools</p><p>Photo Edit</p></figcaption></figure>
-<figure><img alt="Product Color Change template cover" src="https://media.x.ai/cdn-cgi/image/fit=scale-down,onerror=redirect,f=auto/v1/website/imagine-product-color-change-1198bcaa.jpg"/><figcaption><p>Product</p><p>Product Color Change</p></figcaption></figure>
-<figure><img alt="Editorial Product Poster template cover" src="https://media.x.ai/cdn-cgi/image/fit=scale-down,onerror=redirect,f=auto/v1/website/imagine-editorial-poster-4ca724c6.jpg"/><figcaption><p>Marketing</p><p>Editorial Product Poster</p></figcaption></figure>
-<figure><img alt="Reimagine template cover" src="https://media.x.ai/cdn-cgi/image/fit=scale-down,onerror=redirect,f=auto/v1/website/imagine-restyle-c7641a1c.jpg"/><figcaption><p>Photo Tools</p><p>Reimagine</p></figcaption></figure>
-<figure><img alt="Photo Collage template cover" src="https://media.x.ai/cdn-cgi/image/fit=scale-down,onerror=redirect,f=auto/v1/website/imagine-collage-72ead2df.jpg"/><figcaption><p>Photo Tools</p><p>Photo Collage</p></figcaption></figure>
-<figure><img alt="Mascot Maker template cover" src="https://media.x.ai/cdn-cgi/image/fit=scale-down,onerror=redirect,f=auto/v1/website/imagine-mascot-maker-11b9f202.jpg"/><figcaption><p>Design Tools</p><p>Mascot Maker</p></figcaption></figure>
-<figure><img alt="BG Removal &amp; Change template cover" src="https://media.x.ai/cdn-cgi/image/fit=scale-down,onerror=redirect,f=auto/v1/website/imagine-background-removal-02258dca.jpg"/><figcaption><p>Photo Tools</p><p>BG Removal &amp; Change</p></figcaption></figure>
-<figure><img alt="E-Commerce Photos template cover" src="https://media.x.ai/cdn-cgi/image/fit=scale-down,onerror=redirect,f=auto/v1/website/imagine-ecommerce-listing-4b5fc2d1.jpg"/><figcaption><p>Marketing</p><p>E-Commerce Photos</p></figcaption></figure>
-<figure><img alt="UGC Photos template cover" src="https://media.x.ai/cdn-cgi/image/fit=scale-down,onerror=redirect,f=auto/v1/website/imagine-ugc-photos-5606ee1f.jpg"/><figcaption><p>Marketing</p><p>UGC Photos</p></figcaption></figure>
-<figure><img alt="Professional Headshot template cover" src="https://media.x.ai/cdn-cgi/image/fit=scale-down,onerror=redirect,f=auto/v1/website/imagine-professional-headshot-40502d23.jpg"/><figcaption><p>Photo Tools</p><p>Professional Headshot</p></figcaption></figure>
-<figure><img alt="Icon Maker template cover" src="https://media.x.ai/cdn-cgi/image/fit=scale-down,onerror=redirect,f=auto/v1/website/imagine-icon-maker-fcde35f8.jpg"/><figcaption><p>Design Tools</p><p>Icon Maker</p></figcaption></figure>
-<figure><img alt="Character Sprite template cover" src="https://media.x.ai/cdn-cgi/image/fit=scale-down,onerror=redirect,f=auto/v1/website/imagine-living-sprite-74b0d9be.jpg"/><figcaption><p>Design Tools</p><p>Character Sprite</p></figcaption></figure>
-<figure><img alt="Props &amp; UI Kit template cover" src="https://media.x.ai/cdn-cgi/image/fit=scale-down,onerror=redirect,f=auto/v1/website/game-props-ui-kit-299e357a.jpg"/><figcaption><p>Game Assets</p><p>Props &amp; UI Kit</p></figcaption></figure>
-<figure><img alt="Emoji Creator template cover" src="https://media.x.ai/cdn-cgi/image/fit=scale-down,onerror=redirect,f=auto/v1/website/imagine-emoji-creator-b2e48686.jpg"/><figcaption><p>Streaming</p><p>Emoji Creator</p></figcaption></figure>
-<figure><img alt="Merch Maker template cover" src="https://media.x.ai/cdn-cgi/image/fit=scale-down,onerror=redirect,f=auto/v1/website/imagine-merch-maker-e73533a7.jpg"/><figcaption><p>Marketing</p><p>Merch Maker</p></figcaption></figure>
-<h3 id="build-a-world-for-video">Build a world for video</h3>
-<p>One world from a handful of prompts: a character, her locations, and the props she carries — generated separately, holding one style from image to image.</p>
-<figure><img alt="An archer with a braid and a scarred cheek in a snowbound castle courtyard" src="https://x.ai/_next/image?url=https%3A%2F%2Fmedia.x.ai%2Fv1%2Fwebsite%2Fimage-2-world-character-65e8ed11.jpg&amp;w=3840&amp;q=75"/><figcaption>Character</figcaption></figure>
-<figure><img alt="Longships frozen into the ice of a snowed-in harbor" src="https://x.ai/_next/image?url=https%3A%2F%2Fmedia.x.ai%2Fv1%2Fwebsite%2Fimage-2-world-location-1-ec43aa5e.jpg&amp;w=3840&amp;q=75"/><figcaption>Location</figcaption></figure>
-<figure><img alt="A walled war camp of tents and watchtowers under snowfall" src="https://x.ai/_next/image?url=https%3A%2F%2Fmedia.x.ai%2Fv1%2Fwebsite%2Fimage-2-world-location-2-3889e220.jpg&amp;w=3840&amp;q=75"/><figcaption>Location</figcaption></figure>
-<figure><img alt="A rune-carved knife and leather pouch dusted with snow" src="https://x.ai/_next/image?url=https%3A%2F%2Fmedia.x.ai%2Fv1%2Fwebsite%2Fimage-2-world-prop-1-f9a844de.jpg&amp;w=3840&amp;q=75"/><figcaption>Prop</figcaption></figure>
-<figure><img alt="An antler crown inscribed with runes, resting on a stone pedestal" src="https://x.ai/_next/image?url=https%3A%2F%2Fmedia.x.ai%2Fv1%2Fwebsite%2Fimage-2-world-prop-2-5bbf0afd.jpg&amp;w=3840&amp;q=75"/><figcaption>Prop</figcaption></figure>
-<figure><img alt="The same archer in a blizzard, breathing warmth into her hand" src="https://x.ai/_next/image?url=https%3A%2F%2Fmedia.x.ai%2Fv1%2Fwebsite%2Fimage-2-world-character-2-9b749b9c.jpg&amp;w=3840&amp;q=75"/><figcaption>Character</figcaption></figure>
-<figure><img alt="A dark tunnel mouth in a glacier wall, breathing fog" src="https://x.ai/_next/image?url=https%3A%2F%2Fmedia.x.ai%2Fv1%2Fwebsite%2Fimage-2-world-location-3-e2f808cc.jpg&amp;w=3840&amp;q=75"/><figcaption>Location</figcaption></figure>
-<h2 id="try-it-today-on-our-consumer-products">Try it today on our consumer products</h2>
-<img alt="iOS App Store Icon" height="21" src="https://media.x.ai/cdn-cgi/image/fit=scale-down,onerror=redirect,width=21,height=21,f=auto/v1/website/app-store-cfb2b588.png" width="21"/>
-<img alt="Android Play Store Icon" height="21" src="https://media.x.ai/cdn-cgi/image/fit=scale-down,onerror=redirect,width=21,height=21,f=auto/v1/website/play-store-0a6de758.png" width="21"/>
+      <title>Imagine Video 1.5 with References</title>
+      <link>https://x.ai/news/grok-imagine-video-1-5-references</link>
+      <description>Our best video model, now with text, image, and voice references — generating up to 1080p.</description>
+      <content:encoded><![CDATA[<p>When we launched <a href="https://x.ai/news/grok-imagine-video-1-5">Imagine Video 1.5</a> last month, it was our best video model yet — better motion, better physics, and better audio. Today it goes further: image and voice references, video from a prompt alone, and native 1080p generation.</p>
+<p>Image and voice references start today in the US for SuperGrok Heavy and SuperGrok Plus on <a href="https://grok.com/imagine?referrer=website&amp;campaign=imagine-video-1-5-references-blog">grok.com/imagine</a> and <a href="https://apps.apple.com/app/grok-ai-chat-video/id6670324846">iOS</a>, rolling out to all tiers over the next few days.</p>
+<h2 id="text-to-video-and-native-1080p">Text-to-Video and native 1080p</h2>
+<p>Describe the shot — no starting image needed. Text-to-video pairs our image generation with image-to-video. Native 1080p is now supported with text-to-video and image-to-video. Text-to-video and native 1080p are generally available on grok.com/imagine, iOS, and <a href="https://play.google.com/store/apps/details?id=ai.x.grok">Android</a>.</p>
+<h2 id="voice-consistency">Voice consistency</h2>
+<p>Pass in a character image and a voice reference, and both hold — the same face and the same voice in every scene.</p>
+<img alt="Reference photo of the character" src="https://x.ai/_next/image?url=https%3A%2F%2Fmedia.x.ai%2Fv1%2Fwebsite%2Fonevoice-character-f7d66216.jpg&amp;w=3840&amp;q=75"/>
+<h2 id="multi-reference">Multi-Reference</h2>
+<p>Each reference image locks one thing in place — a face, a product, a location. Keep a character and swap the scene, keep the scene and swap the character, or hold both and change only the action. Up to seven references per generation.</p>
+<figure><img alt="Reference photo of a man" src="https://x.ai/_next/image?url=https%3A%2F%2Fmedia.x.ai%2Fv1%2Fwebsite%2Fpodcaster-character-f50cf3a1.jpg&amp;w=3840&amp;q=75"/><p>Character</p><img alt="Reference photo of a podcast studio" src="https://x.ai/_next/image?url=https%3A%2F%2Fmedia.x.ai%2Fv1%2Fwebsite%2Fpodcaster-scene-5d14579c.jpg&amp;w=3840&amp;q=75"/><p>Scene</p></figure>
+<figure><img alt="Reference photo of a man" src="https://x.ai/_next/image?url=https%3A%2F%2Fmedia.x.ai%2Fv1%2Fwebsite%2Fpodcaster-character-f50cf3a1.jpg&amp;w=3840&amp;q=75"/><p>Character</p><img alt="Reference photo of a warmly lit podcast studio with a leather armchair" src="https://x.ai/_next/image?url=https%3A%2F%2Fmedia.x.ai%2Fv1%2Fwebsite%2Fpodcaster-2-scene-6ac920e9.png&amp;w=3840&amp;q=75"/><p>Scene</p></figure>
+<figure><img alt="Reference photo of a woman in a grey sweater" src="https://x.ai/_next/image?url=https%3A%2F%2Fmedia.x.ai%2Fv1%2Fwebsite%2Fpodcaster-3-character-12939291.jpg&amp;w=3840&amp;q=75"/><p>Character</p><img alt="Reference photo of a warmly lit podcast studio with a leather armchair" src="https://x.ai/_next/image?url=https%3A%2F%2Fmedia.x.ai%2Fv1%2Fwebsite%2Fpodcaster-2-scene-6ac920e9.png&amp;w=3840&amp;q=75"/><p>Scene</p></figure>
 <h2 id="in-the-api">In the API</h2>
-<p>Image 2.0 is available in the API as <code>grok-imagine-image-2.0</code>.</p>
-<pre><code>import xai_sdk
+<p>Image references, text-to-video, and native 1080p are live in the <a href="https://docs.x.ai/developers/model-capabilities/video/generation">xAI API</a> with our best video model, <code>grok-imagine-video-1.5</code>. Voice reference support is available <a href="https://x.ai/contact-sales?interest=imagine">on request</a>.</p>
+<pre><code>import os
+import xai_sdk
 
-client = xai_sdk.Client()
+client = xai_sdk.Client(api_key=os.getenv("XAI_API_KEY"))
 
-response = client.image.sample(
-    prompt="A concert poster for a synthwave band, bold retro typography, sharp small print",
-    model="grok-imagine-image-2.0",
+response = client.video.generate(
+    prompt="Slow cinematic push-in as embers drift across the battlefield and the helmet's crest stirs in the wind",
+    model="grok-imagine-video-1.5",
+    reference_image_urls=["https://example.com/helmet.jpg"],
+    duration=6,
+    aspect_ratio="16:9",
+    resolution="720p",
 )
 
 print(response.url)
 </code></pre>
-<p>For full documentation, visit our <a href="https://docs.x.ai/developers/model-capabilities/images/generation#quick-start">docs page</a>, or start generating in the playground.</p>]]></content:encoded>
-      <guid isPermaLink="true">https://x.ai/news/grok-imagine-image-2</guid>
+<h2 id="try-it-today">Try it today</h2>
+<img alt="iOS App Store Icon" height="21" src="https://media.x.ai/cdn-cgi/image/fit=scale-down,onerror=redirect,width=21,height=21,f=auto/v1/website/app-store-cfb2b588.png" width="21"/>
+<img alt="Android Play Store Icon" height="21" src="https://media.x.ai/cdn-cgi/image/fit=scale-down,onerror=redirect,width=21,height=21,f=auto/v1/website/play-store-0a6de758.png" width="21"/>]]></content:encoded>
+      <guid isPermaLink="true">https://x.ai/news/grok-imagine-video-1-5-references</guid>
       <category>News</category>
       <pubDate>Wed, 12 Aug 2026 00:00:00 +0000</pubDate>
-      <media:content url="https://x.ai/_next/image?url=https%3A%2F%2Fmedia.x.ai%2Fv1%2Fwebsite%2Fsmart-resize_1x2-a845c06b.jpg&amp;amp;w=3840&amp;amp;q=75" type="image/jpeg" medium="image"/>
+      <media:content url="https://x.ai/_next/image?url=https%3A%2F%2Fmedia.x.ai%2Fv1%2Fwebsite%2Fonevoice-character-f7d66216.jpg&amp;amp;w=3840&amp;amp;q=75" type="image/jpeg" medium="image"/>
     </item>
     <item>
-      <title>Automations in Grok</title>
-      <link>https://x.ai/news/grok-automations</link>
-      <description>Describe a job once and Grok runs it on a schedule or when an email arrives, then reports back.</description>
-      <content:encoded><![CDATA[<p>Today, we're introducing Automations: jobs Grok runs on its own. Describe the work once, choose when it runs, and Grok takes it from there, whether that's research done before you're awake or an important email flagged the moment it lands. Automations are available on <a href="https://grok.com/automations">grok.com</a> and in the Grok app on iOS and Android.</p>
-<h2 id="describe-the-job-once">Describe the job once</h2>
-<p>An automation's instructions read like any chat message: describe what you want, attach files for context, add connectors and skills, and pick a mode. Name it, save it, and from then on every run is a fresh request: same instructions, current data.</p>
-<h2 id="on-a-schedule-or-on-a-trigger">On a schedule, or on a trigger</h2>
-<p>Schedules run once, daily, weekdays, weekly, monthly, or yearly, at a time you choose in your timezone: a morning brief at 8:00 before the day starts, or a rent reminder on the 1st.</p>
-<p>Email triggers watch your inbox instead. When an incoming email matches your filters (sender, recipient, or subject), the automation fires with that email as context, and Grok responds to the actual message. Instructions can also point at your tools directly: type @ to mention a connector, and Grok uses it on every run.</p>
-<p>You can also start a run yourself with Run now, which is handy for testing an automation right after you build it.</p>
-<h2 id="every-run-is-a-full-conversation">Every run is a full conversation</h2>
-<p>When an automation fires, Grok opens a real conversation, does the work, and saves the result to its run history. Open any run to read the full thread, or pick up the conversation where Grok left off. You choose how each automation reports back: email, app notification, both, or neither if you'd rather check in yourself.</p>
-<h2 id="start-from-chat-or-a-template">Start from chat, or a template</h2>
-<p>You can also create automations straight from chat: ask Grok to "check the news every morning and flag anything about pricing" and it sets one up for you. The Automations page has suggested templates to start from, and any automation can be paused, resumed, edited, or deleted at any time.</p>
+      <title>Grok in Google Workspace</title>
+      <link>https://x.ai/news/introducing-google-workspace-addon</link>
+      <description>Use the Grok add-on for Google Workspace to work directly in Sheets, Slides, and Docs.</description>
+      <content:encoded><![CDATA[<p><strong>Today we're bringing Grok into Google Workspace.</strong> One add-on puts Grok beside the file you have open in Sheets, Slides, and Docs.</p>
+<h2 id="sheets">Sheets</h2>
+<p>Ask a question and Grok answers from the spreadsheet itself, citing the cells it used. It writes and fills formulas, inserts charts, and reruns scenarios when an assumption changes, so updating a model no longer means rebuilding it. Every change is a normal edit you can check and undo.</p>
+<h2 id="slides">Slides</h2>
+<p>Grok turns an outline into a working presentation, researching from the web or X and adding diagrams or images where they help. It extends a deck in its existing theme and rewrites titles so each slide makes its point. The result is regular, editable slides, not an export to fix up.</p>
+<h2 id="docs">Docs</h2>
+<p>Grok writes where the writing happens. It turns rough notes into a structured draft with real headings and lists, fixes grammar in place, and keeps style consistent across a long file. With <a href="https://grok.com/connectors">connectors</a> enabled, it can pull from recent emails or files in Google Drive.</p>
 <h2 id="get-started">Get started</h2>
-<p>Create your first automation at <a href="https://grok.com/automations">grok.com/automations</a>. Scheduled automations are available to everyone; email triggers are included with SuperGrok.</p>]]></content:encoded>
-      <guid isPermaLink="true">https://x.ai/news/grok-automations</guid>
+<p>Grok for Google Workspace is a free add-on, and one install from the <a href="https://workspace.google.com/marketplace/app/grok/660927092109">Google Workspace Marketplace</a> covers Sheets, Slides, and Docs. Also available for Microsoft 365 in <a href="https://x.ai/grok/word">Word</a>, <a href="https://x.ai/grok/excel">Excel</a>, <a href="https://x.ai/grok/powerpoint">PowerPoint</a>, and <a href="https://x.ai/grok/outlook">Outlook</a>.</p>]]></content:encoded>
+      <guid isPermaLink="true">https://x.ai/news/introducing-google-workspace-addon</guid>
       <category>News</category>
       <pubDate>Wed, 12 Aug 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Explore the markets with Interactive Brokers and Grok</title>
-      <link>https://x.ai/news/grok-interactive-brokers</link>
-      <description>Interactive Brokers now integrates with Grok, bringing powerful AI directly into your trading experience — portfolio analysis, scenario modeling, research, and order instructions.</description>
-      <content:encoded><![CDATA[<p>Interactive Brokers now integrates with Grok, bringing powerful AI directly into your trading experience.</p>
-<p>This integration unlocks a faster, more dynamic way to explore markets, analyze portfolios, and generate actionable insights.</p>
-<h2 id="get-started-in-minutes">Get started in minutes</h2>
-<p>Clients can link their existing Interactive Brokers account to Grok in minutes — at no cost, with no new account required.</p>
-<p>Getting started is simple:</p>
-<ol>
-<li>In Grok, search for <strong>“Interactive Brokers”</strong> and select the Interactive Brokers connector.</li>
-<li>You’ll be redirected to Interactive Brokers’ login page.</li>
-<li>Sign in using your existing Interactive Brokers credentials.</li>
-<li>Authorize access for the account you’d like to connect.</li>
-</ol>
-<p>Once connected, you can:</p>
+      <title>Workflows in Grok Build</title>
+      <link>https://x.ai/news/workflows</link>
+      <description>Grok Build can now write and run workflows: orchestration scripts that fan a task out across hundreds of parallel agents, verify the results, and report back in one background run.</description>
+      <content:encoded><![CDATA[<p>Grok Build can now run <strong>workflows</strong>: describe a large task in plain language, and Grok plans it, fans it out across hundreds of parallel agents in the background, and reports back when everything is done. Your session stays free the whole time.</p>
+<h2 id="when-to-use-a-workflow">When to use a workflow</h2>
+<p>Workflows are built for complex, multi-faceted tasks a single conversation can't hold: reviewing every feature in a large PR, triaging the last 100 issues, auditing a codebase for one class of bug. If the work splits into many independent pieces and should end in one clear report, ask for a workflow.</p>
+<h2 id="how-it-works">How it works</h2>
+<p>Grok plans the task as a small script: the phases of work, the agents in each phase, and how their results roll up. Each agent starts with a clean, focused context, and the plan can build in checks a single pass can't, like independent skeptics verifying every finding before it reaches the final report.</p>
+<p>Runs get a budget of 128 agents, and up to 1,024 for big jobs. Progress is saved as the run goes, so pausing and resuming never redoes finished work. Run <code>/workflows</code> to watch it live, phase by phase, with per-agent token counts.</p>
+<h2 id="saving-and-reusing-workflows">Saving and reusing workflows</h2>
+<p>Grok authors the workflow from your request, smoke-checks it before launching, and improves it between runs; you never write the script yourself. When one works, keep it: workflows in <code>.grok/workflows/</code> are shared with your team, and ones in <code>~/.grok/workflows/</code> follow you everywhere. Each saved workflow becomes its own slash command that takes arguments, so once you keep the PR review from the demo above, the next review is just <code>/pr-review 5137</code>.</p>
+<p><code>/deep-research</code> ships built in: it fans research questions out to parallel investigators, verifies every claim against its sources, and returns a cited report.</p>
+<h2 id="try-it-today">Try it today</h2>
+<p>Some examples to try:</p>
 <ul>
-<li><strong>Ask Grok to analyze your portfolio</strong> — <em>how much in dividends and interest will I make this year?</em></li>
-<li><strong>Scenario model for exposure</strong> to sectors, regions, economic events, and more — <em>what are my portfolio’s biggest exposures and how can I diversify?</em></li>
-<li><strong>Research markets and trends</strong> — <em>how will the rollout of AI infrastructure impact energy companies?</em></li>
-<li><strong>Build trading strategies and generate order instructions in real time</strong> — <em>create orders that will hedge my portfolio against a 10% downside move in the market</em></li>
-</ul>
-<p><a href="https://data.x.ai/news/ibkr.mp4">▶ Watch video</a></p>
-<p>From portfolio analysis to order instructions, these tools unify data, insight, and action so you can move from idea to decision instantly.</p>]]></content:encoded>
-      <guid isPermaLink="true">https://x.ai/news/grok-interactive-brokers</guid>
+<li>"use a workflow to review each feature in this PR"</li>
+<li>"triage the last 100 Linear issues and give me a top-10 action list"</li>
+<li>"audit every route handler for missing auth checks, and verify each finding"</li>
+</ul>]]></content:encoded>
+      <guid isPermaLink="true">https://x.ai/news/workflows</guid>
       <category>News</category>
       <pubDate>Wed, 12 Aug 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Introducing /goal</title>
-      <link>https://x.ai/news/introducing-goal</link>
-      <description>Use /goal for long-running autonomous task execution in Grok Build.</description>
-      <content:encoded><![CDATA[<p>Today we're introducing <code>/goal</code> in Grok Build. This new mode yields long-running, autonomous execution, helping you hand off larger implementation tasks to the agent.</p>
-<p>Available now in Grok Build. Install with a single command and sign in with your account:</p>
-<p>Most coding sessions require back-and-forth execution and verification. With <code>/goal</code>, the agent continues until a task is completed and verified, whether that means reviewing code, inspecting webpages, or executing scripts.</p>
-<h2 id="set-a-goal-in-one-line">Set a goal in one line</h2>
-<p>Give <code>/goal</code> an objective and Grok Build takes it from there:</p>
-<pre><code>/goal Migrate the auth module to the new API
-</code></pre>
-<p>It plans an approach, breaks the work into a progress checklist, and starts executing. You can keep sharing additional instructions with the agent as it works.</p>
-<p>The new mode offers additional commands for monitoring and steering long-running tasks:</p>
-<pre><code>/goal status     # see the live progress panel
-/goal pause      # stop work, keep the goal
-/goal resume     # pick back up
-/goal clear      # drop the goal entirely
-</code></pre>
-<p>When the goal is finished, the panel flips to <strong>Complete</strong> with every checklist item checked.</p>
-<h2 id="getting-started">Getting started</h2>
-<p>Install Grok Build with the command above, then invoke <code>/goal</code> to hand off your first long-running task.</p>]]></content:encoded>
-      <guid isPermaLink="true">https://x.ai/news/introducing-goal</guid>
+      <title>Bringing Grok 4.5 to iOS, Android, Web, and X</title>
+      <link>https://x.ai/news/grok-4-5-everywhere</link>
+      <description>Grok 4.5, our most intelligent model yet, is now on grok.com, X, iOS, and Android.</description>
+      <content:encoded><![CDATA[<p><strong>Grok 4.5 now powers Grok wherever you use it</strong>, live today on <a href="https://grok.com/?referrer=website">grok.com</a>, on X, and in the Grok apps for iOS and Android.</p>
+<h2 id="smarter-answers-to-any-question">Smarter answers to any question</h2>
+<p>Grok 4.5 is our most capable model yet. In everyday use, it follows what you're actually asking, keeps track of longer conversations, and gives clearer, more reliable answers. Ask it to explain something unfamiliar, weigh a big purchase, plan a trip, or dig into a topic you're curious about. And on harder questions, it reasons more efficiently, so the answer arrives sooner.</p>
+<h2 id="for-all-your-knowledge-work">For all your knowledge work</h2>
+<p>Grok 4.5 can also take a task from start to finish. It can build out a working spreadsheet, turn an outline into clean slides and diagrams, draft clear prose, and pull the key points from a long PDF, whether you're at your desk or on your phone.</p>
+<p>Grok also works directly inside <a href="https://x.ai/grok/word">Word</a>, <a href="https://x.ai/grok/excel">Excel</a>, <a href="https://x.ai/grok/powerpoint">PowerPoint</a>, and <a href="https://x.ai/grok/outlook">Outlook</a> with our Microsoft 365 add-ins. For more details on the model itself, read the <a href="https://x.ai/news/grok-4-5">Grok 4.5 announcement</a>.</p>]]></content:encoded>
+      <guid isPermaLink="true">https://x.ai/news/grok-4-5-everywhere</guid>
       <category>News</category>
       <pubDate>Wed, 12 Aug 2026 00:00:00 +0000</pubDate>
     </item>
