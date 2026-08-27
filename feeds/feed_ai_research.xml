@@ -8,7 +8,119 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 27 Aug 2026 06:00:44 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 27 Aug 2026 18:25:57 +0000</lastBuildDate>
+    <item>
+      <title>Anthropic Hiring Shortage for Long-Term Bets Discussed</title>
+      <link>https://www.anthropic.com/engineering/AI-resistant-technical-evaluations</link>
+      <description>Posts claim Anthropic struggles to recruit for uncertain long-term AI work.</description>
+      <content:encoded><![CDATA[<p><img src="https://digg.com/tech/dteqhm65/opengraph-image" alt="Anthropic Hiring Shortage for Long-Term Bets Discussed"/></p>
+<p>Posts claim Anthropic struggles to recruit for uncertain long-term AI work.</p>
+<p><strong>Original source:</strong> <a href="https://www.anthropic.com/engineering/AI-resistant-technical-evaluations">https://www.anthropic.com/engineering/AI-resistant-technical-evaluations</a></p>
+<p><strong>Digg story:</strong> <a href="https://digg.com/tech/dteqhm65">https://digg.com/tech/dteqhm65</a></p>
+<p>@signulll reported a conversation with an Anthropic employee who said hiring remains a top problem because few exceptional candidates exist for long-term high-conviction bets that are not yet obvious. The account noted a lack of people who can independently generate good ideas. In reply, @__tinygrad__ from the tiny corp asked who would still join, claiming the company has caused itself major damage since last December and labeling it the evil team. Both statements appear only as social media posts with no further corroboration in the packet.</p>
+<ul><li><strong>Views:</strong> 98,134</li><li><strong>Likes:</strong> 1,298</li><li><strong>Bookmarks:</strong> 354</li><li><strong>Quotes:</strong> 19</li><li><strong>Replies:</strong> 120</li><li><strong>Posts:</strong> 2</li></ul>
+<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/signulll">signüll</a></li><li><a href="https://x.com/__tinygrad__">the tiny corp</a></li></ul>]]></content:encoded>
+      <guid isPermaLink="true">https://www.anthropic.com/engineering/AI-resistant-technical-evaluations</guid>
+      <category>Digg AI from X</category>
+      <pubDate>Thu, 27 Aug 2026 18:25:57 +0000</pubDate>
+      <media:content url="https://digg.com/tech/dteqhm65/opengraph-image" type="image/jpeg" medium="image"/>
+    </item>
+    <item>
+      <title>Terminal-Bench-Science Benchmark Released by Stanford Team</title>
+      <link>https://github.com/harbor-framework/terminal-bench-science</link>
+      <description>Stanford-led effort evaluates AI agents on 70 expert-contributed research workflows across scientific domains.</description>
+      <content:encoded><![CDATA[<p><img src="https://digg.com/tech/w480ht88/opengraph-image" alt="Terminal-Bench-Science Benchmark Released by Stanford Team"/></p>
+<p>Stanford-led effort evaluates AI agents on 70 expert-contributed research workflows across scientific domains.</p>
+<p><strong>Original source:</strong> <a href="https://github.com/harbor-framework/terminal-bench-science">https://github.com/harbor-framework/terminal-bench-science</a></p>
+<p><strong>Digg story:</strong> <a href="https://digg.com/tech/w480ht88">https://digg.com/tech/w480ht88</a></p>
+<p>Steven Dillmann announced the release of Terminal-Bench-Science, a benchmark for AI agents on research workflows. Version 0.1 contains 70 tasks spanning life, physical, earth, mathematical, and engineering sciences. Each task was contributed by a researcher adapting their own workflows into agentic challenges on problems they care about. The project is an ongoing Stanford-led community effort built by the Terminal-Bench team together with domain experts at research institutions worldwide. Dillmann stated that it discriminates between frontier models similarly to Terminal-Bench 3.0 while lowering pass rates for every model tested on both.</p>
+<ul><li><strong>Views:</strong> 46,107</li><li><strong>Likes:</strong> 405</li><li><strong>Bookmarks:</strong> 137</li><li><strong>Quotes:</strong> 35</li><li><strong>Replies:</strong> 28</li><li><strong>Posts:</strong> 3</li></ul>
+<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/sanmikoyejo">Sanmi Koyejo</a></li><li><a href="https://x.com/xeophon">Florian Brand</a></li></ul>]]></content:encoded>
+      <guid isPermaLink="true">https://github.com/harbor-framework/terminal-bench-science</guid>
+      <category>Digg AI from X</category>
+      <pubDate>Thu, 27 Aug 2026 18:23:13 +0000</pubDate>
+      <media:content url="https://digg.com/tech/w480ht88/opengraph-image" type="image/jpeg" medium="image"/>
+    </item>
+    <item>
+      <title>Researchers Discuss Double-Blind AI Evaluation Protocols</title>
+      <link>https://www.enago.com/articles/double-blind-peer-review-anonymity-problems</link>
+      <description>Conversation on X examines bias mitigation through anonymous model assessments.</description>
+      <content:encoded><![CDATA[<p><img src="https://digg.com/tech/ma2il9l8/opengraph-image" alt="Researchers Discuss Double-Blind AI Evaluation Protocols"/></p>
+<p>Conversation on X examines bias mitigation through anonymous model assessments.</p>
+<p><strong>Original source:</strong> <a href="https://www.enago.com/articles/double-blind-peer-review-anonymity-problems">https://www.enago.com/articles/double-blind-peer-review-anonymity-problems</a></p>
+<p><strong>Digg story:</strong> <a href="https://digg.com/tech/ma2il9l8">https://digg.com/tech/ma2il9l8</a></p>
+<p>Andrew Trask posted that AI labs do not see benchmark prompts or responses while evaluation organizations stay blind to model weights. Stella Biderman argued the setup does not match standard double-blind definitions from science or peer review. The thread examined whether hiding model identity would reduce evaluator preference bias and whether enclaves provide analogous confidentiality without placebos. Participants disputed the term&#x27;s usage but reached no agreement.</p>
+<ul><li><strong>Views:</strong> 484</li><li><strong>Likes:</strong> 3</li><li><strong>Replies:</strong> 5</li><li><strong>Posts:</strong> 5</li></ul>
+<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/BlancheMinerva">Stella Biderman</a></li><li><a href="https://x.com/iamtrask">⿻ Andrew Trask</a></li></ul>]]></content:encoded>
+      <guid isPermaLink="true">https://www.enago.com/articles/double-blind-peer-review-anonymity-problems</guid>
+      <category>Digg AI from X</category>
+      <pubDate>Thu, 27 Aug 2026 15:54:08 +0000</pubDate>
+      <media:content url="https://digg.com/tech/ma2il9l8/opengraph-image" type="image/jpeg" medium="image"/>
+    </item>
+    <item>
+      <title>Pollen Robotics Releases Microduck Open-Source Biped Robot</title>
+      <link>https://pollen-robotics.com/microduck/</link>
+      <description>Compact biped with sensors and an open-source stack for training custom behaviors.</description>
+      <content:encoded><![CDATA[<p><img src="https://digg.com/tech/wotkjv39/opengraph-image" alt="Pollen Robotics Releases Microduck Open-Source Biped Robot"/></p>
+<p>Compact biped with sensors and an open-source stack for training custom behaviors.</p>
+<p><strong>Original source:</strong> <a href="https://pollen-robotics.com/microduck/">https://pollen-robotics.com/microduck/</a></p>
+<p><strong>Digg story:</strong> <a href="https://digg.com/tech/wotkjv39">https://digg.com/tech/wotkjv39</a></p>
+<p>Thomas Wolf of Hugging Face posted experiments with the Microduck biped from Pollen Robotics, including an image detector that follows a laser pointer. The 25 cm open-source robot has 15 actuators, camera, LiDAR, grasping beak and pre-trained policies for walking, roller skating, object pickup and recovery. Its open-source stack supports reinforcement learning training in simulation. Pre-orders start at $399. Replies on X praised its affordability and value for physical AI tinkering.</p>
+<ul><li><strong>Views:</strong> 332,179</li><li><strong>Likes:</strong> 2,995</li><li><strong>Bookmarks:</strong> 762</li><li><strong>Quotes:</strong> 90</li><li><strong>Replies:</strong> 185</li><li><strong>Posts:</strong> 10</li></ul>
+<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/Thom_Wolf">Thomas Wolf</a></li><li><a href="https://x.com/huggingface">Hugging Face</a></li><li><a href="https://x.com/Yuchenj_UW">Yuchen Jin</a></li><li><a href="https://x.com/mattshumer_">Matt Shumer</a></li><li><a href="https://x.com/kimmonismus">Chubby♨️</a></li></ul>]]></content:encoded>
+      <guid isPermaLink="true">https://pollen-robotics.com/microduck/</guid>
+      <category>Digg AI from X</category>
+      <pubDate>Thu, 27 Aug 2026 12:07:03 +0000</pubDate>
+      <media:content url="https://digg.com/tech/wotkjv39/opengraph-image" type="image/jpeg" medium="image"/>
+    </item>
+    <item>
+      <title>Investor Claims Nvidia Acquires Hugging Face</title>
+      <link>https://techcrunch.com/2026/08/24/hugging-face-reportedly-in-talks-to-be-acquired-for-13b</link>
+      <description>Venture capitalist Paul Bonnet shares investor returns from the claimed deal, with Lux Capital positioned as top beneficiary.</description>
+      <content:encoded><![CDATA[<p><img src="https://digg.com/tech/ifa969a5/opengraph-image" alt="Investor Claims Nvidia Acquires Hugging Face"/></p>
+<p>Venture capitalist Paul Bonnet shares investor returns from the claimed deal, with Lux Capital positioned as top beneficiary.</p>
+<p><strong>Original source:</strong> <a href="https://techcrunch.com/2026/08/24/hugging-face-reportedly-in-talks-to-be-acquired-for-13b">https://techcrunch.com/2026/08/24/hugging-face-reportedly-in-talks-to-be-acquired-for-13b</a></p>
+<p><strong>Digg story:</strong> <a href="https://digg.com/tech/ifa969a5">https://digg.com/tech/ifa969a5</a></p>
+<p>Paul Bonnet posted an analysis on social media asserting that Nvidia is acquiring Hugging Face and detailing how investors would share profits. He names Lux Capital as the single biggest winner in the transaction. Harry Stebbings reposted the thread and described Bonnet as the most analytical VC in Europe. The visible posts repeat the acquisition claim in generated headlines and focus on returns to specific backers. The packet contains no first-party confirmation from either company and no independent sources corroborating the transaction.</p>
+<ul><li><strong>Views:</strong> 873,513</li><li><strong>Likes:</strong> 2,867</li><li><strong>Bookmarks:</strong> 2,426</li><li><strong>Quotes:</strong> 65</li><li><strong>Replies:</strong> 74</li><li><strong>Posts:</strong> 2</li></ul>
+<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/HarryStebbings">Harry Stebbings</a></li><li><a href="https://x.com/davemcclure">Dave McClure</a></li></ul>]]></content:encoded>
+      <guid isPermaLink="true">https://techcrunch.com/2026/08/24/hugging-face-reportedly-in-talks-to-be-acquired-for-13b</guid>
+      <category>Digg AI from X</category>
+      <pubDate>Thu, 27 Aug 2026 12:04:58 +0000</pubDate>
+      <media:content url="https://digg.com/tech/ifa969a5/opengraph-image" type="image/jpeg" medium="image"/>
+    </item>
+    <item>
+      <title>Hugging Face Engineer Addresses Misinfo on Compute Role</title>
+      <link>https://x.com/mervenoyann/status/2092865372437254238</link>
+      <description>Merve Noyan clarifies Hugging Face support for labs and community after Nvidia news.</description>
+      <content:encoded><![CDATA[<p><img src="https://digg.com/tech/amcxhixq/opengraph-image" alt="Hugging Face Engineer Addresses Misinfo on Compute Role"/></p>
+<p>Merve Noyan clarifies Hugging Face support for labs and community after Nvidia news.</p>
+<p><strong>Original source:</strong> <a href="https://x.com/mervenoyann/status/2092865372437254238">https://x.com/mervenoyann/status/2092865372437254238</a></p>
+<p><strong>Digg story:</strong> <a href="https://digg.com/tech/amcxhixq">https://digg.com/tech/amcxhixq</a></p>
+<p>Merve Noyan posted that Hugging Face backs large labs such as Arcee and Al2 with fast and low-cost compute plus storage for research. She added that the company supplies secure infrastructure to enterprises for open releases. Noyan stated the firm is hosting an exabyte in total before end of year. She noted the post responded to misinformation seen after Nvidia news. Florian Brand replied to the thread in under four hours.</p>
+<ul><li><strong>Views:</strong> 29,405</li><li><strong>Likes:</strong> 334</li><li><strong>Bookmarks:</strong> 57</li><li><strong>Quotes:</strong> 4</li><li><strong>Replies:</strong> 28</li><li><strong>Posts:</strong> 2</li></ul>
+<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/mervenoyann">merve</a></li><li><a href="https://x.com/xeophon">Florian Brand</a></li></ul>]]></content:encoded>
+      <guid isPermaLink="true">https://x.com/mervenoyann/status/2092865372437254238</guid>
+      <category>Digg AI from X</category>
+      <pubDate>Thu, 27 Aug 2026 10:38:29 +0000</pubDate>
+      <media:content url="https://digg.com/tech/amcxhixq/opengraph-image" type="image/jpeg" medium="image"/>
+    </item>
+    <item>
+      <title>Meta AI Push Raises Code Changes and Incidents</title>
+      <link>https://www.reuters.com/investigations/mark-zuckerberg-had-bold-plan-replace-meta-staff-with-ai-heres-how-it-imploded-2026-08-26/</link>
+      <description>Posts cite internal Meta data on AI-driven code changes, incidents, and employee sentiment.</description>
+      <content:encoded><![CDATA[<p><img src="https://digg.com/tech/zf96zv5x/opengraph-image" alt="Meta AI Push Raises Code Changes and Incidents"/></p>
+<p>Posts cite internal Meta data on AI-driven code changes, incidents, and employee sentiment.</p>
+<p><strong>Original source:</strong> <a href="https://www.reuters.com/investigations/mark-zuckerberg-had-bold-plan-replace-meta-staff-with-ai-heres-how-it-imploded-2026-08-26/">https://www.reuters.com/investigations/mark-zuckerberg-had-bold-plan-replace-meta-staff-with-ai-heres-how-it-imploded-2026-08-26/</a></p>
+<p><strong>Digg story:</strong> <a href="https://digg.com/tech/zf96zv5x">https://digg.com/tech/zf96zv5x</a></p>
+<p>Jeffrey Lee Funk posted that internal Meta data shows an AI shift drove code changes up 220 percent yet only 36 percent more features, major incidents up 40 percent, firefighting time up 70 percent, and favorable employee sentiment down from 74 percent to 55 percent. He linked a Reuters investigation. Bindu Reddy posted that Meta planned to replace engineers with AI agents for a 60 percent staff cut, that Zuck reversed course for a 10 percent layoff instead, that employees revolted, and that AI output produced 40 percent more security incidents. Both posts treat the figures as drawn from internal documents.</p>
+<ul><li><strong>Views:</strong> 7,221</li><li><strong>Likes:</strong> 59</li><li><strong>Bookmarks:</strong> 5</li><li><strong>Quotes:</strong> 4</li><li><strong>Replies:</strong> 7</li><li><strong>Posts:</strong> 2</li></ul>
+<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/alexjc">Alex J. Champandard 🌻</a></li><li><a href="https://x.com/bindureddy">Bindu Reddy</a></li></ul>]]></content:encoded>
+      <guid isPermaLink="true">https://www.reuters.com/investigations/mark-zuckerberg-had-bold-plan-replace-meta-staff-with-ai-heres-how-it-imploded-2026-08-26/</guid>
+      <category>Digg AI from X</category>
+      <pubDate>Thu, 27 Aug 2026 09:05:35 +0000</pubDate>
+      <media:content url="https://digg.com/tech/zf96zv5x/opengraph-image" type="image/jpeg" medium="image"/>
+    </item>
     <item>
       <title>Grok 4.6 on Microsoft Foundry</title>
       <link>https://x.ai/news/grok-4-6-microsoft-foundry</link>
@@ -40,20 +152,67 @@
       <media:content url="https://digg.com/tech/pcy6x1vn/opengraph-image" type="image/jpeg" medium="image"/>
     </item>
     <item>
-      <title>Report Claims Nvidia Will Acquire Hugging Face</title>
-      <link>https://techcrunch.com/2026/08/24/hugging-face-reportedly-in-talks-to-be-acquired-for-13b</link>
-      <description>Social posts circulate an exclusive report from The Information on the proposed acquisition.</description>
-      <content:encoded><![CDATA[<p><img src="https://digg.com/tech/cjfcrzg8/opengraph-image" alt="Report Claims Nvidia Will Acquire Hugging Face"/></p>
-<p>Social posts circulate an exclusive report from The Information on the proposed acquisition.</p>
-<p><strong>Original source:</strong> <a href="https://techcrunch.com/2026/08/24/hugging-face-reportedly-in-talks-to-be-acquired-for-13b">https://techcrunch.com/2026/08/24/hugging-face-reportedly-in-talks-to-be-acquired-for-13b</a></p>
-<p><strong>Digg story:</strong> <a href="https://digg.com/tech/cjfcrzg8">https://digg.com/tech/cjfcrzg8</a></p>
-<p>Amir Efrati, executive editor at The Information, posted that Nvidia has agreed to acquire Hugging Face for $12.9 billion and shared a screenshot of the exclusive report. Reactions on X welcomed the move as a win for open-source AI and Nvidia&#x27;s ecosystem, while some users worried it could reduce Hugging Face&#x27;s neutrality or openness. Jessica Lessin credited the reporting team. The claim originates from The Information; no completed transaction appears in the provided evidence.</p>
-<ul><li><strong>Views:</strong> 305,995</li><li><strong>Likes:</strong> 1,547</li><li><strong>Bookmarks:</strong> 160</li><li><strong>Quotes:</strong> 99</li><li><strong>Replies:</strong> 98</li><li><strong>Posts:</strong> 8</li></ul>
-<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/srchvrs">Leo Boytsov</a></li><li><a href="https://x.com/mattturck">Matt Turck</a></li><li><a href="https://x.com/Jessicalessin">Jessica Lessin</a></li><li><a href="https://x.com/kyliebytes">Kylie Robison</a></li><li><a href="https://x.com/amir">Amir Efrati</a></li></ul>]]></content:encoded>
-      <guid isPermaLink="true">https://techcrunch.com/2026/08/24/hugging-face-reportedly-in-talks-to-be-acquired-for-13b</guid>
-      <category>Digg AI from X</category>
-      <pubDate>Thu, 27 Aug 2026 01:27:56 +0000</pubDate>
-      <media:content url="https://digg.com/tech/cjfcrzg8/opengraph-image" type="image/jpeg" medium="image"/>
+      <title>Previewing the Model Hardware Standard</title>
+      <link>https://www.anthropic.com/news/model-hardware-standard-research-preview</link>
+      <description>Anthropic is opening a research preview of the Model Hardware Standard (MHS), a shared specification for AI agents to safely operate physical devices, to a first group of scientific research labs and advanced manufacturers.</description>
+      <content:encoded><![CDATA[<p>We’re opening a research preview of the Model Hardware Standard (MHS), a shared specification for AI agents to safely operate physical devices, to a first group of scientific research labs and advanced manufacturers. MHS enables AI agents to operate multiple lab and manufacturing instruments, such as microscopes, liquid handlers, and robotic arms, in parallel, and perform intricate tasks ranging from routine drug discovery experiments to laser calibration on a quantum computer. The development of MHS began as a collaboration between Anthropic and <a href="https://www.hhmi.org/research/janelia">HHMI Janelia Research Campus</a>.</p>
+<p>It typically takes a lab or manufacturing facility weeks, if not months, to set up and integrate their hardware. Most devices don’t communicate with each other, instead requiring specialists to build bespoke integrations. MHS reduces this integration work to hours or minutes. And by incorporating AI into these tools, MHS also helps researchers and engineers more readily orchestrate autonomous, round-the-clock experiments and workflows, with agents able to reason through each step in an experiment, update parameters in real time, and, in some cases, recover from hardware errors without intervention.</p>
+<p>We’re sharing an early version of MHS with partners across science, robotics, electronics, and manufacturing so we can collaborate to build safety evaluations and develop best practices for AI systems operating physical equipment, ahead of making the standard open source. MHS works with any device that has a programmable interface. It is also model-agnostic, and any agent harness can access it using standard protocols, such as the <a href="https://www.anthropic.com/news/model-context-protocol">Model Context Protocol</a>. To apply for access to the research preview, <a href="https://www.modelhardwarestandard.com/">head here</a>.</p>
+<h2 id="how-mhs-works">How MHS works</h2>
+<figure><p><a href="https://cdn.sanity.io/files/4zrzovbb/website/af63049620774e379536a9bb28df7304c62f86af.mp4">▶ Watch video</a></p><figcaption>Before and after the Model Hardware Standard (MHS).</figcaption></figure>
+<p>Getting multiple devices in a lab or on a factory floor to communicate with one another can be challenging, even setting aside the added difficulty of integrating AI into the setup. Each device tends to have its own programming interface, and so far there has been no standardized way to integrate them. And once the devices <em>are </em>connected, there is no common way for them to share data with an AI agent, nor to let the agent operate them safely. </p>
+<p>MHS addresses these challenges by introducing a standardized driver: software that translates between a computer’s operating system and a hardware device. The MHS driver uses a simple set of primitives—commands like “read” (for example, “get temperature”) or “write” (for example, “set temperature”)—that any hardware device can understand and act on. And it makes each device discoverable in a standard format, so that devices and agents can find each other and communicate across networks without needing a bespoke “translator” program in between.</p>
+<p>The MHS driver also helps an AI agent understand how to use a device it has never seen before, giving it information about machine characteristics that may not be discernable from code alone (for example, the weight of a robot arm, which is important for knowing how to manipulate it safely). To date, much of this information has been stored in paper manuals, on a user’s computer, or as tacit knowledge. But the MHS driver contains tags that let the user write this information directly in natural language (users can either do this themselves, or by chatting to an agent that interviews them about their hardware setup). With the information from these tags, the MHS driver then automatically produces a reference file with information about a device’s general characteristics, such as what it can measure, what can be adjusted, and what safety limits will be enforced. This file gives the agent everything it needs to know to operate the device.</p>
+<p>After the devices are connected and the agent knows how to use each one, the agent needs a way to control the hardware. For MHS, there are three such mechanisms: MCP, the command line interface, and code files (APIs). These work together to enable orchestration across multiple devices via a single line of code. </p>
+<p>Once the agent can control the devices, it’s able to receive operating data from each one and supervise and direct the work at a high level. The agent can sequence steps across instruments, monitor results, and adjust parameters as conditions change in real time. When the agent needs to execute long-running tasks or operate devices faster than its online reasoning would allow, it can chain together driver commands from one or more devices in code files. This allows the devices to carry out operations themselves, without the agent needing to reason at every step.</p>
+<p>As we’ve tested MHS, we’ve found that Claude interacts with experiments and hardware in an exploratory manner, much as a scientist would. For example, we observed Claude make an adjustment to a laser, observe the results through a camera to assess how its adjustment moved the laser beam, and repeat the process, seeking to understand the sequence of events. Claude then packaged what it learned into code files, writing a deterministic script that let it align the laser without having to reason at each step, so the whole process could run as a single command.</p>
+<h2 id="early-examples-from-mhs">Early examples from MHS</h2>
+<p>We are only just beginning to see what people can do with frontier models and MHS, but our hope is that the standard can be of use to researchers, engineers, and other practitioners in speeding up the process of discovery and experimentation in any domain that uses devices with a programmable interface.</p>
+<p>As we developed MHS, we shared it with a handful of labs and hardware manufacturers in biotech, robotics, quantum computing, and other fields. Across these early projects, we saw MHS reduce the time it took to integrate devices, make it possible to iterate faster in a variety of experimental settings, and assist with the live operation of machines and real-time fault detection. Below, our partners share the details of some of their early projects involving MHS. </p>
+<h3>Genentech: Implementing MHS for lab automation</h3>
+<p><em>Researchers at Genentech implemented and tested MHS as a proof of concept for automating the BCA protein assay, a standard procedure to measure total protein concentration in a sample, which requires coordinating across a liquid handler, a robotic arm, and a plate reader.</em></p>
+<h3>University of Washington Baker and Pinglay labs: Bringing AI agents to the bench</h3>
+<p><em>Zihao Song, a PhD student in the University of Washington Baker and Pinglay labs, used MHS to build a dashboard to remotely monitor his instruments; an AI agent-supervised qPCR (which copies a target DNA sequence through repeated cycles of heating and cooling) that watches amplification curves and halts the procedure at the right moment; and an integration between a robotic arm and a liquid handler for collision-free plate handoffs.</em></p>
+<h3>Carnegie Mellon University: Determining dose-response curves through rapid automation</h3>
+<p><em>Researchers at Carnegie Mellon University used MHS to run serial dilution dose-response experiments about three times faster than before, with an AI agent orchestrating a liquid handler, a plate reader, a robotic arm, and monitoring cameras spread across three computers with fundamentally incompatible interfaces.</em></p>
+<h3>HHMI Janelia: Using MHS to accelerate microscopy research</h3>
+<p><em>At HHMI Janelia Research Campus, researchers are using MHS to speed up a range of microscopy-related projects. Here, Virginie Ruetten, a scientist in the Ahrens lab who studies how sleep helps the body recover from stress, shares how she used MHS to unify and orchestrate a rig that previously involved seven different vendor programs without a shared interface.</em></p>
+<h3>QuEra Computing: Using MHS in quantum laser stabilization</h3>
+<p><em>QuEra, a company that builds quantum computers using neutral atoms, used MHS to give an AI agent control over parts of the laser system inside its quantum machines. The agent developed a controller that recovers the laser’s “lock”—the ultra-precise frequency the lasers must hold to interact with the atoms—99.3% of the time without human intervention.</em></p>
+<h3>Tetsuwan Scientific: Using MHS to run qPCRs to profile local pollution </h3>
+<p><em>Researchers at Tetsuwan integrated MHS with its automated biology lab platform, ResearchOS. MHS helped orchestrate a qPCR workflow to contribute to citizen science efforts to characterize pollution in California’s San Pedro Creek.</em></p>
+<p>01</p>
+<p> /</p>
+<p>06</p>
+<p>Hardware vendors and the software companies that support them are also building MHS support into their equipment so AI agents can more easily discover and operate their devices. For example:</p>
+<ul><li>Amazon Web Services will support MHS through Strands Robots, the library for connecting AI agents to physical devices. AWS will provide participants a private, pre-release version of the Strands Robots package for the duration of the MHS research preview.</li><li>Automata is adding MHS support to LINQ, their lab automation platform, to perform intelligent error handling of instruments in autonomous labs.</li><li>Danaher and Anthropic are actively exploring how MHS-supported capabilities could enable its smart instruments and autonomous laboratories to scale biomedical research and development.</li><li>Doosan Robotics is testing MHS with their robotic arms, including to perform automated quality assurance and coordinate tasks across multiple robots.</li><li>MBF Bioscience is building an MHS driver for ScanImage, the software that runs laser-scanning microscopes in hundreds of neuroscience labs worldwide, to integrate AI agents into real-time data analysis and experiments.</li><li>QIAGEN is experimenting with MHS through a working proof of concept on its nucleic acid purification platform, QIAsymphony Connect, showing how AI agents could help laboratories troubleshoot instrument issues faster, guide operators through recovery, and improve instrument uptime while reducing risk to biological samples.</li><li>Tecan is adding MHS support for their Fluent liquid handling platforms so AI agents can discover and operate them directly.</li><li>Universal Robots has had early access to MHS and plans to add support to its robotics platform. </li></ul>
+<h2 id="joining-the-research-preview">Joining the research preview</h2>
+<p>These early results from our partners are encouraging, but we have more work to do on the standard before we open-source it. As a large language model, Claude learns about the physical world through text and images, meaning its spatial and physical reasoning have limitations that still require expert oversight. When working with protein samples, for example, Genentech researchers had to guide Claude to recognize that errors caused by foaming in samples were physical failures, not software bugs, that could only be mitigated through the appropriate physical corrections. </p>
+<p>MHS also doesn’t yet work with hardware that lacks a programming interface, so we’re working with the manufacturers of such devices to build in MHS drivers. Many developers already use Claude Code to work with individual pieces of physical equipment; for the next phase of MHS, we hope to expand the standard to cover more of the devices developers build on. Early adopters include Hugging Face, who are adding MHS support in LeRobot, their robotics library, and Raspberry Pi, who are enabling MHS integration across a number of their products following successful tests using their Camera MHS Driver. </p>
+<p>We will also use the research preview to build additional safety evaluations with our launch partners and strengthen protections for the use of AI in the physical world. We are developing a physical safety roadmap to further bolster our safeguards policy and enforcement coverage against the risk of misuse. When we open-source MHS, we will release findings from the research preview as part of our guidance for deploying the standard safely.</p>
+<p>We’re inviting stakeholders across industries to join the waitlist for our research preview of MHS. If you’d like to participate, <a href="https://www.modelhardwarestandard.com/">submit your interest here</a>.</p>
+<h2 id="acknowledgments">Acknowledgments</h2>
+<p>MHS began as a collaboration between Alek Kemeny on Anthropic’s <a href="http://anthropic.com/beneficial-deployments">Beneficial Deployments team</a> and Arco Bast, a postdoctoral scientist at HHMI Janelia Research Campus. Bast was running complex brain-imaging experiments on a rig that combined lasers, motorized focusers, and specialized cameras from different vendors with no common interface. To speed up his experiments, he developed a shared memory dictionary that enabled the instruments to communicate with one another at memory speed. Kemeny and Bast worked together to integrate AI models into that interface.</p>
+<p>We thank everyone who has contributed to this work so far, including, but not limited to, Aaron Boswell, Ben Arthur, Boaz Mohar, Gagan Bhat, Mark Kittisopikul, Nadine Yasser, Nick Purcell, Takashi Kawase, and Virginie Ruetten. We look forward to moving MHS forward with our industry partners and, soon, with the open-source community.</p>]]></content:encoded>
+      <guid isPermaLink="true">https://www.anthropic.com/news/model-hardware-standard-research-preview</guid>
+      <category>Announcements</category>
+      <pubDate>Thu, 27 Aug 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Expanding our support for scientists</title>
+      <link>https://www.anthropic.com/news/expanding-support-for-scientists</link>
+      <description>As Claude becomes increasingly capable at scientific research, we are focusing on building products and programs to support the research community. In June, we launched Claude Science , a product that integrates the tools that researchers most commonly use, produces auditable artifacts, and provides flexible access to computing resources. We have also continued to broaden our AI for Science program , which provides free credits to researchers working on high-impact scientific projects.</description>
+      <content:encoded><![CDATA[<p>As Claude becomes increasingly capable at scientific research, we are focusing on building products and programs to support the research community. In June, we launched <a href="https://www.anthropic.com/news/claude-science-ai-workbench">Claude Science</a>, a product that integrates the tools that researchers most commonly use, produces auditable artifacts, and provides flexible access to computing resources. We have also continued to broaden our <a href="https://www.anthropic.com/news/ai-for-science-program">AI for Science program</a>, which provides free credits to researchers working on high-impact scientific projects. </p>
+<p>Starting today, we are announcing a significant expansion of these efforts. We are opening 10,000 seats for scientists around the world to access Claude subscriptions for free and at discounted rates for one year through our new <a href="http://claude.com/programs/team-plan-for-scientists">Claude team plan for scientists</a>. Standard seats will be free and premium seats with 5x usage limits will be available for $15 per month. Over the coming months, we intend to extend this program well beyond the initial 10,000 seats.</p>
+<p>Alongside these subscriptions, we are also expanding the scope and scale of our <a href="https://www.anthropic.com/news/ai-for-science-program">AI for Science</a> program. To date, we’ve largely supported scientists using Claude for biological sciences. We are now looking to offer credits for researchers in other scientific fields as well, including those working on ambitious, compute heavy-research, such of the kind that resulted in progress on the <a href="https://www.anthropic.com/research/riemann-zeta">Riemann zeta function</a> and <a href="https://www.anthropic.com/research/Claude-accelerates-protein-design">Claude’s work on protein design</a>. </p>
+<p>By helping scientists access and increase their usage of Claude through subscriptions, credits, and products like <a href="https://claude.com/product/claude-science">Claude Science</a>, we aim to radically accelerate scientific discovery.</p>
+<h3 id="ways-to-access-claude"><strong>Ways to access Claude</strong></h3>
+<p>To register for our Claude team plan for scientists, please <a href="http://claude.ai/redirect/website.v1.8e2fdff9-f9e1-4144-a45b-58882096b289/labs-verification/attestation">complete the verification form here</a>. You must be a principal investigator or equivalent at an academic or nonprofit research institution to qualify; once verified, you can add the researchers in your lab to your plan. </p>
+<p>As your lab makes use of your allotted credits and requires more usage than standard or premium plans provide, you can <a href="https://docs.google.com/forms/d/e/1FAIpQLSfwDGfVg2lHJ0cc0oF_ilEnjvr_r4_paYi7VLlr5cLNXASdvA/viewform?usp=dialog">apply to our AI for Science program</a> for up to $50,000 in credits per project. Any researcher is eligible to apply.</p>
+<p>For now, researchers working in biology and chemistry will still be limited to our Opus-class models. Claude Fable models will <a href="https://www.anthropic.com/news/improving-fable-5-s-biology-safeguards">continue to block</a> professional biology and drug development queries because of their potential dual-use risks. We’re working in partnership with the US government to establish an access program for life sciences professionals to use Mythos-class models for life sciences research and development. We have now enrolled our first participants, and expect to share more and increase access soon.</p>]]></content:encoded>
+      <guid isPermaLink="true">https://www.anthropic.com/news/expanding-support-for-scientists</guid>
+      <category>Announcements</category>
+      <pubDate>Thu, 27 Aug 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
       <title>Linear and Instinct Both Valued at $2.5 Billion</title>
@@ -716,234 +875,6 @@ url = {www.anthropic.com/research/enabling-independent-research},
       <category>Digg AI from X</category>
       <pubDate>Sun, 23 Aug 2026 15:13:25 +0000</pubDate>
       <media:content url="https://digg.com/tech/fo6uhx7e/opengraph-image" type="image/jpeg" medium="image"/>
-    </item>
-    <item>
-      <title>LinkedIn Users Edit Profiles to Add AI and Remove DEI</title>
-      <link>https://www.nber.org/papers/w35546</link>
-      <description>Executives point to revisions in past LinkedIn job entries that insert AI while dropping DEI references.</description>
-      <content:encoded><![CDATA[<p><img src="https://digg.com/tech/rhz13mau/opengraph-image" alt="LinkedIn Users Edit Profiles to Add AI and Remove DEI"/></p>
-<p>Executives point to revisions in past LinkedIn job entries that insert AI while dropping DEI references.</p>
-<p><strong>Original source:</strong> <a href="https://www.nber.org/papers/w35546">https://www.nber.org/papers/w35546</a></p>
-<p><strong>Digg story:</strong> <a href="https://digg.com/tech/rhz13mau">https://digg.com/tech/rhz13mau</a></p>
-<p>Nicholas Thompson noted that professionals are revising earlier LinkedIn job descriptions to add AI while removing DEI and remote work mentions. Paul Graham shared a chart showing a rise in retrospective edits that insert AI-related terms after 2024. Both point to an NBER paper titled Time Travel on Professional Profiles as the underlying source. The tweets present the pattern as observed behavior on the platform without additional confirmation from the paper itself.</p>
-<ul><li><strong>Views:</strong> 588,158</li><li><strong>Likes:</strong> 5,381</li><li><strong>Bookmarks:</strong> 673</li><li><strong>Quotes:</strong> 94</li><li><strong>Replies:</strong> 287</li><li><strong>Posts:</strong> 3</li></ul>
-<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/paulg">Paul Graham</a></li><li><a href="https://x.com/krishnanrohit">rohit</a></li><li><a href="https://x.com/nxthompson">nxthompson</a></li></ul>]]></content:encoded>
-      <guid isPermaLink="true">https://www.nber.org/papers/w35546</guid>
-      <category>Digg AI from X</category>
-      <pubDate>Sun, 23 Aug 2026 14:53:40 +0000</pubDate>
-      <media:content url="https://digg.com/tech/rhz13mau/opengraph-image" type="image/jpeg" medium="image"/>
-    </item>
-    <item>
-      <title>Altman Attributes Slow AI Progress to Economic Inertia</title>
-      <link>https://techcrunch.com/2026/07/28/sam-altman-is-ready-to-decelerate</link>
-      <description>Posts quote Altman on why economic adaptation lags his earlier predictions.</description>
-      <content:encoded><![CDATA[<p><img src="https://digg.com/tech/xful7i1n/opengraph-image" alt="Altman Attributes Slow AI Progress to Economic Inertia"/></p>
-<p>Posts quote Altman on why economic adaptation lags his earlier predictions.</p>
-<p><strong>Original source:</strong> <a href="https://techcrunch.com/2026/07/28/sam-altman-is-ready-to-decelerate">https://techcrunch.com/2026/07/28/sam-altman-is-ready-to-decelerate</a></p>
-<p><strong>Digg story:</strong> <a href="https://digg.com/tech/xful7i1n">https://digg.com/tech/xful7i1n</a></p>
-<p>X posts quote OpenAI CEO Sam Altman conceding he underestimated adaptation delays. He states the economy carries substantial inertia. Yann LeCun replies that real-world systems include friction terms beyond singularitarian assumptions. Katie Miller, Rohit Krishnan, Taylor Lorenz, and Brian Roemmele circulate the quote or criticize Altman and similar voices for prior overconfidence on timelines. Replies on X largely dismiss the admission as spin.</p>
-<ul><li><strong>Views:</strong> 415,109</li><li><strong>Likes:</strong> 3,252</li><li><strong>Bookmarks:</strong> 519</li><li><strong>Quotes:</strong> 21</li><li><strong>Replies:</strong> 215</li><li><strong>Posts:</strong> 7</li></ul>
-<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/ylecun">Yann LeCun</a></li><li><a href="https://x.com/GaryMarcus">Gary Marcus</a></li><li><a href="https://x.com/krishnanrohit">rohit</a></li><li><a href="https://x.com/zephyr_z9">Zephyr</a></li><li><a href="https://x.com/TaylorLorenz">Taylor Lorenz</a></li></ul>]]></content:encoded>
-      <guid isPermaLink="true">https://techcrunch.com/2026/07/28/sam-altman-is-ready-to-decelerate</guid>
-      <category>Digg AI from X</category>
-      <pubDate>Sun, 23 Aug 2026 13:35:08 +0000</pubDate>
-      <media:content url="https://digg.com/tech/xful7i1n/opengraph-image" type="image/jpeg" medium="image"/>
-    </item>
-    <item>
-      <title>Anthropic's Fable 5 Takes 11% of Ramp Corporate Spend</title>
-      <link>https://ft.trib.al/42pfSjK</link>
-      <description>Posts cite FT on Fable 5 losing share to cheaper open-source models.</description>
-      <content:encoded><![CDATA[<p><img src="https://digg.com/tech/dd7t6lya/opengraph-image" alt="Anthropic&#x27;s Fable 5 Takes 11% of Ramp Corporate Spend"/></p>
-<p>Posts cite FT on Fable 5 losing share to cheaper open-source models.</p>
-<p><strong>Original source:</strong> <a href="https://ft.trib.al/42pfSjK">https://ft.trib.al/42pfSjK</a></p>
-<p><strong>Digg story:</strong> <a href="https://digg.com/tech/dd7t6lya">https://digg.com/tech/dd7t6lya</a></p>
-<p>Kimmonismus posted that Anthropic&#x27;s most powerful model Fable 5 accounts for just 11% of its corporate AI spending on Ramp according to the FT. The post states the model is too expensive while cheaper open-source alternatives already handle most tasks. Gary Marcus quoted the same figures and added that the company still expects a $2T valuation. The packet records these as statements from the two creators in public posts, with generated headlines summarizing the reported spending split and market pressure from lower-cost tools.</p>
-<ul><li><strong>Views:</strong> 235,779</li><li><strong>Likes:</strong> 2,267</li><li><strong>Bookmarks:</strong> 386</li><li><strong>Quotes:</strong> 43</li><li><strong>Replies:</strong> 279</li><li><strong>Posts:</strong> 6</li></ul>
-<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/GaryMarcus">Gary Marcus</a></li><li><a href="https://x.com/rohanpaul_ai">Rohan Paul</a></li><li><a href="https://x.com/kimmonismus">Chubby♨️</a></li><li><a href="https://x.com/BrianRoemmele">Brian Roemmele</a></li></ul>]]></content:encoded>
-      <guid isPermaLink="true">https://ft.trib.al/42pfSjK</guid>
-      <category>Digg AI from X</category>
-      <pubDate>Sun, 23 Aug 2026 09:51:03 +0000</pubDate>
-      <media:content url="https://digg.com/tech/dd7t6lya/opengraph-image" type="image/jpeg" medium="image"/>
-    </item>
-    <item>
-      <title>Grok 4.6 on Vertex AI</title>
-      <link>https://x.ai/news/grok-4-6-vertex-ai</link>
-      <description>Grok 4.6 is now available via Google Cloud Vertex AI.</description>
-      <content:encoded><![CDATA[<p>Today, we’re excited to announce that Grok 4.6 is now available on Google Cloud Vertex AI.</p>
-<p>Grok 4.6 is our latest flagship model, built for long-running agents and ambitious interactive and visual work. It offers a 500k context window and configurable reasoning efforts (low, medium, high, xhigh). Now, Vertex AI users can use the model through <a href="https://console.cloud.google.com/agent-platform/publishers/xai/model-garden/grok-4.6">Vertex Model Garden</a>.</p>
-<h2 id="capabilities--pricing">Capabilities &amp; Pricing</h2>
-<p>Grok 4.6 is available for:</p>
-<ul>
-<li><strong>Input</strong>: $2 per 1 million tokens</li>
-<li><strong>Cached input</strong>: $0.50 per 1 million tokens</li>
-<li><strong>Output</strong>: $6 per 1 million tokens</li>
-</ul>
-<p>For more on the model, read the <a href="https://x.ai/news/grok-4-6">Grok 4.6 announcement</a>.</p>
-<h2 id="build-with-grok-46-on-vertex-ai">Build with Grok 4.6 on Vertex AI</h2>
-<p>Grok 4.6 is now available to developers in Vertex Model Garden. To get started, visit the <a href="https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/partner-models/grok/grok-4-6">Grok 4.6 model card</a>. We're excited to see what you build!</p>]]></content:encoded>
-      <guid isPermaLink="true">https://x.ai/news/grok-4-6-vertex-ai</guid>
-      <category>News</category>
-      <pubDate>Sat, 22 Aug 2026 00:46:14 +0000</pubDate>
-    </item>
-    <item>
-      <title>Grok Bot is now included with more plans</title>
-      <link>https://x.ai/news/grok-bot-more-plans</link>
-      <description>Grok Bot is now available for SuperGrok Plus, Cursor Pro+, and all Cursor Teams plans.</description>
-      <content:encoded><![CDATA[<p>We launched <a href="https://x.ai/news/introducing-grok-bot">Grok Bot</a> in beta on August 11 to give people highly capable AI teammates who could get real jobs done and be incredibly easy to work with.</p>
-<p>Since then, people who tried Grok Bot were surprised at how easy it was to start, and how much sharper Bots felt than other AI tools, taking jobs further without being walked through every step.</p>
-<p>Today, we're expanding access to Grok Bot. Grok Bot is now included with all SuperGrok Plus, Cursor Pro+, and Cursor Teams plans.</p>
-<p>With this expansion, Grok Bot is now included with:</p>
-<ul>
-<li>SuperGrok Plus</li>
-<li>SuperGrok Heavy</li>
-<li>Cursor Pro+</li>
-<li>Cursor Ultra</li>
-<li>Cursor Teams Plans (Standard and Premium)</li>
-</ul>
-<h2 id="give-bots-real-work">Give Bots real work</h2>
-<p>Grok Bot is designed for people who want agents to handle anything from a project to an entire function. They're digital teammates you can message, run in parallel, and trust to finish work in the tools you already use. Bots work across apps and inboxes, keep going when you step away, and only pull you in for judgment calls.</p>
-<p>With Grok Bot, you get:</p>
-<ul>
-<li><strong>A text-thread UX.</strong> Message a Bot the way you would message someone on your team, from mobile or desktop, so you can pick up the same thread on either — with nothing to set up first.</li>
-<li><strong>Many Bots at once.</strong> Stand up a researcher, writer, and chief of staff. Put them in a group chat so they pass work between themselves, and you're not in the middle.</li>
-<li><strong>A highly capable digital colleague.</strong> They have their own computer in the cloud. It's always on, with browser and terminal access. They sign into your apps and work happens in the actual tool instead of a chat draft.</li>
-<li><strong>Easy-to-set-up routines.</strong> Ask a Bot to follow along the next time you do the job, so it can run on its own after that.</li>
-</ul>
-<h2 id="jobs-bots-are-doing-today">Jobs Bots are doing today</h2>
-<ul>
-<li><strong>Sales prospector.</strong> Researches and enriches accounts, drafts personalized outreach. Leaves every send for you to approve in your inbox or navigator.</li>
-<li><strong>Website builder.</strong> Builds the site, purchases the domain, and deploys the final version. Helps configure plugins, delivers a live URL, and adds redirect rules.</li>
-<li><strong>Digital declutterer.</strong> Audits email, Drive, and paid subscriptions around the clock. Only discards or unsubscribes if you say so.</li>
-<li><strong>Customer support.</strong> Reads support mail and connects into your payments provider. Handles all the routine refunds within your policy.</li>
-<li><strong>Game artist.</strong> Visits the art pipeline and makes the custom assets according to your creative direction. Comes back with what the game needs.</li>
-<li><strong>Office manager.</strong> Intakes work orders, plans capacity, and books jobs across Gmail, Slack, ServiceTitan, Quo, and the client portal. Handles the browser work in those portals so a shop owner does not have to live in six tools.</li>
-<li><strong>Inbox manager.</strong> Works through the inbox and clears tons of email. Leaves you only the messages that need a person.</li>
-<li><strong>Meeting stand-in.</strong> Joins meetings when you can't make it and lets the room know you're there. Takes detailed notes and sends a summary so you stay informed.</li>
-<li><strong>Refunds manager.</strong> Finds the claim, files it, and follows it through. Comes back with the refund or discount it recovered.</li>
-</ul>
-<h2 id="try-grok-bot-today">Try Grok Bot today</h2>
-<p>Download Grok Bot so you can create your first teammate and give it a job you already do. You'll see what useful AI looks like when the work comes back finished.</p>
-<p>Enterprise users can join a waitlist as we ramp access for larger team and company rollouts.</p>
-<p>Read the <a href="https://x.ai/news/introducing-grok-bot">original announcement</a> and see <a href="https://x.ai/bot/use-cases">what Bots can do</a> to learn more.</p>]]></content:encoded>
-      <guid isPermaLink="true">https://x.ai/news/grok-bot-more-plans</guid>
-      <category>News</category>
-      <pubDate>Sat, 22 Aug 2026 00:46:14 +0000</pubDate>
-    </item>
-    <item>
-      <title>Grok Build on web and mobile</title>
-      <link>https://x.ai/news/grok-build-for-everyone</link>
-      <description>Grok Build is now available on every plan, on the web and on mobile.</description>
-      <content:encoded><![CDATA[<p>Describe an app, a game, a website, or a dashboard in <a href="https://grok.com/?referrer=website&amp;mode=build">Grok</a>, and Grok builds a working version live in your chat — on the web, on iOS, and on Android.</p>
-<p>When we <a href="https://x.ai/news/grok-build-mode">introduced it in July</a>, building in Grok was an Early Beta limited to SuperGrok Heavy. Since then we've made it faster, taught it to publish and share what you make, wired it into X, and given the apps it builds access to our own models. All of that ships to everyone today.</p>
-<p>Every app you publish gets its own address on <code>grok.me</code>, and you decide who can open it: just you, anyone with the link, or the whole internet. Bring your own domain if you'd rather.</p>
-<p>Grok also creates the art that travels with the link. Each app gets a cover that unfurls as a rich preview wherever it's pasted — messages, chats, docs, the timeline. It's generated for your specific app, and you can regenerate it, upload your own, or ask Grok to redesign it mid-conversation.</p>
-<img alt="Generated link-preview card for an app called Tiny City" height="600" src="https://x.ai/_next/image?url=%2Fimages%2Fnews%2Fgrok-build-for-everyone%2Ftiny-city-cover.webp&amp;w=3840&amp;q=75&amp;dpl=a94dbcbb66d1133d44b5cdfe0f937797ce9c6493" width="1200"/>
-<h2 id="made-for-the-timeline">Made for the timeline</h2>
-<p>Apps you share on X don't arrive as bare links. The banner renders inline, carries your handle, and games get a play affordance in the card, so people meet the app before they ever leave the feed.</p>
-<h2 id="build-powerful-apps">Build powerful apps</h2>
-<p>Turn on the SpaceXAI APIs for an app and it can call Grok for chat, images, and voice from inside its own code — no keys to create, paste, or rotate. A trivia game can write new questions on demand, a support page can answer in your voice, a notes app can summarize itself. Access is per app, and you can revoke it at any time.</p>
-<p>Also new since the Early Beta:</p>
-<ul>
-<li><strong>Remix.</strong> Let others fork a published app and make it their own.</li>
-<li><strong>Custom domains.</strong> Point a domain you own at your app.</li>
-<li><strong>Export to GitHub.</strong> Push the whole project to a repo and keep going in an editor, or in <a href="https://x.ai/news/grok-build-cli">Grok Build for the terminal</a>.</li>
-<li><strong>Secrets.</strong> Store API keys for third-party services outside your app's code.</li>
-<li><strong>Connectors.</strong> Pull in the data that matters to your business and turn it into live, filterable dashboards.</li>
-</ul>
-<h2 id="start-building">Start building</h2>
-<p>Open <a href="https://grok.com/?referrer=website&amp;mode=build">Grok</a> on the web, iOS, or Android, and describe what you want.</p>]]></content:encoded>
-      <guid isPermaLink="true">https://x.ai/news/grok-build-for-everyone</guid>
-      <category>News</category>
-      <pubDate>Fri, 21 Aug 2026 00:50:02 +0000</pubDate>
-      <media:content url="https://x.ai/_next/image?url=%2Fimages%2Fnews%2Fgrok-build-for-everyone%2Ftiny-city-cover.webp&amp;amp;w=3840&amp;amp;q=75&amp;amp;dpl=a94dbcbb66d1133d44b5cdfe0f937797ce9c6493" type="image/jpeg" medium="image"/>
-    </item>
-    <item>
-      <title>Grok 4.6 on Amazon Bedrock</title>
-      <link>https://x.ai/news/grok-4-6-amazon-bedrock</link>
-      <description>Grok 4.6 is now available via Amazon Bedrock.</description>
-      <content:encoded><![CDATA[<p>Today, we’re excited to announce that Grok 4.6 is now generally available on Amazon Bedrock.</p>
-<p>Grok 4.6 is our latest flagship model, built for long-running agents and ambitious interactive and visual work. It offers 500k context window and configurable reasoning efforts (low, medium, high, xhigh). Now, Amazon Bedrock users can leverage the model through Amazon Bedrock.</p>
-<h2 id="capabilities--pricing">Capabilities &amp; Pricing</h2>
-<p>Grok 4.6 is available for:</p>
-<ul>
-<li><strong>Input</strong>: $2 per 1 million tokens</li>
-<li><strong>Output</strong>: $6 per 1 million tokens</li>
-</ul>
-<p>For more on the model, read the <a href="https://x.ai/news/grok-4-6">Grok 4.6 announcement</a>.</p>
-<h2 id="build-with-grok-46-on-amazon-bedrock">Build with Grok 4.6 on Amazon Bedrock</h2>
-<p>Grok 4.6 is now available to all developers in supported AWS Regions. Please visit AWS documentation to get started - we're excited to see what you build!</p>]]></content:encoded>
-      <guid isPermaLink="true">https://x.ai/news/grok-4-6-amazon-bedrock</guid>
-      <category>News</category>
-      <pubDate>Thu, 20 Aug 2026 00:45:51 +0000</pubDate>
-    </item>
-    <item>
-      <title>Agentic Search. More accurate and efficient results from your AI systems.</title>
-      <link>https://mistral.ai/news/agentic-search</link>
-      <description>Mistral Agentic Search delivers more accurate search results while reducing turns, token use, and latency against FinanceBench and OfficeQA Pro benchmarks. Agentic Search is the retrieval layer that enables AI systems to navigate, read, and verify information inside even the most complex documents. Available through Mistral Search Toolkit and Libraries.</description>
-      <content:encoded><![CDATA[<figure><img height="716" src="https://mistral.ai/_astro/Thumbnail-Blog-Agenticsearch_Z233ryT.webp?dpl=6a8709da922de5449f69f9a3" width="1200"/></figure>
-<p>Mistral Agentic Search helps enterprises get better results from their AI systems by letting models search and navigate their organization’s most complex data and documents. Agentic Search introduces a multi-step retrieval loop for finding, inspecting, and verifying information across data sources, wherever it is stored. Agentic Search is available through <a href="https://docs.mistral.ai/studio/search-toolkit"><u>Mistral Search Toolkit</u></a>, built into <a href="https://docs.mistral.ai/studio/libraries"><u>Libraries</u></a> in both <a href="https://mistral.ai/products/studio/"><u>Studio</u></a> and <a href="https://mistral.ai/products/vibe/"><u>Vibe</u></a>, and gives you:</p>
-<ul><li><p><strong>Support for sensitive domain-specific data</strong>. Mistral’s portable and open tooling helps you unlock value from your data without crossing your isolation boundaries in the cloud or on-premises.</p></li><li><p><strong>Improved search results. </strong>Your models can search and navigate your data beyond retrieved chunks–inside long, dense documents or across multiple sources.</p></li><li><p><strong>Access to existing indexes.</strong> Agentic Search builds on your existing search index using five tools: <code>search</code>, <code>open</code>, <code>navigate</code>, <code>read</code>, and <code>grep</code>.</p></li><li><p><strong>Higher accuracy.</strong> Agentic Search delivers to <strong>3x</strong> <strong>correctness</strong> on financial filings, from 26.7% to 86%, based on FinanceBench. On table-heavy, multi-doc questions of the OfficeQA Pro benchmark, we measure a <strong>+45.6 point</strong> gain (6.3% to 51.9%).</p></li><li><p><strong>Lower latency and token use.</strong> Targeted navigation enables Agentic Search to reduce p90<strong> latency up to 39.6%</strong>. Fewer repeated searches reduce token consumption by up to one-third. </p></li></ul>
-<h2><strong>Data creates competitive advantage</strong></h2>
-<p>Competitive edge is built upon years of real-world operations–your data, your processes, and your domain expertise. Proprietary knowledge is both critical to your success and highly confidential, meaning it lives behind isolation boundaries, segmented deployments, and self-hosted platforms. It accumulates in financial filings, legal contracts, internal resources, and government records–long, dense documents that traditional search methods can’t navigate effectively. </p>
-<p>Agents that learn and improve continuously can help you compound your competitive advantage, but these agents are often separated from confidential data and proprietary knowledge for security reasons. Getting real impact from AI means pairing frontier reasoning with retrieval tools that can safely reach your most sensitive material. </p>
-<h2><strong>Traditional RAG falls short</strong></h2>
-<p>Traditional, one-shot RAG retrieves a fixed set of text chunks and asks a model to answer in a single pass. This works when the answer appears in one of the top results, but falters when the model must navigate a long report, follow references, compare multiple documents, or verify the underlying evidence.</p>
-<p>The limitation is more pronounced on dense, complex data and documents. The information needed to answer a question may be spread across documents or buried in a particular table, footnote, or clause. One-shot RAG-based search fails to use the full power of frontier AI and to provide reliable answers for three reasons:</p>
-<ul><li><p><strong>Retrieval without reasoning: </strong>The model must answer from the chunks selected during the initial retrieval, even when they are incomplete or not relevant. It cannot decide that it needs a different document, another section, or more context before responding, which limits the impact of the model’s reasoning. </p></li><li><p><strong>Chunk-level limit: </strong>Critical data is often held in complex multi-modal documents. When asked, “<em>What was the company’s effective tax rate in Q3?”</em> an index may find the correct document but cannot open it, navigate to the table, read the surrounding context, or verify the answer.  </p></li><li><p><strong>No iteration: </strong>Many questions need more than one retrieval pass to get the correct answer. The model may need to refine its search, inspect a promising document, follow a reference, compare multiple sources, keep track of what it has seen, and try a new route when the first results are insufficient. One-shot RAG provides no way to take these next steps.</p></li></ul>
-<p>Without Agentic Search (one-shot retrieval)</p>
-<p>Using specifically only the reported values for all individual calendar months in 1953, what is the total sum of these values of expenditures for U.S. national defense and associated activities (in millions of nominal dollars)?</p>
-<p>Trajectory 1 tool_call (search only)</p>
-<p><code>search("national defense expenditures monthly 1953")</code> → 10 hits: a scatter of monthly bulletins (Table 3), each framed fiscal-year, covering only part of 1953.</p>
-<p>I found January–June 1953 data. But I need July–December 1953 monthly values to compute an answer.</p>
-<p>With Agentic Search</p>
-<p>Using specifically only the reported values for all individual calendar months in 1953, what is the total sum of these values of expenditures for U.S. national defense and associated activities (in millions of nominal dollars)?</p>
-<p>Trajectory 3 tool_calls (2× search → read)</p>
-<p><code>search("national defense expenditures monthly 1953")</code> → per-month bulletins (partial year)</p>
-<p><code>search("…1953 November December 1954 to date")</code> → surfaces <code>treasury_bulletin_1954_02.pdf</code>p.15 (Table 3, all 12 months of 1953)</p>
-<p><code>read(treasury_bulletin_1954_02.pdf, p.15)</code> → pulls the complete Table 3</p>
-<p>Monthly Values for 1953</p>
-<p>Table 3, in $millions</p>
-<table><thead><tr><th>Jan</th><th>Feb</th><th>Mar</th><th>Apr</th><th>May</th><th>Jun</th><th>Jul</th><th>Aug</th><th>Sep</th><th>Oct</th><th>Nov</th><th>Dec</th></tr></thead><tbody><tr><td>3,632</td><td>3,501</td><td>3,789</td><td>3,891</td><td>3,746</td><td>4,056</td><td>3,890</td><td>3,519</td><td>3,787</td><td>3,647</td><td>3,540</td><td>3,465</td></tr></tbody></table>
-<p>Sum = 44,463.</p>
-<h2><strong>How Agentic Search works</strong></h2>
-<p><a href="https://docs.mistral.ai/en/studio/search-toolkit"><u>Mistral Search Toolkit</u></a> provides open modules for ingesting, embedding, and indexing critical and complex data in the cloud or on-premises. Agentic Search builds on this index by giving the model five tools that resemble familiar file-system operations:</p>
-<ul><li><p><code>search</code> finds relevant documents across the corpus using the existing index.</p></li><li><p><code>open</code> opens a specific document.</p></li><li><p><code>navigate</code> moves to a page, section, or region within it.</p></li><li><p><code>read</code> retrieves the content at that location.</p></li><li><p><code>grep</code> finds a pattern within an open document.</p></li></ul>
-<p>Rather than answering only from the initial top-<em>k</em> results, the model can inspect what it finds, refine its search, open relevant documents, navigate to specific sections, and read the source material before answering. The index identifies likely sources; Agentic Search determines what to inspect within and across them.</p>
-<h3><strong>One-shot RAG</strong></h3>
-<p><figure><img height="1080" src="https://mistral.ai/_astro/pasted-image-4_INqkQ.webp?dpl=6a8709da922de5449f69f9a3" width="1920"/></figure></p>
-<h3><strong>Agentic Search</strong></h3>
-<p><figure><img height="1080" src="https://mistral.ai/_astro/pasted-image-5_Z1Id2ck.webp?dpl=6a8709da922de5449f69f9a3" width="1920"/></figure></p>
-<p>These tools do not require fine-tuning or model-specific training. As models get better at reasoning and tool use, retrievals get better without infrastructure changes. This is a key property: retrieval quality scales with model capability instead of being capped by your chunking strategy.</p>
-<h2><strong>Use Agentic Search for</strong></h2>
-<ul><li><p><strong>Long documents.</strong> Filings, contracts, manuals, technical specifications, and reports where the answer may appear on a particular page or in a specific table, clause, figure, or footnote.</p></li><li><p><strong>Questions across multiple sources.</strong> Research that requires the model to find, compare, or reconcile evidence from several documents before reaching an answer.</p></li><li><p><strong>Answers that must be verified.</strong> Financial figures, legal clauses, regulatory references, and operational data, where the response can be referenced in a stable and specific document location.</p></li><li><p><strong>Tables and structured documents.</strong> Financial statements, government records, and scanned PDFs where meaning depends on rows, columns, page position, or surrounding context–not narrative text alone.</p></li></ul>
-<h2><strong>Indexed retrieval is the right starting point for</strong></h2>
-<ul><li><p><strong>Direct lookups.</strong> Short, clean documents where the answer is likely to appear in one of the first retrieved chunks.</p></li><li><p><strong>High-volume search.</strong> Keyword or semantic lookups that need to return relevant passages without reasoning over or navigating through them.</p></li><li><p><strong>Simple, predictable questions.</strong> Use cases where the likely source and location of the answer are known in advance and additional retrieval steps are unlikely to improve the result.</p></li></ul>
-<p>One-shot RAG is often sufficient for these searches. Add Agentic Search when questions require the model to move beyond the initial results and investigate the source material. A well-configured index remains the right foundation in both cases. </p>
-<h2><strong>More relevant results, faster</strong></h2>
-<p>We benchmarked Agentic Search on two industry-standard evaluations, using the out-of-the-box Mistral Search Toolkit stack: default chunking, default ranking, no tuning. These results are floors, not ceilings,meaning you can further improve result quality with use-case-specific tuning.</p>
-<p>With these benchmarks, we tested two models using the Mistral Search Toolkit: <strong>Mistral Medium 3.5</strong> (MM 3.5) and <strong>Z.ai GLM-5.2</strong> (GLM-5.2), showcasing performance of a smaller model (MM 3.5) and a larger model (GLM-5.2). </p>
-<p>Benchmark results are consistent: the agentic loop delivers substantive quality improvements and navigation tools increase accuracy while reducing wasted tokens, turns, and latency. We observe the same performance patterns across first- and third-party models, which indicates that Agentic Search is model-agnostic, and that search quality should improve with new models. </p>
-<h3><strong>FinanceBench: 368 SEC filings, 150 questions</strong></h3>
-<p>FinanceBench (Islam et al., 2023) tests financial question-answering over 368 SEC filings (10-K / 10-Q / 8-K), averaging ~147 pages each, ~53,900 pages total: long, table-heavy financial documents. Answers scored by an LLM judge calibrated against human labels.</p>
-<img alt="financebench_-one-shot-rag-vs-agentic-search" src="https://mistral.ai/cms-media/api/media/file/financebench_-one-shot-rag-vs-agentic-search.svg"/>
-<img alt="financebench_-one-shot-rag-vs-agentic-search-glm" src="https://mistral.ai/cms-media/api/media/file/financebench_-one-shot-rag-vs-agentic-search%20(1)-1.svg"/>
-<p>We found:</p>
-<ul><li><p><strong>The search-only Agentic loop is the biggest quality lever.</strong> Moving from one-shot RAG to a search-only loop lifts accuracy by <strong>+47.3pp</strong> for MM 3.5 and <strong>+52.6pp</strong> for GLM-5.2–a ~3x improvement for both models. Because models can search iteratively, they can recover from weak first results, refine queries, and use the index as an active tool.</p></li><li><p><strong>Navigation adds accuracy. </strong>Adding open, navigate, read, and grep lifts accuracy again (<strong>+8.7pp</strong> for MM 3.5, <strong>+6.7pp</strong> for GLM-5.2). This means a targeted drill-in search beats repeated broad search in complex documents. </p></li><li><p><strong>Token and performance efficiency improve with better retrieval tools.</strong> The full loop with Navigation answers more questions correctly while using fewer tokens than the search-only loop (MM 3.5: <strong>-23.9% token usage</strong>, GLM-5.2: <strong>-33.7%</strong>). The retrieval tools are not additional overhead–they replace wasted search retries with precise navigation.</p></li><li><p><strong>Latency goes down where it matters.</strong> Across FinanceBench, adding navigation retrieval tools improves latency: p90 drops <strong>255s → 154s</strong> and mean latency drops <strong>108s → 71s</strong>. In general, we see the search-only loops conduct repeated broad searches, while navigation helps the model identify evidence more quickly. </p></li></ul>
-<h3><strong>OfficeQA Pro: 696 Treasury Bulletins, 133 questions</strong></h3>
-<p>OfficeQA Pro is a verifiable numeric benchmark over historical U.S. Treasury Bulletins: scanned, table-heavy government-finance PDFs across a 696-document, ~89,000-page corpus. We report the first pass for the 133-question "pro" subset.</p>
-<img src="https://mistral.ai/cms-media/api/media/file/officeqa-pro_-one-shot-rag-vs-agentic-search%20(1).svg"/>
-<img src="https://mistral.ai/cms-media/api/media/file/officeqa-pro_-one-shot-rag-vs-agentic-search.svg"/>
-<p>We found:</p>
-<ul><li><p><strong>Agentic Search and the Agentic loop + Navigation are successful against a harder, verifiable benchmark.</strong> OfficeQA Pro has numeric answers, scanned PDFs, and deep table lookups. Even here, the full agentic loop lifts accuracy materially from one-shot RAG, reaching <strong>51.9%</strong> for GLM-5.2 (<strong>+45.6pp</strong>) and increasing <strong>+27.1pp</strong> for MM 3.5.</p></li><li><p><strong>Navigation improves quality while cutting waste.</strong> Using the full loop (Agentic loop + Navigation) improves accuracy by<strong> up to 35.6% </strong>(<strong>+7.5pp, </strong>MM 3.5; <strong>+8.3pp, 19.0%</strong> GLM-5.2), while reducing token consumption. Turns declined by <strong>up to 7.0%</strong> (MM 3.5, <strong>2.3%</strong> GLM-5.2). </p></li><li><p><strong>The harder the benchmark, the more important the retrieval loop becomes.</strong> OfficeQA Pro is built around numeric answers in scanned, table-heavy documents. One-shot RAG barely gets started, while the agentic loop allows the model to search iteratively, inspect evidence, and deliver substantial accuracy improvements. </p></li><li><p><strong>The tooling stack drives substantial impact on document intelligence and search performance. </strong>Per <a href="https://www.kimi.ai/blog/kimi-k3"><u>Kimi research</u></a>, GLM-5.2 scores 41.4% on OfficeQA Pro with the Claude Code harness, compared with 51.9% on the Mistral harness–+10.5pp on the same underlying model. </p></li></ul>
-<h2><strong>Getting started</strong></h2>
-<p>Learn more about Agentic Search in the <a href="https://docs.mistral.ai/studio/search/agentic-search"><u>documentation</u></a>. You can get started across cloud and on-premises deployments using either: </p>
-<ul><li><p><a href="https://docs.mistral.ai/studio/search/search-toolkit"><u>Mistral Search Toolkit</u></a>. Integrate Agentic Search into your own agents, workflows, and customer deployments.</p></li><li><p><a href="https://docs.mistral.ai/studio/libraries"><u>Libraries</u></a>. Use Agentic Search out-of-the-box in Studio and Vibe, without building the retrieval system yourself.</p></li></ul>
-<p>The fastest way to test Search Toolkit is with the <a href="https://github.com/mistralai/search-starter-app/tree/main"><u>Search Starter App</u></a>. It creates a local index for your own corpus using a default configuration, so you can try Agentic Search without needing to be a search expert. When you’re ready to configure your use case, you can:</p>
-<ul><li><p><a href="https://docs.mistral.ai/studio/search/search-toolkit/ingestion"><u>Set up ingestion</u></a>. Select parsers, chunking strategies, embedding models, and extractors for your data and file types.</p></li><li><p><a href="https://docs.mistral.ai/studio/search/search-toolkit/search-index"><u>Tune indexing and ranking</u></a>. Manage Vespa schemas, indexing behavior, and relevance profiles.</p></li><li><p><a href="https://docs.mistral.ai/studio/search/search-toolkit/retrieval"><u>Extend retrieval</u></a>. Add query rewriting, reranking, or hybrid retrieval to the search pipeline.</p></li></ul>]]></content:encoded>
-      <guid isPermaLink="true">https://mistral.ai/news/agentic-search</guid>
-      <category>Product</category>
-      <pubDate>Thu, 20 Aug 2026 00:00:00 +0000</pubDate>
-      <media:content url="https://mistral.ai/_astro/Thumbnail-Blog-Agenticsearch_Z233ryT.webp?dpl=6a8709da922de5449f69f9a3" type="image/webp" medium="image"/>
     </item>
   </channel>
 </rss>

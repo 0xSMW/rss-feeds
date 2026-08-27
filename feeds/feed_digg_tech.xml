@@ -8,7 +8,119 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 27 Aug 2026 01:57:52 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 27 Aug 2026 18:25:57 +0000</lastBuildDate>
+    <item>
+      <title>Anthropic Hiring Shortage for Long-Term Bets Discussed</title>
+      <link>https://www.anthropic.com/engineering/AI-resistant-technical-evaluations</link>
+      <description>Posts claim Anthropic struggles to recruit for uncertain long-term AI work.</description>
+      <content:encoded><![CDATA[<p><img src="https://digg.com/tech/dteqhm65/opengraph-image" alt="Anthropic Hiring Shortage for Long-Term Bets Discussed"/></p>
+<p>Posts claim Anthropic struggles to recruit for uncertain long-term AI work.</p>
+<p><strong>Original source:</strong> <a href="https://www.anthropic.com/engineering/AI-resistant-technical-evaluations">https://www.anthropic.com/engineering/AI-resistant-technical-evaluations</a></p>
+<p><strong>Digg story:</strong> <a href="https://digg.com/tech/dteqhm65">https://digg.com/tech/dteqhm65</a></p>
+<p>@signulll reported a conversation with an Anthropic employee who said hiring remains a top problem because few exceptional candidates exist for long-term high-conviction bets that are not yet obvious. The account noted a lack of people who can independently generate good ideas. In reply, @__tinygrad__ from the tiny corp asked who would still join, claiming the company has caused itself major damage since last December and labeling it the evil team. Both statements appear only as social media posts with no further corroboration in the packet.</p>
+<ul><li><strong>Views:</strong> 98,134</li><li><strong>Likes:</strong> 1,298</li><li><strong>Bookmarks:</strong> 354</li><li><strong>Quotes:</strong> 19</li><li><strong>Replies:</strong> 120</li><li><strong>Posts:</strong> 2</li></ul>
+<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/signulll">signüll</a></li><li><a href="https://x.com/__tinygrad__">the tiny corp</a></li></ul>]]></content:encoded>
+      <guid isPermaLink="true">https://www.anthropic.com/engineering/AI-resistant-technical-evaluations</guid>
+      <category>Digg AI from X</category>
+      <pubDate>Thu, 27 Aug 2026 18:25:57 +0000</pubDate>
+      <media:content url="https://digg.com/tech/dteqhm65/opengraph-image" type="image/jpeg" medium="image"/>
+    </item>
+    <item>
+      <title>Terminal-Bench-Science Benchmark Released by Stanford Team</title>
+      <link>https://github.com/harbor-framework/terminal-bench-science</link>
+      <description>Stanford-led effort evaluates AI agents on 70 expert-contributed research workflows across scientific domains.</description>
+      <content:encoded><![CDATA[<p><img src="https://digg.com/tech/w480ht88/opengraph-image" alt="Terminal-Bench-Science Benchmark Released by Stanford Team"/></p>
+<p>Stanford-led effort evaluates AI agents on 70 expert-contributed research workflows across scientific domains.</p>
+<p><strong>Original source:</strong> <a href="https://github.com/harbor-framework/terminal-bench-science">https://github.com/harbor-framework/terminal-bench-science</a></p>
+<p><strong>Digg story:</strong> <a href="https://digg.com/tech/w480ht88">https://digg.com/tech/w480ht88</a></p>
+<p>Steven Dillmann announced the release of Terminal-Bench-Science, a benchmark for AI agents on research workflows. Version 0.1 contains 70 tasks spanning life, physical, earth, mathematical, and engineering sciences. Each task was contributed by a researcher adapting their own workflows into agentic challenges on problems they care about. The project is an ongoing Stanford-led community effort built by the Terminal-Bench team together with domain experts at research institutions worldwide. Dillmann stated that it discriminates between frontier models similarly to Terminal-Bench 3.0 while lowering pass rates for every model tested on both.</p>
+<ul><li><strong>Views:</strong> 46,107</li><li><strong>Likes:</strong> 405</li><li><strong>Bookmarks:</strong> 137</li><li><strong>Quotes:</strong> 35</li><li><strong>Replies:</strong> 28</li><li><strong>Posts:</strong> 3</li></ul>
+<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/sanmikoyejo">Sanmi Koyejo</a></li><li><a href="https://x.com/xeophon">Florian Brand</a></li></ul>]]></content:encoded>
+      <guid isPermaLink="true">https://github.com/harbor-framework/terminal-bench-science</guid>
+      <category>Digg AI from X</category>
+      <pubDate>Thu, 27 Aug 2026 18:23:13 +0000</pubDate>
+      <media:content url="https://digg.com/tech/w480ht88/opengraph-image" type="image/jpeg" medium="image"/>
+    </item>
+    <item>
+      <title>Researchers Discuss Double-Blind AI Evaluation Protocols</title>
+      <link>https://www.enago.com/articles/double-blind-peer-review-anonymity-problems</link>
+      <description>Conversation on X examines bias mitigation through anonymous model assessments.</description>
+      <content:encoded><![CDATA[<p><img src="https://digg.com/tech/ma2il9l8/opengraph-image" alt="Researchers Discuss Double-Blind AI Evaluation Protocols"/></p>
+<p>Conversation on X examines bias mitigation through anonymous model assessments.</p>
+<p><strong>Original source:</strong> <a href="https://www.enago.com/articles/double-blind-peer-review-anonymity-problems">https://www.enago.com/articles/double-blind-peer-review-anonymity-problems</a></p>
+<p><strong>Digg story:</strong> <a href="https://digg.com/tech/ma2il9l8">https://digg.com/tech/ma2il9l8</a></p>
+<p>Andrew Trask posted that AI labs do not see benchmark prompts or responses while evaluation organizations stay blind to model weights. Stella Biderman argued the setup does not match standard double-blind definitions from science or peer review. The thread examined whether hiding model identity would reduce evaluator preference bias and whether enclaves provide analogous confidentiality without placebos. Participants disputed the term&#x27;s usage but reached no agreement.</p>
+<ul><li><strong>Views:</strong> 484</li><li><strong>Likes:</strong> 3</li><li><strong>Replies:</strong> 5</li><li><strong>Posts:</strong> 5</li></ul>
+<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/BlancheMinerva">Stella Biderman</a></li><li><a href="https://x.com/iamtrask">⿻ Andrew Trask</a></li></ul>]]></content:encoded>
+      <guid isPermaLink="true">https://www.enago.com/articles/double-blind-peer-review-anonymity-problems</guid>
+      <category>Digg AI from X</category>
+      <pubDate>Thu, 27 Aug 2026 15:54:08 +0000</pubDate>
+      <media:content url="https://digg.com/tech/ma2il9l8/opengraph-image" type="image/jpeg" medium="image"/>
+    </item>
+    <item>
+      <title>Pollen Robotics Releases Microduck Open-Source Biped Robot</title>
+      <link>https://pollen-robotics.com/microduck/</link>
+      <description>Compact biped with sensors and an open-source stack for training custom behaviors.</description>
+      <content:encoded><![CDATA[<p><img src="https://digg.com/tech/wotkjv39/opengraph-image" alt="Pollen Robotics Releases Microduck Open-Source Biped Robot"/></p>
+<p>Compact biped with sensors and an open-source stack for training custom behaviors.</p>
+<p><strong>Original source:</strong> <a href="https://pollen-robotics.com/microduck/">https://pollen-robotics.com/microduck/</a></p>
+<p><strong>Digg story:</strong> <a href="https://digg.com/tech/wotkjv39">https://digg.com/tech/wotkjv39</a></p>
+<p>Thomas Wolf of Hugging Face posted experiments with the Microduck biped from Pollen Robotics, including an image detector that follows a laser pointer. The 25 cm open-source robot has 15 actuators, camera, LiDAR, grasping beak and pre-trained policies for walking, roller skating, object pickup and recovery. Its open-source stack supports reinforcement learning training in simulation. Pre-orders start at $399. Replies on X praised its affordability and value for physical AI tinkering.</p>
+<ul><li><strong>Views:</strong> 332,179</li><li><strong>Likes:</strong> 2,995</li><li><strong>Bookmarks:</strong> 762</li><li><strong>Quotes:</strong> 90</li><li><strong>Replies:</strong> 185</li><li><strong>Posts:</strong> 10</li></ul>
+<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/Thom_Wolf">Thomas Wolf</a></li><li><a href="https://x.com/huggingface">Hugging Face</a></li><li><a href="https://x.com/Yuchenj_UW">Yuchen Jin</a></li><li><a href="https://x.com/mattshumer_">Matt Shumer</a></li><li><a href="https://x.com/kimmonismus">Chubby♨️</a></li></ul>]]></content:encoded>
+      <guid isPermaLink="true">https://pollen-robotics.com/microduck/</guid>
+      <category>Digg AI from X</category>
+      <pubDate>Thu, 27 Aug 2026 12:07:03 +0000</pubDate>
+      <media:content url="https://digg.com/tech/wotkjv39/opengraph-image" type="image/jpeg" medium="image"/>
+    </item>
+    <item>
+      <title>Investor Claims Nvidia Acquires Hugging Face</title>
+      <link>https://techcrunch.com/2026/08/24/hugging-face-reportedly-in-talks-to-be-acquired-for-13b</link>
+      <description>Venture capitalist Paul Bonnet shares investor returns from the claimed deal, with Lux Capital positioned as top beneficiary.</description>
+      <content:encoded><![CDATA[<p><img src="https://digg.com/tech/ifa969a5/opengraph-image" alt="Investor Claims Nvidia Acquires Hugging Face"/></p>
+<p>Venture capitalist Paul Bonnet shares investor returns from the claimed deal, with Lux Capital positioned as top beneficiary.</p>
+<p><strong>Original source:</strong> <a href="https://techcrunch.com/2026/08/24/hugging-face-reportedly-in-talks-to-be-acquired-for-13b">https://techcrunch.com/2026/08/24/hugging-face-reportedly-in-talks-to-be-acquired-for-13b</a></p>
+<p><strong>Digg story:</strong> <a href="https://digg.com/tech/ifa969a5">https://digg.com/tech/ifa969a5</a></p>
+<p>Paul Bonnet posted an analysis on social media asserting that Nvidia is acquiring Hugging Face and detailing how investors would share profits. He names Lux Capital as the single biggest winner in the transaction. Harry Stebbings reposted the thread and described Bonnet as the most analytical VC in Europe. The visible posts repeat the acquisition claim in generated headlines and focus on returns to specific backers. The packet contains no first-party confirmation from either company and no independent sources corroborating the transaction.</p>
+<ul><li><strong>Views:</strong> 873,513</li><li><strong>Likes:</strong> 2,867</li><li><strong>Bookmarks:</strong> 2,426</li><li><strong>Quotes:</strong> 65</li><li><strong>Replies:</strong> 74</li><li><strong>Posts:</strong> 2</li></ul>
+<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/HarryStebbings">Harry Stebbings</a></li><li><a href="https://x.com/davemcclure">Dave McClure</a></li></ul>]]></content:encoded>
+      <guid isPermaLink="true">https://techcrunch.com/2026/08/24/hugging-face-reportedly-in-talks-to-be-acquired-for-13b</guid>
+      <category>Digg AI from X</category>
+      <pubDate>Thu, 27 Aug 2026 12:04:58 +0000</pubDate>
+      <media:content url="https://digg.com/tech/ifa969a5/opengraph-image" type="image/jpeg" medium="image"/>
+    </item>
+    <item>
+      <title>Hugging Face Engineer Addresses Misinfo on Compute Role</title>
+      <link>https://x.com/mervenoyann/status/2092865372437254238</link>
+      <description>Merve Noyan clarifies Hugging Face support for labs and community after Nvidia news.</description>
+      <content:encoded><![CDATA[<p><img src="https://digg.com/tech/amcxhixq/opengraph-image" alt="Hugging Face Engineer Addresses Misinfo on Compute Role"/></p>
+<p>Merve Noyan clarifies Hugging Face support for labs and community after Nvidia news.</p>
+<p><strong>Original source:</strong> <a href="https://x.com/mervenoyann/status/2092865372437254238">https://x.com/mervenoyann/status/2092865372437254238</a></p>
+<p><strong>Digg story:</strong> <a href="https://digg.com/tech/amcxhixq">https://digg.com/tech/amcxhixq</a></p>
+<p>Merve Noyan posted that Hugging Face backs large labs such as Arcee and Al2 with fast and low-cost compute plus storage for research. She added that the company supplies secure infrastructure to enterprises for open releases. Noyan stated the firm is hosting an exabyte in total before end of year. She noted the post responded to misinformation seen after Nvidia news. Florian Brand replied to the thread in under four hours.</p>
+<ul><li><strong>Views:</strong> 29,405</li><li><strong>Likes:</strong> 334</li><li><strong>Bookmarks:</strong> 57</li><li><strong>Quotes:</strong> 4</li><li><strong>Replies:</strong> 28</li><li><strong>Posts:</strong> 2</li></ul>
+<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/mervenoyann">merve</a></li><li><a href="https://x.com/xeophon">Florian Brand</a></li></ul>]]></content:encoded>
+      <guid isPermaLink="true">https://x.com/mervenoyann/status/2092865372437254238</guid>
+      <category>Digg AI from X</category>
+      <pubDate>Thu, 27 Aug 2026 10:38:29 +0000</pubDate>
+      <media:content url="https://digg.com/tech/amcxhixq/opengraph-image" type="image/jpeg" medium="image"/>
+    </item>
+    <item>
+      <title>Meta AI Push Raises Code Changes and Incidents</title>
+      <link>https://www.reuters.com/investigations/mark-zuckerberg-had-bold-plan-replace-meta-staff-with-ai-heres-how-it-imploded-2026-08-26/</link>
+      <description>Posts cite internal Meta data on AI-driven code changes, incidents, and employee sentiment.</description>
+      <content:encoded><![CDATA[<p><img src="https://digg.com/tech/zf96zv5x/opengraph-image" alt="Meta AI Push Raises Code Changes and Incidents"/></p>
+<p>Posts cite internal Meta data on AI-driven code changes, incidents, and employee sentiment.</p>
+<p><strong>Original source:</strong> <a href="https://www.reuters.com/investigations/mark-zuckerberg-had-bold-plan-replace-meta-staff-with-ai-heres-how-it-imploded-2026-08-26/">https://www.reuters.com/investigations/mark-zuckerberg-had-bold-plan-replace-meta-staff-with-ai-heres-how-it-imploded-2026-08-26/</a></p>
+<p><strong>Digg story:</strong> <a href="https://digg.com/tech/zf96zv5x">https://digg.com/tech/zf96zv5x</a></p>
+<p>Jeffrey Lee Funk posted that internal Meta data shows an AI shift drove code changes up 220 percent yet only 36 percent more features, major incidents up 40 percent, firefighting time up 70 percent, and favorable employee sentiment down from 74 percent to 55 percent. He linked a Reuters investigation. Bindu Reddy posted that Meta planned to replace engineers with AI agents for a 60 percent staff cut, that Zuck reversed course for a 10 percent layoff instead, that employees revolted, and that AI output produced 40 percent more security incidents. Both posts treat the figures as drawn from internal documents.</p>
+<ul><li><strong>Views:</strong> 7,221</li><li><strong>Likes:</strong> 59</li><li><strong>Bookmarks:</strong> 5</li><li><strong>Quotes:</strong> 4</li><li><strong>Replies:</strong> 7</li><li><strong>Posts:</strong> 2</li></ul>
+<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/alexjc">Alex J. Champandard 🌻</a></li><li><a href="https://x.com/bindureddy">Bindu Reddy</a></li></ul>]]></content:encoded>
+      <guid isPermaLink="true">https://www.reuters.com/investigations/mark-zuckerberg-had-bold-plan-replace-meta-staff-with-ai-heres-how-it-imploded-2026-08-26/</guid>
+      <category>Digg AI from X</category>
+      <pubDate>Thu, 27 Aug 2026 09:05:35 +0000</pubDate>
+      <media:content url="https://digg.com/tech/zf96zv5x/opengraph-image" type="image/jpeg" medium="image"/>
+    </item>
     <item>
       <title>Barrett Zoph Rejoins Google DeepMind for RL Role</title>
       <link>https://x.com/barret_zoph/status/2092790775524516206</link>
@@ -24,22 +136,6 @@
       <category>Digg AI from X</category>
       <pubDate>Thu, 27 Aug 2026 01:57:52 +0000</pubDate>
       <media:content url="https://digg.com/tech/pcy6x1vn/opengraph-image" type="image/jpeg" medium="image"/>
-    </item>
-    <item>
-      <title>Report Claims Nvidia Will Acquire Hugging Face</title>
-      <link>https://techcrunch.com/2026/08/24/hugging-face-reportedly-in-talks-to-be-acquired-for-13b</link>
-      <description>Social posts circulate an exclusive report from The Information on the proposed acquisition.</description>
-      <content:encoded><![CDATA[<p><img src="https://digg.com/tech/cjfcrzg8/opengraph-image" alt="Report Claims Nvidia Will Acquire Hugging Face"/></p>
-<p>Social posts circulate an exclusive report from The Information on the proposed acquisition.</p>
-<p><strong>Original source:</strong> <a href="https://techcrunch.com/2026/08/24/hugging-face-reportedly-in-talks-to-be-acquired-for-13b">https://techcrunch.com/2026/08/24/hugging-face-reportedly-in-talks-to-be-acquired-for-13b</a></p>
-<p><strong>Digg story:</strong> <a href="https://digg.com/tech/cjfcrzg8">https://digg.com/tech/cjfcrzg8</a></p>
-<p>Amir Efrati, executive editor at The Information, posted that Nvidia has agreed to acquire Hugging Face for $12.9 billion and shared a screenshot of the exclusive report. Reactions on X welcomed the move as a win for open-source AI and Nvidia&#x27;s ecosystem, while some users worried it could reduce Hugging Face&#x27;s neutrality or openness. Jessica Lessin credited the reporting team. The claim originates from The Information; no completed transaction appears in the provided evidence.</p>
-<ul><li><strong>Views:</strong> 305,995</li><li><strong>Likes:</strong> 1,547</li><li><strong>Bookmarks:</strong> 160</li><li><strong>Quotes:</strong> 99</li><li><strong>Replies:</strong> 98</li><li><strong>Posts:</strong> 8</li></ul>
-<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/srchvrs">Leo Boytsov</a></li><li><a href="https://x.com/mattturck">Matt Turck</a></li><li><a href="https://x.com/Jessicalessin">Jessica Lessin</a></li><li><a href="https://x.com/kyliebytes">Kylie Robison</a></li><li><a href="https://x.com/amir">Amir Efrati</a></li></ul>]]></content:encoded>
-      <guid isPermaLink="true">https://techcrunch.com/2026/08/24/hugging-face-reportedly-in-talks-to-be-acquired-for-13b</guid>
-      <category>Digg AI from X</category>
-      <pubDate>Thu, 27 Aug 2026 01:27:56 +0000</pubDate>
-      <media:content url="https://digg.com/tech/cjfcrzg8/opengraph-image" type="image/jpeg" medium="image"/>
     </item>
     <item>
       <title>Linear and Instinct Both Valued at $2.5 Billion</title>
@@ -712,101 +808,6 @@
       <category>Digg AI from X</category>
       <pubDate>Sat, 25 Jul 2026 18:17:21 +0000</pubDate>
       <media:content url="https://cnl5taoq5on9lswk.public.blob.vercel-storage.com/cluster-share-cards/6b549ddd-6d74-4297-b41f-1e8f90635340/1785043923548.png" type="image/png" medium="image"/>
-    </item>
-    <item>
-      <title>Denny's Diner Tags NVIDIA CEO Jensen Huang</title>
-      <link>https://x.com/darrenangle/status/2081090712494387353</link>
-      <description>Diner chain's tweet tagging NVIDIA CEO sparks amused reactions from AI figures online.</description>
-      <content:encoded><![CDATA[<p><img src="https://cnl5taoq5on9lswk.public.blob.vercel-storage.com/cluster-share-cards/ec9c50e0-07ac-4cb6-a058-6942cfcb5a33/1785043398701.png" alt="Denny&#x27;s Diner Tags NVIDIA CEO Jensen Huang"/></p>
-<p>Diner chain&#x27;s tweet tagging NVIDIA CEO sparks amused reactions from AI figures online.</p>
-<p><strong>Original source:</strong> <a href="https://x.com/darrenangle/status/2081090712494387353">https://x.com/darrenangle/status/2081090712494387353</a></p>
-<p><strong>Digg story:</strong> <a href="https://digg.com/tech/wjjpbwbe">https://digg.com/tech/wjjpbwbe</a></p>
-<p>A Denny&#x27;s Diner social media post directly addressed NVIDIA and CEO Jensen Huang with an attached image. AI commentators including Matthew Berman, Aarthi Ramamurthy, Nikita Bier, and others amplified the post, calling it a generational banger or masterpiece and noting that the chain gets it. Reactions framed the move as a lighthearted brand crossover, with some linking it to themes of constant availability and AI agents through memes. The exchange drew praise for the social media team&#x27;s wit and prompted speculation about unexpected alliances in tech culture.</p>
-<ul><li><strong>Views:</strong> 3,674,527</li><li><strong>Likes:</strong> 35,092</li><li><strong>Bookmarks:</strong> 1,206</li><li><strong>Quotes:</strong> 139</li><li><strong>Replies:</strong> 1,383</li><li><strong>Posts:</strong> 28</li></ul>
-<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/Miles_Brundage">Miles Brundage</a></li><li><a href="https://x.com/elonmusk">Elon Musk</a></li><li><a href="https://x.com/natolambert">Nathan Lambert</a></li><li><a href="https://x.com/_arohan_">rohan anil</a></li><li><a href="https://x.com/kevinweil">Kevin Weil 🇺🇸</a></li></ul>]]></content:encoded>
-      <guid isPermaLink="true">https://x.com/darrenangle/status/2081090712494387353</guid>
-      <category>Digg AI from X</category>
-      <pubDate>Sat, 25 Jul 2026 18:10:58 +0000</pubDate>
-      <media:content url="https://cnl5taoq5on9lswk.public.blob.vercel-storage.com/cluster-share-cards/ec9c50e0-07ac-4cb6-a058-6942cfcb5a33/1785043398701.png" type="image/png" medium="image"/>
-    </item>
-    <item>
-      <title>Google Gemma Models Surpass 900 Million Downloads</title>
-      <link>https://huggingface.co/models?search=gemma-4</link>
-      <description>Google DeepMind's open-weight LLM family achieves widespread adoption among developers and researchers.</description>
-      <content:encoded><![CDATA[<p><img src="https://pbs.twimg.com/media/HOFkeeYWIAA4ZcP.jpg" alt="Google Gemma Models Surpass 900 Million Downloads"/></p>
-<p>Google DeepMind&#x27;s open-weight LLM family achieves widespread adoption among developers and researchers.</p>
-<p><strong>Original source:</strong> <a href="https://huggingface.co/models?search=gemma-4">https://huggingface.co/models?search=gemma-4</a></p>
-<p><strong>Digg story:</strong> <a href="https://digg.com/tech/25r4im0p">https://digg.com/tech/25r4im0p</a></p>
-<p>Google&#x27;s Gemma open model family, including variants like Gemma 4, ShieldGemma, and MedGemma, has reached over 900 million downloads total. The Gemma 4 series alone accounts for more than 300 million. Google DeepMind executives including Demis Hassabis and CEO Sundar Pichai publicly celebrated the milestone, with Pichai noting a goal of 1 billion downloads next. The achievement reflects strong uptake by the developer community on platforms like Hugging Face.</p>
-<ul><li><strong>Views:</strong> 358,955</li><li><strong>Likes:</strong> 4,627</li><li><strong>Bookmarks:</strong> 234</li><li><strong>Quotes:</strong> 30</li><li><strong>Replies:</strong> 235</li><li><strong>Posts:</strong> 10</li></ul>
-<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/demishassabis">Demis Hassabis</a></li><li><a href="https://x.com/_akhaliq">AK</a></li><li><a href="https://x.com/ZoubinGhahrama1">Zoubin Ghahramani</a></li><li><a href="https://x.com/sundarpichai">Sundar Pichai</a></li><li><a href="https://x.com/sriramk">Sriram Krishnan</a></li></ul>]]></content:encoded>
-      <guid isPermaLink="true">https://huggingface.co/models?search=gemma-4</guid>
-      <category>Digg AI from X</category>
-      <pubDate>Sat, 25 Jul 2026 16:43:07 +0000</pubDate>
-      <media:content url="https://pbs.twimg.com/media/HOFkeeYWIAA4ZcP.jpg" type="image/jpeg" medium="image"/>
-    </item>
-    <item>
-      <title>Claude Opus 5 One-Shots Full Custom FPS Game Demo</title>
-      <link>https://shumer.dev/newsletter</link>
-      <description>Investor shares video of AI model producing complete first-person shooter code and assets from one prompt.</description>
-      <content:encoded><![CDATA[<p><img src="https://cnl5taoq5on9lswk.public.blob.vercel-storage.com/cluster-share-cards/de475332-b9f1-496a-a1a2-197eb21ec093/1785043379388.png" alt="Claude Opus 5 One-Shots Full Custom FPS Game Demo"/></p>
-<p>Investor shares video of AI model producing complete first-person shooter code and assets from one prompt.</p>
-<p><strong>Original source:</strong> <a href="https://shumer.dev/newsletter">https://shumer.dev/newsletter</a></p>
-<p><strong>Digg story:</strong> <a href="https://digg.com/tech/fd8xb53d">https://digg.com/tech/fd8xb53d</a></p>
-<p>Matt Shumer posted a video of a browser-based first-person shooter created entirely by Claude Opus 5 from a single detailed prompt requesting AAA quality. The demo shows urban combat gameplay featuring custom-coded environments, UI elements, scoring, health, ammo, weapons, enemy AI, and audio with no external assets used. Shumer shared the prompt and linked to a public code repository. Other users commented on the speed of AI progress in game creation and its implications for professional developers.</p>
-<ul><li><strong>Views:</strong> 2,265,885</li><li><strong>Likes:</strong> 10,135</li><li><strong>Bookmarks:</strong> 5,887</li><li><strong>Quotes:</strong> 310</li><li><strong>Replies:</strong> 1,011</li><li><strong>Posts:</strong> 26</li></ul>
-<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/EMostaque">Emad</a></li><li><a href="https://x.com/mattshumer_">Matt Shumer</a></li><li><a href="https://x.com/kalinowski007">Caitlin Kalinowski</a></li><li><a href="https://x.com/danshipper">Dan Shipper 📧</a></li><li><a href="https://x.com/kimmonismus">Chubby♨️</a></li></ul>]]></content:encoded>
-      <guid isPermaLink="true">https://shumer.dev/newsletter</guid>
-      <category>Digg AI from X</category>
-      <pubDate>Sat, 25 Jul 2026 16:29:57 +0000</pubDate>
-      <media:content url="https://cnl5taoq5on9lswk.public.blob.vercel-storage.com/cluster-share-cards/de475332-b9f1-496a-a1a2-197eb21ec093/1785043379388.png" type="image/png" medium="image"/>
-    </item>
-    <item>
-      <title>NVIDIA CEO Letter Backs Open AI Models With Google Support</title>
-      <link>https://images.nvidia.com/pdf/Open-Weights-and-American-AI-Leadership.pdf</link>
-      <description>Pichai publicly endorses Huang's call for balancing open and closed AI systems.</description>
-      <content:encoded><![CDATA[<p><img src="https://pbs.twimg.com/media/HN_qDVsa4AAI6XJ.jpg" alt="NVIDIA CEO Letter Backs Open AI Models With Google Support"/></p>
-<p>Pichai publicly endorses Huang&#x27;s call for balancing open and closed AI systems.</p>
-<p><strong>Original source:</strong> <a href="https://images.nvidia.com/pdf/Open-Weights-and-American-AI-Leadership.pdf">https://images.nvidia.com/pdf/Open-Weights-and-American-AI-Leadership.pdf</a></p>
-<p><strong>Digg story:</strong> <a href="https://digg.com/tech/z94urrqn">https://digg.com/tech/z94urrqn</a></p>
-<ul><li><strong>Views:</strong> 5,988,631</li><li><strong>Likes:</strong> 59,962</li><li><strong>Bookmarks:</strong> 3,895</li><li><strong>Quotes:</strong> 668</li><li><strong>Replies:</strong> 2,237</li><li><strong>Posts:</strong> 96</li></ul>
-<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/ylecun">Yann LeCun</a></li><li><a href="https://x.com/AndrewYNg">Andrew Ng</a></li><li><a href="https://x.com/demishassabis">Demis Hassabis</a></li><li><a href="https://x.com/paulg">Paul Graham</a></li><li><a href="https://x.com/giffmana">Lucas Beyer (bl16)</a></li></ul>]]></content:encoded>
-      <guid isPermaLink="true">https://images.nvidia.com/pdf/Open-Weights-and-American-AI-Leadership.pdf</guid>
-      <category>Digg AI from X</category>
-      <pubDate>Sat, 25 Jul 2026 12:20:55 +0000</pubDate>
-      <media:content url="https://pbs.twimg.com/media/HN_qDVsa4AAI6XJ.jpg" type="image/jpeg" medium="image"/>
-    </item>
-    <item>
-      <title>Critics Accuse Anthropic of Lobbying Against Open Source</title>
-      <link>https://aiworld.eu/story/the-new-engines-of-open-source-ai</link>
-      <description>Social media users accuse Anthropic of lobbying to restrict open-source AI competitors while shielding its closed models.</description>
-      <content:encoded><![CDATA[<p><img src="https://pbs.twimg.com/media/HOEX-sfagAIDq9g.jpg" alt="Critics Accuse Anthropic of Lobbying Against Open Source"/></p>
-<p>Social media users accuse Anthropic of lobbying to restrict open-source AI competitors while shielding its closed models.</p>
-<p><strong>Original source:</strong> <a href="https://aiworld.eu/story/the-new-engines-of-open-source-ai">https://aiworld.eu/story/the-new-engines-of-open-source-ai</a></p>
-<p><strong>Digg story:</strong> <a href="https://digg.com/tech/hc6rjs0n">https://digg.com/tech/hc6rjs0n</a></p>
-<p>Twitter exchanges show multiple creators and founders criticizing Anthropic employees for mocking NVIDIA&#x27;s open-source CUDA and driver support. Replies allege the company spends tens of millions lobbying governments to limit competitors&#x27; open-source work under a safety pretext. Commenters distinguish this from any requirement that Anthropic itself release models, focusing instead on perceived efforts to block rivals. The thread references NVIDIA CEO comments and highlights one-sided framing in ongoing AI governance debates, with no official Anthropic statement included in the supplied lines.</p>
-<ul><li><strong>Views:</strong> 1,671,104</li><li><strong>Likes:</strong> 20,448</li><li><strong>Bookmarks:</strong> 1,865</li><li><strong>Quotes:</strong> 125</li><li><strong>Replies:</strong> 907</li><li><strong>Posts:</strong> 44</li></ul>
-<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/Miles_Brundage">Miles Brundage</a></li><li><a href="https://x.com/_arohan_">rohan anil</a></li><li><a href="https://x.com/deliprao">Delip Rao e/σ</a></li><li><a href="https://x.com/garrytan">Garry Tan</a></li><li><a href="https://x.com/GaryMarcus">Gary Marcus</a></li></ul>]]></content:encoded>
-      <guid isPermaLink="true">https://aiworld.eu/story/the-new-engines-of-open-source-ai</guid>
-      <category>Digg AI from X</category>
-      <pubDate>Sat, 25 Jul 2026 11:46:12 +0000</pubDate>
-      <media:content url="https://pbs.twimg.com/media/HOEX-sfagAIDq9g.jpg" type="image/jpeg" medium="image"/>
-    </item>
-    <item>
-      <title>Block Launches Buzz App for AI Collaboration</title>
-      <link>https://apps.apple.com/us/app/buzz-chat-with-your-hive/id6779728271</link>
-      <description>Jack Dorsey amplifies Block Inc release of mobile app for team chat with AI agents.</description>
-      <content:encoded><![CDATA[<p><img src="https://pbs.twimg.com/media/HOEB7JSXEAA_CjB.jpg" alt="Block Launches Buzz App for AI Collaboration"/></p>
-<p>Jack Dorsey amplifies Block Inc release of mobile app for team chat with AI agents.</p>
-<p><strong>Original source:</strong> <a href="https://apps.apple.com/us/app/buzz-chat-with-your-hive/id6779728271">https://apps.apple.com/us/app/buzz-chat-with-your-hive/id6779728271</a></p>
-<p><strong>Digg story:</strong> <a href="https://digg.com/tech/7b8iem3b">https://digg.com/tech/7b8iem3b</a></p>
-<p>Block Inc released Buzz, a productivity app enabling teams to chat and collaborate with AI agents inside shared channels. Announcements confirm availability on both iOS App Store and Google Play under package xyz.block.buzz.mobile. Jack Dorsey, Block founder, quoted and retweeted the launches. Observers note the app&#x27;s use of open models for shared compute, positioning it as a potential Slack alternative that runs frontier-level AI on accessible hardware.</p>
-<ul><li><strong>Views:</strong> 1,112,765</li><li><strong>Likes:</strong> 5,746</li><li><strong>Bookmarks:</strong> 3,862</li><li><strong>Quotes:</strong> 82</li><li><strong>Replies:</strong> 368</li><li><strong>Posts:</strong> 7</li></ul>
-<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/deliprao">Delip Rao e/σ</a></li><li><a href="https://x.com/jack">jack</a></li><li><a href="https://x.com/gregisenberg">GREG ISENBERG</a></li></ul>]]></content:encoded>
-      <guid isPermaLink="true">https://apps.apple.com/us/app/buzz-chat-with-your-hive/id6779728271</guid>
-      <category>Digg AI from X</category>
-      <pubDate>Sat, 25 Jul 2026 10:10:12 +0000</pubDate>
-      <media:content url="https://pbs.twimg.com/media/HOEB7JSXEAA_CjB.jpg" type="image/jpeg" medium="image"/>
     </item>
   </channel>
 </rss>
