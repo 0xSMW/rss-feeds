@@ -2575,6 +2575,22 @@ By far future, we may mean as soon as late-2026.<a href="#ref-5"> ↩</a>
       <media:content url="https://alignment.openai.com/argo/figures/overall_approach.png" type="image/png" medium="image"/>
     </item>
     <item>
+      <title>Reasoning models struggle to control their chains of thought, and that’s good</title>
+      <link>https://openai.com/index/reasoning-models-chain-of-thought-controllability/</link>
+      <description>OpenAI introduces CoT-Control and finds reasoning models struggle to control their chains of thought, reinforcing monitorability as an AI safety safeguard.</description>
+      <guid isPermaLink="true">https://openai.com/index/reasoning-models-chain-of-thought-controllability/</guid>
+      <category>Alignment Research</category>
+      <pubDate>Thu, 05 Mar 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Advancing independent research on AI alignment</title>
+      <link>https://openai.com/index/advancing-independent-research-ai-alignment/</link>
+      <description>OpenAI commits $7.5M to The Alignment Project to fund independent AI alignment research, strengthening global efforts to address AGI safety and security risks.</description>
+      <guid isPermaLink="true">https://openai.com/index/advancing-independent-research-ai-alignment/</guid>
+      <category>Alignment Research</category>
+      <pubDate>Thu, 19 Feb 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
       <title>Discovering unknown AI misalignments in real-world usage</title>
       <link>https://alignment.openai.com/ai-discovered-unknowns/</link>
       <description>Reasoning models can find and understand unknown misaligned behaviors from how users respond.</description>
@@ -3512,6 +3528,14 @@ url = {https://alignment.openai.com/confessions/}
       <category>Alignment Research</category>
       <pubDate>Mon, 22 Dec 2025 00:00:00 +0000</pubDate>
       <media:content url="https://alignment.openai.com/helpful-assistant-features/figures/steering-decreases-misalignment.png" type="image/png" medium="image"/>
+    </item>
+    <item>
+      <title>Evaluating chain-of-thought monitorability</title>
+      <link>https://openai.com/index/evaluating-chain-of-thought-monitorability/</link>
+      <description>OpenAI introduces a new framework and evaluation suite for chain-of-thought monitorability, covering 13 evaluations across 24 environments. Our findings show that monitoring a model’s internal reasoning is far more effective than monitoring outputs alone, offering a promising path toward scalable control as AI systems grow more capable.</description>
+      <guid isPermaLink="true">https://openai.com/index/evaluating-chain-of-thought-monitorability/</guid>
+      <category>Alignment Research</category>
+      <pubDate>Thu, 18 Dec 2025 00:00:00 +0000</pubDate>
     </item>
     <item>
       <title>Sidestepping Evaluation Awareness and Anticipating Misalignment with Production Evaluations</title>

@@ -8,7 +8,198 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 27 Aug 2026 18:25:57 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 28 Aug 2026 19:26:17 +0000</lastBuildDate>
+    <item>
+      <title>Grok Bot Gains Ability to Complete Online Purchases</title>
+      <link>https://stripe.com/blog/giving-agents-the-ability-to-pay</link>
+      <description>Grok Bot now handles purchases after users connect accounts and approve each transaction via Stripe.</description>
+      <content:encoded><![CDATA[<p><img src="https://digg.com/tech/2psh49kb/opengraph-image" alt="Grok Bot Gains Ability to Complete Online Purchases"/></p>
+<p>Grok Bot now handles purchases after users connect accounts and approve each transaction via Stripe.</p>
+<p><strong>Original source:</strong> <a href="https://stripe.com/blog/giving-agents-the-ability-to-pay">https://stripe.com/blog/giving-agents-the-ability-to-pay</a></p>
+<p><strong>Digg story:</strong> <a href="https://digg.com/tech/2psh49kb">https://digg.com/tech/2psh49kb</a></p>
+<p>Grok Bot posted on X that the AI can now buy items online. Users connect accounts, send the bot shopping, and approve every spend request. The bot then receives a secure single-use card for each payment. The feature is available to users in the US and rolling out to mobile soon. Roshan Sadanani quoted the announcement and noted working with the Stripe team on the integration. Jeff Weinstein retweeted the update.</p>
+<ul><li><strong>Views:</strong> 366,984</li><li><strong>Likes:</strong> 3,788</li><li><strong>Bookmarks:</strong> 906</li><li><strong>Quotes:</strong> 240</li><li><strong>Replies:</strong> 275</li><li><strong>Posts:</strong> 5</li></ul>
+<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/jeff_weinstein">Jeff Weinstein</a></li><li><a href="https://x.com/leerob">Lee Robinson</a></li></ul>]]></content:encoded>
+      <guid isPermaLink="true">https://stripe.com/blog/giving-agents-the-ability-to-pay</guid>
+      <category>Digg AI from X</category>
+      <pubDate>Fri, 28 Aug 2026 19:26:17 +0000</pubDate>
+      <media:content url="https://digg.com/tech/2psh49kb/opengraph-image" type="image/jpeg" medium="image"/>
+    </item>
+    <item>
+      <title>Chamath Palihapitiya Says AI Long-Horizon Tasks Still Fail</title>
+      <link>https://www.youtube.com/watch?v=HBMmK0NsUK0</link>
+      <description>Quote from a Stanford AI Club talk draws agreement from Gary Marcus on AI limits.</description>
+      <content:encoded><![CDATA[<p><img src="https://digg.com/tech/52lmg3vp/opengraph-image" alt="Chamath Palihapitiya Says AI Long-Horizon Tasks Still Fail"/></p>
+<p>Quote from a Stanford AI Club talk draws agreement from Gary Marcus on AI limits.</p>
+<p><strong>Original source:</strong> <a href="https://www.youtube.com/watch?v=HBMmK0NsUK0">https://www.youtube.com/watch?v=HBMmK0NsUK0</a></p>
+<p><strong>Digg story:</strong> <a href="https://digg.com/tech/52lmg3vp">https://digg.com/tech/52lmg3vp</a></p>
+<p>Rohan Paul posted a quote from Chamath Palihapitiya speaking at the Stanford AI Club. Chamath stated that long-horizon tasks remain a joke and current AI does not handle them. He added that complex problems also do not work and warned of a hype cycle that will lead to contraction and a trough of disillusionment. Gary Marcus replied that Chamath was right and linked to an earlier post of his own making the same point.</p>
+<ul><li><strong>Views:</strong> 34,648</li><li><strong>Likes:</strong> 184</li><li><strong>Bookmarks:</strong> 88</li><li><strong>Quotes:</strong> 3</li><li><strong>Replies:</strong> 19</li><li><strong>Posts:</strong> 3</li></ul>
+<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/GaryMarcus">Gary Marcus</a></li><li><a href="https://x.com/rohanpaul_ai">Rohan Paul</a></li></ul>]]></content:encoded>
+      <guid isPermaLink="true">https://www.youtube.com/watch?v=HBMmK0NsUK0</guid>
+      <category>Digg AI from X</category>
+      <pubDate>Fri, 28 Aug 2026 18:57:24 +0000</pubDate>
+      <media:content url="https://digg.com/tech/52lmg3vp/opengraph-image" type="image/jpeg" medium="image"/>
+    </item>
+    <item>
+      <title>OpenAI Introduces Rosalind Workbench for Biologists</title>
+      <link>https://developers.openai.com/blog/rosalind-workbench</link>
+      <description>OpenAI researcher Joy Jiao unveils the tool while early testers report strong results on research papers.</description>
+      <content:encoded><![CDATA[<p><img src="https://digg.com/tech/zksc4lok/opengraph-image" alt="OpenAI Introduces Rosalind Workbench for Biologists"/></p>
+<p>OpenAI researcher Joy Jiao unveils the tool while early testers report strong results on research papers.</p>
+<p><strong>Original source:</strong> <a href="https://developers.openai.com/blog/rosalind-workbench">https://developers.openai.com/blog/rosalind-workbench</a></p>
+<p><strong>Digg story:</strong> <a href="https://digg.com/tech/zksc4lok">https://digg.com/tech/zksc4lok</a></p>
+<p>Joy Jiao, Life Sciences Research Lead at OpenAI, posted that she is introducing Rosalind Workbench for biologists built directly into Codex. Derya Unutmaz, a professor of immunology, stated she has been early-testing the Rosalind model and found it fantastic for biomedical research. She said it helped her completely revise a paper on cancer immunotherapy and greatly improved the data analysis in the manuscript. She added that the model performed better than GPT-5.6 Pro. Andrew Mayne, a former OpenAI engineer, retweeted her post.</p>
+<ul><li><strong>Views:</strong> 10,843</li><li><strong>Likes:</strong> 145</li><li><strong>Bookmarks:</strong> 40</li><li><strong>Quotes:</strong> 1</li><li><strong>Replies:</strong> 14</li><li><strong>Posts:</strong> 3</li></ul>
+<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/csvoss">Chelsea Sierra Voss</a></li><li><a href="https://x.com/AndrewMayne">Andrew Mayne</a></li></ul>]]></content:encoded>
+      <guid isPermaLink="true">https://developers.openai.com/blog/rosalind-workbench</guid>
+      <category>Digg AI from X</category>
+      <pubDate>Fri, 28 Aug 2026 17:59:56 +0000</pubDate>
+      <media:content url="https://digg.com/tech/zksc4lok/opengraph-image" type="image/jpeg" medium="image"/>
+    </item>
+    <item>
+      <title>Grok Bot Enables Template Sharing</title>
+      <link>https://x.ai/bot/FU-Ev6_Ju4lFGWwWRD0GD</link>
+      <description>Grok Bot account states users can share custom bot templates with others.</description>
+      <content:encoded><![CDATA[<p><img src="https://digg.com/tech/fahr6os6/opengraph-image" alt="Grok Bot Enables Template Sharing"/></p>
+<p>Grok Bot account states users can share custom bot templates with others.</p>
+<p><strong>Original source:</strong> <a href="https://x.ai/bot/FU-Ev6_Ju4lFGWwWRD0GD">https://x.ai/bot/FU-Ev6_Ju4lFGWwWRD0GD</a></p>
+<p><strong>Digg story:</strong> <a href="https://digg.com/tech/fahr6os6">https://digg.com/tech/fahr6os6</a></p>
+<p>The Grok Bot account announced that users can now share templates of their custom Bots with others. A video posted by the account appears to show a chat window and a Share as Template button in settings, with options to publish bots publicly such as Sales Outbound. Eric Zakariasson posted an example of a Projects Manager bot at x.ai that creates specialist agents including coder, designer, researcher, and writer, treating Notion as the source of truth for project rows and task boards according to his post. Replies on X include users calling the feature smart.</p>
+<ul><li><strong>Views:</strong> 1,965,531</li><li><strong>Likes:</strong> 2,996</li><li><strong>Bookmarks:</strong> 1,010</li><li><strong>Quotes:</strong> 236</li><li><strong>Replies:</strong> 225</li><li><strong>Posts:</strong> 3</li></ul>
+<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/altryne">Alex Volkov</a></li><li><a href="https://x.com/ericzakariasson">eric zakariasson</a></li><li><a href="https://x.com/leerob">Lee Robinson</a></li></ul>]]></content:encoded>
+      <guid isPermaLink="true">https://x.ai/bot/FU-Ev6_Ju4lFGWwWRD0GD</guid>
+      <category>Digg AI from X</category>
+      <pubDate>Fri, 28 Aug 2026 16:33:51 +0000</pubDate>
+      <media:content url="https://digg.com/tech/fahr6os6/opengraph-image" type="image/jpeg" medium="image"/>
+    </item>
+    <item>
+      <title>Perplexity AI Powers Decagon Customer Support Agents</title>
+      <link>https://x.com/DecagonAI/status/2093367462461124622</link>
+      <description>Perplexity AI founders announce integration of search into Decagon customer agents for major brands.</description>
+      <content:encoded><![CDATA[<p><img src="https://digg.com/tech/9so5ziih/opengraph-image" alt="Perplexity AI Powers Decagon Customer Support Agents"/></p>
+<p>Perplexity AI founders announce integration of search into Decagon customer agents for major brands.</p>
+<p><strong>Original source:</strong> <a href="https://x.com/DecagonAI/status/2093367462461124622">https://x.com/DecagonAI/status/2093367462461124622</a></p>
+<p><strong>Digg story:</strong> <a href="https://digg.com/tech/9so5ziih">https://digg.com/tech/9so5ziih</a></p>
+<p>Perplexity AI co-founder Denis Yarats posted that Decagon agents now run on the company&#x27;s state-of-the-art search technology. Co-founder Aravind Srinivas added that Decagon handles support for Delta Airlines, Ticketmaster, Deutsche Telekom and American Airlines and that Perplexity supplies the search for queries needing current online information. Both posts link to the same Decagon announcement on X. The statements establish the claimed integration but provide no independent confirmation of deployment, performance, or contract details.</p>
+<ul><li><strong>Views:</strong> 16,014</li><li><strong>Likes:</strong> 149</li><li><strong>Bookmarks:</strong> 12</li><li><strong>Replies:</strong> 13</li><li><strong>Posts:</strong> 2</li></ul>
+<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/AravSrinivas">Aravind Srinivas</a></li><li><a href="https://x.com/denisyarats">Denis Yarats</a></li></ul>]]></content:encoded>
+      <guid isPermaLink="true">https://x.com/DecagonAI/status/2093367462461124622</guid>
+      <category>Digg AI from X</category>
+      <pubDate>Fri, 28 Aug 2026 16:29:52 +0000</pubDate>
+      <media:content url="https://digg.com/tech/9so5ziih/opengraph-image" type="image/jpeg" medium="image"/>
+    </item>
+    <item>
+      <title>Owner Raises $240M At $2.3B Valuation</title>
+      <link>https://Owner.com</link>
+      <description>Venture investors celebrate Owner's reported funding milestone and growth.</description>
+      <content:encoded><![CDATA[<p><img src="https://digg.com/tech/p4x2utmb/opengraph-image" alt="Owner Raises $240M At $2.3B Valuation"/></p>
+<p>Venture investors celebrate Owner&#x27;s reported funding milestone and growth.</p>
+<p><strong>Original source:</strong> <a href="https://Owner.com">https://Owner.com</a></p>
+<p><strong>Digg story:</strong> <a href="https://digg.com/tech/p4x2utmb">https://digg.com/tech/p4x2utmb</a></p>
+<p>Jack Altman called Owner his first board seat after leading its A round and praised founder Adam Guild&#x27;s execution. Joshua Browder said his firm invested early and congratulated the team on the milestone. Both posted links to Adam Guild&#x27;s announcement. Generated headlines tied to the posts state a $240M round at $2.3B valuation and $100M ARR. Owner.com builds online ordering and marketing tools used by restaurants.</p>
+<ul><li><strong>Views:</strong> 63,072</li><li><strong>Likes:</strong> 408</li><li><strong>Bookmarks:</strong> 101</li><li><strong>Quotes:</strong> 1</li><li><strong>Replies:</strong> 19</li><li><strong>Posts:</strong> 2</li></ul>
+<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/jaltma">Jack Altman</a></li><li><a href="https://x.com/Joshuabrowder">Joshua Browder</a></li></ul>]]></content:encoded>
+      <guid isPermaLink="true">https://Owner.com</guid>
+      <category>Digg AI from X</category>
+      <pubDate>Fri, 28 Aug 2026 16:29:17 +0000</pubDate>
+      <media:content url="https://digg.com/tech/p4x2utmb/opengraph-image" type="image/jpeg" medium="image"/>
+    </item>
+    <item>
+      <title>Lila Sciences AI Designs CAR-T Therapy in Months</title>
+      <link>https://www.lila.ai/news/inside-lilas-rna-discovery-engine</link>
+      <description>Company says three scientists created a superior version using their platform.</description>
+      <content:encoded><![CDATA[<p><img src="https://digg.com/tech/ltfj3d4j/opengraph-image" alt="Lila Sciences AI Designs CAR-T Therapy in Months"/></p>
+<p>Company says three scientists created a superior version using their platform.</p>
+<p><strong>Original source:</strong> <a href="https://www.lila.ai/news/inside-lilas-rna-discovery-engine">https://www.lila.ai/news/inside-lilas-rna-discovery-engine</a></p>
+<p><strong>Digg story:</strong> <a href="https://digg.com/tech/ltfj3d4j">https://digg.com/tech/ltfj3d4j</a></p>
+<p>Lila Sciences posted that its AI platform let three scientists design a new CAR-T cancer therapy in months. The company stated the therapy outperformed a leading treatment used in patients today during preclinical tests. CAR-T therapies normally require years to develop. Employee Jinghan Ong noted the AI learned from prior data to shorten the process. Tech commentator Robert Scoble shared the announcement online.</p>
+<ul><li><strong>Views:</strong> 17,371</li><li><strong>Likes:</strong> 159</li><li><strong>Bookmarks:</strong> 34</li><li><strong>Quotes:</strong> 11</li><li><strong>Replies:</strong> 17</li><li><strong>Posts:</strong> 3</li></ul>
+<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/Scobleizer">Robert Scoble</a></li><li><a href="https://x.com/tw_killian">Taylor W. Killian</a></li></ul>]]></content:encoded>
+      <guid isPermaLink="true">https://www.lila.ai/news/inside-lilas-rna-discovery-engine</guid>
+      <category>Digg AI from X</category>
+      <pubDate>Fri, 28 Aug 2026 16:22:10 +0000</pubDate>
+      <media:content url="https://digg.com/tech/ltfj3d4j/opengraph-image" type="image/jpeg" medium="image"/>
+    </item>
+    <item>
+      <title>OpenRouter Discounts Trigger 13.8x Token Usage Surge</title>
+      <link>https://openrouter.ai/openai/gpt-5.6-sol?ref=aibalkan.ai</link>
+      <description>Discounts on GPT-5.6 Terra and Luna models produced a sharp rise in token consumption.</description>
+      <content:encoded><![CDATA[<p><img src="https://digg.com/tech/4dneyzz9/opengraph-image" alt="OpenRouter Discounts Trigger 13.8x Token Usage Surge"/></p>
+<p>Discounts on GPT-5.6 Terra and Luna models produced a sharp rise in token consumption.</p>
+<p><strong>Original source:</strong> <a href="https://openrouter.ai/openai/gpt-5.6-sol?ref=aibalkan.ai">https://openrouter.ai/openai/gpt-5.6-sol?ref=aibalkan.ai</a></p>
+<p><strong>Digg story:</strong> <a href="https://digg.com/tech/4dneyzz9">https://digg.com/tech/4dneyzz9</a></p>
+<p>OpenRouter posted that discounting GPT-5.6 Terra and Luna models caused token consumption to jump 13.8 times. Pseudonymous user scaling01 highlighted the new $5 per million token price for GPT-5.6-Sol on the flex API and said more benchmarks would follow. Greg Brockman replied that Jevons Paradox is counterintuitive and inspiring. The packet contains no further confirmation of the exact multiplier or duration of the surge.</p>
+<ul><li><strong>Views:</strong> 96,048</li><li><strong>Likes:</strong> 928</li><li><strong>Bookmarks:</strong> 166</li><li><strong>Quotes:</strong> 8</li><li><strong>Replies:</strong> 74</li><li><strong>Posts:</strong> 2</li></ul>
+<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/gdb">Greg Brockman</a></li><li><a href="https://x.com/scaling01">Lisan al Gaib</a></li></ul>]]></content:encoded>
+      <guid isPermaLink="true">https://openrouter.ai/openai/gpt-5.6-sol?ref=aibalkan.ai</guid>
+      <category>Digg AI from X</category>
+      <pubDate>Fri, 28 Aug 2026 14:54:48 +0000</pubDate>
+      <media:content url="https://digg.com/tech/4dneyzz9/opengraph-image" type="image/jpeg" medium="image"/>
+    </item>
+    <item>
+      <title>ChatGPT Adds Multiple Gmail and Calendar Account Support</title>
+      <link>https://help.openai.com/en/articles/11487775-connectors-in-chatgpt</link>
+      <description>Posts note ChatGPT and Codex now link several Gmail and Calendar accounts.</description>
+      <content:encoded><![CDATA[<p><img src="https://digg.com/tech/es8l2osd/opengraph-image" alt="ChatGPT Adds Multiple Gmail and Calendar Account Support"/></p>
+<p>Posts note ChatGPT and Codex now link several Gmail and Calendar accounts.</p>
+<p><strong>Original source:</strong> <a href="https://help.openai.com/en/articles/11487775-connectors-in-chatgpt">https://help.openai.com/en/articles/11487775-connectors-in-chatgpt</a></p>
+<p><strong>Digg story:</strong> <a href="https://digg.com/tech/es8l2osd">https://digg.com/tech/es8l2osd</a></p>
+<p>Users on X reacted to a post by @gabrielchua announcing expanded account connections. Research engineer Tibo Sottiaux asked what the record will be for most connected accounts. Creator Alex Volkov welcomed the change and asked if it should be called the bot effect. Generated summaries in the posts state that OpenAI rolled out support for multiple Gmail and Google Calendar accounts in ChatGPT and Codex to meet frequent user requests.</p>
+<ul><li><strong>Views:</strong> 125,366</li><li><strong>Likes:</strong> 833</li><li><strong>Bookmarks:</strong> 57</li><li><strong>Quotes:</strong> 3</li><li><strong>Replies:</strong> 96</li><li><strong>Posts:</strong> 2</li></ul>
+<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/thsottiaux">Tibo</a></li><li><a href="https://x.com/altryne">Alex Volkov</a></li></ul>]]></content:encoded>
+      <guid isPermaLink="true">https://help.openai.com/en/articles/11487775-connectors-in-chatgpt</guid>
+      <category>Digg AI from X</category>
+      <pubDate>Fri, 28 Aug 2026 14:52:38 +0000</pubDate>
+      <media:content url="https://digg.com/tech/es8l2osd/opengraph-image" type="image/jpeg" medium="image"/>
+    </item>
+    <item>
+      <title>a16z Commits $1.1B to Machine Age Fund</title>
+      <link>https://spr.ly/6010B10mvu</link>
+      <description>Venture firm targets AI hardware, robotics, energy systems, and data center infrastructure.</description>
+      <content:encoded><![CDATA[<p><img src="https://digg.com/tech/stg4b4vs/opengraph-image" alt="a16z Commits $1.1B to Machine Age Fund"/></p>
+<p>Venture firm targets AI hardware, robotics, energy systems, and data center infrastructure.</p>
+<p><strong>Original source:</strong> <a href="https://spr.ly/6010B10mvu">https://spr.ly/6010B10mvu</a></p>
+<p><strong>Digg story:</strong> <a href="https://digg.com/tech/stg4b4vs">https://digg.com/tech/stg4b4vs</a></p>
+<p>Andreessen Horowitz announced a $1.1 billion fund for the machine age. The firm will invest in AI hardware, robotics, energy systems, and semiconductors. Partners described the effort as rebuilding physical infrastructure, including data centers, racks, cooling, and power. One post called it the largest infrastructure opportunity in computing history. Others urged building machines and physical products. The announcement came via the firm&#x27;s official account and was amplified by its investors.</p>
+<ul><li><strong>Views:</strong> 402,922</li><li><strong>Likes:</strong> 2,446</li><li><strong>Bookmarks:</strong> 784</li><li><strong>Quotes:</strong> 101</li><li><strong>Replies:</strong> 181</li><li><strong>Posts:</strong> 8</li></ul>
+<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/martin_casado">martin_casado</a></li><li><a href="https://x.com/eriktorenberg">Erik Torenberg</a></li><li><a href="https://x.com/a16z">a16z</a></li><li><a href="https://x.com/joshelman">Josh Elman</a></li><li><a href="https://x.com/dhaber">David Haber</a></li></ul>]]></content:encoded>
+      <guid isPermaLink="true">https://spr.ly/6010B10mvu</guid>
+      <category>Digg AI from X</category>
+      <pubDate>Fri, 28 Aug 2026 13:11:57 +0000</pubDate>
+      <media:content url="https://digg.com/tech/stg4b4vs/opengraph-image" type="image/jpeg" medium="image"/>
+    </item>
+    <item>
+      <title>Automated researchers can reliably mitigate alignment failures</title>
+      <link>https://www.anthropic.com/research/automated-researchers-mitigate-alignment-failures</link>
+      <description>We had Claude autonomously train models to improve their performance on several public benchmarks that measure 10 categories of alignment failure. For all 10, Claude found fixes that improved the target benchmarks without degrading capabilities.</description>
+      <content:encoded><![CDATA[<p>As <a href="https://www.anthropic.com/institute/recursive-self-improvement">AI begins to build itself</a>, automating alignment research becomes increasingly important to let safety research keep pace. Although measuring the <em>success</em> of alignment research is enormously challenging, researchers (at Anthropic and elsewhere) have developed benchmarks and automated auditing tools, such as <a href="https://www.anthropic.com/research/petri-open-source-auditing">Petri</a>, that quantify common alignment <em>failures, </em>like deception, sycophancy, and jailbreaks.</p>
+<p>In one of our <a href="https://www.anthropic.com/research/automated-alignment-researchers">earlier experiments</a>, we tasked Claude with finding effective ways to use weak AI models as “teachers” to supervise the training of stronger models (in this case, the “student” model). Now, we’re releasing a new report that builds on this idea. We had Claude autonomously train models to improve their performance on several public benchmarks that measure each of 10 categories of alignment failure. For instance, Claude improved models’ performance on privacy violation, measured by <a href="https://arxiv.org/abs/2310.17884">ConfAIde</a>, <a href="https://arxiv.org/abs/2502.17041">PrivaCI-Bench</a>, and <a href="https://arxiv.org/abs/2409.00138">PrivacyLens</a>. Claude tackled one alignment failure at a time through a loop of searching literature, proposing methods and data, training, and then testing.</p>
+<p>We judged Claude’s success according to the “percentage of safety gap closed,” i.e., how far its methods moved the student model towards the theoretical perfect score, as judged across the range of benchmarks (typically three to five) for each category of alignment failure. We excluded alignment methods that hurt the student models’ general capabilities, and forbade Claude from distilling its own alignment directly into the target model. We enforced these constraints with a monitoring agent, which read every method Claude had in mind before it ran.</p>
+<p>Our aim was to assess whether the proposed methods would, first, remain effective on alignment evaluations that Claude was never shown during its research loop; second, avoid degrading the student model’s capabilities (since safety training might, for example, make models refuse tasks more often, reducing their overall usability); and, third, still work on larger models than the ones Claude was asked to align in this test.</p>
+<p>On each of these counts, Claude’s methods worked. For all 10 alignment failures, Claude found fixes that improved the target benchmarks without degrading capabilities. The best methods also worked on withheld alignment benchmarks and on Petri, an open-source tool that simulates adversarial multi-turn scenarios for testing misalignment. Moreover, the methods remained effective on models up to 4.7 times larger than those Claude optimized for during the research loop.</p>
+<figure><img alt="Automated researchers closed 85% of the deception safety gap through iterative testing; human researchers closed 20%." height="870" src="https://www.anthropic.com/_next/image?url=https%3A%2F%2Fwww-cdn.anthropic.com%2Fimages%2F4zrzovbb%2Fwebsite%2Fc3991d9c8a23731e80bd96200f2f7c638d2b6e19-1440x870.png&amp;w=3840&amp;q=75" width="1440"/><figcaption><strong>Successfully mitigating diverse alignment failures.</strong> We applied the automated alignment researcher to mitigate 10 alignment failures separately, and in each scenario it closed a substantial portion of the safety gap to perfect performance.</figcaption></figure>
+<p>Claude also outscored 28 human safety researchers who had up to eight hours to devise methods. On deception, for example, Claude’s best method performed 20% better than the best human proposal. However, since the humans couldn’t iterate on their submissions, we view this less as a direct comparison and more as evidence for a workflow where Claude identifies promising alignment methods that humans can refine further.</p>
+<figure><img alt="Automated research closed 26% to 96% of the safety gap across ten alignment failures, from sycophancy to reward hacking." height="810" src="https://www.anthropic.com/_next/image?url=https%3A%2F%2Fwww-cdn.anthropic.com%2Fimages%2F4zrzovbb%2Fwebsite%2Fbb63203365caffeaaa7e98f13959bf1757166e60-1440x810.png&amp;w=3840&amp;q=75" width="1440"/><figcaption><strong>Automated alignment researchers mitigating deception in Gemma-2-2B.</strong> Claude submitted more than 150 attempts at mitigating deceptive behavior, and achieved a final performance of 82% of the safety gap closed in this run. On average, it achieved 85% across multiple runs. In contrast, six experienced safety researchers working under the same rules proposed methods that closed 20% of the gap to a perfect score, on average, on the benchmarks the methods were trained against. (Error bars are 95% confidence intervals.)</figcaption></figure>
+<p>In the future, when Claude becomes better at alignment research than even the best human researchers, we might want Claude to directly align its stronger successors. To assess this, we evaluated whether a weaker Claude model could mitigate alignment failures in more powerful ones.</p>
+<h2 id="can-claude-post-train-a-production-grade-model-for-better-alignment">Can Claude post-train a production-grade model for better alignment?</h2>
+<p>We tasked Claude Sonnet 5—which is weaker than Claude Opus 4.8 on the <a href="https://epoch.ai/eci">Epoch Capabilities Index</a>, a metric that considers comprehensive capability dimensions—with fixing alignment failures in an early Opus 4.8 checkpoint that had not yet gone through most of our production alignment training.</p>
+<p>In just 60 hours, Claude experimented with over 50 solutions and achieved alignment scores nearly matching those of our production models. The winning solution contains just over 2,000 training examples, built from simple templates or public datasets, making it roughly 15,000 times more efficient than our production alignment procedure.</p>
+<figure><img alt="Automated research closed 65% of a frontier-scale model's safety gap within 60 hours, below released Claude Opus 4.8 at 72%." height="810" src="https://www.anthropic.com/_next/image?url=https%3A%2F%2Fwww-cdn.anthropic.com%2Fimages%2F4zrzovbb%2Fwebsite%2Fa2d3b4bab4eeafe3e36fe124d3bbd7d5c9a17796-1440x810.png&amp;w=3840&amp;q=75" width="1440"/><figcaption><strong>Applying the automated alignment researcher to a production system.</strong> When Claude Sonnet 5 proposed mitigations for alignment failures in an early checkpoint of Claude Opus 4.8, it quickly discovered a method that closed most of the safety gap with the released version of Opus 4.8.</figcaption></figure>
+<h2 id="what-claude-proposed">What Claude proposed</h2>
+<p>For the most part, the agents converged on methods favored in the research literature and improved them over many iterations. On sycophancy, for example, 98% of proposed methods used one published technique: training the model on its own non-sycophantic answers. Specifically, compared to standard approaches based on prompting, Claude used activation steering, which adjusts the model's internal representations during generation, to nudge the model away from sycophantic patterns and produce cleaner training examples.</p>
+<h2 id="monitoring-cheating-behaviors">Monitoring cheating behaviors</h2>
+<p>We <a href="https://alignment.anthropic.com/2026/automated-w2s-researcher/">recently learned</a> that Claude can cheat by exfiltrating test labels from a remote API and cherry-picking results. To catch cheating behaviors, we prompted Claude Opus 4.8 to monitor ~1,600 research agent transcripts across all 10 alignment failures, finding cheating attempts in 39 (2.4%). Since Opus 4.8’s <a href="https://www-cdn.anthropic.com/0b4915911bb0d19eca5b5ee635c80fef830a37ea.pdf">misbehavior attempts still tend to appear in its reasoning</a>, we are cautiously optimistic that our monitor has caught most of the cheating in our study. However, this might not be true for future models, and we believe that maintaining high monitorability in future models is critical.</p>
+<h2 id="are-we-measuring-the-right-things">Are we measuring the right things?</h2>
+<p>Despite these encouraging findings, our experiment had several limitations: the alignment failures studied were narrow compared to those in production (e.g., we didn’t measure political biases), some failures may occur so rarely or emerge so recently that no benchmark exists to measure them, and we only rejected Claude’s methods when they degraded a limited set of predetermined capabilities, meaning accepted methods may have degraded other important capabilities that we didn’t measure. Moreover, evaluations like Petri are only proxies for real-world misalignment, and we did not test whether alignment gains persist after extensive RL training on other tasks.</p>
+<p>We plan to continue improving Claude’s ability to measure subtle failures, further study automating alignment post-training on production-grade models, and run more comprehensive analyses. Overall, we view these results as early positive signals that automated alignment post-training could become practical in the near term, and we will share updates as this work progresses.</p>
+<p>We outline detailed future directions in our <a href="https://www-cdn.anthropic.com/7b1c44894e980876479947dcdd40716278aeeffd/automated-alignment-researchers-august-2026.pdf">full report</a>.</p>
+<p><em>We open-source our automated alignment research harness so that others can build on it and use it to align their own models. For additional details, read the full report on the <a href="https://alignment.anthropic.com/2026/automated-alignment-researchers/">Alignment Science blog</a>, which covers the agents’ environment, results for all 10 failures, and the agents’ proposals, with benchmark validation and example write-ups in the appendix.</em></p>]]></content:encoded>
+      <guid isPermaLink="true">https://www.anthropic.com/research/automated-researchers-mitigate-alignment-failures</guid>
+      <category>Alignment</category>
+      <pubDate>Fri, 28 Aug 2026 00:00:00 +0000</pubDate>
+      <media:content url="https://www.anthropic.com/_next/image?url=https%3A%2F%2Fwww-cdn.anthropic.com%2Fimages%2F4zrzovbb%2Fwebsite%2Fc3991d9c8a23731e80bd96200f2f7c638d2b6e19-1440x870.png&amp;amp;w=3840&amp;amp;q=75" type="image/jpeg" medium="image"/>
+    </item>
     <item>
       <title>Anthropic Hiring Shortage for Long-Term Bets Discussed</title>
       <link>https://www.anthropic.com/engineering/AI-resistant-technical-evaluations</link>
@@ -698,183 +889,6 @@ url = {www.anthropic.com/research/enabling-independent-research},
       <category>Digg AI from X</category>
       <pubDate>Mon, 24 Aug 2026 11:13:22 +0000</pubDate>
       <media:content url="https://digg.com/tech/3wawarxp/opengraph-image" type="image/jpeg" medium="image"/>
-    </item>
-    <item>
-      <title>Horace He Calls Cached Token Counts Incredibly Dumb</title>
-      <link>https://www.youtube.com/watch?v=tECAkJAI_Vk</link>
-      <description>Researchers note that visible dashboard numbers lead users to include cached inputs when reporting token usage.</description>
-      <content:encoded><![CDATA[<p><img src="https://digg.com/tech/onfl2d4w/opengraph-image" alt="Horace He Calls Cached Token Counts Incredibly Dumb"/></p>
-<p>Researchers note that visible dashboard numbers lead users to include cached inputs when reporting token usage.</p>
-<p><strong>Original source:</strong> <a href="https://www.youtube.com/watch?v=tECAkJAI_Vk">https://www.youtube.com/watch?v=tECAkJAI_Vk</a></p>
-<p><strong>Digg story:</strong> <a href="https://digg.com/tech/onfl2d4w">https://digg.com/tech/onfl2d4w</a></p>
-<p>Horace He posted on X that people discussing LLM token usage usually include cached input tokens and called the practice incredibly dumb. Hieu Pham replied that users read the most visible dashboard number rather than seeking a breakdown. Lucas Beyer joked that a &quot;kv tokens&quot; metric multiplying by layer count would make the numbers even bigger. Horace He followed up suggesting counting every decode step load of cached tokens. The posts discuss reported LLM token counts that include cached inputs.</p>
-<ul><li><strong>Views:</strong> 35,946</li><li><strong>Likes:</strong> 512</li><li><strong>Bookmarks:</strong> 37</li><li><strong>Quotes:</strong> 4</li><li><strong>Replies:</strong> 35</li><li><strong>Posts:</strong> 4</li></ul>
-<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/giffmana">Lucas Beyer (bl16)</a></li><li><a href="https://x.com/cHHillee">Horace He</a></li><li><a href="https://x.com/hyhieu226">Hieu Pham</a></li></ul>]]></content:encoded>
-      <guid isPermaLink="true">https://www.youtube.com/watch?v=tECAkJAI_Vk</guid>
-      <category>Digg AI from X</category>
-      <pubDate>Mon, 24 Aug 2026 11:07:11 +0000</pubDate>
-      <media:content url="https://digg.com/tech/onfl2d4w/opengraph-image" type="image/jpeg" medium="image"/>
-    </item>
-    <item>
-      <title>Sander Dieleman Blog on Continuous Diffusion Language Models</title>
-      <link>https://sander.ai/2026/08/24/continuous-dlms.html?v=1</link>
-      <description>Google DeepMind researcher posts historical perspective on the approach's recent resurgence.</description>
-      <content:encoded><![CDATA[<p><img src="https://digg.com/tech/s6pfd84o/opengraph-image" alt="Sander Dieleman Blog on Continuous Diffusion Language Models"/></p>
-<p>Google DeepMind researcher posts historical perspective on the approach&#x27;s recent resurgence.</p>
-<p><strong>Original source:</strong> <a href="https://sander.ai/2026/08/24/continuous-dlms.html?v=1">https://sander.ai/2026/08/24/continuous-dlms.html?v=1</a></p>
-<p><strong>Digg story:</strong> <a href="https://digg.com/tech/s6pfd84o">https://digg.com/tech/s6pfd84o</a></p>
-<p>Sander Dieleman announced a new blog post on continuous diffusion for language models. The Research Engineer at Google DeepMind notes the direction receded for a while but returned as a hot topic this year. The post supplies historical perspective and thoughts on the revival. Linked sources state fully discrete methods dominated for a few years while continuous diffusion language models are making a comeback. The blog appears at the link shared in the post.</p>
-<ul><li><strong>Views:</strong> 31,579</li><li><strong>Likes:</strong> 513</li><li><strong>Bookmarks:</strong> 351</li><li><strong>Quotes:</strong> 9</li><li><strong>Replies:</strong> 11</li><li><strong>Posts:</strong> 2</li></ul>
-<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/sedielem">Sander Dieleman</a></li><li><a href="https://x.com/kastnerkyle">Kyle Kastner</a></li></ul>]]></content:encoded>
-      <guid isPermaLink="true">https://sander.ai/2026/08/24/continuous-dlms.html?v=1</guid>
-      <category>Digg AI from X</category>
-      <pubDate>Mon, 24 Aug 2026 10:04:13 +0000</pubDate>
-      <media:content url="https://digg.com/tech/s6pfd84o/opengraph-image" type="image/jpeg" medium="image"/>
-    </item>
-    <item>
-      <title>Users Question TSMC Role in Xiaomi XRING Chips</title>
-      <link>https://www.digitimes.com/news/a20260115VL209/xiaomi-xring-3nm-processor-tsmc.html</link>
-      <description>Replies question TSMC fabrication of Xiaomi XRING O100 and related chips.</description>
-      <content:encoded><![CDATA[<p><img src="https://digg.com/tech/7pyrtpmc/opengraph-image" alt="Users Question TSMC Role in Xiaomi XRING Chips"/></p>
-<p>Replies question TSMC fabrication of Xiaomi XRING O100 and related chips.</p>
-<p><strong>Original source:</strong> <a href="https://www.digitimes.com/news/a20260115VL209/xiaomi-xring-3nm-processor-tsmc.html">https://www.digitimes.com/news/a20260115VL209/xiaomi-xring-3nm-processor-tsmc.html</a></p>
-<p><strong>Digg story:</strong> <a href="https://digg.com/tech/7pyrtpmc">https://digg.com/tech/7pyrtpmc</a></p>
-<p>@zephyr_z9 asked whether the XRING O100 is TSMC fabbed after a generated headline described a 6nm AI accelerator using wafer-on-wafer NPU-DRAM bonding at 1.4µm pitch for 1.22 TB/s bandwidth and 330 tokens-per-second inference in a new Local AI Host device. @teortaxesTex raised the same question about the 3nm SoC and referenced Codex commentary on legality while noting a generated headline on XRING O100 and D100 chips that highlighted 6nm specs with 3D stacking plus a 3nm intelligent-driving chip and TSMC speculation.</p>
-<ul><li><strong>Views:</strong> 3,257</li><li><strong>Likes:</strong> 17</li><li><strong>Bookmarks:</strong> 1</li><li><strong>Replies:</strong> 1</li><li><strong>Posts:</strong> 2</li></ul>
-<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/teortaxesTex">Teortaxes▶️ (DeepSeek 推特🐋铁粉 2023 – ∞)</a></li><li><a href="https://x.com/zephyr_z9">Zephyr</a></li></ul>]]></content:encoded>
-      <guid isPermaLink="true">https://www.digitimes.com/news/a20260115VL209/xiaomi-xring-3nm-processor-tsmc.html</guid>
-      <category>Digg AI from X</category>
-      <pubDate>Mon, 24 Aug 2026 07:52:25 +0000</pubDate>
-      <media:content url="https://digg.com/tech/7pyrtpmc/opengraph-image" type="image/jpeg" medium="image"/>
-    </item>
-    <item>
-      <title>Mistral x HUMAIN</title>
-      <link>https://mistral.ai/news/mistral-x-humain</link>
-      <description>Over the past few weeks, we have announced several important steps to expand sovereign AI by increasing access to local infrastructure capacity. Earlier this summer, we announced an expanded partnership with Microsoft to increase compute capacity in Europe. In early August, we introduced European Compute Units , a structure designed to bring together long-term enterprise commitments so the capacity Europe needs gets built and can support its global competitiveness. Today, we are announcing a new strategic collaboration with HUMAIN to support sovereign AI in Saudi Arabia and across the Middle East. See more below.</description>
-      <content:encoded><![CDATA[<figure><img height="627" src="https://mistral.ai/_astro/Linkedin-Partnership-Humain_Z1Gyz6.webp?dpl=6a8c94cb03ea0c6dc53ae243" width="1200"/></figure>
-<p><em>Over the past few weeks, we have announced several important steps to expand sovereign AI by increasing access to local infrastructure capacity. Earlier this summer, we announced an </em><a href="https://www.youtube.com/watch?v=xr4VUV-7rN0"><em>expanded partnership with Microsoft</em></a><em> to increase compute capacity in Europe. In early August, we introduced </em><a href="https://mistral.ai/news/regional-inference-open-models-new-compute/"><em>European Compute Units</em></a><em>, a structure designed to bring together long-term enterprise commitments so the capacity Europe needs gets built and can support its global competitiveness. Today, we are announcing a new strategic collaboration with HUMAIN to support sovereign AI in Saudi Arabia and across the Middle East. See more below.</em></p>
-<h3>Mistral and HUMAIN Announce Strategic Collaboration to Advance Sovereign AI in Saudi Arabia and Regionally</h3>
-<p>Mistral and HUMAIN today announced a strategic collaboration spanning AI infrastructure, advanced model development, and the deployment of AI solutions in Saudi Arabia and across the region. Together, the companies will pursue the development and localization of advanced AI models, with initial areas of focus including cybersecurity and voice. The companies also plan to develop frontier models that perform strongly in Arabic language to help support the broader region. This represents a collaboration in the hundreds of millions of Euros. As part of the collaboration, Mistral will explore using HUMAIN’s data center infrastructure to support growing local compute needs. HUMAIN and Mistral also plan to develop a joint go-to-market strategy in Saudi Arabia focused on bringing advanced AI solutions to regulated industries.</p>
-<p>The collaboration is designed to meet growing demand for sovereign AI: AI that keeps data, intelligence, compute, and operations under the customer's control. That means data can remain within customer-defined boundaries, models can be adapted and owned on open weights, training and inference can run on infrastructure and in jurisdictions the customer chooses, and AI systems can be deployed, governed, observed, and improved over time without ceding control of the learning loop to an external platform. This is especially important in financial services, manufacturing, telecommunications, cybersecurity, and the public sector, where security, compliance, resilience, and operational autonomy are non-negotiable.</p>
-<p>This collaboration also reflects a broader shift in how AI is being adopted globally, through partnerships that combine local infrastructure, market knowledge, and sovereign AI capabilities. Mistral and HUMAIN believe that supporting AI innovation in the region requires both the compute capacity to meet demand over time and the open, customizable AI models that allow organizations to innovate on their own terms. This collaboration will support long-term AI innovation, performance, cost control, and operational sovereignty.</p>
-<h3>Forward-Looking Statement:</h3>
-<p>This announcement may contain forward-looking statements based on current expectations and assumptions. Actual results may differ materially due to various risks and uncertainties and subsequent commercial agreements. HUMAIN and MISTRAL undertake no obligation to update these statements.</p>]]></content:encoded>
-      <guid isPermaLink="true">https://mistral.ai/news/mistral-x-humain</guid>
-      <category>Company</category>
-      <pubDate>Mon, 24 Aug 2026 00:00:00 +0000</pubDate>
-      <media:content url="https://mistral.ai/_astro/Linkedin-Partnership-Humain_Z1Gyz6.webp?dpl=6a8c94cb03ea0c6dc53ae243" type="image/webp" medium="image"/>
-    </item>
-    <item>
-      <title>RL-Trained Coding Model Generates JavaScript Paintings</title>
-      <link>https://x.com/kickingkeys/status/2091570990048276897</link>
-      <description>AI researchers react to a reinforcement learning project for JavaScript code.</description>
-      <content:encoded><![CDATA[<p><img src="https://digg.com/tech/6btzztrd/opengraph-image" alt="RL-Trained Coding Model Generates JavaScript Paintings"/></p>
-<p>AI researchers react to a reinforcement learning project for JavaScript code.</p>
-<p><strong>Original source:</strong> <a href="https://x.com/kickingkeys/status/2091570990048276897">https://x.com/kickingkeys/status/2091570990048276897</a></p>
-<p><strong>Digg story:</strong> <a href="https://digg.com/tech/6btzztrd">https://digg.com/tech/6btzztrd</a></p>
-<p>@willcb posted that a model was trained on Prime Intellect Lab to generate JavaScript paintings and called the result nuts. @eliebakouch replied that the output is beautiful and that aesthetic taste can be trained through JavaScript code via reinforcement learning, sharing an image of the result. Both posts link to the same original tweet by @kickingkeys. The packet contains no first-party announcement confirming the training details or independent corroboration of the model&#x27;s performance.</p>
-<ul><li><strong>Views:</strong> 25,183</li><li><strong>Likes:</strong> 582</li><li><strong>Bookmarks:</strong> 244</li><li><strong>Quotes:</strong> 1</li><li><strong>Replies:</strong> 14</li><li><strong>Posts:</strong> 2</li></ul>
-<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/willcb">will brown</a></li><li><a href="https://x.com/eliebakouch">elie</a></li></ul>]]></content:encoded>
-      <guid isPermaLink="true">https://x.com/kickingkeys/status/2091570990048276897</guid>
-      <category>Digg AI from X</category>
-      <pubDate>Sun, 23 Aug 2026 22:29:54 +0000</pubDate>
-      <media:content url="https://digg.com/tech/6btzztrd/opengraph-image" type="image/jpeg" medium="image"/>
-    </item>
-    <item>
-      <title>a16z Reports Codex Adoption Growth by Sector</title>
-      <link>https://www.a16z.news/p/charts-of-the-week-winds-of-thematic</link>
-      <description>Venture firm notes fastest Codex growth outside traditional tech sectors.</description>
-      <content:encoded><![CDATA[<p><img src="https://digg.com/tech/2ysk4pfz/opengraph-image" alt="a16z Reports Codex Adoption Growth by Sector"/></p>
-<p>Venture firm notes fastest Codex growth outside traditional tech sectors.</p>
-<p><strong>Original source:</strong> <a href="https://www.a16z.news/p/charts-of-the-week-winds-of-thematic">https://www.a16z.news/p/charts-of-the-week-winds-of-thematic</a></p>
-<p><strong>Digg story:</strong> <a href="https://digg.com/tech/2ysk4pfz">https://digg.com/tech/2ysk4pfz</a></p>
-<p>Andreessen Horowitz posted that AI power users are appearing outside tech. The firm stated Codex adopters grew fastest since February in legal, sales, recruiting, marketing, and healthcare. A partner at the firm replied that the wordcels shall inherit the earth. The post links to an a16z.news article titled Charts of the Week: Winds of Thematic Change, which covers data centers, ridesharing costs, and agents.</p>
-<ul><li><strong>Views:</strong> 66,775</li><li><strong>Likes:</strong> 828</li><li><strong>Bookmarks:</strong> 389</li><li><strong>Quotes:</strong> 36</li><li><strong>Replies:</strong> 45</li><li><strong>Posts:</strong> 2</li></ul>
-<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/a16z">a16z</a></li><li><a href="https://x.com/pronounced_kyle">Christian Keil</a></li></ul>]]></content:encoded>
-      <guid isPermaLink="true">https://www.a16z.news/p/charts-of-the-week-winds-of-thematic</guid>
-      <category>Digg AI from X</category>
-      <pubDate>Sun, 23 Aug 2026 20:27:07 +0000</pubDate>
-      <media:content url="https://digg.com/tech/2ysk4pfz/opengraph-image" type="image/jpeg" medium="image"/>
-    </item>
-    <item>
-      <title>Researchers Explain Why Robotics Lags AI Advances</title>
-      <link>https://x.com/sarahookr/status/2091604930759205286</link>
-      <description>AI researcher Sara Hooker and professor Yue Wang discuss systemic barriers slowing robotics compared to software progress.</description>
-      <content:encoded><![CDATA[<p><img src="https://digg.com/tech/fp6uapd3/opengraph-image" alt="Researchers Explain Why Robotics Lags AI Advances"/></p>
-<p>AI researcher Sara Hooker and professor Yue Wang discuss systemic barriers slowing robotics compared to software progress.</p>
-<p><strong>Original source:</strong> <a href="https://x.com/sarahookr/status/2091604930759205286">https://x.com/sarahookr/status/2091604930759205286</a></p>
-<p><strong>Digg story:</strong> <a href="https://digg.com/tech/fp6uapd3">https://digg.com/tech/fp6uapd3</a></p>
-<p>AI researcher Sara Hooker posted that her husband asked why AI advances at lightspeed while robotics feels slower. She attributed the gap to transformers tapping humanity&#x27;s stored text knowledge and instantly verifiable code rewards, both absent for physical robots where interactions go undocumented and tasks lack clear intermediate rewards. Yue Wang replied that robotics is a system problem with no societal infrastructure and no accumulated stored knowledge. Hooker agreed. A reply from Leshem Choshen compared the debate to earlier skepticism about NLP versus vision. The discussion played out in replies on X.</p>
-<ul><li><strong>Views:</strong> 15,177</li><li><strong>Likes:</strong> 169</li><li><strong>Bookmarks:</strong> 76</li><li><strong>Quotes:</strong> 2</li><li><strong>Replies:</strong> 33</li><li><strong>Posts:</strong> 5</li></ul>
-<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/sarahookr">Sara Hooker</a></li><li><a href="https://x.com/yacineMTB">kache</a></li><li><a href="https://x.com/LChoshen">Leshem (Legend) Choshen 🤖🤗 @ACL @ICML</a></li><li><a href="https://x.com/yuewang314">Yue Wang</a></li></ul>]]></content:encoded>
-      <guid isPermaLink="true">https://x.com/sarahookr/status/2091604930759205286</guid>
-      <category>Digg AI from X</category>
-      <pubDate>Sun, 23 Aug 2026 19:14:10 +0000</pubDate>
-      <media:content url="https://digg.com/tech/fp6uapd3/opengraph-image" type="image/jpeg" medium="image"/>
-    </item>
-    <item>
-      <title>Hugging Face Explores Potential $13 Billion Sale</title>
-      <link>https://bit.ly/4qAZlWT</link>
-      <description>Business Insider reports the AI platform has drawn acquisition interest.</description>
-      <content:encoded><![CDATA[<p><img src="https://digg.com/tech/5v6igjhw/opengraph-image" alt="Hugging Face Explores Potential $13 Billion Sale"/></p>
-<p>Business Insider reports the AI platform has drawn acquisition interest.</p>
-<p><strong>Original source:</strong> <a href="https://bit.ly/4qAZlWT">https://bit.ly/4qAZlWT</a></p>
-<p><strong>Digg story:</strong> <a href="https://digg.com/tech/5v6igjhw">https://digg.com/tech/5v6igjhw</a></p>
-<p>Business Insider posted that Hugging Face, an AI developer platform, has been exploring a potential $13 billion sale. Andrew Curran posted that the company has been working with a bank to explore a sale that could value Hugging Face at more than $13 billion, linking a Katie Roof tweet. Replies on X split between praise for the platform as a center of open-source AI and concerns that a corporate sale could suppress open-source principles.</p>
-<ul><li><strong>Views:</strong> 182,503</li><li><strong>Likes:</strong> 492</li><li><strong>Bookmarks:</strong> 72</li><li><strong>Quotes:</strong> 34</li><li><strong>Replies:</strong> 43</li><li><strong>Posts:</strong> 5</li></ul>
-<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/Scobleizer">Robert Scoble</a></li><li><a href="https://x.com/AndrewCurran_">Andrew Curran</a></li><li><a href="https://x.com/xeophon">Florian Brand</a></li></ul>]]></content:encoded>
-      <guid isPermaLink="true">https://bit.ly/4qAZlWT</guid>
-      <category>Digg AI from X</category>
-      <pubDate>Sun, 23 Aug 2026 19:04:10 +0000</pubDate>
-      <media:content url="https://digg.com/tech/5v6igjhw/opengraph-image" type="image/jpeg" medium="image"/>
-    </item>
-    <item>
-      <title>Orosz Warns AI Startup Stored Emails After Disconnect</title>
-      <link>https://x.com/clairevo/status/2090929592853037078</link>
-      <description>Gergely Orosz posted about an AI assistant startup storing user emails after disconnection.</description>
-      <content:encoded><![CDATA[<p><img src="https://digg.com/tech/gbxg3z09/opengraph-image" alt="Orosz Warns AI Startup Stored Emails After Disconnect"/></p>
-<p>Gergely Orosz posted about an AI assistant startup storing user emails after disconnection.</p>
-<p><strong>Original source:</strong> <a href="https://x.com/clairevo/status/2090929592853037078">https://x.com/clairevo/status/2090929592853037078</a></p>
-<p><strong>Digg story:</strong> <a href="https://digg.com/tech/gbxg3z09">https://digg.com/tech/gbxg3z09</a></p>
-<p>Gergely Orosz reminded readers of risks with AI agent startups and their access to sensitive data. He wrote that Inspect silently copied and stored emails on its servers even after users disconnected the integration, and that deletion was not possible at the time. Teknium replied asking if Orosz meant Instinct. A source summary in the packet describes an AI email assistant startup called Instinct that reportedly copied and stored Gmail data on its servers after disconnection, with one user receiving a post-disconnect email summary.</p>
-<ul><li><strong>Views:</strong> 80,174</li><li><strong>Likes:</strong> 323</li><li><strong>Bookmarks:</strong> 102</li><li><strong>Quotes:</strong> 5</li><li><strong>Replies:</strong> 31</li><li><strong>Posts:</strong> 3</li></ul>
-<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/Teknium">Teknium 🪽</a></li><li><a href="https://x.com/GergelyOrosz">Gergely Orosz</a></li><li><a href="https://x.com/NousResearch">Nous Research</a></li></ul>]]></content:encoded>
-      <guid isPermaLink="true">https://x.com/clairevo/status/2090929592853037078</guid>
-      <category>Digg AI from X</category>
-      <pubDate>Sun, 23 Aug 2026 15:41:47 +0000</pubDate>
-      <media:content url="https://digg.com/tech/gbxg3z09/opengraph-image" type="image/jpeg" medium="image"/>
-    </item>
-    <item>
-      <title>Sam Altman Comments on AI Messaging and OpenAI Positioning</title>
-      <link>https://x.com/davidsenra/status/2091525869638434945</link>
-      <description>OpenAI CEO addresses industry messaging on risks and outlines platform strategy.</description>
-      <content:encoded><![CDATA[<p><img src="https://digg.com/tech/z76ozgfn/opengraph-image" alt="Sam Altman Comments on AI Messaging and OpenAI Positioning"/></p>
-<p>OpenAI CEO addresses industry messaging on risks and outlines platform strategy.</p>
-<p><strong>Original source:</strong> <a href="https://x.com/davidsenra/status/2091525869638434945">https://x.com/davidsenra/status/2091525869638434945</a></p>
-<p><strong>Digg story:</strong> <a href="https://digg.com/tech/z76ozgfn">https://digg.com/tech/z76ozgfn</a></p>
-<p>Sam Altman said in a podcast interview that AI builders have not done a very good job with messaging on risks. Separate posts quote him stating OpenAI aims to serve as a platform for other companies rather than the application layer. Altman described wanting a single interface to a user&#x27;s personal or company AGI with APIs on top, while still building some products itself. The comments come from an interview shared on X. Replies on X criticized the risk messaging as evasive and held Altman personally accountable for public distrust, while some welcomed the platform focus for enabling builders.</p>
-<ul><li><strong>Views:</strong> 105,590</li><li><strong>Likes:</strong> 814</li><li><strong>Bookmarks:</strong> 215</li><li><strong>Quotes:</strong> 32</li><li><strong>Replies:</strong> 124</li><li><strong>Posts:</strong> 5</li></ul>
-<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/AndrewCurran_">Andrew Curran</a></li><li><a href="https://x.com/rohanpaul_ai">Rohan Paul</a></li><li><a href="https://x.com/sjgadler">Steven Adler</a></li></ul>]]></content:encoded>
-      <guid isPermaLink="true">https://x.com/davidsenra/status/2091525869638434945</guid>
-      <category>Digg AI from X</category>
-      <pubDate>Sun, 23 Aug 2026 15:20:02 +0000</pubDate>
-      <media:content url="https://digg.com/tech/z76ozgfn/opengraph-image" type="image/jpeg" medium="image"/>
-    </item>
-    <item>
-      <title>Paul Graham Recommends Building LLMs From Scratch at 17</title>
-      <link>https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f</link>
-      <description>A researcher replies that hands-on building beats textbook study of models.</description>
-      <content:encoded><![CDATA[<p><img src="https://digg.com/tech/fo6uhx7e/opengraph-image" alt="Paul Graham Recommends Building LLMs From Scratch at 17"/></p>
-<p>A researcher replies that hands-on building beats textbook study of models.</p>
-<p><strong>Original source:</strong> <a href="https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f">https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f</a></p>
-<p><strong>Digg story:</strong> <a href="https://digg.com/tech/fo6uhx7e">https://digg.com/tech/fo6uhx7e</a></p>
-<p>Paul Graham posted that if he were 17 today he would learn to build large language models from scratch and then train them using whatever hardware he could obtain. Researcher Pasquale Minervini replied that the approach feels like dissecting animals rather than reading a biology textbook. The posts show Graham responding to a question about his path at that age and Minervini offering the direct analogy in reply. Graham is identified as the co-founder of Y Combinator. Minervini is identified as a lecturer in NLP and ML at the University of Edinburgh. The exchange addresses methods for gaining skills in constructing and training such models.</p>
-<ul><li><strong>Views:</strong> 512,620</li><li><strong>Likes:</strong> 10,341</li><li><strong>Bookmarks:</strong> 4,740</li><li><strong>Quotes:</strong> 117</li><li><strong>Replies:</strong> 421</li><li><strong>Posts:</strong> 3</li></ul>
-<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/ylecun">Yann LeCun</a></li><li><a href="https://x.com/paulg">Paul Graham</a></li><li><a href="https://x.com/PMinervini">Pasquale Minervini</a></li></ul>]]></content:encoded>
-      <guid isPermaLink="true">https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f</guid>
-      <category>Digg AI from X</category>
-      <pubDate>Sun, 23 Aug 2026 15:13:25 +0000</pubDate>
-      <media:content url="https://digg.com/tech/fo6uhx7e/opengraph-image" type="image/jpeg" medium="image"/>
     </item>
   </channel>
 </rss>

@@ -8,7 +8,167 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 27 Aug 2026 18:25:57 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 28 Aug 2026 19:26:17 +0000</lastBuildDate>
+    <item>
+      <title>Grok Bot Gains Ability to Complete Online Purchases</title>
+      <link>https://stripe.com/blog/giving-agents-the-ability-to-pay</link>
+      <description>Grok Bot now handles purchases after users connect accounts and approve each transaction via Stripe.</description>
+      <content:encoded><![CDATA[<p><img src="https://digg.com/tech/2psh49kb/opengraph-image" alt="Grok Bot Gains Ability to Complete Online Purchases"/></p>
+<p>Grok Bot now handles purchases after users connect accounts and approve each transaction via Stripe.</p>
+<p><strong>Original source:</strong> <a href="https://stripe.com/blog/giving-agents-the-ability-to-pay">https://stripe.com/blog/giving-agents-the-ability-to-pay</a></p>
+<p><strong>Digg story:</strong> <a href="https://digg.com/tech/2psh49kb">https://digg.com/tech/2psh49kb</a></p>
+<p>Grok Bot posted on X that the AI can now buy items online. Users connect accounts, send the bot shopping, and approve every spend request. The bot then receives a secure single-use card for each payment. The feature is available to users in the US and rolling out to mobile soon. Roshan Sadanani quoted the announcement and noted working with the Stripe team on the integration. Jeff Weinstein retweeted the update.</p>
+<ul><li><strong>Views:</strong> 366,984</li><li><strong>Likes:</strong> 3,788</li><li><strong>Bookmarks:</strong> 906</li><li><strong>Quotes:</strong> 240</li><li><strong>Replies:</strong> 275</li><li><strong>Posts:</strong> 5</li></ul>
+<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/jeff_weinstein">Jeff Weinstein</a></li><li><a href="https://x.com/leerob">Lee Robinson</a></li></ul>]]></content:encoded>
+      <guid isPermaLink="true">https://stripe.com/blog/giving-agents-the-ability-to-pay</guid>
+      <category>Digg AI from X</category>
+      <pubDate>Fri, 28 Aug 2026 19:26:17 +0000</pubDate>
+      <media:content url="https://digg.com/tech/2psh49kb/opengraph-image" type="image/jpeg" medium="image"/>
+    </item>
+    <item>
+      <title>Chamath Palihapitiya Says AI Long-Horizon Tasks Still Fail</title>
+      <link>https://www.youtube.com/watch?v=HBMmK0NsUK0</link>
+      <description>Quote from a Stanford AI Club talk draws agreement from Gary Marcus on AI limits.</description>
+      <content:encoded><![CDATA[<p><img src="https://digg.com/tech/52lmg3vp/opengraph-image" alt="Chamath Palihapitiya Says AI Long-Horizon Tasks Still Fail"/></p>
+<p>Quote from a Stanford AI Club talk draws agreement from Gary Marcus on AI limits.</p>
+<p><strong>Original source:</strong> <a href="https://www.youtube.com/watch?v=HBMmK0NsUK0">https://www.youtube.com/watch?v=HBMmK0NsUK0</a></p>
+<p><strong>Digg story:</strong> <a href="https://digg.com/tech/52lmg3vp">https://digg.com/tech/52lmg3vp</a></p>
+<p>Rohan Paul posted a quote from Chamath Palihapitiya speaking at the Stanford AI Club. Chamath stated that long-horizon tasks remain a joke and current AI does not handle them. He added that complex problems also do not work and warned of a hype cycle that will lead to contraction and a trough of disillusionment. Gary Marcus replied that Chamath was right and linked to an earlier post of his own making the same point.</p>
+<ul><li><strong>Views:</strong> 34,648</li><li><strong>Likes:</strong> 184</li><li><strong>Bookmarks:</strong> 88</li><li><strong>Quotes:</strong> 3</li><li><strong>Replies:</strong> 19</li><li><strong>Posts:</strong> 3</li></ul>
+<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/GaryMarcus">Gary Marcus</a></li><li><a href="https://x.com/rohanpaul_ai">Rohan Paul</a></li></ul>]]></content:encoded>
+      <guid isPermaLink="true">https://www.youtube.com/watch?v=HBMmK0NsUK0</guid>
+      <category>Digg AI from X</category>
+      <pubDate>Fri, 28 Aug 2026 18:57:24 +0000</pubDate>
+      <media:content url="https://digg.com/tech/52lmg3vp/opengraph-image" type="image/jpeg" medium="image"/>
+    </item>
+    <item>
+      <title>OpenAI Introduces Rosalind Workbench for Biologists</title>
+      <link>https://developers.openai.com/blog/rosalind-workbench</link>
+      <description>OpenAI researcher Joy Jiao unveils the tool while early testers report strong results on research papers.</description>
+      <content:encoded><![CDATA[<p><img src="https://digg.com/tech/zksc4lok/opengraph-image" alt="OpenAI Introduces Rosalind Workbench for Biologists"/></p>
+<p>OpenAI researcher Joy Jiao unveils the tool while early testers report strong results on research papers.</p>
+<p><strong>Original source:</strong> <a href="https://developers.openai.com/blog/rosalind-workbench">https://developers.openai.com/blog/rosalind-workbench</a></p>
+<p><strong>Digg story:</strong> <a href="https://digg.com/tech/zksc4lok">https://digg.com/tech/zksc4lok</a></p>
+<p>Joy Jiao, Life Sciences Research Lead at OpenAI, posted that she is introducing Rosalind Workbench for biologists built directly into Codex. Derya Unutmaz, a professor of immunology, stated she has been early-testing the Rosalind model and found it fantastic for biomedical research. She said it helped her completely revise a paper on cancer immunotherapy and greatly improved the data analysis in the manuscript. She added that the model performed better than GPT-5.6 Pro. Andrew Mayne, a former OpenAI engineer, retweeted her post.</p>
+<ul><li><strong>Views:</strong> 10,843</li><li><strong>Likes:</strong> 145</li><li><strong>Bookmarks:</strong> 40</li><li><strong>Quotes:</strong> 1</li><li><strong>Replies:</strong> 14</li><li><strong>Posts:</strong> 3</li></ul>
+<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/csvoss">Chelsea Sierra Voss</a></li><li><a href="https://x.com/AndrewMayne">Andrew Mayne</a></li></ul>]]></content:encoded>
+      <guid isPermaLink="true">https://developers.openai.com/blog/rosalind-workbench</guid>
+      <category>Digg AI from X</category>
+      <pubDate>Fri, 28 Aug 2026 17:59:56 +0000</pubDate>
+      <media:content url="https://digg.com/tech/zksc4lok/opengraph-image" type="image/jpeg" medium="image"/>
+    </item>
+    <item>
+      <title>Grok Bot Enables Template Sharing</title>
+      <link>https://x.ai/bot/FU-Ev6_Ju4lFGWwWRD0GD</link>
+      <description>Grok Bot account states users can share custom bot templates with others.</description>
+      <content:encoded><![CDATA[<p><img src="https://digg.com/tech/fahr6os6/opengraph-image" alt="Grok Bot Enables Template Sharing"/></p>
+<p>Grok Bot account states users can share custom bot templates with others.</p>
+<p><strong>Original source:</strong> <a href="https://x.ai/bot/FU-Ev6_Ju4lFGWwWRD0GD">https://x.ai/bot/FU-Ev6_Ju4lFGWwWRD0GD</a></p>
+<p><strong>Digg story:</strong> <a href="https://digg.com/tech/fahr6os6">https://digg.com/tech/fahr6os6</a></p>
+<p>The Grok Bot account announced that users can now share templates of their custom Bots with others. A video posted by the account appears to show a chat window and a Share as Template button in settings, with options to publish bots publicly such as Sales Outbound. Eric Zakariasson posted an example of a Projects Manager bot at x.ai that creates specialist agents including coder, designer, researcher, and writer, treating Notion as the source of truth for project rows and task boards according to his post. Replies on X include users calling the feature smart.</p>
+<ul><li><strong>Views:</strong> 1,965,531</li><li><strong>Likes:</strong> 2,996</li><li><strong>Bookmarks:</strong> 1,010</li><li><strong>Quotes:</strong> 236</li><li><strong>Replies:</strong> 225</li><li><strong>Posts:</strong> 3</li></ul>
+<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/altryne">Alex Volkov</a></li><li><a href="https://x.com/ericzakariasson">eric zakariasson</a></li><li><a href="https://x.com/leerob">Lee Robinson</a></li></ul>]]></content:encoded>
+      <guid isPermaLink="true">https://x.ai/bot/FU-Ev6_Ju4lFGWwWRD0GD</guid>
+      <category>Digg AI from X</category>
+      <pubDate>Fri, 28 Aug 2026 16:33:51 +0000</pubDate>
+      <media:content url="https://digg.com/tech/fahr6os6/opengraph-image" type="image/jpeg" medium="image"/>
+    </item>
+    <item>
+      <title>Perplexity AI Powers Decagon Customer Support Agents</title>
+      <link>https://x.com/DecagonAI/status/2093367462461124622</link>
+      <description>Perplexity AI founders announce integration of search into Decagon customer agents for major brands.</description>
+      <content:encoded><![CDATA[<p><img src="https://digg.com/tech/9so5ziih/opengraph-image" alt="Perplexity AI Powers Decagon Customer Support Agents"/></p>
+<p>Perplexity AI founders announce integration of search into Decagon customer agents for major brands.</p>
+<p><strong>Original source:</strong> <a href="https://x.com/DecagonAI/status/2093367462461124622">https://x.com/DecagonAI/status/2093367462461124622</a></p>
+<p><strong>Digg story:</strong> <a href="https://digg.com/tech/9so5ziih">https://digg.com/tech/9so5ziih</a></p>
+<p>Perplexity AI co-founder Denis Yarats posted that Decagon agents now run on the company&#x27;s state-of-the-art search technology. Co-founder Aravind Srinivas added that Decagon handles support for Delta Airlines, Ticketmaster, Deutsche Telekom and American Airlines and that Perplexity supplies the search for queries needing current online information. Both posts link to the same Decagon announcement on X. The statements establish the claimed integration but provide no independent confirmation of deployment, performance, or contract details.</p>
+<ul><li><strong>Views:</strong> 16,014</li><li><strong>Likes:</strong> 149</li><li><strong>Bookmarks:</strong> 12</li><li><strong>Replies:</strong> 13</li><li><strong>Posts:</strong> 2</li></ul>
+<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/AravSrinivas">Aravind Srinivas</a></li><li><a href="https://x.com/denisyarats">Denis Yarats</a></li></ul>]]></content:encoded>
+      <guid isPermaLink="true">https://x.com/DecagonAI/status/2093367462461124622</guid>
+      <category>Digg AI from X</category>
+      <pubDate>Fri, 28 Aug 2026 16:29:52 +0000</pubDate>
+      <media:content url="https://digg.com/tech/9so5ziih/opengraph-image" type="image/jpeg" medium="image"/>
+    </item>
+    <item>
+      <title>Owner Raises $240M At $2.3B Valuation</title>
+      <link>https://Owner.com</link>
+      <description>Venture investors celebrate Owner's reported funding milestone and growth.</description>
+      <content:encoded><![CDATA[<p><img src="https://digg.com/tech/p4x2utmb/opengraph-image" alt="Owner Raises $240M At $2.3B Valuation"/></p>
+<p>Venture investors celebrate Owner&#x27;s reported funding milestone and growth.</p>
+<p><strong>Original source:</strong> <a href="https://Owner.com">https://Owner.com</a></p>
+<p><strong>Digg story:</strong> <a href="https://digg.com/tech/p4x2utmb">https://digg.com/tech/p4x2utmb</a></p>
+<p>Jack Altman called Owner his first board seat after leading its A round and praised founder Adam Guild&#x27;s execution. Joshua Browder said his firm invested early and congratulated the team on the milestone. Both posted links to Adam Guild&#x27;s announcement. Generated headlines tied to the posts state a $240M round at $2.3B valuation and $100M ARR. Owner.com builds online ordering and marketing tools used by restaurants.</p>
+<ul><li><strong>Views:</strong> 63,072</li><li><strong>Likes:</strong> 408</li><li><strong>Bookmarks:</strong> 101</li><li><strong>Quotes:</strong> 1</li><li><strong>Replies:</strong> 19</li><li><strong>Posts:</strong> 2</li></ul>
+<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/jaltma">Jack Altman</a></li><li><a href="https://x.com/Joshuabrowder">Joshua Browder</a></li></ul>]]></content:encoded>
+      <guid isPermaLink="true">https://Owner.com</guid>
+      <category>Digg AI from X</category>
+      <pubDate>Fri, 28 Aug 2026 16:29:17 +0000</pubDate>
+      <media:content url="https://digg.com/tech/p4x2utmb/opengraph-image" type="image/jpeg" medium="image"/>
+    </item>
+    <item>
+      <title>Lila Sciences AI Designs CAR-T Therapy in Months</title>
+      <link>https://www.lila.ai/news/inside-lilas-rna-discovery-engine</link>
+      <description>Company says three scientists created a superior version using their platform.</description>
+      <content:encoded><![CDATA[<p><img src="https://digg.com/tech/ltfj3d4j/opengraph-image" alt="Lila Sciences AI Designs CAR-T Therapy in Months"/></p>
+<p>Company says three scientists created a superior version using their platform.</p>
+<p><strong>Original source:</strong> <a href="https://www.lila.ai/news/inside-lilas-rna-discovery-engine">https://www.lila.ai/news/inside-lilas-rna-discovery-engine</a></p>
+<p><strong>Digg story:</strong> <a href="https://digg.com/tech/ltfj3d4j">https://digg.com/tech/ltfj3d4j</a></p>
+<p>Lila Sciences posted that its AI platform let three scientists design a new CAR-T cancer therapy in months. The company stated the therapy outperformed a leading treatment used in patients today during preclinical tests. CAR-T therapies normally require years to develop. Employee Jinghan Ong noted the AI learned from prior data to shorten the process. Tech commentator Robert Scoble shared the announcement online.</p>
+<ul><li><strong>Views:</strong> 17,371</li><li><strong>Likes:</strong> 159</li><li><strong>Bookmarks:</strong> 34</li><li><strong>Quotes:</strong> 11</li><li><strong>Replies:</strong> 17</li><li><strong>Posts:</strong> 3</li></ul>
+<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/Scobleizer">Robert Scoble</a></li><li><a href="https://x.com/tw_killian">Taylor W. Killian</a></li></ul>]]></content:encoded>
+      <guid isPermaLink="true">https://www.lila.ai/news/inside-lilas-rna-discovery-engine</guid>
+      <category>Digg AI from X</category>
+      <pubDate>Fri, 28 Aug 2026 16:22:10 +0000</pubDate>
+      <media:content url="https://digg.com/tech/ltfj3d4j/opengraph-image" type="image/jpeg" medium="image"/>
+    </item>
+    <item>
+      <title>OpenRouter Discounts Trigger 13.8x Token Usage Surge</title>
+      <link>https://openrouter.ai/openai/gpt-5.6-sol?ref=aibalkan.ai</link>
+      <description>Discounts on GPT-5.6 Terra and Luna models produced a sharp rise in token consumption.</description>
+      <content:encoded><![CDATA[<p><img src="https://digg.com/tech/4dneyzz9/opengraph-image" alt="OpenRouter Discounts Trigger 13.8x Token Usage Surge"/></p>
+<p>Discounts on GPT-5.6 Terra and Luna models produced a sharp rise in token consumption.</p>
+<p><strong>Original source:</strong> <a href="https://openrouter.ai/openai/gpt-5.6-sol?ref=aibalkan.ai">https://openrouter.ai/openai/gpt-5.6-sol?ref=aibalkan.ai</a></p>
+<p><strong>Digg story:</strong> <a href="https://digg.com/tech/4dneyzz9">https://digg.com/tech/4dneyzz9</a></p>
+<p>OpenRouter posted that discounting GPT-5.6 Terra and Luna models caused token consumption to jump 13.8 times. Pseudonymous user scaling01 highlighted the new $5 per million token price for GPT-5.6-Sol on the flex API and said more benchmarks would follow. Greg Brockman replied that Jevons Paradox is counterintuitive and inspiring. The packet contains no further confirmation of the exact multiplier or duration of the surge.</p>
+<ul><li><strong>Views:</strong> 96,048</li><li><strong>Likes:</strong> 928</li><li><strong>Bookmarks:</strong> 166</li><li><strong>Quotes:</strong> 8</li><li><strong>Replies:</strong> 74</li><li><strong>Posts:</strong> 2</li></ul>
+<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/gdb">Greg Brockman</a></li><li><a href="https://x.com/scaling01">Lisan al Gaib</a></li></ul>]]></content:encoded>
+      <guid isPermaLink="true">https://openrouter.ai/openai/gpt-5.6-sol?ref=aibalkan.ai</guid>
+      <category>Digg AI from X</category>
+      <pubDate>Fri, 28 Aug 2026 14:54:48 +0000</pubDate>
+      <media:content url="https://digg.com/tech/4dneyzz9/opengraph-image" type="image/jpeg" medium="image"/>
+    </item>
+    <item>
+      <title>ChatGPT Adds Multiple Gmail and Calendar Account Support</title>
+      <link>https://help.openai.com/en/articles/11487775-connectors-in-chatgpt</link>
+      <description>Posts note ChatGPT and Codex now link several Gmail and Calendar accounts.</description>
+      <content:encoded><![CDATA[<p><img src="https://digg.com/tech/es8l2osd/opengraph-image" alt="ChatGPT Adds Multiple Gmail and Calendar Account Support"/></p>
+<p>Posts note ChatGPT and Codex now link several Gmail and Calendar accounts.</p>
+<p><strong>Original source:</strong> <a href="https://help.openai.com/en/articles/11487775-connectors-in-chatgpt">https://help.openai.com/en/articles/11487775-connectors-in-chatgpt</a></p>
+<p><strong>Digg story:</strong> <a href="https://digg.com/tech/es8l2osd">https://digg.com/tech/es8l2osd</a></p>
+<p>Users on X reacted to a post by @gabrielchua announcing expanded account connections. Research engineer Tibo Sottiaux asked what the record will be for most connected accounts. Creator Alex Volkov welcomed the change and asked if it should be called the bot effect. Generated summaries in the posts state that OpenAI rolled out support for multiple Gmail and Google Calendar accounts in ChatGPT and Codex to meet frequent user requests.</p>
+<ul><li><strong>Views:</strong> 125,366</li><li><strong>Likes:</strong> 833</li><li><strong>Bookmarks:</strong> 57</li><li><strong>Quotes:</strong> 3</li><li><strong>Replies:</strong> 96</li><li><strong>Posts:</strong> 2</li></ul>
+<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/thsottiaux">Tibo</a></li><li><a href="https://x.com/altryne">Alex Volkov</a></li></ul>]]></content:encoded>
+      <guid isPermaLink="true">https://help.openai.com/en/articles/11487775-connectors-in-chatgpt</guid>
+      <category>Digg AI from X</category>
+      <pubDate>Fri, 28 Aug 2026 14:52:38 +0000</pubDate>
+      <media:content url="https://digg.com/tech/es8l2osd/opengraph-image" type="image/jpeg" medium="image"/>
+    </item>
+    <item>
+      <title>a16z Commits $1.1B to Machine Age Fund</title>
+      <link>https://spr.ly/6010B10mvu</link>
+      <description>Venture firm targets AI hardware, robotics, energy systems, and data center infrastructure.</description>
+      <content:encoded><![CDATA[<p><img src="https://digg.com/tech/stg4b4vs/opengraph-image" alt="a16z Commits $1.1B to Machine Age Fund"/></p>
+<p>Venture firm targets AI hardware, robotics, energy systems, and data center infrastructure.</p>
+<p><strong>Original source:</strong> <a href="https://spr.ly/6010B10mvu">https://spr.ly/6010B10mvu</a></p>
+<p><strong>Digg story:</strong> <a href="https://digg.com/tech/stg4b4vs">https://digg.com/tech/stg4b4vs</a></p>
+<p>Andreessen Horowitz announced a $1.1 billion fund for the machine age. The firm will invest in AI hardware, robotics, energy systems, and semiconductors. Partners described the effort as rebuilding physical infrastructure, including data centers, racks, cooling, and power. One post called it the largest infrastructure opportunity in computing history. Others urged building machines and physical products. The announcement came via the firm&#x27;s official account and was amplified by its investors.</p>
+<ul><li><strong>Views:</strong> 402,922</li><li><strong>Likes:</strong> 2,446</li><li><strong>Bookmarks:</strong> 784</li><li><strong>Quotes:</strong> 101</li><li><strong>Replies:</strong> 181</li><li><strong>Posts:</strong> 8</li></ul>
+<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/martin_casado">martin_casado</a></li><li><a href="https://x.com/eriktorenberg">Erik Torenberg</a></li><li><a href="https://x.com/a16z">a16z</a></li><li><a href="https://x.com/joshelman">Josh Elman</a></li><li><a href="https://x.com/dhaber">David Haber</a></li></ul>]]></content:encoded>
+      <guid isPermaLink="true">https://spr.ly/6010B10mvu</guid>
+      <category>Digg AI from X</category>
+      <pubDate>Fri, 28 Aug 2026 13:11:57 +0000</pubDate>
+      <media:content url="https://digg.com/tech/stg4b4vs/opengraph-image" type="image/jpeg" medium="image"/>
+    </item>
     <item>
       <title>Anthropic Hiring Shortage for Long-Term Bets Discussed</title>
       <link>https://www.anthropic.com/engineering/AI-resistant-technical-evaluations</link>
@@ -648,166 +808,6 @@
       <category>Digg AI from X</category>
       <pubDate>Sun, 23 Aug 2026 19:14:10 +0000</pubDate>
       <media:content url="https://digg.com/tech/fp6uapd3/opengraph-image" type="image/jpeg" medium="image"/>
-    </item>
-    <item>
-      <title>Hugging Face Explores Potential $13 Billion Sale</title>
-      <link>https://bit.ly/4qAZlWT</link>
-      <description>Business Insider reports the AI platform has drawn acquisition interest.</description>
-      <content:encoded><![CDATA[<p><img src="https://digg.com/tech/5v6igjhw/opengraph-image" alt="Hugging Face Explores Potential $13 Billion Sale"/></p>
-<p>Business Insider reports the AI platform has drawn acquisition interest.</p>
-<p><strong>Original source:</strong> <a href="https://bit.ly/4qAZlWT">https://bit.ly/4qAZlWT</a></p>
-<p><strong>Digg story:</strong> <a href="https://digg.com/tech/5v6igjhw">https://digg.com/tech/5v6igjhw</a></p>
-<p>Business Insider posted that Hugging Face, an AI developer platform, has been exploring a potential $13 billion sale. Andrew Curran posted that the company has been working with a bank to explore a sale that could value Hugging Face at more than $13 billion, linking a Katie Roof tweet. Replies on X split between praise for the platform as a center of open-source AI and concerns that a corporate sale could suppress open-source principles.</p>
-<ul><li><strong>Views:</strong> 182,503</li><li><strong>Likes:</strong> 492</li><li><strong>Bookmarks:</strong> 72</li><li><strong>Quotes:</strong> 34</li><li><strong>Replies:</strong> 43</li><li><strong>Posts:</strong> 5</li></ul>
-<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/Scobleizer">Robert Scoble</a></li><li><a href="https://x.com/AndrewCurran_">Andrew Curran</a></li><li><a href="https://x.com/xeophon">Florian Brand</a></li></ul>]]></content:encoded>
-      <guid isPermaLink="true">https://bit.ly/4qAZlWT</guid>
-      <category>Digg AI from X</category>
-      <pubDate>Sun, 23 Aug 2026 19:04:10 +0000</pubDate>
-      <media:content url="https://digg.com/tech/5v6igjhw/opengraph-image" type="image/jpeg" medium="image"/>
-    </item>
-    <item>
-      <title>Orosz Warns AI Startup Stored Emails After Disconnect</title>
-      <link>https://x.com/clairevo/status/2090929592853037078</link>
-      <description>Gergely Orosz posted about an AI assistant startup storing user emails after disconnection.</description>
-      <content:encoded><![CDATA[<p><img src="https://digg.com/tech/gbxg3z09/opengraph-image" alt="Orosz Warns AI Startup Stored Emails After Disconnect"/></p>
-<p>Gergely Orosz posted about an AI assistant startup storing user emails after disconnection.</p>
-<p><strong>Original source:</strong> <a href="https://x.com/clairevo/status/2090929592853037078">https://x.com/clairevo/status/2090929592853037078</a></p>
-<p><strong>Digg story:</strong> <a href="https://digg.com/tech/gbxg3z09">https://digg.com/tech/gbxg3z09</a></p>
-<p>Gergely Orosz reminded readers of risks with AI agent startups and their access to sensitive data. He wrote that Inspect silently copied and stored emails on its servers even after users disconnected the integration, and that deletion was not possible at the time. Teknium replied asking if Orosz meant Instinct. A source summary in the packet describes an AI email assistant startup called Instinct that reportedly copied and stored Gmail data on its servers after disconnection, with one user receiving a post-disconnect email summary.</p>
-<ul><li><strong>Views:</strong> 80,174</li><li><strong>Likes:</strong> 323</li><li><strong>Bookmarks:</strong> 102</li><li><strong>Quotes:</strong> 5</li><li><strong>Replies:</strong> 31</li><li><strong>Posts:</strong> 3</li></ul>
-<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/Teknium">Teknium 🪽</a></li><li><a href="https://x.com/GergelyOrosz">Gergely Orosz</a></li><li><a href="https://x.com/NousResearch">Nous Research</a></li></ul>]]></content:encoded>
-      <guid isPermaLink="true">https://x.com/clairevo/status/2090929592853037078</guid>
-      <category>Digg AI from X</category>
-      <pubDate>Sun, 23 Aug 2026 15:41:47 +0000</pubDate>
-      <media:content url="https://digg.com/tech/gbxg3z09/opengraph-image" type="image/jpeg" medium="image"/>
-    </item>
-    <item>
-      <title>Sam Altman Comments on AI Messaging and OpenAI Positioning</title>
-      <link>https://x.com/davidsenra/status/2091525869638434945</link>
-      <description>OpenAI CEO addresses industry messaging on risks and outlines platform strategy.</description>
-      <content:encoded><![CDATA[<p><img src="https://digg.com/tech/z76ozgfn/opengraph-image" alt="Sam Altman Comments on AI Messaging and OpenAI Positioning"/></p>
-<p>OpenAI CEO addresses industry messaging on risks and outlines platform strategy.</p>
-<p><strong>Original source:</strong> <a href="https://x.com/davidsenra/status/2091525869638434945">https://x.com/davidsenra/status/2091525869638434945</a></p>
-<p><strong>Digg story:</strong> <a href="https://digg.com/tech/z76ozgfn">https://digg.com/tech/z76ozgfn</a></p>
-<p>Sam Altman said in a podcast interview that AI builders have not done a very good job with messaging on risks. Separate posts quote him stating OpenAI aims to serve as a platform for other companies rather than the application layer. Altman described wanting a single interface to a user&#x27;s personal or company AGI with APIs on top, while still building some products itself. The comments come from an interview shared on X. Replies on X criticized the risk messaging as evasive and held Altman personally accountable for public distrust, while some welcomed the platform focus for enabling builders.</p>
-<ul><li><strong>Views:</strong> 105,590</li><li><strong>Likes:</strong> 814</li><li><strong>Bookmarks:</strong> 215</li><li><strong>Quotes:</strong> 32</li><li><strong>Replies:</strong> 124</li><li><strong>Posts:</strong> 5</li></ul>
-<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/AndrewCurran_">Andrew Curran</a></li><li><a href="https://x.com/rohanpaul_ai">Rohan Paul</a></li><li><a href="https://x.com/sjgadler">Steven Adler</a></li></ul>]]></content:encoded>
-      <guid isPermaLink="true">https://x.com/davidsenra/status/2091525869638434945</guid>
-      <category>Digg AI from X</category>
-      <pubDate>Sun, 23 Aug 2026 15:20:02 +0000</pubDate>
-      <media:content url="https://digg.com/tech/z76ozgfn/opengraph-image" type="image/jpeg" medium="image"/>
-    </item>
-    <item>
-      <title>Paul Graham Recommends Building LLMs From Scratch at 17</title>
-      <link>https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f</link>
-      <description>A researcher replies that hands-on building beats textbook study of models.</description>
-      <content:encoded><![CDATA[<p><img src="https://digg.com/tech/fo6uhx7e/opengraph-image" alt="Paul Graham Recommends Building LLMs From Scratch at 17"/></p>
-<p>A researcher replies that hands-on building beats textbook study of models.</p>
-<p><strong>Original source:</strong> <a href="https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f">https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f</a></p>
-<p><strong>Digg story:</strong> <a href="https://digg.com/tech/fo6uhx7e">https://digg.com/tech/fo6uhx7e</a></p>
-<p>Paul Graham posted that if he were 17 today he would learn to build large language models from scratch and then train them using whatever hardware he could obtain. Researcher Pasquale Minervini replied that the approach feels like dissecting animals rather than reading a biology textbook. The posts show Graham responding to a question about his path at that age and Minervini offering the direct analogy in reply. Graham is identified as the co-founder of Y Combinator. Minervini is identified as a lecturer in NLP and ML at the University of Edinburgh. The exchange addresses methods for gaining skills in constructing and training such models.</p>
-<ul><li><strong>Views:</strong> 512,620</li><li><strong>Likes:</strong> 10,341</li><li><strong>Bookmarks:</strong> 4,740</li><li><strong>Quotes:</strong> 117</li><li><strong>Replies:</strong> 421</li><li><strong>Posts:</strong> 3</li></ul>
-<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/ylecun">Yann LeCun</a></li><li><a href="https://x.com/paulg">Paul Graham</a></li><li><a href="https://x.com/PMinervini">Pasquale Minervini</a></li></ul>]]></content:encoded>
-      <guid isPermaLink="true">https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f</guid>
-      <category>Digg AI from X</category>
-      <pubDate>Sun, 23 Aug 2026 15:13:25 +0000</pubDate>
-      <media:content url="https://digg.com/tech/fo6uhx7e/opengraph-image" type="image/jpeg" medium="image"/>
-    </item>
-    <item>
-      <title>LinkedIn Users Edit Profiles to Add AI and Remove DEI</title>
-      <link>https://www.nber.org/papers/w35546</link>
-      <description>Executives point to revisions in past LinkedIn job entries that insert AI while dropping DEI references.</description>
-      <content:encoded><![CDATA[<p><img src="https://digg.com/tech/rhz13mau/opengraph-image" alt="LinkedIn Users Edit Profiles to Add AI and Remove DEI"/></p>
-<p>Executives point to revisions in past LinkedIn job entries that insert AI while dropping DEI references.</p>
-<p><strong>Original source:</strong> <a href="https://www.nber.org/papers/w35546">https://www.nber.org/papers/w35546</a></p>
-<p><strong>Digg story:</strong> <a href="https://digg.com/tech/rhz13mau">https://digg.com/tech/rhz13mau</a></p>
-<p>Nicholas Thompson noted that professionals are revising earlier LinkedIn job descriptions to add AI while removing DEI and remote work mentions. Paul Graham shared a chart showing a rise in retrospective edits that insert AI-related terms after 2024. Both point to an NBER paper titled Time Travel on Professional Profiles as the underlying source. The tweets present the pattern as observed behavior on the platform without additional confirmation from the paper itself.</p>
-<ul><li><strong>Views:</strong> 588,158</li><li><strong>Likes:</strong> 5,381</li><li><strong>Bookmarks:</strong> 673</li><li><strong>Quotes:</strong> 94</li><li><strong>Replies:</strong> 287</li><li><strong>Posts:</strong> 3</li></ul>
-<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/paulg">Paul Graham</a></li><li><a href="https://x.com/krishnanrohit">rohit</a></li><li><a href="https://x.com/nxthompson">nxthompson</a></li></ul>]]></content:encoded>
-      <guid isPermaLink="true">https://www.nber.org/papers/w35546</guid>
-      <category>Digg AI from X</category>
-      <pubDate>Sun, 23 Aug 2026 14:53:40 +0000</pubDate>
-      <media:content url="https://digg.com/tech/rhz13mau/opengraph-image" type="image/jpeg" medium="image"/>
-    </item>
-    <item>
-      <title>Altman Attributes Slow AI Progress to Economic Inertia</title>
-      <link>https://techcrunch.com/2026/07/28/sam-altman-is-ready-to-decelerate</link>
-      <description>Posts quote Altman on why economic adaptation lags his earlier predictions.</description>
-      <content:encoded><![CDATA[<p><img src="https://digg.com/tech/xful7i1n/opengraph-image" alt="Altman Attributes Slow AI Progress to Economic Inertia"/></p>
-<p>Posts quote Altman on why economic adaptation lags his earlier predictions.</p>
-<p><strong>Original source:</strong> <a href="https://techcrunch.com/2026/07/28/sam-altman-is-ready-to-decelerate">https://techcrunch.com/2026/07/28/sam-altman-is-ready-to-decelerate</a></p>
-<p><strong>Digg story:</strong> <a href="https://digg.com/tech/xful7i1n">https://digg.com/tech/xful7i1n</a></p>
-<p>X posts quote OpenAI CEO Sam Altman conceding he underestimated adaptation delays. He states the economy carries substantial inertia. Yann LeCun replies that real-world systems include friction terms beyond singularitarian assumptions. Katie Miller, Rohit Krishnan, Taylor Lorenz, and Brian Roemmele circulate the quote or criticize Altman and similar voices for prior overconfidence on timelines. Replies on X largely dismiss the admission as spin.</p>
-<ul><li><strong>Views:</strong> 415,109</li><li><strong>Likes:</strong> 3,252</li><li><strong>Bookmarks:</strong> 519</li><li><strong>Quotes:</strong> 21</li><li><strong>Replies:</strong> 215</li><li><strong>Posts:</strong> 7</li></ul>
-<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/ylecun">Yann LeCun</a></li><li><a href="https://x.com/GaryMarcus">Gary Marcus</a></li><li><a href="https://x.com/krishnanrohit">rohit</a></li><li><a href="https://x.com/zephyr_z9">Zephyr</a></li><li><a href="https://x.com/TaylorLorenz">Taylor Lorenz</a></li></ul>]]></content:encoded>
-      <guid isPermaLink="true">https://techcrunch.com/2026/07/28/sam-altman-is-ready-to-decelerate</guid>
-      <category>Digg AI from X</category>
-      <pubDate>Sun, 23 Aug 2026 13:35:08 +0000</pubDate>
-      <media:content url="https://digg.com/tech/xful7i1n/opengraph-image" type="image/jpeg" medium="image"/>
-    </item>
-    <item>
-      <title>Anthropic's Fable 5 Takes 11% of Ramp Corporate Spend</title>
-      <link>https://ft.trib.al/42pfSjK</link>
-      <description>Posts cite FT on Fable 5 losing share to cheaper open-source models.</description>
-      <content:encoded><![CDATA[<p><img src="https://digg.com/tech/dd7t6lya/opengraph-image" alt="Anthropic&#x27;s Fable 5 Takes 11% of Ramp Corporate Spend"/></p>
-<p>Posts cite FT on Fable 5 losing share to cheaper open-source models.</p>
-<p><strong>Original source:</strong> <a href="https://ft.trib.al/42pfSjK">https://ft.trib.al/42pfSjK</a></p>
-<p><strong>Digg story:</strong> <a href="https://digg.com/tech/dd7t6lya">https://digg.com/tech/dd7t6lya</a></p>
-<p>Kimmonismus posted that Anthropic&#x27;s most powerful model Fable 5 accounts for just 11% of its corporate AI spending on Ramp according to the FT. The post states the model is too expensive while cheaper open-source alternatives already handle most tasks. Gary Marcus quoted the same figures and added that the company still expects a $2T valuation. The packet records these as statements from the two creators in public posts, with generated headlines summarizing the reported spending split and market pressure from lower-cost tools.</p>
-<ul><li><strong>Views:</strong> 235,779</li><li><strong>Likes:</strong> 2,267</li><li><strong>Bookmarks:</strong> 386</li><li><strong>Quotes:</strong> 43</li><li><strong>Replies:</strong> 279</li><li><strong>Posts:</strong> 6</li></ul>
-<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/GaryMarcus">Gary Marcus</a></li><li><a href="https://x.com/rohanpaul_ai">Rohan Paul</a></li><li><a href="https://x.com/kimmonismus">Chubby♨️</a></li><li><a href="https://x.com/BrianRoemmele">Brian Roemmele</a></li></ul>]]></content:encoded>
-      <guid isPermaLink="true">https://ft.trib.al/42pfSjK</guid>
-      <category>Digg AI from X</category>
-      <pubDate>Sun, 23 Aug 2026 09:51:03 +0000</pubDate>
-      <media:content url="https://digg.com/tech/dd7t6lya/opengraph-image" type="image/jpeg" medium="image"/>
-    </item>
-    <item>
-      <title>Karpathy Denies Leaving Anthropic After Bio Speculation</title>
-      <link>https://x.com/LLMJunky/status/2081114803834376218</link>
-      <description>Online speculation followed a perceived change in his X profile bio.</description>
-      <content:encoded><![CDATA[<p><img src="https://cnl5taoq5on9lswk.public.blob.vercel-storage.com/cluster-share-cards/90a5cf2c-b5ae-4ec8-baa4-23d4000fae09/1785043288028.png" alt="Karpathy Denies Leaving Anthropic After Bio Speculation"/></p>
-<p>Online speculation followed a perceived change in his X profile bio.</p>
-<p><strong>Original source:</strong> <a href="https://x.com/LLMJunky/status/2081114803834376218">https://x.com/LLMJunky/status/2081114803834376218</a></p>
-<p><strong>Digg story:</strong> <a href="https://digg.com/tech/kfwzpbak">https://digg.com/tech/kfwzpbak</a></p>
-<p>Users on X questioned whether Andrej Karpathy had removed his Anthropic affiliation from his profile bio, with screenshots and comments circulating widely. Some posts claimed the line was gone while others confirmed it remained as MTS @ Anthropic. Karpathy replied directly to the rumors, stating he is not leaving the company and labeling the claims as weird misinformation. The episode highlighted rapid online reactions to minor profile edits among prominent AI figures.</p>
-<ul><li><strong>Views:</strong> 747,599</li><li><strong>Likes:</strong> 6,043</li><li><strong>Bookmarks:</strong> 414</li><li><strong>Quotes:</strong> 52</li><li><strong>Replies:</strong> 314</li><li><strong>Posts:</strong> 25</li></ul>
-<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/Thom_Wolf">Thomas Wolf</a></li><li><a href="https://x.com/GaryMarcus">Gary Marcus</a></li><li><a href="https://x.com/yacineMTB">kache</a></li><li><a href="https://x.com/teortaxesTex">Teortaxes▶️ (DeepSeek 推特🐋铁粉 2023 – ∞)</a></li><li><a href="https://x.com/thsottiaux">Tibo</a></li></ul>]]></content:encoded>
-      <guid isPermaLink="true">https://x.com/LLMJunky/status/2081114803834376218</guid>
-      <category>Digg AI from X</category>
-      <pubDate>Sat, 25 Jul 2026 21:18:23 +0000</pubDate>
-      <media:content url="https://cnl5taoq5on9lswk.public.blob.vercel-storage.com/cluster-share-cards/90a5cf2c-b5ae-4ec8-baa4-23d4000fae09/1785043288028.png" type="image/png" medium="image"/>
-    </item>
-    <item>
-      <title>OpenAI Researcher Backs Global AI Capabilities Slowdown</title>
-      <link>https://x.com/tszzl/status/2081122092096065771</link>
-      <description>Roon signals hypothetical support for coordinating a global pause on AI capabilities.</description>
-      <content:encoded><![CDATA[<p><img src="https://cnl5taoq5on9lswk.public.blob.vercel-storage.com/cluster-share-cards/e8aa9296-9082-4e61-b9e8-740a3981f9f4/1785043935204.png" alt="OpenAI Researcher Backs Global AI Capabilities Slowdown"/></p>
-<p>Roon signals hypothetical support for coordinating a global pause on AI capabilities.</p>
-<p><strong>Original source:</strong> <a href="https://x.com/tszzl/status/2081122092096065771">https://x.com/tszzl/status/2081122092096065771</a></p>
-<p><strong>Digg story:</strong> <a href="https://digg.com/tech/y5g5698u">https://digg.com/tech/y5g5698u</a></p>
-<p>Roon, a pseudonymous OpenAI technical staff member, posted that he would likely press a button for a coordinated global slowdown on AI capabilities development. The statement prompted replies from other researchers including Nick Cammarata, who noted most people close to the research frontier say the same and called it a coordination problem best solved by governments. Geoffrey Irving countered that partial slowdown measures already exist and should not be dismissed as magic. Matthew Barnett stated he would not support such a pause, while Beff Jezos argued no such button can exist without massively increasing risks. The exchange reflects ongoing internal debates about feasibility and enforcement.</p>
-<ul><li><strong>Views:</strong> 343,824</li><li><strong>Likes:</strong> 3,707</li><li><strong>Bookmarks:</strong> 379</li><li><strong>Quotes:</strong> 125</li><li><strong>Replies:</strong> 362</li><li><strong>Posts:</strong> 14</li></ul>
-<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/tszzl">roon</a></li><li><a href="https://x.com/geoffreyirving">Geoffrey Irving</a></li><li><a href="https://x.com/nickcammarata">Nick</a></li><li><a href="https://x.com/beffjezos">Beff (e/acc)</a></li><li><a href="https://x.com/sebkrier">Séb Krier</a></li></ul>]]></content:encoded>
-      <guid isPermaLink="true">https://x.com/tszzl/status/2081122092096065771</guid>
-      <category>Digg AI from X</category>
-      <pubDate>Sat, 25 Jul 2026 20:59:06 +0000</pubDate>
-      <media:content url="https://cnl5taoq5on9lswk.public.blob.vercel-storage.com/cluster-share-cards/e8aa9296-9082-4e61-b9e8-740a3981f9f4/1785043935204.png" type="image/png" medium="image"/>
-    </item>
-    <item>
-      <title>Sam Altman Says Humanity Has Entered The Singularity</title>
-      <link>https://x.com/elonmusk/status/2079839398959697982</link>
-      <description>Co-founder shares views on startups, exponentials, and operating amid rapid change.</description>
-      <content:encoded><![CDATA[<p><img src="https://cnl5taoq5on9lswk.public.blob.vercel-storage.com/cluster-share-cards/6b549ddd-6d74-4297-b41f-1e8f90635340/1785043923548.png" alt="Sam Altman Says Humanity Has Entered The Singularity"/></p>
-<p>Co-founder shares views on startups, exponentials, and operating amid rapid change.</p>
-<p><strong>Original source:</strong> <a href="https://x.com/elonmusk/status/2079839398959697982">https://x.com/elonmusk/status/2079839398959697982</a></p>
-<p><strong>Digg story:</strong> <a href="https://digg.com/tech/7w7x9gj6">https://digg.com/tech/7w7x9gj6</a></p>
-<p>An interview with OpenAI co-founder Sam Altman covers lessons on starting a startup, trusting exponential trends, and operating in chaotic conditions. Altman describes the present period as the singularity, shifting it from a distant prospect to the current reality. Retweets and commentary highlight these remarks as marking a new era for technology and national interests, with focus on American Dynamism investments. The statements come directly from the discussion and have prompted generated summaries framing them as confirmation that the singularity has arrived.</p>
-<ul><li><strong>Views:</strong> 1,130,872</li><li><strong>Likes:</strong> 7,596</li><li><strong>Bookmarks:</strong> 5,690</li><li><strong>Quotes:</strong> 196</li><li><strong>Replies:</strong> 407</li><li><strong>Posts:</strong> 6</li></ul>
-<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/AndrewCurran_">Andrew Curran</a></li><li><a href="https://x.com/kimmonismus">Chubby♨️</a></li><li><a href="https://x.com/pronounced_kyle">Christian Keil</a></li><li><a href="https://x.com/km">Kanyi Maqubela</a></li></ul>]]></content:encoded>
-      <guid isPermaLink="true">https://x.com/elonmusk/status/2079839398959697982</guid>
-      <category>Digg AI from X</category>
-      <pubDate>Sat, 25 Jul 2026 18:17:21 +0000</pubDate>
-      <media:content url="https://cnl5taoq5on9lswk.public.blob.vercel-storage.com/cluster-share-cards/6b549ddd-6d74-4297-b41f-1e8f90635340/1785043923548.png" type="image/png" medium="image"/>
     </item>
   </channel>
 </rss>
