@@ -8,7 +8,39 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 28 Aug 2026 19:26:17 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 29 Aug 2026 02:01:45 +0000</lastBuildDate>
+    <item>
+      <title>OpenAI Ends Cursor Access After SpaceX Acquisition</title>
+      <link>https://openai.com/index/our-decision-on-cursor-following-its-acquisition-by-spacex/</link>
+      <description>Cursor's founder confirms OpenAI will end direct model access after the acquisition.</description>
+      <content:encoded><![CDATA[<p><img src="https://digg.com/tech/cpbd83av/opengraph-image" alt="OpenAI Ends Cursor Access After SpaceX Acquisition"/></p>
+<p>Cursor&#x27;s founder confirms OpenAI will end direct model access after the acquisition.</p>
+<p><strong>Original source:</strong> <a href="https://openai.com/index/our-decision-on-cursor-following-its-acquisition-by-spacex/">https://openai.com/index/our-decision-on-cursor-following-its-acquisition-by-spacex/</a></p>
+<p><strong>Digg story:</strong> <a href="https://digg.com/tech/cpbd83av">https://digg.com/tech/cpbd83av</a></p>
+<p>OpenAI announced it will terminate Cursor&#x27;s direct access to its models following the coding tool&#x27;s acquisition by SpaceX. The change takes effect in three months. Cursor co-founder and CEO Michael Truell stated that OpenAI models currently handle about 5 percent of user traffic and said the company is speaking with OpenAI to resolve the issue. Cursor was an early user of OpenAI models. Observers including Miles Brundage and Matthew Berman linked the decision to concerns over SpaceX and Elon Musk. Amjad Masad of Replit offered free OpenAI model access on its platform as an alternative.</p>
+<ul><li><strong>Views:</strong> 496,820</li><li><strong>Likes:</strong> 6,738</li><li><strong>Bookmarks:</strong> 552</li><li><strong>Quotes:</strong> 228</li><li><strong>Replies:</strong> 593</li><li><strong>Posts:</strong> 11</li></ul>
+<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/Miles_Brundage">Miles Brundage</a></li><li><a href="https://x.com/amasad">Amjad Masad</a></li><li><a href="https://x.com/mntruell">Michael Truell</a></li><li><a href="https://x.com/Yuchenj_UW">Yuchen Jin</a></li><li><a href="https://x.com/infoxiao">Xiao Ma</a></li></ul>]]></content:encoded>
+      <guid isPermaLink="true">https://openai.com/index/our-decision-on-cursor-following-its-acquisition-by-spacex/</guid>
+      <category>Digg AI from X</category>
+      <pubDate>Sat, 29 Aug 2026 02:01:45 +0000</pubDate>
+      <media:content url="https://digg.com/tech/cpbd83av/opengraph-image" type="image/jpeg" medium="image"/>
+    </item>
+    <item>
+      <title>OpenAI Researcher Explains Selective Math Result Announcements</title>
+      <link>https://openai.com/index/ten-advances-in-mathematics/</link>
+      <description>Noam Brown says OpenAI announces internal model math results only when they shift views on AI progress.</description>
+      <content:encoded><![CDATA[<p><img src="https://digg.com/tech/gilz6cyc/opengraph-image" alt="OpenAI Researcher Explains Selective Math Result Announcements"/></p>
+<p>Noam Brown says OpenAI announces internal model math results only when they shift views on AI progress.</p>
+<p><strong>Original source:</strong> <a href="https://openai.com/index/ten-advances-in-mathematics/">https://openai.com/index/ten-advances-in-mathematics/</a></p>
+<p><strong>Digg story:</strong> <a href="https://digg.com/tech/gilz6cyc">https://digg.com/tech/gilz6cyc</a></p>
+<p>Noam Brown, an OpenAI research engineer, posted on X that the company devotes resources to announcing math results from internal models like Astra only when the findings would meaningfully change people’s understanding of AI progress. He added that the main focus remains shipping great models so the public can use them. The post follows an earlier announcement that an internal Astra version solved ten open problems in mathematics and theoretical computer science. It drew replies on X and was retweeted by fellow researcher Mo Bavarian.</p>
+<ul><li><strong>Views:</strong> 119,138</li><li><strong>Likes:</strong> 1,106</li><li><strong>Bookmarks:</strong> 190</li><li><strong>Quotes:</strong> 9</li><li><strong>Replies:</strong> 53</li><li><strong>Posts:</strong> 2</li></ul>
+<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/polynoamial">Noam Brown</a></li><li><a href="https://x.com/mobav0">Mo Bavarian</a></li></ul>]]></content:encoded>
+      <guid isPermaLink="true">https://openai.com/index/ten-advances-in-mathematics/</guid>
+      <category>Digg AI from X</category>
+      <pubDate>Fri, 28 Aug 2026 21:30:40 +0000</pubDate>
+      <media:content url="https://digg.com/tech/gilz6cyc/opengraph-image" type="image/jpeg" medium="image"/>
+    </item>
     <item>
       <title>Grok Bot Gains Ability to Complete Online Purchases</title>
       <link>https://stripe.com/blog/giving-agents-the-ability-to-pay</link>
@@ -18,7 +50,7 @@
 <p><strong>Original source:</strong> <a href="https://stripe.com/blog/giving-agents-the-ability-to-pay">https://stripe.com/blog/giving-agents-the-ability-to-pay</a></p>
 <p><strong>Digg story:</strong> <a href="https://digg.com/tech/2psh49kb">https://digg.com/tech/2psh49kb</a></p>
 <p>Grok Bot posted on X that the AI can now buy items online. Users connect accounts, send the bot shopping, and approve every spend request. The bot then receives a secure single-use card for each payment. The feature is available to users in the US and rolling out to mobile soon. Roshan Sadanani quoted the announcement and noted working with the Stripe team on the integration. Jeff Weinstein retweeted the update.</p>
-<ul><li><strong>Views:</strong> 366,984</li><li><strong>Likes:</strong> 3,788</li><li><strong>Bookmarks:</strong> 906</li><li><strong>Quotes:</strong> 240</li><li><strong>Replies:</strong> 275</li><li><strong>Posts:</strong> 5</li></ul>
+<ul><li><strong>Views:</strong> 1,433,063</li><li><strong>Likes:</strong> 7,591</li><li><strong>Bookmarks:</strong> 1,912</li><li><strong>Quotes:</strong> 452</li><li><strong>Replies:</strong> 530</li><li><strong>Posts:</strong> 5</li></ul>
 <p><strong>Top authors</strong></p><ul><li><a href="https://x.com/jeff_weinstein">Jeff Weinstein</a></li><li><a href="https://x.com/leerob">Lee Robinson</a></li></ul>]]></content:encoded>
       <guid isPermaLink="true">https://stripe.com/blog/giving-agents-the-ability-to-pay</guid>
       <category>Digg AI from X</category>
@@ -27,16 +59,16 @@
     </item>
     <item>
       <title>Chamath Palihapitiya Says AI Long-Horizon Tasks Still Fail</title>
-      <link>https://www.youtube.com/watch?v=HBMmK0NsUK0</link>
+      <link>https://garymarcus.substack.com/p/misplaced-panic-over-ai-progress</link>
       <description>Quote from a Stanford AI Club talk draws agreement from Gary Marcus on AI limits.</description>
       <content:encoded><![CDATA[<p><img src="https://digg.com/tech/52lmg3vp/opengraph-image" alt="Chamath Palihapitiya Says AI Long-Horizon Tasks Still Fail"/></p>
 <p>Quote from a Stanford AI Club talk draws agreement from Gary Marcus on AI limits.</p>
-<p><strong>Original source:</strong> <a href="https://www.youtube.com/watch?v=HBMmK0NsUK0">https://www.youtube.com/watch?v=HBMmK0NsUK0</a></p>
+<p><strong>Original source:</strong> <a href="https://garymarcus.substack.com/p/misplaced-panic-over-ai-progress">https://garymarcus.substack.com/p/misplaced-panic-over-ai-progress</a></p>
 <p><strong>Digg story:</strong> <a href="https://digg.com/tech/52lmg3vp">https://digg.com/tech/52lmg3vp</a></p>
 <p>Rohan Paul posted a quote from Chamath Palihapitiya speaking at the Stanford AI Club. Chamath stated that long-horizon tasks remain a joke and current AI does not handle them. He added that complex problems also do not work and warned of a hype cycle that will lead to contraction and a trough of disillusionment. Gary Marcus replied that Chamath was right and linked to an earlier post of his own making the same point.</p>
-<ul><li><strong>Views:</strong> 34,648</li><li><strong>Likes:</strong> 184</li><li><strong>Bookmarks:</strong> 88</li><li><strong>Quotes:</strong> 3</li><li><strong>Replies:</strong> 19</li><li><strong>Posts:</strong> 3</li></ul>
+<ul><li><strong>Views:</strong> 110,916</li><li><strong>Likes:</strong> 469</li><li><strong>Bookmarks:</strong> 290</li><li><strong>Quotes:</strong> 7</li><li><strong>Replies:</strong> 43</li><li><strong>Posts:</strong> 3</li></ul>
 <p><strong>Top authors</strong></p><ul><li><a href="https://x.com/GaryMarcus">Gary Marcus</a></li><li><a href="https://x.com/rohanpaul_ai">Rohan Paul</a></li></ul>]]></content:encoded>
-      <guid isPermaLink="true">https://www.youtube.com/watch?v=HBMmK0NsUK0</guid>
+      <guid isPermaLink="true">https://garymarcus.substack.com/p/misplaced-panic-over-ai-progress</guid>
       <category>Digg AI from X</category>
       <pubDate>Fri, 28 Aug 2026 18:57:24 +0000</pubDate>
       <media:content url="https://digg.com/tech/52lmg3vp/opengraph-image" type="image/jpeg" medium="image"/>
@@ -66,7 +98,7 @@
 <p><strong>Original source:</strong> <a href="https://x.ai/bot/FU-Ev6_Ju4lFGWwWRD0GD">https://x.ai/bot/FU-Ev6_Ju4lFGWwWRD0GD</a></p>
 <p><strong>Digg story:</strong> <a href="https://digg.com/tech/fahr6os6">https://digg.com/tech/fahr6os6</a></p>
 <p>The Grok Bot account announced that users can now share templates of their custom Bots with others. A video posted by the account appears to show a chat window and a Share as Template button in settings, with options to publish bots publicly such as Sales Outbound. Eric Zakariasson posted an example of a Projects Manager bot at x.ai that creates specialist agents including coder, designer, researcher, and writer, treating Notion as the source of truth for project rows and task boards according to his post. Replies on X include users calling the feature smart.</p>
-<ul><li><strong>Views:</strong> 1,965,531</li><li><strong>Likes:</strong> 2,996</li><li><strong>Bookmarks:</strong> 1,010</li><li><strong>Quotes:</strong> 236</li><li><strong>Replies:</strong> 225</li><li><strong>Posts:</strong> 3</li></ul>
+<ul><li><strong>Views:</strong> 5,292,718</li><li><strong>Likes:</strong> 3,902</li><li><strong>Bookmarks:</strong> 1,464</li><li><strong>Quotes:</strong> 303</li><li><strong>Replies:</strong> 291</li><li><strong>Posts:</strong> 3</li></ul>
 <p><strong>Top authors</strong></p><ul><li><a href="https://x.com/altryne">Alex Volkov</a></li><li><a href="https://x.com/ericzakariasson">eric zakariasson</a></li><li><a href="https://x.com/leerob">Lee Robinson</a></li></ul>]]></content:encoded>
       <guid isPermaLink="true">https://x.ai/bot/FU-Ev6_Ju4lFGWwWRD0GD</guid>
       <category>Digg AI from X</category>
@@ -114,7 +146,7 @@
 <p><strong>Original source:</strong> <a href="https://www.lila.ai/news/inside-lilas-rna-discovery-engine">https://www.lila.ai/news/inside-lilas-rna-discovery-engine</a></p>
 <p><strong>Digg story:</strong> <a href="https://digg.com/tech/ltfj3d4j">https://digg.com/tech/ltfj3d4j</a></p>
 <p>Lila Sciences posted that its AI platform let three scientists design a new CAR-T cancer therapy in months. The company stated the therapy outperformed a leading treatment used in patients today during preclinical tests. CAR-T therapies normally require years to develop. Employee Jinghan Ong noted the AI learned from prior data to shorten the process. Tech commentator Robert Scoble shared the announcement online.</p>
-<ul><li><strong>Views:</strong> 17,371</li><li><strong>Likes:</strong> 159</li><li><strong>Bookmarks:</strong> 34</li><li><strong>Quotes:</strong> 11</li><li><strong>Replies:</strong> 17</li><li><strong>Posts:</strong> 3</li></ul>
+<ul><li><strong>Views:</strong> 70,626</li><li><strong>Likes:</strong> 764</li><li><strong>Bookmarks:</strong> 168</li><li><strong>Quotes:</strong> 20</li><li><strong>Replies:</strong> 44</li><li><strong>Posts:</strong> 3</li></ul>
 <p><strong>Top authors</strong></p><ul><li><a href="https://x.com/Scobleizer">Robert Scoble</a></li><li><a href="https://x.com/tw_killian">Taylor W. Killian</a></li></ul>]]></content:encoded>
       <guid isPermaLink="true">https://www.lila.ai/news/inside-lilas-rna-discovery-engine</guid>
       <category>Digg AI from X</category>
@@ -130,7 +162,7 @@
 <p><strong>Original source:</strong> <a href="https://openrouter.ai/openai/gpt-5.6-sol?ref=aibalkan.ai">https://openrouter.ai/openai/gpt-5.6-sol?ref=aibalkan.ai</a></p>
 <p><strong>Digg story:</strong> <a href="https://digg.com/tech/4dneyzz9">https://digg.com/tech/4dneyzz9</a></p>
 <p>OpenRouter posted that discounting GPT-5.6 Terra and Luna models caused token consumption to jump 13.8 times. Pseudonymous user scaling01 highlighted the new $5 per million token price for GPT-5.6-Sol on the flex API and said more benchmarks would follow. Greg Brockman replied that Jevons Paradox is counterintuitive and inspiring. The packet contains no further confirmation of the exact multiplier or duration of the surge.</p>
-<ul><li><strong>Views:</strong> 96,048</li><li><strong>Likes:</strong> 928</li><li><strong>Bookmarks:</strong> 166</li><li><strong>Quotes:</strong> 8</li><li><strong>Replies:</strong> 74</li><li><strong>Posts:</strong> 2</li></ul>
+<ul><li><strong>Views:</strong> 142,241</li><li><strong>Likes:</strong> 1,287</li><li><strong>Bookmarks:</strong> 228</li><li><strong>Quotes:</strong> 11</li><li><strong>Replies:</strong> 92</li><li><strong>Posts:</strong> 2</li></ul>
 <p><strong>Top authors</strong></p><ul><li><a href="https://x.com/gdb">Greg Brockman</a></li><li><a href="https://x.com/scaling01">Lisan al Gaib</a></li></ul>]]></content:encoded>
       <guid isPermaLink="true">https://openrouter.ai/openai/gpt-5.6-sol?ref=aibalkan.ai</guid>
       <category>Digg AI from X</category>
@@ -154,6 +186,22 @@
       <media:content url="https://digg.com/tech/es8l2osd/opengraph-image" type="image/jpeg" medium="image"/>
     </item>
     <item>
+      <title>Mike Solana Predicts Data Center Pivot</title>
+      <link>https://floodlightnews.org/new-jersey-data-center-federal-violation/</link>
+      <description>Post mocks journalists and influencers for anti-AI efforts while users adopt chatbots.</description>
+      <content:encoded><![CDATA[<p><img src="https://digg.com/tech/8h0ii1yo/opengraph-image" alt="Mike Solana Predicts Data Center Pivot"/></p>
+<p>Post mocks journalists and influencers for anti-AI efforts while users adopt chatbots.</p>
+<p><strong>Original source:</strong> <a href="https://floodlightnews.org/new-jersey-data-center-federal-violation/">https://floodlightnews.org/new-jersey-data-center-federal-violation/</a></p>
+<p><strong>Digg story:</strong> <a href="https://digg.com/tech/8h0ii1yo">https://digg.com/tech/8h0ii1yo</a></p>
+<p>Mike Solana posted that a data center pivot is coming. He offered thoughts and prayers to journalists and influencers who tried to build a widespread anti-AI movement with aesthetic concerns and misinformation. Solana contrasted that effort with the average American happily chatting with pocket AI tools. Kane retweeted the post. The statement frames public chatbot use as the dominant trend and anticipates a shift in focus toward data centers.</p>
+<ul><li><strong>Views:</strong> 79,488</li><li><strong>Likes:</strong> 2,545</li><li><strong>Bookmarks:</strong> 137</li><li><strong>Quotes:</strong> 26</li><li><strong>Replies:</strong> 112</li><li><strong>Posts:</strong> 2</li></ul>
+<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/micsolana">Mike Solana</a></li><li><a href="https://x.com/kane">Kane 謝凱堯</a></li></ul>]]></content:encoded>
+      <guid isPermaLink="true">https://floodlightnews.org/new-jersey-data-center-federal-violation/</guid>
+      <category>Digg AI from X</category>
+      <pubDate>Fri, 28 Aug 2026 14:27:42 +0000</pubDate>
+      <media:content url="https://digg.com/tech/8h0ii1yo/opengraph-image" type="image/jpeg" medium="image"/>
+    </item>
+    <item>
       <title>a16z Commits $1.1B to Machine Age Fund</title>
       <link>https://spr.ly/6010B10mvu</link>
       <description>Venture firm targets AI hardware, robotics, energy systems, and data center infrastructure.</description>
@@ -162,12 +210,28 @@
 <p><strong>Original source:</strong> <a href="https://spr.ly/6010B10mvu">https://spr.ly/6010B10mvu</a></p>
 <p><strong>Digg story:</strong> <a href="https://digg.com/tech/stg4b4vs">https://digg.com/tech/stg4b4vs</a></p>
 <p>Andreessen Horowitz announced a $1.1 billion fund for the machine age. The firm will invest in AI hardware, robotics, energy systems, and semiconductors. Partners described the effort as rebuilding physical infrastructure, including data centers, racks, cooling, and power. One post called it the largest infrastructure opportunity in computing history. Others urged building machines and physical products. The announcement came via the firm&#x27;s official account and was amplified by its investors.</p>
-<ul><li><strong>Views:</strong> 402,922</li><li><strong>Likes:</strong> 2,446</li><li><strong>Bookmarks:</strong> 784</li><li><strong>Quotes:</strong> 101</li><li><strong>Replies:</strong> 181</li><li><strong>Posts:</strong> 8</li></ul>
+<ul><li><strong>Views:</strong> 556,111</li><li><strong>Likes:</strong> 3,193</li><li><strong>Bookmarks:</strong> 1,096</li><li><strong>Quotes:</strong> 122</li><li><strong>Replies:</strong> 222</li><li><strong>Posts:</strong> 8</li></ul>
 <p><strong>Top authors</strong></p><ul><li><a href="https://x.com/martin_casado">martin_casado</a></li><li><a href="https://x.com/eriktorenberg">Erik Torenberg</a></li><li><a href="https://x.com/a16z">a16z</a></li><li><a href="https://x.com/joshelman">Josh Elman</a></li><li><a href="https://x.com/dhaber">David Haber</a></li></ul>]]></content:encoded>
       <guid isPermaLink="true">https://spr.ly/6010B10mvu</guid>
       <category>Digg AI from X</category>
       <pubDate>Fri, 28 Aug 2026 13:11:57 +0000</pubDate>
       <media:content url="https://digg.com/tech/stg4b4vs/opengraph-image" type="image/jpeg" medium="image"/>
+    </item>
+    <item>
+      <title>Posts Highlight Survey on Redistributive AI Policies</title>
+      <link>https://x.com/deanwball/status/2093354306690814083</link>
+      <description>Social media posts discuss a CSAIP survey on American views of AI policies.</description>
+      <content:encoded><![CDATA[<p><img src="https://digg.com/tech/56mwdexm/opengraph-image" alt="Posts Highlight Survey on Redistributive AI Policies"/></p>
+<p>Social media posts discuss a CSAIP survey on American views of AI policies.</p>
+<p><strong>Original source:</strong> <a href="https://x.com/deanwball/status/2093354306690814083">https://x.com/deanwball/status/2093354306690814083</a></p>
+<p><strong>Digg story:</strong> <a href="https://digg.com/tech/56mwdexm">https://digg.com/tech/56mwdexm</a></p>
+<p>Stefanie Feldman posted that 56,000 Americans responded to CSAIP questions on 79 AI policies. The post states significant support for measures that transfer resources from corporations and the wealthiest to workers and families, and that hold AI companies accountable. Rishi Bommasani retweeted related commentary. Dean W. Ball quoted the post and added that UBI polls poorly because people want to work. The visible posts report these survey results without providing the full data or independent confirmation.</p>
+<ul><li><strong>Views:</strong> 244,764</li><li><strong>Likes:</strong> 466</li><li><strong>Bookmarks:</strong> 229</li><li><strong>Quotes:</strong> 72</li><li><strong>Replies:</strong> 129</li><li><strong>Posts:</strong> 3</li></ul>
+<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/RishiBommasani">rishi</a></li><li><a href="https://x.com/HaydnBelfield">Haydn Belfield</a></li></ul>]]></content:encoded>
+      <guid isPermaLink="true">https://x.com/deanwball/status/2093354306690814083</guid>
+      <category>Digg AI from X</category>
+      <pubDate>Fri, 28 Aug 2026 12:15:24 +0000</pubDate>
+      <media:content url="https://digg.com/tech/56mwdexm/opengraph-image" type="image/jpeg" medium="image"/>
     </item>
     <item>
       <title>Anthropic Hiring Shortage for Long-Term Bets Discussed</title>
@@ -744,70 +808,6 @@
       <category>Digg AI from X</category>
       <pubDate>Mon, 24 Aug 2026 10:04:13 +0000</pubDate>
       <media:content url="https://digg.com/tech/s6pfd84o/opengraph-image" type="image/jpeg" medium="image"/>
-    </item>
-    <item>
-      <title>Users Question TSMC Role in Xiaomi XRING Chips</title>
-      <link>https://www.digitimes.com/news/a20260115VL209/xiaomi-xring-3nm-processor-tsmc.html</link>
-      <description>Replies question TSMC fabrication of Xiaomi XRING O100 and related chips.</description>
-      <content:encoded><![CDATA[<p><img src="https://digg.com/tech/7pyrtpmc/opengraph-image" alt="Users Question TSMC Role in Xiaomi XRING Chips"/></p>
-<p>Replies question TSMC fabrication of Xiaomi XRING O100 and related chips.</p>
-<p><strong>Original source:</strong> <a href="https://www.digitimes.com/news/a20260115VL209/xiaomi-xring-3nm-processor-tsmc.html">https://www.digitimes.com/news/a20260115VL209/xiaomi-xring-3nm-processor-tsmc.html</a></p>
-<p><strong>Digg story:</strong> <a href="https://digg.com/tech/7pyrtpmc">https://digg.com/tech/7pyrtpmc</a></p>
-<p>@zephyr_z9 asked whether the XRING O100 is TSMC fabbed after a generated headline described a 6nm AI accelerator using wafer-on-wafer NPU-DRAM bonding at 1.4µm pitch for 1.22 TB/s bandwidth and 330 tokens-per-second inference in a new Local AI Host device. @teortaxesTex raised the same question about the 3nm SoC and referenced Codex commentary on legality while noting a generated headline on XRING O100 and D100 chips that highlighted 6nm specs with 3D stacking plus a 3nm intelligent-driving chip and TSMC speculation.</p>
-<ul><li><strong>Views:</strong> 3,257</li><li><strong>Likes:</strong> 17</li><li><strong>Bookmarks:</strong> 1</li><li><strong>Replies:</strong> 1</li><li><strong>Posts:</strong> 2</li></ul>
-<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/teortaxesTex">Teortaxes▶️ (DeepSeek 推特🐋铁粉 2023 – ∞)</a></li><li><a href="https://x.com/zephyr_z9">Zephyr</a></li></ul>]]></content:encoded>
-      <guid isPermaLink="true">https://www.digitimes.com/news/a20260115VL209/xiaomi-xring-3nm-processor-tsmc.html</guid>
-      <category>Digg AI from X</category>
-      <pubDate>Mon, 24 Aug 2026 07:52:25 +0000</pubDate>
-      <media:content url="https://digg.com/tech/7pyrtpmc/opengraph-image" type="image/jpeg" medium="image"/>
-    </item>
-    <item>
-      <title>RL-Trained Coding Model Generates JavaScript Paintings</title>
-      <link>https://x.com/kickingkeys/status/2091570990048276897</link>
-      <description>AI researchers react to a reinforcement learning project for JavaScript code.</description>
-      <content:encoded><![CDATA[<p><img src="https://digg.com/tech/6btzztrd/opengraph-image" alt="RL-Trained Coding Model Generates JavaScript Paintings"/></p>
-<p>AI researchers react to a reinforcement learning project for JavaScript code.</p>
-<p><strong>Original source:</strong> <a href="https://x.com/kickingkeys/status/2091570990048276897">https://x.com/kickingkeys/status/2091570990048276897</a></p>
-<p><strong>Digg story:</strong> <a href="https://digg.com/tech/6btzztrd">https://digg.com/tech/6btzztrd</a></p>
-<p>@willcb posted that a model was trained on Prime Intellect Lab to generate JavaScript paintings and called the result nuts. @eliebakouch replied that the output is beautiful and that aesthetic taste can be trained through JavaScript code via reinforcement learning, sharing an image of the result. Both posts link to the same original tweet by @kickingkeys. The packet contains no first-party announcement confirming the training details or independent corroboration of the model&#x27;s performance.</p>
-<ul><li><strong>Views:</strong> 25,183</li><li><strong>Likes:</strong> 582</li><li><strong>Bookmarks:</strong> 244</li><li><strong>Quotes:</strong> 1</li><li><strong>Replies:</strong> 14</li><li><strong>Posts:</strong> 2</li></ul>
-<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/willcb">will brown</a></li><li><a href="https://x.com/eliebakouch">elie</a></li></ul>]]></content:encoded>
-      <guid isPermaLink="true">https://x.com/kickingkeys/status/2091570990048276897</guid>
-      <category>Digg AI from X</category>
-      <pubDate>Sun, 23 Aug 2026 22:29:54 +0000</pubDate>
-      <media:content url="https://digg.com/tech/6btzztrd/opengraph-image" type="image/jpeg" medium="image"/>
-    </item>
-    <item>
-      <title>a16z Reports Codex Adoption Growth by Sector</title>
-      <link>https://www.a16z.news/p/charts-of-the-week-winds-of-thematic</link>
-      <description>Venture firm notes fastest Codex growth outside traditional tech sectors.</description>
-      <content:encoded><![CDATA[<p><img src="https://digg.com/tech/2ysk4pfz/opengraph-image" alt="a16z Reports Codex Adoption Growth by Sector"/></p>
-<p>Venture firm notes fastest Codex growth outside traditional tech sectors.</p>
-<p><strong>Original source:</strong> <a href="https://www.a16z.news/p/charts-of-the-week-winds-of-thematic">https://www.a16z.news/p/charts-of-the-week-winds-of-thematic</a></p>
-<p><strong>Digg story:</strong> <a href="https://digg.com/tech/2ysk4pfz">https://digg.com/tech/2ysk4pfz</a></p>
-<p>Andreessen Horowitz posted that AI power users are appearing outside tech. The firm stated Codex adopters grew fastest since February in legal, sales, recruiting, marketing, and healthcare. A partner at the firm replied that the wordcels shall inherit the earth. The post links to an a16z.news article titled Charts of the Week: Winds of Thematic Change, which covers data centers, ridesharing costs, and agents.</p>
-<ul><li><strong>Views:</strong> 66,775</li><li><strong>Likes:</strong> 828</li><li><strong>Bookmarks:</strong> 389</li><li><strong>Quotes:</strong> 36</li><li><strong>Replies:</strong> 45</li><li><strong>Posts:</strong> 2</li></ul>
-<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/a16z">a16z</a></li><li><a href="https://x.com/pronounced_kyle">Christian Keil</a></li></ul>]]></content:encoded>
-      <guid isPermaLink="true">https://www.a16z.news/p/charts-of-the-week-winds-of-thematic</guid>
-      <category>Digg AI from X</category>
-      <pubDate>Sun, 23 Aug 2026 20:27:07 +0000</pubDate>
-      <media:content url="https://digg.com/tech/2ysk4pfz/opengraph-image" type="image/jpeg" medium="image"/>
-    </item>
-    <item>
-      <title>Researchers Explain Why Robotics Lags AI Advances</title>
-      <link>https://x.com/sarahookr/status/2091604930759205286</link>
-      <description>AI researcher Sara Hooker and professor Yue Wang discuss systemic barriers slowing robotics compared to software progress.</description>
-      <content:encoded><![CDATA[<p><img src="https://digg.com/tech/fp6uapd3/opengraph-image" alt="Researchers Explain Why Robotics Lags AI Advances"/></p>
-<p>AI researcher Sara Hooker and professor Yue Wang discuss systemic barriers slowing robotics compared to software progress.</p>
-<p><strong>Original source:</strong> <a href="https://x.com/sarahookr/status/2091604930759205286">https://x.com/sarahookr/status/2091604930759205286</a></p>
-<p><strong>Digg story:</strong> <a href="https://digg.com/tech/fp6uapd3">https://digg.com/tech/fp6uapd3</a></p>
-<p>AI researcher Sara Hooker posted that her husband asked why AI advances at lightspeed while robotics feels slower. She attributed the gap to transformers tapping humanity&#x27;s stored text knowledge and instantly verifiable code rewards, both absent for physical robots where interactions go undocumented and tasks lack clear intermediate rewards. Yue Wang replied that robotics is a system problem with no societal infrastructure and no accumulated stored knowledge. Hooker agreed. A reply from Leshem Choshen compared the debate to earlier skepticism about NLP versus vision. The discussion played out in replies on X.</p>
-<ul><li><strong>Views:</strong> 15,177</li><li><strong>Likes:</strong> 169</li><li><strong>Bookmarks:</strong> 76</li><li><strong>Quotes:</strong> 2</li><li><strong>Replies:</strong> 33</li><li><strong>Posts:</strong> 5</li></ul>
-<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/sarahookr">Sara Hooker</a></li><li><a href="https://x.com/yacineMTB">kache</a></li><li><a href="https://x.com/LChoshen">Leshem (Legend) Choshen 🤖🤗 @ACL @ICML</a></li><li><a href="https://x.com/yuewang314">Yue Wang</a></li></ul>]]></content:encoded>
-      <guid isPermaLink="true">https://x.com/sarahookr/status/2091604930759205286</guid>
-      <category>Digg AI from X</category>
-      <pubDate>Sun, 23 Aug 2026 19:14:10 +0000</pubDate>
-      <media:content url="https://digg.com/tech/fp6uapd3/opengraph-image" type="image/jpeg" medium="image"/>
     </item>
   </channel>
 </rss>
