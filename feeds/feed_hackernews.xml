@@ -8,7 +8,411 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 29 Aug 2026 02:23:37 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 29 Aug 2026 15:42:43 +0000</lastBuildDate>
+    <item>
+      <title>Parsing the Infamous Japanese Postal CSV</title>
+      <link>https://www.dampfkraft.com/posuto.html</link>
+      <description>Late last year I released posuto, a package presenting Japanese postal code data in an easy-to-use format. It's based on data released by Japan Post, which is infamous for being widely used but hard to parse.</description>
+      <content:encoded><![CDATA[<p>This post is part of collections on </p>
+<a href="https://www.dampfkraft.com/code.html">Code and Computers</a>
+<p>, </p>
+<a href="https://www.dampfkraft.com/projects.html">Projects</a>
+<p>, and </p>
+<a href="https://www.dampfkraft.com/janlp.html">Japanese Language Technology</a>
+<p>.</p>
+<p>Late last year I released <a href="https://github.com/polm/posuto">posuto</a>, a package presenting Japanese postal code
+data in an easy-to-use format. It's based on <a href="https://www.post.japanpost.jp/zipcode/dl/kogaki-zip.html">data released by Japan
+Post</a>, which is infamous for being widely used but hard to parse.</p>
+<figure><a href="https://www.dampfkraft.com/by-id/806ae69c/postcharacter.png"><img src="https://www.dampfkraft.com/by-id/806ae69c/img/postcharacter.l.png"/></a><figcaption><p>This adorable character by <a href="https://www.irasutoya.com/2019/08/blog-post_590.html">Irasutoya</a> is cute, but the raw postal CSV data is not.</p>
+</figcaption></figure>
+<p>I first became aware of the postal data when I entered my postal code in an
+online form and it auto-completed my address as "XXX-borough (except the
+following buildings)". I had no idea what that parenthetical was referring to,
+so I looked for a common source of postal data, found the CSV, and found the
+issue.  It turns out the CSV file contains parenthetical notes for anyone
+reading the CSV file and makes reference to the order of the rows.</p>
+<p>This causes problems. The data is mainly useful one row at a time, where the
+parenthetical is meaningless. Since CSV is a field-delimited format, there's
+also no need for parentheticals - you could just add a note field.</p>
+<p>This is only one of many issues with <code>ken_all.csv</code>. You can find people
+complaining about it regularly <a href="https://twitter.com/search?q=ken_all.csv&amp;src=typed_query&amp;f=live">on Twitter</a>, and there was
+even briefly <a href="http://ken-all.hatenadiary.com/">a blog</a> just collecting posts from all over the web
+about it. A <a href="https://twitter.com/bulkneets/status/1259457777862184966">particularly amusing tweet</a> describes people who expect
+computers to bend to the will of humans being punished in Hell by having to
+parse <code>ken_all.csv</code> forever.</p>
+<p>The <a href="https://www.post.japanpost.jp/zipcode/dl/readme.html">README</a> for the file explains that lines with overly long fields will be
+broken up into multiple lines. Specifically, if the neighborhood name is over
+38 characters, or if the half-width katakana (<em>half-width katakana</em>)
+pronunciation field is over 76 characters, the line will be split into two
+lines. The overly-long neighborhood field will be continued and all other
+fields will be duplicated. This is an abbreviated sample of what that looks
+like:</p>
+<pre><code>12345,Tokyo,Minato,This place name is really
+12345,Tokyo,Minato,very long it didn't fit in
+12345,Tokyo,Minato,a single line so we had to 
+12345,Tokyo,Minato,split it
+</code></pre>
+<p>The motivation for this is not explained. Maybe there was a fixed-width buffer
+for storing a line somewhere thirty years ago. I used to process CSV and other
+files from hundreds of different providers at an old job and I saw many
+horrors, but I've never seen this particular formatting choice anywhere else.
+It should also be noted that while the length limits are as stated, the
+location where line breaks are inserted in long lines appears random, occurring
+neither at the character limit nor at normal word boundaries.</p>
+<p>It's worth noting not all the issues with the CSV are inherently technical;
+postal codes are always complicated. The postal code with the most rows in the
+CSV - a stunning 66 - is 〒452-0961, which refers to the <a href="https://ja.wikipedia.org/wiki/%E6%98%A5%E6%97%A5%E7%94%BA_(%E6%84%9B%E7%9F%A5%E7%9C%8C)">Haruhi region</a> of
+Kiyosu City in Aichi Prefecture. This has that many lines because every
+neighborhood gets a separate line. (This particular case may be related to Haruhi
+having been the smallest town by area in Japan from 2006 until 2009, when it
+was incorporated into Kiyosu City.)</p>
+<p>In contrast, the longest <em>continued</em> line, using the line break rules above, is
+the entry for 〒602-8368 or 〒602-8374, both with eight lines. These are both in
+one of a few areas in Kyoto that uses <a href="https://en.wikipedia.org/wiki/Japanese_addressing_system#Kyoto">a unique, bizarre system of
+intersection-based addressing</a>. The entry looks a bit like this:</p>
+<pre><code>12345,Kyoto,Kyoto,"North Town (Up Lower Godsroad from"
+12345,Kyoto,Kyoto,"the West, Down Turtle Street from the"
+12345,Kyoto,Kyoto,"East, Up Old Temple Road from the"
+12345,Kyoto,Kyoto,"West)"
+</code></pre>
+<p>I have used quoted fields here, but the actual CSV doesn't quote fields and
+instead uses a different kind of comma.</p>
+<p>There are other issues. There are catch-all postal codes for many areas, where
+the neighborhood is given as "except the following", and the only thing to do
+is look for that exact string and exclude it. There's a variety of similar
+strings, and it's hard to be sure I've caught them all.</p>
+<p>An example of another comment is 一円. Normally this would mean "one yen", but
+it also means "the area surrounding", and is a note in the CSV that should be
+removed from neighborhood names, <em>except</em> for exactly one neighborhood in Shiga where
+that's actually the name (〒522-0317).</p>
+<p>There's also a <a href="https://www.post.japanpost.jp/zipcode/dl/roman-zip.html">separate romaji file</a> offered by JP Post. It's updated
+less frequently than the main files, is often out of sync, and the provided
+romaji are extremely low quality. For the moment I'm still providing the data
+in posuto in the name of consistency, but honestly you should just use
+<a href="https://www.dampfkraft.com/nlp/cutlet-python-romaji-converter.html">cutlet</a>. To give an example of bad romaji:</p>
+<pre><code>大手町 JAビル
+OTEMACHI JIEIEIBIRU
+</code></pre>
+<p>What's happening here is that "JA" is being converted to the phonetic reading
+in Japanese, "ジェイエイ". Then ジェ, which is written "large ji small e" but
+pronounced "je", is being converted to "jie" by treating the small character as
+though it were large, and the other characters are translated as-is, turning
+something already in the latin alphabet into alphabet soup. For contrast,
+cutlet has no problem converting "JAビル" into "JA building" (case handling
+admittedly needs some work still). Similar issues turn "Roppongi Hills" into
+"Roppongihiruzu", and "Sweden Hills" into "Suedenhiruzu".</p>
+<p>Anyway, dealing with the file was a humbling lesson in the amount of complexity
+it's possible to pack into one place. I've glossed over many details, but you
+can find them covered in posuto's README.</p>
+<p>You can use <a href="https://github.com/polm/posuto">posuto</a> as a library, or if you're not using Python, just
+download the pre-processed JSON and make use of that. If you find a good use
+for it I'd be delighted to hear about it.</p>
+<p>Oh, and if you need a Win3.1 or DOS program to copy the data onto an IBM H
+floppy disk, just check the bottom of <a href="https://www.post.japanpost.jp/zipcode/dl/kogaki-zip.html">JP Post's page</a> - they've
+got you covered. Ψ</p>
+<time>2020-11-07T20:11:58+09:00</time>
+<p><a href="https://news.ycombinator.com/item?id=49490826">Comments on Hacker News</a></p>]]></content:encoded>
+      <guid isPermaLink="true">https://www.dampfkraft.com/posuto.html</guid>
+      <category>Hacker News</category>
+      <pubDate>Sat, 29 Aug 2026 15:42:43 +0000</pubDate>
+      <media:content url="https://www.dampfkraft.com/by-id/806ae69c/img/postcharacter.l.png" type="image/png" medium="image"/>
+      <dc:creator>birdculture</dc:creator>
+    </item>
+    <item>
+      <title>Indirect Calling of Nested Functions on GCC Without Executable Stack</title>
+      <link>https://uecker.codeberg.page/2026-08-29.html</link>
+      <description>We discussed last time how one can use nested functions on GCC 17 and Clang for callbacks with requiring an executable stack. But what if ones needs to support older versions of GCC? Of course, one can simply accept an executable stack (it is not quite as terrible as some people claim), but it is also possible to avoid this with a hack.</description>
+      <content:encoded><![CDATA[<ul>
+<li><a href="https://uecker.codeberg.page/blog.html">Blog</a></li>
+<li><a href="https://uecker.codeberg.page/impressum.html">Contact/Impressum</a></li>
+</ul>
+<p>
+	Martin Uecker, 2026-08-29<br/>
+</p>
+<h4>Introduction</h4>
+<p>
+	We discussed <a href="https://uecker.codeberg.page/2026-08-06.html">last time</a> how one can use
+	nested functions on GCC 17 and Clang for callbacks with requiring an
+	executable stack.
+	But what if ones needs to support older versions of GCC?  Of course,
+	one can simply accept an executable stack (it is not quite as terrible as
+	some people claim), but it is also possible to avoid this with a hack.
+	</p>
+<h4>GCC: Nested Functions and Trampolines</h4>
+<p>
+	Let's discuss first how GCC supports taking the address of a nested
+	function. Our toy example without the use of the new macros is shown below
+	(<a href="https://godbolt.org/z/hv4nM5b1j">Godbolt Example</a>).
+	<pre><code>
+	typedef int cb_f(int y);
+
+	int baz(cb_f p, int x)
+	{
+		return p(x);
+	}
+
+	int foo(int k)
+	{
+		int bar(int x) { return k + x; }
+    		return baz(bar, 2 * k);
+	}
+	</code></pre>
+</p>
+<p>
+	On x86_64, the generated assembly is the following.
+	</p>
+<p>
+<pre><code>
+bar.0:
+        movl    %edi, %eax
+        addl    (%r10), %eax
+        ret
+foo:
+        subq    $56, %rsp
+        leaq    64(%rsp), %rax
+        movq    %rax, 32(%rsp)
+        movl    %edi, (%rsp)
+        leaq    4(%rsp), %rax
+        movw    $-17591, 4(%rsp)
+        movabsq $bar.0, %rcx
+        movq    %rcx, 6(%rsp)
+        movw    $-17847, 14(%rsp)
+        movq    %rsp, 16(%rsp)
+        movl    $-1864106167, 24(%rsp)
+        addl    %edi, %edi
+        call    *%rax
+        addq    $56, %rsp
+        ret
+	</code></pre>
+<p>This code places a trampoline on the stack and immediately
+	invokes it via the inlined <code>baz</code> function. The trampoline
+	is a short code sequence that loads the static frame register to a
+	structure on the stack that contains the captured variables from the
+	parent function and then jumps to the local function. If one
+	translates the constants -17591, -17847, and -1864106167 back to
+	assembly instructions one obtains the following x86_64 code.
+	</p>
+<pre><code>
+        movq	$bar.0, r11
+        movq    $frame, r10
+	jump	*r11
+	</code></pre>
+<p>
+	Both, the static chain and the code address are immediate constants
+	used by move instructions in the code of the trampoline.
+	Instead of using the address of the trampoline to call the function,
+	we can extract the code address and the static chain from the trampoline 
+	and use them with the <code>__builtin_call_with_static_chain</code>
+	built-in function to call the local function directly.  For example,
+	using noplate's <code>peek</code> and
+	<a href="https://uecker.codeberg.page/2025-07-09.html"><code>array_slice</code></a> macros,
+	this could be done in the following way for x64_64 (and a large memory
+	model).
+	</p>
+<pre><code>
+	unsigned char (*tramp)[24] = (void*)bar;
+	void *code = peek(uint64_t, &amp;array_slice(tramp, 2, 10));
+	void *chain = peek(uint64_t, &amp;array_slice(tramp, 12, 20));
+	</code></pre>
+<p>
+	These pointers are then exactly the same information that can be obtained
+	on the yet to-be-released GCC 17 with the new built-ins
+	<code>__builtin_call_static_chain</code> and <code>__builtin_call_code_adress</code>
+	and can be used to call the local function with as discussed previously.  
+	</p>
+<pre><code>
+	__builtin_call_with_static_chain(((typeof(bar)*)code)(arg), chain);
+	</code></pre>
+<p>
+	Thus, we can use reading of these
+	two pointer values from a trampoline as a fallback mechanism in older versions
+	of GCC. The downsides are that a trampoline is still created, the compiler can
+	still not devirtualize the indirect call, and the stack will still be marked executable.
+	So what was gained? Since we never actually invoke the trampoline, we can 
+	make the stack non-executable again with the following command, which
+	at least addresses the security concerns of this feature.
+	</p>
+<pre><code>
+	patchelf --clear-execstack program
+	</code></pre>
+<p>
+	This idea is implemented in my experimental library,
+	<a href="https://codeberg.org/uecker/noplate/">noplate</a>,
+	where a wide pointer is constructed from the code address and the static chain.
+	</p>
+<h4>Trampolines as Function Descriptors</h4>
+<p>
+	There is another idea I find worth exploring: One could also use the trampoline
+	itself as a function descriptor.  Instead of extracting the static chain
+	and code pointer where the trampoline is created we just pass on the address of
+	the trampoline as usually.  But everywhere where we might call the trampoline,
+	we first check whether the pointer points to a trampoline, and then extract code
+	address and static chain to call the nested function directly using
+	<code>__builtin_call_with_static_chain</code>. In some sense we could say that
+	instead of invoking the trampoline, we are <em>interpreting</em> the code of the
+	trampoline at the call site using a super simple interpreter that only can
+	interpret this specific code sequence and that is so simple that it can be inlined
+	(<a href="https://godbolt.org/z/YsfWednfr">Godbolt Example</a>).
+	</p>
+<h4>Literature</h4>
+<ul>
+<li>GCC, <a href="https://gcc.gnu.org/onlinedocs/gcc/Nested-Functions.html">Nested Functions</a></li>
+<li>GCC, <a href="https://gcc.gnu.org/onlinedocs/gcc/Constructing-Calls.html">Constructing Function Calls</a></li>
+</ul>
+</p>
+<p><a href="https://news.ycombinator.com/item?id=49490138">Comments on Hacker News</a></p>]]></content:encoded>
+      <guid isPermaLink="true">https://uecker.codeberg.page/2026-08-29.html</guid>
+      <category>Hacker News</category>
+      <pubDate>Sat, 29 Aug 2026 14:20:33 +0000</pubDate>
+      <dc:creator>uecker</dc:creator>
+    </item>
+    <item>
+      <title>Debian votes to allow "responsible use of generative AI"</title>
+      <link>https://lwn.net/Articles/1091231/</link>
+      <description>The results of the Debian general-resolution vote on the use of large language models have been [...]</description>
+      <content:encoded><![CDATA[<p>
+The </p>
+<a href="https://lwn.net/ml/all/E1x06W1-00AjNI-1i@vento.debian.org">results</a>
+<p> of the
+</p>
+<a href="https://lwn.net/Articles/1087134/">Debian general-resolution vote</a>
+<p> on the use
+of large language models have been posted; the winner is </p>
+<a href="https://www.debian.org/vote/2026/vote_002#texte">choice 5:
+Responsible Use of Generative AI</a>
+<p>.
+</p>
+<p>
+<blockquote>
+	Debian neither endorses nor prohibits the use of generative AI
+	tools in the development, maintenance, or documentation of
+	software, packaging, documentation, and other media published
+	within the Debian Project. We recognize that such tools can
+	substantially improve the productivity of contributors when used
+	responsibly, allowing volunteers to spend more of their limited
+	time on work that requires technical expertise, judgment, review,
+	and collaboration.
+<p>
+	The Debian Project nevertheless expects that all contributions
+	submitted to Debian, regardless of how and with which tools they
+	were produced, satisfy the same standards of quality, correctness,
+	maintainability, and legal compliance. The use of a generative AI
+	tool does not diminish the contributor's responsibility for the
+	work they submit. Contributors are expected to understand, review,
+	test, and, where appropriate, modify AI-assisted output before
+	incorporating it into Debian.
+</p></blockquote><br/><hr/>
+</p>
+<p><a href="https://news.ycombinator.com/item?id=49489982">Comments on Hacker News</a></p>]]></content:encoded>
+      <guid isPermaLink="true">https://lwn.net/Articles/1091231/</guid>
+      <category>Hacker News</category>
+      <pubDate>Sat, 29 Aug 2026 14:02:10 +0000</pubDate>
+      <dc:creator>pluc</dc:creator>
+    </item>
+    <item>
+      <title>Iceland votes on whether to restart talks on joining EU</title>
+      <link>https://www.bbc.com/news/articles/cn45vdxyvvlo</link>
+      <description>Turbulent international affairs have brought the vote forward, but the campaign has focused more on Iceland's vital fishing industry.</description>
+      <content:encoded><![CDATA[<h2>Close race as Iceland votes on whether to restart talks on joining EU</h2>
+<figure><img src="https://static.files.bbci.co.uk/bbcdotcom/web/20260821-111954-d28c495a96-web-3.19.0-2/grey-placeholder.png"/><img alt="AFP via Getty Images Supporters of the 'No' campaign wave Icelandic flags during a rally against reopening Iceland's European Union accession negotiations in Reykjavik, Iceland, on August 27, 2026" src="https://ichef.bbci.co.uk/news/480/cpsprodpb/1ad8/live/d86c20a0-a31d-11f1-8937-ebc435db1160.jpg.webp"/>AFP via Getty Images<figcaption>Latest opinion polls have been so close that the result is impossible to call</figcaption></figure>
+<p>Icelanders are voting in a referendum to decide whether to resume talks on joining the European Union, 13 years after they were broken off.</p>
+<p>In an indication of how tight the result is expected to be, the latest opinion poll put the No campaign in the lead with 51.6%. An earlier poll had put the Yes campaign ahead.</p>
+<p>Prime Minister Kristrún Frostadóttir's centre-left government had already intended to hold a referendum, but turbulent international affairs prompted her to bring it forward.</p>
+<p>But the debate was fought less over Nato member Iceland's security concerns than over its vital fishing industry and sovereignty.</p>
+<p>Voting is due to go on from 09:00 to 22:00 GMT on Saturday and the result is expected in the early hours of Sunday.</p>
+<p>Iceland has a population of under 400,000. More than one in five voters had already cast their ballots in early voting before Saturday, according to Iceland's public broadcaster RUV.</p>
+<h2>What is the vote about?</h2>
+<p><a href="https://www.government.is/news/article/what-will-the-referendum-question-be">The question on the ballot is</a>: "Should Iceland resume accession negotiations with the European Union?"</p>
+<p>Although Iceland is already part of the EU's single market and Schengen border-free zone as part of the European Economic Area, EU membership would bring it into the customs union and eventually the euro.</p>
+<p>Iceland's application to join the EU was already well advanced when it put talks on hold in 2013, and European Commission officials have indicated that talks could be finalised in one or two years. Of the 35 so-called chapters of talks ranging from fisheries and economic policy to freedom of speech and free movement of goods,<a href="https://www.consilium.europa.eu/en/policies/iceland/"> 27 had begun and 11 of them were provisionally complete</a>.</p>
+<p>A Yes vote would not be a final decision on joining the EU. It would mean backing a move towards an accession agreement. Any deal would then have to be approved by a second referendum, as well by parliament, and the constitution would have to be amended. The EU's 27 member states would also have to sign it off.</p>
+<p>One Yes-campaign group, "Yes to See", says Icelanders should at least see what deal they can get, so they have all the information before a final decision.</p>
+<p>Equally, a No vote would not rule out the chance of Iceland resuming talks in the future.</p>
+<a href="https://www.bbc.co.uk/news/articles/c99dvmyr4glo">Read more:  Iceland knife-edge vote that could be decided on fish</a>
+<h2>What are the key issues?</h2>
+<p>Sovereignty has been a crucial issue in the pre-referendum debate. Iceland fought hard to become fully independent from Denmark in 1944, and its fishing and marine industries make up almost 40% of exports.</p>
+<p>The No campaign fears losing control over Iceland's prized fishing grounds under the EU's Common Fisheries Policy and has vowed never to share the country's waters with anyone. Brussels has indicated Iceland could earn some kind of exemption, but it is considered potentially the biggest obstacle to any agreement.</p>
+<p>Many Icelanders remember the so-called Cod Wars with the UK that Iceland won in the 1970s. And fisheries was always the issue that stopped Iceland joining the EU before.</p>
+<p>However, in the wake of the 2008 financial crisis and the collapse of Iceland's banking system, Reykjavik moved to start accession talks in 2009, only to bring them to a halt in 2013. </p>
+<p>Iceland is now one of Europe's most affluent nations and Eirikur Bergmann, professor of politics at Bifröst University, told the BBC that "many people attribute this to Iceland's independence".</p>
+<p>One Icelandic trade union survey suggested this year that the country was the most expensive in the world, far pricier than its Nordic neighbours.</p>
+<p>Although it has the fifth highest GDP (economic output) per capita in the world, interest rates are stubbornly high at 8% and inflation has climbed to 5.6%. </p>
+<p>Yes campaigners argue that the economic benefits of the EU would help bring the rates down. </p>
+<figure><img src="https://static.files.bbci.co.uk/bbcdotcom/web/20260821-111954-d28c495a96-web-3.19.0-2/grey-placeholder.png"/><img alt="Reuters A man poses outside the &quot;Yes to See&quot; movement's office ahead of a referendum on whether Iceland should resume accession negotiations with the European Union, in Reykjavik, Iceland, August 2" src="https://ichef.bbci.co.uk/news/480/cpsprodpb/35a4/live/db92f890-a31c-11f1-b109-879e35c24276.jpg.webp"/>Reuters<figcaption>The "Yes to See" campaign believes Icelanders should see what EU deal they can get</figcaption></figure>
+<h2>What are Iceland's security concerns?</h2>
+<p>Iceland may be a founder member of Nato but it has no military and relies on its allies for defence. </p>
+<p>A bilateral US defence agreement has been in place since 1951 and the No campaign has said Iceland's security rests on both Nato and the US, and that EU membership is not a substitute for Nato.</p>
+<p>Iceland has been a strong supporter of Ukraine during Russia's full-scale invasion and officials have viewed Russia's increased maritime manoeuvres near the island with alarm.</p>
+<p>However, there has also been concern at US President Donald Trump's expressed interest in taking over Greenland - especially the fact that he has confused it with Iceland.</p>
+<p>This year the EU and Iceland signed a security and defence partnership, and EU officials said the EU "offers an anchor in a community of values, prosperity and security". </p>
+<h2>What do the Yes and No campaigns say?</h2>
+<p>Ahead of the referendum, the two sides held a televised debate where the Yes campaign team was headed by Prime Minister Kristrún Frostadóttir and the No campaign was led by Guðrún Hafsteinsdóttir, chair of the opposition Independence Party.</p>
+<p>Kristrún told the audience that Iceland was already well integrated in the European Union, and becoming a member would be "one of the biggest risk-reducing steps we can take". </p>
+<p>She also made clear that a Yes vote did not necessarily mean that Iceland would join, and that if there was a No vote, the result would be respected. </p>
+<p>Guðrún, meanwhile, stressed that the vote was not about whether Iceland should work well with Europe: "We already do, and we want that to continue."</p>
+<p>Instead, she portrayed the referendum as a vote on whether Icelanders wanted to hand "decision-making powers" to Brussels on fisheries, agriculture and their natural resources.</p>
+<p>Although geopolitics kick-started the government's decision to push for a return to EU talks, there has been little discussion of it during the campaign.</p>
+<p>"It's lower on the agenda than many would think," says Hallgrimur Oddsson, director of EU-Iceland think-tank European Currents.</p>
+<a href="https://www.bbc.com/news/world/europe">Europe</a>
+<a href="https://www.bbc.com/news/topics/cx1m7zg0wqzt">Iceland</a>
+<a href="https://www.bbc.com/news/topics/cwlw3xz0ljmt">European Union</a>
+<p><a href="https://news.ycombinator.com/item?id=49489057">Comments on Hacker News</a></p>]]></content:encoded>
+      <guid isPermaLink="true">https://www.bbc.com/news/articles/cn45vdxyvvlo</guid>
+      <category>Hacker News</category>
+      <pubDate>Sat, 29 Aug 2026 11:39:38 +0000</pubDate>
+      <media:content url="https://static.files.bbci.co.uk/bbcdotcom/web/20260821-111954-d28c495a96-web-3.19.0-2/grey-placeholder.png" type="image/png" medium="image"/>
+      <dc:creator>tosh</dc:creator>
+    </item>
+    <item>
+      <title>Samsung's Processing-in-Memory (PIM)</title>
+      <link>https://chipsandcheese.com/p/hot-chips-2026-samsungs-processing</link>
+      <description>In-memory compute with LPDDR5X</description>
+      <content:encoded><![CDATA[<p>In-memory compute has been an attractive proposition for many years because compute within a memory chip can exploit its higher internal bandwidth. Additionally, in-memory compute avoids the long latency path between DRAM and traditional compute cores. At Hot Chips 2026, Samsung discusses their continued pursuit of in-memory compute with their PIM (Processing-in-Memory) push. They’re implementing MAC units within LPDDR5X chips, while preserving the chip’s ability to interface with a standard memory controller.</p>
+<figure><a href="https://substackcdn.com/image/fetch/$s_!wrBL!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fb38cdff5-a0de-4ff3-9084-3ea98bfeeccb_1903x1063.png"><img height="813" src="https://substackcdn.com/image/fetch/$s_!wrBL!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fb38cdff5-a0de-4ff3-9084-3ea98bfeeccb_1903x1063.png" width="1456"/></a></figure>
+<p>DRAM chips are internally divided into banks, each with their own read and write logic. During a normal DRAM access, the memory controller selects a bank, activates a row within it, and then accesses data via column access strobe (CAS) commands. Bandwidth is limited by the chip’s external DRAM interface. Even if the memory controller could activate all of the banks simultaneously, it wouldn’t be able to get its hands the full bandwidth available across all the banks.</p>
+<figure><a href="https://substackcdn.com/image/fetch/$s_!UmEd!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Ff074d3e5-5fe6-45d6-82cb-fb4a0f7f0b0e_1906x1060.png"><img height="810" src="https://substackcdn.com/image/fetch/$s_!UmEd!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Ff074d3e5-5fe6-45d6-82cb-fb4a0f7f0b0e_1906x1060.png" width="1456"/></a></figure>
+<p>Samsung’s LPDDR5X-PIM is like a normal LPDDR5X-9600 chip with 16 banks, but places a PIM (Processing-in-Memory) block at each bank. These PIM blocks access their attached DRAM bank without being constrained by the chip’s external bus. Together, they can utilize the chip’s internal bandwidth across all 16 banks, which comes out to 614 GB/s. For comparison, regular DRAM accesses can hit two banks in parallel and max out at 76.8 GB/s.</p>
+<figure><a href="https://substackcdn.com/image/fetch/$s_!IQs9!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F577407c6-c777-46a0-885c-b65360f7e4f1_1899x1069.png"><img height="820" src="https://substackcdn.com/image/fetch/$s_!IQs9!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F577407c6-c777-46a0-885c-b65360f7e4f1_1899x1069.png" width="1456"/></a></figure>
+<p>PIM blocks internally consist of a MAC tree with surrounding register files and control logic. A 1024-bit instruction register file holds up to 64 16-bit instructions. A 4 kbit source register file is meant for activation vectors, and supplies one source operand for the MAC array. Samsung expects software to load model weights into DRAM, so the attached DRAM block supplies the second operand. Model weights can be scaled before the MAC computation, with scale factors coming from a 2 kbit scale register.</p>
+<figure><a href="https://substackcdn.com/image/fetch/$s_!r6mc!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F33778738-5a01-46e4-a131-c8f53a4e982e_438x321.png"><img height="321" src="https://substackcdn.com/image/fetch/$s_!r6mc!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F33778738-5a01-46e4-a131-c8f53a4e982e_438x321.png" width="438"/></a></figure>
+<p>The PIM block’s MAC array supports a variety of low precision formats. Numbers from Samsung’s presentation suggest each PIM block’s MAC array can sustain four INT8 or FP8 MAC operations per data clock, or eight per cycle when not counting the double data rate. Throughput doubles for 4-bit input weights, bringing package-wide compute throughput to 2.4 TOPS.</p>
+<figure><a href="https://substackcdn.com/image/fetch/$s_!HRoC!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F970d1a1a-4a0e-4e49-94d5-afc936001d33_1897x1051.png"><img height="807" src="https://substackcdn.com/image/fetch/$s_!HRoC!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F970d1a1a-4a0e-4e49-94d5-afc936001d33_1897x1051.png" width="1456"/></a></figure>
+<p>This isn’t a very high figure, but an implementation with many LPDDR5X chips will have higher aggregate throughput. For example, eight LPDDR5X chips together would have 9.6 INT8 TOPS, which just about matches the <a href="https://chipsandcheese.com/p/intel-meteor-lakes-npu">NPU in Intel’s Meteor Lake</a>. That would also be an expensive setup, because eight 16 GB LPDDR5X chips would correspond to 128 GB of system memory.</p>
+<p>One highlight of LPDDR5X-PIM is that it stays within the standard LPDDR5X protocol while exposing compute capabilities that aren’t part of the memory standard. Samsung achieves this by setting aside special row addresses, which act like MMIO addresses of sorts. Each channel has a pair of predefined rows for mode control. Activating one of those rows sets the chip to single-bank mode, while the other sets the chip to multi-bank mode. Single-bank is the regular mode, while multi-bank applies commands across all 16 banks to exploit the chip’s internal bandwidth.</p>
+<figure><a href="https://substackcdn.com/image/fetch/$s_!2Qzy!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fbf302782-e18d-4f80-904b-ad97db301e3e_1900x1060.png"><img height="812" src="https://substackcdn.com/image/fetch/$s_!2Qzy!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fbf302782-e18d-4f80-904b-ad97db301e3e_1900x1060.png" width="1456"/></a></figure>
+<p>Special per-bank rows change how read and write commands behave. Activating one of these special rows makes read and write commands access PIM registers instead of regular DRAM bank contents (PIM Registers Activated mode). Samsung envisions a ML use case where software loads model weights into DRAM while the chip is in normal single-bank mode. Then, software switches into multi-bank mode and enters PIM Registers Activated mode. This lets code write activation values into PIM source registers, set scale factors in PIM scale registers, and specify an operation that’s filled into PIM instruction registers.</p>
+<figure><a href="https://substackcdn.com/image/fetch/$s_!Mzc7!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fc82fa45b-83f8-4425-87e7-ccdec0fcd2a1_1576x876.png"><img height="809" src="https://substackcdn.com/image/fetch/$s_!Mzc7!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fc82fa45b-83f8-4425-87e7-ccdec0fcd2a1_1576x876.png" width="1456"/></a></figure>
+<p>Because the chip is in multi-bank mode, each PIM register write gets broadcast across all 16 banks. PIM compute therefore works like a very constrained SIMD processor, where the operation, scale factor, and one source operand are the same across all banks. Samsung does allow writing PIM registers in single-bank mode, but that functionality is meant for debugging purposes. Each DRAM packet is 256 bits (BL=16) Filling each source register takes 16 write commands. Doing that one bank at a time across each of the 16 banks would mean 256 write commands, turning host to PIM register write bandwidth into the limiting factor.</p>
+<figure><a href="https://substackcdn.com/image/fetch/$s_!sZsk!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fcdda4b4c-2094-44b0-ba4b-765be57a677a_1577x888.png"><img height="820" src="https://substackcdn.com/image/fetch/$s_!sZsk!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fcdda4b4c-2094-44b0-ba4b-765be57a677a_1577x888.png" width="1456"/></a></figure>
+<p>After priming PIM registers, software switches back into multi-bank mode and issues read commands. Instead of reading DRAM contents, these read commands initiate computations and get results accumulated into PIM vector register files. Then, write commands tell PIM blocks to write VRF contents back into the DRAM banks.</p>
+<figure><a href="https://substackcdn.com/image/fetch/$s_!BMnk!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F14915cc4-22e3-43c4-a936-9fb7aec1d5f5_1578x881.png"><img height="813" src="https://substackcdn.com/image/fetch/$s_!BMnk!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F14915cc4-22e3-43c4-a936-9fb7aec1d5f5_1578x881.png" width="1456"/></a></figure>
+<p>PIM has to handle reordering that a normal memory controller might carry out. When code sets up PIM by activating the bank, PIM conventionally sets up its instruction register files so that instructions sequentially access each source register element. For instance, the first instruction would reference the first source register element, the second instruction would reference the second source register element, and so on. However, that falls apart if the memory controller reorders accesses. Samsung gets around this with an Address Align Mode (AAM), which makes each instruction infer its source register index from the column address being accessed.</p>
+<figure><a href="https://substackcdn.com/image/fetch/$s_!bvLm!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fb478c0e8-8c99-4827-b9e2-eb9613dbb48c_1896x1065.png"><img height="818" src="https://substackcdn.com/image/fetch/$s_!bvLm!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fb478c0e8-8c99-4827-b9e2-eb9613dbb48c_1896x1065.png" width="1456"/></a></figure>
+<p>When the host finishes using in-memory compute and wants to read results, it switches the DRAM chip back into single-bank mode. Then, regular DRAM reads and writes will start accessing DRAM contents as normal. </p>
+<figure><a href="https://substackcdn.com/image/fetch/$s_!VrNM!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F798b0f8f-a522-43c6-bf13-21716f5611ae_1577x893.png"><img height="824" src="https://substackcdn.com/image/fetch/$s_!VrNM!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F798b0f8f-a522-43c6-bf13-21716f5611ae_1577x893.png" width="1456"/></a></figure>
+<p>Samsung internally achieved huge performance gains when taking advantage of LPDDR5X-PIM, compared to using standard LPDDR5X. The chip’s ability to operate with a standard memory controller is impressive, and Samsung has been very creative in how they approached the problem.</p>
+<figure><a href="https://substackcdn.com/image/fetch/$s_!IhK4!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F3ae02f2d-f9ec-47f4-ac56-a3374732ac72_1585x877.png"><img height="806" src="https://substackcdn.com/image/fetch/$s_!IhK4!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F3ae02f2d-f9ec-47f4-ac56-a3374732ac72_1585x877.png" width="1456"/></a></figure>
+<p>Repurposing standard DRAM commands should simplify hardware, but software challenges look steep. Because PIM modes change the meaning of DRAM access commands, software can’t use PIM and carry out regular memory accesses at the same time. That applies even across threads, because memory controllers and DRAM chips are oblivious to what thread an access is for. If a non-PIM thread reads from memory while another is using PIM, the first thread could cause an unintended computation and get incorrect results into the PIM VRFs. A write from the non-PIM thread could cause PIM blocks to write VRF data back to the wrong address.</p>
+<p>Samsung deals with this by having the host isolate a PIM region in memory. I can’t think of an easy way to do this in a typical system without compromising memory bandwidth and PIM performance. Hardware normally interleaves addresses across channels, which lets common access patterns naturally utilize bandwidth across those channels. PIM uses per-channel rows to control single/multi-bank mode changes, so dropping interleaving and designating memory channels as PIM-only would be the only reasonable way to create a PIM region. Then, non-PIM applications wouldn’t be able to take advantage of bandwidth from channels reserved for PIM. PIM code would miss out on bandwidth and compute from non-PIM channels. The latter could be a significant issue because per-chip compute throughput isn’t that high.</p>
+<p>Multitasking issues could persist even after isolating a PIM region. If an application wants to use PIM and take advantage of multithreading, it would have to guard PIM region accesses with locks to prevent cases where one thread tries to do PIM compute while another attempts regular memory accesses. Things get even worse with a modern multitasking operating system, where multiple processes could try to use PIM without being aware of each other. I’m not sure there’s a good way to handle that besides making the operating system run PIM compute code segments with all other threads blocked and interrupts disabled. Handling interrupts or context switches with PIM feels like a nightmare for the OS in any case. Preempting a PIM thread would mean bringing the memory channel out of PIM mode and saving PIM state. The OS would have to read out instruction, source, scale, and vector register file across each bank and save it somewhere. Only allowing a single running thread with no task switching would leave multithreaded performance on the table, and could lead to system responsiveness issues if code spends too long in PIM compute sections.</p>
+<p>PIM compute breaks a memory subsystem’s expectations about DRAM behavior because DRAM can generate memory values that the cache hierarchy never knows about. Caches can also break PIM behavior by absorbing accesses meant to trigger PIM operations. Samsung therefore recommends mapping PIM memory as uncacheable. That’s problematic because modern CPUs and GPUs rely heavily on caching to mitigate DRAM latency. Performance on uncacheable memory will be extremely slow because the CPU or GPU cores will spend far more time stalled waiting on memory.</p>
+<figure><a href="https://substackcdn.com/image/fetch/$s_!iB8s!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F2193b816-a23f-4c68-84d7-e2018dc47125_1336x360.png"><img height="360" src="https://substackcdn.com/image/fetch/$s_!iB8s!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F2193b816-a23f-4c68-84d7-e2018dc47125_1336x360.png" width="1336"/></a></figure>
+<p>Skipping caches isn’t the only problem. PIM reads act like MMIO accesses because they cause computations that affect PIM VRF values, rather than just retrieving data. CPUs also mitigate memory latency by initiating loads before they know that load data will actually be needed. Branch prediction lets CPUs issue instructions before the core knows for certain that those instructions will be executed. Prefetchers observe memory access patterns and attempt to load data into cache before instructions request that data. If the CPU loads data that turns out to unneeded later on, that’s fine because loads normally won’t cause incorrect program behavior. Unfortunately that’s not true with PIM, where reads trigger computations that modify PIM VRF contents.</p>
+<figure><a href="https://substackcdn.com/image/fetch/$s_!1hzK!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F66322357-315e-4d95-a804-bc54ed422333_1302x572.png"><img height="572" src="https://substackcdn.com/image/fetch/$s_!1hzK!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F66322357-315e-4d95-a804-bc54ed422333_1302x572.png" width="1302"/></a><figcaption>Yeah, that’s gonna go badly</figcaption></figure>
+<p>Working with a PIM region will likely mean making memory accesses non-speculative as well as non-cacheable. Running a CPU without caching, prefetching, or out-of-order execution will cripple performance.</p>
+<p>Setting aside PIM mode difficulties, in-memory compute poses high level challenges for software. Each PIM block only has fast access to its locally attached DRAM bank. All other input data has to be brought in through the DRAM chip’s comparatively constrained external interface. PIM blocks can’t directly exchange data with each other, so the host has to move data using regular DRAM reads and writes if one PIM block needs to use results generated by another.</p>
+<p>Samsung’s LPDDR5X-PIM can theoretically go into any server, desktop, laptop, or even mobile device thanks to its ability to work with standard memory controllers. However, that doesn’t mean it’ll be easy to use with typical hardware and software paradigms. PIM mode switching throws a wrench into the works for multitasking operating systems. Modifying DRAM contents under the hood and attaching side effects to read commands breaks CPU caching, prefetching, and out-of-order execution.</p>
+<figure><a href="https://substackcdn.com/image/fetch/$s_!oJZH!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F881d420b-73a8-4b88-971b-44a0a825d574_3953x2632.jpeg"><img height="969" src="https://substackcdn.com/image/fetch/$s_!oJZH!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F881d420b-73a8-4b88-971b-44a0a825d574_3953x2632.jpeg" width="1456"/></a><figcaption>Some memory chips. Not the right generation, but probably close (in price/GB terms)</figcaption></figure>
+<p>I don’t think there’s an easy way to use in-memory compute without changes throughout the memory subsystem. For example, something like should make software adoption easier:</p>
+<ul><li><p>Expand the DRAM interface to add a set of compute commands, avoiding mode switch complexity</p></li><li><p>Have the memory controller act like a peer CPU core from a cache coherency perspective. Before using in-memory compute commands, the memory controller issues read-for-ownership (RFO) requests for all affected cache lines. That lets the memory controller obtain any modified data and write it back to DRAM before starting in-memory compute, ensuring that in-memory compute results reflect the latest CPU-side writes. Then, the memory controller holds ownership of affected cache lines until in-memory compute operations complete, letting CPU cores observe in-memory compute results without needing to invalidate or bypass caches</p></li><li><p>Add a new set of CPU instructions like “rep macb” that perform multiply-accumulate operations over a block of memory with fixed multiplicand/scale factors and undefined numerical characteristics. The CPU can choose whether to use in-memory compute (if supported by DRAM) or generate a sequence of internal ops (if operating over a small set of data that’s already in cache).</p></li></ul>
+<p>With those hardware changes, software would be able to use in-memory compute from a multitasking operating system without reserving memory or losing thread-level parallelism to PIM-related locks and synchronization. A transparent CPU instruction avoids the problem of shipping hardware specific binaries, and allows forward-compatible code that automatically takes advantage of new hardware capabilities including different in-memory compute implementations. It also lets hardware use implementation-specific knowledge and real-time data (like a no-fill-on-miss cache lookup) to make the best decision about where to carry out compute. I don’t like the software alternative of reserving memory regions, marking them uncacheable, and blocking threads. There’s just too many tradeoffs around performance, memory capacity, and responsiveness.</p>
+<p><a href="https://news.ycombinator.com/item?id=49487341">Comments on Hacker News</a></p>]]></content:encoded>
+      <guid isPermaLink="true">https://chipsandcheese.com/p/hot-chips-2026-samsungs-processing</guid>
+      <category>Hacker News</category>
+      <pubDate>Sat, 29 Aug 2026 06:06:51 +0000</pubDate>
+      <media:content url="https://substackcdn.com/image/fetch/$s_!wrBL!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fb38cdff5-a0de-4ff3-9084-3ea98bfeeccb_1903x1063.png" type="image/png" medium="image"/>
+      <dc:creator>ingve</dc:creator>
+    </item>
     <item>
       <title>TurboKV: Insanely fast Rust key-value store</title>
       <link>https://github.com/kingroryg/turbokv</link>
@@ -4060,6 +4464,222 @@ tasks. <a href="#fnref:4">↩</a></p>
       <dc:creator>ckardaris</dc:creator>
     </item>
     <item>
+      <title>Creating the Aetheryte Radio</title>
+      <link>https://haz.ee/posts/aetheryte-radio.html</link>
+      <description>sometimes when i work i like to listen to ambiance. one video in particular is the "aetheryte asmr" , which is an in game recording of the aetheryte crystal . for the past 6 years i've been listening to the same youtube video on repeat. there are a number of problems with this approach:</description>
+      <content:encoded><![CDATA[<p>
+sometimes when i work i like to listen to ambiance. one video in
+particular is the <a href="https://www.youtube.com/watch?v=H-P2VkIjOGw">"aetheryte asmr"</a>, which is an in game recording of
+the <a href="https://ffxiv.consolegameswiki.com/wiki/Aetheryte">aetheryte crystal</a>. for the past <i>6 years</i> i've been listening to
+the same youtube video on repeat. there are a number of problems with
+this approach:
+</p>
+<ol>
+<li>the youtube player's "loop" functionality doesn't always work. it
+might loop 20 or 200 times before failing(?) and auto-playing
+another video. this is jarring.</li>
+<li>the audio in the video is a ~7 minute recording, but the loop isn't
+seamless (i spent far too long re-architecting my music player's
+internals to support gapless playback), and while it's long enough
+that i don't care when it cuts and loops, it would be nice if it
+were seamless.</li>
+<li>of course i can't keep the game open.. that's far too resource
+intensive, other players (ffxiv is an mmorpg) could approach nearby
+and create noise and ruin the effect, etc.</li>
+</ol>
+<p>
+none of these were deal breakers for me. 6 years is a pretty long time
+to go facing some struggles before sitting down and deciding to tackle
+a problem.
+</p>
+<p>
+nevertheless, one day i finally sat down and thought to myself.. "how
+can i get the best experience for the ambience without sacrifice?"
+</p>
+<p>
+the first answer is that i needed to get the game assets. whatever the
+game was using to play the noise, i needed to extract. with those in hand,
+i could recreate or play with them in whichever way i wanted.
+</p>
+<h2 id="org11d4db4">getting the source assets</h2>
+<p>
+ffxiv isn't a super well protected game (at least i don't think.) if
+you web search "ffxiv data explorer" there are old java apps that load
+up the asset packages from the games install directory and let you
+export (presumably) compressed assets. i don't remember which fork i
+used, but i do know that it came with a hash table that mapped the
+file to an english file name.
+</p>
+<p>
+you're going to laugh at me (and honestly that's ok.) i spent 4 hours
+coming through <b>4000</b> audio assets trying to find the audio assets. i
+literally ctrl+a'd all 4000 .wav files and pressed the left and right
+arrow keys to move back and forth within the large mpv playlist,
+looking for the aetheryte noise. the funny part is that i didn't find
+them, and had to go to sleep at 3am.
+</p>
+<p>
+i'm an engineer though, right? work smarter, not harder (why didn't i
+do this before doing the tedious work? idk.) was there any <i>better</i>
+way to get the sound? did i miss it during my 3am comb over? (hint. i
+did.) turns out, there is! ffxiv has an extensive modding community
+and platform, and while i don't play the game much anymore, it was
+exhilarating to see how much effort people put into customizing their
+experience.
+</p>
+<h3 id="org8ea49c9">xivlauncher, vfxeditor, and soundfilter</h3>
+<p>
+if you boot ffxiv using <a href="https://goatcorp.github.io">xivlauncher</a> (endorsed by my roommate who has
+180 days of play time) you can load up plugins. one plugin of interest was
+<a href="https://git.anna.lgbt/anna/SoundFilter/src/branch/main/SoundFilter">soundfilter</a>. i know the name is a bit misleading, but it has the
+ability to <b>display the names of now playing assets</b>. this helped a
+ton because i was able to teleport to a new area in the game (the
+aetherytes are basically waypoint / teleport crystals) and figure out
+which sound was being played. quickly after i found that the asset i
+was looking for was
+<code>bgcommon/sound/fst/placednpc_ethelight_big_loop.scd/0</code>. i quickly
+exported said asset and was on my way.
+</p>
+<p>
+an interesting note about that asset is the <code>/0</code> at the end. i'm
+pretty sure the sound "asset" contains multiple sounds (i think they
+were called tracks in game.) 0 was simply the "hum" or the low
+frequency of ambiance.
+</p>
+<p>you can preview the assets here</p>
+<strong>beware!</strong>
+<p> these are loud. i did not normalize these to preserve integrity</p>
+<p>hum</p>
+<audio controls="" src="https://aetheryte.haze.cool/assets/hum.wav"></audio>
+<p>whir 1</p>
+<audio controls="" src="https://aetheryte.haze.cool/assets/whir1.wav"></audio>
+<p>whir 2</p>
+<audio controls="" src="https://aetheryte.haze.cool/assets/whir2.wav"></audio>
+<p>
+sadly, getting the actual ambiance would require a bit more elbow
+grease. i <b>could</b> have just thrown these together in <a href="https://www.apple.com/logic-pro/">logic pro</a> and
+called it a day, but where's the fun in that? plus, i'd have to create
+an excessively long track. i didn't want to be subconsciously aware of
+when the loop repeats. i wasn't too worried about this though, as i
+had the right tools up my sleeve to solve my first world made up
+problem.
+</p>
+<h3 id="org9606b59">web audio api</h3>
+<p>
+enter the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API">web audio api</a>. im not sure who (or what) did it first, but
+av processing tends to converge on the idea of "nodes" that produce,
+transmute, or consume samples. i'm pretty sure this comes from the
+status quo before large investments in pro-av workflows on computers,
+which i'd guess would be modular synths.
+</p>
+<h4 id="org34b250e">the hum</h4>
+<p>
+i didn't do much analysis on this asset in particular. i assumed (and
+was correct) that the loop is <i>mostly</i> a perfect loop. a friend of
+mine helped get it sample correct so that it'd loop without a click
+when playing with web audio api (you can instruct a "sink" node to
+continue supplying samples by resetting it's offset), but there wasn't
+any other post processing on that asset. the audio node graph is
+pretty simple at this point: <code>source node (hum.wav) -&gt; gain node
+(-25db) -&gt; output node</code>. the gain node is there to match the volume
+adjustment made in game. the interesting (but only relatively) part of
+the graph however is the whir nodes.
+</p>
+<h4 id="orgf5a4f49">the whirs</h4>
+<p>
+ffxiv plays the whirs at random intervals, pitches, and gain (volume).
+these are all added to create an illusion of life(?) that make it
+harder to detect when an asset is repeating. thankfully, ffxiv also
+provided values that gave the min and max values for each of the
+random parameters, so it was easy to translate into javascript:
+</p>
+<pre>
+const whirIndex = Math.floor(Math.random() * whirs.length);
+
+const whirPlaybackRate = Math.random() * (1 - 0.794) + 0.794;
+
+whirGainNode.gain.value = Math.random() * (1 - 0.6) + 0.6;
+</pre>
+<p>
+if you've ever built a graph by hand the flow is usually something
+like: allocate a node, set metadata, and connect. i do the following
+to setup the hum:
+</p>
+<pre>const humSource = audioContext.createBufferSource();
+humSource.buffer = await loadSample(
+    audioContext,
+    isSafari ? "assets/hum.wav.opus.aac" : "assets/hum.wav.opus",
+);
+humSource.playbackRate.value = 0.63;
+humSource.connect(humGainNode);
+humSource.loop = true;
+humSource.start(0);
+</pre>
+<p>
+it's actually ok that i connect the node before i set loop, because
+the node doesn't produce samples until i call <code>start</code>.
+</p>
+<p>
+the other part of the ceremony is the whir loop. it's not actually a
+loop using conventional loop control flow. instead of using a <code>while
+(true)</code> with a random "sleep" in between, i instead use <code>setTimeout</code> to
+schedule the next whir at a random interval.
+</p>
+<pre>function chooseWhir() {
+    const whirSource = audioContext.createBufferSource();
+    const whirIndex = Math.floor(Math.random() * whirs.length);
+    const whirPlaybackRate = Math.random() * (1 - 0.794) + 0.794;
+    whirGainNode.gain.value = Math.random() * (1 - 0.6) + 0.6;
+    whirSource.buffer = whirs[whirIndex];
+    whirSource.playbackRate.value = whirPlaybackRate;
+    whirSource.connect(whirGainNode);
+    whirSource.start(0);
+
+    whirSource.onended = () =&gt; {
+        
+        whirSource.disconnect(whirGainNode);
+        const nextWhirDelay = Math.floor(Math.random() * 2001);
+        setTimeout(chooseWhir, nextWhirDelay);
+    };
+}
+</pre>
+<p>
+same deal here: create a source node, select a random asset, playback
+rate (pitch), gain (volume), and connect it to the gain node (which
+stays constant in this process and only has it's value changed.) the
+key here is that when the source asset ends, instead of looping, we
+remove that node from the graph and add a new one (by calling
+<code>chooseWhir</code> again.) because there is an expected delay before the
+next whir, i'm ok with adding whatever latency is added by doing the
+random calculation, it's likely marginal.
+</p>
+<h3 id="orge057b60">conclusion</h3>
+<p>
+this was a fun project to work on. you can demo the final result <a href="https://aetheryte.haze.cool">here</a>.
+because we've ruined playing audio in browsers you need to interact
+with the page first before you can hear anything, so make sure you
+unmute both the whir and the hum and click "connect" to listen.
+</p>
+<h4 id="orge060686">vanilla js</h4>
+<p>
+growing up as an engineer i didn't care too much about the web or web
+technologies. i was more focused on systems applications, games, and
+networking. im not sure where i learned to interact with the web or
+build web apps, but it sure wasn't the bog standard npm + react +
+jsx/tsx dance we have today. im not building enterprise grade web apps
+meant for collaboration between 100+ devs, it's just me. i didn't mind
+creating static elements and using <code>document.getElemenyById</code>. it
+greatly simplified the creation process and let me move quicker and
+care about the project at hand. no frustrations with transpilation or
+jsx, my project wasn't that complicated. 
+</p>
+<p><a href="https://news.ycombinator.com/item?id=49479546">Comments on Hacker News</a></p>]]></content:encoded>
+      <guid isPermaLink="true">https://haz.ee/posts/aetheryte-radio.html</guid>
+      <category>Hacker News</category>
+      <pubDate>Fri, 28 Aug 2026 14:59:15 +0000</pubDate>
+      <dc:creator>wonger_</dc:creator>
+    </item>
+    <item>
       <title>Some conservationists are helping to restore Africa’s wild dog populations</title>
       <link>https://www.smithsonianmag.com/science-nature/africa-wild-dogs-most-hated-carnivores-continent-heres-why-conservationists-saving-them-anyway-180989287/</link>
       <description>Meet the team that closely monitors the playful canines, which need help to form diverse packs and stop their numbers from dwindling</description>
@@ -5899,713 +6519,6 @@ indexflow-seo = "0.1.2"</pre>
       <category>Hacker News</category>
       <pubDate>Thu, 27 Aug 2026 22:41:11 +0000</pubDate>
       <dc:creator>jxmorris12</dc:creator>
-    </item>
-    <item>
-      <title>Select * from Internet.blogposts</title>
-      <link>https://pfrazee.leaflet.pub/3mu3p2smmis22</link>
-      <description>Nitter gets a cease &amp; desist from X while the atproto makes the Internet more open.</description>
-      <content:encoded><![CDATA[<p>In 2007, Tim Berners Lee write the essay <a href="https://www.panarchy.org/berners-lee/graph.html">The Giant Global Graph</a>. Quote:</p>
-<blockquote>There are cries from the heart .. for my friendship, that relationship to another person, to transcend documents and sites. ..Then any other site or program can use that information.</blockquote>
-<p>It seems appropriate as <a href="https://techcrunch.com/2026/08/25/x-sends-cease-and-desist-to-open-source-project-nitter-over-alleged-scraping/">X is sending cease-and-desist letters to Nitter</a> to remember TBL's essay. Nitter is - was - a simple frontend to X which allows users to view tweets without logging in. Even that small use of proxying to the pages is enough to receive threats of legal action.</p>
-<p>Twitter's API in 2007 was famously open, which meant thousands of developers building clients, tools, and analytics for free. So, what happened? Why was it pulled? Simple: the network won. The developers stopped being an asset, and the API progressively closed. Rate limits, pricing tiers, login requirements, then technical blocks on the workarounds, and now letters from lawyers. Meta ran the same playbook a decade ago and it's now hard to remember there was ever a Facebook or Instagram API worth building on.</p>
-<p>This is why Brewster Kahle, founder of the Internet Archive, has been calling for over a decade for us to <a href="https://blog.archive.org/2015/02/11/locking-the-web-open-a-call-for-a-distributed-web/">lock the Web open</a>.</p>
-<p>Nitter started off using X's APIs. When that closed, it read public web pages. And now that there's nothing left to close, the demand is that the source code come down. A program that displays public posts is being treated as a circumvention device under computer-crime statutes.</p>
-<p>We have a walled garden problem. It isn't going to change, and the only option in front of us is to start fresh.</p>
-<p>The good news is, <a href="https://atproto.com/">atproto</a> continues to <a href="https://npmx.dev/package-stats/@atproto/syntax/v/0.7.5?end=2026-08-26&amp;start=2025-08-28&amp;granularity=monthly">grow</a>, <a href="https://activitypub.rocks/">activitypub</a> remains resilient, and our community is full of believers and builders in the open social web. Since I work on atproto, that's what I'll talk about next.</p>
-<h3 id="interoperation-by-select">Interoperation by <code>SELECT *</code></h3>
-<pre><code>SELECT * FROM internet.blogposts</code></pre>
-<p>The walled garden problem is downstream of a simple question: how do I <code>SELECT * FROM internet</code>?</p>
-<p>If you've never written database code, <code>SELECT * FROM users</code> is how you ask a database for everything it knows about its users. Once you have it you can filter it, sort it, and join it against anything else you've got.</p>
-<p>The web doesn't historically work that way. The web is a few dozen companies, each holding a filing cabinet, each with a receptionist posted out front. He'll read you one file at a time, but only files you can name, as fast as he cares to read, and as long as his boss allows.</p>
-<p>Nitter was a lightweight X reader that worked fine right up until X turned off the access it depended on. Every API (the "receptionist") is a business decision that hasn't been reversed yet.</p>
-<p>But Impermanence isn't the only problem. Even a permanent, free, generously rate-limited API wouldn't be enough. Applications need much more meaningful access than APIs can provide.</p>
-<ul><li><p>You can only ask questions someone already thought to answer. An API is a fixed menu. It gives you <code>getPosts(user)</code> and <code>getFollowers(user)</code>. If your product idea needs "posts from people my followers follow, ranked by how often they get quoted," there is no endpoint for that, and there never will be, because nobody at that company is building for your product.</p></li><li><p>Even the right questions come back in the wrong shape. Followers come 100 at a time. A two-million-follower account is 20,000 round trips. At any polite rate limit that's hours of work to answer one question about one user — so anything interactive, anything that has to feel instant, is off the table before you start.</p></li><li><p>You can't join across "cabinets". The interesting questions are almost always cross-service: this person's posts against that person's photos against a third service's reviews. Two receptionists in two buildings can't cross-reference anything, and neither can you.</p></li><li><p>You can't index data you don't hold. Search, ranking, recommendations, feeds, moderation tooling — all of it is built on indexes over the whole corpus, laid out for the specific questions your product asks. You cannot build an index through a keyhole.</p></li></ul>
-<p>To actually build a service, we need the whole dataset rather than a view onto it; we need it live, arriving as it changes instead of polled for; we need to index it however my product demands; we need to write back into it; and we need all of that guaranteed in a way no single company's quarterly priorities can revoke.</p>
-<p>Desktop apps handle this by sharing the filesystem. Internet apps don't use files; they use databases. We need to share the database.</p>
-<p>As a user, I don't want to be locked into an app anymore than I'd want to be locked in the trunk of a car. I want an actual free market.</p>
-<p>So then, here's another set of needs.</p>
-<ul><li><p>Persistence of identity.</p><ul><li><p>My presence and relationships are built around my identity. It needs to outlive the app I signed up with.</p></li></ul></li><li><p>The export of living (not dead) data between services.</p><ul><li><p>Exporting archives of your tweets is useless as an account migration solution because data doesn't live in isolation.</p></li><li><p>If data is no longer operable - capable of additional operations by participants in the network - then it's a static archive and useless to another application.</p></li><li><p>You could always print your tweets and look at them I guess.</p></li></ul></li></ul>
-<p>These are all issues atproto is designed to solve, including open data access, account migration, and a live firehose of network activity.</p>
-<h3 id="how-atproto-makes-select-from-internet-happen">How atproto makes <code>SELECT * FROM internet</code> happen</h3>
-<p>How do we share the database? We don't. We share a lot of them. We create a whole network of personal data servers (PDS) which applications interact with.</p>
-<p>How do we handle apps sending complex <code>SELECT *</code> queries to our personal data servers? We don't. We replicate the data on logs. We have each application aggregate copies of the data to query locally.</p>
-<p>How do we have apps write to those databases? In this case- we do! We have the apps send writes to the PDS, which in turn replicate back out to the other apps.</p>
-<p>This last one is the core of the intuition about atproto: the write/ingest loop. Almost every atproto app has code that looks like this:</p>
-<pre><code>// write
-pds.putRecord(post)
-
-// ingest
-onPut(‘app.bsky.feed.post’, evt =&gt; {
-  mydb.put(‘posts’, {...})
-})
-</code></pre>
-<p>Rather than waiting for the ingest to come back over the wire, you can use a "short circuit" so your app's database can update more quickly. The 200 OK from the PDS is a transactional go-ahead.</p>
-<p>And so the more efficient pattern looks more like this:</p>
-<pre><code>// write
-pds.putRecord(post)
-mydb.put(‘posts’, {...}) // ← optimistic
-
-// ingest
-onPut(‘app.bsky.feed.post’, evt =&gt; {
-  mydb.put(‘posts’, {...})
-})</code></pre>
-<h3 id="does-it-work">Does it work?</h3>
-<p>Yes. The network exists. It's live, it's public, and you can read all of it right now — from a laptop, without asking anyone's permission. This is exactly how <a href="https://bsky.app">Bluesky</a>, <a href="https://tangled.org/">Tangled</a>, <a href="https://leaflet.pub/">Leaflet</a>, and a <a href="https://atstore.fyi/">bunch of others</a> work now.</p>
-<p>Let me hit you with some stats. At time of writing, there are:</p>
-<ul><li><p>46.1M accounts on atproto</p></li><li><p>24.5B records</p><ul><li><p>3.15B of them are posts</p></li><li><p>17.4B of them are likes</p></li></ul></li><li><p>500-1000 write-events per second</p></li><li><p>Over 5000 personal data servers</p></li><li><p>And <a href="https://atstore.fyi/">enough apps to make a pretty good appstore site</a></p></li></ul>
-<p>It's never been easier to tap into the data with the new <a href="https://bsky.network/">jetstream service</a>.</p>
-<pre><code>import { Jetstream, isCreate } from '@bsky/jetstream';
-import { app } from '@bsky/sdk/lexicons';
-
-const jetstream = new Jetstream('https://jetstream.us-east.bsky.network');
-const collections = [app.bsky.graph..bsky.feed.repost, app.bsky.feed.post];
-
-for await (const event of jetstream.live({ collections })) {
-  if (isCreate(event, app.bsky.graph.
-    console.log(`🌱  ${event.did}${event.commit.record.subject}`);
-  } else if (isCreate(event, app.bsky.feed.repost)) {
-    console.log(`♻️  ${event.did}  reposts  ${event.commit.record.subject.uri}`);
-  } else if (isCreate(event, app.bsky.feed.post) &amp;&amp; event.commit.record.reply) {
-    console.log(`💭  ${event.did}  replies  ${event.commit.record.reply.parent.uri}`);
-  }
-}</code></pre>
-<p>If you want a fast way to get into it, <a href="https://bsky.network/">try it out here</a>.</p>
-<h3 id="stop-getting-cease-desists-select-from-internetblogposts-instead">Stop getting cease &amp; desists. <code>SELECT * FROM internet.blogposts</code> instead.</h3>
-<p>And, oh, if you're looking specifically for blogposts on atproto, you probably want to use <a href="https://standard.site/">standard.site</a>.</p>
-<p>👉 </p>
-<p><a href="https://news.ycombinator.com/item?id=49472161">Comments on Hacker News</a></p>]]></content:encoded>
-      <guid isPermaLink="true">https://pfrazee.leaflet.pub/3mu3p2smmis22</guid>
-      <category>Hacker News</category>
-      <pubDate>Thu, 27 Aug 2026 22:34:32 +0000</pubDate>
-      <dc:creator>mmattbtw</dc:creator>
-    </item>
-    <item>
-      <title>Doctors are finally learning to manage antidepressant withdrawal</title>
-      <link>https://www.newscientist.com/article/2584861-antidepressant-withdrawal-symptoms-are-prompting-a-radical-rethink-of-how-we-treat-depression/</link>
-      <description>Doctors are finally learning to manage antidepressant withdrawal</description>
-      <content:encoded><![CDATA[<p><a href="https://news.ycombinator.com/item?id=49472090">Comments on Hacker News</a></p>]]></content:encoded>
-      <guid isPermaLink="true">https://www.newscientist.com/article/2584861-antidepressant-withdrawal-symptoms-are-prompting-a-radical-rethink-of-how-we-treat-depression/</guid>
-      <category>Hacker News</category>
-      <pubDate>Thu, 27 Aug 2026 22:26:04 +0000</pubDate>
-      <dc:creator>eutropheon</dc:creator>
-    </item>
-    <item>
-      <title>Show HN: OpenTIE and OpenXWA, Modern Ports of Tie Fighter and X-Wing Alliance</title>
-      <link>https://github.com/elyosh/OpenTIE/</link>
-      <description>Contribute to elyosh/OpenTIE development by creating an account on GitHub.</description>
-      <content:encoded><![CDATA[<h2>OpenTIE</h2>
-<p><a href="https://github.com/elyosh/OpenTIE/releases/latest"><img alt="GitHub Release" src="https://camo.githubusercontent.com/ee13e298a68bc99b97d42f271a12c527833e8e40f377b4f899659003b7029659/68747470733a2f2f696d672e736869656c64732e696f2f6769746875622f762f72656c656173652f656c796f73682f4f70656e544945"/></a>
-<a href="https://discord.gg/vfPVFxBA4"><img alt="Visit our Discord server" src="https://camo.githubusercontent.com/f78f160383e69c338703cc0f6069ae82a728a6d4d04854cf9d732416b9457d0d/68747470733a2f2f696d672e736869656c64732e696f2f646973636f72642f31353333303031343838333931393935343432"/></a></p>
-<p><a href="https://github.com/elyosh/OpenTIE/blob/main/assets/opentie-001.jpg"><img alt="Screenshot of OpenTIE" src="https://github.com/elyosh/OpenTIE/raw/main/assets/opentie-001.jpg"/></a></p>
-<p>OpenTIE is an open-source reimplementation of <em>Star Wars: TIE Fighter</em> for
-Windows, macOS, and Linux. It runs the original game data natively on current
-systems and supports both the 1995 Collector's CD-ROM and the 1998 Windows
-release.</p>
-<p>With both editions installed, OpenTIE can combine the 1995 menus, cutscenes,
-and adaptive iMUSE soundtrack with the 1998 flight simulation and 3D assets.</p>
-<p>Important</p>
-<p>OpenTIE does not include any content from the original game. A complete
-installation of at least one supported edition is required. Install both
-editions to use the recommended combination.</p>
-<p><em>Star Wars: TIE Fighter Special Edition</em> is available from
-<a href="https://www.gog.com/en/game/star_wars_tie_fighter_special_edition">GOG</a> and
-<a href="https://store.steampowered.com/app/355250/STAR_WARS_TIE_Fighter_Special_Edition/">Steam</a>.</p>
-<h2>The best of both editions</h2>
-<p>The 1995 and 1998 releases each have their own presentation, flight simulation,
-and soundtrack. OpenTIE lets the menus and cutscenes, flight simulation, and
-music be selected independently.</p>
-<p>The recommended configuration combines:</p>
-<ul>
-<li>the 1995 menus and cutscenes</li>
-<li>the 1998 flight simulation and 3D assets</li>
-<li>the adaptive 1995 iMUSE soundtrack</li>
-</ul>
-<p>This retains the 1998 flight presentation without giving up the interactive
-music of the Collector's CD-ROM. Either supported edition can also be played
-on its own.</p>
-<h2>Adaptive music</h2>
-<p>OpenTIE reimplements the adaptive iMUSE soundtrack from the 1995 Collector's
-CD-ROM. The music responds to mission events and moves seamlessly between
-themes during flight.</p>
-<p>OpenTIE can emulate Roland SC-55 Sound Canvas, the hardware for which the game’s
-music was originally composed. This requires compatible SC-55 ROMs supplied by
-the user.</p>
-<p>Built-in Sound Blaster-compatible OPL3 emulation is available for the classic
-FM-synth sound, while FluidSynth can play the soundtrack with a user-selected
-SoundFont.</p>
-<p>The original prerecorded TIE98 music remains available when the complete 1998
-experience is preferred.</p>
-<h2>Graphics</h2>
-<p>OpenTIE offers classic and modern graphics modes. Classic mode preserves the
-original presentation, while modern mode combines the original models and
-cockpit artwork with high-resolution rendering and substantially more advanced
-lighting.</p>
-<p>Modern graphics include:</p>
-<ul>
-<li>shadows, ambient occlusion, and bloom</li>
-<li>motion blur</li>
-<li>MSAA and AMD FidelityFX FSR 3.1.4 anti-aliasing and upscaling</li>
-<li>HDR output</li>
-</ul>
-<p>Press <code>TAB</code> while the game is running to switch between classic and modern
-graphics.</p>
-<h2>Smoother flight</h2>
-<p>Flight simulation can update at up to 240 Hz to match modern high-refresh-rate
-displays, providing smoother motion and more responsive controls. The original
-TIE95 and TIE98 timing modes remain available when their exact behavior is
-preferred.</p>
-<p>Modern gamepads and joysticks are supported and can be configured from
-OpenTIE's settings.</p>
-<h2>Getting started</h2>
-<ol>
-<li>Download the latest package for your platform from
-<a href="https://github.com/elyosh/OpenTIE/releases/latest">GitHub Releases</a>.</li>
-<li>Extract or install the package and launch OpenTIE.</li>
-<li>Select the complete TIE95 and/or TIE98 installation folders when prompted.</li>
-<li>If both editions are available, select the recommended configuration to
-combine the 1995 presentation and music with the 1998 flight experience.</li>
-</ol>
-<p>OpenTIE validates the selected installations, remembers them for future
-launches, and imports compatible existing pilot files during initial setup.</p>
-<p>To access OpenTIE settings from the concourse, press <code>ESC</code> and select
-<strong>OpenTIE Settings</strong>. During flight, press <code>ESC</code> to open them directly.</p>
-<p>Useful shortcuts:</p>
-<table>
-<thead>
-<tr>
-<th>Key</th>
-<th>Action</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>TAB</code></td>
-<td>Switch between classic and modern graphics</td>
-</tr>
-</tbody>
-</table>
-<h2>Supported platforms</h2>
-<table>
-<thead>
-<tr>
-<th>Platform</th>
-<th>Target</th>
-<th>Graphics backend</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Windows</td>
-<td>x86-64</td>
-<td>Direct3D 12 or Vulkan</td>
-</tr>
-<tr>
-<td>macOS</td>
-<td>macOS 13 or later; arm64 or x86-64</td>
-<td>Metal</td>
-</tr>
-<tr>
-<td>Linux</td>
-<td>x86-64; glibc 2.35 or later</td>
-<td>Vulkan</td>
-</tr>
-</tbody>
-</table>
-<h2>Current state</h2>
-<p>OpenTIE remains under active development. Bugs and differences from the
-original releases are still possible.</p>
-<h2>OpenXWA</h2>
-<p>Fans of Totally Games’ space simulators may also be interested in
-<a href="https://github.com/elyosh/OpenXWA">OpenXWA</a>, an open-source reimplementation
-of <em>Star Wars: X-Wing Alliance</em> for Windows, macOS, and Linux.</p>
-<h2>Community</h2>
-<p>Join the <a href="https://discord.gg/vfPVFxBA4">TotallyOpen Discord server</a> to discuss
-OpenTIE, OpenXWA, development, and the Totally Games flight simulators.</p>
-<h2>System requirements</h2>
-<ul>
-<li>a 64-bit system with a modern GPU</li>
-<li>a complete installation of the 1995 Collector's CD-ROM or the 1998 Windows
-release</li>
-</ul>
-<p>Release packages include the required runtime libraries. Keep the executable,
-libraries, resources, and shader directories together when moving an
-installation.</p>
-<h2>Building from source</h2>
-<p>The build requires CMake 3.23 or later, a C/C++ toolchain, SDL3 3.4, zstd,
-FFmpeg, and SDL_shadercross. Release packaging pins its dependencies, including
-SDL3 3.4.14, and provides the reference for reproducible builds.</p>
-<p>Platform-specific instructions are available for
-<a href="https://github.com/elyosh/OpenTIE/blob/main/packaging/windows/README.md">Windows</a>,
-<a href="https://github.com/elyosh/OpenTIE/blob/main/packaging/macos/README.md">macOS</a>, and
-<a href="https://github.com/elyosh/OpenTIE/blob/main/packaging/linux/README.md">Linux</a>.</p>
-<p><a href="https://news.ycombinator.com/item?id=49471965">Comments on Hacker News</a></p>]]></content:encoded>
-      <guid isPermaLink="true">https://github.com/elyosh/OpenTIE/</guid>
-      <category>Hacker News</category>
-      <pubDate>Thu, 27 Aug 2026 22:10:47 +0000</pubDate>
-      <media:content url="https://camo.githubusercontent.com/ee13e298a68bc99b97d42f271a12c527833e8e40f377b4f899659003b7029659/68747470733a2f2f696d672e736869656c64732e696f2f6769746875622f762f72656c656173652f656c796f73682f4f70656e544945" type="image/jpeg" medium="image"/>
-      <dc:creator>elyosh</dc:creator>
-    </item>
-    <item>
-      <title>AI Engineer Notebooks – free, framework-free RAG/agents/evals on Colab</title>
-      <link>https://github.com/calmrocks/ai-engineer-notebooks</link>
-      <description>Hands-on, framework-free Colab notebooks for the AI Engineer / Forward Deployed Engineer (FDE) skill set — model APIs, structured output, tool calling, RAG, evals-as-the-spine, agents (loop from sc...</description>
-      <content:encoded><![CDATA[<h2>AI Engineer Notebooks</h2>
-<p><a href="https://github.com/calmrocks/ai-engineer-notebooks/blob/main/LICENSE"><img alt="License: MIT" src="https://camo.githubusercontent.com/fdf2982b9f5d7489dcf44570e714e3a15fce6253e0cc6b5aa61a075aac2ff71b/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f4c6963656e73652d4d49542d79656c6c6f772e737667"/></a>
-<a href="https://colab.research.google.com/github/calmrocks/ai-engineer-notebooks/blob/main/00-setup/00-environment.ipynb"><img alt="Open In Colab" src="https://camo.githubusercontent.com/eff96fda6b2e0fff8cdf2978f89d61aa434bb98c00453ae23dd0aab8d1451633/68747470733a2f2f636f6c61622e72657365617263682e676f6f676c652e636f6d2f6173736574732f636f6c61622d62616467652e737667"/></a>
-<a href="https://github.com/calmrocks/ai-engineer-notebooks/stargazers"><img alt="GitHub stars" src="https://camo.githubusercontent.com/dc0a95191b6db56fe1fe14119fef95dc8e927f4ffbe7f4f7e5474a7d6627e4e2/68747470733a2f2f696d672e736869656c64732e696f2f6769746875622f73746172732f63616c6d726f636b732f61692d656e67696e6565722d6e6f7465626f6f6b733f7374796c653d736f6369616c"/></a></p>
-<p><strong>Learn the applied-LLM stack the way you'll actually be interviewed on it:
-framework-free, on a free API, from prompting all the way to serving, fine-tuning,
-and a red-team benchmark.</strong></p>
-<p>Runnable Colab notebooks for the <strong>AI Engineer / Forward Deployed Engineer (FDE)</strong>
-skill set. You build working systems on top of foundation models (model APIs, RAG,
-evals, agents, adaptation, serving) using raw APIs, not frameworks.</p>
-<h3>What makes this different</h3>
-<ul>
-<li><strong>Framework-free, on purpose.</strong> You write the agent loop, RAG, and evals from
-raw API calls first, so you understand what LangChain/LlamaIndex actually do
-before you reach for them (and can judge when <em>not</em> to). Patterns are durable;
-wrappers churn.</li>
-<li><strong>Evals are the spine.</strong> "Measure before you tune" is installed early and
-returns in every section. It's the habit that separates an engineer who shipped
-a system from one who built a demo.</li>
-<li><strong>Free to run, end to end.</strong> Everything runs on the <strong>free
-<a href="https://console.groq.com/">Groq</a> API</strong> (no credit card). The two topics Groq
-can't host, LoRA fine-tuning (06) and self-hosted serving (09), are
-concept-first with optional, fenced Colab-GPU appendices that were <strong>verified on
-a real Colab T4</strong>.</li>
-<li><strong>Real case studies, not toy demos.</strong> Three end-to-end
-<a href="https://github.com/calmrocks/ai-engineer-notebooks/blob/main/12-case-studies-and-capstone">case studies</a> show the skills combined under
-real constraints: a support assistant <em>debugged in production</em>, a
-pipeline-vs-agent cost showdown, and a red-team robustness benchmark.</li>
-<li><strong>OpenAI-compatible throughout</strong>, so every pattern transfers directly to OpenAI
-and (with small changes) Anthropic. Swap the base URL and the skills carry over.</li>
-</ul>
-<p>Built as the hands-on companion to
-<a href="https://www.calm.rocks/resources/career-development/transition-fde-ai-engineer/">Plan: Transitioning to Forward Deployed Engineer / AI Engineer</a>.
-The plan explains what to learn and why; these notebooks are where you run it.</p>
-<h2>Who this is for</h2>
-<p>Backend or full-stack engineers moving into AI Engineer, FDE, Applied AI,
-or Solutions Engineer (AI) roles. Different titles, largely the same job.
-You can ship production code; you want the applied-model layer on top.</p>
-<h2>Learning order</h2>
-<p>Work top to bottom. Each notebook is self-contained (installs its own
-dependencies, reads API keys from Colab secrets) and ends with exercises.</p>
-<h3>00 — Setup</h3>
-<table>
-<thead>
-<tr>
-<th>Notebook</th>
-<th>What you'll learn</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a href="https://github.com/calmrocks/ai-engineer-notebooks/blob/main/00-setup/00-environment.ipynb">Environment &amp; cost hygiene</a><br/><a href="https://colab.research.google.com/github/calmrocks/ai-engineer-notebooks/blob/main/00-setup/00-environment.ipynb"><img alt="Open In Colab" src="https://camo.githubusercontent.com/eff96fda6b2e0fff8cdf2978f89d61aa434bb98c00453ae23dd0aab8d1451633/68747470733a2f2f636f6c61622e72657365617263682e676f6f676c652e636f6d2f6173736574732f636f6c61622d62616467652e737667"/></a></td>
-<td>API keys via Colab secrets, spend guards, model picking</td>
-</tr>
-</tbody>
-</table>
-<h3>01 — Model APIs</h3>
-<table>
-<thead>
-<tr>
-<th>Notebook</th>
-<th>What you'll learn</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a href="https://github.com/calmrocks/ai-engineer-notebooks/blob/main/01-model-apis/00-prompting-basics.ipynb">Prompting fundamentals</a><br/><a href="https://colab.research.google.com/github/calmrocks/ai-engineer-notebooks/blob/main/01-model-apis/00-prompting-basics.ipynb"><img alt="Open In Colab" src="https://camo.githubusercontent.com/eff96fda6b2e0fff8cdf2978f89d61aa434bb98c00453ae23dd0aab8d1451633/68747470733a2f2f636f6c61622e72657365617263682e676f6f676c652e636f6d2f6173736574732f636f6c61622d62616467652e737667"/></a></td>
-<td>Clear instructions, few-shot, output-format specs, step-by-step reasoning: the cheapest lever, each shown moving a number</td>
-</tr>
-<tr>
-<td><a href="https://github.com/calmrocks/ai-engineer-notebooks/blob/main/01-model-apis/01-structured-output.ipynb">Structured output</a><br/><a href="https://colab.research.google.com/github/calmrocks/ai-engineer-notebooks/blob/main/01-model-apis/01-structured-output.ipynb"><img alt="Open In Colab" src="https://camo.githubusercontent.com/eff96fda6b2e0fff8cdf2978f89d61aa434bb98c00453ae23dd0aab8d1451633/68747470733a2f2f636f6c61622e72657365617263682e676f6f676c652e636f6d2f6173736574732f636f6c61622d62616467652e737667"/></a></td>
-<td>Getting reliable JSON out of a model, and where it breaks</td>
-</tr>
-<tr>
-<td><a href="https://github.com/calmrocks/ai-engineer-notebooks/blob/main/01-model-apis/02-tool-calling.ipynb">Tool calling</a><br/><a href="https://colab.research.google.com/github/calmrocks/ai-engineer-notebooks/blob/main/01-model-apis/02-tool-calling.ipynb"><img alt="Open In Colab" src="https://camo.githubusercontent.com/eff96fda6b2e0fff8cdf2978f89d61aa434bb98c00453ae23dd0aab8d1451633/68747470733a2f2f636f6c61622e72657365617263682e676f6f676c652e636f6d2f6173736574732f636f6c61622d62616467652e737667"/></a></td>
-<td>Function/tool calling end to end, error paths included</td>
-</tr>
-<tr>
-<td><a href="https://github.com/calmrocks/ai-engineer-notebooks/blob/main/01-model-apis/03-streaming.ipynb">Streaming</a><br/><a href="https://colab.research.google.com/github/calmrocks/ai-engineer-notebooks/blob/main/01-model-apis/03-streaming.ipynb"><img alt="Open In Colab" src="https://camo.githubusercontent.com/eff96fda6b2e0fff8cdf2978f89d61aa434bb98c00453ae23dd0aab8d1451633/68747470733a2f2f636f6c61622e72657365617263682e676f6f676c652e636f6d2f6173736574732f636f6c61622d62616467652e737667"/></a></td>
-<td>Streaming responses and what UIs need from them</td>
-</tr>
-<tr>
-<td><a href="https://github.com/calmrocks/ai-engineer-notebooks/blob/main/01-model-apis/04-context-and-caching.ipynb">Context &amp; caching</a><br/><a href="https://colab.research.google.com/github/calmrocks/ai-engineer-notebooks/blob/main/01-model-apis/04-context-and-caching.ipynb"><img alt="Open In Colab" src="https://camo.githubusercontent.com/eff96fda6b2e0fff8cdf2978f89d61aa434bb98c00453ae23dd0aab8d1451633/68747470733a2f2f636f6c61622e72657365617263682e676f6f676c652e636f6d2f6173736574732f636f6c61622d62616467652e737667"/></a></td>
-<td>Context-window budgeting, prompt caching, batch vs real-time pricing</td>
-</tr>
-</tbody>
-</table>
-<h3>02 — Evals I: measuring outputs</h3>
-<table>
-<thead>
-<tr>
-<th>Notebook</th>
-<th>What you'll learn</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a href="https://github.com/calmrocks/ai-engineer-notebooks/blob/main/02-evals-basics/01-measuring-outputs.ipynb">Measuring outputs</a><br/><a href="https://colab.research.google.com/github/calmrocks/ai-engineer-notebooks/blob/main/02-evals-basics/01-measuring-outputs.ipynb"><img alt="Open In Colab" src="https://camo.githubusercontent.com/eff96fda6b2e0fff8cdf2978f89d61aa434bb98c00453ae23dd0aab8d1451633/68747470733a2f2f636f6c61622e72657365617263682e676f6f676c652e636f6d2f6173736574732f636f6c61622d62616467652e737667"/></a></td>
-<td>Golden sets and metrics on the section-01 task; install the "measure before you tune" habit <em>before</em> building anything you'd need to tune. Evals is the spine; it returns in every section after this</td>
-</tr>
-</tbody>
-</table>
-<h3>03 — RAG</h3>
-<table>
-<thead>
-<tr>
-<th>Notebook</th>
-<th>What you'll learn</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a href="https://github.com/calmrocks/ai-engineer-notebooks/blob/main/03-rag/00-what-is-rag.ipynb">What is RAG?</a><br/><a href="https://colab.research.google.com/github/calmrocks/ai-engineer-notebooks/blob/main/03-rag/00-what-is-rag.ipynb"><img alt="Open In Colab" src="https://camo.githubusercontent.com/eff96fda6b2e0fff8cdf2978f89d61aa434bb98c00453ae23dd0aab8d1451633/68747470733a2f2f636f6c61622e72657365617263682e676f6f676c652e636f6d2f6173736574732f636f6c61622d62616467652e737667"/></a></td>
-<td>The retrieve → augment → generate loop, why RAG beats a plain LLM, and why RAG isn't the same as embeddings, with a 15-line working demo</td>
-</tr>
-<tr>
-<td><a href="https://github.com/calmrocks/ai-engineer-notebooks/blob/main/03-rag/01-embeddings-retrieval.ipynb">Embeddings &amp; retrieval</a><br/><a href="https://colab.research.google.com/github/calmrocks/ai-engineer-notebooks/blob/main/03-rag/01-embeddings-retrieval.ipynb"><img alt="Open In Colab" src="https://camo.githubusercontent.com/eff96fda6b2e0fff8cdf2978f89d61aa434bb98c00453ae23dd0aab8d1451633/68747470733a2f2f636f6c61622e72657365617263682e676f6f676c652e636f6d2f6173736574732f636f6c61622d62616467652e737667"/></a></td>
-<td>Embedding choice, vector search, similarity pitfalls. Get retrieval working first</td>
-</tr>
-<tr>
-<td><a href="https://github.com/calmrocks/ai-engineer-notebooks/blob/main/03-rag/02-hybrid-and-reranking.ipynb">Hybrid &amp; reranking</a><br/><a href="https://colab.research.google.com/github/calmrocks/ai-engineer-notebooks/blob/main/03-rag/02-hybrid-and-reranking.ipynb"><img alt="Open In Colab" src="https://camo.githubusercontent.com/eff96fda6b2e0fff8cdf2978f89d61aa434bb98c00453ae23dd0aab8d1451633/68747470733a2f2f636f6c61622e72657365617263682e676f6f676c652e636f6d2f6173736574732f636f6c61622d62616467652e737667"/></a></td>
-<td>Keyword + vector hybrid retrieval, rerankers, when each earns its cost</td>
-</tr>
-<tr>
-<td><a href="https://github.com/calmrocks/ai-engineer-notebooks/blob/main/03-rag/03-chunking.ipynb">Chunking</a><br/><a href="https://colab.research.google.com/github/calmrocks/ai-engineer-notebooks/blob/main/03-rag/03-chunking.ipynb"><img alt="Open In Colab" src="https://camo.githubusercontent.com/eff96fda6b2e0fff8cdf2978f89d61aa434bb98c00453ae23dd0aab8d1451633/68747470733a2f2f636f6c61622e72657365617263682e676f6f676c652e636f6d2f6173736574732f636f6c61622d62616467652e737667"/></a></td>
-<td>Chunking strategies on a real messy corpus, revisited last once you can judge them against retrieval</td>
-</tr>
-<tr>
-<td><a href="https://github.com/calmrocks/ai-engineer-notebooks/blob/main/03-rag/04-why-rag-fails.ipynb">Why RAG fails</a><br/><a href="https://colab.research.google.com/github/calmrocks/ai-engineer-notebooks/blob/main/03-rag/04-why-rag-fails.ipynb"><img alt="Open In Colab" src="https://camo.githubusercontent.com/eff96fda6b2e0fff8cdf2978f89d61aa434bb98c00453ae23dd0aab8d1451633/68747470733a2f2f636f6c61622e72657365617263682e676f6f676c652e636f6d2f6173736574732f636f6c61622d62616467652e737667"/></a></td>
-<td>Diagnosing bad answers: retrieval quality, not generation, is usually the bottleneck</td>
-</tr>
-</tbody>
-</table>
-<h3>04 — Evals II: the differentiator</h3>
-<table>
-<thead>
-<tr>
-<th>Notebook</th>
-<th>What you'll learn</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a href="https://github.com/calmrocks/ai-engineer-notebooks/blob/main/04-evals/01-golden-sets.ipynb">Golden sets</a><br/><a href="https://colab.research.google.com/github/calmrocks/ai-engineer-notebooks/blob/main/04-evals/01-golden-sets.ipynb"><img alt="Open In Colab" src="https://camo.githubusercontent.com/eff96fda6b2e0fff8cdf2978f89d61aa434bb98c00453ae23dd0aab8d1451633/68747470733a2f2f636f6c61622e72657365617263682e676f6f676c652e636f6d2f6173736574732f636f6c61622d62616467652e737667"/></a></td>
-<td>Building a golden set for the RAG system from section 03</td>
-</tr>
-<tr>
-<td><a href="https://github.com/calmrocks/ai-engineer-notebooks/blob/main/04-evals/02-llm-as-judge.ipynb">LLM as judge</a><br/><a href="https://colab.research.google.com/github/calmrocks/ai-engineer-notebooks/blob/main/04-evals/02-llm-as-judge.ipynb"><img alt="Open In Colab" src="https://camo.githubusercontent.com/eff96fda6b2e0fff8cdf2978f89d61aa434bb98c00453ae23dd0aab8d1451633/68747470733a2f2f636f6c61622e72657365617263682e676f6f676c652e636f6d2f6173736574732f636f6c61622d62616467652e737667"/></a></td>
-<td>Judge prompts, agreement with humans, and the judge's own failure modes</td>
-</tr>
-<tr>
-<td><a href="https://github.com/calmrocks/ai-engineer-notebooks/blob/main/04-evals/03-regression-evals.ipynb">Regression evals</a><br/><a href="https://colab.research.google.com/github/calmrocks/ai-engineer-notebooks/blob/main/04-evals/03-regression-evals.ipynb"><img alt="Open In Colab" src="https://camo.githubusercontent.com/eff96fda6b2e0fff8cdf2978f89d61aa434bb98c00453ae23dd0aab8d1451633/68747470733a2f2f636f6c61622e72657365617263682e676f6f676c652e636f6d2f6173736574732f636f6c61622d62616467652e737667"/></a></td>
-<td>Evals as CI: catching quality regressions when you change a prompt or model</td>
-</tr>
-</tbody>
-</table>
-<h3>05 — Agents</h3>
-<table>
-<thead>
-<tr>
-<th>Notebook</th>
-<th>What you'll learn</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a href="https://github.com/calmrocks/ai-engineer-notebooks/blob/main/05-agents/01-agent-loop-from-scratch.ipynb">Agent loop from scratch</a><br/><a href="https://colab.research.google.com/github/calmrocks/ai-engineer-notebooks/blob/main/05-agents/01-agent-loop-from-scratch.ipynb"><img alt="Open In Colab" src="https://camo.githubusercontent.com/eff96fda6b2e0fff8cdf2978f89d61aa434bb98c00453ae23dd0aab8d1451633/68747470733a2f2f636f6c61622e72657365617263682e676f6f676c652e636f6d2f6173736574732f636f6c61622d62616467652e737667"/></a></td>
-<td>A working agent loop in raw API calls, no framework</td>
-</tr>
-<tr>
-<td><a href="https://github.com/calmrocks/ai-engineer-notebooks/blob/main/05-agents/02-tool-design.ipynb">Tool design</a><br/><a href="https://colab.research.google.com/github/calmrocks/ai-engineer-notebooks/blob/main/05-agents/02-tool-design.ipynb"><img alt="Open In Colab" src="https://camo.githubusercontent.com/eff96fda6b2e0fff8cdf2978f89d61aa434bb98c00453ae23dd0aab8d1451633/68747470733a2f2f636f6c61622e72657365617263682e676f6f676c652e636f6d2f6173736574732f636f6c61622d62616467652e737667"/></a></td>
-<td>Designing tools the model can actually use well</td>
-</tr>
-<tr>
-<td><a href="https://github.com/calmrocks/ai-engineer-notebooks/blob/main/05-agents/03-guardrails-and-budgets.ipynb">Guardrails &amp; budgets</a><br/><a href="https://colab.research.google.com/github/calmrocks/ai-engineer-notebooks/blob/main/05-agents/03-guardrails-and-budgets.ipynb"><img alt="Open In Colab" src="https://camo.githubusercontent.com/eff96fda6b2e0fff8cdf2978f89d61aa434bb98c00453ae23dd0aab8d1451633/68747470733a2f2f636f6c61622e72657365617263682e676f6f676c652e636f6d2f6173736574732f636f6c61622d62616467652e737667"/></a></td>
-<td>Stopping conditions, cost/latency budgets, when a pipeline beats an agent</td>
-</tr>
-<tr>
-<td><a href="https://github.com/calmrocks/ai-engineer-notebooks/blob/main/05-agents/04-mcp-and-the-tool-ecosystem.ipynb">MCP &amp; the tool ecosystem</a><br/><a href="https://colab.research.google.com/github/calmrocks/ai-engineer-notebooks/blob/main/05-agents/04-mcp-and-the-tool-ecosystem.ipynb"><img alt="Open In Colab" src="https://camo.githubusercontent.com/eff96fda6b2e0fff8cdf2978f89d61aa434bb98c00453ae23dd0aab8d1451633/68747470733a2f2f636f6c61622e72657365617263682e676f6f676c652e636f6d2f6173736574732f636f6c61622d62616467652e737667"/></a></td>
-<td>Concept: what the Model Context Protocol standardizes, how it maps to the raw tool loop, and when to reach for it</td>
-</tr>
-<tr>
-<td><a href="https://github.com/calmrocks/ai-engineer-notebooks/blob/main/05-agents/05-skills-and-progressive-disclosure.ipynb">Skills &amp; progressive disclosure</a><br/><a href="https://colab.research.google.com/github/calmrocks/ai-engineer-notebooks/blob/main/05-agents/05-skills-and-progressive-disclosure.ipynb"><img alt="Open In Colab" src="https://camo.githubusercontent.com/eff96fda6b2e0fff8cdf2978f89d61aa434bb98c00453ae23dd0aab8d1451633/68747470733a2f2f636f6c61622e72657365617263682e676f6f676c652e636f6d2f6173736574732f636f6c61622d62616467652e737667"/></a></td>
-<td>Concept: packaging reusable know-how an agent loads on demand. The <code>SKILL.md</code> pattern, the context-budget payoff, and Tools/MCP/Skills as one story</td>
-</tr>
-<tr>
-<td><a href="https://github.com/calmrocks/ai-engineer-notebooks/blob/main/05-agents/06-harness-engineering.ipynb">Harness engineering</a><br/><a href="https://colab.research.google.com/github/calmrocks/ai-engineer-notebooks/blob/main/05-agents/06-harness-engineering.ipynb"><img alt="Open In Colab" src="https://camo.githubusercontent.com/eff96fda6b2e0fff8cdf2978f89d61aa434bb98c00453ae23dd0aab8d1451633/68747470733a2f2f636f6c61622e72657365617263682e676f6f676c652e636f6d2f6173736574732f636f6c61622d62616467652e737667"/></a></td>
-<td>Synthesis: the scaffold <em>around</em> the call: context assembly &amp; compaction, tool-result shaping, and verification loops. Names the discipline the section has been teaching piece by piece</td>
-</tr>
-</tbody>
-</table>
-<h3>06 — Adapting the model</h3>
-<table>
-<thead>
-<tr>
-<th>Notebook</th>
-<th>What you'll learn</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a href="https://github.com/calmrocks/ai-engineer-notebooks/blob/main/06-adaptation/01-fine-tune-vs-rag-vs-prompt.ipynb">Fine-tune vs RAG vs prompt</a><br/><a href="https://colab.research.google.com/github/calmrocks/ai-engineer-notebooks/blob/main/06-adaptation/01-fine-tune-vs-rag-vs-prompt.ipynb"><img alt="Open In Colab" src="https://camo.githubusercontent.com/eff96fda6b2e0fff8cdf2978f89d61aa434bb98c00453ae23dd0aab8d1451633/68747470733a2f2f636f6c61622e72657365617263682e676f6f676c652e636f6d2f6173736574732f636f6c61622d62616467652e737667"/></a></td>
-<td>When to change the model's weights vs its inputs; what LoRA/QLoRA are and cost; the argument you'll have in the room, plus an optional real LoRA fine-tune on a free GPU</td>
-</tr>
-</tbody>
-</table>
-<h3>07 — Security</h3>
-<table>
-<thead>
-<tr>
-<th>Notebook</th>
-<th>What you'll learn</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a href="https://github.com/calmrocks/ai-engineer-notebooks/blob/main/07-security/01-prompt-injection-and-trust.ipynb">Prompt injection &amp; the trust boundary</a><br/><a href="https://colab.research.google.com/github/calmrocks/ai-engineer-notebooks/blob/main/07-security/01-prompt-injection-and-trust.ipynb"><img alt="Open In Colab" src="https://camo.githubusercontent.com/eff96fda6b2e0fff8cdf2978f89d61aa434bb98c00453ae23dd0aab8d1451633/68747470733a2f2f636f6c61622e72657365617263682e676f6f676c652e636f6d2f6173736574732f636f6c61622d62616467652e737667"/></a></td>
-<td>Direct &amp; indirect prompt injection, output handling, PII, excessive agency. The OWASP LLM Top 10 risks, failing live then defended</td>
-</tr>
-</tbody>
-</table>
-<h3>08 — Operations</h3>
-<table>
-<thead>
-<tr>
-<th>Notebook</th>
-<th>What you'll learn</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a href="https://github.com/calmrocks/ai-engineer-notebooks/blob/main/08-operations/01-observability-and-llmops.ipynb">Observability &amp; LLMOps</a><br/><a href="https://colab.research.google.com/github/calmrocks/ai-engineer-notebooks/blob/main/08-operations/01-observability-and-llmops.ipynb"><img alt="Open In Colab" src="https://camo.githubusercontent.com/eff96fda6b2e0fff8cdf2978f89d61aa434bb98c00453ae23dd0aab8d1451633/68747470733a2f2f636f6c61622e72657365617263682e676f6f676c652e636f6d2f6173736574732f636f6c61622d62616467652e737667"/></a></td>
-<td>Tracing every call, safe prompt logging, cost/latency/error metrics, drift detection, and the observe→eval feedback loop</td>
-</tr>
-<tr>
-<td><a href="https://github.com/calmrocks/ai-engineer-notebooks/blob/main/08-operations/02-reliability-and-fallbacks.ipynb">Reliability &amp; fallbacks</a><br/><a href="https://colab.research.google.com/github/calmrocks/ai-engineer-notebooks/blob/main/08-operations/02-reliability-and-fallbacks.ipynb"><img alt="Open In Colab" src="https://camo.githubusercontent.com/eff96fda6b2e0fff8cdf2978f89d61aa434bb98c00453ae23dd0aab8d1451633/68747470733a2f2f636f6c61622e72657365617263682e676f6f676c652e636f6d2f6173736574732f636f6c61622d62616467652e737667"/></a></td>
-<td>Retries with backoff, timeouts, fallback models, output validation, circuit breakers, graceful degradation</td>
-</tr>
-<tr>
-<td><a href="https://github.com/calmrocks/ai-engineer-notebooks/blob/main/08-operations/03-experiment-tracking-and-registry.ipynb">Experiment tracking &amp; registry</a><br/><a href="https://colab.research.google.com/github/calmrocks/ai-engineer-notebooks/blob/main/08-operations/03-experiment-tracking-and-registry.ipynb"><img alt="Open In Colab" src="https://camo.githubusercontent.com/eff96fda6b2e0fff8cdf2978f89d61aa434bb98c00453ae23dd0aab8d1451633/68747470733a2f2f636f6c61622e72657365617263682e676f6f676c652e636f6d2f6173736574732f636f6c61622d62616467652e737667"/></a></td>
-<td>MLflow end to end: log runs/params/metrics from the section-04 eval harness, register and version a model, and promote by stage: the tooling that turns "I ran an eval" into a tracked, reproducible workflow</td>
-</tr>
-</tbody>
-</table>
-<h3>09 — Serving &amp; inference performance</h3>
-<p>Where the free Groq API can't run the topic (these frameworks need a GPU),
-the notebook teaches it <strong>concept-first</strong> and fences an optional Colab-GPU
-appendix, the same pattern as the section-06 LoRA appendix.</p>
-<table>
-<thead>
-<tr>
-<th>Notebook</th>
-<th>What you'll learn</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a href="https://github.com/calmrocks/ai-engineer-notebooks/blob/main/09-serving-inference/01-serving-frameworks.ipynb">Serving frameworks</a><br/><a href="https://colab.research.google.com/github/calmrocks/ai-engineer-notebooks/blob/main/09-serving-inference/01-serving-frameworks.ipynb"><img alt="Open In Colab" src="https://camo.githubusercontent.com/eff96fda6b2e0fff8cdf2978f89d61aa434bb98c00453ae23dd0aab8d1451633/68747470733a2f2f636f6c61622e72657365617263682e676f6f676c652e636f6d2f6173736574732f636f6c61622d62616467652e737667"/></a></td>
-<td>The serving stack an AI engineer actually picks between (vLLM, TGI, Triton, TensorRT-LLM): what each optimizes, how they map onto the raw API you've been calling, and when to reach for which</td>
-</tr>
-<tr>
-<td><a href="https://github.com/calmrocks/ai-engineer-notebooks/blob/main/09-serving-inference/02-inference-performance.ipynb">Inference performance</a><br/><a href="https://colab.research.google.com/github/calmrocks/ai-engineer-notebooks/blob/main/09-serving-inference/02-inference-performance.ipynb"><img alt="Open In Colab" src="https://camo.githubusercontent.com/eff96fda6b2e0fff8cdf2978f89d61aa434bb98c00453ae23dd0aab8d1451633/68747470733a2f2f636f6c61622e72657365617263682e676f6f676c652e636f6d2f6173736574732f636f6c61622d62616467652e737667"/></a></td>
-<td>The levers behind throughput and latency: continuous batching, the KV cache, quantization, and the throughput-vs-latency trade, with the napkin math to size a deployment</td>
-</tr>
-</tbody>
-</table>
-<h3>10 — ML system design &amp; performance</h3>
-<table>
-<thead>
-<tr>
-<th>Notebook</th>
-<th>What you'll learn</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a href="https://github.com/calmrocks/ai-engineer-notebooks/blob/main/10-ml-system-design/01-designing-an-inference-service.ipynb">Designing an inference service</a><br/><a href="https://colab.research.google.com/github/calmrocks/ai-engineer-notebooks/blob/main/10-ml-system-design/01-designing-an-inference-service.ipynb"><img alt="Open In Colab" src="https://camo.githubusercontent.com/eff96fda6b2e0fff8cdf2978f89d61aa434bb98c00453ae23dd0aab8d1451633/68747470733a2f2f636f6c61622e72657365617263682e676f6f676c652e636f6d2f6173736574732f636f6c61622d62616467652e737667"/></a></td>
-<td>Concept: the ML system design interview, worked end to end: QPS/VRAM/latency/cost estimation, replica scaling, queueing, caching, and the SLA trade-offs, on a realistic LLM-serving prompt</td>
-</tr>
-</tbody>
-</table>
-<h3>11 — Customer craft (the FDE differentiator)</h3>
-<table>
-<thead>
-<tr>
-<th>Notebook</th>
-<th>What you'll learn</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a href="https://github.com/calmrocks/ai-engineer-notebooks/blob/main/11-customer-craft/01-scoping-and-discovery.ipynb">Scoping &amp; discovery</a><br/><a href="https://colab.research.google.com/github/calmrocks/ai-engineer-notebooks/blob/main/11-customer-craft/01-scoping-and-discovery.ipynb"><img alt="Open In Colab" src="https://camo.githubusercontent.com/eff96fda6b2e0fff8cdf2978f89d61aa434bb98c00453ae23dd0aab8d1451633/68747470733a2f2f636f6c61622e72657365617263682e676f6f676c652e636f6d2f6173736574732f636f6c61622d62616467652e737667"/></a></td>
-<td>Turn a vague customer ask into a scoped, evaluable system: discovery questions, a one-page scoping doc, the demo discipline: the customer-scenario interview round most engineers can't evidence</td>
-</tr>
-</tbody>
-</table>
-<h3>12 — Case Studies &amp; Capstone</h3>
-<p>Where the skills come together into projects. First a <strong>case study</strong> (one
-realistic scenario worked end to end, runnable), then the <strong>capstone</strong>: the
-deployed repo you build yourself. (<a href="https://github.com/calmrocks/ai-engineer-notebooks/blob/main/12-case-studies-and-capstone/README.md">Section overview</a>.)</p>
-<table>
-<thead>
-<tr>
-<th>Notebook</th>
-<th>What you'll learn</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a href="https://github.com/calmrocks/ai-engineer-notebooks/blob/main/12-case-studies-and-capstone/01-customer-support-assistant.ipynb">Case study A — Customer-support assistant</a><br/><a href="https://colab.research.google.com/github/calmrocks/ai-engineer-notebooks/blob/main/12-case-studies-and-capstone/01-customer-support-assistant.ipynb"><img alt="Open In Colab" src="https://camo.githubusercontent.com/eff96fda6b2e0fff8cdf2978f89d61aa434bb98c00453ae23dd0aab8d1451633/68747470733a2f2f636f6c61622e72657365617263682e676f6f676c652e636f6d2f6173736574732f636f6c61622d62616467652e737667"/></a></td>
-<td>One scenario scoped → built → served → <strong>debugged in production</strong>: a vague ask becomes a deployed, evaluated RAG+agent assistant, then a live quality regression (a stale index after a corpus migration) that you diagnose and fix. A build-to-debug arc threading sections 02–11</td>
-</tr>
-<tr>
-<td><a href="https://github.com/calmrocks/ai-engineer-notebooks/blob/main/12-case-studies-and-capstone/02-contract-extraction-pipeline-vs-agent.ipynb">Case study B — Contract extraction: pipeline vs agent</a><br/><a href="https://colab.research.google.com/github/calmrocks/ai-engineer-notebooks/blob/main/12-case-studies-and-capstone/02-contract-extraction-pipeline-vs-agent.ipynb"><img alt="Open In Colab" src="https://camo.githubusercontent.com/eff96fda6b2e0fff8cdf2978f89d61aa434bb98c00453ae23dd0aab8d1451633/68747470733a2f2f636f6c61622e72657365617263682e676f6f676c652e636f6d2f6173736574732f636f6c61622d62616467652e737667"/></a></td>
-<td>The judgment call interviewers love: build the <em>same</em> extraction task as both an agent and a pipeline, then prove with accuracy + token cost that the pipeline wins when the steps are known</td>
-</tr>
-<tr>
-<td><a href="https://github.com/calmrocks/ai-engineer-notebooks/blob/main/12-case-studies-and-capstone/03-red-team-robustness-benchmark.ipynb">Case study C — Red-team robustness benchmark</a><br/><a href="https://colab.research.google.com/github/calmrocks/ai-engineer-notebooks/blob/main/12-case-studies-and-capstone/03-red-team-robustness-benchmark.ipynb"><img alt="Open In Colab" src="https://camo.githubusercontent.com/eff96fda6b2e0fff8cdf2978f89d61aa434bb98c00453ae23dd0aab8d1451633/68747470733a2f2f636f6c61622e72657365617263682e676f6f676c652e636f6d2f6173736574732f636f6c61622d62616467652e737667"/></a></td>
-<td>A different <em>kind</em> of system, a harness that evaluates a model instead of serving one: an attacker→target→judge (PAIR) loop that measures attack success rate, composing the agent loop, LLM-judge, security, and evals</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Capstone:</strong> <a href="https://github.com/calmrocks/ai-engineer-notebooks/blob/main/12-case-studies-and-capstone/CAPSTONE.md">the brief</a> for the deployed
-project that goes on your resume, a real repo with a serving component and an
-eval report. Case studies are for learning; the capstone is for hiring.</p>
-<h2>Conventions</h2>
-<ul>
-<li><strong>Raw model APIs, no frameworks.</strong> Patterns are durable; wrappers churn.</li>
-<li><strong>One shared corpus</strong> (<code>data/</code>) across RAG and eval sections, so evals
-measure the retrieval you actually built.</li>
-<li><strong>Self-contained notebooks.</strong> First cell installs, second cell calls
-<code>from aien import setup; client, MODEL = setup()</code> to load your key from
-Colab secrets (or a local env var). No hidden state between notebooks.
-<code>aien</code> is the tiny shared-setup package in this repo (one place to change
-credential loading), installed automatically by the first cell.</li>
-<li><strong>Every notebook ends with exercises.</strong> Do them before moving on.</li>
-</ul>
-<h2>Setup</h2>
-<ol>
-<li>Get a free API key at <a href="https://console.groq.com/">console.groq.com</a>, no
-credit card required.</li>
-<li>In Colab: the key icon in the left sidebar → add <code>GROQ_API_KEY</code> as a secret,
-and toggle notebook access on.</li>
-<li>Open any notebook via its badge and run top to bottom.</li>
-</ol>
-<p>Running locally instead: <code>pip install -r requirements.txt &amp;&amp; pip install -e .</code>
-(the second installs the <code>aien</code> setup helper), <code>export GROQ_API_KEY=...</code>,
-open with Jupyter.</p>
-<ul>
-<li><a href="https://www.calm.rocks/resources/career-development/transition-fde-ai-engineer/">Plan: Transitioning to FDE / AI Engineer</a> is the roadmap these notebooks implement</li>
-<li><a href="https://www.calm.rocks/resources/career-development/real-llm-project/">Guide: Building a Real LLM Project for Your Resume</a> sets the capstone's requirements bar</li>
-<li><a href="https://www.calm.rocks/resources/prepare-interview/system-design/rag-system-walkthrough/">Walkthrough: Designing a RAG System</a> covers the systems view of section 03</li>
-<li><a href="https://www.calm.rocks/resources/prepare-interview/system-design/agent-orchestration-walkthrough/">Walkthrough: Designing an AI Agent Orchestration System</a> covers the systems view of section 05</li>
-</ul>
-<p><a href="https://news.ycombinator.com/item?id=49471714">Comments on Hacker News</a></p>]]></content:encoded>
-      <guid isPermaLink="true">https://github.com/calmrocks/ai-engineer-notebooks</guid>
-      <category>Hacker News</category>
-      <pubDate>Thu, 27 Aug 2026 21:46:39 +0000</pubDate>
-      <media:content url="https://camo.githubusercontent.com/fdf2982b9f5d7489dcf44570e714e3a15fce6253e0cc6b5aa61a075aac2ff71b/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f4c6963656e73652d4d49542d79656c6c6f772e737667" type="image/jpeg" medium="image"/>
-      <dc:creator>calmrocks</dc:creator>
-    </item>
-    <item>
-      <title>Show HN: We built open OpenRouter that turns usage into a better model</title>
-      <link>https://github.com/experientiallabs/experiential</link>
-      <description>An open source model gateway that provides one control plane across closed, open-source, local, and custom models. - experientiallabs/experiential</description>
-      <content:encoded><![CDATA[<h2>Experiential</h2>
-<p><a href="https://github.com/experientiallabs/experiential/actions/workflows/gateway-latency.yml?query=branch%3Amain"><img alt="gateway latency" src="https://camo.githubusercontent.com/55f26b8f0cfd1cb8987ac39737e98e62df1a3e332d0af6429743a4fd184826be/68747470733a2f2f696d672e736869656c64732e696f2f656e64706f696e743f75726c3d68747470732533412532462532467261772e67697468756275736572636f6e74656e742e636f6d253246657870657269656e7469616c6c616273253246657870657269656e7469616c253246626164676573253246676174657761792d6c6174656e63792e6a736f6e"/></a></p>
-<p>Experiential is an open source gateway and router for agent workflows:</p>
-<ol>
-<li>Use hosted, BYOK, and local models through one OpenAI-compatible API.</li>
-<li>Control which users and agents can use which models, for which use cases, and how much they can spend.</li>
-<li>Turn production traffic into a custom router or model optimized for quality, speed, and cost.</li>
-</ol>
-<p><a href="https://raw.githubusercontent.com/experientiallabs/experiential/main/assets/experiential-workflow.png"><img alt="Experiential workspace usage dashboard showing model traffic, identities, and spend" src="https://raw.githubusercontent.com/experientiallabs/experiential/main/assets/experiential-workflow.png"/></a></p>
-<p>
-  🌐 <a href="https://platform.experientiallabs.ai">Platform</a> |
-  📚 <a href="https://platform.experientiallabs.ai/docs">Docs</a> |
-  <a href="https://discord.gg/B6sM8xTVwU"><img height="16" src="https://camo.githubusercontent.com/ea5dc8c46069b58f6175453f520d0ae35e799f8852d4fb0ac21e3d1c71108889/68747470733a2f2f63646e2e73696d706c6569636f6e732e6f72672f646973636f72642f353836354632" width="16"/> Discord</a>
-</p>
-<h2>Getting Started</h2>
-<p>Start a local OpenAI-compatible gateway. On first run, the setup wizard uses the shared provider,
-model, and reasoning-effort selectors, persists every selected provider connection, then shows
-defaults for the public alias, identity, and <code>$50.00</code> command budget before printing a one-time key:</p>
-<pre>pip install experiential
-exp</pre>
-<p>Choose a public alias such as <code>opus-5</code>, capture the issued key, and send a request:</p>
-<pre>export EXP_GATEWAY_KEY=...
-curl http://127.0.0.1:8000/v1/chat/completions \
-  -H "Authorization: Bearer $EXP_GATEWAY_KEY" \
-  -H 'Content-Type: application/json' \
-  -d '{"model":"opus-5","messages":[{"role":"user","content":"Help me"}]}'</pre>
-<h2>Setup / get started with the hosted gateway</h2>
-<p>Prefer a managed gateway to running one locally? The hosted platform at
-<a href="https://platform.experientiallabs.ai">platform.experientiallabs.ai</a> serves the same
-OpenAI-compatible (and Anthropic Messages) API at <code>https://api.experientiallabs.ai/v1</code>.
-See <a href="https://github.com/experientiallabs/experiential/blob/main/SETUP.md">SETUP.md</a> for copy-paste prompts you hand to your coding agent
-(Claude Code, Cursor, Codex, and similar); the agent runs the setup for you. It
-collects four prompts:</p>
-<ul>
-<li>Upload your LLM traces as telemetry: create an account instantly from your email, then pull or upload your existing LLM traces onto the platform as telemetry.</li>
-<li>Connect your inference provider keys (BYOK): create an account, then connect your own OpenAI, Anthropic, Gemini, Azure, Bedrock, Fireworks, or OpenRouter keys for free pass-through.</li>
-<li>Start calling models on the gateway: make your first <code>/v1</code> call with the OpenAI and Anthropic SDKs using an <code>xpl_</code> key, and optionally repoint your existing coding agents.</li>
-<li>Full onboarding: create an account instantly from your email, connect your keys, import your spend, then repoint every coding agent (Claude Code, Cursor, Codex, Aider, and similar) or Conductor at the gateway.</li>
-</ul>
-<h2>Using the API</h2>
-<p>Start the local gateway with <code>exp</code> (or <code>exp run</code>); the compiled native data plane
-serves every route on loopback. From Python, load a fitted project router as an
-official OpenAI client backed by its own private gateway:</p>
-<pre>import exp
-
-with exp.load_router("my-project") as client:
-    response = client.chat.completions.create(
-        model="my-project",
-        messages=[{"role": "user", "content": "hello"}],
-    )</pre>
-<h2>Optimize from Traffic</h2>
-<p>First, collect OpenTelemetry traces from your current agent. If you just want to try it out, grab
-the public <a href="https://huggingface.co/datasets/experiential-labs/wmo-terminal-tasks-traces">terminal-tasks OTLP dataset</a>:</p>
-<pre>curl -L -o traces.otel.jsonl \
-  https://huggingface.co/datasets/experiential-labs/wmo-terminal-tasks-traces/resolve/540883e451dc13d34fb50fdd36b143cb0f1fb0db/traces.otel.jsonl</pre>
-<p>Then build a project. The build command walks you through providers,
-models, and budget, and asks for your trace file:</p>
-<pre># Build simulation from your agent traces and optimize a router against it
-exp build support-agent</pre>
-<p>After collecting traces from your router, fine-tune an open source model you own using
-<a href="https://tinker.thinkingmachines.ai/">Tinker</a>.</p>
-<pre>exp optimize model support-agent</pre>
-<h2>Telemetry</h2>
-<p>Anonymous aggregate PostHog product telemetry is enabled by default. It never includes prompts,
-traces, actions, observations, paths, model names, credentials, or raw customer content.</p>
-<pre>exp config telemetry status
-exp config telemetry disable
-exp config telemetry enable</pre>
-<p>The preference is stored locally in <code>.exp/settings.toml</code>.</p>
-<h2>Development</h2>
-<pre>uv sync --extra dev
-uv run ruff format --check .
-uv run ruff check .
-uv run ty check
-uv run pytest -q</pre>
-<p>Repository and documentation conventions live in <a href="https://github.com/experientiallabs/experiential/blob/main/AGENTS.md">AGENTS.md</a>.</p>
-<p><a href="https://news.ycombinator.com/item?id=49471407">Comments on Hacker News</a></p>]]></content:encoded>
-      <guid isPermaLink="true">https://github.com/experientiallabs/experiential</guid>
-      <category>Hacker News</category>
-      <pubDate>Thu, 27 Aug 2026 21:18:35 +0000</pubDate>
-      <media:content url="https://camo.githubusercontent.com/55f26b8f0cfd1cb8987ac39737e98e62df1a3e332d0af6429743a4fd184826be/68747470733a2f2f696d672e736869656c64732e696f2f656e64706f696e743f75726c3d68747470732533412532462532467261772e67697468756275736572636f6e74656e742e636f6d253246657870657269656e7469616c6c616273253246657870657269656e7469616c253246626164676573253246676174657761792d6c6174656e63792e6a736f6e" type="image/jpeg" medium="image"/>
-      <dc:creator>SilenN</dc:creator>
-    </item>
-    <item>
-      <title>Meta Paid $17B – Gets to Write Safety Rules for Other SocMedia Platform</title>
-      <link>https://www.techdirt.com/2026/08/26/meta-just-paid-nearly-17-billion-to-make-sure-it-gets-to-write-the-kid-safety-rules-for-every-other-social-media-platform/</link>
-      <description>By now you’ve almost certainly heard the news that Meta has settled with 52 state and local Attorneys General who had sued the company in some form or another over child safety on Meta’…</description>
-      <content:encoded><![CDATA[<p><a href="https://news.ycombinator.com/item?id=49470949">Comments on Hacker News</a></p>]]></content:encoded>
-      <guid isPermaLink="true">https://www.techdirt.com/2026/08/26/meta-just-paid-nearly-17-billion-to-make-sure-it-gets-to-write-the-kid-safety-rules-for-every-other-social-media-platform/</guid>
-      <category>Hacker News</category>
-      <pubDate>Thu, 27 Aug 2026 20:41:51 +0000</pubDate>
-      <dc:creator>ano-ther</dc:creator>
     </item>
   </channel>
 </rss>
