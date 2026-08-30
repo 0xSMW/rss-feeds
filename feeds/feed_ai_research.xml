@@ -8,7 +8,99 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 29 Aug 2026 02:01:45 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 30 Aug 2026 02:43:53 +0000</lastBuildDate>
+    <item>
+      <title>Grok Bot now works with X</title>
+      <link>https://x.ai/news/grok-bot-and-x</link>
+      <description>Grok Bot now has a tighter integration with X.</description>
+      <content:encoded><![CDATA[<p>Connect your X account in Grok Bot and we'll create a developer account for you if you don't have one. Paid Grok Bot users get free X API credits to start.</p>
+<p>To get started, open Grok Bot and sign in with the X connector.</p>
+<p>Then ask a Bot to search posts, read your timeline, check mentions, or pull together what's happening on X. This is the first version of this integration, and we're excited to keep making it easier for Grok Bot to do real work on X.</p>
+<p><a href="https://x.ai/bot">Download Grok Bot here</a>.</p>]]></content:encoded>
+      <guid isPermaLink="true">https://x.ai/news/grok-bot-and-x</guid>
+      <category>News</category>
+      <pubDate>Sun, 30 Aug 2026 02:43:53 +0000</pubDate>
+    </item>
+    <item>
+      <title>Codex Milestone Celebration Moved to Tomorrow</title>
+      <link>https://x.com/thsottiaux/status/2093573991965557198</link>
+      <description>OpenAI Codex engineer reports postponing a dashboard milestone event.</description>
+      <content:encoded><![CDATA[<p><img src="https://digg.com/tech/a8o6tuy2/opengraph-image" alt="Codex Milestone Celebration Moved to Tomorrow"/></p>
+<p>OpenAI Codex engineer reports postponing a dashboard milestone event.</p>
+<p><strong>Original source:</strong> <a href="https://x.com/thsottiaux/status/2093573991965557198">https://x.com/thsottiaux/status/2093573991965557198</a></p>
+<p><strong>Digg story:</strong> <a href="https://digg.com/tech/a8o6tuy2">https://digg.com/tech/a8o6tuy2</a></p>
+<p>Tibo Sottiaux, identified as Engineering Lead on OpenAI&#x27;s Codex team, posted that the celebration is moved to tomorrow because the button was already pressed today. In a separate post, user Kim Isenberg noted two consecutive weekly resets on the service, adding that rates are now hard to exhaust quickly and wishing others luck. Both statements appear in public posts tied to Codex usage tracking.</p>
+<ul><li><strong>Views:</strong> 491,622</li><li><strong>Likes:</strong> 5,909</li><li><strong>Bookmarks:</strong> 278</li><li><strong>Quotes:</strong> 276</li><li><strong>Replies:</strong> 717</li><li><strong>Posts:</strong> 2</li></ul>
+<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/thsottiaux">Tibo</a></li><li><a href="https://x.com/kimmonismus">Chubby♨️</a></li></ul>]]></content:encoded>
+      <guid isPermaLink="true">https://x.com/thsottiaux/status/2093573991965557198</guid>
+      <category>Digg AI from X</category>
+      <pubDate>Sat, 29 Aug 2026 21:23:38 +0000</pubDate>
+      <media:content url="https://digg.com/tech/a8o6tuy2/opengraph-image" type="image/jpeg" medium="image"/>
+    </item>
+    <item>
+      <title>Tech Voices Welcome Open Source Model Agnostic Era</title>
+      <link>https://www.youtube.com/watch?v=lWMebfCc5f4</link>
+      <description>Social media posts share a statement declaring the start of model-agnostic development.</description>
+      <content:encoded><![CDATA[<p><img src="https://digg.com/tech/yq348nbz/opengraph-image" alt="Tech Voices Welcome Open Source Model Agnostic Era"/></p>
+<p>Social media posts share a statement declaring the start of model-agnostic development.</p>
+<p><strong>Original source:</strong> <a href="https://www.youtube.com/watch?v=lWMebfCc5f4">https://www.youtube.com/watch?v=lWMebfCc5f4</a></p>
+<p><strong>Digg story:</strong> <a href="https://digg.com/tech/yq348nbz">https://digg.com/tech/yq348nbz</a></p>
+<p>Deirdre Bosa posted the phrase welcome to the open source + model agnostic era. Rohan Anil retweeted the message. Taylor Lorenz quoted the post and added hearts along with a link. The posts come from accounts identified as a CNBC tech reporter, a research engineer formerly at Google DeepMind, and an independent technology journalist. Each post treats the statement as marking a shift toward tools that work across multiple AI systems rather than single-vendor setups.</p>
+<ul><li><strong>Views:</strong> 33,247</li><li><strong>Likes:</strong> 264</li><li><strong>Bookmarks:</strong> 18</li><li><strong>Quotes:</strong> 6</li><li><strong>Replies:</strong> 23</li><li><strong>Posts:</strong> 3</li></ul>
+<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/_arohan_">rohan anil</a></li><li><a href="https://x.com/TaylorLorenz">Taylor Lorenz</a></li></ul>]]></content:encoded>
+      <guid isPermaLink="true">https://www.youtube.com/watch?v=lWMebfCc5f4</guid>
+      <category>Digg AI from X</category>
+      <pubDate>Sat, 29 Aug 2026 17:57:15 +0000</pubDate>
+      <media:content url="https://digg.com/tech/yq348nbz/opengraph-image" type="image/jpeg" medium="image"/>
+    </item>
+    <item>
+      <title>Peter Yang Questions AI Effort Levels in Threads</title>
+      <link>https://x.com/petergyang/status/2093722976701313462</link>
+      <description>OpenAI engineer advises keeping reasoning effort constant per conversation thread.</description>
+      <content:encoded><![CDATA[<p><img src="https://digg.com/tech/v5i547fa/opengraph-image" alt="Peter Yang Questions AI Effort Levels in Threads"/></p>
+<p>OpenAI engineer advises keeping reasoning effort constant per conversation thread.</p>
+<p><strong>Original source:</strong> <a href="https://x.com/petergyang/status/2093722976701313462">https://x.com/petergyang/status/2093722976701313462</a></p>
+<p><strong>Digg story:</strong> <a href="https://digg.com/tech/v5i547fa">https://digg.com/tech/v5i547fa</a></p>
+<p>Peter Yang asked on X whether switching between medium and high reasoning effort modes in the same AI conversation thread would disrupt results. Vaibhav (VB) Srivastav replied on X recommending that users keep effort levels constant per thread, especially longer ones, and spin up a subagent or new thread when a different setting is needed. Yang replied that subagents sound like a good idea.</p>
+<ul><li><strong>Views:</strong> 68,520</li><li><strong>Likes:</strong> 304</li><li><strong>Bookmarks:</strong> 55</li><li><strong>Replies:</strong> 111</li><li><strong>Posts:</strong> 3</li></ul>
+<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/reach_vb">Vaibhav (VB) Srivastav</a></li><li><a href="https://x.com/petergyang">Peter Yang</a></li></ul>]]></content:encoded>
+      <guid isPermaLink="true">https://x.com/petergyang/status/2093722976701313462</guid>
+      <category>Digg AI from X</category>
+      <pubDate>Sat, 29 Aug 2026 15:30:31 +0000</pubDate>
+      <media:content url="https://digg.com/tech/v5i547fa/opengraph-image" type="image/jpeg" medium="image"/>
+    </item>
+    <item>
+      <title>RunwayML Shares AI Skateboarding Bear Video</title>
+      <link>https://aifilmhistory.org/</link>
+      <description>Runway co-founder compares new clip to the firm's first AI video from 2019.</description>
+      <content:encoded><![CDATA[<p><img src="https://digg.com/tech/mtudumhg/opengraph-image" alt="RunwayML Shares AI Skateboarding Bear Video"/></p>
+<p>Runway co-founder compares new clip to the firm&#x27;s first AI video from 2019.</p>
+<p><strong>Original source:</strong> <a href="https://aifilmhistory.org/">https://aifilmhistory.org/</a></p>
+<p><strong>Digg story:</strong> <a href="https://digg.com/tech/mtudumhg">https://digg.com/tech/mtudumhg</a></p>
+<p>RunwayML posted an AI-generated video of a bear-costumed skateboarder performing tricks at a coastal skate park. Co-founder and CEO Cristóbal Valenzuela replied to a comment on the clip by noting that current results look strong next to the company&#x27;s 2019 output, which included an early AI video of Will Smith eating spaghetti. Investor Michael Dempsey described the new video as amazing. The posts treat the skateboarding clip as an illustration of progress in generative video models.</p>
+<ul><li><strong>Views:</strong> 426</li><li><strong>Likes:</strong> 3</li><li><strong>Bookmarks:</strong> 2</li><li><strong>Replies:</strong> 1</li><li><strong>Posts:</strong> 2</li></ul>
+<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/c_valenzuelab">Cristóbal Valenzuela</a></li><li><a href="https://x.com/mhdempsey">Michael Dempsey</a></li></ul>]]></content:encoded>
+      <guid isPermaLink="true">https://aifilmhistory.org/</guid>
+      <category>Digg AI from X</category>
+      <pubDate>Sat, 29 Aug 2026 15:27:49 +0000</pubDate>
+      <media:content url="https://digg.com/tech/mtudumhg/opengraph-image" type="image/jpeg" medium="image"/>
+    </item>
+    <item>
+      <title>Time AI 100 List Draws Engineer Criticism</title>
+      <link>https://x.com/Polymarket/status/2093439980471259208</link>
+      <description>AI engineers question list that includes Paris Hilton and omits Jensen Huang.</description>
+      <content:encoded><![CDATA[<p><img src="https://digg.com/tech/k907gmpz/opengraph-image" alt="Time AI 100 List Draws Engineer Criticism"/></p>
+<p>AI engineers question list that includes Paris Hilton and omits Jensen Huang.</p>
+<p><strong>Original source:</strong> <a href="https://x.com/Polymarket/status/2093439980471259208">https://x.com/Polymarket/status/2093439980471259208</a></p>
+<p><strong>Digg story:</strong> <a href="https://digg.com/tech/k907gmpz">https://digg.com/tech/k907gmpz</a></p>
+<p>Simo Ryu posted he would bite his cat if anyone on the list could explain a loss function. Rohan Anil called placement on a list without clear guidelines a negative signal. One source summary states the Time Magazine list includes Paris Hilton, Bernie Sanders, and Sam Altman. Another states it excludes Nvidia CEO Jensen Huang and instead features non-tech figures.</p>
+<ul><li><strong>Views:</strong> 54,697</li><li><strong>Likes:</strong> 1,002</li><li><strong>Bookmarks:</strong> 58</li><li><strong>Quotes:</strong> 5</li><li><strong>Replies:</strong> 54</li><li><strong>Posts:</strong> 3</li></ul>
+<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/_arohan_">rohan anil</a></li><li><a href="https://x.com/cloneofsimo">Simo Ryu</a></li><li><a href="https://x.com/code_star">Cody Blakeney</a></li></ul>]]></content:encoded>
+      <guid isPermaLink="true">https://x.com/Polymarket/status/2093439980471259208</guid>
+      <category>Digg AI from X</category>
+      <pubDate>Sat, 29 Aug 2026 09:23:54 +0000</pubDate>
+      <media:content url="https://digg.com/tech/k907gmpz/opengraph-image" type="image/jpeg" medium="image"/>
+    </item>
     <item>
       <title>OpenAI Ends Cursor Access After SpaceX Acquisition</title>
       <link>https://openai.com/index/our-decision-on-cursor-following-its-acquisition-by-spacex/</link>
@@ -791,104 +883,6 @@ url = {www.anthropic.com/research/enabling-independent-research},
       <category>Digg AI from X</category>
       <pubDate>Tue, 25 Aug 2026 13:24:10 +0000</pubDate>
       <media:content url="https://digg.com/tech/hkwl4kvz/opengraph-image" type="image/jpeg" medium="image"/>
-    </item>
-    <item>
-      <title>Neil Movva Discusses AI Inference on Podcast</title>
-      <link>https://www.youtube.com/watch?v=uyzqxIoiobU</link>
-      <description>Podcast episode features Neil Movva discussing AI inference layers, chips, power, and spending.</description>
-      <content:encoded><![CDATA[<p><img src="https://digg.com/tech/s7o4z9dq/opengraph-image" alt="Neil Movva Discusses AI Inference on Podcast"/></p>
-<p>Podcast episode features Neil Movva discussing AI inference layers, chips, power, and spending.</p>
-<p><strong>Original source:</strong> <a href="https://www.youtube.com/watch?v=uyzqxIoiobU">https://www.youtube.com/watch?v=uyzqxIoiobU</a></p>
-<p><strong>Digg story:</strong> <a href="https://digg.com/tech/s7o4z9dq">https://digg.com/tech/s7o4z9dq</a></p>
-<p>Patrick O&#x27;Shaughnessy posted on X announcing an Invest Like the Best episode with Neil Movva, founder of Sail Research. O&#x27;Shaughnessy described Movva as having started at Nvidia working on GPUs and now running Sail Research. The episode covers AI inference from software to chips and power, including latency versus throughput, chip pricing, data center strategies, Nvidia lore, and Movva&#x27;s quoted view that token consumption today differs from dot-com era speculation because users consume tokens immediately. Replies on X largely praised the detailed explanations, while some questioned speculative risks in data center builds and AI funding.</p>
-<ul><li><strong>Views:</strong> 396,433</li><li><strong>Likes:</strong> 1,057</li><li><strong>Bookmarks:</strong> 1,709</li><li><strong>Quotes:</strong> 28</li><li><strong>Replies:</strong> 40</li><li><strong>Posts:</strong> 3</li></ul>
-<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/patrick_oshag">Patrick OShaughnessy</a></li><li><a href="https://x.com/ilyasu">Ilya Sukhar</a></li></ul>]]></content:encoded>
-      <guid isPermaLink="true">https://www.youtube.com/watch?v=uyzqxIoiobU</guid>
-      <category>Digg AI from X</category>
-      <pubDate>Tue, 25 Aug 2026 12:25:53 +0000</pubDate>
-      <media:content url="https://digg.com/tech/s7o4z9dq/opengraph-image" type="image/jpeg" medium="image"/>
-    </item>
-    <item>
-      <title>Funding better evaluations of AI’s impact on wellbeing</title>
-      <link>https://www.anthropic.com/news/wellbeing-research-grants</link>
-      <description>Anthropic is launching a $5 million grant program to fund independent research into how AI impacts users’ wellbeing.</description>
-      <content:encoded><![CDATA[<p>We’re launching a $5 million grant program to fund independent research into how AI impacts users’ wellbeing. The program will provide direct funding, access to our models, and technical support to grantees building open-source evaluations that help the AI industry measure how our models affect those who use them. Grantees will work fully independently, and will publish their work as open-source projects that any developer can make use of.</p>
-<p>AI systems have become central to how many people work, learn, and solve problems. They’ve also become conversational partners and can be <a href="https://www.anthropic.com/news/how-people-use-claude-for-support-advice-and-companionship">sources of emotional support</a> during difficult times. But as an industry, we are still working towards developing clear standards for how models should behave in these conversations, for example, when a user begins to seek companionship from a model, or uses AI to navigate a mental health crisis.</p>
-<p>Furthermore, wellbeing is a particularly difficult area to evaluate. For most model behaviors, we can look at a single answer and determine whether it is accurate and appropriate. But assessing wellbeing requires much more context. For example, a user in distress might not share thoughts of self-harm right away; the need for a more cautious response might only become clear over the course of a long conversation. And a response that might be reasonable in one context might be harmful in another. For example, Claude might give advice on balanced diets and workout routines to a user who asks about losing weight, but if the user has demonstrated a history of disordered eating, that response could be inappropriate, and potentially actively harmful.</p>
-<p>We work to <a href="https://www.anthropic.com/news/protecting-well-being-of-users">develop safeguards</a> to identify such conversations and help ensure Claude responds appropriately, and we <a href="https://www.anthropic.com/research/claude-personal-guidance">publish research</a> into the types of conversations people have with Claude to better inform how we develop our safeguards, how we evaluate them, and other measures we can take to protect users’ wellbeing. But these are nuanced considerations, and the stakes are significant. The right approach will need to evolve alongside our models and their uses.</p>
-<p>By funding the creation of independent evaluations and benchmarks of user wellbeing, we hope to invite more people to lend their expertise to this emerging and critical field, including clinicians, psychologists, methodologists, and others.</p>
-<h2 id="towards-more-effective-wellbeing-evaluations-and-benchmarks">Towards more effective wellbeing evaluations and benchmarks</h2>
-<p>As part of this program, we’re <a href="https://www-cdn.anthropic.com/files/4zrzovbb/website/5ecb637cb206057cb93cf4a9e72e843fda5e9892.pdf">sharing guidance</a> from our Safeguards team on what we believe makes a wellbeing evaluation rigorous enough to build on, along with the common challenges that can limit an evaluation’s usefulness.</p>
-<p>In brief, we’re seeking evaluations that:</p>
-<ul><li>State clearly what they are measuring (i.e., what counts as a pass or fail, and why it matters);</li><li>Involve clinical and subject-matter experts in the design and validation;</li><li>Test both precautions and harms (i.e., evaluate the risk of both overcompliance and overrefusal);</li><li>Reflect how users actually use AI (often, this means constructing scenarios that represent multi-turn conversations, where risk escalates and context shifts over the course of a long conversation);</li><li>Validate their graders against real subject-matter experts.</li></ul>
-<p>To learn more about the grant program and apply, <a href="https://docs.google.com/forms/d/e/1FAIpQLSfmUDtpfg-ztmQPkCbwx-VAe_urX48sthbqs8GmZUT9irRSDQ/viewform?usp=dialog">see our application form</a>. For more on building strong wellbeing evaluations and benchmarks, <a href="https://www-cdn.anthropic.com/files/4zrzovbb/website/5ecb637cb206057cb93cf4a9e72e843fda5e9892.pdf">read our guidance</a>. Applications are due by September 21; applicants who are selected to submit full proposals will be notified by October 5.</p>]]></content:encoded>
-      <guid isPermaLink="true">https://www.anthropic.com/news/wellbeing-research-grants</guid>
-      <category>Announcements</category>
-      <pubDate>Tue, 25 Aug 2026 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>SemiAnalysis Reports Rubin Ultra Memory Cut to 192GB</title>
-      <link>https://developer.nvidia.com/blog/inside-nvidia-rubin-gpu-architecture-powering-the-era-of-agentic-ai</link>
-      <description>SemiAnalysis says the chip will use 192GB HBM4, below earlier plans and regular Rubin.</description>
-      <content:encoded><![CDATA[<p><img src="https://digg.com/tech/x1oaqnr2/opengraph-image" alt="SemiAnalysis Reports Rubin Ultra Memory Cut to 192GB"/></p>
-<p>SemiAnalysis says the chip will use 192GB HBM4, below earlier plans and regular Rubin.</p>
-<p><strong>Original source:</strong> <a href="https://developer.nvidia.com/blog/inside-nvidia-rubin-gpu-architecture-powering-the-era-of-agentic-ai">https://developer.nvidia.com/blog/inside-nvidia-rubin-gpu-architecture-powering-the-era-of-agentic-ai</a></p>
-<p><strong>Digg story:</strong> <a href="https://digg.com/tech/x1oaqnr2">https://digg.com/tech/x1oaqnr2</a></p>
-<p>SemiAnalysis posted that Nvidia Rubin Ultra will ship with 192GB of HBM4 in an 8-hi stack. The account called the amount a massive downgrade from the 1TB originally previewed and noted it falls below the 288GB in regular Rubin. The post attributed the reduction to fewer memory cubes, a lower stack height, and the switch to HBM4 dies. AI commentator scaling01 replied with a bearish take on model scaling limits. Replies on X split between concerns over constrained supply and arguments that efficiency gains offset the cut. The packet contains no first-party Nvidia confirmation.</p>
-<ul><li><strong>Views:</strong> 344,625</li><li><strong>Likes:</strong> 1,067</li><li><strong>Bookmarks:</strong> 423</li><li><strong>Quotes:</strong> 63</li><li><strong>Replies:</strong> 104</li><li><strong>Posts:</strong> 4</li></ul>
-<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/SemiAnalysis_">SemiAnalysis</a></li><li><a href="https://x.com/scaling01">Lisan al Gaib</a></li><li><a href="https://x.com/__tinygrad__">the tiny corp</a></li></ul>]]></content:encoded>
-      <guid isPermaLink="true">https://developer.nvidia.com/blog/inside-nvidia-rubin-gpu-architecture-powering-the-era-of-agentic-ai</guid>
-      <category>Digg AI from X</category>
-      <pubDate>Mon, 24 Aug 2026 21:00:38 +0000</pubDate>
-      <media:content url="https://digg.com/tech/x1oaqnr2/opengraph-image" type="image/jpeg" medium="image"/>
-    </item>
-    <item>
-      <title>Thinking Machines Lab Launches Tinker Grants for Open-Weight Safety</title>
-      <link>https://thinkingmachines.ai/news/tinker-research-and-teaching-grants</link>
-      <description>Startup offers up to $50,000 in credits to researchers working on AI safety for open-weight models.</description>
-      <content:encoded><![CDATA[<p><img src="https://digg.com/tech/flcxwwqw/opengraph-image" alt="Thinking Machines Lab Launches Tinker Grants for Open-Weight Safety"/></p>
-<p>Startup offers up to $50,000 in credits to researchers working on AI safety for open-weight models.</p>
-<p><strong>Original source:</strong> <a href="https://thinkingmachines.ai/news/tinker-research-and-teaching-grants">https://thinkingmachines.ai/news/tinker-research-and-teaching-grants</a></p>
-<p><strong>Digg story:</strong> <a href="https://digg.com/tech/flcxwwqw">https://digg.com/tech/flcxwwqw</a></p>
-<p>Thinking Machines posted on X that it is launching Tinker grants of up to $50,000 in credits for safety research on open-weight models. The company said it would share project ideas and invited researchers whose safety work could use extra credits to apply. Engineer Clare Birch described the effort as funding safety research to aid adaptation to AI. Anthropic researcher Ethan Perez called the opportunity promising for open-weights safety. EleutherAI director Stella Biderman noted the listed focus areas matched her research agenda. Co-founder Luke Drago highlighted the need to reduce openness versus safety tradeoffs.</p>
-<ul><li><strong>Views:</strong> 92,609</li><li><strong>Likes:</strong> 899</li><li><strong>Bookmarks:</strong> 393</li><li><strong>Quotes:</strong> 20</li><li><strong>Replies:</strong> 28</li><li><strong>Posts:</strong> 7</li></ul>
-<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/thinkymachines">Thinking Machines</a></li><li><a href="https://x.com/EthanJPerez">Ethan Perez</a></li><li><a href="https://x.com/BlancheMinerva">Stella Biderman</a></li><li><a href="https://x.com/ZhongRuiqi">Ruiqi Zhong</a></li><li><a href="https://x.com/clarejtbirch">clare ❤️‍🔥</a></li></ul>]]></content:encoded>
-      <guid isPermaLink="true">https://thinkingmachines.ai/news/tinker-research-and-teaching-grants</guid>
-      <category>Digg AI from X</category>
-      <pubDate>Mon, 24 Aug 2026 20:03:24 +0000</pubDate>
-      <media:content url="https://digg.com/tech/flcxwwqw/opengraph-image" type="image/jpeg" medium="image"/>
-    </item>
-    <item>
-      <title>Epoch AI Says US GDP Growth Understated by 0.3 Points</title>
-      <link>https://www.bea.gov/news/2026/gdp-third-estimate-industries-corporate-profits-state-gdp-and-state-personal-income-4th</link>
-      <description>Researchers argue official statistics miss Nvidia profits from fabless chip sales.</description>
-      <content:encoded><![CDATA[<p><img src="https://digg.com/tech/9xvou3ac/opengraph-image" alt="Epoch AI Says US GDP Growth Understated by 0.3 Points"/></p>
-<p>Researchers argue official statistics miss Nvidia profits from fabless chip sales.</p>
-<p><strong>Original source:</strong> <a href="https://www.bea.gov/news/2026/gdp-third-estimate-industries-corporate-profits-state-gdp-and-state-personal-income-4th">https://www.bea.gov/news/2026/gdp-third-estimate-industries-corporate-profits-state-gdp-and-state-personal-income-4th</a></p>
-<p><strong>Digg story:</strong> <a href="https://digg.com/tech/9xvou3ac">https://digg.com/tech/9xvou3ac</a></p>
-<p>Epoch AI researcher Yafah Edelman stated that US GDP fails to track over 100 billion dollars in Nvidia profit. The organization estimates this gap causes reported annual GDP growth to be understated by 0.3 percentage points. The discrepancy traces to accounting for fabless AI chip sales. Researcher Josh You posted that GDP is undercounted by tens of basis points due to this method. Multiple AI researchers shared the Epoch post on X and described the analysis as notable.</p>
-<ul><li><strong>Views:</strong> 59,294</li><li><strong>Likes:</strong> 612</li><li><strong>Bookmarks:</strong> 102</li><li><strong>Quotes:</strong> 4</li><li><strong>Replies:</strong> 46</li><li><strong>Posts:</strong> 17</li></ul>
-<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/Miles_Brundage">Miles Brundage</a></li><li><a href="https://x.com/soldni">Luca Soldaini 🎀</a></li><li><a href="https://x.com/iamtrask">⿻ Andrew Trask</a></li><li><a href="https://x.com/ziv_ravid">Ravid Shwartz Ziv</a></li><li><a href="https://x.com/altryne">Alex Volkov</a></li></ul>]]></content:encoded>
-      <guid isPermaLink="true">https://www.bea.gov/news/2026/gdp-third-estimate-industries-corporate-profits-state-gdp-and-state-personal-income-4th</guid>
-      <category>Digg AI from X</category>
-      <pubDate>Mon, 24 Aug 2026 18:55:20 +0000</pubDate>
-      <media:content url="https://digg.com/tech/9xvou3ac/opengraph-image" type="image/jpeg" medium="image"/>
-    </item>
-    <item>
-      <title>Founders Announce Nonprofit for Safe Superintelligence</title>
-      <link>https://resi.org</link>
-      <description>Shafi Goldwasser, Adam Kalai, and Vinod Vaikuntanathan founded the Institute for Responsible Superintelligence.</description>
-      <content:encoded><![CDATA[<p><img src="https://digg.com/tech/jdu6sgas/opengraph-image" alt="Founders Announce Nonprofit for Safe Superintelligence"/></p>
-<p>Shafi Goldwasser, Adam Kalai, and Vinod Vaikuntanathan founded the Institute for Responsible Superintelligence.</p>
-<p><strong>Original source:</strong> <a href="https://resi.org">https://resi.org</a></p>
-<p><strong>Digg story:</strong> <a href="https://digg.com/tech/jdu6sgas">https://digg.com/tech/jdu6sgas</a></p>
-<p>Shafi Goldwasser, Adam Kalai, and Vinod Vaikuntanathan founded the Institute for Responsible Superintelligence as a nonprofit. The group posted on X that its goal is to build scientific foundations needed to make superintelligence safe by design. Its site at resi.org states the same purpose. Jonathan Frankle retweeted the announcement. Academics Patrick Shafto and Samuel Albanie replied with expressions of support.</p>
-<ul><li><strong>Views:</strong> 48,109</li><li><strong>Likes:</strong> 197</li><li><strong>Bookmarks:</strong> 52</li><li><strong>Quotes:</strong> 10</li><li><strong>Replies:</strong> 7</li><li><strong>Posts:</strong> 4</li></ul>
-<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/jefrankle">Jonathan Frankle</a></li><li><a href="https://x.com/SamuelAlbanie">Samuel Albanie 🇬🇧</a></li><li><a href="https://x.com/patrickshafto">Patrick Shafto</a></li></ul>]]></content:encoded>
-      <guid isPermaLink="true">https://resi.org</guid>
-      <category>Digg AI from X</category>
-      <pubDate>Mon, 24 Aug 2026 17:59:38 +0000</pubDate>
-      <media:content url="https://digg.com/tech/jdu6sgas/opengraph-image" type="image/jpeg" medium="image"/>
     </item>
   </channel>
 </rss>

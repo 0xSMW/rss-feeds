@@ -8,7 +8,87 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 29 Aug 2026 02:01:45 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 29 Aug 2026 21:23:38 +0000</lastBuildDate>
+    <item>
+      <title>Codex Milestone Celebration Moved to Tomorrow</title>
+      <link>https://x.com/thsottiaux/status/2093573991965557198</link>
+      <description>OpenAI Codex engineer reports postponing a dashboard milestone event.</description>
+      <content:encoded><![CDATA[<p><img src="https://digg.com/tech/a8o6tuy2/opengraph-image" alt="Codex Milestone Celebration Moved to Tomorrow"/></p>
+<p>OpenAI Codex engineer reports postponing a dashboard milestone event.</p>
+<p><strong>Original source:</strong> <a href="https://x.com/thsottiaux/status/2093573991965557198">https://x.com/thsottiaux/status/2093573991965557198</a></p>
+<p><strong>Digg story:</strong> <a href="https://digg.com/tech/a8o6tuy2">https://digg.com/tech/a8o6tuy2</a></p>
+<p>Tibo Sottiaux, identified as Engineering Lead on OpenAI&#x27;s Codex team, posted that the celebration is moved to tomorrow because the button was already pressed today. In a separate post, user Kim Isenberg noted two consecutive weekly resets on the service, adding that rates are now hard to exhaust quickly and wishing others luck. Both statements appear in public posts tied to Codex usage tracking.</p>
+<ul><li><strong>Views:</strong> 491,622</li><li><strong>Likes:</strong> 5,909</li><li><strong>Bookmarks:</strong> 278</li><li><strong>Quotes:</strong> 276</li><li><strong>Replies:</strong> 717</li><li><strong>Posts:</strong> 2</li></ul>
+<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/thsottiaux">Tibo</a></li><li><a href="https://x.com/kimmonismus">Chubby♨️</a></li></ul>]]></content:encoded>
+      <guid isPermaLink="true">https://x.com/thsottiaux/status/2093573991965557198</guid>
+      <category>Digg AI from X</category>
+      <pubDate>Sat, 29 Aug 2026 21:23:38 +0000</pubDate>
+      <media:content url="https://digg.com/tech/a8o6tuy2/opengraph-image" type="image/jpeg" medium="image"/>
+    </item>
+    <item>
+      <title>Tech Voices Welcome Open Source Model Agnostic Era</title>
+      <link>https://www.youtube.com/watch?v=lWMebfCc5f4</link>
+      <description>Social media posts share a statement declaring the start of model-agnostic development.</description>
+      <content:encoded><![CDATA[<p><img src="https://digg.com/tech/yq348nbz/opengraph-image" alt="Tech Voices Welcome Open Source Model Agnostic Era"/></p>
+<p>Social media posts share a statement declaring the start of model-agnostic development.</p>
+<p><strong>Original source:</strong> <a href="https://www.youtube.com/watch?v=lWMebfCc5f4">https://www.youtube.com/watch?v=lWMebfCc5f4</a></p>
+<p><strong>Digg story:</strong> <a href="https://digg.com/tech/yq348nbz">https://digg.com/tech/yq348nbz</a></p>
+<p>Deirdre Bosa posted the phrase welcome to the open source + model agnostic era. Rohan Anil retweeted the message. Taylor Lorenz quoted the post and added hearts along with a link. The posts come from accounts identified as a CNBC tech reporter, a research engineer formerly at Google DeepMind, and an independent technology journalist. Each post treats the statement as marking a shift toward tools that work across multiple AI systems rather than single-vendor setups.</p>
+<ul><li><strong>Views:</strong> 33,247</li><li><strong>Likes:</strong> 264</li><li><strong>Bookmarks:</strong> 18</li><li><strong>Quotes:</strong> 6</li><li><strong>Replies:</strong> 23</li><li><strong>Posts:</strong> 3</li></ul>
+<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/_arohan_">rohan anil</a></li><li><a href="https://x.com/TaylorLorenz">Taylor Lorenz</a></li></ul>]]></content:encoded>
+      <guid isPermaLink="true">https://www.youtube.com/watch?v=lWMebfCc5f4</guid>
+      <category>Digg AI from X</category>
+      <pubDate>Sat, 29 Aug 2026 17:57:15 +0000</pubDate>
+      <media:content url="https://digg.com/tech/yq348nbz/opengraph-image" type="image/jpeg" medium="image"/>
+    </item>
+    <item>
+      <title>Peter Yang Questions AI Effort Levels in Threads</title>
+      <link>https://x.com/petergyang/status/2093722976701313462</link>
+      <description>OpenAI engineer advises keeping reasoning effort constant per conversation thread.</description>
+      <content:encoded><![CDATA[<p><img src="https://digg.com/tech/v5i547fa/opengraph-image" alt="Peter Yang Questions AI Effort Levels in Threads"/></p>
+<p>OpenAI engineer advises keeping reasoning effort constant per conversation thread.</p>
+<p><strong>Original source:</strong> <a href="https://x.com/petergyang/status/2093722976701313462">https://x.com/petergyang/status/2093722976701313462</a></p>
+<p><strong>Digg story:</strong> <a href="https://digg.com/tech/v5i547fa">https://digg.com/tech/v5i547fa</a></p>
+<p>Peter Yang asked on X whether switching between medium and high reasoning effort modes in the same AI conversation thread would disrupt results. Vaibhav (VB) Srivastav replied on X recommending that users keep effort levels constant per thread, especially longer ones, and spin up a subagent or new thread when a different setting is needed. Yang replied that subagents sound like a good idea.</p>
+<ul><li><strong>Views:</strong> 68,520</li><li><strong>Likes:</strong> 304</li><li><strong>Bookmarks:</strong> 55</li><li><strong>Replies:</strong> 111</li><li><strong>Posts:</strong> 3</li></ul>
+<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/reach_vb">Vaibhav (VB) Srivastav</a></li><li><a href="https://x.com/petergyang">Peter Yang</a></li></ul>]]></content:encoded>
+      <guid isPermaLink="true">https://x.com/petergyang/status/2093722976701313462</guid>
+      <category>Digg AI from X</category>
+      <pubDate>Sat, 29 Aug 2026 15:30:31 +0000</pubDate>
+      <media:content url="https://digg.com/tech/v5i547fa/opengraph-image" type="image/jpeg" medium="image"/>
+    </item>
+    <item>
+      <title>RunwayML Shares AI Skateboarding Bear Video</title>
+      <link>https://aifilmhistory.org/</link>
+      <description>Runway co-founder compares new clip to the firm's first AI video from 2019.</description>
+      <content:encoded><![CDATA[<p><img src="https://digg.com/tech/mtudumhg/opengraph-image" alt="RunwayML Shares AI Skateboarding Bear Video"/></p>
+<p>Runway co-founder compares new clip to the firm&#x27;s first AI video from 2019.</p>
+<p><strong>Original source:</strong> <a href="https://aifilmhistory.org/">https://aifilmhistory.org/</a></p>
+<p><strong>Digg story:</strong> <a href="https://digg.com/tech/mtudumhg">https://digg.com/tech/mtudumhg</a></p>
+<p>RunwayML posted an AI-generated video of a bear-costumed skateboarder performing tricks at a coastal skate park. Co-founder and CEO Cristóbal Valenzuela replied to a comment on the clip by noting that current results look strong next to the company&#x27;s 2019 output, which included an early AI video of Will Smith eating spaghetti. Investor Michael Dempsey described the new video as amazing. The posts treat the skateboarding clip as an illustration of progress in generative video models.</p>
+<ul><li><strong>Views:</strong> 426</li><li><strong>Likes:</strong> 3</li><li><strong>Bookmarks:</strong> 2</li><li><strong>Replies:</strong> 1</li><li><strong>Posts:</strong> 2</li></ul>
+<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/c_valenzuelab">Cristóbal Valenzuela</a></li><li><a href="https://x.com/mhdempsey">Michael Dempsey</a></li></ul>]]></content:encoded>
+      <guid isPermaLink="true">https://aifilmhistory.org/</guid>
+      <category>Digg AI from X</category>
+      <pubDate>Sat, 29 Aug 2026 15:27:49 +0000</pubDate>
+      <media:content url="https://digg.com/tech/mtudumhg/opengraph-image" type="image/jpeg" medium="image"/>
+    </item>
+    <item>
+      <title>Time AI 100 List Draws Engineer Criticism</title>
+      <link>https://x.com/Polymarket/status/2093439980471259208</link>
+      <description>AI engineers question list that includes Paris Hilton and omits Jensen Huang.</description>
+      <content:encoded><![CDATA[<p><img src="https://digg.com/tech/k907gmpz/opengraph-image" alt="Time AI 100 List Draws Engineer Criticism"/></p>
+<p>AI engineers question list that includes Paris Hilton and omits Jensen Huang.</p>
+<p><strong>Original source:</strong> <a href="https://x.com/Polymarket/status/2093439980471259208">https://x.com/Polymarket/status/2093439980471259208</a></p>
+<p><strong>Digg story:</strong> <a href="https://digg.com/tech/k907gmpz">https://digg.com/tech/k907gmpz</a></p>
+<p>Simo Ryu posted he would bite his cat if anyone on the list could explain a loss function. Rohan Anil called placement on a list without clear guidelines a negative signal. One source summary states the Time Magazine list includes Paris Hilton, Bernie Sanders, and Sam Altman. Another states it excludes Nvidia CEO Jensen Huang and instead features non-tech figures.</p>
+<ul><li><strong>Views:</strong> 54,697</li><li><strong>Likes:</strong> 1,002</li><li><strong>Bookmarks:</strong> 58</li><li><strong>Quotes:</strong> 5</li><li><strong>Replies:</strong> 54</li><li><strong>Posts:</strong> 3</li></ul>
+<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/_arohan_">rohan anil</a></li><li><a href="https://x.com/cloneofsimo">Simo Ryu</a></li><li><a href="https://x.com/code_star">Cody Blakeney</a></li></ul>]]></content:encoded>
+      <guid isPermaLink="true">https://x.com/Polymarket/status/2093439980471259208</guid>
+      <category>Digg AI from X</category>
+      <pubDate>Sat, 29 Aug 2026 09:23:54 +0000</pubDate>
+      <media:content url="https://digg.com/tech/k907gmpz/opengraph-image" type="image/jpeg" medium="image"/>
+    </item>
     <item>
       <title>OpenAI Ends Cursor Access After SpaceX Acquisition</title>
       <link>https://openai.com/index/our-decision-on-cursor-following-its-acquisition-by-spacex/</link>
@@ -728,86 +808,6 @@
       <category>Digg AI from X</category>
       <pubDate>Mon, 24 Aug 2026 16:58:23 +0000</pubDate>
       <media:content url="https://digg.com/tech/1ohjipbv/opengraph-image" type="image/jpeg" medium="image"/>
-    </item>
-    <item>
-      <title>Andrew Wilson Joins Perplexity AI as Research Lead</title>
-      <link>https://research.perplexity.ai/articles</link>
-      <description>Perplexity founders confirm appointment with focus on open research in continual learning and multi-agent systems.</description>
-      <content:encoded><![CDATA[<p><img src="https://digg.com/tech/f9dqe1ax/opengraph-image" alt="Andrew Wilson Joins Perplexity AI as Research Lead"/></p>
-<p>Perplexity founders confirm appointment with focus on open research in continual learning and multi-agent systems.</p>
-<p><strong>Original source:</strong> <a href="https://research.perplexity.ai/articles">https://research.perplexity.ai/articles</a></p>
-<p><strong>Digg story:</strong> <a href="https://digg.com/tech/f9dqe1ax">https://digg.com/tech/f9dqe1ax</a></p>
-<p>Andrew Gordon Wilson posted that he is joining Perplexity AI as research lead to pursue ambitious open work on continual learning and agent collaboration. CEO Aravind Srinivas confirmed the hire, noting Wilson will report to CTO Denis Yarats and lead efforts on continual learning, synthetic data, and long-horizon RL environments and architectures. Yarats added the team is building large-scale RL infrastructure, will share a research agenda soon, and plans to open source much of the work. Wilson invited researchers to reach out. The company is hiring. Replies on X offered congratulations and one pun about renaming the firm Epiplexity.</p>
-<ul><li><strong>Views:</strong> 84,460</li><li><strong>Likes:</strong> 680</li><li><strong>Bookmarks:</strong> 69</li><li><strong>Quotes:</strong> 2</li><li><strong>Replies:</strong> 22</li><li><strong>Posts:</strong> 9</li></ul>
-<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/AravSrinivas">Aravind Srinivas</a></li><li><a href="https://x.com/sirbayes">Kevin Patrick Murphy</a></li><li><a href="https://x.com/TacoCohen">Taco Cohen</a></li><li><a href="https://x.com/SuryaGanguli">Surya Ganguli</a></li><li><a href="https://x.com/LakeBrenden">Brenden Lake @ CCN2026</a></li></ul>]]></content:encoded>
-      <guid isPermaLink="true">https://research.perplexity.ai/articles</guid>
-      <category>Digg AI from X</category>
-      <pubDate>Mon, 24 Aug 2026 14:55:53 +0000</pubDate>
-      <media:content url="https://digg.com/tech/f9dqe1ax/opengraph-image" type="image/jpeg" medium="image"/>
-    </item>
-    <item>
-      <title>Pieter Levels Launches Hotelist.com for Honest Ratings</title>
-      <link>http://Hotelist.com</link>
-      <description>Founder promotes AI site to surface negative hotel feedback suppressed elsewhere.</description>
-      <content:encoded><![CDATA[<p><img src="https://digg.com/tech/x8y9a544/opengraph-image" alt="Pieter Levels Launches Hotelist.com for Honest Ratings"/></p>
-<p>Founder promotes AI site to surface negative hotel feedback suppressed elsewhere.</p>
-<p><strong>Original source:</strong> <a href="http://Hotelist.com">http://Hotelist.com</a></p>
-<p><strong>Digg story:</strong> <a href="https://digg.com/tech/x8y9a544">https://digg.com/tech/x8y9a544</a></p>
-<p>Pieter Levels posted about Hotelist.com, his project to aggregate real hotel reviews using AI and counter high ratings on platforms like Airbnb. He noted that removing negative reviews creates booking anxiety because users cannot verify listings. Researcher Ivan Vendrov quoted the discussion and highlighted the incentive problem of suppressing feedback after decades of e-commerce. Vendrov asked why profitable honest info-brokers have not appeared and suggested projecting hospitality onto one dimension may be unnecessary.</p>
-<ul><li><strong>Views:</strong> 476,990</li><li><strong>Likes:</strong> 2,678</li><li><strong>Bookmarks:</strong> 518</li><li><strong>Quotes:</strong> 31</li><li><strong>Replies:</strong> 214</li><li><strong>Posts:</strong> 4</li></ul>
-<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/levelsio">@levelsio</a></li><li><a href="https://x.com/IvanVendrov">ivan</a></li></ul>]]></content:encoded>
-      <guid isPermaLink="true">http://Hotelist.com</guid>
-      <category>Digg AI from X</category>
-      <pubDate>Mon, 24 Aug 2026 14:17:36 +0000</pubDate>
-      <media:content url="https://digg.com/tech/x8y9a544/opengraph-image" type="image/jpeg" medium="image"/>
-    </item>
-    <item>
-      <title>Anthropic Questions Candidates on Safety Priority and Share Value</title>
-      <link>https://www.axios.com/2026/08/24/scoop-anthropic-candidates-face-blunt-money-question</link>
-      <description>Social posts reference an Axios scoop on culture interviews testing mission alignment over equity value.</description>
-      <content:encoded><![CDATA[<p><img src="https://digg.com/tech/3wawarxp/opengraph-image" alt="Anthropic Questions Candidates on Safety Priority and Share Value"/></p>
-<p>Social posts reference an Axios scoop on culture interviews testing mission alignment over equity value.</p>
-<p><strong>Original source:</strong> <a href="https://www.axios.com/2026/08/24/scoop-anthropic-candidates-face-blunt-money-question">https://www.axios.com/2026/08/24/scoop-anthropic-candidates-face-blunt-money-question</a></p>
-<p><strong>Digg story:</strong> <a href="https://digg.com/tech/3wawarxp">https://digg.com/tech/3wawarxp</a></p>
-<p>Madison Mills posted on X linking to an Axios report that Anthropic asks job candidates during culture interviews how they would react if the company&#x27;s share value crashed to zero. Alex Heath confirmed the question and called the interview process unusual. Miles Brundage noted the screening helps mission fit yet warned that groupthink can still emerge among aligned teams. Posts on X include praise from Gary Marcus for testing motivations and criticism that the question pressures conformity or belongs in salary talks. the available reporting only contains social references to the Axios scoop and does not include independent details on frequency or candidate answers.</p>
-<ul><li><strong>Views:</strong> 126,674</li><li><strong>Likes:</strong> 1,205</li><li><strong>Bookmarks:</strong> 107</li><li><strong>Quotes:</strong> 2</li><li><strong>Replies:</strong> 54</li><li><strong>Posts:</strong> 9</li></ul>
-<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/Miles_Brundage">Miles Brundage</a></li><li><a href="https://x.com/tszzl">roon</a></li><li><a href="https://x.com/GaryMarcus">Gary Marcus</a></li><li><a href="https://x.com/beffjezos">Beff (e/acc)</a></li><li><a href="https://x.com/TurnerNovak">Turner Novak 🍌🧢</a></li></ul>]]></content:encoded>
-      <guid isPermaLink="true">https://www.axios.com/2026/08/24/scoop-anthropic-candidates-face-blunt-money-question</guid>
-      <category>Digg AI from X</category>
-      <pubDate>Mon, 24 Aug 2026 11:13:22 +0000</pubDate>
-      <media:content url="https://digg.com/tech/3wawarxp/opengraph-image" type="image/jpeg" medium="image"/>
-    </item>
-    <item>
-      <title>Horace He Calls Cached Token Counts Incredibly Dumb</title>
-      <link>https://www.youtube.com/watch?v=tECAkJAI_Vk</link>
-      <description>Researchers note that visible dashboard numbers lead users to include cached inputs when reporting token usage.</description>
-      <content:encoded><![CDATA[<p><img src="https://digg.com/tech/onfl2d4w/opengraph-image" alt="Horace He Calls Cached Token Counts Incredibly Dumb"/></p>
-<p>Researchers note that visible dashboard numbers lead users to include cached inputs when reporting token usage.</p>
-<p><strong>Original source:</strong> <a href="https://www.youtube.com/watch?v=tECAkJAI_Vk">https://www.youtube.com/watch?v=tECAkJAI_Vk</a></p>
-<p><strong>Digg story:</strong> <a href="https://digg.com/tech/onfl2d4w">https://digg.com/tech/onfl2d4w</a></p>
-<p>Horace He posted on X that people discussing LLM token usage usually include cached input tokens and called the practice incredibly dumb. Hieu Pham replied that users read the most visible dashboard number rather than seeking a breakdown. Lucas Beyer joked that a &quot;kv tokens&quot; metric multiplying by layer count would make the numbers even bigger. Horace He followed up suggesting counting every decode step load of cached tokens. The posts discuss reported LLM token counts that include cached inputs.</p>
-<ul><li><strong>Views:</strong> 35,946</li><li><strong>Likes:</strong> 512</li><li><strong>Bookmarks:</strong> 37</li><li><strong>Quotes:</strong> 4</li><li><strong>Replies:</strong> 35</li><li><strong>Posts:</strong> 4</li></ul>
-<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/giffmana">Lucas Beyer (bl16)</a></li><li><a href="https://x.com/cHHillee">Horace He</a></li><li><a href="https://x.com/hyhieu226">Hieu Pham</a></li></ul>]]></content:encoded>
-      <guid isPermaLink="true">https://www.youtube.com/watch?v=tECAkJAI_Vk</guid>
-      <category>Digg AI from X</category>
-      <pubDate>Mon, 24 Aug 2026 11:07:11 +0000</pubDate>
-      <media:content url="https://digg.com/tech/onfl2d4w/opengraph-image" type="image/jpeg" medium="image"/>
-    </item>
-    <item>
-      <title>Sander Dieleman Blog on Continuous Diffusion Language Models</title>
-      <link>https://sander.ai/2026/08/24/continuous-dlms.html?v=1</link>
-      <description>Google DeepMind researcher posts historical perspective on the approach's recent resurgence.</description>
-      <content:encoded><![CDATA[<p><img src="https://digg.com/tech/s6pfd84o/opengraph-image" alt="Sander Dieleman Blog on Continuous Diffusion Language Models"/></p>
-<p>Google DeepMind researcher posts historical perspective on the approach&#x27;s recent resurgence.</p>
-<p><strong>Original source:</strong> <a href="https://sander.ai/2026/08/24/continuous-dlms.html?v=1">https://sander.ai/2026/08/24/continuous-dlms.html?v=1</a></p>
-<p><strong>Digg story:</strong> <a href="https://digg.com/tech/s6pfd84o">https://digg.com/tech/s6pfd84o</a></p>
-<p>Sander Dieleman announced a new blog post on continuous diffusion for language models. The Research Engineer at Google DeepMind notes the direction receded for a while but returned as a hot topic this year. The post supplies historical perspective and thoughts on the revival. Linked sources state fully discrete methods dominated for a few years while continuous diffusion language models are making a comeback. The blog appears at the link shared in the post.</p>
-<ul><li><strong>Views:</strong> 31,579</li><li><strong>Likes:</strong> 513</li><li><strong>Bookmarks:</strong> 351</li><li><strong>Quotes:</strong> 9</li><li><strong>Replies:</strong> 11</li><li><strong>Posts:</strong> 2</li></ul>
-<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/sedielem">Sander Dieleman</a></li><li><a href="https://x.com/kastnerkyle">Kyle Kastner</a></li></ul>]]></content:encoded>
-      <guid isPermaLink="true">https://sander.ai/2026/08/24/continuous-dlms.html?v=1</guid>
-      <category>Digg AI from X</category>
-      <pubDate>Mon, 24 Aug 2026 10:04:13 +0000</pubDate>
-      <media:content url="https://digg.com/tech/s6pfd84o/opengraph-image" type="image/jpeg" medium="image"/>
     </item>
   </channel>
 </rss>
