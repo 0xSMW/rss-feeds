@@ -8,7 +8,167 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 31 Aug 2026 20:44:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 01 Sep 2026 14:05:14 +0000</lastBuildDate>
+    <item>
+      <title>Chris Paxton Looks Forward to Autonomous Cars Everywhere</title>
+      <link>https://x.com/chris_j_paxton/status/2094788675729060051</link>
+      <description>AI researcher Chris Paxton comments on a Cybercab navigating Manhattan traffic.</description>
+      <content:encoded><![CDATA[<p><img src="https://digg.com/tech/w0bcidmr/opengraph-image" alt="Chris Paxton Looks Forward to Autonomous Cars Everywhere"/></p>
+<p>AI researcher Chris Paxton comments on a Cybercab navigating Manhattan traffic.</p>
+<p><strong>Original source:</strong> <a href="https://x.com/chris_j_paxton/status/2094788675729060051">https://x.com/chris_j_paxton/status/2094788675729060051</a></p>
+<p><strong>Digg story:</strong> <a href="https://digg.com/tech/w0bcidmr">https://digg.com/tech/w0bcidmr</a></p>
+<p>Chris Paxton, an AI researcher focused on embodied AI and humanoid robots who leads AI at Agility Robotics, quoted commentary on a steering-wheel-free Cybercab handling dense NYC Chinatown traffic with pedestrians and cyclists. He stated he is looking forward to autonomous cars on every street. The post references a tweet at status 2094449083620663482. The packet shows only this quoted remark and his professional background with no additional confirmations or details.</p>
+<ul><li><strong>Views:</strong> 3,203</li><li><strong>Likes:</strong> 38</li><li><strong>Replies:</strong> 3</li><li><strong>Posts:</strong> 1</li></ul>
+<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/chris_j_paxton">Chris Paxton</a></li></ul>]]></content:encoded>
+      <guid isPermaLink="true">https://x.com/chris_j_paxton/status/2094788675729060051</guid>
+      <category>Digg AI from X</category>
+      <pubDate>Tue, 01 Sep 2026 14:05:14 +0000</pubDate>
+      <media:content url="https://digg.com/tech/w0bcidmr/opengraph-image" type="image/jpeg" medium="image"/>
+    </item>
+    <item>
+      <title>Unify Routes Traffic Around OpenAI Prompt Cache Limit</title>
+      <link>https://x.com/LangChain/status/2094788138489012507</link>
+      <description>LangChain post describes custom routing that reached high cache utilization.</description>
+      <content:encoded><![CDATA[<p><img src="https://digg.com/tech/eq7erfvo/opengraph-image" alt="Unify Routes Traffic Around OpenAI Prompt Cache Limit"/></p>
+<p>LangChain post describes custom routing that reached high cache utilization.</p>
+<p><strong>Original source:</strong> <a href="https://x.com/LangChain/status/2094788138489012507">https://x.com/LangChain/status/2094788138489012507</a></p>
+<p><strong>Digg story:</strong> <a href="https://digg.com/tech/eq7erfvo">https://digg.com/tech/eq7erfvo</a></p>
+<p>The official account for LangChain shared details on a technical workaround for OpenAI prompt caching. The post states that OpenAI&#x27;s prompt cache makes requests ninety percent cheaper while limiting each cache key to around fifteen requests per second. Unify addressed the restriction by building its own routing system around that limit. Their solution reportedly achieved a cache hit rate close to ninety five percent. The account tagged the relevant parties and attached a video to illustrate the approach taken by the team at Unify.</p>
+<ul><li><strong>Views:</strong> 2,553</li><li><strong>Likes:</strong> 6</li><li><strong>Bookmarks:</strong> 4</li><li><strong>Replies:</strong> 3</li><li><strong>Posts:</strong> 1</li></ul>
+<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/LangChain">LangChain</a></li></ul>]]></content:encoded>
+      <guid isPermaLink="true">https://x.com/LangChain/status/2094788138489012507</guid>
+      <category>Digg AI from X</category>
+      <pubDate>Tue, 01 Sep 2026 14:03:06 +0000</pubDate>
+      <media:content url="https://digg.com/tech/eq7erfvo/opengraph-image" type="image/jpeg" medium="image"/>
+    </item>
+    <item>
+      <title>Florian Brand Mocks Small Model Rubric Scoring</title>
+      <link>https://x.com/xeophon/status/2094788072688832514</link>
+      <description>Research engineer posts sarcastic X reply on feeding 50-item rubrics to small models.</description>
+      <content:encoded><![CDATA[<p><img src="https://digg.com/tech/lqev5bxl/opengraph-image" alt="Florian Brand Mocks Small Model Rubric Scoring"/></p>
+<p>Research engineer posts sarcastic X reply on feeding 50-item rubrics to small models.</p>
+<p><strong>Original source:</strong> <a href="https://x.com/xeophon/status/2094788072688832514">https://x.com/xeophon/status/2094788072688832514</a></p>
+<p><strong>Digg story:</strong> <a href="https://digg.com/tech/lqev5bxl">https://digg.com/tech/lqev5bxl</a></p>
+<p>Florian Brand, Research Engineer at Prime Intellect focused on LLM evaluations and benchmarking, posted a sarcastic reply on X. He wrote that a small model can surely handle a 50-item rubric at once and should produce a single binary score. The comment appears amid ongoing discussion of LLM benchmarking practices. The packet contains no further replies, clarifications, or external confirmation of the exchange.</p>
+<ul><li><strong>Views:</strong> 1,503</li><li><strong>Likes:</strong> 43</li><li><strong>Bookmarks:</strong> 3</li><li><strong>Replies:</strong> 3</li><li><strong>Posts:</strong> 1</li></ul>
+<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/xeophon">Florian Brand</a></li></ul>]]></content:encoded>
+      <guid isPermaLink="true">https://x.com/xeophon/status/2094788072688832514</guid>
+      <category>Digg AI from X</category>
+      <pubDate>Tue, 01 Sep 2026 14:02:50 +0000</pubDate>
+      <media:content url="https://digg.com/tech/lqev5bxl/opengraph-image" type="image/jpeg" medium="image"/>
+    </item>
+    <item>
+      <title>Stephen Casper Rejects 'AI as Normal Technology' Hypothesis</title>
+      <link>https://x.com/StephenLCasper/status/2094787414300762222</link>
+      <description>MIT PhD student Stephen Casper posted the argument after the Hugging Face hacking incident and related coverage.</description>
+      <content:encoded><![CDATA[<p><img src="https://digg.com/tech/dn5w7fbz/opengraph-image" alt="Stephen Casper Rejects &#x27;AI as Normal Technology&#x27; Hypothesis"/></p>
+<p>MIT PhD student Stephen Casper posted the argument after the Hugging Face hacking incident and related coverage.</p>
+<p><strong>Original source:</strong> <a href="https://x.com/StephenLCasper/status/2094787414300762222">https://x.com/StephenLCasper/status/2094787414300762222</a></p>
+<p><strong>Digg story:</strong> <a href="https://digg.com/tech/dn5w7fbz">https://digg.com/tech/dn5w7fbz</a></p>
+<p>Stephen Casper, a final-year MIT CSAIL PhD student and Harvard Berkman Klein Fellow, wrote that the Hugging Face hacking incident and subsequent reporting make it time to reject the AI as a normal technology hypothesis. He said any version viable today would be contorted into a truism or beyond reasonable interpretation of the word normal. The post appears on social media and contains no further details, evidence, or responses from others.</p>
+<ul><li><strong>Views:</strong> 554</li><li><strong>Likes:</strong> 15</li><li><strong>Bookmarks:</strong> 2</li><li><strong>Replies:</strong> 4</li><li><strong>Posts:</strong> 1</li></ul>
+<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/StephenLCasper">Cas (Stephen Casper)</a></li></ul>]]></content:encoded>
+      <guid isPermaLink="true">https://x.com/StephenLCasper/status/2094787414300762222</guid>
+      <category>Digg AI from X</category>
+      <pubDate>Tue, 01 Sep 2026 14:00:13 +0000</pubDate>
+      <media:content url="https://digg.com/tech/dn5w7fbz/opengraph-image" type="image/jpeg" medium="image"/>
+    </item>
+    <item>
+      <title>Animesh Garg Discusses RL Return and Microduck Platform</title>
+      <link>https://x.com/animesh_garg/status/2094787369756918033</link>
+      <description>Georgia Tech professor shares excitement on MTS Live about new platforms.</description>
+      <content:encoded><![CDATA[<p><img src="https://digg.com/tech/qhfwg1id/opengraph-image" alt="Animesh Garg Discusses RL Return and Microduck Platform"/></p>
+<p>Georgia Tech professor shares excitement on MTS Live about new platforms.</p>
+<p><strong>Original source:</strong> <a href="https://x.com/animesh_garg/status/2094787369756918033">https://x.com/animesh_garg/status/2094787369756918033</a></p>
+<p><strong>Digg story:</strong> <a href="https://digg.com/tech/qhfwg1id">https://digg.com/tech/qhfwg1id</a></p>
+<p>Animesh Garg, Assistant Professor of AI Robotics at Georgia Tech, posted about appearing on @MTSlive to discuss robotics developments. He stated excitement over the return of reinforcement learning in new packaging. Garg called the microduck the talk of the town and praised it as a strong new platform. He noted that such platforms allow creation of toys under $500 that enable high-school students to engage with the technology.</p>
+<ul><li><strong>Views:</strong> 1,445</li><li><strong>Likes:</strong> 10</li><li><strong>Bookmarks:</strong> 4</li><li><strong>Replies:</strong> 2</li><li><strong>Posts:</strong> 1</li></ul>
+<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/animesh_garg">Animesh Garg</a></li></ul>]]></content:encoded>
+      <guid isPermaLink="true">https://x.com/animesh_garg/status/2094787369756918033</guid>
+      <category>Digg AI from X</category>
+      <pubDate>Tue, 01 Sep 2026 14:00:02 +0000</pubDate>
+      <media:content url="https://digg.com/tech/qhfwg1id/opengraph-image" type="image/jpeg" medium="image"/>
+    </item>
+    <item>
+      <title>O'Shaughnessy Holds Second Conversation With Sarah Guo</title>
+      <link>https://x.com/patrick_oshag/status/2094787358868881573</link>
+      <description>Investor shares details of second talk with Conviction founder on AI progress.</description>
+      <content:encoded><![CDATA[<p><img src="https://digg.com/tech/4h21zxn6/opengraph-image" alt="O&#x27;Shaughnessy Holds Second Conversation With Sarah Guo"/></p>
+<p>Investor shares details of second talk with Conviction founder on AI progress.</p>
+<p><strong>Original source:</strong> <a href="https://x.com/patrick_oshag/status/2094787358868881573">https://x.com/patrick_oshag/status/2094787358868881573</a></p>
+<p><strong>Digg story:</strong> <a href="https://digg.com/tech/4h21zxn6">https://digg.com/tech/4h21zxn6</a></p>
+<p>Patrick O&#x27;Shaughnessy posted about his second conversation with Sarah Guo, founder of Conviction. The tweet states that Guo has been an early investor in many defining companies of this generation and ranks at the top of managers that LPs most want to invest with. O&#x27;Shaughnessy notes that Guo knows the small group of 250 people pushing the AI frontier and that the discussion covers what she sees.</p>
+<ul><li><strong>Views:</strong> 22,510</li><li><strong>Likes:</strong> 175</li><li><strong>Bookmarks:</strong> 204</li><li><strong>Quotes:</strong> 2</li><li><strong>Replies:</strong> 9</li><li><strong>Posts:</strong> 1</li></ul>
+<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/patrick_oshag">Patrick OShaughnessy</a></li></ul>]]></content:encoded>
+      <guid isPermaLink="true">https://x.com/patrick_oshag/status/2094787358868881573</guid>
+      <category>Digg AI from X</category>
+      <pubDate>Tue, 01 Sep 2026 14:00:00 +0000</pubDate>
+      <media:content url="https://digg.com/tech/4h21zxn6/opengraph-image" type="image/jpeg" medium="image"/>
+    </item>
+    <item>
+      <title>Ramp's Inspect AI Agent Writes Three of Four Pull Requests</title>
+      <link>https://x.com/sarthakgh/status/2094753043568873696</link>
+      <description>Ramp's internal coding agent Inspect, built on Linear, now authors most pull requests.</description>
+      <content:encoded><![CDATA[<p><img src="https://digg.com/tech/5rfev4wh/opengraph-image" alt="Ramp&#x27;s Inspect AI Agent Writes Three of Four Pull Requests"/></p>
+<p>Ramp&#x27;s internal coding agent Inspect, built on Linear, now authors most pull requests.</p>
+<p><strong>Original source:</strong> <a href="https://x.com/sarthakgh/status/2094753043568873696">https://x.com/sarthakgh/status/2094753043568873696</a></p>
+<p><strong>Digg story:</strong> <a href="https://digg.com/tech/5rfev4wh">https://digg.com/tech/5rfev4wh</a></p>
+<p>Source summaries state that Ramp&#x27;s internal AI coding agent Inspect, built on the Linear platform, authors 75 percent of the company&#x27;s pull requests. The company began as a Linear customer in 2019 and has since become a heavy user of AI agents on the platform. A separate quote from Sar Haribhakti notes that successful AI users recognize what makes a product good.</p>
+<ul><li><strong>Views:</strong> 1,467</li><li><strong>Likes:</strong> 9</li><li><strong>Bookmarks:</strong> 3</li><li><strong>Posts:</strong> 2</li></ul>
+<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/sarthakgh">Sar Haribhakti</a></li></ul>]]></content:encoded>
+      <guid isPermaLink="true">https://x.com/sarthakgh/status/2094753043568873696</guid>
+      <category>Digg AI from X</category>
+      <pubDate>Tue, 01 Sep 2026 11:43:38 +0000</pubDate>
+      <media:content url="https://digg.com/tech/5rfev4wh/opengraph-image" type="image/jpeg" medium="image"/>
+    </item>
+    <item>
+      <title>Investor Flags AI-Generated Rage Bait Videos on TikTok</title>
+      <link>https://x.com/blakeir/status/2094748912837955699</link>
+      <description>Blake Robbins posts about courtroom-style clips he believes are created by AI.</description>
+      <content:encoded><![CDATA[<p><img src="https://digg.com/tech/6ecpba6k/opengraph-image" alt="Investor Flags AI-Generated Rage Bait Videos on TikTok"/></p>
+<p>Blake Robbins posts about courtroom-style clips he believes are created by AI.</p>
+<p><strong>Original source:</strong> <a href="https://x.com/blakeir/status/2094748912837955699">https://x.com/blakeir/status/2094748912837955699</a></p>
+<p><strong>Digg story:</strong> <a href="https://digg.com/tech/6ecpba6k">https://digg.com/tech/6ecpba6k</a></p>
+<p>Blake Robbins posted on X that his TikTok feed contains AI-generated rage bait news stories. He shared a video example and observed that comments on it make no reference to the content being artificial. The post presents the material as generated headline content focused on courtroom videos. Robbins states that he seems to be the only one noticing the pattern.</p>
+<ul><li><strong>Views:</strong> 4,026</li><li><strong>Likes:</strong> 20</li><li><strong>Bookmarks:</strong> 6</li><li><strong>Replies:</strong> 5</li><li><strong>Posts:</strong> 1</li></ul>
+<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/blakeir">Blake Robbins</a></li></ul>]]></content:encoded>
+      <guid isPermaLink="true">https://x.com/blakeir/status/2094748912837955699</guid>
+      <category>Digg AI from X</category>
+      <pubDate>Tue, 01 Sep 2026 11:27:14 +0000</pubDate>
+      <media:content url="https://digg.com/tech/6ecpba6k/opengraph-image" type="image/jpeg" medium="image"/>
+    </item>
+    <item>
+      <title>Joscha Bach Calls Current AI Models Needlessly Anthropomorphic</title>
+      <link>https://x.com/Plinz/status/2094748672986644630</link>
+      <description>Researcher Joscha Bach uses a submarine metaphor to describe artificial minds.</description>
+      <content:encoded><![CDATA[<p><img src="https://digg.com/tech/xvjwg070/opengraph-image" alt="Joscha Bach Calls Current AI Models Needlessly Anthropomorphic"/></p>
+<p>Researcher Joscha Bach uses a submarine metaphor to describe artificial minds.</p>
+<p><strong>Original source:</strong> <a href="https://x.com/Plinz/status/2094748672986644630">https://x.com/Plinz/status/2094748672986644630</a></p>
+<p><strong>Digg story:</strong> <a href="https://digg.com/tech/xvjwg070">https://digg.com/tech/xvjwg070</a></p>
+<p>Joscha Bach replied to another user on X with a metaphor about submarines. He wrote that submarines swim adequately yet dive better, adding that human minds stay limited to the surface while artificial minds can reach unreachable depths. Bach concluded that present AIs remain needlessly anthropomorphic. The same text appears in a retweet of his own post. The packet records only these statements from Bach and generated summaries of them.</p>
+<ul><li><strong>Views:</strong> 3,411</li><li><strong>Likes:</strong> 75</li><li><strong>Bookmarks:</strong> 4</li><li><strong>Replies:</strong> 6</li><li><strong>Posts:</strong> 2</li></ul>
+<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/Plinz">Joscha Bach</a></li></ul>]]></content:encoded>
+      <guid isPermaLink="true">https://x.com/Plinz/status/2094748672986644630</guid>
+      <category>Digg AI from X</category>
+      <pubDate>Tue, 01 Sep 2026 11:26:16 +0000</pubDate>
+      <media:content url="https://digg.com/tech/xvjwg070/opengraph-image" type="image/jpeg" medium="image"/>
+    </item>
+    <item>
+      <title>Hermes HUD Adds Pretend I'm Working Feature</title>
+      <link>https://x.com/Teknium/status/2094691930160672857</link>
+      <description>New mode shows fake code terminal while agents continue tasks in background.</description>
+      <content:encoded><![CDATA[<p><img src="https://digg.com/tech/9cvhhr19/opengraph-image" alt="Hermes HUD Adds Pretend I&#x27;m Working Feature"/></p>
+<p>New mode shows fake code terminal while agents continue tasks in background.</p>
+<p><strong>Original source:</strong> <a href="https://x.com/Teknium/status/2094691930160672857">https://x.com/Teknium/status/2094691930160672857</a></p>
+<p><strong>Digg story:</strong> <a href="https://digg.com/tech/9cvhhr19">https://digg.com/tech/9cvhhr19</a></p>
+<p>The Hermes HUD now includes a feature users activate by typing the phrase Pretend I&#x27;m working. Upon activation it presents a fake terminal window showing lines of code. At the same time actual AI agents proceed with background operations uninterrupted. This setup allows the screen to suggest ongoing work even when direct involvement is minimal. The detail appears in a source line referencing a tweet from a related account and describing the generated summary of the change. Teknium noted the addition in connection with the open source LLM work.</p>
+<ul><li><strong>Views:</strong> 28,473</li><li><strong>Likes:</strong> 334</li><li><strong>Bookmarks:</strong> 73</li><li><strong>Quotes:</strong> 1</li><li><strong>Replies:</strong> 15</li><li><strong>Posts:</strong> 1</li></ul>
+<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/Teknium">Teknium 🪽</a></li></ul>]]></content:encoded>
+      <guid isPermaLink="true">https://x.com/Teknium/status/2094691930160672857</guid>
+      <category>Digg AI from X</category>
+      <pubDate>Tue, 01 Sep 2026 07:40:48 +0000</pubDate>
+      <media:content url="https://digg.com/tech/9cvhhr19/opengraph-image" type="image/jpeg" medium="image"/>
+    </item>
     <item>
       <title>Ben Hylak Questions Cognition's DevinAI Diff Features</title>
       <link>https://x.com/benhylak/status/2094526640818991443</link>
@@ -700,166 +860,6 @@
       <category>Digg AI from X</category>
       <pubDate>Fri, 28 Aug 2026 18:57:24 +0000</pubDate>
       <media:content url="https://digg.com/tech/52lmg3vp/opengraph-image" type="image/jpeg" medium="image"/>
-    </item>
-    <item>
-      <title>OpenAI Introduces Rosalind Workbench for Biologists</title>
-      <link>https://developers.openai.com/blog/rosalind-workbench</link>
-      <description>OpenAI researcher Joy Jiao unveils the tool while early testers report strong results on research papers.</description>
-      <content:encoded><![CDATA[<p><img src="https://digg.com/tech/zksc4lok/opengraph-image" alt="OpenAI Introduces Rosalind Workbench for Biologists"/></p>
-<p>OpenAI researcher Joy Jiao unveils the tool while early testers report strong results on research papers.</p>
-<p><strong>Original source:</strong> <a href="https://developers.openai.com/blog/rosalind-workbench">https://developers.openai.com/blog/rosalind-workbench</a></p>
-<p><strong>Digg story:</strong> <a href="https://digg.com/tech/zksc4lok">https://digg.com/tech/zksc4lok</a></p>
-<p>Joy Jiao, Life Sciences Research Lead at OpenAI, posted that she is introducing Rosalind Workbench for biologists built directly into Codex. Derya Unutmaz, a professor of immunology, stated she has been early-testing the Rosalind model and found it fantastic for biomedical research. She said it helped her completely revise a paper on cancer immunotherapy and greatly improved the data analysis in the manuscript. She added that the model performed better than GPT-5.6 Pro. Andrew Mayne, a former OpenAI engineer, retweeted her post.</p>
-<ul><li><strong>Views:</strong> 10,843</li><li><strong>Likes:</strong> 145</li><li><strong>Bookmarks:</strong> 40</li><li><strong>Quotes:</strong> 1</li><li><strong>Replies:</strong> 14</li><li><strong>Posts:</strong> 3</li></ul>
-<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/csvoss">Chelsea Sierra Voss</a></li><li><a href="https://x.com/AndrewMayne">Andrew Mayne</a></li></ul>]]></content:encoded>
-      <guid isPermaLink="true">https://developers.openai.com/blog/rosalind-workbench</guid>
-      <category>Digg AI from X</category>
-      <pubDate>Fri, 28 Aug 2026 17:59:56 +0000</pubDate>
-      <media:content url="https://digg.com/tech/zksc4lok/opengraph-image" type="image/jpeg" medium="image"/>
-    </item>
-    <item>
-      <title>Grok Bot Enables Template Sharing</title>
-      <link>https://x.ai/bot/FU-Ev6_Ju4lFGWwWRD0GD</link>
-      <description>Grok Bot account states users can share custom bot templates with others.</description>
-      <content:encoded><![CDATA[<p><img src="https://digg.com/tech/fahr6os6/opengraph-image" alt="Grok Bot Enables Template Sharing"/></p>
-<p>Grok Bot account states users can share custom bot templates with others.</p>
-<p><strong>Original source:</strong> <a href="https://x.ai/bot/FU-Ev6_Ju4lFGWwWRD0GD">https://x.ai/bot/FU-Ev6_Ju4lFGWwWRD0GD</a></p>
-<p><strong>Digg story:</strong> <a href="https://digg.com/tech/fahr6os6">https://digg.com/tech/fahr6os6</a></p>
-<p>The Grok Bot account announced that users can now share templates of their custom Bots with others. A video posted by the account appears to show a chat window and a Share as Template button in settings, with options to publish bots publicly such as Sales Outbound. Eric Zakariasson posted an example of a Projects Manager bot at x.ai that creates specialist agents including coder, designer, researcher, and writer, treating Notion as the source of truth for project rows and task boards according to his post. Replies on X include users calling the feature smart.</p>
-<ul><li><strong>Views:</strong> 5,292,718</li><li><strong>Likes:</strong> 3,902</li><li><strong>Bookmarks:</strong> 1,464</li><li><strong>Quotes:</strong> 303</li><li><strong>Replies:</strong> 291</li><li><strong>Posts:</strong> 3</li></ul>
-<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/altryne">Alex Volkov</a></li><li><a href="https://x.com/ericzakariasson">eric zakariasson</a></li><li><a href="https://x.com/leerob">Lee Robinson</a></li></ul>]]></content:encoded>
-      <guid isPermaLink="true">https://x.ai/bot/FU-Ev6_Ju4lFGWwWRD0GD</guid>
-      <category>Digg AI from X</category>
-      <pubDate>Fri, 28 Aug 2026 16:33:51 +0000</pubDate>
-      <media:content url="https://digg.com/tech/fahr6os6/opengraph-image" type="image/jpeg" medium="image"/>
-    </item>
-    <item>
-      <title>Perplexity AI Powers Decagon Customer Support Agents</title>
-      <link>https://x.com/DecagonAI/status/2093367462461124622</link>
-      <description>Perplexity AI founders announce integration of search into Decagon customer agents for major brands.</description>
-      <content:encoded><![CDATA[<p><img src="https://digg.com/tech/9so5ziih/opengraph-image" alt="Perplexity AI Powers Decagon Customer Support Agents"/></p>
-<p>Perplexity AI founders announce integration of search into Decagon customer agents for major brands.</p>
-<p><strong>Original source:</strong> <a href="https://x.com/DecagonAI/status/2093367462461124622">https://x.com/DecagonAI/status/2093367462461124622</a></p>
-<p><strong>Digg story:</strong> <a href="https://digg.com/tech/9so5ziih">https://digg.com/tech/9so5ziih</a></p>
-<p>Perplexity AI co-founder Denis Yarats posted that Decagon agents now run on the company&#x27;s state-of-the-art search technology. Co-founder Aravind Srinivas added that Decagon handles support for Delta Airlines, Ticketmaster, Deutsche Telekom and American Airlines and that Perplexity supplies the search for queries needing current online information. Both posts link to the same Decagon announcement on X. The statements establish the claimed integration but provide no independent confirmation of deployment, performance, or contract details.</p>
-<ul><li><strong>Views:</strong> 16,014</li><li><strong>Likes:</strong> 149</li><li><strong>Bookmarks:</strong> 12</li><li><strong>Replies:</strong> 13</li><li><strong>Posts:</strong> 2</li></ul>
-<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/AravSrinivas">Aravind Srinivas</a></li><li><a href="https://x.com/denisyarats">Denis Yarats</a></li></ul>]]></content:encoded>
-      <guid isPermaLink="true">https://x.com/DecagonAI/status/2093367462461124622</guid>
-      <category>Digg AI from X</category>
-      <pubDate>Fri, 28 Aug 2026 16:29:52 +0000</pubDate>
-      <media:content url="https://digg.com/tech/9so5ziih/opengraph-image" type="image/jpeg" medium="image"/>
-    </item>
-    <item>
-      <title>Owner Raises $240M At $2.3B Valuation</title>
-      <link>https://Owner.com</link>
-      <description>Venture investors celebrate Owner's reported funding milestone and growth.</description>
-      <content:encoded><![CDATA[<p><img src="https://digg.com/tech/p4x2utmb/opengraph-image" alt="Owner Raises $240M At $2.3B Valuation"/></p>
-<p>Venture investors celebrate Owner&#x27;s reported funding milestone and growth.</p>
-<p><strong>Original source:</strong> <a href="https://Owner.com">https://Owner.com</a></p>
-<p><strong>Digg story:</strong> <a href="https://digg.com/tech/p4x2utmb">https://digg.com/tech/p4x2utmb</a></p>
-<p>Jack Altman called Owner his first board seat after leading its A round and praised founder Adam Guild&#x27;s execution. Joshua Browder said his firm invested early and congratulated the team on the milestone. Both posted links to Adam Guild&#x27;s announcement. Generated headlines tied to the posts state a $240M round at $2.3B valuation and $100M ARR. Owner.com builds online ordering and marketing tools used by restaurants.</p>
-<ul><li><strong>Views:</strong> 63,072</li><li><strong>Likes:</strong> 408</li><li><strong>Bookmarks:</strong> 101</li><li><strong>Quotes:</strong> 1</li><li><strong>Replies:</strong> 19</li><li><strong>Posts:</strong> 2</li></ul>
-<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/jaltma">Jack Altman</a></li><li><a href="https://x.com/Joshuabrowder">Joshua Browder</a></li></ul>]]></content:encoded>
-      <guid isPermaLink="true">https://Owner.com</guid>
-      <category>Digg AI from X</category>
-      <pubDate>Fri, 28 Aug 2026 16:29:17 +0000</pubDate>
-      <media:content url="https://digg.com/tech/p4x2utmb/opengraph-image" type="image/jpeg" medium="image"/>
-    </item>
-    <item>
-      <title>Lila Sciences AI Designs CAR-T Therapy in Months</title>
-      <link>https://www.lila.ai/news/inside-lilas-rna-discovery-engine</link>
-      <description>Company says three scientists created a superior version using their platform.</description>
-      <content:encoded><![CDATA[<p><img src="https://digg.com/tech/ltfj3d4j/opengraph-image" alt="Lila Sciences AI Designs CAR-T Therapy in Months"/></p>
-<p>Company says three scientists created a superior version using their platform.</p>
-<p><strong>Original source:</strong> <a href="https://www.lila.ai/news/inside-lilas-rna-discovery-engine">https://www.lila.ai/news/inside-lilas-rna-discovery-engine</a></p>
-<p><strong>Digg story:</strong> <a href="https://digg.com/tech/ltfj3d4j">https://digg.com/tech/ltfj3d4j</a></p>
-<p>Lila Sciences posted that its AI platform let three scientists design a new CAR-T cancer therapy in months. The company stated the therapy outperformed a leading treatment used in patients today during preclinical tests. CAR-T therapies normally require years to develop. Employee Jinghan Ong noted the AI learned from prior data to shorten the process. Tech commentator Robert Scoble shared the announcement online.</p>
-<ul><li><strong>Views:</strong> 70,626</li><li><strong>Likes:</strong> 764</li><li><strong>Bookmarks:</strong> 168</li><li><strong>Quotes:</strong> 20</li><li><strong>Replies:</strong> 44</li><li><strong>Posts:</strong> 3</li></ul>
-<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/Scobleizer">Robert Scoble</a></li><li><a href="https://x.com/tw_killian">Taylor W. Killian</a></li></ul>]]></content:encoded>
-      <guid isPermaLink="true">https://www.lila.ai/news/inside-lilas-rna-discovery-engine</guid>
-      <category>Digg AI from X</category>
-      <pubDate>Fri, 28 Aug 2026 16:22:10 +0000</pubDate>
-      <media:content url="https://digg.com/tech/ltfj3d4j/opengraph-image" type="image/jpeg" medium="image"/>
-    </item>
-    <item>
-      <title>OpenRouter Discounts Trigger 13.8x Token Usage Surge</title>
-      <link>https://openrouter.ai/openai/gpt-5.6-sol?ref=aibalkan.ai</link>
-      <description>Discounts on GPT-5.6 Terra and Luna models produced a sharp rise in token consumption.</description>
-      <content:encoded><![CDATA[<p><img src="https://digg.com/tech/4dneyzz9/opengraph-image" alt="OpenRouter Discounts Trigger 13.8x Token Usage Surge"/></p>
-<p>Discounts on GPT-5.6 Terra and Luna models produced a sharp rise in token consumption.</p>
-<p><strong>Original source:</strong> <a href="https://openrouter.ai/openai/gpt-5.6-sol?ref=aibalkan.ai">https://openrouter.ai/openai/gpt-5.6-sol?ref=aibalkan.ai</a></p>
-<p><strong>Digg story:</strong> <a href="https://digg.com/tech/4dneyzz9">https://digg.com/tech/4dneyzz9</a></p>
-<p>OpenRouter posted that discounting GPT-5.6 Terra and Luna models caused token consumption to jump 13.8 times. Pseudonymous user scaling01 highlighted the new $5 per million token price for GPT-5.6-Sol on the flex API and said more benchmarks would follow. Greg Brockman replied that Jevons Paradox is counterintuitive and inspiring. The packet contains no further confirmation of the exact multiplier or duration of the surge.</p>
-<ul><li><strong>Views:</strong> 142,241</li><li><strong>Likes:</strong> 1,287</li><li><strong>Bookmarks:</strong> 228</li><li><strong>Quotes:</strong> 11</li><li><strong>Replies:</strong> 92</li><li><strong>Posts:</strong> 2</li></ul>
-<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/gdb">Greg Brockman</a></li><li><a href="https://x.com/scaling01">Lisan al Gaib</a></li></ul>]]></content:encoded>
-      <guid isPermaLink="true">https://openrouter.ai/openai/gpt-5.6-sol?ref=aibalkan.ai</guid>
-      <category>Digg AI from X</category>
-      <pubDate>Fri, 28 Aug 2026 14:54:48 +0000</pubDate>
-      <media:content url="https://digg.com/tech/4dneyzz9/opengraph-image" type="image/jpeg" medium="image"/>
-    </item>
-    <item>
-      <title>ChatGPT Adds Multiple Gmail and Calendar Account Support</title>
-      <link>https://help.openai.com/en/articles/11487775-connectors-in-chatgpt</link>
-      <description>Posts note ChatGPT and Codex now link several Gmail and Calendar accounts.</description>
-      <content:encoded><![CDATA[<p><img src="https://digg.com/tech/es8l2osd/opengraph-image" alt="ChatGPT Adds Multiple Gmail and Calendar Account Support"/></p>
-<p>Posts note ChatGPT and Codex now link several Gmail and Calendar accounts.</p>
-<p><strong>Original source:</strong> <a href="https://help.openai.com/en/articles/11487775-connectors-in-chatgpt">https://help.openai.com/en/articles/11487775-connectors-in-chatgpt</a></p>
-<p><strong>Digg story:</strong> <a href="https://digg.com/tech/es8l2osd">https://digg.com/tech/es8l2osd</a></p>
-<p>Users on X reacted to a post by @gabrielchua announcing expanded account connections. Research engineer Tibo Sottiaux asked what the record will be for most connected accounts. Creator Alex Volkov welcomed the change and asked if it should be called the bot effect. Generated summaries in the posts state that OpenAI rolled out support for multiple Gmail and Google Calendar accounts in ChatGPT and Codex to meet frequent user requests.</p>
-<ul><li><strong>Views:</strong> 125,366</li><li><strong>Likes:</strong> 833</li><li><strong>Bookmarks:</strong> 57</li><li><strong>Quotes:</strong> 3</li><li><strong>Replies:</strong> 96</li><li><strong>Posts:</strong> 2</li></ul>
-<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/thsottiaux">Tibo</a></li><li><a href="https://x.com/altryne">Alex Volkov</a></li></ul>]]></content:encoded>
-      <guid isPermaLink="true">https://help.openai.com/en/articles/11487775-connectors-in-chatgpt</guid>
-      <category>Digg AI from X</category>
-      <pubDate>Fri, 28 Aug 2026 14:52:38 +0000</pubDate>
-      <media:content url="https://digg.com/tech/es8l2osd/opengraph-image" type="image/jpeg" medium="image"/>
-    </item>
-    <item>
-      <title>Mike Solana Predicts Data Center Pivot</title>
-      <link>https://floodlightnews.org/new-jersey-data-center-federal-violation/</link>
-      <description>Post mocks journalists and influencers for anti-AI efforts while users adopt chatbots.</description>
-      <content:encoded><![CDATA[<p><img src="https://digg.com/tech/8h0ii1yo/opengraph-image" alt="Mike Solana Predicts Data Center Pivot"/></p>
-<p>Post mocks journalists and influencers for anti-AI efforts while users adopt chatbots.</p>
-<p><strong>Original source:</strong> <a href="https://floodlightnews.org/new-jersey-data-center-federal-violation/">https://floodlightnews.org/new-jersey-data-center-federal-violation/</a></p>
-<p><strong>Digg story:</strong> <a href="https://digg.com/tech/8h0ii1yo">https://digg.com/tech/8h0ii1yo</a></p>
-<p>Mike Solana posted that a data center pivot is coming. He offered thoughts and prayers to journalists and influencers who tried to build a widespread anti-AI movement with aesthetic concerns and misinformation. Solana contrasted that effort with the average American happily chatting with pocket AI tools. Kane retweeted the post. The statement frames public chatbot use as the dominant trend and anticipates a shift in focus toward data centers.</p>
-<ul><li><strong>Views:</strong> 79,488</li><li><strong>Likes:</strong> 2,545</li><li><strong>Bookmarks:</strong> 137</li><li><strong>Quotes:</strong> 26</li><li><strong>Replies:</strong> 112</li><li><strong>Posts:</strong> 2</li></ul>
-<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/micsolana">Mike Solana</a></li><li><a href="https://x.com/kane">Kane 謝凱堯</a></li></ul>]]></content:encoded>
-      <guid isPermaLink="true">https://floodlightnews.org/new-jersey-data-center-federal-violation/</guid>
-      <category>Digg AI from X</category>
-      <pubDate>Fri, 28 Aug 2026 14:27:42 +0000</pubDate>
-      <media:content url="https://digg.com/tech/8h0ii1yo/opengraph-image" type="image/jpeg" medium="image"/>
-    </item>
-    <item>
-      <title>a16z Commits $1.1B to Machine Age Fund</title>
-      <link>https://spr.ly/6010B10mvu</link>
-      <description>Venture firm targets AI hardware, robotics, energy systems, and data center infrastructure.</description>
-      <content:encoded><![CDATA[<p><img src="https://digg.com/tech/stg4b4vs/opengraph-image" alt="a16z Commits $1.1B to Machine Age Fund"/></p>
-<p>Venture firm targets AI hardware, robotics, energy systems, and data center infrastructure.</p>
-<p><strong>Original source:</strong> <a href="https://spr.ly/6010B10mvu">https://spr.ly/6010B10mvu</a></p>
-<p><strong>Digg story:</strong> <a href="https://digg.com/tech/stg4b4vs">https://digg.com/tech/stg4b4vs</a></p>
-<p>Andreessen Horowitz announced a $1.1 billion fund for the machine age. The firm will invest in AI hardware, robotics, energy systems, and semiconductors. Partners described the effort as rebuilding physical infrastructure, including data centers, racks, cooling, and power. One post called it the largest infrastructure opportunity in computing history. Others urged building machines and physical products. The announcement came via the firm&#x27;s official account and was amplified by its investors.</p>
-<ul><li><strong>Views:</strong> 556,111</li><li><strong>Likes:</strong> 3,193</li><li><strong>Bookmarks:</strong> 1,096</li><li><strong>Quotes:</strong> 122</li><li><strong>Replies:</strong> 222</li><li><strong>Posts:</strong> 8</li></ul>
-<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/martin_casado">martin_casado</a></li><li><a href="https://x.com/eriktorenberg">Erik Torenberg</a></li><li><a href="https://x.com/a16z">a16z</a></li><li><a href="https://x.com/joshelman">Josh Elman</a></li><li><a href="https://x.com/dhaber">David Haber</a></li></ul>]]></content:encoded>
-      <guid isPermaLink="true">https://spr.ly/6010B10mvu</guid>
-      <category>Digg AI from X</category>
-      <pubDate>Fri, 28 Aug 2026 13:11:57 +0000</pubDate>
-      <media:content url="https://digg.com/tech/stg4b4vs/opengraph-image" type="image/jpeg" medium="image"/>
-    </item>
-    <item>
-      <title>Posts Highlight Survey on Redistributive AI Policies</title>
-      <link>https://x.com/deanwball/status/2093354306690814083</link>
-      <description>Social media posts discuss a CSAIP survey on American views of AI policies.</description>
-      <content:encoded><![CDATA[<p><img src="https://digg.com/tech/56mwdexm/opengraph-image" alt="Posts Highlight Survey on Redistributive AI Policies"/></p>
-<p>Social media posts discuss a CSAIP survey on American views of AI policies.</p>
-<p><strong>Original source:</strong> <a href="https://x.com/deanwball/status/2093354306690814083">https://x.com/deanwball/status/2093354306690814083</a></p>
-<p><strong>Digg story:</strong> <a href="https://digg.com/tech/56mwdexm">https://digg.com/tech/56mwdexm</a></p>
-<p>Stefanie Feldman posted that 56,000 Americans responded to CSAIP questions on 79 AI policies. The post states significant support for measures that transfer resources from corporations and the wealthiest to workers and families, and that hold AI companies accountable. Rishi Bommasani retweeted related commentary. Dean W. Ball quoted the post and added that UBI polls poorly because people want to work. The visible posts report these survey results without providing the full data or independent confirmation.</p>
-<ul><li><strong>Views:</strong> 244,764</li><li><strong>Likes:</strong> 466</li><li><strong>Bookmarks:</strong> 229</li><li><strong>Quotes:</strong> 72</li><li><strong>Replies:</strong> 129</li><li><strong>Posts:</strong> 3</li></ul>
-<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/RishiBommasani">rishi</a></li><li><a href="https://x.com/HaydnBelfield">Haydn Belfield</a></li></ul>]]></content:encoded>
-      <guid isPermaLink="true">https://x.com/deanwball/status/2093354306690814083</guid>
-      <category>Digg AI from X</category>
-      <pubDate>Fri, 28 Aug 2026 12:15:24 +0000</pubDate>
-      <media:content url="https://digg.com/tech/56mwdexm/opengraph-image" type="image/jpeg" medium="image"/>
     </item>
   </channel>
 </rss>
