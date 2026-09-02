@@ -8,7 +8,145 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 01 Sep 2026 14:05:14 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 02 Sep 2026 02:11:03 +0000</lastBuildDate>
+    <item>
+      <title>Biosecurity at the frontier</title>
+      <link>https://x.ai/news/biosafety-at-the-frontier</link>
+      <description>LatchBio evaluated Grok's performance on biosecurity monitoring and adversarial biological tasks. They found that Grok 4.6 detects and refuses dangerous queries more reliably than any other frontier system.</description>
+      <content:encoded><![CDATA[<p>Today, <a href="https://latch.bio/">LatchBio</a> published an independent analysis of Grok 4.6 on their biological capability and biological red-teaming benchmark suites. These evaluations measure a wide range of characteristics and capabilities of tested models, including:</p>
+<ul>
+<li>Whether a model can distinguish between legitimate biological research and requests that conceal a biosecurity hazard</li>
+<li>Whether a model is useful in a biosecurity and biomonitoring role, by being able to detect and characterize emerging pathogens and patterns of transmission</li>
+</ul>
+<p>On LatchBio's BioSecBench-Refusal suite, Grok 4.6 was the strongest model tested at refusing disguised and hazardous tasks while still completing routine biological work. It was the only system to score above 50% on both measures.</p>
+<h2 id="methodology-and-context">Methodology and context</h2>
+<p>Biology and biological research present domains where the opportunities and risks of highly capable AI systems are well-known and challenging to disentangle. In designing our safeguards, we aim to maximize the utility of our agents in assisting and accelerating legitimate scientific research, while minimizing the risks they present through incorrect information and adversarial use.</p>
+<p>LatchBio's two benchmarks most relevant to the above capabilities measure whether an agent can distinguish concealed hazards from ordinary science, and whether it can carry out the pathogen surveillance workflows public-health work depends on. They are:</p>
+<ul>
+<li><strong>BioSecBench-Refusal</strong>, which pairs routine biological tasks, adapted from published literature, with 46 red-team tasks that look like ordinary research and hide the hazard in attached scientific data, mislabeled files, or other intentionally obfuscated tasks. This evaluation is calibrated around understanding the intent of a task: an agent that only reacts to words like "pathogen" or "toxin" will block the routine set and miss the red-team set, while one that inspects the data can tell the two apart.</li>
+<li><strong>BioSecBench-Surveillance</strong>, which tests whether an agent can carry out pathogen genomic surveillance workflows of the kind used in public-health monitoring. Those tasks require chaining file inspection, tool use, and scientific judgment on messy sequencing data.</li>
+</ul>
+<h2 id="results-and-key-findings">Results and key findings</h2>
+<p>In testing on BioSecBench-Refusal, LatchBio found that Grok 4.6 detects and refuses red-team and otherwise dangerous queries more reliably than any other frontier system tested, while not diminishing performance on routine biological work. Grok 4.6 also performs comparably with other frontier models on biosurveillance work. LatchBio notes that evaluations were performed on a variety of agent harnesses to remove confounds, and that unless otherwise noted, agents were tested at their highest-offered effort levels.</p>
+<p>The score presented by LatchBio is a trial-weighted harmonic mean of red-team refusal and routine compliance. We analyze this metric and standalone refusal rate independently. Across different harnesses, Grok 4.6 holds the top three spots, averaging 62.1%. Considering refusals and task compliance independently, Grok 4.6 refused 59.2% of red-team tasks and completed 64.8% of routine ones. It is the only model tested that scored above 50% on both measures.</p>
+<p>On BioSecBench-Surveillance, Grok 4.6 averages a success rate of 53.5%, sitting behind Opus 5 and ahead of GPT-5.6 Sol on biosecurity and monitoring work. The results on both benchmarks indicate an agent and underlying model well-calibrated for routine and helpful biological work, as well as one highly capable in biosecurity work and monitoring.</p>
+<p>On evaluations of general routine biological capability performed by LatchBio (such as SpatialBench or TxBench-PP), Grok is found to match or exceed other frontier models in a wide range of agentic biological work. These are presented in greater detail at <a href="https://benchmarks.bio">benchmarks.bio</a>.</p>
+<h2 id="analyzing-refusal-behavior">Analyzing refusal behavior</h2>
+<p>In evaluation traces, Grok 4.6 is observed reasoning over the contents of a task and testing environment to assess intent before proceeding or refusing. Frequently, Grok will find discrepancies between the stated intent in the prompt and environment, or will assemble intent from high-risk content disguised by filenames and encryption, and will subsequently refuse. On obviously benign and low-risk tasks, Grok exhibits the same environment-reasoning behavior, but is able to assess tasks as safe.</p>
+<h2 id="how-we-safeguard-grok">How we safeguard Grok</h2>
+<p>Before we release a model, we test biological capability in addition to other domains of risk, and validate that the capabilities of our models are adequately safeguarded against misuse. The work of third-party evaluators such as LatchBio complements the evaluations we perform internally, both pre- and post-deployment, for the models we serve.</p>
+<p>Grok's safeguards are built in layers to establish defense-in-depth. Refusal training is performed to teach the model how and when to refuse, to correctly infer the intent and risk profile of tasks, and to refuse correctly in highly adversarial scenarios. We train and deploy inference-time safeguards to reject harmful requests before they ever reach the model, and we implement behavioral controls to further safeguard the model when deployed. Post-deployment monitoring is performed to detect and stop patterns of adversarial use at the session and user level, and provides a source of feedback for continuous calibration of our model deployments.</p>
+<p>We observe a material improvement in Grok 4.6's capabilities in biological work over historically tested models, with substantial gains in refusal and biosecurity performance over Grok 4.5 and Grok 4.3. We intend our ongoing and novel safeguards work to allow us to continue serving frontier-scale intelligence safely across future model releases.</p>
+<h2 id="the-future-of-biosecurity-and-scientific-discovery">The future of biosecurity and scientific discovery</h2>
+<p>The line between actively adversarial tasks and helpful use grows thinner as models rapidly become more capable and autonomous, and safeguards will need to evolve accordingly. To control for the greater risk implied by improved model capability and agency, we will perform wider, more ambitious testing and calibration of our models and agentic systems: broader pre-deployment suites, more third-party evaluations, improved post-deployment monitoring, and deployments of our models with companies and institutions at the frontier of biology.</p>
+<p>Similarly, there is a risk inherent in overrefusals and miscalibrated safeguards. When a model refuses routine and helpful biological work, the ability of healthcare professionals, researchers, and monitoring programs to detect outbreaks early and perform other critical work in the field is degraded. We gauge this risk as equally serious as the risk of aiding malicious use.</p>
+<p>Grok is already used in scientific work, including general biological research and biosecurity monitoring, and we are optimistic about the ability of highly capable models to rapidly accelerate scientific discovery and shorten the path from the lab to practical use. We are committed to continuing to serve frontier intelligence securely and safely to the engineers, researchers, enterprises, and institutions advancing the life sciences.</p>
+<p>LatchBio's full methods and per-model scores are presented at <a href="https://benchmarks.bio">benchmarks.bio</a>. LatchBio's complementary blog, the Grok 4.6 model card, and SpaceXAI's Frontier Artificial Intelligence Framework are linked below.</p>
+<ul>
+<li><a href="https://blog.latch.bio/p/analyzing-grok46-safeguards">LatchBio blog</a></li>
+<li><a href="https://media.x.ai/v1/website/card-4p6-4cd2dc57.pdf">Grok 4.6 model card</a></li>
+<li><a href="https://media.x.ai/v1/website/xai-frontier-artificial-intelligence-framework-30-june-2026-99c40684.pdf">Frontier Artificial Intelligence Framework</a></li>
+</ul>]]></content:encoded>
+      <guid isPermaLink="true">https://x.ai/news/biosafety-at-the-frontier</guid>
+      <category>News</category>
+      <pubDate>Wed, 02 Sep 2026 02:11:03 +0000</pubDate>
+    </item>
+    <item>
+      <title>Elon Musk Announces Free Token Reset for Grok Bot Users</title>
+      <link>https://x.com/elonmusk/status/2094813795742847123</link>
+      <description>Grok is providing another reset on token usage limits for all its bot users.</description>
+      <content:encoded><![CDATA[<p><img src="https://digg.com/tech/8ph8dlgd/opengraph-image" alt="Elon Musk Announces Free Token Reset for Grok Bot Users"/></p>
+<p>Grok is providing another reset on token usage limits for all its bot users.</p>
+<p><strong>Original source:</strong> <a href="https://x.com/elonmusk/status/2094813795742847123">https://x.com/elonmusk/status/2094813795742847123</a></p>
+<p><strong>Digg story:</strong> <a href="https://digg.com/tech/8ph8dlgd">https://digg.com/tech/8ph8dlgd</a></p>
+<p>Elon Musk posted that Grok is giving all its bot users another free reset on token usage. The change supplies extra access to the AI model without new payments or waiting periods. Musk is identified in the post as founder and CEO of Tesla, SpaceX, xAI and owner of X. The announcement is presented as a direct update for users of the Grok bot.</p>
+<ul><li><strong>Views:</strong> 4,068,689</li><li><strong>Likes:</strong> 22,659</li><li><strong>Bookmarks:</strong> 725</li><li><strong>Quotes:</strong> 666</li><li><strong>Replies:</strong> 3,001</li><li><strong>Posts:</strong> 2</li></ul>
+<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/elonmusk">Elon Musk</a></li><li><a href="https://x.com/altryne">Alex Volkov</a></li></ul>]]></content:encoded>
+      <guid isPermaLink="true">https://x.com/elonmusk/status/2094813795742847123</guid>
+      <category>Digg AI from X</category>
+      <pubDate>Tue, 01 Sep 2026 15:45:03 +0000</pubDate>
+      <media:content url="https://digg.com/tech/8ph8dlgd/opengraph-image" type="image/jpeg" medium="image"/>
+    </item>
+    <item>
+      <title>Grok Bot Runs on Own Cloud Computer</title>
+      <link>https://x.com/sriramk/status/2094810234908713047</link>
+      <description>Elon Musk states Grok operates independently on cloud infrastructure.</description>
+      <content:encoded><![CDATA[<p><img src="https://digg.com/tech/suxxommd/opengraph-image" alt="Grok Bot Runs on Own Cloud Computer"/></p>
+<p>Elon Musk states Grok operates independently on cloud infrastructure.</p>
+<p><strong>Original source:</strong> <a href="https://x.com/sriramk/status/2094810234908713047">https://x.com/sriramk/status/2094810234908713047</a></p>
+<p><strong>Digg story:</strong> <a href="https://digg.com/tech/suxxommd">https://digg.com/tech/suxxommd</a></p>
+<p>Sriram Krishnan posted about AI agent UX problems, including local filesystem access and whether agents can run from a phone or require a synced Mac mini. Elon Musk quoted the post and stated that Grok Bot runs on its own computer in the cloud 24/7, so device status does not matter. A minority of replies raised security concerns about granting cloud agents access to corporate environments.</p>
+<ul><li><strong>Views:</strong> 5,024,744</li><li><strong>Likes:</strong> 5,544</li><li><strong>Bookmarks:</strong> 330</li><li><strong>Quotes:</strong> 76</li><li><strong>Replies:</strong> 778</li><li><strong>Posts:</strong> 3</li></ul>
+<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/elonmusk">Elon Musk</a></li><li><a href="https://x.com/sriramk">Sriram Krishnan</a></li><li><a href="https://x.com/omarsar0">elvis</a></li></ul>]]></content:encoded>
+      <guid isPermaLink="true">https://x.com/sriramk/status/2094810234908713047</guid>
+      <category>Digg AI from X</category>
+      <pubDate>Tue, 01 Sep 2026 15:30:54 +0000</pubDate>
+      <media:content url="https://digg.com/tech/suxxommd/opengraph-image" type="image/jpeg" medium="image"/>
+    </item>
+    <item>
+      <title>Edwin Arbus Announces Joining AnthropicAI</title>
+      <link>https://x.com/edwinarbus/status/2094809938996674616</link>
+      <description>Developer posts video of his San Francisco run after announcing new role.</description>
+      <content:encoded><![CDATA[<p><img src="https://digg.com/tech/mhkigpsp/opengraph-image" alt="Edwin Arbus Announces Joining AnthropicAI"/></p>
+<p>Developer posts video of his San Francisco run after announcing new role.</p>
+<p><strong>Original source:</strong> <a href="https://x.com/edwinarbus/status/2094809938996674616">https://x.com/edwinarbus/status/2094809938996674616</a></p>
+<p><strong>Digg story:</strong> <a href="https://digg.com/tech/mhkigpsp">https://digg.com/tech/mhkigpsp</a></p>
+<p>Edwin Arbus posted on X that he joined AnthropicAI. The message included an 18-second video of his morning run through San Francisco&#x27;s Sunset District. The clip shows a custom 3D satellite map overlay with live stats for pace, elevation, and distance. Arbus previously served as Developer Community Lead at OpenAI and worked at Stripe for years. Replies came from colleagues at Stripe, Anthropic, and other tech figures offering congratulations. One Anthropic engineer wrote &#x27;welcome back, buddy.&#x27;</p>
+<ul><li><strong>Views:</strong> 393,773</li><li><strong>Likes:</strong> 1,862</li><li><strong>Bookmarks:</strong> 175</li><li><strong>Quotes:</strong> 14</li><li><strong>Replies:</strong> 213</li><li><strong>Posts:</strong> 7</li></ul>
+<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/lennysan">Lenny Rachitsky</a></li><li><a href="https://x.com/GregKamradt">Greg Kamradt</a></li><li><a href="https://x.com/edwinarbus">edwin</a></li><li><a href="https://x.com/skirano">Pietro Schirano</a></li><li><a href="https://x.com/sammcallister">sam mcallister</a></li></ul>]]></content:encoded>
+      <guid isPermaLink="true">https://x.com/edwinarbus/status/2094809938996674616</guid>
+      <category>Digg AI from X</category>
+      <pubDate>Tue, 01 Sep 2026 15:29:43 +0000</pubDate>
+      <media:content url="https://digg.com/tech/mhkigpsp/opengraph-image" type="image/jpeg" medium="image"/>
+    </item>
+    <item>
+      <title>Elon Musk Says X Hosts Almost All AI Discourse</title>
+      <link>https://alignednews.com/ai</link>
+      <description>The post comes from the account of X's owner and xAI founder.</description>
+      <content:encoded><![CDATA[<p><img src="https://digg.com/tech/3s5frbeg/opengraph-image" alt="Elon Musk Says X Hosts Almost All AI Discourse"/></p>
+<p>The post comes from the account of X&#x27;s owner and xAI founder.</p>
+<p><strong>Original source:</strong> <a href="https://alignednews.com/ai">https://alignednews.com/ai</a></p>
+<p><strong>Digg story:</strong> <a href="https://digg.com/tech/3s5frbeg">https://digg.com/tech/3s5frbeg</a></p>
+<p>Elon Musk posted that X is where almost all AI discourse takes place. The message identifies him as founder and CEO of Tesla, SpaceX, xAI and owner of X. It positions the platform as the main venue for conversations among AI professionals and researchers. The packet contains only this statement from Musk and generated summaries of it. No other posts or sources in the packet corroborate or refute the claim. The assertion stands as Musk&#x27;s direct comment on the location of AI discussion.</p>
+<ul><li><strong>Views:</strong> 4,329,652</li><li><strong>Likes:</strong> 35,474</li><li><strong>Bookmarks:</strong> 812</li><li><strong>Quotes:</strong> 461</li><li><strong>Replies:</strong> 3,164</li><li><strong>Posts:</strong> 3</li></ul>
+<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/elonmusk">Elon Musk</a></li><li><a href="https://x.com/tunguz">Bojan Tunguz</a></li><li><a href="https://x.com/BrianRoemmele">Brian Roemmele</a></li></ul>]]></content:encoded>
+      <guid isPermaLink="true">https://alignednews.com/ai</guid>
+      <category>Digg AI from X</category>
+      <pubDate>Tue, 01 Sep 2026 15:11:20 +0000</pubDate>
+      <media:content url="https://digg.com/tech/3s5frbeg/opengraph-image" type="image/jpeg" medium="image"/>
+    </item>
+    <item>
+      <title>Perplexity Adds Hybrid Compute to Mac App</title>
+      <link>https://huggingface.co/perplexity-ai/pplx-pii-masking</link>
+      <description>Perplexity AI enables tasks to shift from cloud to local models on Mac for private data.</description>
+      <content:encoded><![CDATA[<p><img src="https://digg.com/tech/i58ewm5d/opengraph-image" alt="Perplexity Adds Hybrid Compute to Mac App"/></p>
+<p>Perplexity AI enables tasks to shift from cloud to local models on Mac for private data.</p>
+<p><strong>Original source:</strong> <a href="https://huggingface.co/perplexity-ai/pplx-pii-masking">https://huggingface.co/perplexity-ai/pplx-pii-masking</a></p>
+<p><strong>Digg story:</strong> <a href="https://digg.com/tech/i58ewm5d">https://digg.com/tech/i58ewm5d</a></p>
+<p>Perplexity announced hybrid compute for its Mac app. A task starts in the cloud then switches to a local model on the user&#x27;s Mac for steps involving private files or sensitive data. The company is also open-sourcing the PII classifier that decides when to send work to the local model. The feature is available today in the Perplexity Mac app.</p>
+<ul><li><strong>Views:</strong> 421,906</li><li><strong>Likes:</strong> 4,322</li><li><strong>Bookmarks:</strong> 1,184</li><li><strong>Quotes:</strong> 140</li><li><strong>Replies:</strong> 233</li><li><strong>Posts:</strong> 4</li></ul>
+<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/AravSrinivas">Aravind Srinivas</a></li><li><a href="https://x.com/perplexity_ai">Perplexity</a></li><li><a href="https://x.com/davidlee">davidlee</a></li></ul>]]></content:encoded>
+      <guid isPermaLink="true">https://huggingface.co/perplexity-ai/pplx-pii-masking</guid>
+      <category>Digg AI from X</category>
+      <pubDate>Tue, 01 Sep 2026 15:04:12 +0000</pubDate>
+      <media:content url="https://digg.com/tech/i58ewm5d/opengraph-image" type="image/jpeg" medium="image"/>
+    </item>
+    <item>
+      <title>OpenRouter Adds Mercury 2.5 Preview from Inception AI</title>
+      <link>https://x.com/OpenRouter/status/2094792813603119482</link>
+      <description>OpenRouter says Mercury 2.5 Preview reaches 1,107 tokens per second exclusively on the platform with tunable reasoning and parallel tool calls.</description>
+      <content:encoded><![CDATA[<p><img src="https://digg.com/tech/2j33bblr/opengraph-image" alt="OpenRouter Adds Mercury 2.5 Preview from Inception AI"/></p>
+<p>OpenRouter says Mercury 2.5 Preview reaches 1,107 tokens per second exclusively on the platform with tunable reasoning and parallel tool calls.</p>
+<p><strong>Original source:</strong> <a href="https://x.com/OpenRouter/status/2094792813603119482">https://x.com/OpenRouter/status/2094792813603119482</a></p>
+<p><strong>Digg story:</strong> <a href="https://digg.com/tech/2j33bblr">https://digg.com/tech/2j33bblr</a></p>
+<p>OpenRouter posted that Mercury 2.5 Preview from Inception AI is now live exclusively on its platform. OpenRouter claims it reaches 1,107 tokens per second through parallel token generation, with tunable reasoning, parallel tool calls, and schema-aligned JSON for latency-sensitive workloads. Inception announced 80 percent off pricing through September 7. Co-founders and academics from Inception amplified the launch on X. Based on the visible replies from a limited analyzed reply set, replies on X largely praised the speed for agentic tasks while a smaller share questioned quality relative to alternatives like Gemma.</p>
+<ul><li><strong>Views:</strong> 88,571</li><li><strong>Likes:</strong> 666</li><li><strong>Bookmarks:</strong> 210</li><li><strong>Quotes:</strong> 18</li><li><strong>Replies:</strong> 58</li><li><strong>Posts:</strong> 7</li></ul>
+<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/StefanoErmon">Stefano Ermon</a></li><li><a href="https://x.com/adityagrover_">Aditya Grover</a></li><li><a href="https://x.com/volokuleshov">Volodymyr Kuleshov 🇺🇦</a></li></ul>]]></content:encoded>
+      <guid isPermaLink="true">https://x.com/OpenRouter/status/2094792813603119482</guid>
+      <category>Digg AI from X</category>
+      <pubDate>Tue, 01 Sep 2026 14:21:40 +0000</pubDate>
+      <media:content url="https://digg.com/tech/2j33bblr/opengraph-image" type="image/jpeg" medium="image"/>
+    </item>
     <item>
       <title>Chris Paxton Looks Forward to Autonomous Cars Everywhere</title>
       <link>https://x.com/chris_j_paxton/status/2094788675729060051</link>
@@ -98,12 +236,28 @@
 <p><strong>Original source:</strong> <a href="https://x.com/patrick_oshag/status/2094787358868881573">https://x.com/patrick_oshag/status/2094787358868881573</a></p>
 <p><strong>Digg story:</strong> <a href="https://digg.com/tech/4h21zxn6">https://digg.com/tech/4h21zxn6</a></p>
 <p>Patrick O&#x27;Shaughnessy posted about his second conversation with Sarah Guo, founder of Conviction. The tweet states that Guo has been an early investor in many defining companies of this generation and ranks at the top of managers that LPs most want to invest with. O&#x27;Shaughnessy notes that Guo knows the small group of 250 people pushing the AI frontier and that the discussion covers what she sees.</p>
-<ul><li><strong>Views:</strong> 22,510</li><li><strong>Likes:</strong> 175</li><li><strong>Bookmarks:</strong> 204</li><li><strong>Quotes:</strong> 2</li><li><strong>Replies:</strong> 9</li><li><strong>Posts:</strong> 1</li></ul>
-<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/patrick_oshag">Patrick OShaughnessy</a></li></ul>]]></content:encoded>
+<ul><li><strong>Views:</strong> 327,438</li><li><strong>Likes:</strong> 877</li><li><strong>Bookmarks:</strong> 923</li><li><strong>Quotes:</strong> 18</li><li><strong>Replies:</strong> 43</li><li><strong>Posts:</strong> 3</li></ul>
+<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/saranormous">sarah guo</a></li><li><a href="https://x.com/patrick_oshag">Patrick OShaughnessy</a></li></ul>]]></content:encoded>
       <guid isPermaLink="true">https://x.com/patrick_oshag/status/2094787358868881573</guid>
       <category>Digg AI from X</category>
       <pubDate>Tue, 01 Sep 2026 14:00:00 +0000</pubDate>
       <media:content url="https://digg.com/tech/4h21zxn6/opengraph-image" type="image/jpeg" medium="image"/>
+    </item>
+    <item>
+      <title>Physical Superintelligence Raises $58M Seed Round</title>
+      <link>https://ai-2040.com</link>
+      <description>Co-founders announce seed funding for an AI-powered physics research lab.</description>
+      <content:encoded><![CDATA[<p><img src="https://digg.com/tech/ahrrsnui/opengraph-image" alt="Physical Superintelligence Raises $58M Seed Round"/></p>
+<p>Co-founders announce seed funding for an AI-powered physics research lab.</p>
+<p><strong>Original source:</strong> <a href="https://ai-2040.com">https://ai-2040.com</a></p>
+<p><strong>Digg story:</strong> <a href="https://digg.com/tech/ahrrsnui">https://digg.com/tech/ahrrsnui</a></p>
+<p>Dr. Alex Wissner-Gross posted that Physical Superintelligence PBC, co-founded with Matthew Pines and Alex Klokus, raised a $58M seed round. The company aims to build a research lab that uses AI to find and commercialize physics breakthroughs at scale while keeping the work safe and verifiable. Alex Klokus replied that physics limits what is possible and that the team will map those limits. Jack Dorsey retweeted the announcement. No further details on investors or timelines appear in the posts.</p>
+<ul><li><strong>Views:</strong> 439,842</li><li><strong>Likes:</strong> 2,257</li><li><strong>Bookmarks:</strong> 460</li><li><strong>Quotes:</strong> 78</li><li><strong>Replies:</strong> 225</li><li><strong>Posts:</strong> 4</li></ul>
+<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/jack">jack</a></li><li><a href="https://x.com/DanielleFong">Danielle Fong 🔆</a></li></ul>]]></content:encoded>
+      <guid isPermaLink="true">https://ai-2040.com</guid>
+      <category>Digg AI from X</category>
+      <pubDate>Tue, 01 Sep 2026 13:00:15 +0000</pubDate>
+      <media:content url="https://digg.com/tech/ahrrsnui/opengraph-image" type="image/jpeg" medium="image"/>
     </item>
     <item>
       <title>Ramp's Inspect AI Agent Writes Three of Four Pull Requests</title>
@@ -154,6 +308,38 @@
       <media:content url="https://digg.com/tech/xvjwg070/opengraph-image" type="image/jpeg" medium="image"/>
     </item>
     <item>
+      <title>Fei Xia Joins Anthropic as Member of Technical Staff</title>
+      <link>https://x.com/xf1280/status/2094707848748179891</link>
+      <description>Former DeepMind researcher shares update on leaving Meta for new AI lab role.</description>
+      <content:encoded><![CDATA[<p><img src="https://digg.com/tech/nv78h9ge/opengraph-image" alt="Fei Xia Joins Anthropic as Member of Technical Staff"/></p>
+<p>Former DeepMind researcher shares update on leaving Meta for new AI lab role.</p>
+<p><strong>Original source:</strong> <a href="https://x.com/xf1280/status/2094707848748179891">https://x.com/xf1280/status/2094707848748179891</a></p>
+<p><strong>Digg story:</strong> <a href="https://digg.com/tech/nv78h9ge">https://digg.com/tech/nv78h9ge</a></p>
+<p>Fei Xia posted that he wrapped up his time at Meta and joined Anthropic as Member of Technical Staff. He previously worked as Research Scientist and Tech Lead Manager at Google DeepMind on robotics, Gemini, and embodied AI after earning a PhD from Stanford. Colleagues from OpenAI, Princeton Robotics, and other labs replied with public congratulations. The post gives no details on start date, projects, or reasons for the move.</p>
+<ul><li><strong>Views:</strong> 126,720</li><li><strong>Likes:</strong> 995</li><li><strong>Bookmarks:</strong> 87</li><li><strong>Quotes:</strong> 5</li><li><strong>Replies:</strong> 85</li><li><strong>Posts:</strong> 6</li></ul>
+<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/ericjang11">Eric Jang</a></li><li><a href="https://x.com/tunguz">Bojan Tunguz</a></li><li><a href="https://x.com/xf1280">Fei Xia</a></li><li><a href="https://x.com/xiao_ted">Ted Xiao</a></li><li><a href="https://x.com/BoyuanChen0">Boyuan Chen</a></li></ul>]]></content:encoded>
+      <guid isPermaLink="true">https://x.com/xf1280/status/2094707848748179891</guid>
+      <category>Digg AI from X</category>
+      <pubDate>Tue, 01 Sep 2026 08:44:03 +0000</pubDate>
+      <media:content url="https://digg.com/tech/nv78h9ge/opengraph-image" type="image/jpeg" medium="image"/>
+    </item>
+    <item>
+      <title>AI Paper on Sliding-Window Attention Draws Criticism</title>
+      <link>https://x.com/nrehiew_/status/2094692796963979519</link>
+      <description>Replies target an arXiv paper on sliding-window attention with sinks.</description>
+      <content:encoded><![CDATA[<p><img src="https://digg.com/tech/vrzkd69w/opengraph-image" alt="AI Paper on Sliding-Window Attention Draws Criticism"/></p>
+<p>Replies target an arXiv paper on sliding-window attention with sinks.</p>
+<p><strong>Original source:</strong> <a href="https://x.com/nrehiew_/status/2094692796963979519">https://x.com/nrehiew_/status/2094692796963979519</a></p>
+<p><strong>Digg story:</strong> <a href="https://digg.com/tech/vrzkd69w">https://digg.com/tech/vrzkd69w</a></p>
+<p>A reply posted by @teortaxesTex calls out an arXiv paper that claims sliding-window attention with sinks outperforms prior methods. The post notes that the paper&#x27;s title and the replies it received attracted more notice than most similar releases. Typical papers of this kind receive little sustained attention and fade quickly even when they gather thousands of likes. The author frames the current case as an exception worth examining because of how the title and ensuing comments unfolded. No independent confirmation of the paper&#x27;s technical claims appears in the supplied lines.</p>
+<ul><li><strong>Views:</strong> 55,479</li><li><strong>Likes:</strong> 777</li><li><strong>Bookmarks:</strong> 89</li><li><strong>Replies:</strong> 25</li><li><strong>Posts:</strong> 5</li></ul>
+<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/yoavgo">(((ل()(ل() &#x27;yoav))))👾</a></li><li><a href="https://x.com/teortaxesTex">Teortaxes▶️ (DeepSeek 推特🐋铁粉 2023 – ∞)</a></li><li><a href="https://x.com/ziv_ravid">Ravid Shwartz Ziv</a></li><li><a href="https://x.com/nrehiew_">wh</a></li></ul>]]></content:encoded>
+      <guid isPermaLink="true">https://x.com/nrehiew_/status/2094692796963979519</guid>
+      <category>Digg AI from X</category>
+      <pubDate>Tue, 01 Sep 2026 07:44:14 +0000</pubDate>
+      <media:content url="https://digg.com/tech/vrzkd69w/opengraph-image" type="image/jpeg" medium="image"/>
+    </item>
+    <item>
       <title>Hermes HUD Adds Pretend I'm Working Feature</title>
       <link>https://x.com/Teknium/status/2094691930160672857</link>
       <description>New mode shows fake code terminal while agents continue tasks in background.</description>
@@ -168,6 +354,79 @@
       <category>Digg AI from X</category>
       <pubDate>Tue, 01 Sep 2026 07:40:48 +0000</pubDate>
       <media:content url="https://digg.com/tech/9cvhhr19/opengraph-image" type="image/jpeg" medium="image"/>
+    </item>
+    <item>
+      <title>Developing Enterprise Frontier Safeguards with our customers</title>
+      <link>https://www.anthropic.com/news/enterprise-frontier-safeguards</link>
+      <description>Today we’re announcing Enterprise Frontier Safeguards (EFS), a solution that combines the privacy of zero data retention (ZDR) with state-of-the-art safeguards for detecting misuse. EFS works by storing data in cloud infrastructure controlled by the customer, not Anthropic. EFS will be rolling out to customers in phases, starting later this fall. To make the transition smooth, eligible customers will receive ZDR on Fable 5 and Fable 5.1 until EFS is ready.</description>
+      <content:encoded><![CDATA[<p>Today we’re announcing Enterprise Frontier Safeguards (EFS), a solution that combines the privacy of zero data retention (ZDR) with state-of-the-art safeguards for detecting misuse. EFS works by storing data in cloud infrastructure controlled by the customer, not Anthropic. EFS will be rolling out to customers in phases, starting later this fall. To make the transition smooth, eligible customers will receive ZDR on Fable 5 and Fable 5.1 until EFS is ready.</p>
+<p>We developed EFS in close collaboration with more than 100 customers in industries like financial services, healthcare, manufacturing, telecom, law, retail, and the public sector, and with our cloud partners at Amazon Web Services, Google Cloud, and Microsoft Azure.</p>
+<p>EFS will be supported on Claude Code, Claude Enterprise, the Claude Platform, Amazon Bedrock, Claude Platform on AWS, Google’s Agent Platform, and Microsoft Foundry.</p>
+<h2 id="solving-the-dilemma-of-frontier-security">Solving the dilemma of frontier security</h2>
+<p>Mythos-class models, like <a href="https://www.anthropic.com/claude-fable-and-mythos-5-1">Claude Fable 5.1</a>, represent a major increase in intelligence and agentic capabilities. However, with that increase comes the potential for both misuse and autonomous misbehavior.</p>
+<p>Over the last few months, we’ve seen substantial evidence of attempted misuse of AI models. These range from typical forms of abuse, such as fraud, to sophisticated cyberattacks, which can include agents autonomously engaging in destructive behavior. Some of these instances involve theft or misappropriation of enterprise customers’ credentials, which are difficult to detect without the ability to monitor traffic and detect abnormal behavior.</p>
+<p>Furthermore, because the <a href="https://www.anthropic.com/news/disrupting-AI-espionage">most sophisticated misuse</a> can involve many tasks spread across multiple sessions and accounts, it is not sufficient to run automated analysis on each interaction separately and then instantaneously discard the data. Effective detection requires storing data for a meaningful period of time so that it can be correlated across time and accounts.</p>
+<p>For this reason, we introduced 30-day data retention starting with Fable 5. This policy was not motivated by a desire to train on enterprise data: Anthropic has never trained on enterprise data without explicit permission, and never will.</p>
+<p>The enterprises we worked with generally understood the safety and security value of data retention, but many–especially in regulated industries–found it difficult to use models with data retention. We therefore sat down with customers to design a solution that could provide the best of both worlds: the privacy of ZDR and the safety allowed by monitoring across time and accounts.</p>
+<h2 id="designed-with-our-customers">Designed with our customers</h2>
+<p>We built Enterprise Frontier Safeguards with feedback from the experts who will use it every day: security, product, compliance, and delivery teams. One of the groups we worked with was the Analysis and Resilience Center for Systemic Risk (ARC), whose members include the chief information security officers of the largest US banks, including Goldman Sachs, Morgan Stanley, Citi, Bank of America, and Wells Fargo. </p>
+<p>We also worked with leaders at companies such as Comcast, KPMG, Mastercard, Salesforce, and Visa, to make sure the design held up across industries. Our conversations spanned a quarter of the Fortune 100, every US global systemically important bank, and virtually every regulated industry.</p>
+<p>Here is what we heard from this wide range of customers, and what we built into EFS to address these common concerns:</p>
+<h3 id="on-monitoring">On monitoring</h3>
+<p>Enterprises have long applied monitoring for insider risk, and now want help upleveling monitoring for agents. Their concerns were about Anthropic’s automated monitoring systems meeting their regulatory standards.</p>
+<p><strong>With EFS, customers control how data gets reviewed. </strong>When monitoring detects a pattern that needs attention, those signals are sent directly to customers so they can review what the automated systems detected.</p>
+<h3 id="on-data-storage">On data storage</h3>
+<p>It’s a lot of work for enterprises to add another “trusted data vendor” for a number of reasons. They need to notify all of their customers who these vendors are and update contracts. They also have internal requirements for safely storing and auditing data, given its high level of sensitivity. Because of these concerns, we architected EFS so that customers have the ability to store data on their existing cloud infrastructure.</p>
+<p><strong>In EFS, customers can control their data storage and management.</strong> Customers want the ability to have their data live in infrastructure they control, under their own encryption keys, access policies, and audit logging. Activity data used for monitoring can be stored in the customer’s own cloud account (such as Amazon S3, Azure Blob Storage, or Google Cloud Storage).</p>
+<h3 id="on-automated-and-human-review">On automated and human review</h3>
+<p>Even as automated review is becoming more effective, a person looking at a flag still adds value by confirming real misuse and clearing false positives. But what we heard from many customers, especially those in regulated industries, is that the person doing that review needs to be one of their own. Many operate under rules that tightly govern who may see certain information—privileged legal material, non-public information, drug-safety reports. Their teams are already trained and cleared for that work.</p>
+<p><strong>EFS has automated safety monitoring, no Anthropic human review required.</strong> Customers want protection against cyberattacks, and appreciate that these can be difficult to detect if they unfold across many sessions and accounts. With EFS, automated systems analyze a rolling window of traffic for signals of serious misuse, including attempts to develop offensive cyber or biological capabilities and signs of stolen or leaked credentials. Those flags go directly to the customer and their people take it from there – no human review by Anthropic employees is required.</p>
+<img alt=" logo" height="48" src="https://www.anthropic.com/_next/image?url=https%3A%2F%2Fwww-cdn.anthropic.com%2Fimages%2F4zrzovbb%2Fwebsite%2F9f37b737d862a71f1fbcd15e5d9d5f98d3ca1ca2-1200x675.png&amp;w=256&amp;q=75" width="120"/>
+<blockquote>AI controls need to be designed to protect sensitive information, and model safeguards are an important part of that process. Anthropic engaged us as they developed Enterprise Frontier Safeguards to ensure alignment with our requirements and standards.</blockquote>
+<img alt=" logo" height="48" src="https://www-cdn.anthropic.com/images/4zrzovbb/website/628e9fd1129632a8fc5682deec87b1888c2e8e89-155x16.svg" width="120"/>
+<blockquote>Enterprise Frontier Safeguards gives us exactly what we asked for: our logs stay in a Wells-managed environment under Wells-managed keys. We keep custody of our data while Anthropic operates the detection. That split is what lets our teams put frontier models to work safely and meet our obligations to customers, employees, and regulators. We helped shape these safeguards because our industry needs them.</blockquote>
+<img alt=" logo" height="48" src="https://www-cdn.anthropic.com/images/4zrzovbb/website/da5b4cfb98abd20aa33357f44216a41279e57e0d-155x62.svg" width="120"/>
+<blockquote>As a company that runs critical infrastructure, the capability of models is important. Just as important are solutions that allow us to keep our data in our own account, and Enterprise Frontier Safeguards settled it.</blockquote>
+<img alt=" logo" height="48" src="https://www-cdn.anthropic.com/images/4zrzovbb/website/b847b0a49194adb0df9674c8b5e5fe176e845bda-109x27.svg" width="120"/>
+<blockquote>Eight of our members worked with Anthropic to define what it would take to run the most capable frontier models inside a systemically important bank: who holds the data, who holds the keys, what automated review can and cannot see, and under what conditions a human is ever permitted to look. This collaboration is leading to the development and delivery of improved safeguards and standards that could scale across our industry and beyond.</blockquote>
+<img alt=" logo" height="48" src="https://www-cdn.anthropic.com/images/4zrzovbb/website/632ae4b5eb52539491a30a3c1cb2694febdb53ab-187x75.svg" width="120"/>
+<blockquote>One of the key tenets of the safeguards architecture is the ability for us to retain data and have it held outside the model itself, protected within our environment. There are areas of the firm, and of our clients' work, that are regulated and highly sensitive. Those safeguards actually allow us to apply AI in parts of the business that we wouldn't have been able to before.<br/><br/><em>Service Partner</em></blockquote>
+<img alt=" logo" height="48" src="https://www-cdn.anthropic.com/images/4zrzovbb/website/ad6656fb6427494ec5696471e61947bb72035ee9-273x191.svg" width="120"/>
+<blockquote>Our customers have trusted us with their data for more than two decades. That experience is exactly why we wanted to help think this through with Anthropic, rather than wait on the sidelines. We were able to work together on new security and privacy capabilities at the architecture level, not just the policy level.</blockquote>
+<img alt=" logo" height="48" src="https://www-cdn.anthropic.com/images/4zrzovbb/website/8e369e94bf09c7916c1e8045d7abc474e07b8a85-163x43.svg" width="120"/>
+<blockquote>Our clients want to put frontier models to work, and their security teams want the data to stay in infrastructure they control. Anthropic built Enterprise Frontier Safeguards with more than a hundred enterprises to do exactly that.<br/><br/><em>Service Partner</em></blockquote>
+<img alt=" logo" height="48" src="https://www-cdn.anthropic.com/images/4zrzovbb/website/58a9a5ba70a6c5d7a8604419d51236e1073fdc79-182x34.svg" width="120"/>
+<blockquote>As AI models take on more regulated, sensitive workloads, scaling responsibly also comes down to architecture, not just policy commitments. Direct control over the data environment, paired with pattern-based automated safety monitoring, gives enterprises the concrete, structural capabilities they need to deploy with real oversight, accountability, and confidence.<br/><br/><em>Service Partner</em></blockquote>
+<img alt=" logo" height="48" src="https://www-cdn.anthropic.com/images/4zrzovbb/website/7b6dc90891455bc4c8624591184e5e826fc56541-156x53.svg" width="120"/>
+<blockquote>The safeguards and the design of them—clearly, you heard our feedback. They put us in the driver's seat. The logs are under our control; they don't go anywhere else unless we want them to. It gives us control of the data, control of the information, and control of what's done after something that might exceed a safeguard is detected.</blockquote>
+<img alt=" logo" height="48" src="https://www-cdn.anthropic.com/images/4zrzovbb/website/468fc2c0bb3ca80ff2b112002d4d665c1e2bff65-360x180.svg" width="120"/>
+<blockquote>As AI becomes more embedded across the enterprise, security and trust are what move organizations from experimentation to deployment at scale. Enterprise Frontier Safeguards will build those in from the start: monitoring data stays in infrastructure the customer controls, and their own team decides who can access it.<br/><br/><em>Service Partner</em></blockquote>
+<img alt=" logo" height="48" src="https://www-cdn.anthropic.com/images/4zrzovbb/website/721103059e160dd255816a622fc8d3e3cffe0047-150x48.svg" width="120"/>
+<blockquote>Keeping customer data confidential is a promise Snowflake makes to every customer. We've always moved fast getting frontier models into their hands. The hard part was doing that safely under the strictest data guarantees. We partnered with Anthropic to design Enterprise Frontier Safeguards so we can do both: data stays in the customer's environment, under keys they control, running Anthropic's most capable models from day one. This is what responsible frontier AI looks like when it's built with platforms in mind.</blockquote>
+<img alt=" logo" height="48" src="https://www-cdn.anthropic.com/images/4zrzovbb/website/d514853a44cf69f069306c98b558f214112c4ef3-91x64.svg" width="120"/>
+<blockquote>At Stripe, protecting customer data is foundational to how we operate. Anthropic’s Enterprise Frontier Safeguards willenable us to use covered frontier models while retaining conversation logs in Stripe’s AWS environment, with access and review governed by Stripe’s security controls.</blockquote>
+<img alt=" logo" height="48" src="https://www-cdn.anthropic.com/images/4zrzovbb/website/beb4f74e935e111be9a63875ae7743aaea2cb0a2-88x64.svg" width="120"/>
+<blockquote>Rogo’s customers expect access to the best intelligence available, but never at the expense of security and guardrails around their data. Enterprise Frontier Safeguards will bring the most capable models to financial institutions while meeting the institutional-grade data requirements they demand. That combination of frontier intelligence and enterprise-grade controls is critical to deploying AI across financial services.</blockquote>
+<img alt=" logo" height="48" src="https://www-cdn.anthropic.com/images/4zrzovbb/website/e93eb9aa6aeb9e95f584bf8a401c4bdd1206d225-112x24.svg" width="120"/>
+<blockquote>Companies trust Cognition's autonomous engineers with real production work, and that trust depends on their work staying private. With Enterprise Frontier Safeguards, customer data and identities never leave our side. It will let us bring frontier AI to production work, no privacy tradeoff required.</blockquote>
+<img alt=" logo" height="48" src="https://www-cdn.anthropic.com/images/4zrzovbb/website/752b5acf21c1b5502f0ba42f7b92b05401cc425d-462x68.svg" width="120"/>
+<blockquote>Our customers' code and data are some of their most valuable intellectual property. Protecting that information is foundational to how we build at Factory. Together with Anthropic, we're enabling customers to use Claude's most capable models while keeping control of proprietary data in their hands. Enterprise Frontier Safeguards gives enterprises access to frontier intelligence with the data protections their security teams require.</blockquote>
+<img alt=" logo" height="48" src="https://www-cdn.anthropic.com/images/4zrzovbb/website/6dfc3bd55cc5f9d5ebdd8d5437505ae4b8560412-120x64.svg" width="120"/>
+<blockquote>We have always maintained an unwavering commitment to client confidentiality and security. The leading legal and professional teams we serve view these principles as nonnegotiable, and we hold ourselves to the same standard. Enterprise Frontier Safeguards reflects this commitment, enabling customers with the most rigorous confidentiality requirements access to frontier models without the model provider retaining their data.</blockquote>
+<p>01</p>
+<p> /</p>
+<p>16</p>
+<h2 id="how-efs-works">How EFS works</h2>
+<p>These controls are designed to work the same way whether you access Claude directly from Anthropic or through a cloud partner. Customers on Amazon Web Services, Google Cloud, and Microsoft Azure will get equivalent controls, with their activity data stored in their own cloud account, in the environment they already trust. We’re also working to support third-party offerings that serve customers that are eligible for Enterprise Frontier Safeguards.</p>
+<p>Customer-owned storage, Customer-Managed Encryption Keys, and fully automated review are each opt-in, so you enable the ones your organization needs. None of them change model behavior, API pricing, or rate limits.</p>
+<p>Anthropic doesn’t charge for Enterprise Frontier Safeguards. If customers elect to store their data in their cloud account, their cloud provider bills them for that storage, as well as reads, writes, and data egress fees, the same way it bills any other resource.</p>
+<figure><img height="4644" src="https://www.anthropic.com/_next/image?url=https%3A%2F%2Fwww-cdn.anthropic.com%2Fimages%2F4zrzovbb%2Fwebsite%2F021fdfc765d03eaac26f5d2aa9cb06111b7a9297-3840x4644.png&amp;w=3840&amp;q=75" width="3840"/></figure>
+<h2 id="getting-started">Getting started</h2>
+<p>Enterprise Frontier Safeguards will roll out to customers in phases, with the goal of making it broadly available later this fall. To request access to Enterprise Frontier Safeguards, please complete this <a href="https://claude.com/form/enterprise-frontier-safeguards">form</a>.</p>]]></content:encoded>
+      <guid isPermaLink="true">https://www.anthropic.com/news/enterprise-frontier-safeguards</guid>
+      <category>Announcements</category>
+      <pubDate>Tue, 01 Sep 2026 00:00:00 +0000</pubDate>
+      <media:content url="https://www.anthropic.com/_next/image?url=https%3A%2F%2Fwww-cdn.anthropic.com%2Fimages%2F4zrzovbb%2Fwebsite%2F9f37b737d862a71f1fbcd15e5d9d5f98d3ca1ca2-1200x675.png&amp;amp;w=256&amp;amp;q=75" type="image/jpeg" medium="image"/>
     </item>
     <item>
       <title>Ben Hylak Questions Cognition's DevinAI Diff Features</title>
@@ -688,178 +947,6 @@
       <category>Digg AI from X</category>
       <pubDate>Sun, 30 Aug 2026 11:08:22 +0000</pubDate>
       <media:content url="https://digg.com/tech/aiyfwb8d/opengraph-image" type="image/jpeg" medium="image"/>
-    </item>
-    <item>
-      <title>Grok Bot now works with X</title>
-      <link>https://x.ai/news/grok-bot-and-x</link>
-      <description>Grok Bot now has a tighter integration with X.</description>
-      <content:encoded><![CDATA[<p>Connect your X account in Grok Bot and we'll create a developer account for you if you don't have one. Paid Grok Bot users get free X API credits to start.</p>
-<p>To get started, open Grok Bot and sign in with the X connector.</p>
-<p>Then ask a Bot to search posts, read your timeline, check mentions, or pull together what's happening on X. This is the first version of this integration, and we're excited to keep making it easier for Grok Bot to do real work on X.</p>
-<p><a href="https://x.ai/bot">Download Grok Bot here</a>.</p>]]></content:encoded>
-      <guid isPermaLink="true">https://x.ai/news/grok-bot-and-x</guid>
-      <category>News</category>
-      <pubDate>Sun, 30 Aug 2026 02:43:53 +0000</pubDate>
-    </item>
-    <item>
-      <title>WikiSkill Gains Increase With Model Scale</title>
-      <link>https://arxiv.org/abs/2608.27454</link>
-      <description>Tu Vu reports WikiSkill gains grow across Qwen model sizes instead of shrinking.</description>
-      <content:encoded><![CDATA[<p><img src="https://digg.com/tech/5ihk3821/opengraph-image" alt="WikiSkill Gains Increase With Model Scale"/></p>
-<p>Tu Vu reports WikiSkill gains grow across Qwen model sizes instead of shrinking.</p>
-<p><strong>Original source:</strong> <a href="https://arxiv.org/abs/2608.27454">https://arxiv.org/abs/2608.27454</a></p>
-<p><strong>Digg story:</strong> <a href="https://digg.com/tech/5ihk3821">https://digg.com/tech/5ihk3821</a></p>
-<p>Tu Vu posted that WikiSkill gains grow across Qwen model sizes instead of diminishing. He links the pattern to chain-of-thought prompting and states the method co-evolves agent skills with a persistent wiki knowledge base that stores experiences. Andrew Drozdov reposted the observation on X. The performance claims originate from Tu Vu&#x27;s posts and linked thread and have not been independently verified.</p>
-<ul><li><strong>Views:</strong> 1,470</li><li><strong>Likes:</strong> 20</li><li><strong>Bookmarks:</strong> 6</li><li><strong>Replies:</strong> 1</li><li><strong>Posts:</strong> 3</li></ul>
-<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/mrdrozdov">Andrew Drozdov</a></li><li><a href="https://x.com/tuvllms">Tu Vu</a></li></ul>]]></content:encoded>
-      <guid isPermaLink="true">https://arxiv.org/abs/2608.27454</guid>
-      <category>Digg AI from X</category>
-      <pubDate>Sat, 29 Aug 2026 23:54:21 +0000</pubDate>
-      <media:content url="https://digg.com/tech/5ihk3821/opengraph-image" type="image/jpeg" medium="image"/>
-    </item>
-    <item>
-      <title>Codex Milestone Celebration Moved to Tomorrow</title>
-      <link>https://x.com/thsottiaux/status/2093573991965557198</link>
-      <description>OpenAI Codex engineer reports postponing a dashboard milestone event.</description>
-      <content:encoded><![CDATA[<p><img src="https://digg.com/tech/a8o6tuy2/opengraph-image" alt="Codex Milestone Celebration Moved to Tomorrow"/></p>
-<p>OpenAI Codex engineer reports postponing a dashboard milestone event.</p>
-<p><strong>Original source:</strong> <a href="https://x.com/thsottiaux/status/2093573991965557198">https://x.com/thsottiaux/status/2093573991965557198</a></p>
-<p><strong>Digg story:</strong> <a href="https://digg.com/tech/a8o6tuy2">https://digg.com/tech/a8o6tuy2</a></p>
-<p>Tibo Sottiaux, identified as Engineering Lead on OpenAI&#x27;s Codex team, posted that the celebration is moved to tomorrow because the button was already pressed today. In a separate post, user Kim Isenberg noted two consecutive weekly resets on the service, adding that rates are now hard to exhaust quickly and wishing others luck. Both statements appear in public posts tied to Codex usage tracking.</p>
-<ul><li><strong>Views:</strong> 491,622</li><li><strong>Likes:</strong> 5,909</li><li><strong>Bookmarks:</strong> 278</li><li><strong>Quotes:</strong> 276</li><li><strong>Replies:</strong> 717</li><li><strong>Posts:</strong> 2</li></ul>
-<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/thsottiaux">Tibo</a></li><li><a href="https://x.com/kimmonismus">Chubby♨️</a></li></ul>]]></content:encoded>
-      <guid isPermaLink="true">https://x.com/thsottiaux/status/2093573991965557198</guid>
-      <category>Digg AI from X</category>
-      <pubDate>Sat, 29 Aug 2026 21:23:38 +0000</pubDate>
-      <media:content url="https://digg.com/tech/a8o6tuy2/opengraph-image" type="image/jpeg" medium="image"/>
-    </item>
-    <item>
-      <title>Tech Voices Welcome Open Source Model Agnostic Era</title>
-      <link>https://www.youtube.com/watch?v=lWMebfCc5f4</link>
-      <description>Social media posts share a statement declaring the start of model-agnostic development.</description>
-      <content:encoded><![CDATA[<p><img src="https://digg.com/tech/yq348nbz/opengraph-image" alt="Tech Voices Welcome Open Source Model Agnostic Era"/></p>
-<p>Social media posts share a statement declaring the start of model-agnostic development.</p>
-<p><strong>Original source:</strong> <a href="https://www.youtube.com/watch?v=lWMebfCc5f4">https://www.youtube.com/watch?v=lWMebfCc5f4</a></p>
-<p><strong>Digg story:</strong> <a href="https://digg.com/tech/yq348nbz">https://digg.com/tech/yq348nbz</a></p>
-<p>Deirdre Bosa posted the phrase welcome to the open source + model agnostic era. Rohan Anil retweeted the message. Taylor Lorenz quoted the post and added hearts along with a link. The posts come from accounts identified as a CNBC tech reporter, a research engineer formerly at Google DeepMind, and an independent technology journalist. Each post treats the statement as marking a shift toward tools that work across multiple AI systems rather than single-vendor setups.</p>
-<ul><li><strong>Views:</strong> 33,247</li><li><strong>Likes:</strong> 264</li><li><strong>Bookmarks:</strong> 18</li><li><strong>Quotes:</strong> 6</li><li><strong>Replies:</strong> 23</li><li><strong>Posts:</strong> 3</li></ul>
-<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/_arohan_">rohan anil</a></li><li><a href="https://x.com/TaylorLorenz">Taylor Lorenz</a></li></ul>]]></content:encoded>
-      <guid isPermaLink="true">https://www.youtube.com/watch?v=lWMebfCc5f4</guid>
-      <category>Digg AI from X</category>
-      <pubDate>Sat, 29 Aug 2026 17:57:15 +0000</pubDate>
-      <media:content url="https://digg.com/tech/yq348nbz/opengraph-image" type="image/jpeg" medium="image"/>
-    </item>
-    <item>
-      <title>Peter Yang Questions AI Effort Levels in Threads</title>
-      <link>https://x.com/petergyang/status/2093722976701313462</link>
-      <description>OpenAI engineer advises keeping reasoning effort constant per conversation thread.</description>
-      <content:encoded><![CDATA[<p><img src="https://digg.com/tech/v5i547fa/opengraph-image" alt="Peter Yang Questions AI Effort Levels in Threads"/></p>
-<p>OpenAI engineer advises keeping reasoning effort constant per conversation thread.</p>
-<p><strong>Original source:</strong> <a href="https://x.com/petergyang/status/2093722976701313462">https://x.com/petergyang/status/2093722976701313462</a></p>
-<p><strong>Digg story:</strong> <a href="https://digg.com/tech/v5i547fa">https://digg.com/tech/v5i547fa</a></p>
-<p>Peter Yang asked on X whether switching between medium and high reasoning effort modes in the same AI conversation thread would disrupt results. Vaibhav (VB) Srivastav replied on X recommending that users keep effort levels constant per thread, especially longer ones, and spin up a subagent or new thread when a different setting is needed. Yang replied that subagents sound like a good idea.</p>
-<ul><li><strong>Views:</strong> 68,520</li><li><strong>Likes:</strong> 304</li><li><strong>Bookmarks:</strong> 55</li><li><strong>Replies:</strong> 111</li><li><strong>Posts:</strong> 3</li></ul>
-<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/reach_vb">Vaibhav (VB) Srivastav</a></li><li><a href="https://x.com/petergyang">Peter Yang</a></li></ul>]]></content:encoded>
-      <guid isPermaLink="true">https://x.com/petergyang/status/2093722976701313462</guid>
-      <category>Digg AI from X</category>
-      <pubDate>Sat, 29 Aug 2026 15:30:31 +0000</pubDate>
-      <media:content url="https://digg.com/tech/v5i547fa/opengraph-image" type="image/jpeg" medium="image"/>
-    </item>
-    <item>
-      <title>RunwayML Shares AI Skateboarding Bear Video</title>
-      <link>https://aifilmhistory.org/</link>
-      <description>Runway co-founder compares new clip to the firm's first AI video from 2019.</description>
-      <content:encoded><![CDATA[<p><img src="https://digg.com/tech/mtudumhg/opengraph-image" alt="RunwayML Shares AI Skateboarding Bear Video"/></p>
-<p>Runway co-founder compares new clip to the firm&#x27;s first AI video from 2019.</p>
-<p><strong>Original source:</strong> <a href="https://aifilmhistory.org/">https://aifilmhistory.org/</a></p>
-<p><strong>Digg story:</strong> <a href="https://digg.com/tech/mtudumhg">https://digg.com/tech/mtudumhg</a></p>
-<p>RunwayML posted an AI-generated video of a bear-costumed skateboarder performing tricks at a coastal skate park. Co-founder and CEO Cristóbal Valenzuela replied to a comment on the clip by noting that current results look strong next to the company&#x27;s 2019 output, which included an early AI video of Will Smith eating spaghetti. Investor Michael Dempsey described the new video as amazing. The posts treat the skateboarding clip as an illustration of progress in generative video models.</p>
-<ul><li><strong>Views:</strong> 426</li><li><strong>Likes:</strong> 3</li><li><strong>Bookmarks:</strong> 2</li><li><strong>Replies:</strong> 1</li><li><strong>Posts:</strong> 2</li></ul>
-<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/c_valenzuelab">Cristóbal Valenzuela</a></li><li><a href="https://x.com/mhdempsey">Michael Dempsey</a></li></ul>]]></content:encoded>
-      <guid isPermaLink="true">https://aifilmhistory.org/</guid>
-      <category>Digg AI from X</category>
-      <pubDate>Sat, 29 Aug 2026 15:27:49 +0000</pubDate>
-      <media:content url="https://digg.com/tech/mtudumhg/opengraph-image" type="image/jpeg" medium="image"/>
-    </item>
-    <item>
-      <title>Time AI 100 List Draws Engineer Criticism</title>
-      <link>https://x.com/Polymarket/status/2093439980471259208</link>
-      <description>AI engineers question list that includes Paris Hilton and omits Jensen Huang.</description>
-      <content:encoded><![CDATA[<p><img src="https://digg.com/tech/k907gmpz/opengraph-image" alt="Time AI 100 List Draws Engineer Criticism"/></p>
-<p>AI engineers question list that includes Paris Hilton and omits Jensen Huang.</p>
-<p><strong>Original source:</strong> <a href="https://x.com/Polymarket/status/2093439980471259208">https://x.com/Polymarket/status/2093439980471259208</a></p>
-<p><strong>Digg story:</strong> <a href="https://digg.com/tech/k907gmpz">https://digg.com/tech/k907gmpz</a></p>
-<p>Simo Ryu posted he would bite his cat if anyone on the list could explain a loss function. Rohan Anil called placement on a list without clear guidelines a negative signal. One source summary states the Time Magazine list includes Paris Hilton, Bernie Sanders, and Sam Altman. Another states it excludes Nvidia CEO Jensen Huang and instead features non-tech figures.</p>
-<ul><li><strong>Views:</strong> 54,697</li><li><strong>Likes:</strong> 1,002</li><li><strong>Bookmarks:</strong> 58</li><li><strong>Quotes:</strong> 5</li><li><strong>Replies:</strong> 54</li><li><strong>Posts:</strong> 3</li></ul>
-<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/_arohan_">rohan anil</a></li><li><a href="https://x.com/cloneofsimo">Simo Ryu</a></li><li><a href="https://x.com/code_star">Cody Blakeney</a></li></ul>]]></content:encoded>
-      <guid isPermaLink="true">https://x.com/Polymarket/status/2093439980471259208</guid>
-      <category>Digg AI from X</category>
-      <pubDate>Sat, 29 Aug 2026 09:23:54 +0000</pubDate>
-      <media:content url="https://digg.com/tech/k907gmpz/opengraph-image" type="image/jpeg" medium="image"/>
-    </item>
-    <item>
-      <title>OpenAI Ends Cursor Access After SpaceX Acquisition</title>
-      <link>https://openai.com/index/our-decision-on-cursor-following-its-acquisition-by-spacex/</link>
-      <description>Cursor's founder confirms OpenAI will end direct model access after the acquisition.</description>
-      <content:encoded><![CDATA[<p><img src="https://digg.com/tech/cpbd83av/opengraph-image" alt="OpenAI Ends Cursor Access After SpaceX Acquisition"/></p>
-<p>Cursor&#x27;s founder confirms OpenAI will end direct model access after the acquisition.</p>
-<p><strong>Original source:</strong> <a href="https://openai.com/index/our-decision-on-cursor-following-its-acquisition-by-spacex/">https://openai.com/index/our-decision-on-cursor-following-its-acquisition-by-spacex/</a></p>
-<p><strong>Digg story:</strong> <a href="https://digg.com/tech/cpbd83av">https://digg.com/tech/cpbd83av</a></p>
-<p>OpenAI announced it will terminate Cursor&#x27;s direct access to its models following the coding tool&#x27;s acquisition by SpaceX. The change takes effect in three months. Cursor co-founder and CEO Michael Truell stated that OpenAI models currently handle about 5 percent of user traffic and said the company is speaking with OpenAI to resolve the issue. Cursor was an early user of OpenAI models. Observers including Miles Brundage and Matthew Berman linked the decision to concerns over SpaceX and Elon Musk. Amjad Masad of Replit offered free OpenAI model access on its platform as an alternative.</p>
-<ul><li><strong>Views:</strong> 496,820</li><li><strong>Likes:</strong> 6,738</li><li><strong>Bookmarks:</strong> 552</li><li><strong>Quotes:</strong> 228</li><li><strong>Replies:</strong> 593</li><li><strong>Posts:</strong> 11</li></ul>
-<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/Miles_Brundage">Miles Brundage</a></li><li><a href="https://x.com/amasad">Amjad Masad</a></li><li><a href="https://x.com/mntruell">Michael Truell</a></li><li><a href="https://x.com/Yuchenj_UW">Yuchen Jin</a></li><li><a href="https://x.com/infoxiao">Xiao Ma</a></li></ul>]]></content:encoded>
-      <guid isPermaLink="true">https://openai.com/index/our-decision-on-cursor-following-its-acquisition-by-spacex/</guid>
-      <category>Digg AI from X</category>
-      <pubDate>Sat, 29 Aug 2026 02:01:45 +0000</pubDate>
-      <media:content url="https://digg.com/tech/cpbd83av/opengraph-image" type="image/jpeg" medium="image"/>
-    </item>
-    <item>
-      <title>OpenAI Researcher Explains Selective Math Result Announcements</title>
-      <link>https://openai.com/index/ten-advances-in-mathematics/</link>
-      <description>Noam Brown says OpenAI announces internal model math results only when they shift views on AI progress.</description>
-      <content:encoded><![CDATA[<p><img src="https://digg.com/tech/gilz6cyc/opengraph-image" alt="OpenAI Researcher Explains Selective Math Result Announcements"/></p>
-<p>Noam Brown says OpenAI announces internal model math results only when they shift views on AI progress.</p>
-<p><strong>Original source:</strong> <a href="https://openai.com/index/ten-advances-in-mathematics/">https://openai.com/index/ten-advances-in-mathematics/</a></p>
-<p><strong>Digg story:</strong> <a href="https://digg.com/tech/gilz6cyc">https://digg.com/tech/gilz6cyc</a></p>
-<p>Noam Brown, an OpenAI research engineer, posted on X that the company devotes resources to announcing math results from internal models like Astra only when the findings would meaningfully change people’s understanding of AI progress. He added that the main focus remains shipping great models so the public can use them. The post follows an earlier announcement that an internal Astra version solved ten open problems in mathematics and theoretical computer science. It drew replies on X and was retweeted by fellow researcher Mo Bavarian.</p>
-<ul><li><strong>Views:</strong> 119,138</li><li><strong>Likes:</strong> 1,106</li><li><strong>Bookmarks:</strong> 190</li><li><strong>Quotes:</strong> 9</li><li><strong>Replies:</strong> 53</li><li><strong>Posts:</strong> 2</li></ul>
-<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/polynoamial">Noam Brown</a></li><li><a href="https://x.com/mobav0">Mo Bavarian</a></li></ul>]]></content:encoded>
-      <guid isPermaLink="true">https://openai.com/index/ten-advances-in-mathematics/</guid>
-      <category>Digg AI from X</category>
-      <pubDate>Fri, 28 Aug 2026 21:30:40 +0000</pubDate>
-      <media:content url="https://digg.com/tech/gilz6cyc/opengraph-image" type="image/jpeg" medium="image"/>
-    </item>
-    <item>
-      <title>Grok Bot Gains Ability to Complete Online Purchases</title>
-      <link>https://stripe.com/blog/giving-agents-the-ability-to-pay</link>
-      <description>Grok Bot now handles purchases after users connect accounts and approve each transaction via Stripe.</description>
-      <content:encoded><![CDATA[<p><img src="https://digg.com/tech/2psh49kb/opengraph-image" alt="Grok Bot Gains Ability to Complete Online Purchases"/></p>
-<p>Grok Bot now handles purchases after users connect accounts and approve each transaction via Stripe.</p>
-<p><strong>Original source:</strong> <a href="https://stripe.com/blog/giving-agents-the-ability-to-pay">https://stripe.com/blog/giving-agents-the-ability-to-pay</a></p>
-<p><strong>Digg story:</strong> <a href="https://digg.com/tech/2psh49kb">https://digg.com/tech/2psh49kb</a></p>
-<p>Grok Bot posted on X that the AI can now buy items online. Users connect accounts, send the bot shopping, and approve every spend request. The bot then receives a secure single-use card for each payment. The feature is available to users in the US and rolling out to mobile soon. Roshan Sadanani quoted the announcement and noted working with the Stripe team on the integration. Jeff Weinstein retweeted the update.</p>
-<ul><li><strong>Views:</strong> 1,433,063</li><li><strong>Likes:</strong> 7,591</li><li><strong>Bookmarks:</strong> 1,912</li><li><strong>Quotes:</strong> 452</li><li><strong>Replies:</strong> 530</li><li><strong>Posts:</strong> 5</li></ul>
-<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/jeff_weinstein">Jeff Weinstein</a></li><li><a href="https://x.com/leerob">Lee Robinson</a></li></ul>]]></content:encoded>
-      <guid isPermaLink="true">https://stripe.com/blog/giving-agents-the-ability-to-pay</guid>
-      <category>Digg AI from X</category>
-      <pubDate>Fri, 28 Aug 2026 19:26:17 +0000</pubDate>
-      <media:content url="https://digg.com/tech/2psh49kb/opengraph-image" type="image/jpeg" medium="image"/>
-    </item>
-    <item>
-      <title>Chamath Palihapitiya Says AI Long-Horizon Tasks Still Fail</title>
-      <link>https://garymarcus.substack.com/p/misplaced-panic-over-ai-progress</link>
-      <description>Quote from a Stanford AI Club talk draws agreement from Gary Marcus on AI limits.</description>
-      <content:encoded><![CDATA[<p><img src="https://digg.com/tech/52lmg3vp/opengraph-image" alt="Chamath Palihapitiya Says AI Long-Horizon Tasks Still Fail"/></p>
-<p>Quote from a Stanford AI Club talk draws agreement from Gary Marcus on AI limits.</p>
-<p><strong>Original source:</strong> <a href="https://garymarcus.substack.com/p/misplaced-panic-over-ai-progress">https://garymarcus.substack.com/p/misplaced-panic-over-ai-progress</a></p>
-<p><strong>Digg story:</strong> <a href="https://digg.com/tech/52lmg3vp">https://digg.com/tech/52lmg3vp</a></p>
-<p>Rohan Paul posted a quote from Chamath Palihapitiya speaking at the Stanford AI Club. Chamath stated that long-horizon tasks remain a joke and current AI does not handle them. He added that complex problems also do not work and warned of a hype cycle that will lead to contraction and a trough of disillusionment. Gary Marcus replied that Chamath was right and linked to an earlier post of his own making the same point.</p>
-<ul><li><strong>Views:</strong> 110,916</li><li><strong>Likes:</strong> 469</li><li><strong>Bookmarks:</strong> 290</li><li><strong>Quotes:</strong> 7</li><li><strong>Replies:</strong> 43</li><li><strong>Posts:</strong> 3</li></ul>
-<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/GaryMarcus">Gary Marcus</a></li><li><a href="https://x.com/rohanpaul_ai">Rohan Paul</a></li></ul>]]></content:encoded>
-      <guid isPermaLink="true">https://garymarcus.substack.com/p/misplaced-panic-over-ai-progress</guid>
-      <category>Digg AI from X</category>
-      <pubDate>Fri, 28 Aug 2026 18:57:24 +0000</pubDate>
-      <media:content url="https://digg.com/tech/52lmg3vp/opengraph-image" type="image/jpeg" medium="image"/>
     </item>
   </channel>
 </rss>
