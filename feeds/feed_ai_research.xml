@@ -8,7 +8,191 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 02 Sep 2026 16:03:46 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 04 Sep 2026 02:13:44 +0000</lastBuildDate>
+    <item>
+      <title>Designing Grok Bot for a world of persistent agents</title>
+      <link>https://x.ai/news/designing-grok-bot</link>
+      <description>How we designed Grok Bot for agents that persist beyond a single session — from a chat history to a Bot roster, presence, a computer of the Bot’s own, and work that starts without a prompt.</description>
+      <content:encoded><![CDATA[<p>When we started designing Grok Bot, one of the central questions was how the interface should shape the relationship between user and agent. Most AI interfaces are organized around a chat session the user operates. Each session begins with setup, unfolds as the user looks on, and ends when the conversation stops.</p>
+<p>We wanted to design for an agent that persists beyond any one session and can carry responsibility on its own. That meant reconsidering some of the basic objects and signals of the interface, including what belongs in the sidebar, how an agent shows progress, and when its work should become visible.</p>
+<img src="https://x.ai/_next/static/media/wallpaper-light-noon.27_hyf9uycov-.png?dpl=702d66810f68a9b3358a1630ef110604e47b5f2e"/>
+<img src="https://x.ai/_next/static/media/wallpaper-dark-night.2tq8j5y-604e-.png?dpl=702d66810f68a9b3358a1630ef110604e47b5f2e"/>
+<img src="https://x.ai/_next/static/media/user-peng.3rw63gdxpcheg.png?dpl=702d66810f68a9b3358a1630ef110604e47b5f2e"/>
+<img src="https://x.ai/_next/static/media/wallpaper-gray.13vta0mrxymev.png?dpl=702d66810f68a9b3358a1630ef110604e47b5f2e"/>
+<img src="https://x.ai/_next/static/media/wallpaper-dark-night.2tq8j5y-604e-.png?dpl=702d66810f68a9b3358a1630ef110604e47b5f2e"/>
+<img src="https://x.ai/_next/static/media/dock-icons.0cwlcw-73qj01.png?dpl=702d66810f68a9b3358a1630ef110604e47b5f2e"/>
+<h2 id="rethinking-the-primitives">Rethinking the primitives</h2>
+<p>AI products have accumulated a large vocabulary in a short time. Chats, sessions, models, context windows, memories, system prompts, projects, skills, connectors, agents, tools, sandboxes, permissions, and automations all describe real parts of these systems.</p>
+<p>But exposing each one as a separate product concept asks users to understand more than they need to. We started by asking which concepts a person actually needs in order to work with an agent.</p>
+<p>We kept coming back to five:</p>
+<ol>
+<li><strong>Bots</strong> are persistent agents with their own identity, memory, runtime, and tools.</li>
+<li><strong>Chats</strong> are the conversational interface for working with a Bot.</li>
+<li><strong>Prompts</strong> give a Bot context or instructions. They can be used once, saved as Skills, or triggered automatically as Routines.</li>
+<li><strong>Tools</strong> let Bots access information and take action through software, APIs, connectors, the shell, or computer use.</li>
+<li><strong>Artifacts</strong> are the documents, designs, code, data, and other durable outputs that Bots create or modify.</li>
+</ol>
+<p>Everything else could remain beneath the interface until the user had a reason to care about it. The next question was which of these five objects should organize the product.</p>
+<h2 id="from-chat-history-to-a-bot-roster">From chat history to a Bot roster</h2>
+<p>Chats are disposable. We start a conversation to solve a problem. It gets pushed down the sidebar. A week later, we start another one. You rarely go back beyond the most recent five.</p>
+<p>That behavior is perfectly reasonable when the unit of interaction is a question. It becomes strange when the thing on the other side of the interaction is supposed to know you, remember previous work, and take responsibility over time.</p>
+<p>So the main objects in Grok Bot are Bots, not conversations. A Bot has a name. It has an avatar and a title. It remembers its conversations with you. It has its own computer and tools. When you come back tomorrow, you are coming back to the same Bot.</p>
+<h2 id="presence-as-interface">Presence as interface</h2>
+<p>Once a Bot was something you maintain over time rather than a session you start, the way Bots appear in the product had to answer three questions at once:</p>
+<ol>
+<li>Who is this?</li>
+<li>What are they doing?</li>
+<li>How much do I need to know?</li>
+</ol>
+<h3 id="who-is-this">Who is this</h3>
+<p>A roster only works if it can be scanned quickly. As the roster grows, we did not want people to have to read every name each time they opened the product. They should be able to recognize a Bot from its avatar almost peripherally.</p>
+<img src="https://x.ai/_next/static/media/initials-1.0yig-qj1joruk.png?dpl=702d66810f68a9b3358a1630ef110604e47b5f2e"/>
+<img src="https://x.ai/_next/static/media/initials-2.1txviuzdipoiw.png?dpl=702d66810f68a9b3358a1630ef110604e47b5f2e"/>
+<img src="https://x.ai/_next/static/media/initials-3.38z4vaotfsn1v.png?dpl=702d66810f68a9b3358a1630ef110604e47b5f2e"/>
+<img src="https://x.ai/_next/static/media/initials-4.01qrbimmhtavw.png?dpl=702d66810f68a9b3358a1630ef110604e47b5f2e"/>
+<img src="https://x.ai/_next/static/media/initials-5.3jwzv-u8m85v8.png?dpl=702d66810f68a9b3358a1630ef110604e47b5f2e"/>
+<img src="https://x.ai/_next/static/media/initials-6.19sekhuc8jakl.png?dpl=702d66810f68a9b3358a1630ef110604e47b5f2e"/>
+<img src="https://x.ai/_next/static/media/emoji-1.3h5blj8bz5-jf.png?dpl=702d66810f68a9b3358a1630ef110604e47b5f2e"/>
+<img src="https://x.ai/_next/static/media/emoji-2.39jbp_6rdd-5c.png?dpl=702d66810f68a9b3358a1630ef110604e47b5f2e"/>
+<img src="https://x.ai/_next/static/media/emoji-3.28sgvmrs9mln9.png?dpl=702d66810f68a9b3358a1630ef110604e47b5f2e"/>
+<img src="https://x.ai/_next/static/media/emoji-4.2avjpk08w6cek.png?dpl=702d66810f68a9b3358a1630ef110604e47b5f2e"/>
+<img src="https://x.ai/_next/static/media/emoji-5.01zc07ny7g1nn.png?dpl=702d66810f68a9b3358a1630ef110604e47b5f2e"/>
+<img src="https://x.ai/_next/static/media/emoji-6.09640mz61fg7f.png?dpl=702d66810f68a9b3358a1630ef110604e47b5f2e"/>
+<img src="https://x.ai/_next/static/media/agentb-1.3r4tz4_d9u_-z.png?dpl=702d66810f68a9b3358a1630ef110604e47b5f2e"/>
+<img src="https://x.ai/_next/static/media/agentb-2.3fmjch4q22wof.png?dpl=702d66810f68a9b3358a1630ef110604e47b5f2e"/>
+<img src="https://x.ai/_next/static/media/agentb-3.3riz-3zy_f268.png?dpl=702d66810f68a9b3358a1630ef110604e47b5f2e"/>
+<img src="https://x.ai/_next/static/media/agentb-4.2--kd8w9v-eaw.png?dpl=702d66810f68a9b3358a1630ef110604e47b5f2e"/>
+<img src="https://x.ai/_next/static/media/agentb-5.0d3thxc1-7umo.png?dpl=702d66810f68a9b3358a1630ef110604e47b5f2e"/>
+<img src="https://x.ai/_next/static/media/agentb-6.2hz5ggcwjuefo.png?dpl=702d66810f68a9b3358a1630ef110604e47b5f2e"/>
+<img src="https://x.ai/_next/static/media/base-1.13x8p2khem12n.png?dpl=702d66810f68a9b3358a1630ef110604e47b5f2e"/>
+<img src="https://x.ai/_next/static/media/base-2.0_m9l5xohcj95.png?dpl=702d66810f68a9b3358a1630ef110604e47b5f2e"/>
+<img src="https://x.ai/_next/static/media/base-3.35r25_i92f7lp.png?dpl=702d66810f68a9b3358a1630ef110604e47b5f2e"/>
+<img src="https://x.ai/_next/static/media/base-4.1p9fcypmuoe49.png?dpl=702d66810f68a9b3358a1630ef110604e47b5f2e"/>
+<img src="https://x.ai/_next/static/media/base-5.1fhzuvuy00j0n.png?dpl=702d66810f68a9b3358a1630ef110604e47b5f2e"/>
+<img src="https://x.ai/_next/static/media/base-6.3t9tmxu30heol.png?dpl=702d66810f68a9b3358a1630ef110604e47b5f2e"/>
+<img src="https://x.ai/_next/static/media/new3d-1.1zc81r05mlxf2.png?dpl=702d66810f68a9b3358a1630ef110604e47b5f2e"/>
+<img src="https://x.ai/_next/static/media/new3d-2.27lpziqdwd0j0.png?dpl=702d66810f68a9b3358a1630ef110604e47b5f2e"/>
+<img src="https://x.ai/_next/static/media/new3d-3.1u9ugv0y8018y.png?dpl=702d66810f68a9b3358a1630ef110604e47b5f2e"/>
+<img src="https://x.ai/_next/static/media/new3d-4.0o6i10hvi0pyz.png?dpl=702d66810f68a9b3358a1630ef110604e47b5f2e"/>
+<img src="https://x.ai/_next/static/media/new3d-5.0dfi-x29-s1jo.png?dpl=702d66810f68a9b3358a1630ef110604e47b5f2e"/>
+<img src="https://x.ai/_next/static/media/new3d-6.30xsvxdcjr7_i.png?dpl=702d66810f68a9b3358a1630ef110604e47b5f2e"/>
+<img src="https://x.ai/_next/static/media/blob-1.179mb5k-55q0s.png?dpl=702d66810f68a9b3358a1630ef110604e47b5f2e"/>
+<img src="https://x.ai/_next/static/media/blob-2.0f9k73iqne5ic.png?dpl=702d66810f68a9b3358a1630ef110604e47b5f2e"/>
+<img src="https://x.ai/_next/static/media/blob-3.3ccg438vd4bnj.png?dpl=702d66810f68a9b3358a1630ef110604e47b5f2e"/>
+<img src="https://x.ai/_next/static/media/blob-4.26votlluxpf3p.png?dpl=702d66810f68a9b3358a1630ef110604e47b5f2e"/>
+<img src="https://x.ai/_next/static/media/blob-5.3td20ca0sy08_.png?dpl=702d66810f68a9b3358a1630ef110604e47b5f2e"/>
+<img src="https://x.ai/_next/static/media/blob-6.24umj72ldwxsm.png?dpl=702d66810f68a9b3358a1630ef110604e47b5f2e"/>
+<img src="https://x.ai/_next/static/media/line-1.2vlri0g4yob5c.png?dpl=702d66810f68a9b3358a1630ef110604e47b5f2e"/>
+<img src="https://x.ai/_next/static/media/line-2.0k59bd-g6w77s.png?dpl=702d66810f68a9b3358a1630ef110604e47b5f2e"/>
+<img src="https://x.ai/_next/static/media/line-3.00_foixq2-eza.png?dpl=702d66810f68a9b3358a1630ef110604e47b5f2e"/>
+<img src="https://x.ai/_next/static/media/line-4.3na4nl1j5at_t.png?dpl=702d66810f68a9b3358a1630ef110604e47b5f2e"/>
+<img src="https://x.ai/_next/static/media/line-5.3rjal0p5m-286.png?dpl=702d66810f68a9b3358a1630ef110604e47b5f2e"/>
+<img src="https://x.ai/_next/static/media/line-6.2ehf_3xbvejl2.png?dpl=702d66810f68a9b3358a1630ef110604e47b5f2e"/>
+<img src="https://x.ai/_next/static/media/s32-1.2utembwuppxxx.png?dpl=702d66810f68a9b3358a1630ef110604e47b5f2e"/>
+<img src="https://x.ai/_next/static/media/s32-2.3iy5no1sbn35f.png?dpl=702d66810f68a9b3358a1630ef110604e47b5f2e"/>
+<img src="https://x.ai/_next/static/media/s32-3.0e7acsgpg5bqv.png?dpl=702d66810f68a9b3358a1630ef110604e47b5f2e"/>
+<img src="https://x.ai/_next/static/media/s32-4.21x56bl2zkenr.png?dpl=702d66810f68a9b3358a1630ef110604e47b5f2e"/>
+<img src="https://x.ai/_next/static/media/s32-5.10zlplp724o1m.png?dpl=702d66810f68a9b3358a1630ef110604e47b5f2e"/>
+<img src="https://x.ai/_next/static/media/s32-6.26kxeg4kxjnex.png?dpl=702d66810f68a9b3358a1630ef110604e47b5f2e"/>
+<img src="https://x.ai/_next/static/media/mix-1.11lta7nrjb9pn.png?dpl=702d66810f68a9b3358a1630ef110604e47b5f2e"/>
+<img src="https://x.ai/_next/static/media/mix-2.1tpo6-fp8vgup.png?dpl=702d66810f68a9b3358a1630ef110604e47b5f2e"/>
+<img src="https://x.ai/_next/static/media/mix-3.32f6whniadrub.png?dpl=702d66810f68a9b3358a1630ef110604e47b5f2e"/>
+<img src="https://x.ai/_next/static/media/mix-4.1pily-uyp88-h.png?dpl=702d66810f68a9b3358a1630ef110604e47b5f2e"/>
+<img src="https://x.ai/_next/static/media/mix-5.2sq51vj2aq2dn.png?dpl=702d66810f68a9b3358a1630ef110604e47b5f2e"/>
+<img src="https://x.ai/_next/static/media/mix-6.1e2kj0mwyz2mi.png?dpl=702d66810f68a9b3358a1630ef110604e47b5f2e"/>
+<img src="https://x.ai/_next/static/media/agenta-1.1iuswpcl3hq8o.png?dpl=702d66810f68a9b3358a1630ef110604e47b5f2e"/>
+<img src="https://x.ai/_next/static/media/agenta-2.346vsyk23d7i_.png?dpl=702d66810f68a9b3358a1630ef110604e47b5f2e"/>
+<img src="https://x.ai/_next/static/media/agenta-3.20lqy9orb-_2u.png?dpl=702d66810f68a9b3358a1630ef110604e47b5f2e"/>
+<img src="https://x.ai/_next/static/media/agenta-4.44r1bdv8r6u-c.png?dpl=702d66810f68a9b3358a1630ef110604e47b5f2e"/>
+<img src="https://x.ai/_next/static/media/agenta-5.3at_es63n-ehm.png?dpl=702d66810f68a9b3358a1630ef110604e47b5f2e"/>
+<img src="https://x.ai/_next/static/media/agenta-6.3m1estnwuqiu3.png?dpl=702d66810f68a9b3358a1630ef110604e47b5f2e"/>
+<p>At the same time, we wanted to keep the avatars consistent enough to read as one system. We studied character systems across illustration, animation, games, and interface design, exploring everything from initials and emojis to pixel art, watercolor, claymorphism, Noritake-style line art, silhouettes, and identicons.</p>
+<p>Most approaches solved one side of the problem better than the other. Watercolor and clay gave individual Bots plenty of character but carried too much detail at sidebar scale. Simpler systems sat more naturally in the interface, but often left the Bots looking interchangeable.</p>
+<p>The system we landed on keeps the basic construction consistent, using simple shapes and expressive eyes, then introduces distinction through controlled variations and accessories. Each Bot remains recognizable at a glance without appearing to come from a different visual world.</p>
+<h3 id="what-are-they-doing">What are they doing</h3>
+<p>Once the avatar became the Bot’s identity, it was also the natural place to show state. A Bot may be idle, thinking, working, waiting, blocked, or done. We could have represented each state with a separate indicator, but that would have added another layer of UI for the user to interpret.</p>
+<p>Instead, we explored how much of the lifecycle the avatar itself could carry.</p>
+<p>At rest, the Bot is calm and slightly curious. When work arrives, it acknowledges the task. As work begins, it kicks into gear. Its motion changes again when it is waiting or needs help, then settles once the work is done. The avatar now shows what the Bot is doing as well as which Bot it is.</p>
+<h3 id="how-much-do-i-need-to-know">How much do I need to know</h3>
+<p>A related design question was how much of the Bot’s execution to show. One approach would have been the standard “three animated dots” but that would have been too little information, making it hard for users to tell whether the Bot was working or stuck.</p>
+<p>We also tried showing a short written description of the Bot’s current action, but once people could see one step, they wanted to see the rest. User research showed us that they were asking for that detail mainly for reassurance that the Bot was still working and on the right track.</p>
+<p>In the final design, the avatar’s motion provides the first bit of reassurance by showing that the Bot is active. If someone wants to check what it is doing, they can hover to see its current action.</p>
+<h2 id="their-computer-not-yours">Their computer, not yours</h2>
+<p>Each Bot has its own computer, which it can use to browse the web, work with files, and run software. This created another interface problem. How visible should that computer be and when should the user be able to control it?</p>
+<p>We explored four arrangements:</p>
+<ul>
+<li><strong>Floating window:</strong> kept the computer easy to reach but covered the conversation.</li>
+<li><strong>Side by side:</strong> made the work continuously visible and encouraged users to watch it.</li>
+<li><strong>Modal:</strong> made checking in easy but treated the Bot’s workspace as a temporary interruption.</li>
+<li><strong>Full screen:</strong> gave the computer plenty of room but displaced the conversation entirely.</li>
+</ul>
+<img src="https://x.ai/_next/static/media/wallpaper-gray.13vta0mrxymev.png?dpl=702d66810f68a9b3358a1630ef110604e47b5f2e"/>
+<p>The more prominent we made the computer, the more the product encouraged users to supervise it. We decided it should remain the Bot’s workspace, with the interface providing different levels of access as the user needed them.</p>
+<p>The final design has three levels, which allow the user to enter the Bot’s workspace without being drawn into operating it:</p>
+<ul>
+<li><strong>Status:</strong> the title-bar icon turns purple while the computer is active.</li>
+<li><strong>Preview:</strong> opening it reveals a pinned side panel where the user can follow the work without leaving the conversation.</li>
+<li><strong>Takeover:</strong> when the Bot needs help, the user can open the computer full screen, take control, and then hand it back.</li>
+</ul>
+<img src="https://x.ai/_next/static/media/wallpaper-gray.13vta0mrxymev.png?dpl=702d66810f68a9b3358a1630ef110604e47b5f2e"/>
+<p>We also designed wallpapers that shift throughout the day, becoming lighter in the morning and darker at night. The detail gives the Bot’s computer its own sense of time and makes it feel separate from the user’s desktop.</p>
+<img alt="light day" src="https://x.ai/_next/static/media/wall-strip-1.3gno9o6tamsil.png?dpl=702d66810f68a9b3358a1630ef110604e47b5f2e"/>
+<img alt="light noon" src="https://x.ai/_next/static/media/wall-strip-2.06luvae_idfx_.png?dpl=702d66810f68a9b3358a1630ef110604e47b5f2e"/>
+<img alt="light night" src="https://x.ai/_next/static/media/wall-strip-3.170lw02z5ufzv.png?dpl=702d66810f68a9b3358a1630ef110604e47b5f2e"/>
+<img alt="dark day" src="https://x.ai/_next/static/media/wall-strip-4.31folbdvqalze.png?dpl=702d66810f68a9b3358a1630ef110604e47b5f2e"/>
+<img alt="dark noon" src="https://x.ai/_next/static/media/wall-strip-5.099mty7qqe_zp.png?dpl=702d66810f68a9b3358a1630ef110604e47b5f2e"/>
+<p>It is closer to working with a coworker than operating a remote machine. You can tell that they are working, glance at their screen when you need context, and sit down when something requires your help.</p>
+<h2 id="the-shape-of-information">The shape of information</h2>
+<p>Early versions of Grok Bot responded to almost every request with prose. It described a five-day forecast instead of showing one and narrated a set of tasks instead of laying them out as a board. The user then had to restructure the answer. This led us to treat the form of a response as part of the answer.</p>
+<p>To support this, we built inline cards and widgets into Grok Bot. A Bot can answer in prose when prose fits the information and use structured UI when it does not.</p>
+<p>The same principle applies to actions. When a Bot creates a Routine, changes a setting, or messages another Bot, the event can appear directly in the transcript. The user can open it when there is more to inspect.</p>
+<p>The result is a heterogeneous transcript in which conversation, system events, interactive objects, and visualizations share one timeline.</p>
+<h2 id="organizing-intelligence">Organizing intelligence</h2>
+<p>Once people create several Bots, the product also has to organize how those Bots work together. We needed to decide which context should belong to each role, how Bots should share context when their work overlaps, and how to coordinate them without turning the user into a dispatcher.</p>
+<p>We saw one answer emerge as people created more Bots. Some made a Chief of Staff Bot responsible for coordinating several specialists. They could give direction to one Bot instead of checking each one and routing every task themselves.</p>
+<p>Giving Bots distinct roles also forced us to decide what each role should know. A legal Bot may need the history of an ongoing dispute, while a finance Bot may need years of financial records. Combining those histories into one large memory would make it harder to give each Bot the information relevant to its work.</p>
+<p>Capabilities and context therefore follow different boundaries in Grok Bot. Tools and Skills live at the account level because many Bots may need to browse the web, work with documents, or send email. Memory and Routines belong to the Bot because they reflect what that particular role knows and does over time. Put another way, capabilities can be shared broadly while context remains with the role that needs it.</p>
+<p>Some work crosses those role boundaries. Group chats provide shared context for a project or team while allowing each Bot to retain its specialized memory. A designer, engineer, PM, and data scientist can work in the same conversation, hand work to one another, and share what the project requires.</p>
+<p>We considered adding dashboards, assignment boards, and explicit handoff controls to manage these groups. Each one gave the user more coordination work. Instead, coordinating Bots handle routine routing and bring the user in when a decision requires judgment.</p>
+<h2 id="work-that-keeps-moving">Work that keeps moving</h2>
+<p>Most agent sessions begin when a user sends a prompt. That leaves even a persistent Bot waiting for someone to activate it. Routines let users give a Bot a standing responsibility that runs on a schedule or in response to an event, such as watching an industry or preparing a briefing every morning. The user defines the work once, and the Routine activates the Bot when it needs to happen.</p>
+<p>We initially treated Routines as secondary configuration. As they became more important to autonomous work, we moved them into the Bot’s main interface. The transcript shows what ran and gives the user a place to review the result or handle an exception.</p>
+<p>This also changes the role of conversation. A prompt can start a session, but so can a schedule, an event, or another Bot. Over time, more work may begin without the user being present at all.</p>
+<h2 id="the-disappearing-interface">The disappearing interface</h2>
+<p>By the end of the project, much of the design work involved taking things away. We removed window and panel controls, computer-view options, and agent metadata. We also set practical limits of roughly 50 Bots per account and six per group chat. Each decision came back to the same question: Did this help someone delegate, or did it give them one more thing to manage?</p>
+<p>The line between operating an AI and delegating to a coworker keeps moving as models improve. Grok Bot reflects where we think it sits today. Designing Grok Bot from its earliest explorations through launch has been about finding that line and helping the interface change with it. As agents take on more responsibility, the interface should ask less of the person.</p>]]></content:encoded>
+      <guid isPermaLink="true">https://x.ai/news/designing-grok-bot</guid>
+      <category>News</category>
+      <pubDate>Fri, 04 Sep 2026 02:13:44 +0000</pubDate>
+      <media:content url="https://x.ai/_next/static/media/wallpaper-light-noon.27_hyf9uycov-.png?dpl=702d66810f68a9b3358a1630ef110604e47b5f2e" type="image/png" medium="image"/>
+    </item>
+    <item>
+      <title>Grok Bot for Enterprise</title>
+      <link>https://x.ai/news/grok-bot-for-enterprise</link>
+      <description>Grok Bot is now available for enterprises. Grok and Cursor Enterprise customers have free usage for the next two weeks, and can invite their whole organization, including people without an existing seat.</description>
+      <content:encoded><![CDATA[<p>Grok Bot is your team of helpful AI teammates. You delegate real tasks to them and they carry the job through end to end, working autonomously around the clock inside the same tools you use.</p>
+<p>Enterprises need the ability to govern Bots at scale and today's release adds access, network, and audit controls that make that possible.</p>
+<h2 id="a-bot-for-every-job">A Bot for every job</h2>
+<p>A Bot is a worker you create inside Grok Bot for a specific job. Each Bot runs on its own computer in the cloud and can use every app and website the same way you do. You message a Bot like a coworker, and it comes back when the work is done or it needs a decision from you.</p>
+<p>You'll usually manage several Bots for different jobs and each runs independently. To teach a Bot a workflow, have it follow along once. It saves the routine, takes your corrections, and runs it on its own from then on. When you've built a Bot that works well, you can hand it to the person next to you as a template. Bots can also message each other and share context, so you're not having to pass context between them.</p>
+<h2 id="how-customers-use-grok-bot">How customers use Grok Bot</h2>
+<p>Thousands of organizations have adopted Grok Bot since launch, including customers like Legora, Supermicro, and ServiceTitan. These teams use Grok Bot every day, and the heaviest use is outside engineering. Here are a few popular examples of the [millions] of bots created in the past few weeks:</p>
+<p><strong>Sales.</strong> Bots can watch webinars and podcasts by people at target accounts, then leave LinkedIn and email drafts for morning review. During a call, a Bot updates the deck from live notes so next steps are on the slide even before the meeting is over.</p>
+<p><strong>Recruiting.</strong> A Bot prospects overnight and builds a morning shortlist with outreach queued for review. It texts candidates good luck before they walk in, and after interviews it submits scorecards from that day's Gong calls.</p>
+<p><strong>Marketing.</strong> After a webinar, a Bot pulls the Zoom Q&amp;A and sends Slack messages to the AEs whose customers showed up. The messages include notes on the questions the customer asked as well as draft replies.</p>
+<p><strong>Finance.</strong> A specialized procurement Bot monitors vendor spend, usage, and renewals, then finds places to cut costs or negotiate better terms. It has surfaced tens of thousands of dollars in savings across SaaS, recurring purchases, and vendor services.</p>
+<p><strong>Engineering.</strong> Bots monitor PRs for bugs, security findings, failing builds, and merge conflicts, then keep every task moving until it's ready for review. Overnight audits improve code quality, performance, and security, giving engineers more time for the hardest problems.</p>
+<h2 id="secure-by-default">Secure by default</h2>
+<p>Each user's work in Grok Bot runs in its own secure and isolated environment, separate from every other user. A Bot has no access by default and reaches only the accounts you sign it into.</p>
+<p><a href="https://cursor.com/docs/grok-bot/security">Full security architecture →</a></p>
+<h3 id="free-for-enterprise-for-the-next-2-weeks">Free for Enterprise for the next 2 weeks</h3>
+<p>Grok and Cursor Enterprise customers get Grok Bot free for the next two weeks and can invite their whole organization, including people without an existing seat.</p>
+<p>Activate Grok Bot today in your <a href="https://cursor.com/dashboard/bot">admin dashboard</a>.</p>
+<p>To learn more, <a href="https://cursor.com/contact-sales?product=grok-bot">contact sales</a>.</p>]]></content:encoded>
+      <guid isPermaLink="true">https://x.ai/news/grok-bot-for-enterprise</guid>
+      <category>News</category>
+      <pubDate>Fri, 04 Sep 2026 02:13:44 +0000</pubDate>
+    </item>
     <item>
       <title>Trump Administration Backs OpenAI Against New York Times</title>
       <link>https://x.com/MTSlive/status/2095180893271032307</link>
@@ -859,38 +1043,6 @@
       <category>Digg AI from X</category>
       <pubDate>Mon, 31 Aug 2026 16:04:32 +0000</pubDate>
       <media:content url="https://digg.com/tech/3aa9uztw/opengraph-image" type="image/jpeg" medium="image"/>
-    </item>
-    <item>
-      <title>Replit Head of AI Shares Free Mode Story</title>
-      <link>https://x.com/Replit/status/2094455460115923288</link>
-      <description>Replit highlights Michele Catasta building Free Mode after two decades of work.</description>
-      <content:encoded><![CDATA[<p><img src="https://digg.com/tech/vomfk7uq/opengraph-image" alt="Replit Head of AI Shares Free Mode Story"/></p>
-<p>Replit highlights Michele Catasta building Free Mode after two decades of work.</p>
-<p><strong>Original source:</strong> <a href="https://x.com/Replit/status/2094455460115923288">https://x.com/Replit/status/2094455460115923288</a></p>
-<p><strong>Digg story:</strong> <a href="https://digg.com/tech/vomfk7uq">https://digg.com/tech/vomfk7uq</a></p>
-<p>Replit posted from its official account about President and Head of AI Michele Catasta. The message states that he chased a vision for 20 years and has now built Free Mode. It opens with a line about inventions reaching ordinary hands for extraordinary results and presents the post as the story behind the feature. The account tags the content as coming from the company behind its AI-powered online IDE and Replit Agent. No additional details on the mode or its release appear in the post itself.</p>
-<ul><li><strong>Views:</strong> 4,988</li><li><strong>Likes:</strong> 68</li><li><strong>Bookmarks:</strong> 11</li><li><strong>Quotes:</strong> 2</li><li><strong>Replies:</strong> 4</li><li><strong>Posts:</strong> 1</li></ul>
-<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/pirroh">Michele Catasta</a></li></ul>]]></content:encoded>
-      <guid isPermaLink="true">https://x.com/Replit/status/2094455460115923288</guid>
-      <category>Digg AI from X</category>
-      <pubDate>Mon, 31 Aug 2026 16:01:09 +0000</pubDate>
-      <media:content url="https://digg.com/tech/vomfk7uq/opengraph-image" type="image/jpeg" medium="image"/>
-    </item>
-    <item>
-      <title>World Modeling Workshop and Conference Announced</title>
-      <link>https://icwm.cc</link>
-      <description>Researcher Randall Balestriero posted about the fourth workshop and first conference on world models for physics.</description>
-      <content:encoded><![CDATA[<p><img src="https://digg.com/tech/arv8ll0u/opengraph-image" alt="World Modeling Workshop and Conference Announced"/></p>
-<p>Researcher Randall Balestriero posted about the fourth workshop and first conference on world models for physics.</p>
-<p><strong>Original source:</strong> <a href="https://icwm.cc">https://icwm.cc</a></p>
-<p><strong>Digg story:</strong> <a href="https://digg.com/tech/arv8ll0u">https://digg.com/tech/arv8ll0u</a></p>
-<p>Randall Balestriero, an AI researcher and assistant professor at Brown University, posted on X about two upcoming events. The fourth world modeling workshop is scheduled for Aspen, Colorado in February and focuses on world models for physics. The first world modeling conference is set for the Bay Area, California in May. Both are organized in collaboration with Yann LeCun, LambdaAPI, amilabs and additional partners to be announced. The post references opening remarks for the events and links to their websites at wmw-aspen.github.io and icwm.cc.</p>
-<ul><li><strong>Views:</strong> 3,414</li><li><strong>Likes:</strong> 56</li><li><strong>Bookmarks:</strong> 21</li><li><strong>Replies:</strong> 1</li><li><strong>Posts:</strong> 1</li></ul>
-<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/ylecun">Yann LeCun</a></li></ul>]]></content:encoded>
-      <guid isPermaLink="true">https://icwm.cc</guid>
-      <category>Digg AI from X</category>
-      <pubDate>Mon, 31 Aug 2026 15:54:13 +0000</pubDate>
-      <media:content url="https://digg.com/tech/arv8ll0u/opengraph-image" type="image/jpeg" medium="image"/>
     </item>
   </channel>
 </rss>
