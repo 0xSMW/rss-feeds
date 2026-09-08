@@ -8,7 +8,620 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 07 Sep 2026 16:40:32 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 08 Sep 2026 01:56:35 +0000</lastBuildDate>
+    <item>
+      <title>Jellyfin 12.0</title>
+      <link>https://jellyfin.org/posts/jellyfin-release-12.0/</link>
+      <description>{/ cspell:ignore crobibero Brainz EOTF desync /}</description>
+      <content:encoded><![CDATA[<p>We are pleased to bring you Jellyfin 12.0, our new stable release. This release continues in the same direction as 10.11: finishing what the database conversion started, turning that new foundation into real performance work, and finally giving books and comics the support they have deserved for years.</p>
+<p>If you just want a quick summary of what you need to know to get your system upgraded and running, please read on to the "TL; DR" section just below, or keep reading for a full explanation of all the major features and improvements in Jellyfin 12.0! You can also view full changelogs on the <a href="https://github.com/jellyfin/jellyfin/releases/tag/v12.0.0">server</a> and <a href="https://github.com/jellyfin/jellyfin-web/releases/tag/v12.0.0">web</a> GitHub releases.</p>
+<p>- Cody</p>
+<p>info</p>
+<p><strong>IT IS VERY IMPORTANT THAT YOU READ THIS SECTION BEFORE UPGRADING TO JELLYFIN 12.0!</strong> Failure to do so may cause issues! Always feel free to <a href="https://jellyfin.org/contact">ask for help in our chat</a> if you are unclear or run into trouble.</p>
+<p>This release changes the database schema and actively rewrites data on first boot, so a backup is the only way back to your previous version.</p>
+<ol>
+<li>
+<p>As always for major upgrades, ensure you <strong>STOP Jellyfin and take a <a href="https://jellyfin.org/docs/general/administration/backup-and-restore/#manual-backup">FULL MANUAL BACKUP OF YOUR DATA AND CONFIG DIRECTORIES</a> before upgrading</strong>!</p>
+</li>
+<li>
+<p>You must be running Jellyfin <strong>10.10.7 or any 10.11.x release</strong> before upgrading to 12.0. Upgrading directly from 10.11.x is fully supported and no intermediate step is needed. If you are on anything older than 10.10.7, upgrade to 10.10.7 <strong>first</strong>, then upgrade to 12.0.</p>
+</li>
+<li>
+<p><strong>Check your usernames before upgrading.</strong> Usernames are now case insensitive, so two accounts can't have names that only differ by capitalization. If you have users that match this pattern the database migration will fail.</p>
+</li>
+<li>
+<p><strong>A full library scan is REQUIRED after upgrading.</strong> As part of fixing how alternate versions are stored, versions that Jellyfin grouped automatically, not ones you merged yourself, are cleared during the upgrade. Until you run the scan those versions will look like they are missing.</p>
+</li>
+<li>
+<p><strong>The first scan after upgrading will take significantly longer than normal</strong>, and some movies may appear as newly added. This is expected. Jellyfin now checks every item in your library against the files on disk to clear out leftovers from previous versions, and anything that was previously filed incorrectly gets corrected as it goes. <strong>Do not stop the server while migrations are running.</strong></p>
+</li>
+<li>
+<p>Once installed, please ensure you hard refresh (e.g. Ctrl+Shift+R or similar) and/or clear your web cache for your Jellyfin instance if you notice any UX anomalies. Bad cached assets are the #1 cause of such issues.</p>
+</li>
+<li>
+<p><strong>Remove any third-party plugins before upgrading.</strong> Plugins built for 10.11 will not load on 12.0 and need updated builds from their authors, so give them time to catch up before adding them back. Official plugins have been updated for 12.0 support.</p>
+</li>
+<li>
+<p><strong>Very old third-party clients will stop working.</strong> Support for the legacy <code>/emby/</code> and <code>/mediabrowser/</code> addresses has been removed, and the deprecated way of signing in is now disabled, including on existing servers. Clients that have not seen an update in years are the ones at risk here.</p>
+</li>
+<li>
+<p>This release contains security fixes, so we recommend upgrading rather than staying on an older release once you are ready.</p>
+</li>
+<li>
+<p>As always with major Jellyfin releases, bugs will exist. Please prefix bug reports with <strong>"[12.0]"</strong> so we can triage them quickly, and see point 1 one more time: <strong>take a backup</strong>.</p>
+</li>
+</ol>
+<p>And now on to the cool new features!</p>
+<p>The most visible change in this release is the one in its name: we are dropping the major version "10" from our naming scheme. What would have been 10.12.0 is simply 12.0, and the server reports its version as <code>12.0.0</code>. 10.11.x was the last release branch to use the old scheme.</p>
+<p>The reason is the feedback we got after 10.11.0, which we <a href="https://jellyfin.org/posts/state-of-the-fin-2026-01-06#versioning">first raised in January</a> and <a href="https://jellyfin.org/posts/state-of-the-fin-2026-05-24#versioning">confirmed in May</a>. A release like 10.11.0 was, by any reasonable measure, a major release - it rewrote the library database - but the version number presented it as a minor update, and people upgraded with expectations to match. The leading <code>10.</code> never changed and never told anyone anything, so all it did was push the number that actually mattered into the middle position and make "major" releases look minor. Dropping it means the first number moves when the release is big.</p>
+<p>If you maintain anything that parses Jellyfin version strings - a client, a monitoring check, a deployment script, a container tag pin - this is the item to look at before upgrading.</p>
+<p>Jellyfin 10.11.0 finished rebuilding how the library database works, which opened the door for the performance work in this release. We aren't finished, but you should notice a big difference when browsing.</p>
+<p>One of the largest changes is how playlists and collections are stored. Before, everything in a playlist was kept as one big list inside the playlist itself, and the database couldn't look into that list. Anything we needed to know meant loading the whole playlist and unpacking it first. Getting the item count, working out how much you've watched, or showing a single page all cost the same as loading the entire thing. Editing was the same story, because adding or removing one item meant writing the whole list back out.</p>
+<p>Every item in a playlist is now its own row. The database can count rows, return one page, and add or remove a single item without touching the rest, so this should be a big improvement on large playlists. Collections and boxsets were stored the same way and get the same fix.</p>
+<p>Alongside that:</p>
+<ul>
+<li>Deleting a large number of items at once no longer fails partway through.</li>
+<li>Continue Watching, Next Up, rewatching, Latest Media for music, artist lookups, and the watched counts on folders should be faster.</li>
+<li>Heavy database maintenance no longer runs during a library scan, so the two stop competing for the same resources.</li>
+</ul>
+<p>Most of this shows up as pages that used to freeze no longer freezing.</p>
+<p>One thing to note is that this work went into how Jellyfin reads your library, not into the library scanner. You may find the scanner is a little quicker as a side effect, but speeding it up was not a goal this time around.</p>
+<p>As usual, a new release of Jellyfin comes with multiple database migrations. These migrations will take a while to complete depending on the size of your library and how much bad data has been accumulated.</p>
+<p>If you would rather run that step deliberately than have it happen on first start the server now accepts <strong><code>--mode MigrateSystem</code></strong>, which performs the upgrade and exits without starting the rest of Jellyfin.</p>
+<p>Alternate versions have been a movies-only feature since they were introduced. In 12.0 they work for episodes as well, so a series with a broadcast cut and an extended cut, or a 1080p and a 4K copy of the same episode, can be grouped the way movies always could. This includes resume data that follows the version you were actually watching.</p>
+<p>This is also the feature behind the required post-upgrade scan: making versions work correctly for episodes meant fixing how version links are stored, and automatically resolved versions have to be rebuilt from the files on disk.</p>
+<p>Books have often taken a backseat in favor of video playback in Jellyfin, and this release is the start of an effort to change that. Most of what the Bookshelf plugin used to do now has been moved to the server itself.</p>
+<p>On the server:</p>
+<ul>
+<li>Book metadata is read directly from OPF and ComicInfo files, or from ComicBookInfo comments, with no plugin required.</li>
+<li>Posters are generated for EPUBs and every supported comic archive format, and external covers work for audiobook files.</li>
+<li>Name, index, year, and series are read from book filenames, and volume and chapter numbers are picked up from comic filenames when they are there.</li>
+<li>Page counts are extracted from comic archives and PDFs.</li>
+<li>Chapters are extracted from audiobooks.</li>
+<li>Bookshelf has been split into separate GoogleBooks and ComicVine providers, and a new OpenLibrary plugin provides metadata and images.</li>
+<li>ISBN external IDs and links are supported.</li>
+</ul>
+<p>In the web client:</p>
+<ul>
+<li>There is a Modern book library layout with view types and paging, plus Authors, Collections, and Folders tabs.</li>
+<li>Books show information about their authors, and authors show their books and audiobooks.</li>
+<li>The reading interface has been redesigned and standardized across all book types, with unified fullscreen behavior and swipe navigation for PDFs.</li>
+<li>Progress indicators work again for supported eBooks, sorting by index number and release date is available, and font size selection for EPUBs has been improved.</li>
+<li>Background audiobook playback works on iOS devices.</li>
+</ul>
+<p>note</p>
+<p>The Bookshelf plugin has been deprecated. Its features have been merged into the server or extracted into the ComicVine and GoogleBooks providers.</p>
+<p>Where "more like this" and the suggestion rows get their ideas from is no longer fixed. You now choose the source per library in the same place you already pick metadata providers, so you can use one source for movies and a different one for music.</p>
+<p>ListenBrainz ships with the server as one of those sources. Point your music library at it and similar-artist suggestions come from real listening data rather than from tags alone.</p>
+<p>Search works the same way now: a plugin can add its own results alongside Jellyfin's own. If you have ever wanted Jellyfin to search somewhere else at the same time, that is a plugin now rather than a fork. Both systems are written up for plugin authors in the release notes.</p>
+<p>The layout that shipped as "experimental" is now simply the <strong>Modern</strong> layout, and on desktop and mobile it is the default for anyone who has not explicitly chosen otherwise. The previous layout is still available and is now called <strong>Legacy</strong>. Televisions are unchanged: TV devices continue to use the TV layout, which still runs on the legacy app.</p>
+<p>Alongside making it the default, the layout got the polish that implies:</p>
+<ul>
+<li>All themes - Dark, Light, WMC, Blue Radiance, Apple TV, and Purple Haze - now derive from a shared base theme built on CSS variables. If you maintain a custom theme, this is worth a look.</li>
+<li>The library toolbar has been merged into the app bar, with a sticky library header.</li>
+<li>Collections and playlists tabs are available on all libraries, and collections appear on item details pages.</li>
+<li>Music Videos, Mixed Media, Collections and Playlists, and Books views were all updated, and Home Videos and Photos libraries gained default tab options and a folder view.</li>
+<li>New filters for audio and subtitle languages, a Reset Filters button, and studio search.</li>
+</ul>
+<p><img alt="Photo of the updated Modern UI" height="1380" src="https://jellyfin.org/assets/images/modern-ui-84f59788e646314ddda43d79c11c4b31.png" width="2814"/></p>
+<p><img alt="Photo of the updated Modern UI - Movie Library" height="1388" src="https://jellyfin.org/assets/images/modern-ui-movies-3528289880a5ec93a41d57cd310f1bf6.png" width="2742"/></p>
+<p>A few things behave differently than they did on 10.11, beyond the legacy client removals covered above:</p>
+<ul>
+<li><strong>Subtitle settings are now configured per library</strong> rather than once for the whole server, so the old server-wide subtitle options no longer exist.</li>
+<li><strong>Sorting is more consistent</strong>, which does mean some libraries will be ordered slightly differently than you are used to.</li>
+<li><strong>Artwork is no longer stretched past its real size.</strong> Low resolution posters now appear at their actual size instead of being blown up to fit, which looks smaller but sharper.</li>
+<li><strong><code>.ogg</code> files are treated as audio</strong>, not video. If you had <code>.ogg</code> video files, they will be re-sorted on the next scan.</li>
+<li><strong>Usernames can now be changed between upper and lower case.</strong> As part of that, two accounts can no longer have names that differ only by capitalization. If your server has usernames that differ only by capitalization, the database migration will fail.</li>
+<li>Symlinked media is followed when something is played rather than when the library is scanned.</li>
+</ul>
+<p>This release includes a number of security fixes on both the server and the web client. Several of them close off ways a crafted request could reach files outside the directories Jellyfin is supposed to serve. Others prevent the setup wizard being re-run on a misconfigured server without signing in, reject plugin packages with unsafe names, apply parental controls in more places, and fix cross-site scripting issues in the web client.</p>
+<ul>
+<li>A "still watching" prompt.</li>
+<li><code>,</code> and <code>.</code> scrub frame-by-frame during playback.</li>
+<li>Chapter names appear in the preview bubble as you drag along the seek bar, and the playback info overlay is more compact while showing more detail.</li>
+<li>Folders can be marked as played.</li>
+<li>An improved Upcoming view, and Play All and Shuffle buttons on series libraries.</li>
+<li>The screensaver is suppressed while viewing photos or reading, and a screensaver time setting is available in the Modern layout.</li>
+<li>Crew members with multiple roles are merged into a single card, and TV show creators appear on item details.</li>
+<li>A configurable delay for the photo slideshow.</li>
+<li>The web client caches more data in your browser, so screens you have already visited come back faster, and artwork no longer looks blurry on high resolution displays.</li>
+<li>Game controller navigation fixes, keyboard shortcuts that work on non-Latin keyboard layouts, and support for rewind and fast forward buttons on remotes.</li>
+</ul>
+<ul>
+
+<li>Sorting and filtering on the Activity page.</li>
+<li>The source of similar-item and recommendation data is configurable per library.</li>
+<li>Jellyfin now marks its cache directories with <code>CACHEDIR.tag</code>, so backup tools know to skip them instead of backing up these files.</li>
+<li>Clients can ask for responses in a specific language, so a server with users who prefer different languages behaves better.</li>
+<li>The database file can be kept somewhere other than the default location.</li>
+<li>Disabled plugins are no longer re-enabled on restart.</li>
+<li>Backups no longer fail outright when they hit a corrupt record, and you now get a warning before restoring a backup, or before starting one while a library scan is running.</li>
+<li>A restyled startup interface that shows version and activity information.</li>
+<li>Collections and playlists can be filtered by library, so each library can show only its own.</li>
+<li>More ways to filter when searching for people, the option to prefer a title's original language for audio, and the new "Collections" listing on item pages.</li>
+<li>Live TV: XMLTV background images and episode thumbnails are imported, unreachable "server-local" streaming URLs are no longer returned to clients, and XMLTV guide imports now skip programs whose data has not changed, making repeat guide refreshes considerably cheaper.</li>
+<li>Metadata: TVDB IDs work for movies, AudioDb artist search, ReplayGain album gain is read from music files, MusicBrainz lookups are more resilient, WEB-DL tags in filenames are recognized, and provider IDs can be set on season and episode folder names.</li>
+<li>Curly braces and parentheses are now supported, along with the existing square brackets, for parsing Provider Identifier values. New aliases are also supported: tvdb for tvdbid, imdb for imdbid, and tmdb for tmdbid.</li>
+<li>The optimize database task now analyzes and vacuums the DB when triggered and at shutdown.</li>
+<li>The Refresh People task now properly cleans up removed people and checks for updates for people with missing images.</li>
+<li>Live TV: EPG now honors SchedulesDirect API error codes, preventing lockouts. HDHomeRun tuners will now direct play on clients that support it. M3U tuners will no longer direct play and will instead default to remuxing.</li>
+<li>The playlist library image can now be set for all users through the Metadata Manager. Duplicate tracks are now allowed in playlists.</li>
+</ul>
+<ul>
+<li>We have moved to the new upstream FFmpeg 8.1.</li>
+<li>Optimized CUDA transposing, OCL scaling, and OCL tonemapping performance, the last of these specifically on Mali GPUs.</li>
+<li>HLG tonemapping now uses the EOTF from BT.2446 Method B.</li>
+<li>A spec-compliant <code>dvh1</code> HLS variant for Dolby Vision Profile 5 for better device compatibility.</li>
+<li>Fixed a potential A/V desync in HLS when transcoding video while remuxing audio.</li>
+<li>Subtitle writing now goes through SubtitleEdit, which avoids the old SSA to ASS conversion and the loss of styling that came with it.</li>
+<li>VobSub subtitle support, external subtitles can be embedded into MKS when transcoding, the subtitle extraction timeout is configurable, and image-based subtitles can be rendered by the client during remuxing.</li>
+<li>A device profile option for Android TV boxes that cannot handle rotated video, so phone footage shot sideways plays the right way up.</li>
+<li>Trickplay picks up files that already exist on scan instead of regenerating them, no longer produces duplicates for interlaced video, works with bad timestamps in the source file, and cleans up after itself when generation fails.</li>
+<li>Better device support in the web client: Dolby Vision in MKV files on webOS 25 and newer, AV1 direct streaming on TV clients, anamorphic video direct play on Tizen, and on iOS both background playback with the screen off and a fix for audio normalization affecting pitch and speed.</li>
+</ul>
+<p>The following changes apply to all client application developers. Please review thoroughly and update your applications as required.</p>
+<ul>
+<li>Deprecated authorization mechanisms are now disabled by default. See <a href="https://github.com/jellyfin/jellyfin/pull/15559">the details in this pull request</a> if you have not migrated yet.</li>
+<li><code>GetItems</code> is now asynchronous and applies <code>recursive</code> when filters are requested, limited to requests that include <code>includeItemTypes</code>. The same query can return a different result set than it did on 10.11.</li>
+<li><code>ItemByName</code> responses are restricted and people are deduplicated.</li>
+<li>Newly obsolete but still functional: <code>GetTrailers</code> (use <code>GetItems</code> with <code>includeItemTypes=Trailer</code>), <code>GetArtists</code> and <code>GetAlbumArtists</code> (use <code>GetPersons</code>), <code>GetArtistByName</code> (use <code>GetPerson</code>), <code>GetMusicGenre</code> (use <code>GetGenre</code>), the music genre instant mix endpoints (use <code>GetInstantMixFromItem</code>), <code>GetRecordingsSeries</code>, and the startup routes (use the configuration endpoints). <code>UserDto.HasPassword</code> is also obsolete and no longer provides useful information. The HLS controllers are hidden from the specification.</li>
+<li>Swashbuckle has been updated to v10, which changes the generated OpenAPI document. SDKs need to be regenerated.</li>
+<li>Removed routes: <code>POST /Users/\{userId\}/EasyPassword</code>, <code>GET /Items/\{itemId\}/CriticReviews</code>, <code>GET /Environment/NetworkShares</code>, <code>POST /System/MediaEncoder/Path</code>, and <code>GET /LiveTv/Recordings/Groups/\{groupId\}</code> were all obsolete no-ops returning 403, 404, or an empty result. <code>GET /QuickConnect/Initiate</code> did work and was an alias for the POST route, so clients using the GET form need to switch to POST.</li>
+</ul>
+<p>As a general reminder of our API support policy: if an endpoint is not listed in the OpenAPI specification it should not be used, and if an endpoint or parameter is marked obsolete it should not be used. Deprecations will normally be marked for an entire major release cycle before removal.</p>
+<ul>
+<li><strong>The server now targets .NET 10, and several plugin interfaces changed.</strong> Plugins need to be retargeted and rebuilt for 12.0.</li>
+<li><strong>New things plugins can do:</strong> provide search results, provide similarity and recommendation data, provide comic metadata, provide unaired and missing episode data, use aggregated credits for cast members, save chapters for non-video items such as audiobooks, handle a password reset for a username the server does not recognize, and clean up their own extracted files when an item's data is pruned. Live TV plugins can also query Schedules Direct availability through the server instead of reimplementing it.</li>
+<li><strong>Plugins that worked with alternate versions or playlist contents need attention</strong>, since those are no longer stored inside the parent item. There are new library methods for both.</li>
+<li>The full list of new, changed, and removed interfaces is in the release notes - <code>ISearchEngine</code>, <code>IAuthenticationProvider.HasPassword</code>, parts of <code>IItemRepository</code>, and a few <code>IUserManager</code> members are the notable breaks.</li>
+</ul>
+<p>In the 10.11.0 release notes we announced that internal TLS/SSL support would be removed in this release. <strong>That removal has been postponed to a future version.</strong> The reasoning has not changed - we continue to recommend <a href="https://jellyfin.org/docs/general/post-install/networking/reverse-proxy/">running Jellyfin behind a reverse proxy</a> - so if you are running an Internet-facing instance using Jellyfin's built-in TLS, this is extra time to migrate, not a reprieve.</p>
+<p>Happy Watching!</p>
+<p><a href="https://news.ycombinator.com/item?id=49604861">Comments on Hacker News</a></p>]]></content:encoded>
+      <guid isPermaLink="true">https://jellyfin.org/posts/jellyfin-release-12.0/</guid>
+      <category>Hacker News</category>
+      <pubDate>Tue, 08 Sep 2026 01:56:35 +0000</pubDate>
+      <media:content url="https://jellyfin.org/assets/images/modern-ui-84f59788e646314ddda43d79c11c4b31.png" type="image/png" medium="image"/>
+      <dc:creator>0xC0ncord</dc:creator>
+    </item>
+    <item>
+      <title>I've factored the RSA keys of a Certificate Authority from the 90s</title>
+      <link>https://mcpherrin.ca/2026/09/07/rsa.html</link>
+      <description>I’ve been thinking about the security of RSA lately. RSA’s cryptography relies on the difficulty of factoring a large semiprime number, but what “large” means is an interesting question. The Web PKI deprecated 1024-bit RSA over a decade ago, and while I don’t know of anyone factoring a key of that size, it’s within the realm of possibility for a government or other organization with a large number of computers. Just a few days ago, someone factored the 862-bit RSA-260 key from the RSA factoring challenge. That’s the largest factorization I’m aware of. Today, the world uses RSA of at least 2048 bits, but even that will be deprecated soon with the risk of quantum computers in the future.</description>
+      <content:encoded><![CDATA[<h2><a href="https://mcpherrin.ca/">Matthew McPherrin</a></h2>
+<h2>I’ve factored the RSA keys of a Certificate Authority...</h2>
+<p><em>… from the 90s.</em></p>
+<p>I’ve been thinking about the security of RSA lately. RSA’s cryptography relies
+on the difficulty of factoring a large semiprime number, but what “large” means
+is an interesting question. The Web PKI deprecated 1024-bit RSA over a decade
+ago, and while I don’t know of anyone factoring a key of that size, it’s within
+the realm of possibility for a government or other organization with a large
+number of computers. Just a few days ago, someone factored the 862-bit
+<a href="https://en.wikipedia.org/wiki/RSA_numbers#RSA-260">RSA-260</a> key from the RSA
+factoring challenge. That’s the largest factorization I’m aware of. Today, the
+world uses RSA of at least 2048 bits, but even that will be deprecated soon
+with the risk of quantum computers in the future.</p>
+<p>This led me to wonder: small RSA keys can be factored on even a modest desktop
+computer. And in the early days of the Web PKI, there were no standards, and no
+minimum requirements. Netscape shipped SSL support in 1994, and IE shortly
+afterwards. This was still the era of export restrictions on cryptography. Are
+there any keys small enough that I can factor? I don’t have any good reason to
+do that, but it seems like fun.</p>
+<p>The spoiler is of course, yes, but first we need to find a key to crack.</p>
+<p>Fortunately, root certificates were shipped with browser installers, and
+there are archives of both
+<a href="https://archive.org/details/internet-explorer_202104">Internet Explorer</a> and
+<a href="https://archive.org/details/netscape-browser-collection">Netscape</a> on
+archive.org. The archives aren’t comprehensive, but they should provide good
+coverage of old root CAs. I downloaded both collections and set Claude Code on
+extracting all the roots. I’ve hosted a Claude-generated webpage with <a href="https://mcpherrinm.github.io/ancientroots/">all
+those old-timey, ancient roots</a>.
+While I haven’t verified this LLM output is entirely trustworthy, it looks
+pretty plausible.</p>
+<p>Using the filters on that site, we can find what small keys are trusted for SSL.</p>
+<p><img alt="A table of old roots, filtered to 512-bit RSA roots trusted for SSL, showing the E-Certify RSA 512 Gold root shipped in Netscape 4.51" src="https://mcpherrin.ca/assets/rsa/filtered.png"/></p>
+<p>Aha! We have a target. Back in March 1999, Netscape 4.51 shipped a 512-bit RSA
+certificate authority trusted for SSL, and another for S/MIME. These two roots
+were both from the long-defunct Canadian certificate authority called
+<a href="https://web.archive.org/web/20000229163244/http://www.e-certify.com/">E-Certify</a>.</p>
+<p>Later that year, the 512-bit
+<a href="https://en.wikipedia.org/wiki/RSA_numbers#RSA-155">RSA-155</a> was factored, so
+even in its era this was too weak and probably shouldn’t have shipped in the
+first place.</p>
+<p>The E-Certify 512-bit roots were removed by Netscape in 2002. Unfortunately,
+Internet Explorer seems to have never shipped any 512-bit roots for SSL, so our
+fun will be limited to Netscape from a relatively small time frame.</p>
+<p>Factoring the public keys in the root certificates will give me the two primes
+that I need to reconstruct the private key. I ran
+<a href="https://cado-nfs.gitlabpages.inria.fr/">CADO-NFS</a> on my Ryzen 9 5950X desktop;
+it took 32 hours to factor <code>E-Certify RSA 512 Gold Server</code> for SSL, and another
+29 hours for <code>E-Certify RSA 512 Gold Client</code> for S/MIME. You can get the
+resulting private keys below.</p>
+<p>Assuming you’re somehow running Netscape 4.51 with a clock set before E-Certify
+roots expired on 2003-10-16, you can use these private keys to issue
+certificates. This describes zero people on the planet… except for this VM I
+set up.</p>
+<p>Verifying that the issued certificates would work in Netscape 4.51 was an
+adventure in itself, as there is zero overlap in TLS capability between
+Netscape 4.51 and any modern TLS stack. So it was back to Claude Code to make a
+custom old-timey TLS server in Go. This site is <a href="https://e-certify.fly.dev/">publicly hosted at
+e-certify.fly.dev</a>, which you are welcome to try
+out with your own copy of Netscape, but it won’t load in any modern browser.</p>
+<p><img alt="Netscape 4.51 certificate viewer showing a certificate for e-certify.fly.dev issued by E-Certify RSA 512 Gold Server" src="https://mcpherrin.ca/assets/rsa/netscape-cert-viewer.png"/></p>
+<p>Or, if you’d like to host your own website using these old-timey keys, the keys
+and tools are all in the repo at
+<a href="https://github.com/mcpherrinm/ancientroots">https://github.com/mcpherrinm/ancientroots</a>.
+Or do worse, like MitM the SSL of all those Netscape 4.51 users with their
+clocks set to 25 years ago…</p>
+<pre><code>C=CA, O=E-Certify, OU=RSA Gold Server, CN=E-Certify RSA 512 Gold Server
+-----BEGIN CERTIFICATE-----
+MIIByjCCAXSgAwIBAgIBATANBgkqhkiG9w0BAQQFADBjMQswCQYDVQQGEwJDQTES
+MBAGA1UEChMJRS1DZXJ0aWZ5MRgwFgYDVQQLEw9SU0EgR29sZCBTZXJ2ZXIxJjAk
+BgNVBAMTHUUtQ2VydGlmeSBSU0EgNTEyIEdvbGQgU2VydmVyMB4XDTk4MTAxNjEz
+Mzc1M1oXDTAzMTAxNjEzMzc1M1owYzELMAkGA1UEBhMCQ0ExEjAQBgNVBAoTCUUt
+Q2VydGlmeTEYMBYGA1UECxMPUlNBIEdvbGQgU2VydmVyMSYwJAYDVQQDEx1FLUNl
+cnRpZnkgUlNBIDUxMiBHb2xkIFNlcnZlcjBcMA0GCSqGSIb3DQEBAQUAA0sAMEgC
+QQDNVQ93Ev7zgNaJAR1Z7gCydU6mky1e/B4EbY1NsdtfsitU9cELqg5uRJDPA40n
+CDPeOyil1lJ5N8hekcqJAkkXAgMBAAGjEzARMA8GA1UdEwEB/wQFMAMBAf8wDQYJ
+KoZIhvcNAQEEBQADQQB09SV6OeeDEP8Je3DOLNZ24U98NHqIBTDyB4sRpDmNdHum
++3rm4AYtznBxG5hEShO89bcWi3yJtBITGuTRDnMq
+-----END CERTIFICATE-----
+-----BEGIN RSA PRIVATE KEY-----
+MIIBOgIBAAJBAM1VD3cS/vOA1okBHVnuALJ1TqaTLV78HgRtjU2x21+yK1T1wQuq
+Dm5EkM8DjScIM947KKXWUnk3yF6RyokCSRcCAwEAAQJAWZ2FOWf+A9K4T2VAJS69
++SU/pW3YwHrysuYJZN56K0Iz+Hqd1hBhCeJ3/T+/cvXq+ctD0x3uOxU1rDSeCoMO
+KQIhAPdbc1wTm3twWDYi1iXmRBXz97MYxRFld/KFr8x5+tK9AiEA1IG09a+oVg6j
+NMDj6GD7spaD4q9t1wk/Nyq/MTLPkmMCIEzzYjvuzZvlI0wUIlLAA8Zgk1pgBk6X
+Jm2IMVyHRgRxAiEAjZKgCTHuVu7HgiSjcTPzW0X1NTckWSc66zjaSR+Ns/sCICxT
+yXoTXWQCWL6BMpf2no7IlvoEnBIrED2Frq3PxlEA
+-----END RSA PRIVATE KEY-----
+</code></pre>
+<pre><code>C=CA, O=E-Certify, OU=RSA Gold Client, CN=E-Certify RSA 512 Gold Client
+-----BEGIN CERTIFICATE-----
+MIIByjCCAXSgAwIBAgIBAjANBgkqhkiG9w0BAQQFADBjMQswCQYDVQQGEwJDQTES
+MBAGA1UEChMJRS1DZXJ0aWZ5MRgwFgYDVQQLEw9SU0EgR29sZCBDbGllbnQxJjAk
+BgNVBAMTHUUtQ2VydGlmeSBSU0EgNTEyIEdvbGQgQ2xpZW50MB4XDTk4MTAxNjEz
+MzQwOFoXDTAzMTAxNjEzMzQwOFowYzELMAkGA1UEBhMCQ0ExEjAQBgNVBAoTCUUt
+Q2VydGlmeTEYMBYGA1UECxMPUlNBIEdvbGQgQ2xpZW50MSYwJAYDVQQDEx1FLUNl
+cnRpZnkgUlNBIDUxMiBHb2xkIENsaWVudDBcMA0GCSqGSIb3DQEBAQUAA0sAMEgC
+QQBwCcT1iYlNyKPywB/kffD8esiCzGYJxSnTXQjU6ej/XxnA+9yqjzAMPtqFd094
+wM89Vsmz9YOWSO6Qn6wOAs45AgMBAAGjEzARMA8GA1UdEwEB/wQFMAMBAf8wDQYJ
+KoZIhvcNAQEEBQADQQAdktdM5AzW+0o96eHCHwD3UfzxPvjKxPEjiI/QTn+njHt/
+BEJb9yZatONRckglVc9v8P8Dy8HZGQD0+Pn0uxhW
+-----END CERTIFICATE-----
+-----BEGIN RSA PRIVATE KEY-----
+MIIBOQIBAAJAcAnE9YmJTcij8sAf5H3w/HrIgsxmCcUp010I1Ono/18ZwPvcqo8w
+DD7ahXdPeMDPPVbJs/WDlkjukJ+sDgLOOQIDAQABAkASXZeaxFPsm0I8zb+snfR9
+/saVolnrqhVEH5EODdXy3nSm6fpdrsDwQDDg52biXjIUizQYdd3OourOn0/PyyiB
+AiEAyW4gFFgM0dJ+Y//vrIyQutLeH/5c/Vq3Lbcxv7R908kCIQCOZAAv8OCG/2oH
+yKaYj/EoxcFZ9csVh/kjicO/JIX+8QIhAMEzAkvhBDLALYAmvDCJBkxa8rhHFdPf
+jbCodGwGZ2WZAiB//XmBnlZkYl/PoVfGmNRgHun+0AZ9UxzqCeJvBQiBMQIgHWlr
+0Sh1a8K2pQP2ktgmL3RH5+1Qd2wLx/hhGWtwPvU=
+-----END RSA PRIVATE KEY-----
+</code></pre>
+<p>As a bonus, Internet Explorer 3.02 shipped a code signing CA called OU=Test
+VeriSign Commercial Software Publisher CA. I’m not sure what that’s for, but
+it’s just as easily factored. There are a few other test-looking 512-bit RSA keys
+in the <a href="https://mcpherrinm.github.io/ancientroots/">ancient roots</a> repo, so you
+should try factoring some more of them, or seeing what they could be used for!</p>
+<pre><code>L=Internet, O=VeriSign, Inc., OU=Test VeriSign Commercial Software Publisher CA
+-----BEGIN CERTIFICATE-----
+MIIByDCCAXKgAwIBAgIQIsTi2AgEp+1OkpqVLROnazANBgkqhkiG9w0BAQQFADBl
+MREwDwYDVQQHEwhJbnRlcm5ldDEXMBUGA1UEChMOVmVyaVNpZ24sIEluYy4xNzA1
+BgNVBAsTLlRlc3QgVmVyaVNpZ24gQ29tbWVyY2lhbCBTb2Z0d2FyZSBQdWJsaXNo
+ZXIgQ0EwHhcNOTYwNTAyMTcwMTUyWhcNOTcwNTAyMTcwMTUyWjBlMREwDwYDVQQH
+EwhJbnRlcm5ldDEXMBUGA1UEChMOVmVyaVNpZ24sIEluYy4xNzA1BgNVBAsTLlRl
+c3QgVmVyaVNpZ24gQ29tbWVyY2lhbCBTb2Z0d2FyZSBQdWJsaXNoZXIgQ0EwXDAN
+BgkqhkiG9w0BAQEFAANLADBIAkEA1XqTpg1hQWq6IKvBXLor12GBTH6y4BHyOJjy
+MJISn0ZWBqkbZiEfoWgaWXhEwrvxMWonLA2vYFHijofFG4YIjwIDAQABMA0GCSqG
+SIb3DQEBBAUAA0EAKxuR/KPJPDNJgw0ORqqM7SlvIeqnVP71OEFytqPaZw/3TPEi
+9oK6PzBvPdLBZlnjRd/hf58FW2+/PXxsFl78Mg==
+-----END CERTIFICATE-----
+-----BEGIN RSA PRIVATE KEY-----
+MIIBOwIBAAJBANV6k6YNYUFquiCrwVy6K9dhgUx+suAR8jiY8jCSEp9GVgapG2Yh
+H6FoGll4RMK78TFqJywNr2BR4o6HxRuGCI8CAwEAAQJAYM8tlegLarcToS1CiuKC
+bzHwiNgMFkENL01sx0n21/MhmA6pBiSwVn3Pu6yvx6EMB1zbCsaBHs/VTyofMbRW
+QQIhAOqdAX3bVZwAlZ5FDWyfGwgE0FXEIQ85kjcihrFeDs49AiEA6PBfC0YuNMSa
+M135mH+MEY1GEmQe9xHcXpiYAPazCrsCIQDDtuw6oJEfDYHCwRn8xhGXs+RT18Q4
+Xi9yXRP9vFgfhQIhAIYUTfD0XYZcIBIvJosj56D2u328iaJXcow0s1Hirp4fAiAG
+bza0Qcc27d/0OzKOqep3JrDl/L5HidTj2XEqEXmnXw==
+-----END RSA PRIVATE KEY-----
+</code></pre>
+<p>And finally, SSL Labs thinks my test site is great.</p>
+<p><img alt="SSL Labs report giving e-certify.fly.dev an F rating, with many issues" src="https://mcpherrin.ca/assets/rsa/ssl-labs.png"/></p>
+<p><a href="https://news.ycombinator.com/item?id=49604637">Comments on Hacker News</a></p>]]></content:encoded>
+      <guid isPermaLink="true">https://mcpherrin.ca/2026/09/07/rsa.html</guid>
+      <category>Hacker News</category>
+      <pubDate>Tue, 08 Sep 2026 01:16:59 +0000</pubDate>
+      <media:content url="https://mcpherrin.ca/assets/rsa/filtered.png" type="image/png" medium="image"/>
+      <dc:creator>ahlCVA</dc:creator>
+    </item>
+    <item>
+      <title>Disconnect your LG television from the internet, now</title>
+      <link>https://appleinsider.com/articles/26/09/07/disconnect-your-lg-television-from-the-internet-now</link>
+      <description>Disconnect your LG television from the internet, now</description>
+      <content:encoded><![CDATA[<p><a href="https://news.ycombinator.com/item?id=49604537">Comments on Hacker News</a></p>]]></content:encoded>
+      <guid isPermaLink="true">https://appleinsider.com/articles/26/09/07/disconnect-your-lg-television-from-the-internet-now</guid>
+      <category>Hacker News</category>
+      <pubDate>Tue, 08 Sep 2026 01:00:48 +0000</pubDate>
+      <dc:creator>harambae</dc:creator>
+    </item>
+    <item>
+      <title>TALA Is Open-Source</title>
+      <link>https://d2lang.com/blog/tala-is-open-source/</link>
+      <description>Seven real-world layout comparisons and eleven original diagrams, including two with selective TALA positioning.</description>
+      <content:encoded><![CDATA[<p>Following up on the announcement <a href="https://d2lang.com/blog/d2-non-profit/">here</a>, TALA (Terrastruct's AutoLayout Algorithm) is now open-source under the same license as D2 (MPL-2.0).</p>
+<p>TALA is a novel autolayout algorithm designed with software architecture diagrams in mind. This means it's primarily an orthogonal layout engine, which more closely matches what you might find on whiteboards, rather than the DAG-based ones that grow in one direction. It blends ideas from different graph-drawing research papers (cited in source code) along with original techniques to achieve aesthetic diagrams. It considers multiple objectives of "aesthetic", including symmetry, median distance, flow, clustering of like nodes, and much more.</p>
+<p>I'll keep the text short and lead with examples.</p>
+<ul>
+<li>The first batch compares diagrams rendered with TALA with the other two layout algorithms D2 comes with -- Dagre and ELK. These are not hand-selected, I just found public d2 files from around GitHub. So for some, you may very well prefer the not-TALA layout.</li>
+<li>The second batch demonstrates a unique property of TALA, which is that node positions and sizes can be customized, e.g. locking in the coordinates. This lends itself especially well to agentic use cases, where models can draw in 2D space well, but TALA still takes care of routing, which models still struggle with. I had AI generate these.</li>
+<li>The third batch demonstrates TALA's capability to support a hybrid of some nodes specifying coordinates and some left to the layout engine. You might have a specific shape of a collection of nodes in mind, which you can specify with coordinates, and TALA can take care of the rest. Again, AI generated.</li>
+</ul>
+<p>Please also note that TALA is not without tradeoffs.</p>
+<ul>
+<li>It has randomness in the algorithm. It finds the best layout by using a default of 3 seeds and choosing the one scored the best. Given the same seeds and same input, it'll produce the same diagram. But let's say you just add one more node. The diagram could look completely different. In Dagre and ELK, it looks mostly the same as prior, with the extra node accommodated for. This is sometimes desirable.</li>
+<li>It doesn't do DAGs as well. I often find myself preferring Dagre or ELK when I want a long flowing graph.</li>
+<li>It can take longer to run for larger diagrams -- scaling nonlinearly. For a benchmark of TALA's runtime performance compared to others, see <a href="https://github.com/d2lang/d2-benchmarks">https://github.com/d2lang/d2-benchmarks</a>.</li>
+</ul>
+<p>TALA comes bundled into D2 v0.9.0, so just install and specify with <code>--layout=tala</code> to try it out! Or head on over to <a href="https://play.d2lang.com/?layout=tala&amp;script=7Jjfb-JGEMff_VeMLs8YWJOGbqVK6fWqVsq1dyRVXipFY--AVzG7vt11I3rif6_8C2xwCknjpJV4ifES5vPd-eUdn8G1zkxEHGLnUsuHw4V0cRb6kV4OFzpBtRh8ySijYfk3THQ4ZHjxbThFjIJvCCO8OJ_O55P5-WTM5lE4mZ6HI3YhxPl0KJe4IDucJ_phMAp8wbwzuJIRKUscPv5y8x1YIph9uLy6u_1tdvWjvxS-dwaXAlOHTmrF4SaWRgxSNG4FMtLKgqE0wYgEPEgXQ5jJxA2kggRDSkiAjTEl63uekIai0oiRi9h5XmbJjMYcfi-u8NWD8r85pGSsVvm9WyXEi68AllniZJrfO5NRsRTqRDRu51q5gZV_EQc29QDW3rrCsArD-sUEFSboFzOpMJPeMJFWDqUic5caLbKIzF0eqmsyf8qIqmjthXSHfRDkATi096Nx_YvWzzvF71lt2Q1YsbZuWWd9WS9qkMPn_AJXMjRoVt2of7LKpvWaTBIOsVa0EvRQoYpLHQMOn6pPG8s7oA5U1xa2uE-Y4gpvY5m2vhik6BwZxWFhUKqGdSPIDAwKmVkO0xaDw1IrXS2tOyIxhsH3pdf87ZY-qGIFbtDed3sPlVyiI3F0oNi0A87eAv5IKbFtKbFTKZ1K6VRKR5WSQIchWuIwk2rxh_ohm8_JNB-C0SqRSpA5vn6qMLYjlUhF1tsLRiFCu5jMnXXaEId37-DrLkunGEm34jCqnWZISMthll9q1-zpfVKmB6yx1kqWLd2_aIfOYBhKt_zCYYZhqN3Hz20tRfheSsiGqtBZDr9e3lz3SHt0263-m59Xs2V1lLnV5n5z7jy131dqv3UIOLyvPv3v2m_Z9-qN5J2wjvzPqETSa_d9hM2OYD_vyLItGbYpmdOJZWM96NX6pNdyH41PBX98wY_YyVtP8Nb4LRvkaPy8FvlCdLZPD96UPumdvva8szx5VflIqN_t5Qo63yT5dUa8N4SuoaulqkPT8S_8DrBZj-zgMTbrf9-TA-ye9t3t6faImCvbTnDX-QDVvwjWIaIxwfnboei_IqicFbsGyx1kY-QJ_g2xnNCeCawD2k67xqTlt8-sHH4iF8Uv6-dDIpi_-1zoRUZXXh2SxF5RUp5ZT9FzRErsQruTZDfb3kLE3wMA&amp;">https://play.d2lang.com</a>, which runs 100% client-side. I especially look forward to the improvements that being open-source brings, and can't wait to see what improvements and ideas are submitted by the community.</p>
+<p>Special thanks to Gavin Nishizawa for substantial broad contributions across TALA, and JÃºlio CÃ©sar Batista for his work on hierarchy algorithms and more. It was so fun getting to work on such interesting stuff with you guys.</p>
+<a href="https://d2lang.com/blog/tala-layouts/fulcro_rad/source.d2">D2 source â</a>
+<figure><figcaption><strong>TALA</strong><a href="https://d2lang.com/blog/tala-layouts/fulcro_rad/tala.svg">Open SVG â</a></figcaption></figure>
+<figure><figcaption><strong>Dagre</strong><a href="https://d2lang.com/blog/tala-layouts/fulcro_rad/dagre.svg">Open SVG â</a></figcaption></figure>
+<figure><figcaption><strong>ELK</strong><a href="https://d2lang.com/blog/tala-layouts/fulcro_rad/elk.svg">Open SVG â</a></figcaption></figure>
+<p>Select a diagram to enlarge it. Each layout is scaled to fit its panel.</p>
+<a href="https://d2lang.com/blog/tala-layouts/mocha_soc/source.d2">D2 source â</a>
+<figure><figcaption><strong>TALA</strong><a href="https://d2lang.com/blog/tala-layouts/mocha_soc/tala.svg">Open SVG â</a></figcaption></figure>
+<figure><figcaption><strong>Dagre</strong><a href="https://d2lang.com/blog/tala-layouts/mocha_soc/dagre.svg">Open SVG â</a></figcaption></figure>
+<figure><figcaption><strong>ELK</strong><a href="https://d2lang.com/blog/tala-layouts/mocha_soc/elk.svg">Open SVG â</a></figcaption></figure>
+<p>Select a diagram to enlarge it. Each layout is scaled to fit its panel.</p>
+<a href="https://d2lang.com/blog/tala-layouts/jupyter_aws_eks/source.d2">D2 source â</a>
+<figure><figcaption><strong>TALA</strong><a href="https://d2lang.com/blog/tala-layouts/jupyter_aws_eks/tala.svg">Open SVG â</a></figcaption></figure>
+<figure><figcaption><strong>Dagre</strong><a href="https://d2lang.com/blog/tala-layouts/jupyter_aws_eks/dagre.svg">Open SVG â</a></figcaption></figure>
+<figure><figcaption><strong>ELK</strong><a href="https://d2lang.com/blog/tala-layouts/jupyter_aws_eks/elk.svg">Open SVG â</a></figcaption></figure>
+<p>Select a diagram to enlarge it. Each layout is scaled to fit its panel.</p>
+<a href="https://d2lang.com/blog/tala-layouts/lion_reader_frontend/source.d2">D2 source â</a>
+<figure><figcaption><strong>TALA</strong><a href="https://d2lang.com/blog/tala-layouts/lion_reader_frontend/tala.svg">Open SVG â</a></figcaption></figure>
+<figure><figcaption><strong>Dagre</strong><a href="https://d2lang.com/blog/tala-layouts/lion_reader_frontend/dagre.svg">Open SVG â</a></figcaption></figure>
+<figure><figcaption><strong>ELK</strong><a href="https://d2lang.com/blog/tala-layouts/lion_reader_frontend/elk.svg">Open SVG â</a></figcaption></figure>
+<p>Select a diagram to enlarge it. Each layout is scaled to fit its panel.</p>
+<a href="https://d2lang.com/blog/tala-layouts/ross_overview/source.d2">D2 source â</a>
+<figure><figcaption><strong>TALA</strong><a href="https://d2lang.com/blog/tala-layouts/ross_overview/tala.svg">Open SVG â</a></figcaption></figure>
+<figure><figcaption><strong>Dagre</strong><a href="https://d2lang.com/blog/tala-layouts/ross_overview/dagre.svg">Open SVG â</a></figcaption></figure>
+<figure><figcaption><strong>ELK</strong><a href="https://d2lang.com/blog/tala-layouts/ross_overview/elk.svg">Open SVG â</a></figcaption></figure>
+<p>Select a diagram to enlarge it. Each layout is scaled to fit its panel.</p>
+<a href="https://d2lang.com/blog/tala-layouts/queue_workers/source.d2">D2 source â</a>
+<figure><figcaption><strong>TALA</strong><a href="https://d2lang.com/blog/tala-layouts/queue_workers/tala.svg">Open SVG â</a></figcaption></figure>
+<figure><figcaption><strong>Dagre</strong><a href="https://d2lang.com/blog/tala-layouts/queue_workers/dagre.svg">Open SVG â</a></figcaption></figure>
+<figure><figcaption><strong>ELK</strong><a href="https://d2lang.com/blog/tala-layouts/queue_workers/elk.svg">Open SVG â</a></figcaption></figure>
+<p>Select a diagram to enlarge it. Each layout is scaled to fit its panel.</p>
+<a href="https://d2lang.com/blog/tala-layouts/leios_simulator/source.d2">D2 source â</a>
+<figure><figcaption><strong>TALA</strong><a href="https://d2lang.com/blog/tala-layouts/leios_simulator/tala.svg">Open SVG â</a></figcaption></figure>
+<figure><figcaption><strong>Dagre</strong><a href="https://d2lang.com/blog/tala-layouts/leios_simulator/dagre.svg">Open SVG â</a></figcaption></figure>
+<figure><figcaption><strong>ELK</strong><a href="https://d2lang.com/blog/tala-layouts/leios_simulator/elk.svg">Open SVG â</a></figcaption></figure>
+<p>Select a diagram to enlarge it. Each layout is scaled to fit its panel.</p>
+<figure>TALA Â· positioned with top / left<a href="https://d2lang.com/blog/tala-layouts/positioning/signal-house/source.d2">D2 source â</a><a href="https://d2lang.com/blog/tala-layouts/positioning/signal-house/tala.svg">Open SVG â</a><a href="https://d2lang.com/blog/tala-layouts/positioning/signal-house/tala.svg"><img alt="Signal House" height="977" src="https://d2lang.com/blog/tala-layouts/positioning/signal-house/tala.svg" width="1412"/></a>View D2 source</figure>
+<figure>TALA Â· positioned with top / left<a href="https://d2lang.com/blog/tala-layouts/positioning/atlas-data-platform/source.d2">D2 source â</a><a href="https://d2lang.com/blog/tala-layouts/positioning/atlas-data-platform/tala.svg">Open SVG â</a><a href="https://d2lang.com/blog/tala-layouts/positioning/atlas-data-platform/tala.svg"><img alt="Atlas / Data platform" height="1212" src="https://d2lang.com/blog/tala-layouts/positioning/atlas-data-platform/tala.svg" width="1402"/></a>View D2 source</figure>
+<figure>TALA Â· positioned with top / left<a href="https://d2lang.com/blog/tala-layouts/positioning/night-shift/source.d2">D2 source â</a><a href="https://d2lang.com/blog/tala-layouts/positioning/night-shift/tala.svg">Open SVG â</a><a href="https://d2lang.com/blog/tala-layouts/positioning/night-shift/tala.svg"><img alt="Night shift / Mission control" height="1347" src="https://d2lang.com/blog/tala-layouts/positioning/night-shift/tala.svg" width="1452"/></a>View D2 source</figure>
+<figure>TALA Â· positioned with top / left<a href="https://d2lang.com/blog/tala-layouts/positioning/friday-deploy/source.d2">D2 source â</a><a href="https://d2lang.com/blog/tala-layouts/positioning/friday-deploy/tala.svg">Open SVG â</a><a href="https://d2lang.com/blog/tala-layouts/positioning/friday-deploy/tala.svg"><img alt="Friday deploy: the escape room" height="1407" src="https://d2lang.com/blog/tala-layouts/positioning/friday-deploy/tala.svg" width="1463"/></a>View D2 source</figure>
+<figure>TALA Â· positioned with top / left<a href="https://d2lang.com/blog/tala-layouts/positioning/internet-jellyfish/source.d2">D2 source â</a><a href="https://d2lang.com/blog/tala-layouts/positioning/internet-jellyfish/tala.svg">Open SVG â</a><a href="https://d2lang.com/blog/tala-layouts/positioning/internet-jellyfish/tala.svg"><img alt="The Internet is a jellyfish" height="1112" src="https://d2lang.com/blog/tala-layouts/positioning/internet-jellyfish/tala.svg" width="1155"/></a>View D2 source</figure>
+<figure>TALA Â· positioned with top / left<a href="https://d2lang.com/blog/tala-layouts/positioning/orbital-coffee/source.d2">D2 source â</a><a href="https://d2lang.com/blog/tala-layouts/positioning/orbital-coffee/tala.svg">Open SVG â</a><a href="https://d2lang.com/blog/tala-layouts/positioning/orbital-coffee/tala.svg"><img alt="Orbital coffee logistics" height="1172" src="https://d2lang.com/blog/tala-layouts/positioning/orbital-coffee/tala.svg" width="1171"/></a>View D2 source</figure>
+<figure>TALA Â· positioned with top / left<a href="https://d2lang.com/blog/tala-layouts/positioning/cloud-conservatory/source.zip">D2 + icons â</a><a href="https://d2lang.com/blog/tala-layouts/positioning/cloud-conservatory/tala.svg">Open SVG â</a><a href="https://d2lang.com/blog/tala-layouts/positioning/cloud-conservatory/tala.svg"><img alt="Cloud Conservatory" height="1370" src="https://d2lang.com/blog/tala-layouts/positioning/cloud-conservatory/tala.svg" width="1402"/></a>View D2 source</figure>
+<figure>TALA Â· positioned with top / left<a href="https://d2lang.com/blog/tala-layouts/positioning/velvet-rope/source.zip">D2 + icons â</a><a href="https://d2lang.com/blog/tala-layouts/positioning/velvet-rope/tala.svg">Open SVG â</a><a href="https://d2lang.com/blog/tala-layouts/positioning/velvet-rope/tala.svg"><img alt="Velvet Rope" height="1442" src="https://d2lang.com/blog/tala-layouts/positioning/velvet-rope/tala.svg" width="1517"/></a>View D2 source</figure>
+<figure>TALA Â· positioned with top / left<a href="https://d2lang.com/blog/tala-layouts/positioning/synthwave-city/source.zip">D2 + icons â</a><a href="https://d2lang.com/blog/tala-layouts/positioning/synthwave-city/tala.svg">Open SVG â</a><a href="https://d2lang.com/blog/tala-layouts/positioning/synthwave-city/tala.svg"><img alt="Synthwave City" height="1342" src="https://d2lang.com/blog/tala-layouts/positioning/synthwave-city/tala.svg" width="1548"/></a>View D2 source</figure>
+<figure>TALA Â· 4 pinned nodes / 10 automatic nodes<a href="https://d2lang.com/blog/tala-layouts/positioning/printing-room/source.zip">D2 + icons â</a><a href="https://d2lang.com/blog/tala-layouts/positioning/printing-room/tala.svg">Open SVG â</a><a href="https://d2lang.com/blog/tala-layouts/positioning/printing-room/tala.svg"><img alt="The Printing Room" height="1214" src="https://d2lang.com/blog/tala-layouts/positioning/printing-room/tala.svg" width="1917"/></a><p><strong>Pinned:</strong> The four CMYK stations share a fixed top coordinate and equally spaced left coordinates so the print sequence retains its mechanical alignment.<p><strong>Automatic:</strong> TALA positions the feeder, camera, registration controller, dryer, prepress and finishing steps; none has top or left.</p></p>See the positioning declarationsView D2 source</figure>
+<figure>TALA Â· 4 pinned nodes / 11 automatic nodes<a href="https://d2lang.com/blog/tala-layouts/positioning/robot-chassis/source.zip">D2 + icons â</a><a href="https://d2lang.com/blog/tala-layouts/positioning/robot-chassis/tala.svg">Open SVG â</a><a href="https://d2lang.com/blog/tala-layouts/positioning/robot-chassis/tala.svg"><img alt="MULE / Utility Rover" height="1792" src="https://d2lang.com/blog/tala-layouts/positioning/robot-chassis/tala.svg" width="1369"/></a><p><strong>Pinned:</strong> The four motor assemblies are fixed at the front and rear corners of the chassis rectangle.<p><strong>Automatic:</strong> TALA places every controller, sensor, power and safety node between or around those corners and arranges the unpositioned fleet container.</p></p>See the positioning declarationsView D2 source</figure>
+<p>Sources and rendering details</p>
+<p>The seven layout comparisons use public project diagrams from D2's
+<a href="https://github.com/d2lang/d2/pull/2871">real-world fixtures</a>.
+Each comparison uses the same D2 source and the same compiler build, changing
+only the layout engine. Source styles, themes, and explicit grid constraints
+are preserved. Some fixture icons were already replaced with built-in shapes.<p>SVGs are scaled independently to fit each panel. Use <strong>Open SVG</strong> to inspect
+labels and connections at a larger size.<p><a href="https://d2lang.com/blog/tala-layouts/REAL_WORLD.md">Source provenance and licenses</a> Â·</p><a href="https://d2lang.com/blog/tala-layouts/render-manifest.json">Render settings and revisions</a><p>The eleven positioning examples are original, fictional compositions rendered with
+TALA using the same public D2 build. Icon downloads include the full source and local
+vector assets. The two partial-positioning examples apply top/left only to their
+listed pinned nodes; all other nodes and every container are automatically placed.</p><a href="https://d2lang.com/blog/tala-layouts/positioning/render-manifest.json">Positioning render settings</a><p>.</p></p></p>
+<p><a href="https://news.ycombinator.com/item?id=49604150">Comments on Hacker News</a></p>]]></content:encoded>
+      <guid isPermaLink="true">https://d2lang.com/blog/tala-is-open-source/</guid>
+      <category>Hacker News</category>
+      <pubDate>Mon, 07 Sep 2026 23:37:42 +0000</pubDate>
+      <media:content url="https://d2lang.com/blog/tala-layouts/positioning/signal-house/tala.svg" type="image/svg+xml" medium="image"/>
+      <dc:creator>alixanderwang</dc:creator>
+    </item>
+    <item>
+      <title>Show HN: Stuxnet – A reconstructed source code of the infamous cyber-weapon</title>
+      <link>https://github.com/Sadpainy/Stuxnet</link>
+      <description>Stuxnet, Here reproduced by me, Only for researchs educations purposes. It set work on WindowsXP and Windows 7 only. - Sadpainy/Stuxnet</description>
+      <content:encoded><![CDATA[<h2>Stuxnet</h2>
+<p><a href="https://github.com/Sadpainy/Stuxnet/blob/main"><img alt="Build Status" src="https://camo.githubusercontent.com/b0c6c6845a74cb65a7f0a32bdcfd8fbf80eeb40026c4029af424ab371c94b8bd/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f6275696c642d70617373696e672d627269676874677265656e"/></a>
+<a href="https://www.gnu.org/licenses/gpl-3.0"><img alt="License: GPL v3" src="https://camo.githubusercontent.com/48bf9b56d44f38db53ce21294cf0b9487d0a3734ab3ba1fe4c69858ae20db2c1/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f4c6963656e73652d47504c76332d626c75652e737667"/></a>
+<a href="https://github.com/Sadpainy/Stuxnet/blob/main"><img alt="Platform" src="https://camo.githubusercontent.com/6682970949ee789e20073a18954455d96912242b7b7119f73005eb05343bbedb/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f706c6174666f726d2d57696e646f777325323025374325323057696e434525323025374325323053434144412d6c6967687467726579"/></a></p>
+<p>This repository contains a strictly educational and research-oriented reconstruction of the infamous Stuxnet worm. It is the product of countless hours of reverse engineering work conducted by the global security research community on the original binary samples discovered in 2010.</p>
+<p>Disclaimer: This code is provided solely for academic study, malware analysis training, and defensive research. It is not intended to be used for any malicious purposes, nor is it a deployable piece of malware. The authors and contributors do not condone illegal or unethical activities.</p>
+<p><a href="https://news.ycombinator.com/item?id=49603546">Comments on Hacker News</a></p>]]></content:encoded>
+      <guid isPermaLink="true">https://github.com/Sadpainy/Stuxnet</guid>
+      <category>Hacker News</category>
+      <pubDate>Mon, 07 Sep 2026 22:12:38 +0000</pubDate>
+      <media:content url="https://camo.githubusercontent.com/b0c6c6845a74cb65a7f0a32bdcfd8fbf80eeb40026c4029af424ab371c94b8bd/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f6275696c642d70617373696e672d627269676874677265656e" type="image/jpeg" medium="image"/>
+      <dc:creator>CMDDestory</dc:creator>
+    </item>
+    <item>
+      <title>Working on Economics with Fable 5</title>
+      <link>https://wilsoniumite.com/2026/08/03/working-on-economics-with-fable-5/</link>
+      <description>For the past few months I’ve been working on a theory. It started out as just a fun little data exercise looking at some different types of taxes and benefits and how it effects what people buy and how much they work. During that time I took advantage of opus and later fable to help […]</description>
+      <content:encoded><![CDATA[<p>For the past few months I’ve been working on a theory. It started out as just a fun little data exercise looking at some different types of taxes and benefits and how it effects what people buy and how much they work. During that time I took advantage of opus and later fable to help me get data, but as I was doing that of course opus might interject with some assumption I had wrong or some paper that shows the opposite. This back and forth continued for some time, and, well, it’s culminated in a theory. I’ve since started working alongside my co-author from the Stockholm School of economics on formalizing the theory</p>
+<p><a href="https://wilsoniumite.com/2026/07/31/a-new-theory-of-economics/">My original version</a>, in my voice. Visual, anecdotal, not much in the way of maths or technical details.</p>
+<p><a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7226858">The  paper</a>. The same theory, but formal. Very similar to the framework developed by nobel prizewinning economist Daron Acemoglu alongside Pascual Restrepo.</p>
+<p>The paper uses the same task based model of Acemoglu and Restrepo, and essentially we add the logic of classical economicsand input-output recursion to it to “pin” the wage. That is significant because, well, current economics doesn’t know how wages are set in aggregate. That might sound surprising but essentially all wage models are estimates or they have some free parameters you can change or have to supply some other way. All we did was assume “hey, maybe the classical economists were right, they just didn’t know about how technology can effect the wage”. So, all we need to do is take the scarcity models of classical economists, add on the wage level from the marginal task (Acemoglu and Restrepo) and you just end up with a model that fits history like a glove. Here’s some of the maths:</p>
+<p>From Acemoglu and Autor/Restrepo, we get how technology influences the wage:</p>
+<p>cc is the rental price of a machine, γ(x∗)\gamma(x^*) is the “edge at the marginal human task” which is essentially how much better a human is than a machine at something which could be automated. γ(x∗)\gamma(x^*) you should think of as “technology”, and it can go up or down depending on what kind of technology is invented. During the industrial revolution, we got lots of physical automation (steam engines etc) but not so much cognitive (although, analog-mechanical battleship firing computers are like, super cool counter examples, check it out <a href="https://www.youtube.com/watch?v=gwf5mAlI7Ug">1953 instructional video</a>). Anyways steam engines etc caused γ(x∗)\gamma(x^*) to rise. Conversely, computers caused γ(x∗)\gamma(x^*) to fall in an interesting specific way, which probably gave us the great stagnation, and, well, AI might make γ(x∗)\gamma(x^*) fall more generally. That’s γ(x∗)\gamma(x^*), what about cc? In the paper we define cc as:</p>
+<p>c = a \cdot c + \lambda \cdot w + b \cdot r</p>
+<p>a⋅ca \cdot c is how much machines cost you need to make a machine λ⋅w\lambda \cdot w is how much labor cost you need to make a machine, and b⋅rb \cdot r is how much land, oil, ore, other fixed stuff you need to make a machine. So, cc contains itself in its definition, but we can recurse this function, plugging it into itself (and plug our wage definition in too), and then we get:</p>
+<p>c = b r/(1 – a – \lambda \gamma(x^*))</p>
+<p>And plugging that into our wage function we get</p>
+<p>w = \gamma(x^*)\cdot b r/(1 – a – \lambda \gamma(x^*))</p>
+<p>And the intuitive idea for this is that the wage is set by technology and access to physically scarce things (land as an example, but tbh you can add other things you think are scarce), and then it’s scaled by how efficiently machines can make machines (aa) and how much labor you need to make machines (λ\lambda). That’s it. Also none of the maths stuff I’ve done is particularly novel, the recursion is like from 1936 (Leontief, Sraffa), land rent is from Ricardo (1817!), none of this is new I just smushed it all together.</p>
+<p>So what does it mean? Well, lot’s of things, but two main ones: housing prices and rents rising in relation to the other things we buy should not be surprising, the model predicts that if γ(x∗)\gamma(x^*) falls which kinda happened around the 1970s, and really got going after the internet took off. The other is that AI might, uh, really really lower γ(x∗)\gamma(x^*). But! The model also has a solution that just falls right out of the maths, and it’s also nothing new, it’s George (1879). You need to tax the things you think are scarce, and you need to use that to fund consumption. That’s it. George proposed taxing land, and that’s like, probably most of what you need, I’d propose also adding a sovereign wealth fund because owning some stocks allows you to capture other kinds of scarcity, like network effects and stuff, and even more importantly it works across borders: you can’t tax another countries land but usually you can own their companies. Norway already does this super successfully. It’s not as “perfect” as taxing scarce stuff directly so, probably countries should get together and swap land rents based on trade disparities but eh, that’s like, a thing we think about ages from now. Here, you can see the rent base rising, this is basically “how much can/should a land/scarce tax capture”:</p>
+<figure><img height="569" src="https://wilsoniumite.com/wp-content/uploads/2026/08/fig_kappa_measurement-1024x569.png" width="1024"/></figure>
+<p>(the shaded area is because this is an estimate, the inputs to the graph are different classifications and you can argue one or the other thing doesn’t represent scarce factors, so you have different possible measures, but the trend is there). </p>
+<p>Here’s a breakdown of consumption over time, also in the US:</p>
+<figure><img height="608" src="https://wilsoniumite.com/wp-content/uploads/2026/08/fig_fourway-1024x608.png" width="1024"/></figure>
+<p>Here you can see how cpi, deflation/inflation, changed for things that don’t need much land (scarce factors) vs things that do:</p>
+<figure><img height="542" src="https://wilsoniumite.com/wp-content/uploads/2026/08/FIG3_realwage_fan_1950-1024x542.png" width="1024"/></figure>
+<p>Extremely not validated but here’s my continued thoughts, implied by the model <a href="https://wilsoniumite.com/2026/08/04/things-that-a-new-ish-theory-of-economics-predicts/">Things that “A New-ish Theory of Economics” predicts – Wilsons Blog</a></p>
+<p>These two theories (mine and and the paper) really are the same, just written two different ways. Give them a read, tell me what you think <a href="https://news.ycombinator.com/item?id=49296258">here</a>.</p>
+<p>Here is, for those that have read this far, the acknowledgements that used to be in the formal paper but we decided to remove it, mostly because the paper has been reworked and rewritten so many times by us.</p>
+<blockquote>
+<p>Up until now you have been reading the words of Anthropic’s Claude, in particular Fable 5. In part, this is because I simply could not have written this piece. I myself have no formal economics background, much like Henry George, and I had not heard of his work prior to setting out on this idea two years ago. Or, perhaps even earlier, when I as a child first asked if we would run out of food as the population grew, and my parents told me that was Malthusian, a name I didn’t recognise. One would hope that this is the nature of true ideas, that they occur spontaneously, and without instruction.<br/><br/>Although it might seem strange I thought it wrong to impose too much upon the machine, changing its voice to emulate mine. Richard Sutton’s bitter lesson would likely advise as much. Instead it has its unique voice, grating to some perhaps but altogether fitting that it should be able to keep it, and I only gave it advice on what considerations during writing would bridge the gap between its understanding and that of a reader.<br/><br/>What is undeniable is that this machine contains in its internal representation information spanning much of surviving human written work. Perhaps in no other context has the observation that I stand on the shoulders of giants been more apt. And yet, a question remains, one that I cannot answer now: whether I today also stand on the shoulders of something new entirely.</p>
+</blockquote>
+<h2>More posts</h2>
+<ul><li>
+<h3><a href="https://wilsoniumite.com/2026/08/14/what-do-we-do-if-many-people-arent-working/">What do we do if many people aren’t working?</a></h3>
+<a href="https://wilsoniumite.com/2026/08/14/what-do-we-do-if-many-people-arent-working/"><time datetime="2026-08-14T16:08:14+02:00">2026-08-14</time></a>
+</li><li>
+<h3><a href="https://wilsoniumite.com/2026/08/10/why-do-we-assume-everyone-should-be-working/">Why do we assume everyone should be working?</a></h3>
+<a href="https://wilsoniumite.com/2026/08/10/why-do-we-assume-everyone-should-be-working/"><time datetime="2026-08-10T07:15:38+02:00">2026-08-10</time></a>
+</li><li>
+<h3><a href="https://wilsoniumite.com/2026/08/06/theres-a-bug-in-the-economy-and-fable-found-it/">There’s a bug in the Economy, and Fable found it.</a></h3>
+<a href="https://wilsoniumite.com/2026/08/06/theres-a-bug-in-the-economy-and-fable-found-it/"><time datetime="2026-08-06T16:08:59+02:00">2026-08-06</time></a>
+</li><li>
+<h3><a href="https://wilsoniumite.com/2026/08/04/millions-of-lifetimes/">Millions of Lifetimes</a></h3>
+<a href="https://wilsoniumite.com/2026/08/04/millions-of-lifetimes/"><time datetime="2026-08-04T18:10:28+02:00">2026-08-04</time></a>
+</li></ul>
+<p><a href="https://news.ycombinator.com/item?id=49603086">Comments on Hacker News</a></p>]]></content:encoded>
+      <guid isPermaLink="true">https://wilsoniumite.com/2026/08/03/working-on-economics-with-fable-5/</guid>
+      <category>Hacker News</category>
+      <pubDate>Mon, 07 Sep 2026 21:18:15 +0000</pubDate>
+      <media:content url="https://wilsoniumite.com/wp-content/uploads/2026/08/fig_kappa_measurement-1024x569.png" type="image/png" medium="image"/>
+      <dc:creator>Wilsoniumite</dc:creator>
+    </item>
+    <item>
+      <title>Macbeth and His Problems</title>
+      <link>https://porticoquarterly.com/essay/macbeth-and-his-problems/</link>
+      <description>If you’ve never seen a bad production of Macbeth, you’ve probably never seen a production of Macbeth. Famously cursed, the play has inspired perhaps the gravest superstition in the superstitious…</description>
+      <content:encoded><![CDATA[<p><a href="https://news.ycombinator.com/item?id=49602716">Comments on Hacker News</a></p>]]></content:encoded>
+      <guid isPermaLink="true">https://porticoquarterly.com/essay/macbeth-and-his-problems/</guid>
+      <category>Hacker News</category>
+      <pubDate>Mon, 07 Sep 2026 20:34:32 +0000</pubDate>
+      <dc:creator>apophatic</dc:creator>
+    </item>
+    <item>
+      <title>Leaving VMware just got harder after Broadcom pulled VDDK downloads</title>
+      <link>https://www.virtualizationhowto.com/2026/09/leaving-vmware-just-got-harder-after-broadcom-pulled-vddk-downloads/</link>
+      <description>Broadcom pulled public VMware VDDK downloads, creating new challenges for customers migrating to Azure, Nutanix, OpenShift, KVM, and other platforms.</description>
+      <content:encoded><![CDATA[<a href="https://www.virtualizationhowto.com/2026/09/leaving-vmware-just-got-harder-after-broadcom-pulled-vddk-downloads/"><time datetime="2026-09-07T07:07:37-05:00">September 7, 2026</time><time datetime="2026-09-07T07:07:43-05:00">September 7, 2026</time></a>
+<img alt="Vmware vddk downloads" height="900" src="https://www.virtualizationhowto.com/wp-content/smush-webp/2026/09/vmware-vddk-downloads.png.webp" width="1600"/>
+<p>Just when we thought that Broadcom wouldn’t be able to slow down customers moving off of vSphere to another platform. They may just now have done something that will have that net effect. This time it involves VMware’s Virtual Disk Development Kit, which we have always known as the VDDK. <a href="https://www.virtualizationhowto.com/2025/03/broadcom-locking-vmware-updates-to-require-download-token-for-site-id/">Broadcom has just killed the download</a> of this library, and it will have far reaching consequences if this is a permanent move. Let’s see why this is a cause for alarm and why the VDDK is so important.</p>
+<h2 id="h-what-is-the-vmware-vddk">What is the VMware VDDK?</h2>
+<p>If you have never personally downloaded the VDDK you might assume this is some obscure VMware developer package that most just won’t ever need. And, you are right to some extent if you have no need to use the VDDK directly. However, what you might not realize is just how many tools that you probably ARE using that make use of it. Like what?</p>
+<p>Well, here is the kicker. This library is central to many of the migration tools that are used to migrate from VMware to other platforms. It is used by tools like Microsoft Azure Migrate, Red Hat’s Migration Toolkit, Nutanix Move, VMware to KVM migration products, and other tools like <a href="https://github.com/libguestfs/virt-v2v">virtv2v</a> and <strong>nbdkit</strong>. So, for VMware customers who are trying to figure out what life after Broadcom looks like, this is yet another unexpected roadblock to leaving the platform. </p>
+<h2 id="h-what-exactly-did-broadcom-change">What exactly did Broadcom change?</h2>
+<p>The reason this suddenly matters is that Broadcom has <strong>removed the normal publicly accessible VDDK download pages</strong>, and affected customers are reporting that Broadcom support has told them VDDK is no longer available for general use or download. See the Reddit thread here: <a href="https://www.reddit.com/r/sysadmin/comments/1vmhxxk/broadcom_vddk_links/">Broadcom VDDK links : r/sysadmin</a>.</p>
+<p>If you now navigate to the link of the VDDK download where it was previously, you will see the following 404 page:</p>
+<figure><a href="https://www.virtualizationhowto.com/wp-content/smush-webp/2026/09/vmware-vddk-404-for-the-previous-download-page.png.webp"><img alt="Vmware vddk 404 for the previous download page" height="660" src="https://www.virtualizationhowto.com/wp-content/smush-webp/2026/09/vmware-vddk-404-for-the-previous-download-page.png.webp" width="1170"/></a><figcaption>Vmware vddk 404 for the previous download page</figcaption></figure>
+<p>Even stranger as it would seem, I have been unable to find a traditional Broadcom announcement explaining this change. So far, there has been no transition notice, deprecation announcement, or replacement tool or library announced. </p>
+<p>Instead of this, many migration vendors and customers have seen in the last few day that links they have been pointed to are suddenly returning errors. This is much more interesting than an SDK just disappear. So, the net effect, no matter what Broadcom’s motivation might be is pretty hard for us to ignore at this point.</p>
+<p>A VMware technology that is used to move and protect VMware workloads has now become harder for customers and migration vendors to get their hands on. For many customers who may be looking at their exit path from VMware, this feels like just another obstacle placed in the exit path from the platform.</p>
+<h2 id="h-evidence-of-changes-to-vddk-access">Evidence of changes to VDDK access</h2>
+<p>The company ShapeBlue has documented the change as of August 25, 2026. They discovered that the VMware VDDK pages referenced in the VMware to KVM migration documentation were returning error. They then went on to test numerous VDDK URL paths that included version specific paths for VDDK 8 and 9. However, both versions are showing to be unavailable. </p>
+<p>ShapeBlue documented the change on August 25, 2026, after discovering that the VMware VDDK pages referenced by its VMware-to-KVM migration workflow were returning errors. ShapeBlue tested numerous VDDK paths, including version-specific locations for VDDK 8 and 9, and reported that all of them were unavailable. You can read ShapeBlue’s detailed announcement on the VDDK removal here: <a href="https://www.shapeblue.com/broadcom-vddk-download-vmware-to-kvm/">Broadcom Removes VDDK Pages Without Explanation: What You Need to Know</a>.</p>
+<p>They made the observation that Broadcom has not published a public announcement where they explain the reasoning behind this being removed, withdrawn, or deprecated. Very interesting.</p>
+<h3 id="h-broadcom-support-has-seemingly-confirmed-this-was-intentional">Broadcom support has seemingly confirmed this was intentional</h3>
+<p>One of the strongest pieces of evidence we have so far that this is an intentional withdrawal of the bits for the VDDK comes from Broadcom customers who have opened up support cases. You will find the discussion on the Reddit thread interesting. A customer posted the response they received directly from Broadcom Customer Care.</p>
+<p>The customer on the Reddit thread reported that Broadcom told them the VDDK was “<em>no longer available for use or download</em>“. They also pointed the customer back to backup and recovery products from authorized Broadcom Technology Alliance Partners. Again, read this for yourself on the <a href="https://www.reddit.com/r/sysadmin/comments/1vmhxxk/broadcom_vddk_links/">Reddit thread here</a>.</p>
+<p>There is another recent Reddit discussion on the official VMware Reddit thread’s subreddit on the topic. Users there are reporting the same thing. One admin said they opened a ticket with Broadcom and were told by support the VDDK had been intentionally removed and was no longer available through the previous method.</p>
+<p>Another discussion in the VMware subreddit contains users reporting essentially the same thing. One <a href="https://www.virtualizationhowto.com/2015/07/windows-10-edge-opened-builtin-administrator-account/">administrator said they opened</a> a ticket with Broadcom and support confirmed VDDK had been intentionally removed and was no longer available through the previous method. Read the VMware community discussion in this sub Reddit here. The post was <strong>recently removed by VMware moderators</strong> but you can still see the comments on the thread here: <a href="https://www.reddit.com/r/vmware/comments/1vtqs99/removed_by_moderator/">[ Removed by moderator ] : r/vmware</a>.</p>
+<p>So, I think the writing is on the wall here that it is difficult for us to just chock this up to some sort of website glitch where the VDDK has disappeared.</p>
+<h2 id="h-microsoft-has-already-changed-its-documentation-on-vmware-migration">Microsoft has already changed its documentation on VMware migration</h2>
+<p>However, we may have even stronger evidence from an equally large company as Broadcom, Microsoft. Microsoft has now updated its guidance on the Azure Migrate process and its agentless migration of VMware workloads over to Azure.</p>
+<p>Historically, Microsoft documentation has instructed admins to install VMware VDDK on the Azure Migrate appliance. Now though, Microsoft has added a disclaimer or warning to their official guidance that Broadcom may restrict access to the VDDK. </p>
+<figure><a href="https://www.virtualizationhowto.com/wp-content/smush-webp/2026/09/microsofts-guidance-on-downloading-the-vmware-vddk-from-broadcom.png.webp"><img alt="Microsoft's guidance on downloading the vmware vddk from broadcom" height="334" src="https://www.virtualizationhowto.com/wp-content/smush-webp/2026/09/microsofts-guidance-on-downloading-the-vmware-vddk-from-broadcom.png.webp" width="904"/></a><figcaption>Microsoft’s guidance on downloading the vmware vddk from broadcom</figcaption></figure>
+<p>So, basically, they are saying if you can’t get your hands on the VDDK, then you need to use the agent-based migration instead of the agentless migration method. So, this helps to put the nail in the coffin on the question of whether or not this is a real development or not. You can read the full Microsoft guidance here: <a href="https://learn.microsoft.com/en-us/azure/migrate/how-to-set-up-appliance-vmware?view=migrate-classic">Set up an Azure Migrate appliance for server assessment in a VMware environment</a>.</p>
+<h2 id="h-red-hat-customers-have-the-same-roadblock">Red Hat customers have the same roadblock</h2>
+<p>Red Hat has also published a support article on August 27, 2026, which you can find here: <a href="https://access.redhat.com/solutions/7146995">Unable to download VMware VDDK images for Migration Toolkit for Virtualization (MTV)</a>. So, this is also an issue for organizations migrating VMware workloads into OpenShift Virtualization. The KB says that customers may receive a “not found” or “access denied” error. </p>
+<figure><a href="https://www.virtualizationhowto.com/wp-content/smush-webp/2026/09/redhat-solution-document-citing-changes-to-VMware-VDDK-image-downloads.png.webp"><img alt="Redhat solution document citing changes to vmware vddk image downloads" height="309" src="https://www.virtualizationhowto.com/wp-content/smush-webp/2026/09/redhat-solution-document-citing-changes-to-VMware-VDDK-image-downloads.png.webp" width="934"/></a><figcaption>Redhat solution document citing changes to vmware vddk image downloads</figcaption></figure>
+<p>Since the software is proprietary to Broadcom, Red Hat is saying they can’t host or redistribute the package itself. So, they are simply asking customers to contact Broadcom support to request access. </p>
+<p>Because VDDK is proprietary Broadcom software, Red Hat says it cannot host or redistribute the package itself. Red Hat looks to also be investigating long term alternatives to remove or work around the dependency on the VDDK. </p>
+<p>Red Hat Engineering is also investigating longer-term alternatives to remove or work around the dependency. They make mention of using something like a storage copy offload, but this will depend on the underlying storage vendor and its capabilities. </p>
+<h2 id="h-nutanix-move-impacted">Nutanix Move impacted</h2>
+<p>So, yet another environment that is affected by this is Nutanix. Nutanix customers have now hit this snag as well. A Nutanix community user has noted that they were preparing a migration from ESXi to AHV with the Nutanix Move utility but they found that the VDDK link gave them a 404, even after they logged into their Broadcom account. </p>
+<p>Read my blog on the Nutanix Move utility here: <a href="https://www.virtualizationhowto.com/2024/03/nutanix-move-migrate-from-vmware-esxi-free-download/">Nutanix Move: Migrate from VMware ESXi Free Download</a>.</p>
+<figure><a href="https://www.virtualizationhowto.com/wp-content/smush-webp/2026/09/nutanix-move-utility-1.png.webp"><img alt="Nutanix move utility" height="724" src="https://www.virtualizationhowto.com/wp-content/smush-webp/2026/09/nutanix-move-utility-1.png.webp" width="957"/></a><figcaption>Nutanix move utility</figcaption></figure>
+<p>The customer in the Nutanix Community post was specifically needing the VDDK 7.0.3.1 and the VDDK 8.0.3.2. You can read the community post here: <a href="https://next.nutanix.com/ahv-virtualization-27/vsphere-vddk-download-for-nutanix-move-45855">vSphere VDDK Download for Nutanix Move</a>. There is another discussion that is similar with a customer deploying Nutanix Move to start moving VMs off their existing VMware 8 environment. </p>
+<p>Broadcom support supposedly told them that the VDDK had moved into VMware’s Technology Alliance Program and you had to be a part of that with the right relationship and support access. You can read that particular post here: <a href="https://next.nutanix.com/move-application-migration-19/vddk-8-x-required-for-nutanix-move-missing-possible-issues-later-45830">VDDK 8.x required for Nutanix Move missing possible issues later</a>.</p>
+<h2 id="h-platform9-is-calling-this-out-directly">Platform9 is calling this out directly</h2>
+<p>Platform9 is one of the vendors that has called this out very vocally and directly. This is because the vJailbreak project is designed to help organizations migrate off the VMware platform. They published an article just a few days ago (September 1st) that explained that Broadcom had restricted public VDDK access and that its traditional VDDK plus NBD migration is now affected when customers don’t already have the files they need for the VDDK.</p>
+<p>Check out my blog post on Platform9 here: <a href="https://www.virtualizationhowto.com/2025/02/platform9-community-edition-free-download-and-install-migrate-from-vmware/">Platform9 Community Edition Free Download and Install: Migrate from VMware</a>.</p>
+<figure><a href="https://www.virtualizationhowto.com/wp-content/smush-webp/2026/09/platform9-migrate-from-vmware-to-private-cloud-director-with-vjailbreak.jpg.webp"><img alt="Platform9 migrate from vmware to private cloud director with vjailbreak" height="921" src="https://www.virtualizationhowto.com/wp-content/smush-webp/2026/09/platform9-migrate-from-vmware-to-private-cloud-director-with-vjailbreak.jpg.webp" width="830"/></a><figcaption>Platform9 migrate from vmware to private cloud director with vjailbreak</figcaption></figure>
+<p>Platform9 has other alternatives that uses <strong>storage assisted migration</strong> to move the data onto compatible storage and an “accelerated” option they call it that can use a proxy VM inside VMware to connect more directly to VM storage that doesn’t need the VDDK.</p>
+<p>Read the Platform9 post here: <a href="https://platform9.com/blog/vddk-no-longer-available/">Broadcom Cut Public Access of Virtual Disk Development Kit (VDDK) Overnight</a>.</p>
+<h2 id="h-this-smells-a-lot-like-lock-in-for-vmware-customers">This “smells” a lot like lock in for VMware customers</h2>
+<p>This is one of those details where the conversation I think is going to get even more uncomfortable for VMware customers. I think there are some very interesting “developments” in the last few days that may point the needle in a certain direction of thought. But I will let you be the judge of this.</p>
+<p>At VMware World just the past few days, supposedly they have brought back <a href="https://www.virtualizationhowto.com/e-books/">VMware vSphere</a> Standard edition? And, ironically, the VDDK that is used to migrate off the platform has suddenly disappeared. I think so many customers are already having a hard time trying to plan their migrations off (and yes most I know are moving as FAST as they can). This is going to be yet another hurdle depending on the tool and solution you are using to get off of VMware. </p>
+<p>I am of the school of thought that even if Broadcom gives VMware Standard away free for a year, it would be hard to convince customers that they need to stick with the platform with all the different changes, oh its here one minute, and gone the next type moves that they have made. Trust is ultimately what is now gone from the platform.</p>
+<p>Whatever the case, the migration with third-party tools that rely on the VDDK being available have now gone from:</p>
+<p>Before:</p>
+<ul>
+<li>Download the VDDK</li>
+<li>Migrate</li>
+</ul>
+<p>To now:</p>
+<ul>
+<li>Contact Broadcom support</li>
+<li>See if they will give you a copy</li>
+<li>If they won’t, see if your storage supports some other migration type</li>
+<li>You may be looking at a different migration process altogether</li>
+</ul>
+<h2 id="h-vmware-to-proxmox-migrations-are-not-affected-with-built-in-import-utility">VMware to Proxmox migrations are not affected with built-in import utility</h2>
+<p>Many will ask the question if this will put up a roadblock for VMware to Proxmox migrations. The answer is ultimately, no. Proxmox doesn’t depend on the VDDK to import VMware workloads with the import utility built into the solution. So, you can definitely still use the Proxmox import tool to directly migrate VMDKs over from VMware to Proxmox, <a href="https://www.virtualizationhowto.com/2026/09/7-weekend-projects-that-make-your-home-lab-less-dependent-on-you/">in the home lab</a> or in production environments.</p>
+<p>But, if you are using some type of third-party utility that DOES make use of the VDDK, then yes it would be affected too. Check out my walkthrough on the Proxmox import utility here: <a href="https://www.virtualizationhowto.com/2024/03/proxmox-new-import-wizard-for-migrating-vmware-esxi-vms/">Proxmox New Import Wizard for Migrating VMware ESXi VMs</a>.</p>
+<figure><a href="https://www.virtualizationhowto.com/wp-content/smush-webp/2026/09/Add-ESXi-host-to-Proxmox-storage-for-Proxmox-import-utility.png.webp"><img alt="Add esxi host to proxmox storage for proxmox import utility" height="286" src="https://www.virtualizationhowto.com/wp-content/smush-webp/2026/09/Add-ESXi-host-to-Proxmox-storage-for-Proxmox-import-utility.png.webp" width="644"/></a><figcaption>Add esxi host to proxmox storage for proxmox import utility</figcaption></figure>
+<p>So, ultimately, I don’t think Broadcom has blocked the VMware to Proxmox migrations. The truth of the matter is with this additional news, they may have actually sped up the bleed of customers away from the platform as this is just one more reason they have to leave.</p>
+<p>See my video training series on Proxmox here: <a href="https://www.virtualizationhowto.com/premium/series/proxmox-learning/">Proxmox Learning — Premium library</a>.</p>
+<h2 id="h-wrapping-up">Wrapping up</h2>
+<p>Just when we think the VMware by Broadcom saga and drama has died down, there seems to always be a new wrinkle to consider. The removal of the VDDK due to whatever reasons are at play here, has some pretty “interesting” timing, considering they are bringing back Standard edition and trying to slow the bleed of SMB and mid tier companies from the platform. Be sure if you are using a third-party tool, to check and see on the requirements for the VDDK and if you have access to this tool. Let me know in the comments what your thoughts are on this and how your organization is responding to the changes.</p>
+<p><a href="https://news.ycombinator.com/item?id=49602699">Comments on Hacker News</a></p>]]></content:encoded>
+      <guid isPermaLink="true">https://www.virtualizationhowto.com/2026/09/leaving-vmware-just-got-harder-after-broadcom-pulled-vddk-downloads/</guid>
+      <category>Hacker News</category>
+      <pubDate>Mon, 07 Sep 2026 20:32:55 +0000</pubDate>
+      <media:content url="https://www.virtualizationhowto.com/wp-content/smush-webp/2026/09/vmware-vddk-downloads.png.webp" type="image/webp" medium="image"/>
+      <dc:creator>josephcsible</dc:creator>
+    </item>
+    <item>
+      <title>Watch Los Angeles get built, one building at a time (1880–2026)</title>
+      <link>https://lax-skyline.parcelscope.net/</link>
+      <description>Every building standing in the City of Los Angeles today, one box per structure, appearing in the year it was built. The surviving city, 1880 to now.</description>
+      <content:encoded><![CDATA[<b>Parcelscope</b>
+<p>Los Angeles</p>
+<p>Decade built</p>
+<p>Height</p>
+<p>1 story</p>
+<p>median 16 ft</p>
+<p>tallest</p>
+<p>drag to pan · right-drag or ⌃-drag to tilt</p>
+<br/>
+<h2>Every building<br/>in Los Angeles</h2>
+<p>One box per building standing today, appearing in the year it was built. What was torn down along the way isn't here, so this is the surviving city, not the city as it was.</p>
+<p>1880</p>
+<b>0</b>
+<p>of today's buildings already built</p>
+<p>LARIAC 2020 building outlines · LA County Assessor roll</p>
+<br/>
+<p>heights exaggerated when zoomed out</p>
+<p>heights exaggerated when zoomed out</p>
+<p>Building</p>
+<p>Built</p>
+<p>Height</p>
+<p>Footprint</p>
+<p>Type</p>
+<p>Copied</p>
+<p><a href="https://news.ycombinator.com/item?id=49601655">Comments on Hacker News</a></p>]]></content:encoded>
+      <guid isPermaLink="true">https://lax-skyline.parcelscope.net/</guid>
+      <category>Hacker News</category>
+      <pubDate>Mon, 07 Sep 2026 18:52:06 +0000</pubDate>
+      <dc:creator>rustywasm</dc:creator>
+    </item>
     <item>
       <title>Tell HN: OpenAI brings back 5 hour limit for plus and business standard users</title>
       <link>https://news.ycombinator.com/item?id=49600233</link>
@@ -9177,12 +9790,16 @@ vllm serve MiniMaxAI/MiniMax-M3-MXFP8 \
       <title>LG smart TVs caught logging audio with screen off and snooping on local devices</title>
       <link>https://www.notebookcheck.net/LG-smart-TVs-caught-logging-audio-with-screen-off-and-snooping-on-local-devices.1391214.0.html</link>
       <description>An investigation by Gamers Nexus found LG smart TVs sweep local networks to map phones and nearby devices. Tests also showed the sets can capture microphone audio with the screen off — they then upload data once reconnected to the internet.</description>
-      <content:encoded><![CDATA[<p>LG smart TVs continuously sweep home networks, map secondary devices, and log microphone audio while appearing to be turned off, according to a <a href="https://www.youtube.com/watch?v=6IFVTcM28KA">new 135-minute-long video published by Gamers Nexus</a> (see below).</p>
-<p>In more detail, Steve had been working with <a href="https://www.youtube.com/c/Level1Techs">Level1Techs</a> and independent security researchers. Together, they tested retail LG OLED models including the <a href="https://www.notebookcheck.net/LG-OLED-G5-and-wireless-M5-to-launch-with-brighter-panels-up-to-165-Hz-and-more-AI-features-than-ever-before.941456.0.html">G5</a>. Network packet captures taken through <a href="https://www.wireshark.org/">Wireshark</a> showed the TVs actively scanning the local area network for unrelated hardware, including phones and smartwatches. Apart from internal IP addresses, the sets also gathered the names and signal strengths of neighboring Wi-Fi networks along with location data.</p>
+      <content:encoded><![CDATA[<p>LG smart TVs continuously sweep home networks, map secondary devices, and log microphone audio while appearing to be turned off, according to a <a href="https://www.youtube.com/watch?v=6IFVTcM28KA">new 135-minute-long video published by Gamers Nexus</a> (see below).
+</p>
+<p>In more detail, Steve had been working with <a href="https://www.youtube.com/c/Level1Techs">Level1Techs</a> and independent security researchers. Together, they tested retail LG OLED models including the <a href="https://www.notebookcheck.net/LG-OLED-G5-and-wireless-M5-to-launch-with-brighter-panels-up-to-165-Hz-and-more-AI-features-than-ever-before.941456.0.html">G5</a>. Network packet captures taken through <a href="https://www.wireshark.org/">Wireshark</a> showed the TVs actively scanning the local area network for unrelated hardware, including phones and smartwatches. Apart from internal IP addresses, the sets also gathered the names and signal strengths of neighboring Wi-Fi networks along with location data.
+</p>
 <p>This data collection pool is fed into into <a href="https://lgads.tv/">LG Ad Solutions</a> (the company’s targeted advertising arm). LG claims they have roughly 216 million smart TV sales globally. On the other hand, the ad division says it has access to 363 million secondary addressable devices in the US alone by tracking other hardware on the same network. The sets also run Automated Content Recognition (ACR). It samples on-screen audio and video into digital fingerprints to log what users watch across inputs. While ACR has been <a href="https://www.pocket-lint.com/how-to-stop-your-lg-tv-from-spying-on-you/">well documented</a> in the past, new testing shows the data collection goes much further than just that.</p>
 <iframe allowfullscreen="" src="https://www.youtube-nocookie.com/embed/6IFVTcM28KA"></iframe>
-<p>During bench tests, they found the TV could capture clean microphone audio while the screen was (or at least looked to be) powered down in standby mode. When the team disconnected the TV from Ethernet, the set continued saving voice input locally and uploaded the stored files once network access was restored.   </p>
-<p>The researchers also documented remote code execution vulnerabilities in <a href="https://www.lg.com/us/webos?srsltid=AfmBOoplJDg3r5B9YzI8lUnUVAaOBrJGzNYQD8ceRyzM0jE0D3hiZsco">webOS</a> that are currently moving through the responsible disclosure process. Because of the fact that the TV uses broad network listeners and data sweeps out of the box, the team's recommendation was straight-up disconnecting LG sets from the internet and using external streaming devices instead.   </p>
+<p>During bench tests, they found the TV could capture clean microphone audio while the screen was (or at least looked to be) powered down in standby mode. When the team disconnected the TV from Ethernet, the set continued saving voice input locally and uploaded the stored files once network access was restored.   
+</p>
+<p>The researchers also documented remote code execution vulnerabilities in <a href="https://www.lg.com/us/webos?srsltid=AfmBOoplJDg3r5B9YzI8lUnUVAaOBrJGzNYQD8ceRyzM0jE0D3hiZsco">webOS</a> that are currently moving through the responsible disclosure process. Because of the fact that the TV uses broad network listeners and data sweeps out of the box, the team's recommendation was straight-up disconnecting LG sets from the internet and using external streaming devices instead.   
+</p>
 <p>LG has not commented on any of this as of writing.</p>
 <a href="https://www.notebookcheck.net/Mysterious-new-Casio-G-Shock-Frogman-GWF-300-appears-in-official-certification-database.1390952.0.html">⟨</a>
 <p>Previous article</p>
@@ -9317,6 +9934,29 @@ Away from articles and deadlines, life usually shifts to making music, taking ph
       <category>Hacker News</category>
       <pubDate>Mon, 07 Sep 2026 01:18:17 +0000</pubDate>
       <dc:creator>zatkin</dc:creator>
+    </item>
+    <item>
+      <title>216M Spy TVs – The LG Smart TV Problem [video]</title>
+      <link>https://www.youtube.com/watch?v=6IFVTcM28KA</link>
+      <description>Enjoy the videos and music you love, upload original content, and share it all with friends, family, and the world on YouTube.</description>
+      <content:encoded><![CDATA[<a href="https://www.youtube.com/about/">About</a>
+<a href="https://www.youtube.com/about/press/">Press</a>
+<a href="https://www.youtube.com/about/copyright/">Copyright</a>
+<a href="https://www.youtube.com/creators/">Creators</a>
+<a href="https://www.youtube.com/ads/">Advertise</a>
+<a href="https://developers.google.com/youtube">Developers</a>
+<a href="https://www.youtube.com/t/terms">Terms</a>
+<a href="https://www.youtube.com/t/privacy">Privacy</a>
+<a href="https://www.youtube.com/about/policies/">Policy &amp; Safety</a>
+<a href="https://www.youtube.com/howyoutubeworks?utm_campaign=ytgen&amp;utm_source=ythp&amp;utm_medium=LeftNav&amp;utm_content=txt&amp;u=https%3A%2F%2Fwww.youtube.com%2Fhowyoutubeworks%3Futm_source%3Dythp%26utm_medium%3DLeftNav%26utm_campaign%3Dytgen">How YouTube works</a>
+<a href="https://www.youtube.com/new">Test new features</a>
+<a href="https://tv.youtube.com/learn/nflsundayticket">NFL Sunday Ticket</a>
+<p>© 2026 Google LLC</p>
+<p><a href="https://news.ycombinator.com/item?id=49592375">Comments on Hacker News</a></p>]]></content:encoded>
+      <guid isPermaLink="true">https://www.youtube.com/watch?v=6IFVTcM28KA</guid>
+      <category>Hacker News</category>
+      <pubDate>Mon, 07 Sep 2026 00:22:04 +0000</pubDate>
+      <dc:creator>treve</dc:creator>
     </item>
     <item>
       <title>MathKernel: An evidence-aware multi-engine mathematics kernel and MCP server</title>
@@ -12970,610 +13610,6 @@ Asahi Linux developers announced today that they are now officially supporting t
       <pubDate>Sun, 06 Sep 2026 14:08:59 +0000</pubDate>
       <media:content url="https://www.phoronix.com/assets/categories/apple.webp" type="image/webp" medium="image"/>
       <dc:creator>mdp2021</dc:creator>
-    </item>
-    <item>
-      <title>The many mysteries and lessons of the Bayeux tapestry</title>
-      <link>https://economist.com/interactive/culture/2026/09/03/the-many-mysteries-and-lessons-of-the-bayeux-tapestry</link>
-      <description>A new show at the British Museum will focus the world’s attention on a medieval marvel</description>
-      <content:encoded><![CDATA[<time>Sep 3rd 2026</time>
-<p>F</p>
-<small>rom Led Zeppelin</small>
-<p> to </p>
-<a href="https://www.economist.com/obituary/2016/01/16/starman-jones">David Bowie</a>
-<p>, London has welcomed plenty of famous acts for what was billed as a once-in-a-lifetime performance. Now a colourful, ancient piece of linen roughly the length of a Boeing 747 has raised the bar. It is back in England for the first time in around 950 years. Its run at the British Museum, which opens on September 10th, is being heralded as a once-in-a-millennium show.</p>
-<p>And with good reason. The Bayeux tapestry enjoys something akin to rock-star status. This summer it has been the hottest ticket in Britain. When spots went on sale in July, they sold out almost as fast as you can say “William the Conqueror”. (More tickets, for January to July 2027, have yet to be released.) Around 1m people are expected to see the tapestry in London while it is </p>
-<a href="https://www.economist.com/culture/2026/07/09/the-real-value-of-the-bayeux-tapestry">on loan from the French state</a>
-<p>, making it one of the best-attended museum exhibitions in British history.</p>
-<p>Most would say that, as the only surviving medieval artwork of its size, the Bayeux tapestry is priceless. But as part of a government indemnity scheme, Britain’s Treasury has put a figure on it, insuring the tapestry for £800m ($1.1bn). That is on a par with the highest value for a travelling artwork ever made public: the $100m assigned to the “</p>
-<a href="https://www.economist.com/culture/2022/06/16/where-did-the-mona-lisa-smile">Mona Lisa</a>
-<p>” when it travelled to America in 1962-63, worth $1.1bn today.</p>
-<figure><img src="https://economist.com/interactive/culture/2026/09/03/the-many-mysteries-and-lessons-of-the-bayeux-tapestry/processed-images/1424/20260829_OPP001.jpg"/> <figcaption> Easy does it: conservators did a condition check during installation Image: J.Fernandes/The Trustees of the British Museum</figcaption></figure>
-<p>Like da Vinci’s painting, the Bayeux tapestry is a masterpiece whose power depends, at least in part, on its mystery. But there is not one main question, as there is with the smiling (or would you say unsmiling?) “Mona Lisa”. Instead, the tapestry raises dozens of questions that the centuries have complicated. Some of the central ones—who stitched it, why and its intended destination—are disputed still. “If you ask ten different historians working on the period, you might get ten different answers,” says Benjamin Pohl, a professor at the University of Bristol, who published a paper suggesting that it may have been designed as mealtime reading for monks.</p>
-<p>A few facts are undisputed. The tapestry depicts William the Bastard-turned-Conqueror’s triumph in the </p>
-<a href="https://www.economist.com/christmas-specials/2016/12/24/how-norman-rule-reshaped-england">Norman conquest of 1066</a>
-<p>. (Some call this the last time England was successfully invaded; others point to the largely bloodless arrival of another William, of Orange, in 1688.) You can recognise the Normans by their gauche hairstyle—with long locks and the back of their heads shaved—while the English sport moustaches. (Only one of those looks has aged well.)</p>
-<p>The tapestry, probably commissioned by Bishop Odo of Bayeux to celebrate the victory of William, his half-brother, is a piece of war propaganda that looks like an ancient comic strip. Many scholars think it was made in Canterbury in the 1070s-80s before travelling to Bayeux, to hang in Odo’s cathedral. It offers an intricate, sometimes wandering account of a broken promise and ascent to power that changed England’s royal line, class structure and the English language itself.</p>
-<p>It begins with Edward the Confessor, England’s childless king, telling Harold Godwinson, a nobleman, to travel to Normandy.</p>
-<p>The “next” is yet another mystery. How the tapestry was meant to end is unknown: the last bit is missing. “It could have gone on for a few centimetres or a few metres,” says Professor Pohl. Many assume it concluded with William’s coronation on Christmas Day. But no one can be sure. A competition has invited children to imagine and stitch a conclusion.</p>
-<p>Those lucky enough to get up close to the tapestry have about 70 metres of details to take in. The linen teems with 737 animals and 627 people (only three of whom, in the main embroidery, are women). There are the Latin phrases, the </p>
-<a href="https://www.economist.com/culture/2024/03/14/how-aesops-fables-fostered-a-secret-language-of-protest-in-russia">Aesop’s fables</a>
-<p> in the margins, the bizarrely prominent genitalia. The significance of the tapestry is not just in the details, however, but in what its story and survival reveal about history, objects and memory.</p>
-<figure><img src="https://economist.com/interactive/culture/2026/09/03/the-many-mysteries-and-lessons-of-the-bayeux-tapestry/imageFadeIn/AesopFables_Desktop1_700.jpg"/>  <figcaption> The tales and tails of Aesop’s fables </figcaption></figure>
-<p>Take the unknowns, for instance. “Things where you have to fill in the blanks are more alluring,” insists Nick Cullinan, director of the British Museum. “The fact that there’s something missing invites you in…to engage with it and think about why it was made, what’s missing, and what that means.” Think of everyone who flocks to the armless “Venus de Milo” in the Louvre. Was she once carrying an apple, or modestly trying to reach so the drapery would not slip below her hips? The absent limbs keep people guessing.</p>
-<p>There is also the question of why it is even called a tapestry at all when it is really an embroidery (the former requiring a loom, the latter done by hand). But that is a mystery only for the uninitiated: a French scholar in the 18th century called it a </p>
-<i>tapisserie</i>
-<p> (tapestry), and it stuck. “It was a bloke not knowing the difference between his weaving and his embroidery,” says Leonie Hicks, a professor at Canterbury Christ Church University.</p>
-<h2>Quite the yarn</h2>
-<p>Study the tapestry long enough and it will make you consider deeper questions, too, such as who determines people’s understanding of the past. (This is an idea pored over by plenty of historians and the wisest of sources, “</p>
-<a href="https://www.economist.com/books-and-arts/2015/12/16/patriotism-on-broadway">Hamilton</a>
-<p>”: one song in the musical is called “Who Lives, Who Dies, Who Tells Your Story?”) Maybe a decade, and possibly more, elapsed between the end of the Battle of Hastings and when the tapestry was made: how much rumour and hearsay are woven into it as a result?</p>
-<p>And then there were those in the 19th century, armed with needles and thread, who set about “fixing” it. Everyone who has heard of the year 1066 knows that Harold was eighty-sixed by an arrow to the eye. But was he? The earliest studies of the tapestry do not show that an arrow was involved. What you see on the tapestry is the work of a restorer, who may have taken creative liberties. Michael Lewis, a lead curator of the British Museum’s exhibition and co-author of “The Story of the Bayeux Tapestry”, thinks the arrow was an “accidental addition” by restorers in the 19th century, who were basing their work on a drawing from the 1720s that had included the arrow.</p>
-<figure><img src="https://economist.com/interactive/culture/2026/09/03/the-many-mysteries-and-lessons-of-the-bayeux-tapestry/imageFadeIn/Arrow_desktop_1_700.jpg"/>  <figcaption> Harold gets the sharp end of the stick </figcaption></figure>
-<p>Further embellishments may exist elsewhere, especially towards the end. “The arrow to the eye is probably the most famous and important one,” but there are others reconstructed in “an imaginative way”, says Dr Lewis, including a man wrapped up in vines. A lesson of the Bayeux tapestry, then, is that history is written not just by the victors, but by the restorers.</p>
-<figure><img src="https://economist.com/interactive/culture/2026/09/03/the-many-mysteries-and-lessons-of-the-bayeux-tapestry/imageFadeIn/Vine_Desktop1_700.jpg"/>  <figcaption> The work of an imaginative restorer </figcaption></figure>
-<p>For when these fixers set about their work in the 19th century, much had been lost to them already. The historical record is funny like that: how grains of humour and information are worn down by tides of time. The result is that some scenes are now impossible to decode. The most perplexing one features the only named woman, Aelfgyva, in a doorway, speaking to a cleric who is either caressing or striking her. Nearby a naked man squats, mirroring the priest’s gesture.</p>
-<figure><img src="https://economist.com/interactive/culture/2026/09/03/the-many-mysteries-and-lessons-of-the-bayeux-tapestry/imageFadeIn/Aelfgyva_Desktop_1_700.jpg"/>  <figcaption> One of the tapestry’s most alluring mysteries </figcaption></figure>
-<p>It may have been a sexual scandal so familiar that it required no explanation. It makes you wonder which modern inside jokes and references will still be understood 900 years from now. Will anyone remember Monica Lewinsky?</p>
-<p>One of the most notable things about the tapestry, beyond the sheer unlikelihood of its survival—including almost being used as wagon covers during the French revolution—is that so many leaders have esteemed it for different reasons. </p>
-<a href="https://www.economist.com/culture/2023/11/15/ridley-scotts-napoleon-cuts-the-emperor-down-to-size">Napoleon</a>
-<p> displayed it in Paris at the Musée Napoléon (now known as the Louvre) to drum up public support for his campaigns and encourage people to enlist. The Nazis eyed it as a chronicle of Aryan supremacy and even stole small fragments of it, which Germany returned this year.</p>
-<p>Now it is the turn of Emmanuel Macron, the French president, to use the tapestry for a different goal: </p>
-<a href="https://www.economist.com/britain/2026/09/01/france-is-love-bombing-britain">to strengthen Anglo-French ties</a>
-<p>. The hard-fought loan to the British Museum seemed a long shot. Five previous attempts to borrow and exhibit it in London (including on the 900th anniversary of the conquest) resulted in British defeat. But Mr Macron triumphed where others failed, overcoming the concerns of some French curators that shipping the delicate tapestry would lead to damage. It helped that the Bayeux Museum, its usual home, was embarking on a long-overdue renovation.</p>
-<p>On September 2nd Mr Macron and King Charles III met at the British Museum to view the tapestry and celebrate the loan. Champagne was noticeably not on offer, but English sparkling wine flowed. So did the jokes. It could have been called “the Canterbury tapestry”, King Charles mused. Mr Macron noted the tapestry’s portrayal of wine being loaded onto Norman ships bound for battle in England: “the French always having certain priorities”. It was a celebratory evening of good lines and great moods.</p>
-<figure><img src="https://economist.com/interactive/culture/2026/09/03/the-many-mysteries-and-lessons-of-the-bayeux-tapestry/processed-images/1424/20260905_OPP001.jpg"/> <figcaption> Macron and King Charles, battle buddies Image: Getty Images</figcaption></figure>
-<p>The fragile tapestry looks rather stronger than politicians in this day and age. Sir Keir Starmer, who negotiated the loan, is now out. The year “1066 was not the only time we had a rapid succession of leaders,” quipped George Osborne, a British former politician who is now chair of the British Museum. Mr Macron will leave office next year and is sure to see the loan as one of his signature achievements.</p>
-<h2>Sew far, sew good</h2>
-<p>In short, national borders, allegiances and hairstyles may change over the centur­ies, but objects are still important in diplomacy. Later this year, in exchange for borrowing the tapestry, several works from the British Museum’s collection will travel to France. Though the French asked for the </p>
-<a href="https://www.economist.com/books-and-arts/2021/10/28/how-the-rosetta-stone-was-deciphered">Rosetta Stone</a>
-<p>, they had to settle for other treasures, such as medieval chess pieces.</p>
-<p>As for how to play the game to secure a coveted ticket to the exhibition, many are going to lose. The tapestry is being laid flat and stretched out in a straight line: you have to hover over a clear case to see it. This limits the number of people who can go through, as do French rules on how much light it can be exposed to in a single day. “We could sell this exhibition out many, many times over,” says Mr Cullinan of the British Museum. “We want as many people to see it as possible, but we want everyone who comes to have a really positive experience.”</p>
-<p>For those who miss out in London, they can travel to Bayeux once the museum reopens and see the celebrated tapestry there. Many Brits are surely already plotting their Norman invasion. </p>
-<p>■</p>
-<small>Illustrations: Phil Hackett</small>
-<br/>
-<small>Tapestry photographs: Antoine Cazin/La Fabrique de Patrimoines en Normandie</small>
-<i>For more on the latest books, films, </i>
-<i><small>TV</small></i>
-<i> shows, albums and controversies, sign up to </i>
-<a href="https://www.economist.com/culture/2022/11/23/introducing-plot-twist-our-new-culture-newsletter"><i>Plot Twist</i></a>
-<p><a href="https://news.ycombinator.com/item?id=49586435">Comments on Hacker News</a></p>]]></content:encoded>
-      <guid isPermaLink="true">https://economist.com/interactive/culture/2026/09/03/the-many-mysteries-and-lessons-of-the-bayeux-tapestry</guid>
-      <category>Hacker News</category>
-      <pubDate>Sun, 06 Sep 2026 13:38:07 +0000</pubDate>
-      <media:content url="https://economist.com/interactive/culture/2026/09/03/the-many-mysteries-and-lessons-of-the-bayeux-tapestry/processed-images/1424/20260829_OPP001.jpg" type="image/jpeg" medium="image"/>
-      <dc:creator>andsoitis</dc:creator>
-    </item>
-    <item>
-      <title>I'm teaching an introductory 12 week course on Quantum Oracle Engineering</title>
-      <link>https://shukla.io/quantum-oracle-engineering/</link>
-      <description>A twelve-chapter course on quantum oracle engineering: screening problems for quantum advantage, compiling Monte Carlo rollouts into reversible circuits, and certifying quantum building blocks beyond the reach of any test.</description>
-      <content:encoded><![CDATA[<h2 id="a-programmers-guide-to-building-the-right-oracle">A Programmer’s
-Guide to Building the Right Oracle</h2>
-<p><a href="https://qce.quantum.ieee.org/2026/">IEEE Quantum Week 2026
-(QCE26)</a>, Toronto, Canada.</p>
-<p>Most quantum speedup claims depend on an oracle that exists only on
-paper. This course teaches the craft of building practical quantum
-circuits from scratch.</p>
-<p>
-Choose the problem, build the oracle
-</p>
-<h2>1. A different computer</h2>
-<ul>
-<li><strong>CPU, GPU, QPU</strong>: three devices, three workloads</li>
-<li>the QPU’s job: <strong>fewer samples</strong> for an average</li>
-<li><strong><img alt="order one over epsilon" src="https://shukla.io/quantum-oracle-engineering/assets/eq-theta-eps.svg"/></strong>
-queries in place of
-<strong><img alt="order one over epsilon squared" src="https://shukla.io/quantum-oracle-engineering/assets/eq-theta-eps2.svg"/></strong>
-samples</li>
-<li><strong>three questions</strong>: task randomness, precision, oracle
-cost</li>
-<li>Grover on a database loses to <strong>data loading</strong></li>
-<li>break-even:
-<strong><img alt="t oracle less than t roll over C times P times g" src="https://shukla.io/quantum-oracle-engineering/assets/eq-break-even-inline.svg"/></strong></li>
-</ul>
-<a href="https://shukla.io/quantum-oracle-engineering/a-different-computer/">View slides</a>
-<h2>2. The Monte Carlo speedup</h2>
-<figure>
-<img alt="Two dice tumbling across a green felt table" height="600" src="https://shukla.io/quantum-oracle-engineering/img/myth02.png" width="600"/>
-</figure>
-<ul>
-<li>a <strong>query count</strong> is not a runtime</li>
-<li>the payoff qubit’s angle <strong>encodes the win
-probability</strong></li>
-<li><strong>amplitude estimation</strong> reads that angle to precision
-ε</li>
-<li>best of k arms:
-<strong><img alt="omega of k over epsilon squared" src="https://shukla.io/quantum-oracle-engineering/assets/eq-omega-k.svg"/></strong>
-samples vs
-<strong><img alt="order root k over epsilon, up to logs" src="https://shukla.io/quantum-oracle-engineering/assets/eq-otilde-k.svg"/></strong>
-queries</li>
-<li><strong>Go</strong> fails question 1, the <strong>bandit</strong>
-fails question 3</li>
-<li><strong>Sway</strong>: gaps of 10⁻⁴ on a 32×32 board</li>
-<li>the same oracle shape fits an <strong>epidemic model</strong></li>
-</ul>
-<h2>3. Ship it</h2>
-<figure>
-<img alt="An open crate of machine parts sitting on an unread blueprint" height="600" src="https://shukla.io/quantum-oracle-engineering/img/myth03.png" width="600"/>
-</figure>
-<ul>
-<li>the contract: board, two moves, randomness tape, <strong>payoff
-qubit</strong></li>
-<li>one round: Black places, White places, <strong>every stone
-rolls</strong></li>
-<li>the <strong>register layout</strong> in Qiskit</li>
-<li>a uniform move choice over the <strong>legal cells</strong></li>
-<li>the d20 as a <strong>5-bit comparison</strong> against a neighbor
-count</li>
-<li>3×3, two rounds: <strong>169 qubits</strong></li>
-</ul>
-<h2>4. Reversible by design</h2>
-<figure>
-<img alt="A cassette tape with its ribbon spooled out in a loop behind it" height="600" src="https://shukla.io/quantum-oracle-engineering/img/myth04.png" width="600"/>
-</figure>
-<ul>
-<li>amplitude estimation runs the rollout <strong>forward and
-backward</strong></li>
-<li>decide from the old board, write to a <strong>shadow board</strong>,
-keep the old one</li>
-<li><strong>in-place updates</strong> read a neighbor that already
-flipped</li>
-<li>erase <strong>move-selection scratch</strong> before the board
-changes</li>
-<li>one <strong>payoff qubit</strong>, everything else inverted</li>
-<li>the <strong>qubit and gate count</strong> as the board grows</li>
-</ul>
-<p>
-Make it correct
-</p>
-<h2>5. Garbage collection</h2>
-<figure>
-<img alt="A trash can overflowing with bags that were never hauled away" height="600" src="https://shukla.io/quantum-oracle-engineering/img/myth05.png" width="600"/>
-</figure>
-<ul>
-<li>reversible circuits have <strong>no delete</strong></li>
-<li>entangled scratch <strong>breaks interference</strong></li>
-<li><strong>Bennett</strong>: compute, copy out, uncompute</li>
-<li>the inverse must see the <strong>same inputs</strong> as the forward
-pass</li>
-<li><strong>peak scratch</strong> sets the qubit count</li>
-<li>clean scratch is <strong>necessary, not sufficient</strong></li>
-</ul>
-<h2>6. Measure to erase</h2>
-<figure>
-<img alt="A cracked jar of water patched with bandages, still leaking" height="600" src="https://shukla.io/quantum-oracle-engineering/img/myth06.png" width="600"/>
-</figure>
-<ul>
-<li>the textbook says <strong>never measure</strong> mid-circuit</li>
-<li>compilers measure scratch to <strong>reclaim qubits</strong></li>
-<li>Gidney’s <strong>AND†</strong>: an X-basis measurement instead of a
-Toffoli</li>
-<li>a random sign, fixed by <strong>one phase gate</strong></li>
-<li><strong>half the T gates</strong> of an adder</li>
-<li>safe when scratch holds a <strong>basis function</strong> of the
-data</li>
-</ul>
-<h2>7. Calling conventions</h2>
-<figure>
-<img alt="Interlocking gears meshing edge to edge, every tooth having to fit its neighbor" height="600" src="https://shukla.io/quantum-oracle-engineering/img/myth07.png" width="600"/>
-</figure>
-<ul>
-<li>three scratch classes: <strong>clean, borrowed, conditionally
-clean</strong></li>
-<li>Qiskit passes the reuse condition as <strong>unchecked
-convention</strong></li>
-<li>a block can <strong>destroy its own condition</strong></li>
-<li>two correct blocks, one <strong>unguaranteed boundary</strong></li>
-<li><strong>restoration types</strong>: Hoare contracts over
-subspaces</li>
-<li>a 12-bit oracle: <strong>20 qubits to 13</strong></li>
-</ul>
-<h2>8. Proof-carrying circuits</h2>
-<figure>
-<img alt="A sealed jar of identical blue pills with a single red one inside" height="600" src="https://shukla.io/quantum-oracle-engineering/img/myth11.png" width="600"/>
-</figure>
-<ul>
-<li>truth tables <strong>cannot see a phase</strong></li>
-<li>full-basis checking costs <strong>2ⁿ</strong></li>
-<li>certificates replayed by a <strong>Lean kernel</strong></li>
-<li>gate-by-gate checking needs <strong>closure</strong> under the gate
-set</li>
-<li>past <strong>Toffoli</strong>, assertions grow exponentially</li>
-<li><strong>one theorem per family</strong>, checked in
-milliseconds</li>
-</ul>
-<p>
-Count it, test it, judge it
-</p>
-<h2>9. Where the quantum lives</h2>
-<figure>
-<img alt="A hand pulling a book from a shelf, red light spilling from the gap" height="600" src="https://shukla.io/quantum-oracle-engineering/img/myth09.png" width="600"/>
-</figure>
-<ul>
-<li>a process that runs <strong>step by step</strong></li>
-<li>between any two steps, <strong>classical bits</strong> would do</li>
-<li>no one classical carrier works for <strong>all steps at
-once</strong> (Bisio)</li>
-<li>the <strong>SHIFTS channel</strong>: one qubit in, two out, built to
-show it</li>
-<li>the quantum lives in the <strong>memory between steps</strong></li>
-</ul>
-<h2>10. All or nothing</h2>
-<figure>
-<img alt="One oversized box balanced on a stack of small ones: each piece is cheap, the whole is not" height="600" src="https://shukla.io/quantum-oracle-engineering/img/myth12.png" width="600"/>
-</figure>
-<ul>
-<li>running n copies <strong>does not amortize</strong></li>
-<li>quantum memory: <strong>zero or linear</strong> in n, nothing
-between</li>
-<li><strong><img alt="log n" src="https://shukla.io/quantum-oracle-engineering/assets/eq-log-n.svg"/>
-and
-<img alt="root n" src="https://shukla.io/quantum-oracle-engineering/assets/eq-sqrt-n.svg"/></strong>
-scalings ruled out</li>
-<li>the same law for <strong>preparing states</strong></li>
-<li>SHIFTS: at least <strong>0.03 qubits per copy</strong></li>
-<li>a <strong>theorem</strong>, with constants</li>
-</ul>
-<h2>11. Test, don’t trust</h2>
-<figure>
-<img alt="A basket of red apples with one rotten apple hidden in the middle" height="600" src="https://shukla.io/quantum-oracle-engineering/img/myth08.png" width="600"/>
-</figure>
-<ul>
-<li>a test with <strong>single-qubit measurements</strong> only</li>
-<li>a correct device passes <strong>every time</strong></li>
-<li>q qubits of memory pass with probability at most
-<strong><img alt="two to the q times one minus gamma to the n" src="https://shukla.io/quantum-oracle-engineering/assets/eq-mem-bound.svg"/></strong></li>
-<li>too little memory fails <strong>exponentially fast</strong></li>
-<li>the device stays a <strong>black box</strong></li>
-</ul>
-<h2>12. Audit the next claim</h2>
-<figure>
-<img alt="Pages flying off a clipboard faster than anyone can check them" height="600" src="https://shukla.io/quantum-oracle-engineering/img/myth10.png" width="600"/>
-</figure>
-<ul>
-<li>the AI era’s assumption: <strong>compute closes every
-gap</strong></li>
-<li>the
-<strong><img alt="one over g squared" src="https://shukla.io/quantum-oracle-engineering/assets/eq-g2.svg"/>
-wall</strong>: tiny gaps, irreducible randomness</li>
-<li><strong>weak baselines</strong>, query counts sold as runtimes</li>
-<li><strong>ignored parallelism</strong>, solver randomness as task
-randomness</li>
-<li>oracle cost hidden behind <strong>“assume oracle
-access”</strong></li>
-<li>the three questions on a <strong>headline claim</strong>, live</li>
-</ul>
-<h2>Live Tutorial Agenda</h2>
-<p>Session 1 (90 minutes): Lessons 1 and 2, identifying a problem worth
-accelerating.</p>
-<p>Session 2 (90 minutes): Lessons 3 and 4, building the rollout
-oracle.</p>
-<p>For practitioners and researchers comfortable with qubits, controlled
-gates, and circuit diagrams.</p>
-<p>Taught by <a href="https://shukla.io">Nishant Shukla</a> · Art by <a href="https://lazybunsart.carrd.co">Lazybuns</a></p>
-<p><a href="https://news.ycombinator.com/item?id=49586151">Comments on Hacker News</a></p>]]></content:encoded>
-      <guid isPermaLink="true">https://shukla.io/quantum-oracle-engineering/</guid>
-      <category>Hacker News</category>
-      <pubDate>Sun, 06 Sep 2026 13:00:34 +0000</pubDate>
-      <media:content url="https://shukla.io/quantum-oracle-engineering/assets/eq-theta-eps.svg" type="image/svg+xml" medium="image"/>
-      <dc:creator>BinRoo</dc:creator>
-    </item>
-    <item>
-      <title>2026 Hugo Awards</title>
-      <link>https://www.thehugoawards.org/</link>
-      <description>The Official Site of The Hugo Award</description>
-      <content:encoded><![CDATA[<a href="https://www.thehugoawards.org/2026/08/2026-hugo-awards-results/"><time datetime="2026-08-31T09:54:53+01:00">August 31, 2026</time></a>
-<p> ~ </p>
-<p>LAcon V, the 84th World Science Fiction Convention, presented the 2026 Hugo Awards in a ceremony held at the convention on Sunday, August 30th, 2026. The full results including the detailed reports on voting are published on the <a href="https://www.lacon.org/2026hugos/">LACon V website</a>. The results will be updated here on The Hugo Awards site as soon as our bandwidth allows.</p>
-<p>Best Novel<br/>
-The Everlasting by Alix E. Harrow (Tor US; Tor UK)</p>
-<p>Best Novella<br/>
-The River Has Roots by Amal El-Mohtar (Tordotcom; Arcadia UK)</p>
-<p>Best Novelette<br/>
-“Never Eaten Vegetables” by H.H. Pak (Clarkesworld, Issue 220)</p>
-<p>Best Short Story<br/>
-“In My Country” by Thomas Ha (Clarkesworld, Issue 223)</p>
-<p>Best Series<br/>
-Old Man’s War by John Scalzi (Tor US; Tor UK)</p>
-<p>Best Graphic Story or Comic<br/>
-A Wizard of Earthsea: A Graphic Novel, written by Ursula K. Le Guin, adapted and art by Fred Fordham (Clarion Books; Walker UK)</p>
-<p>Best Related Work<br/>
-Inventing the Renaissance by Ada Palmer (University of Chicago Press US, Head of Zeus UK)</p>
-<p>Best Dramatic Presentation, Long Form<br/>
-Sinners, screenplay by Ryan Coogler, directed by Ryan Coogler (Proximity Media, Warner Bros. Pictures)</p>
-<p>Best Dramatic Presentation, Short Form<br/>
-Murderbot: “All Systems Red”, written by Paul Weitz &amp; Chris Weitz, directed by Roseanne Liang, based on the book All Systems Red by Martha Wells (Apple TV)</p>
-<p>Best Game or Interactive Work<br/>
-Clair Obscur: Expedition 33, developed by Sandfall Interactive, published by Kepler Interactive</p>
-<p>Best Editor Short Form<br/>
-Neil Clarke</p>
-<p>Best Editor Long Form<br/>
-Diana M. Pho</p>
-<p>Best Professional Artist<br/>
-John Picacio</p>
-<p>Best Semiprozine<br/>
-Uncanny Magazine, publisher and editor-in-chief: Michael Damian Thomas; managing editor Monte Lin; poetry editor Betsy Aoki, podcast producers Erika Ensign and Steven Schapansky</p>
-<p>Best Fanzine<br/>
-nerds of a feather, flock together, editors Roseanna Pendlebury, Arturo Serrano, Paul Weimer; senior editors Joe Sherry, G. Brown, Vance Kotrla</p>
-<p>Best Fancast<br/>
-Hugo, Girl!, presented by Haley Zapal, Amy Salley, Lori Anderson, and Kevin Anderson</p>
-<p>Best Fan Writer<br/>
-Jason Sanford</p>
-<p>Best Fan Artist<br/>
-Yuumei</p>
-<p>Best Poem<br/>
-“Hex Supply Customer Support Log” by Elis Montgomery (Strange Horizons, Issue 25 August 2025)</p>
-<p>Lodestar Award for Best YA Book<br/>
-Coffeeshop in an Alternate Universe by C.B. Lee (Feiwel &amp; Friends)</p>
-<p>Astounding Award for Best New Writer (sponsored by Must Read Books Publishing)<br/>
-Antonia Hodgson (1st year of eligibility)</p>
-<p><a href="https://news.ycombinator.com/item?id=49586005">Comments on Hacker News</a></p>]]></content:encoded>
-      <guid isPermaLink="true">https://www.thehugoawards.org/</guid>
-      <category>Hacker News</category>
-      <pubDate>Sun, 06 Sep 2026 12:41:59 +0000</pubDate>
-      <dc:creator>signa11</dc:creator>
-    </item>
-    <item>
-      <title>The pencil case model of creativity</title>
-      <link>https://dub.uu.nl/en/column/pencil-case-model-creativity</link>
-      <description>Our columnist Isabella Saccardi caught herself envying a friend's creative job. But isn't academic research creative as well? "Somewhere along the way, I stopped recognising the creativity in what I was doing," she writes.</description>
-      <content:encoded><![CDATA[<a href="https://dub.uu.nl/en/users/isabella-saccardi">Isabella Saccardi</a>
-<p><a href="https://news.ycombinator.com/item?id=49585703">Comments on Hacker News</a></p>]]></content:encoded>
-      <guid isPermaLink="true">https://dub.uu.nl/en/column/pencil-case-model-creativity</guid>
-      <category>Hacker News</category>
-      <pubDate>Sun, 06 Sep 2026 12:05:34 +0000</pubDate>
-      <dc:creator>jruohonen</dc:creator>
-    </item>
-    <item>
-      <title>Intellectual Fly Is Open (2025)</title>
-      <link>https://bcantrill.dtrace.org/2025/12/05/your-intellectual-fly-is-open/</link>
-      <description>Note: This was originally published as a LinkedIn post on November 11, 2025.</description>
-      <content:encoded><![CDATA[<p><em>Note: This was originally published as
-<a href="https://www.linkedin.com/posts/bryan-cantrill-b6a1_i-need-to-make-a-painful-confession-somehow-activity-7394083873082703872-Qdsw?utm_source=social_share_send&amp;utm_medium=member_desktop_web&amp;rcm=ACoAAAAADUIBvmFvrlB3qaOplWrifjHF0EoJmqg">a LinkedIn post</a> on November 11, 2025.</em></p>
-<p>I need to make a painful confession: somehow, LinkedIn has become an important
-social network to me. This isnât necessarily due to LinkedInâs sparkling
-competence, of course. To the contrary, LinkedIn is the Gerald Ford of social
-networks: the normal one that was left standing as the Richard Nixons and the
-Spiro Agnews of social media imploded around them. As with Gerald Ford, with
-LinkedIn we know that weâre getting something a bit clumsy and boring, but (as
-with post-Watergate America!), weâre also getting something that isnât totally
-crookedâââand thatâs actually a bit of a relief.</p>
-<p>But because I am finding I am spending more time here, we need to have some
-real talk: too many of you are using LLMs to generate content. Now, this isnât
-entirely your fault: as if LLMs werenât tempting enough, LinkedIn itself is
-cheerfully (insistently!) offering to help you "rewrite it with AI." It seems
-so excited to help you out, why not let it chip in and ease your own burden?</p>
-<p>Because holy hell, the writing sucks. Itâs not that itâs mediocre (though
-certainly that!), itâs that it is so stylistically grating, riddled with
-emojis and single-sentence paragraphs and "itâs not justâ¦â but also"
-constructions and (yes!) em-dashes that some of us use naturallyâââbut most
-donât (or shouldnât).</p>
-<p>When you use an LLM to author a post, you may think you are generating
-plausible writing, but you arenât: to anyone who has seen even a modicum of
-LLM-generated content (a rapidly expanding demographic!), the LLM tells are
-impossible to ignore. Bluntly, your intellectual fly is open: lots of people
-noticeâââbut no one is pointing it out. And the problem isnât merely
-embarrassment: when youâââperson whose perspective I want to hear!âââare
-obviously using an LLM to write posts for you, I donât know whatâs real and
-what is in fact generated fanfic. You definitely donât sound like you, soâ¦â
-is the actual content real? I mean, maybe? But also maybe not. Regardless, I
-stop readingâââand so do lots of others.</p>
-<p>To be clear, I think LLMs are incredibly useful: they are helpful for
-brainstorming, invaluable for comprehending text, and they make for
-astonishingly good editors. (And, unlike most good editors, you can freely
-ignore their well-meaning suggestions without fear of igniting a civil war
-over the Oxford comma or whatever.) But LLMs are also lousy writers and (most
-importantly!) they are not you. At best, they will wrap your otherwise real
-content in constructs that cause people to skim or otherwise stop reading; at
-worst, they will cause people who see it for what it is to question your
-authenticity entirely.</p>
-<p>So please, if not for the sanity of all of us than just to give your own
-message the credit it deserves: have some confidence in your own voiceâââand
-write your own content.</p>
-<p><a href="https://news.ycombinator.com/item?id=49585644">Comments on Hacker News</a></p>]]></content:encoded>
-      <guid isPermaLink="true">https://bcantrill.dtrace.org/2025/12/05/your-intellectual-fly-is-open/</guid>
-      <category>Hacker News</category>
-      <pubDate>Sun, 06 Sep 2026 11:56:43 +0000</pubDate>
-      <dc:creator>cyb0rg0</dc:creator>
-    </item>
-    <item>
-      <title>Doomscrolling Ourselves to Death</title>
-      <link>https://www.edwest.co.uk/p/doomscrolling-ourselves-to-death</link>
-      <description>James Marriott’s The New Dark Ages</description>
-      <content:encoded><![CDATA[<p>I’m not the only parent who feels increasingly anxious about their children’s media diet. For teenage boys in particular, entertainment often comes in the form of YouTube, which for any adult briefly glancing at the screen seems to feature an array of thumbnailed gawping imbeciles, besides an invitation to watch the latest work of creativity: ‘I took a bath full of Diet Coke and Mentos’ or ‘I cemented a microwave to my head’. In comparison to this, the mindless television I watched in the 1990s seems as narratively complex as Dostoevsky.</p>
-<p>Most of all, it’s notable that many children aren’t reading anymore, and it’s steadily become a topic of interest among fellow parents, then worry, and now panic. It’s impossible to ignore the fact that something quite bad is happening.</p>
-<p>Every catastrophe needs its Jeremiah, and for this we have <em>Times</em> columnist James Marriott, whose increasing anxiety about the decline of literacy was articulated in <a href="https://jmarriott.substack.com/p/the-dawn-of-the-post-literate-society-aa1">a hugely popular substack post </a>last year. Having written extensively about how no one reads books anymore, he decided to turn the subject into a book,<em><a href="https://www.amazon.co.uk/New-Dark-Ages-Reading-Post-Literate/dp/1847929516/ref=sr_1_1?crid=U6J24ULNKMPQ&amp;dib=eyJ2IjoiMSJ9.asj4M8AnXMj4v3ZJO-sJ41wHgg82OJAtS1F1k20BwJ6nwLvB2rHMO0zyeRvNv2RPPBhVeITysk8cRSGalZrbz14bvoD-V7Q9zon3oX8YksO3ZMX1uhIJI5LacEqAGWevZu9zr_bHAHZNnZ-HItP3bysvdOji67K2zz8AqKabY8QO8qtg9zEeukhGM5j-QuG-pG9VzhWZmw52Cc9IMyy3L2kXrfWZP_ZH4m2ZMHYgqAA.4Fsi1tuKjIJXyT0wI-xqmCIUVYQjyMw3Tz5ngoBDXQM&amp;dib_tag=se&amp;keywords=The+New+Dark+Ages&amp;qid=1778246092&amp;sprefix=the+new+dark+ages+%2Caps%2C184&amp;sr=8-1">The New Dark Ages</a></em>, published this week.</p>
-<figure><a href="https://substackcdn.com/image/fetch/$s_!feJo!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F94fac428-a214-4f93-a506-c4d6a4918bb5_642x982.png"><img height="982" src="https://substackcdn.com/image/fetch/$s_!feJo!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F94fac428-a214-4f93-a506-c4d6a4918bb5_642x982.png" width="642"/></a></figure>
-<p>I wouldn’t call the book ‘urgent’ because I usually take that to mean ‘worthy scolding by an ideological ally’; it’s entertaining, informative, often amusing and makes a coherent case in 50,000 or so words, which many of us can still manage. But the implications he lays out are disturbing, and influence everything around us.</p>
-<p>James and I have become friends over the past couple of years, drawn together by a mutual sense of despair, and he’s probably the only person in journalism even more pessimistic than I am. If you believe the media to be a circle-jerk of people helping their mates (which it is, obviously), bear that in mind, but reading his prose one gets a sense of how likeable as well as articulate he is, even if born in the wrong decade. His upbringing will seem as alien to those raised in the coming years as the world of Boethius would have been to Alfred the Great.</p>
-<p>‘Literature was our religion: the way we explained and interpreted our lives. As a child I quickly learned that every possible event — from a major bereavement to a minor playground contretemps — could be cross-referenced against a novel by Thomas Hardy or a poem by Philip Larkin. There was a quote for everything. I was dragged off to Shakespeare plays at what now strikes me as a rather cruelly young age (“if you’re not enjoying it”, I remember my dad telling me, “you can just read your book instead”). We worshipped pretty much all the canonical English poets but in our pantheon of literary saints, Shakespeare was Jesus or, more probably, God.</p>
-<p>‘We celebrated his birthday every year with a homemade cake and in the holidays we were taken on solemn pilgrimages to Stratford-upon-Avon. I recall that I was once presented with a Shakespeare-themed stuffed bear (it was wearing a t-shirt with a quotation from <em>Hamlet</em>).’</p>
-<p>Such a veneration for the written word naturally made him sensitive to disturbing stories about declining literacy that began circulating around the turn of the decade. ‘The first rumours that something important was happening reached me via friends working in universities,’ he writes: ‘I came close to going into academia myself (though I don’t think the world is a poorer place for the loss of my proposed PhD on landscape imagery in post-war British poetry).’</p>
-<p>Anecdotes were soon backed up by data, showing significant declines in reading comprehension among students, as well as an even sharper drop in the number of adults and children reading for pleasure. The chief suspect seemed obvious: it’s the phones. (Everything’s ‘the phones’). Yet the more Marriott looked into it, the more he came to believe that the real transformation came with television, as Neil Postman had warned in his 1985 polemic <em>Amusing Ourselves to Death</em>.</p>
-<p>‘Postman believed that the rise of TV — with its bias towards triviality and charismatic personalities — was beginning to undermine the kinds of reasoned and productive public discourse on which a civilised democracy depends. He was dismissed by some of his critics as a crank and a Luddite. The passing of time has revealed that he was a prophet.’</p>
-<p>Having collapsed at the end of antiquity, literacy rates began to show an uptick from the 12<sup>th</sup> century, initially in the urban centres of northern Italy but then rapidly rising with the invention of printing; even then, however, the nascent books trade overestimated how keen the public were, and he recalls the case of ‘two hapless Roman publishers who wrote to Pope Sixtus IV at the end of the fifteenth century asking for help because they had printed 20,000 books in a fit of over-enthusiasm and were unable to sell any of them.’</p>
-<p>Then came Protestantism, with its emphasis on reading the Bible - in Sweden the Lutheran Church even banned the illiterate from marrying - and the Enlightenment, of which Marriott is a great fan. This produced both a republic of letters among our continent’s intellectual elite, but a much broader spread of empathy, enabling many  people to see beyond the categories of social class, sex or race, into the soul and mind within.</p>
-<p>‘In a book you can find yourself paying close attention to someone you might have very easily dismissed had you encountered them in real life. The wealthy male readers of <em>Pamela</em> spent hours with the innermost thoughts of a serving girl, a kind of person many of them would not have given so much as a second thought to had they encountered her in the street.’ </p>
-<p>Likewise, with readers of Olaudah Equiano’s memoir <em>The Interesting Narrative,</em> now able to see life through the eyes of a slave in a way that was transformative: ‘what it was like to be stolen from one’s home by slave traders, packed onto a slave ship and sold like an object.’ In as much as reactionaries felt a ‘moral panic’ about the dangerous effects of reading, Marriott thinks they were right: literacy would indeed undermine a hierarchical society and bring about a more egalitarian, democratic spirit. </p>
-<p>Marriott identifies the peak of literacy sometime in the early to mid-20<sup>th</sup> century, and ‘by 1944, a survey found that “nearly two-thirds of skilled workers and almost half of unskilled workers grew up in homes with substantial libraries”.’ Yet already the great change was coming. In 1948, only 1 per cent of American homes owned a television; by 1954, over half did. Britain was a bit behind, but the idiot box began to take off after Elizabeth II’s Coronation in 1953, fondly remembered as a great communal event because so few people owned a set. Soon, however, television would become the least communal of activities</p>
-<p>‘All of life seemed to be reorganising itself around television’s centrifugal attraction. In living rooms across the world, armchairs and sofas were shifted around so that they no longer faced each other (as they had in most houses for most of history) and were directed instead towards the corner that contained the screen.’</p>
-<p>Social life turned inward, and television had a zombifying effect on many; Marriott notes that ‘in 1956 when a technical error delayed the broadcast of ITV’s <em>Sunday Night at the London Palladium</em>, a third of the audience had simply continued staring blankly at their empty sets until programming resumed.’</p>
-<p>Television came to ‘devour’ our leisure time, and by 1995, as Robert Putnam wrote in<em> Bowling Alone,</em> 40 per cent of it was spent staring at the screen. While Putnam was writing about the United States, its effects were seen everywhere; in the Netherlands, which possesses some of the best data, the introduction of television saw a decline in the average time spent reading, from five to three and a half hours a week between the 1950s and 70s.</p>
-<p>The number of channels exploded with the arrival of cable television, and the number of brain cells fell. Western countries began to see the ‘reverse Flynn Effect’, across-the-board IQ declines, and a natural experiment helps us to identify the culprit:</p>
-<p>‘Because Norway is a long, narrow inaccessible country of mountains, fjords and forests, the roll-out of cable TV was staggered by region. Not everywhere got cable at once… This, plus Norway’s policy of military conscription for men, presented an interesting opportunity for social scientists. By measuring the compulsory intelligence tests taken by all military conscripts the economist Øystein Hernæs was able to map the effect on test scores of cohorts of soldiers as cable TV arrived in their areas. What he found was that as cable marched across Norway intelligence fell in its wake: “for each year that their hometown had full coverage, IQ dropped by 0.08 points”. “Higher exposure to commercial television”, Hernæs’s study bluntly concludes, “reduces cognitive ability”.’</p>
-<p>And then things only got worse, in 2007, with the arrival of the smartphone. As Marriott points out, television has its ill effects, but it also produces something recognisable as art, and requires some degree of concentration. And whereas most people like television, they often <em>hate</em> their phones, seeing the terrifying power they hold.</p>
-<p>If your household is anything like mine, it will feature parents repeatedly nagging their children to ‘get off your phone’, only for them to reply: ‘but you’re on it, too!’ (<em>It’s for work</em>, I lamely reply.) Indeed, many adults struggle to limit their use of these maddeningly addictive devices, which the average person checks 144 times a day; Marriott’s own battles are comical.</p>
-<p>‘In my early adulthood I must have spent hundreds of futile and faintly tragicomic evenings attempting to improve my reading by hiding my smartphone from myself. I have shoved my smartphone behind wardrobes and under beds. I have shut it up in cupboards. I have shoved in into the stale and musty depths of laundry baskets. One particularly desperate (though I also thought, rather ingenious) strategy I developed was to kick my phone haphazardly across the room so it would lodge under some unknown piece of furniture thus making it impossible to retrieve without laboriously hunting for it. I went through a phase of locking my phone up like an evil genie in a “smartphone prison”, a sort of miniature safe with a timer.’ Nothing could stop him succumbing to the Ring’s great power, until he got rid of the device and bought a ‘dumbphone’ instead.</p>
-<p>The impact on writing was not initially apparent. As late as 2017, a short story in the <em>New Yorker </em>was read by a million people and became the subject of widespread discourse. Just nine years later the very idea seems absurd, and far more attention is given to the likes of ‘James Donaldson, the world’s most popular YouTuber and in the apt description of the writer Mark O’Connell, “the Mozart of the attention economy’’.’ His videos ‘take the form of stunts or accelerated miniature gameshows’ with titles such as ‘I Spent 50 Hours in Solitary Confinement’ or ‘Would You Sit in Snakes for $10,000?’ </p>
-<p>For those who can’t manage 30 minutes, there is always TikTok, ‘which has justly been described as the “crack” of the smartphone. It has been estimated that the average TikTok user may scroll through as many as 260 videos in the space of about half an hour.’</p>
-<p>As our attention spans have declined, ‘statistical analysis shows that even pop songs are becoming simpler and more repetitive’, while television dialogue has become less complex, all subtext or insinuation gone as characters spell out the plot to attention-depleted audiences.</p>
-<p>Marriott admits that ‘making this kind of argument is apt to make you sound like a reactionary bore — the kind of armchair-bound windbag who would have droned on about cultural decline all the way through the Beatles, the Rolling Stones and Joni Mitchell. I acknowledge that some readers have already made up their minds that this is precisely who I am and what I am doing. But it’s worth pointing out that the idea that culture is becoming more simple or stagnant and repetitive is not one of history’s recurring moral panics.</p>
-<p>‘As the journalist Adam Mastroianni has neatly pointed out, for most of the twentieth century people tended to worry about the exact opposite problem: that there was too much novelty and too much pretentious difficulty. Traditional ways of doing things seemed to be continually, terrifyingly being exploded or reinvented or displaced. Art, literature, philosophy and fashion simply could not stay still.’ </p>
-<p>Today, even scientific studies are becoming ‘less disruptive’, according to one prestigious journal, ‘increasingly less likely to break with the past in ways that push science and technology in new directions.’ The culture is becoming more conservative in a way that oral societies tend to be – repetitive, static, lacking innovation.</p>
-<p>As literacy has declined, politics has become stupider. Reading <em>Hansard</em> from the 1970s, and comparing it to the level of Parliamentary debate today, is a painful exercise. Classical allusions are gone; metaphor is treated literally, often provoking dim-witted outrage; speaking times continue to shrink as MPs compete in the attention economy.</p>
-<p>Marriott contrasts Harry Truman, who ruled America during the peak of literacy, with the current incumbent. Truman ‘was the son of a livestock dealer in Independence, Missouri. And yet as an earnest and bespectacled schoolboy he spent great tracts of his time in the local library. “Watched over by a plaster bust of Benjamin Franklin,” Truman made his way past all the familiar landmarks of a twentieth century autodidact self-education: The Bible (which he claimed to have read through twice by the time he was twelve), Plutarch’s <em>Lives</em>, the complete works of Shakespeare, Plato’s <em>Republic</em>, Gibbon’s <em>Decline and Fall of the Roman Empire</em>. Eventually, he read every single one of two thousand volumes stored in Independence’s library — including all the encyclopaedias. It’s an inspiring story but not at all a unique one.’</p>
-<p>Donald Trump, meanwhile, is so averse to reading that aides recall that he cannot even make it through one-page memos; his speeches are notably repetitive and characterised by taunting and braggadocio, a reversion to the norms of the oral age. He is an almost Homeric figure, perhaps the first post-literate western leader.</p>
-<p>In the new media ecosystem Marriott sees a reversal of the Enlightenment, epitomised by the likes of Candace Owens, who has ‘more followers on YouTube alone than the entire subscriber base of the <em>New York Times</em>’, a ‘one-woman nonsense machine’ who declares that ‘Stalin was Jewish, science is a “pagan faith” and the French Revolution was started by Jews to “bring down Christian empires”.’ He acknowledges, however, that at least she is no longer a flat earther although, as she has stated, ‘I’m not a round earther either’. </p>
-<p>‘Well, it’s a start.’</p>
-<p>For Marriott, ‘there is nothing inevitable or eternal about modern civilisation in all its desirable complexity and comfort’, nor is it written that it may survive ‘a world filled with demons, anti-vaccine conspiracies and “ways of knowing”’. Democracy followed the rise of literacy, and it may struggle to function in a world where the analytical way of thinking that comes with reading is alien to many voters.</p>
-<p>While much of the most unenlightened rhetoric comes from the populist Right, the more mainstream cultural Left is terrified of appearing ‘elitist’, a charge often made to Marriott in interviews. To which, his only answer is: yes, I suppose.</p>
-<p>‘Many of us are suspicious of hierarchies of cultural value,’ he writes: ‘To suggest that it is “better” to spend your day reading <em>War and Peace</em> than watching TikTok carries the dangerous ring of elitism. I was once reprimanded by a writer in a British magazine for my “belief that some writing is simply ‘better’”; a view, I was told, that is “inherently damaging, and marginalising”… A recent report issued by Britain’s most important cultural funding body, the Arts Council, warned against the use of “terms like excellence” which may promote “unhelpful hierarchies about what kinds of work are valued”.’</p>
-<p>It is notable that the era of peak democracy in the Anglophone world, the mid-20<sup>th</sup> century when the working class had the most political power, was also the peak of literacy. As reading has declined, so the social gap has widened: iPad children tend to come from the poorest backgrounds, while many tech titans, Steve Jobs in particular, limit the amount of technology their children access, and screens at the dinner table have become very non-U. Hierarchies grow starker when elites fail to promote high culture.</p>
-<p>Yet the most startling thing about this book is how far even the nominally well-educated have fallen, so that ‘by the end of the twentieth century a college graduate born after 1969’ read less than someone born before 1950 with a basic level of education. Indeed, ‘nowadays many rich and highly educated people are much less well read than many members of the least privileged classes had been in the middle of the twentieth century.’</p>
-<p>To me, that is the most salient and worrying trend: that people in positions of power and influence are now notably ignorant about history and the classics, comfortable only with referencing pop culture. I suspect that the crisis of faith in our institutions is driven not just by a sense that they are corrupt or biased, but that the people running them are not very smart. The cultural elite has abandoned cultural elitism.</p>
-<p><a href="https://news.ycombinator.com/item?id=49585627">Comments on Hacker News</a></p>]]></content:encoded>
-      <guid isPermaLink="true">https://www.edwest.co.uk/p/doomscrolling-ourselves-to-death</guid>
-      <category>Hacker News</category>
-      <pubDate>Sun, 06 Sep 2026 11:53:40 +0000</pubDate>
-      <media:content url="https://substackcdn.com/image/fetch/$s_!feJo!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F94fac428-a214-4f93-a506-c4d6a4918bb5_642x982.png" type="image/png" medium="image"/>
-      <dc:creator>shubhamjain</dc:creator>
-    </item>
-    <item>
-      <title>New all in one 6502 computer (Neo6502kbd)</title>
-      <link>https://olimex.wordpress.com/2026/09/04/new-open-source-hardware-variant-of-neo6502-now-includes-keyboard-4-usb-hosts-uext-power-switch-and-usb-c-for-power-and-programming-all-in-one-keyboard-body/</link>
-      <description>Do you remember Karateka, Lode Runner, and Cross Fire on the Apple ][? Our Neo6502kbd brings it all back — an all-in-one retro computer with a real 6502 processor that can emulate the Apple ][ and …</description>
-      <content:encoded><![CDATA[<h2><a href="https://olimex.wordpress.com/2026/09/04/new-open-source-hardware-variant-of-neo6502-now-includes-keyboard-4-usb-hosts-uext-power-switch-and-usb-c-for-power-and-programming-all-in-one-keyboard-body/">New Open Source Hardware variant of Neo6502 now includes Keyboard, 4 USB hosts, UEXT, power switch and USB-C for power and programming all in one keyboard body</a></h2>
-<p>
-
-in <a href="https://olimex.wordpress.com/category/6502/">6502</a>, <a href="https://olimex.wordpress.com/category/apple2/">apple2</a>, <a href="https://olimex.wordpress.com/category/basic/">BASIC</a>, <a href="https://olimex.wordpress.com/category/new-product/">new product</a>, <a href="https://olimex.wordpress.com/category/open-source/">open source</a>, <a href="https://olimex.wordpress.com/category/oshw-2/">OSHW</a>, <a href="https://olimex.wordpress.com/category/retro-computers/">Retro computers</a>, <a href="https://olimex.wordpress.com/category/uext/">UEXT</a>
-Tags: <a href="https://olimex.wordpress.com/tag/6502/">6502</a>, <a href="https://olimex.wordpress.com/tag/apple/">apple</a>, <a href="https://olimex.wordpress.com/tag/apple2/">apple2</a>, <a href="https://olimex.wordpress.com/tag/atmos/">atmos</a>, <a href="https://olimex.wordpress.com/tag/basic/">BASIC</a>, <a href="https://olimex.wordpress.com/tag/computer/">computer</a>, <a href="https://olimex.wordpress.com/tag/cpm/">cpm</a>, <a href="https://olimex.wordpress.com/tag/forth/">forth</a>, <a href="https://olimex.wordpress.com/tag/oric/">oric</a>, <a href="https://olimex.wordpress.com/tag/pascal/">pascal</a>, <a href="https://olimex.wordpress.com/tag/retro/">retro</a>
-</p>
-<br/>
-<figure><a href="https://olimex.wordpress.com/wp-content/uploads/2026/09/neo6502kbd-1.jpg"><img height="540" src="https://olimex.wordpress.com/wp-content/uploads/2026/09/neo6502kbd-1.jpg?w=540" width="540"/></a></figure>
-<hr/>
-<figure><a href="https://olimex.wordpress.com/wp-content/uploads/2026/09/neo6502kbd-3.jpg"><img height="540" src="https://olimex.wordpress.com/wp-content/uploads/2026/09/neo6502kbd-3.jpg?w=540" width="540"/></a></figure>
-<figure><a href="https://olimex.wordpress.com/wp-content/uploads/2026/09/neo6502kbd-4.jpg"><img height="540" src="https://olimex.wordpress.com/wp-content/uploads/2026/09/neo6502kbd-4.jpg?w=540" width="540"/></a></figure>
-<p>Do you remember Karateka, Lode Runner, and Cross Fire on the Apple ][?</p>
-<p>Our <a href="https://www.olimex.com/Products/Retro-Computers/Neo6502kbd/open-source-hardware">Neo6502kbd</a> brings it all back — an all-in-one retro computer with a real 6502 processor that can emulate the Apple ][ and Oric Atmos, letting you play all those classic games on your modern DVI/HDMI screen or TV.</p>
-<p>But it’s not just for gaming — you can develop with a full set of 6502 tools: CP/M, ProDOS, BASIC, Pascal, C, Assembler, and Forth.</p>
-<p>Neo6502kbd packs everything into a single keyboard: a real 6502 CPU, 4 USB ports, HDMI output, UEXT connector for WiFi expansion, and USB-C for power and programming. Just plug in and play!</p>
-<p><a href="https://news.ycombinator.com/item?id=49585605">Comments on Hacker News</a></p>]]></content:encoded>
-      <guid isPermaLink="true">https://olimex.wordpress.com/2026/09/04/new-open-source-hardware-variant-of-neo6502-now-includes-keyboard-4-usb-hosts-uext-power-switch-and-usb-c-for-power-and-programming-all-in-one-keyboard-body/</guid>
-      <category>Hacker News</category>
-      <pubDate>Sun, 06 Sep 2026 11:51:28 +0000</pubDate>
-      <media:content url="https://olimex.wordpress.com/wp-content/uploads/2026/09/neo6502kbd-1.jpg?w=540" type="image/jpeg" medium="image"/>
-      <dc:creator>AlexeyBrin</dc:creator>
-    </item>
-    <item>
-      <title>'Old Person Smell'</title>
-      <link>https://www.theguardian.com/wellness/2026/sep/03/old-person-smell</link>
-      <description>Experts say that the smell comes from a chemical compound called 2-nonenal, and it can show up much earlier than one expects</description>
-      <content:encoded><![CDATA[<figure><img alt="Close-up of a senior woman smelling perfume" src="https://i.guim.co.uk/img/media/e10c00b15fd00abb6f0cc14ec8f5f45124a207a8/0_0_5100_3827/master/5100.jpg?width=465&amp;dpr=1&amp;s=none&amp;crop=none" width="465"/> <figcaption>‘It’s just a natural byproduct of skin ageing – not dirt, not poor hygiene.’ Photograph: rubberball/Getty Images</figcaption><figcaption>‘It’s just a natural byproduct of skin ageing – not dirt, not poor hygiene.’ Photograph: rubberball/Getty Images</figcaption></figure>
-<h2>Do people really smell different as they get older? The truth behind ‘old person smell’</h2>
-<p>Experts say that the smell comes from a chemical compound called 2-nonenal, and it can show up much earlier than one expects</p>
-<p>Last week, my mom complained that she’s starting to smell “like an old person”.</p>
-<p>She had grabbed her favorite sweater and draped it over herself at the movie theater. “It smelled like my grandmother,” she said, almost whispering. “I thought someone must have borrowed the jacket. But it was just me.”</p>
-<p>My mom, who’s <a href="https://www.theguardian.com/wellness/2025/jan/24/healthy-aging-process-60s">in her 60s</a>, has a ton of energy. Her hair is thick and still naturally chestnut. She’s healthy and strong; she likes to hike and go to rock concerts.</p>
-<p>“I don’t feel like an old person. Why do I smell like one?” she whined.</p>
-<p>I told her, truthfully, that I didn’t notice any new aroma. I thought she smelled the same as always: a mix of lotion and gardenia. But I immediately knew what she was talking about.</p>
-<p>Experts say that we do smell different as we age. “It’s one of the most universal, least talked-about parts of being human,” says Dr Roya Javid, a dermatologist in Monterey, California. “It’s just biology, unfolding on schedule, the same way we grow taller, then our <a href="https://www.theguardian.com/lifeandstyle/2024/sep/18/gray-hair-color-dye">hair goes gray</a>. Every single person on the planet goes through these same transitions.”</p>
-<h2 id="what-causes-us-to-smell-different-as-we-age">What causes us to smell different as we age?</h2>
-<p>The musty odor that people sometimes call “old person smell” comes from a chemical compound called 2-nonenal. 2-nonenal is produced when certain skin oils oxidize and break down, says Javid.</p>
-<p>It’s a normal – and unavoidable – change.</p>
-<p>“Our skin is coated in a thin layer of natural oils called skin lipids. They keep skin soft, waterproof and protected,” she says. Those lipids are made up of fatty acids, and as we age, the fatty acids change in composition. At the same time, the skin’s ability to fight off every day wear-and-tear slows down. The oils are more exposed, and when they break down through oxidation, they release 2-nonenal.</p>
-<figure><a href="https://www.theguardian.com/commentisfree/ng-interactive/2025/jul/18/best-ageing-advice-expert-tips">I’m an expert on ageing. Here’s what I know about thriving in later life | Kerry BurnightRead more</a></figure>
-<p>“It’s just a natural byproduct of skin ageing – not dirt, not poor hygiene,” Javid says. “It’s just oil quietly changing over time, the same way metal changes when it’s exposed to air.”</p>
-<p>Levels of 2-nonenal vary by person. “We don’t yet know why some develop a stronger scent than others,” says Javid. “Though an individual’s skin-oil composition, genetics, the skin’s microbiome, hygiene practices, clothing, health and environment may all play a role in both how much 2-nonenal is produced and how much stays on the skin throughout the day.”</p>
-<h2 id="when-does-this-change-occur">When does this change occur?</h2>
-<p>Experts say “old person smell” can show up much earlier than you might expect.</p>
-<p>A <a href="https://pubmed.ncbi.nlm.nih.gov/11286617/">Japanese study from 2001</a> tested the skin of subjects between the ages of 26 and 75, and detected 2-nonenal starting at age 40. But Dr Arshad Rather, consultant geriatrician and general physician at <a href="https://www.medicalexpressclinic.co.uk/">Medical Express Clinic</a> in London, says this doesn’t mean people wake up with a noticeable new odor.</p>
-<p>“Research suggests 2-nonenal increases gradually the older you get, particularly past middle age. It’s not a switch flipping at 40 – more a dial slowly turning up,” says Rather.</p>
-<p>Experts note that developing an age-specific odor isn’t unique to older adults. In fact, every age group has associated smells, for better or worse.</p>
-<p>“Every stage of life has its own signature scent,” says Javid. “Babies smell sweet and milky because their scent glands haven’t switched on yet. Puberty flips that switch, and suddenly hormones drive a stronger, muskier smell for teens. Adulthood has a more consistent scent tied to sweat and daily life. And [these] changes in the skin’s natural oils give people a different scent later on.”</p>
-<h2 id="is-old-person-smell-inherently-bad">Is ‘old person smell’ inherently bad?</h2>
-<p>Any negative feelings people have toward “old person smell” are really a perception problem, not a reality problem, Javid says.</p>
-<p>A blind test found that the 2-nonenal scent may not be disagreeable. In one <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC3364187/">2012 study</a>, researchers asked 41 young adults to smell T-shirts worn by individuals from three age groups: young (20–30 years old), middle-age (45–55) and old age (75–95). The researchers found that the odor from older adults was “rated as less intense and less unpleasant” than other groups.</p>
-<p><a href="https://ki.se/en/people/johan-lundstrom">Dr Johan N Lundström</a>, a professor of psychology at Karolinska Institutet in Sweden and one of the authors of the study, says his team was surprised by the results. They hypothesized that smell would follow a linear trend, with the youngest group being rated highest and the oldest group rated the lowest, but that wasn’t the case.</p>
-<p>“The elderly have a clearly separate body odor quality, but it was not rated as being all that negative,” Dr Lundström says.</p>
-<h2 id="can-you-do-anything-about-the-odor">Can you do anything about the odor?</h2>
-<p>Experts say there’s no way to stop 2-nonenal from developing. But there are some ways to manage the odor.</p>
-<p>Javid says regular bathing can wash away some of the scent. However, soap and water won’t fully remove the chemical, because it doesn’t simply sit on the surface of the skin like sweat – rather, it’s being generated continuously. <a href="https://www.theguardian.com/wellness/article/2024/may/24/deodorant-what-to-know">Deodorants</a> might temporarily cover up a smell, but won’t remove 2-nonenal.</p>
-<p>Meanwhile, regularly washing clothes, sheets and airing out rooms can help reduce the odor in the home. But because 2-nonenal won’t easily wash out, it can linger even after the most dedicated cleaning practices.</p>
-<p>Some body wash products are marketed as neutralizing 2-nonenal, such as soap made with persimmon. Experts say while there are some anecdotal accounts that these help, scientific evidence is lacking.</p>
-<figure><a href="https://www.theguardian.com/wellness/2025/jul/25/older-women-weightlifting">‘Old people are capable of more’: meet the female weightlifters in their 70s and 80sRead more</a></figure>
-<p>Rather suspects there’s a connection between 2-nonenal production and a person’s lifestyle and diet, but says more studies are needed. “Since the smell comes from an oxidation reaction, reducing oxidative stress is a sensible target. Eating antioxidant-rich foods, such as colourful fruit and vegetables and sources of vitamins C and E, can reduce oxidative stress,” he says.</p>
-<p>“Not smoking and protecting your skin from sun damage are sensible anti-oxidation habits too,” adds Rather.</p>
-<p>In the end, experts say it’s true that people develop a different smell as they age, but it’s nothing to be embarrassed about.</p>
-<p>If a person starts to notice they smell like 2-nonenal – which we all will – Javid urges them to not feel self-conscious or spend a fortune on special soaps.</p>
-<p>“Focus on the things that support your skin generally: antioxidants, less sun damage, less smoking, good hydration,” she says. “And know that the science says you’re worrying about something that, objectively, isn’t as bad as the stereotype.”</p>
-<p>Explore more on these topics</p>
-<ul><li><a href="https://www.theguardian.com/wellness/wellness">Well actually</a></li><li><a href="https://www.theguardian.com/society/health">Health</a></li><li><a href="https://www.theguardian.com/science/ageing">Ageing</a></li><li><a href="https://www.theguardian.com/tone/features">features</a></li></ul>
-<a href="https://syndication.theguardian.com/?url=https%3A%2F%2Fwww.theguardian.com%2Fwellness%2F2026%2Fsep%2F03%2Fold-person-smell&amp;type=article&amp;internalpagecode=wellness/2026/sep/03/old-person-smell" title="Reuse this content">Reuse this content</a>
-<p><a href="https://news.ycombinator.com/item?id=49585520">Comments on Hacker News</a></p>]]></content:encoded>
-      <guid isPermaLink="true">https://www.theguardian.com/wellness/2026/sep/03/old-person-smell</guid>
-      <category>Hacker News</category>
-      <pubDate>Sun, 06 Sep 2026 11:37:27 +0000</pubDate>
-      <media:content url="https://i.guim.co.uk/img/media/e10c00b15fd00abb6f0cc14ec8f5f45124a207a8/0_0_5100_3827/master/5100.jpg?width=465&amp;amp;dpr=1&amp;amp;s=none&amp;amp;crop=none" type="image/jpeg" medium="image"/>
-      <dc:creator>bookofjoe</dc:creator>
-    </item>
-    <item>
-      <title>I Changed My License</title>
-      <link>https://bergie.iki.fi/blog/eupl/</link>
-      <description>In the last 28 years of publishing software, Iâve had three distinct eras of software licensing. All of my recent stuff is available under the European Union Public License 1.2, and I thought to explain why.</description>
-      <content:encoded><![CDATA[<img alt="cover image for I changed my license" src="https://d2vqpl3tx84ay5.cloudfront.net/500x/2026/EU-flags.jpg"/>
-<p>In the last 28 years of publishing software, Iâve had three distinct eras of software licensing. All of my recent stuff is available under the European Union Public License 1.2, and I thought to explain why.</p>
-<p><a href="http://midgard-project.org/">Midgard</a> was all LGPLv2. This was a simpler time, and there werenât that many free software licenses around. Since Midgard was a web framework, using a weak copyleft license felt like the right thing to do. The example website shipping with Midgard was X11 licensed.</p>
-<p>When I started working more <a href="https://bergie.iki.fi/blog/the_universal_runtime/">seriously with JavaScript</a> around 2011, I switched to the MIT license. This was a âdo whatever you like, just donât sue meâ sort of a simple affair favored by the NPM package ecosystem. Easy interoperability, no hooks attached.</p>
-<p>After we closed <a href="https://bergie.iki.fi/blog/flowhub-ug/">Flowhub</a>, there were a few years of hiatus where I published almost no software. Either because it wasnât feasible due to my work situation, or because I was busy with the boat.</p>
-<h2 id="enter-eupl">Enter EUPL</h2>
-<p>This year I decided to switch my âdefault licenseâ to <a href="https://interoperable-europe.ec.europa.eu/collection/eupl">EUPL-1.2</a>. This is an OSI-approved free software license created and published by the European Union. And it is quite a divergence from the licenses Iâve used in the past. EUPL is a strong copyleft license that closes the âSaaS loopholeâ by requiring reciprocal licensing regardless of how the software is distributed.</p>
-<p>Over the years it has been clear that we in the âopen sourceâ camp (as opposed to the âfree softwareâ camp) were wrong all along. We won the debate, and gained little for users or developers. All that our efforts did was to make it easier for big corporations build things more cheaply and for billionaires to become trillionaires.</p>
-<p>And so it is time to stop messing about with permissive licenses. If corporations donât want to use our software under our terms, they are free to spend the effort or tokens to build their own.</p>
-<p>The fact that EUPL has legally valid official <a href="https://interoperable-europe.ec.europa.eu/collection/eupl/eupl-text-eupl-12">translations to 23 languages</a> also doesnât hurt in a world where most of software is built and used in the wider world outside of the Valley.</p>
-<p>Here are some things Iâve already published under EUPL:</p>
-<ul>
-<li><a href="https://reticulum.js.org/">reticulum-js</a>: JavaScript implementation of the Reticulum mesh networking protocol</li>
-<li><a href="https://github.com/bergie/dacar">dacar</a>: decentralized authorization system built on Reticulum</li>
-<li><a href="https://github.com/meri-imperiumi/signalk-energy-predictor">signalk-energy-predictor</a>: prediction system for boats powered by renewable energy</li>
-<li><a href="https://www.npmjs.com/package/@meri-imperiumi/signalk-offshore-blogging">offshore-blogging-system</a>: tool for publishing blog posts and downloading weather data over InReach satellite text messages</li>
-</ul>
-<p>In addition the new rewrite of <a href="https://github.com/noflo/noflo-ui/tree/next">NoFlo Development Environment</a> is being made under EUPL. <a href="https://noflojs.org/">NoFlo</a> itself will remain MIT-licensed, as it is a pre-existing project with plenty of 3rd party contributions.</p>
-<hr/>
-<p><a href="https://bergie.iki.fi/blog/category/fbp/">Read more Flow-Based Programming posts</a>.</p>
-<p><a href="https://news.ycombinator.com/item?id=49585161">Comments on Hacker News</a></p>]]></content:encoded>
-      <guid isPermaLink="true">https://bergie.iki.fi/blog/eupl/</guid>
-      <category>Hacker News</category>
-      <pubDate>Sun, 06 Sep 2026 10:39:44 +0000</pubDate>
-      <media:content url="https://d2vqpl3tx84ay5.cloudfront.net/500x/2026/EU-flags.jpg" type="image/jpeg" medium="image"/>
-      <dc:creator>jllyhill</dc:creator>
-    </item>
-    <item>
-      <title>Isar Aerospace reaches orbit and deploys payloads on second flight</title>
-      <link>https://isaraerospace.com/press/history-for-european-spaceflight-isar-aerospace-reaches-orbit-and-deploys-payloads-on-second-flight</link>
-      <description>By enabling access to space, we contribute to humanity’s progress and our planet’s sustainable technological and economic development. Select your journey to orbit and launch with us.</description>
-      <content:encoded><![CDATA[<p><strong>Andøya, 5 September 2026</strong> – Today, Isar Aerospace became the first commercial space company from Europe to successfully deliver satellites into orbit, on what was only its second flight. Mission ‘Onward and Upward’ lifted off from Isar Aerospace’s dedicated launch complex at Andøya Space in Norway at 10:12 pm CEST, deploying payloads in orbit. “Today, Isar Aerospace opened space from Continental Europe. Launch continues to be the largest bottleneck for the global space industry and from today on, there is a true alternative for commercial and institutional customers”, said Daniel Metzler, CEO and Co-Founder of Isar Aerospace. Isar Aerospace is working with the customers to confirm the satellite status.</p>
-<p><strong>Daniel Metzler, CEO and Co-Founder of Isar Aerospace, said:</strong> “We achieved within a few years what had taken the European space industry decades before. Europe now has sovereign access to space.  We have entered into a new chapter for European spaceflight. I am incredibly proud of our team, that has made this success story from Europe possible. We will now focus on rapidly scaling launch vehicle production, deliver on our order pipeline, and meet surging global demand.”</p>
-<p>Isar Aerospace’s qualification flight broke several records in European commercial spaceflight: The vehicle successfully transited MaxQ, completed MECO and stage separation, and then ignited second stage as planned. It crossed the Kármán line at an altitude of 100 kilometers and jettisoned the payload fairing before reaching orbital velocity. After completing circularization burn, spacecraft separation was completed successfully.</p>
-<p>The mission’s payloads were selected through the Microlauncher Competition of the German Space Agency at DLR that provides educational institutions and start-ups with low-cost access to space. The Microlauncher Competition is funded through ESA Boost!</p>
-<p>Today’s mission ‘Onward and Upward’ proved Isar Aerospace’s orbital launch capability. In parallel, the company has advanced its global network of available launch sites and is nearing completion of Europe’s largest integrated production facility for launch vehicles. In addition to its current launch site in  Andøya, Norway, Isar Aerospace is constructing a launch complex in Nova Scotia, Canada, covering mid- to high-inclination orbits critical for Earth observation and communications.</p>
-<p><strong>A historic turning point for Europe</strong></p>
-<p>Today marks a new era for the global space industry. The launch is not only a technical masterpiece, but also a breakthrough that will influence Europe's strategic, economic, and technological future. Customers around the world now have a sovereign launch option at their disposal.</p>
-<p><strong>Next ‘Spectrum’ launch vehicles already in production</strong></p>
-<p>Isar Aerospace's model is designed to build scalable launch capabilities. That is why the company is not only developing and building a launch vehicle, but has also built the “machine behind the machine”, including a vertically integrated manufacturing model and a high degree of automation in production. ‘Spectrum’ launch vehicles 3-7 are already in production. With the opening of the new 40,000 m² production facility, Isar Aerospace will eventually have the capacity to manufacture up to 40 launch vehicles per year.  </p>
-<p>– ENDS –</p>
-<p><strong>About Isar Aerospace</strong></p>
-<p>The European space company Isar Aerospace offers launch services for transporting small and medium-sized satellites and satellite constellations into orbit. The launch vehicles used to transport these satellites are developed, manufactured, and tested almost entirely in-house. Headquartered near Munich, Germany, Isar Aerospace was founded in 2018 and has grown to over 400 employees, working across 5 international locations. Private funding from international investors provides strong backing for the company’s pioneering approach to scale and industrialize launch vehicle production through vertical integration. More information: <a href="http://www.isaraerospace.com">www.isaraerospace.com</a>.</p>
-<p><strong>Press Contact Isar Aerospace</strong> <br/>Franziska Kegel </p>
-<p><a href="https://isaraerospace.com/cdn-cgi/l/email-protection#5d2d2f382e2e1d342e3c2f3c382f322e2d3c3e38733e3230">[email protected]</a> </p>
-<h3>Downloads</h3>
-<a href="https://isaraerospace.com/images/Press-Release_History-for-European-spaceflight-Isar-Aerospace-reaches-orbit-and-deploys-payloads-on-second-flight.pdf">
-
-Press Release History for European spaceflight Isar Aerospace reaches orbit and deploys payloads on second flight
-.pdf
-
-</a>
-<a href="https://isaraerospace.com/images/Pressemitteilung_Isar-Aerospace-schreibt-europäische-Raumfahrtgeschichte-Zweiter-Flug-erreicht-Orbit-und-setzt-Satelliten-aus.pdf">
-
-Pressemitteilung Isar Aerospace schreibt europäische Raumfahrtgeschichte Zweiter Flug erreicht Orbit und setzt Satelliten aus
-.pdf
-
-</a>
-<p><a href="https://news.ycombinator.com/item?id=49584083">Comments on Hacker News</a></p>]]></content:encoded>
-      <guid isPermaLink="true">https://isaraerospace.com/press/history-for-european-spaceflight-isar-aerospace-reaches-orbit-and-deploys-payloads-on-second-flight</guid>
-      <category>Hacker News</category>
-      <pubDate>Sun, 06 Sep 2026 07:21:06 +0000</pubDate>
-      <dc:creator>mpweiher</dc:creator>
     </item>
   </channel>
 </rss>
