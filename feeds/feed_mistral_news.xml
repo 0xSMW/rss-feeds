@@ -8,7 +8,25 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 24 Aug 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 08 Sep 2026 15:45:38 +0000</lastBuildDate>
+    <item>
+      <title>Mistral raises €3B to make sovereign, open-weight AI the technology frontier</title>
+      <link>https://mistral.ai/news/mistral-makes-sovereign-open-weight-ai-to-frontier</link>
+      <description>Mistral today announced that it has raised €3 billion in a Series D funding round at a post-money valuation of more than €21 billion, the largest equity fundraising round ever completed by a European technology company, three years after the company's launch.</description>
+      <content:encoded><![CDATA[<p>Mistral raises €3B to make sovereign, open-weight AI the technology frontier</p>
+<p>Mistral today announced that it has raised €3 billion in a Series D funding round at a post-money valuation of more than €21 billion, the largest equity fundraising round ever completed by a European technology company, three years after the company's launch.</p>
+<p>Samsung Electronics led the round, joined by co-leads Scaleup Europe Fund, managed by EQT, and existing investor PSG Equity.</p>
+<p>The round will significantly expand Mistral's frontier research, which is the foundation underpinning its infrastructure, products and sovereignty. While allowing Mistral to scale its compute capacity for training powerful models, it will help Mistral expand infrastructure and accelerate its commercial growth and international footprint. The company now operates across 20 countries and supports 125+ global enterprises’ mission-critical AI transformation, including Airbus, ASML, and HSBC.</p>
+<p>During the first wave of generative AI, the central question was who could build the most powerful model. Organizations and governments are now asking a different one: how to harness the power of AI for their mission-critical needs without surrendering control over the infrastructure and intelligence loop. Demand for that combination of performance with control, choice and independence is growing internationally, as enterprises and governments weigh the long-term technology dependencies, data governance requirements and deployment choices that come with any AI investment.</p>
+<p>Mistral is the only AI company in the world building the full stack required to answer that question: open-weight models, the infrastructure and the compute capacity they run on, and the products that bring them into production; ensuring that customers are never locked into a single vendor's roadmap, pricing or availability.</p>
+<p>Mistral’s full-stack and open approach also allows organizations to build on it without exposing their most valuable data, workflows and institutional knowledge to anyone outside their own walls. That's what makes Mistral’s stack the sovereign AI layer, meaning retaining control across four dimensions: data that stays inside the organization's boundaries, models that are controllable and customizable, compute that is private and predictable, and systems in production that are fully controllable and auditable.</p>
+<p>The round reflects a strategic endorsement from investors across Europe, Asia and North America. It brings together a world-class syndicate of strategic and financial investors, including global technology leaders, growth investors and existing shareholders that have supported Mistral’s development to date.</p>
+<p>With a Series C led by ASML and a Series D led by Samsung Electronics, Mistral has attracted backing from companies at the forefront of advanced manufacturing, engineering and industrial technology. This support reflects growing confidence that Mistral's approach can help organisations deploy state-of-the-art AI inside complex real-world environments while maintaining control over their data, infrastructure and knowledge.</p>
+<p>Advent, funds and accounts managed by BlackRock as well as the Grand Duchy of Luxembourg joined the round as new investors. Existing investors a16z, ASML, Belfius, BNP Paribas CIB, Bpifrance, Carmignac, DST Global, Eurazeo, General Catalyst, Headline, Hillspire, Index Ventures, Korelya Capital, Lightspeed, NVIDIA, Phoenix Court's Solar fund (home to LocalGlobe, Latitude and Solar) and Salesforce Ventures participated in the round.</p>]]></content:encoded>
+      <guid isPermaLink="true">https://mistral.ai/news/mistral-makes-sovereign-open-weight-ai-to-frontier</guid>
+      <category>Company</category>
+      <pubDate>Tue, 08 Sep 2026 15:45:38 +0000</pubDate>
+    </item>
     <item>
       <title>Mistral x HUMAIN</title>
       <link>https://mistral.ai/news/mistral-x-humain</link>
@@ -2447,41 +2465,6 @@ $ /usr/local/lib/heaptrack/libexec/heaptrack_interpret &lt; heaptrack.2028233 | 
       <category>Product</category>
       <pubDate>Wed, 04 Jun 2025 00:00:00 +0000</pubDate>
       <media:content url="https://mistral.ai/_astro/6b71f3c5-d753-41b2-8ac5-6ec41534f0f0_wxiYz.webp?dpl=6a622da400bba40008995ff8" type="image/webp" medium="image"/>
-    </item>
-    <item>
-      <title>Codestral Embed</title>
-      <link>https://mistral.ai/news/codestral-embed</link>
-      <description>We are excited to release Codestral Embed, our first embedding model specialized for code. It performs especially well for retrieval use cases on real-world code data.</description>
-      <content:encoded><![CDATA[<img height="800" src="https://mistral.ai/_astro/Cover-Model-Codestral%20Embed_PmtrA.webp?dpl=6a622da400bba40008995ff8" width="1440"/>
-<p>We are excited to release Codestral Embed, our first embedding model specialized for code. It performs especially well for retrieval use cases on real-world code data. </p>
-<p>Codestral Embed significantly outperforms leading code embedders in the market today: Voyage Code 3, Cohere Embed v4.0 and OpenAI’s large embedding model.</p>
-<p>Codestral Embed can output embeddings with different dimensions and precisions, and the figure below illustrates the trade-offs between retrieval quality and storage costs. Codestral Embed with dimension 256 and int8 precision still performs better than any model from our competitors. The dimensions of our embeddings are ordered by relevance. For any integer target dimension n, you can choose to keep the first n dimensions for a smooth trade-off between quality and cost.</p>
-<p><figure><img alt="Retrieval Embed" height="1071" src="https://mistral.ai/_astro/11ffe4df-ee2e-4438-a490-e575727b3669_1buwFu.webp?dpl=6a622da400bba40008995ff8" width="1600"/></figure></p>
-<h3>Results</h3>
-<p>Below  we show the performance of Codestral Embed for several categories. The details of the benchmarks corresponding to each category can be found in the table in the “Benchmarks details” section.</p>
-<p>SWE-Bench is based on a dataset of real-world GitHub issues and corresponding fixes, and is especially relevant for retrieval-augmented generation for coding agents. Text2Code (GitHub) contains benchmarks relevant for giving context for code completion or edition. We believe that these two categories are especially relevant to code assistants. </p>
-<h2>Use cases</h2>
-<p>Codestral Embed is optimized for high-performance code retrieval and semantic understanding. It enables a range of practical applications across development workflows, especially when working with large-scale code corpora. </p>
-<h3>1. Retrieval-augmented generation </h3>
-<p>Codestral Embed facilitates rapid and efficient context retrieval for code completion, editing, or explanation tasks. It is ideal for AI-powered software engineering in copilots or coding agent frameworks. </p>
-<h3>2. Semantic code search</h3>
-<p>Embed enables accurate search of relevant code snippets from natural language or code queries. It is suitable for use within developer tools, documentation systems, and copilots. </p>
-<h3>3. Similarity search and duplicate detection</h3>
-<p>The model’s embeddings can be used to identify near-duplicate or functionally similar code segments, even with significant lexical variation. This supports use cases such as identifying reusable code to avoid duplicates, or detecting copy-paste reuse to enforce licensing policies.</p>
-<h3>4. Semantic clustering and code analytics</h3>
-<p>Codestral Embed supports unsupervised grouping of code based on functionality or structure. This is useful for analyzing repository composition, identifying emergent architecture patterns, or feeding into automated documentation and categorization systems.</p>
-<h2>Availability </h2>
-<p>Codestral Embed is available on our API under the name `codestral-embed-2505` at a price of $0.15 per million tokens. It is also available on our <a href="https://docs.mistral.ai/capabilities/batch/">batch API</a> at a 50% discount. For on-prem deployments, please <a href="https://mistral.ai/contact">contact us</a> to connect with our applied AI team. </p>
-<p>Please check our <a href="https://docs.mistral.ai/capabilities/embeddings/code_embeddings/">docs</a> to get started and our <a href="https://colab.research.google.com/github/mistralai/cookbook/blob/main/mistral/embeddings/code_embedding.ipynb">cookbook </a>for examples of how to use Codestral Embed for code agent retrieval. </p>
-<h3>Chunking parameters</h3>
-<p>For retrieval use cases, while you can use the full context size of 8192 tokens, it is often more efficient to chunk your dataset. We recommend using chunks of 3000 characters with 1000 characters overlap. Larger chunks tend to adversely affect the performance of the retrieval system. Refer to <a href="https://docs.mistral.ai/guides/rag/#split-document-into-chunks">our </a><a href="https://colab.research.google.com/github/mistralai/cookbook/blob/main/mistral/embeddings/code_embedding.ipynb">cookbook</a> for more information about chunking. </p>
-<h2>Benchmark details</h2>
-<p>You can find the details of the benchmarks that we used to evaluate our model in the table below. We report the average score per category, and the macro average (average of the scores of each category). </p>
-<table><tbody><tr><th colspan="1" rowspan="1"><p>Benchmark</p></th><th colspan="1" rowspan="1"><p>Description</p></th><th colspan="1" rowspan="1"><p>Category</p></th></tr><tr><td colspan="1" rowspan="1"><p>SWE-Bench lite</p></td><td colspan="1" rowspan="1"><p>Examples from SWE-Bench lite: given real github issues, retrieve the files that should be modified to fix the issue from the given state of the repository. Most relevant for code agent RAG.</p></td><td colspan="1" rowspan="1"><p>swebench_lite</p></td></tr><tr><td colspan="1" rowspan="1"><p>CodeSearchNet Code -&gt; Code</p></td><td colspan="1" rowspan="1"><p>Given real-world code from GitHub, retrieve the code that appears in the same context</p></td><td colspan="1" rowspan="1"><p>code2code</p></td></tr><tr><td colspan="1" rowspan="1"><p>CodeSearchNet doc2code</p></td><td colspan="1" rowspan="1"><p>Given a docstring from real-world GitHub code, retrieve the corresponding code </p></td><td colspan="1" rowspan="1"><p>Text2code (github)</p></td></tr><tr><td colspan="1" rowspan="1"><p>CommitPack</p></td><td colspan="1" rowspan="1"><p>Given a commit message from real-world GitHub code, retrieve the corresponding modified files </p></td><td colspan="1" rowspan="1"><p>Text2code (github)</p></td></tr><tr><td colspan="1" rowspan="1"><p>Spider</p></td><td colspan="1" rowspan="1"><p>Retrieve SQL code given a query</p></td><td colspan="1" rowspan="1"><p>Text2SQL</p></td></tr><tr><td colspan="1" rowspan="1"><p>WikiSQL</p></td><td colspan="1" rowspan="1"><p>Retrieve SQL code given a query</p></td><td colspan="1" rowspan="1"><p>Text2SQL</p></td></tr><tr><td colspan="1" rowspan="1"><p>Synthetic Text2SQL</p></td><td colspan="1" rowspan="1"><p>Retrieve SQL code given a query</p></td><td colspan="1" rowspan="1"><p>Text2SQL</p></td></tr><tr><td colspan="1" rowspan="1"><p>DM code contests</p></td><td colspan="1" rowspan="1"><p>Match problem descriptions to correct solutions for programming competition websites (corpus is correct + incorrect solutions for each problem).</p></td><td colspan="1" rowspan="1"><p>Text2Code (Algorithms)</p></td></tr><tr><td colspan="1" rowspan="1"><p>APPS</p></td><td colspan="1" rowspan="1"><p>Match problem descriptions to solutions for programming competition websites.</p></td><td colspan="1" rowspan="1"><p>Text2Code (Algorithms)</p></td></tr><tr><td colspan="1" rowspan="1"><p>CodeChef</p></td><td colspan="1" rowspan="1"><p>Match problem descriptions to solutions for programming competition websites.</p></td><td colspan="1" rowspan="1"><p>Text2Code (Algorithms)</p></td></tr><tr><td colspan="1" rowspan="1"><p>MBPP+</p></td><td colspan="1" rowspan="1"><p>Match algorithmic questions to solutions for mostly basic python programs</p></td><td colspan="1" rowspan="1"><p>Text2Code (Algorithms)</p></td></tr><tr><td colspan="1" rowspan="1"><p>DS 1000</p></td><td colspan="1" rowspan="1"><p>Match data science questions to implementations</p></td><td colspan="1" rowspan="1"><p>Text2Code (Data Science)</p></td></tr></tbody></table>]]></content:encoded>
-      <guid isPermaLink="true">https://mistral.ai/news/codestral-embed</guid>
-      <category>Research</category>
-      <pubDate>Wed, 28 May 2025 00:00:00 +0000</pubDate>
-      <media:content url="https://mistral.ai/_astro/Cover-Model-Codestral%20Embed_PmtrA.webp?dpl=6a622da400bba40008995ff8" type="image/webp" medium="image"/>
     </item>
   </channel>
 </rss>
