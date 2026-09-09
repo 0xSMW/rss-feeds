@@ -8,7 +8,23 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 26 Aug 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 06 Sep 2026 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Research acceleration: The view inside OpenAI</title>
+      <link>https://openai.com/index/research-acceleration-view-inside-openai/</link>
+      <description>Inside OpenAI, coding agents are reshaping AI research. Explore early data on agent usage, experiment velocity, task complexity, and research acceleration.</description>
+      <guid isPermaLink="true">https://openai.com/index/research-acceleration-view-inside-openai/</guid>
+      <category>Alignment Research</category>
+      <pubDate>Sun, 06 Sep 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>An Alien Mind</title>
+      <link>https://openai.com/index/an-alien-mind/</link>
+      <description>Jakub Pachocki reflects on increasingly capable AI and the challenge of keeping it aligned. He calls for stronger safeguards and international coordination.</description>
+      <guid isPermaLink="true">https://openai.com/index/an-alien-mind/</guid>
+      <category>Alignment Research</category>
+      <pubDate>Sun, 06 Sep 2026 00:00:00 +0000</pubDate>
+    </item>
     <item>
       <title>The Hugging Face incident and the road ahead</title>
       <link>https://openai.com/index/hugging-face-incident-and-the-road-ahead/</link>
