@@ -8,7 +8,24 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 09 Sep 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 10 Sep 2026 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Cloudera and Mistral Partner to Bring Specialized, Sovereign Intelligence to Enterprise Data</title>
+      <link>https://mistral.ai/news/mistral-x-cloudera</link>
+      <description>We’ve spoken with many of the world’s largest enterprises across regulated industries like financial services, manufacturing and telecommunications. One of their common strategic partners is Cloudera, providing them with a platform to gain valuable data insights across both on-prem and cloud environments.</description>
+      <content:encoded><![CDATA[<figure><img height="627" src="https://mistral.ai/_astro/mistra-x-cloudera_Z2T5p.webp?dpl=6aa299660c59ee0007e450b4" width="1200"/></figure>
+<p>We’ve spoken with many of the world’s largest enterprises across regulated industries like financial services, manufacturing and telecommunications. One of their common strategic partners is Cloudera, providing them with a platform to gain valuable data insights across both on-prem and cloud environments.</p>
+<p>What these organizations have in common is that they are data-driven and the processes they’re looking to transform with AI are mission-critical. These are industries that stand to benefit the most from AI, provided they have complete confidence in controlling their data and intelligence. This is exactly why a partnership between Mistral and Cloudera is a natural way to support the demand of our joint customers and help them continue to innovate under their terms.</p>
+<p>Here’s what Mistral and Cloudera are announcing today as a part of our new partnership:</p>
+<ol><li><p><strong>Running inference in your environment: </strong>Our models will be integrated with Cloudera’s hybrid data platform, allowing enterprises to deploy their AI models across private and public cloud environments, on-prem and fully air-gapped environments while maintaining full control.</p></li><li><p><strong>Building custom models so enterprises control their own intelligence:</strong> Mistral enables enterprises to train their AI models against large amounts of proprietary data within controlled environments. Decades of institutional data can be transformed into customized AI models while maintaining ownership over both the data and the resulting intelligence.</p></li></ol>
+<p>"Every enterprise is heading toward the same destination: specialized intelligence,” said Abhas Ricky, Chief Business Officer &amp; GM, Applied AI at Cloudera. “General-purpose models are the starting point, not the finish line. The real advantage comes from models trained on decades of proprietary data — the loan decisions, the production runs, the network telemetry that no one else has. With Mistral, our customers can turn that data into intelligence they own outright, tuned to their business and governed inside their own environment. That’s the shift we’re building for: “from renting generic AI to owning intelligence that’s uniquely theirs.”</p>
+<p>“It’s a privilege to have the opportunity to bring Mistral’s sovereign AI to Cloudera’s 30 exabytes of customer-managed data running on its platform. We are looking forward to innovating on behalf of our joint customers,” said Kamal Brar, SVP of Partnerships &amp; Alliances at Mistral. </p>
+<p>The collaboration is designed to meet growing demand for sovereign AI: AI that keeps data, intelligence, compute, and operations under the customer's control. That means data can remain within customer-defined boundaries, models can be adapted and owned on open weights, training and inference can run on infrastructure and in jurisdictions the customer chooses, and AI systems can be deployed, governed, observed, and improved over time without ceding control of the learning loop to an external platform.</p>]]></content:encoded>
+      <guid isPermaLink="true">https://mistral.ai/news/mistral-x-cloudera</guid>
+      <category>Company</category>
+      <pubDate>Thu, 10 Sep 2026 00:00:00 +0000</pubDate>
+      <media:content url="https://mistral.ai/_astro/mistra-x-cloudera_Z2T5p.webp?dpl=6aa299660c59ee0007e450b4" type="image/webp" medium="image"/>
+    </item>
     <item>
       <title>Modernizing complex legacy code with AI agents.</title>
       <link>https://mistral.ai/news/legacy-code-modernization</link>
@@ -2436,56 +2453,6 @@ $ /usr/local/lib/heaptrack/libexec/heaptrack_interpret &lt; heaptrack.2028233 | 
       <category>Company</category>
       <pubDate>Wed, 11 Jun 2025 00:00:00 +0000</pubDate>
       <media:content url="https://mistral.ai/_astro/8303b765-01b3-4cae-85d0-ea41047e08f3_1YPo4x.webp?dpl=6a622da400bba40008995ff8" type="image/webp" medium="image"/>
-    </item>
-    <item>
-      <title>Magistral</title>
-      <link>https://mistral.ai/news/magistral</link>
-      <description>Announcing Magistral — the first reasoning model by Mistral AI — excelling in domain-specific, transparent, and multilingual reasoning.</description>
-      <content:encoded><![CDATA[<p>Announcing Magistral — the first reasoning model by Mistral AI — excelling in domain-specific, transparent, and multilingual reasoning.</p>
-<p>The best human thinking isn’t linear — it weaves through logic, insight, uncertainty, and discovery. Reasoning language models have enabled us to augment and delegate complex thinking and deep understanding to AI, improving our ability to work through problems requiring precise, step-by-step deliberation and analysis.</p>
-<p>But this space is still nascent. Lack of specialized depth needed for domain-specific problems, limited transparency, and inconsistent reasoning in the desired language — are just some of the known limitations of early thinking models.</p>
-<p>Today, we’re excited to announce our latest contribution to AI research with Magistral — our first reasoning model. Released in both open and enterprise versions, Magistral is designed to think things through — in ways familiar to us — while bringing expertise across professional domains, transparent reasoning that you can follow and verify, along with deep multilingual flexibility.</p>
-<iframe allowfullscreen="" height="315" src="https://www.youtube.com/embed/99xd7kHx80U?si=GPEvDJxf68FFEM9T" width="560"></iframe>
-<p>A one-shot physics simulation showcasing gravity, friction and collisions with Magistral Medium in Preview.</p>
-<h2>Highlights.</h2>
-<p><figure><img alt="Plot Magistral" height="635" src="https://mistral.ai/_astro/d73ee721-ea92-46f5-af77-79674fdb4163_1gJcoR.webp?dpl=6a622da400bba40008995ff8" width="1600"/></figure></p>
-<p>Magistral is a dual-release model focused on real-world reasoning and feedback-driven improvement.</p>
-<ul><li><p>We’re releasing the model in two variants: Magistral Small — a 24B parameter open-source version and Magistral Medium — a more powerful, enterprise version.</p></li><li><p>Magistral Medium scored 73.6% on AIME2024, and 90% with majority voting @64. Magistral Small scored 70.7% and 83.3% respectively.</p></li><li><p>Reason natively — Magistral’s chain-of-thought works across global languages and alphabets.</p></li><li><p>Suited for a wide range of enterprise use cases — from structured calculations and programmatic logic to decision trees and rule-based systems.</p></li><li><p>With the new Think mode and Flash Answers in Le Chat, you can get responses at 10x the speed compared to most competitors.</p></li><li><p>The release is supported by our <a href="https://arxiv.org/pdf/2506.10910">latest paper</a> covering comprehensive evaluations of Magistral, our training infrastructure, reinforcement learning algorithm, and novel observations for training reasoning models. </p></li></ul>
-<p>As we’ve open-sourced Magistral Small, we welcome the community to examine, modify and build upon its architecture and reasoning processes to further accelerate the emergence of thinking language models. Our earlier open models have already been leveraged by the community for exciting projects like <a href="https://www.futurehouse.org/research-announcements/ether0-a-scientific-reasoning-model-for-chemistry">ether0</a> and <a href="https://huggingface.co/NousResearch/DeepHermes-3-Mistral-24B-Preview">DeepHermes 3</a>.</p>
-<h3>Purpose-built for transparent reasoning.</h3>
-<p>Magistral is fine-tuned for multi-step logic, improving interpretability and providing a traceable thought process in the user’s language, unlike general-purpose models.</p>
-<p>We aim to iterate the model quickly starting with this release. Expect the models to constantly improve.</p>
-<h3>Multilingual dexterity.</h3>
-<p>The model excels in maintaining high-fidelity reasoning across numerous languages. Magistral is especially well-suited to reason in languages including English, French, Spanish, German, Italian, Arabic, Russian, and Simplified Chinese.</p>
-<iframe allowfullscreen="" height="315" src="https://www.youtube.com/embed/0NC-wM3hbgs?si=D-LEpAKUekkbGeyn" width="560"></iframe>
-<p>Prompt and response in Arabic with Magistral Medium in Preview in Le Chat.</p>
-<h3>10x faster reasoning with Le Chat.</h3>
-<p>With Flash Answers in Le Chat, Magistral Medium achieves up to 10x faster token throughput than most competitors. This enables real-time reasoning and user feedback, at scale.</p>
-<iframe allowfullscreen="" height="315" src="https://www.youtube.com/embed/_ImwDFqgblY?si=SAmY7mFwzKjGgKTT" width="560"></iframe>
-<p>Speed comparison of Magistral Medium in Preview in Le Chat against ChatGPT.</p>
-<h2>Versatility in application.</h2>
-<p>Magistral is ideal for general purpose use requiring longer thought processing and better accuracy than with non-reasoning LLMs. From legal research and financial forecasting to software development and creative storytelling — this model solves multi-step challenges where transparency and precision are critical.</p>
-<h3>Business strategy and operations.</h3>
-<p>Building on our flagship <a href="https://mistral.ai/models">models</a>, Magistral is designed for research, strategic planning, operational optimization, and data-driven decision making — whether executing risk assessment and modelling with multiple factors, or calculating optimal delivery windows under constraints.</p>
-<h3>Regulated industries and sectors.</h3>
-<p>Legal, finance, healthcare, and government professionals get traceable reasoning that meets compliance requirements. Every conclusion can be traced back through its logical steps, providing auditability for high-stakes environments with domain-specialized AI.</p>
-<h3>Systems, software, and data engineering.</h3>
-<p>Magistral enhances coding and development use cases: compared to non-reasoning models, it significantly improves project planning, backend architecture, frontend design, and data engineering through sequenced, multi-step actions involving external tools or API.</p>
-<h3>Content and communication.</h3>
-<p>Our early tests indicated that Magistral is an excellent creative companion. We highly recommend it for creative writing and storytelling, with the model capable of producing coherent or — if needed — delightfully eccentric copy.</p>
-<h2>Availability</h2>
-<p>Magistral Small is an open-weight model, and is available for self-deployment under the Apache 2.0 license. You can download it from:  </p>
-<ul><li><p>Hugging Face: <a href="https://huggingface.co/mistralai/Magistral-Small-2506">https://huggingface.co/mistralai/Magistral-Small-2506</a></p></li></ul>
-<p>You can try out a preview version of Magistral Medium in <a href="http://chat.mistral.ai">Le Chat</a> or via API on <a href="http://console.mistral.ai">La Plateforme</a>. </p>
-<p>Magistral Medium is also available on Amazon SageMaker, and soon on IBM WatsonX, Azure AI and Google Cloud Marketplace.</p>
-<p>For enterprise and custom solutions, including on-premises deployments, <a href="https://mistral.ai/contact">contact our sales team</a>.</p>
-<h2>BTW, we’re hiring!</h2>
-<p>Magistral represents a significant contribution by Mistral AI to the open source community, with input from seasoned experts and interns. And we’re keen to grow our family to further shape future AI innovation.</p>
-<p>If you’re interested in joining us on our mission to democratize artificial intelligence, we welcome your applications to <a href="https://jobs.ashbyhq.com/mistral.ai?departmentId=f96aa804-10b5-45e7-8132-560137936a6b">join our team</a>! </p>]]></content:encoded>
-      <guid isPermaLink="true">https://mistral.ai/news/magistral</guid>
-      <category>Research</category>
-      <pubDate>Tue, 10 Jun 2025 00:00:00 +0000</pubDate>
-      <media:content url="https://mistral.ai/_astro/d73ee721-ea92-46f5-af77-79674fdb4163_1gJcoR.webp?dpl=6a622da400bba40008995ff8" type="image/webp" medium="image"/>
     </item>
   </channel>
 </rss>
