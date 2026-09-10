@@ -8,7 +8,59 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 08 Sep 2026 15:45:38 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 09 Sep 2026 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Modernizing complex legacy code with AI agents.</title>
+      <link>https://mistral.ai/news/legacy-code-modernization</link>
+      <description>Mistral helped a European energy operator migrate 40,000 lines of Fortran 77 to C++. Learn how it was done, and the lessons to carry forward.</description>
+      <content:encoded><![CDATA[<img height="1074" src="https://mistral.ai/_astro/thumbnail-10_1nYGlz.webp?dpl=6aa1d3faf09280034795e0d1" width="1800"/>
+<p>Legacy scientific codebases accumulate over decades, and when original authors leave, the knowledge embedded in the code becomes hard to recover. Moreover, using languages with no active developer ecosystem means missing out on the opportunity to build on top of others’ work. Mistral helped a European energy operator migrate 40,000 lines of Fortran 77 to C++, a physics-intensive reservoir simulator with no test suite and no centralized documentation.</p>
+<h2>Moving beyond code translation in legacy code modernization.</h2>
+<p>Translating syntax from one language to another is a largely solved task. Asking any recent model to translate a snippet from a non-completely-obscure language to another, will likely converge to an acceptable outcome in few iterations. However, migrating a full system from a procedural language to object-oriented C++ creates the need for architectural refactors that make the task non-trivial.</p>
+<p>Fortran 77 was standardized in 1977, as the name may suggest, and code written in it reflects those constraints directly: no modules, no namespaces, no structured types. State lives in COMMON blocks—global memory shared across the entire program. Variables are implicitly typed by their first letter, so a misspelled name silently creates a new variable instead of raising a compiler error.</p>
+<p>For a simple but illustrative example, take the following implementation of a first-degree Taylor expansion. Inputs and outputs are globals in a COMMON block, and <code>IC</code> is an integer only because its name starts with a letter between I and N. Variable names are quite cryptic, as their length is capped to 6 characters.</p>
+<figure><pre><code>   SUBROUTINE GASDEN   INCLUDE 'common.h'   DO 10 IC = 1, NCELL10 RHOG(IC) = ROG(IV) + DROG(IV)*(P(IC)-PTAB(IV))   END</code></pre></figure>
+<p>In C++, one will be able to leverage explicit types, write object-oriented code, and return a value returned instead of a global write:</p>
+<figure><pre><code>double gasDensity(const GasProperties&amp; gas, double pressure) {    size_t i = lookup(gas.pressure, pressure);    return gas.density[i] + gas.slope[i] * (pressure - gas.pressure[i]);}</code></pre></figure>
+<p>The scattered COMMON arrays become a single <code>GasProperties</code> parameter and the grid loop moved out to the caller, so there's no line-for-line correspondence to check, which is what makes verifying the migration hard.</p>
+<p>These structural differences, plus the requirement to integrate modern scientific computing frameworks such as PetSc, raised a few important questions even before starting the migration:</p>
+<ul><li><p>How to prove the migrated codebase matches the legacy one numerically</p></li><li><p>How to split the migration into manageable chunks</p></li><li><p>How to best use autonomous agents to speed up the process</p></li></ul>
+<h2>Building a parity harness before migrating legacy code.</h2>
+<p>Before letting agents loose, we needed a way to prove the two codebases agreed. Here, "agreement" meant numerical equality of the outputs—both the final results and a set of critical intermediate points flagged by the client's reservoir engineers.</p>
+<p>We added:</p>
+<ul><li><p>subroutines allowing to export the state of the Fortran codebase</p></li><li><p>a test framework to load the checkpoints into C++</p></li><li><p><a href="http://Skill.md">Skill.md</a> files to steer agents into using them correctly</p></li></ul>
+<figure><img height="860" src="https://mistral.ai/_astro/blog-storengy-1_2hD0vi.webp?dpl=6aa1d3faf09280034795e0d1" width="1363"/></figure>
+<p>In the migration workflows, agents successfully instrumented the Fortran codebase to dump state snapshots and used the C++ test framework to verify correctness of migrated modules.</p>
+<p>Building this part of the harness first was a net-positive investment for the project: it made long agent runs safer, and numerical parity is an easy-to-verify and compelling argument to show a piece of code has been successfully migrated. We believe this should be one of the first steps for any code modernization engagement.</p>
+<p>The example below illustrates this. We first inserted a line into the Fortran code to dump the value of the RHOG variable (42.71834 in this run), and then used that same value as the reference checkpoint when testing the migrated C++ module.</p>
+<figure><img height="860" src="https://mistral.ai/_astro/blog-storengy-2_Zans1S.webp?dpl=6aa1d3faf09280034795e0d1" width="1363"/></figure>
+<h2>Using AI agents to understand and document legacy codebases.</h2>
+<p>The project’s documentation was scattered across old PDFs and comments buried in the Fortran itself, and one of the largest side-wins of the whole effort was reconciling this documentation and moving it next to the code.</p>
+<p>Luckily, procedural code like Fortran has a convenient property: the whole program can be drawn as a single caller-callee tree. We generated that tree by parsing the codebase with a custom parser, then used <a href="https://mistral.ai/products/vibe/">Vibe CLI</a> to spawn over a hundred agents to document it. Each agent could pull in the relevant PDFs through document libraries and <a href="https://mistral.ai/solutions/document-ai/">Mistral OCR</a>.</p>
+<p>Starting from the leaves of the tree and working upward, each node spawned a subagent to document it and open a PR to the original repository. A reviewer agent running in a loop on a cron schedule looked for newly opened PRs, reviewing them and scheduling fix tasks when necessary.</p>
+<figure><img height="860" src="https://mistral.ai/_astro/blog-storengy-3_2rMdeR.webp?dpl=6aa1d3faf09280034795e0d1" width="1363"/></figure>
+<h2>Utilizing the AI agents for code modernization.</h2>
+<p>On our first attempt, we gave agents full autonomy: one agent per Fortran subroutine, each translating its function to C++ independently over the course of a week. The result was functional, but it couldn't be called code modernization. COMMON blocks became global structs, one-to-one. GOTO-driven control flow stayed intact instead of being restructured into loops or early returns. It looked like Fortran retyped in C++ syntax rather than modernized code.</p>
+<p>In the second attempt, we addressed this by giving agents structure instead of just autonomy: a planner, a coder, a tester and a code quality reviewer working together on each module. Code quality improved substantially over the first attempt. But the source code's complexity caught up with the agents eventually. They would hit a bug, attempt a few fixes, and stall, with no one available to intervene.</p>
+<p>We landed on a middle ground: a human operating a workflow of coder, tester, and reviewer agents, migrating the codebase module by module. This preserved the code quality of the second attempt while adding a human checkpoint to unblock agents when they got stuck. The next section covers this workflow in detail.</p>
+<h2>Running structured AI agent workflows for complex code migration.</h2>
+<p>With the codebase documented and the parity harness in place, the remaining fun bit was tuning how much autonomy we could hand the agents while still getting mergeable code out. We tried both extremes, from fully autonomous runs to closely supervised manual sessions. The structured workflow below is where we landed for this use case.</p>
+<p>Working with the client's reservoir engineers, we used the caller-callee tree to identify independent modules—self-contained subtrees of manageable size (empirically, less than ~10’000 lines of Fortran). Each module ran through the same workflow:</p>
+<ol><li><p>Generate the target C++ architecture.</p></li><li><p>Review it with a reservoir engineer.</p></li><li><p>On approval, break it into a task queue.</p></li><li><p>Run an implementation sub-workflow per task: plan → implement → test → repeat.</p></li><li><p>A human reviews the resulting PRs and requests changes until they merge.</p></li></ol>
+<h3>Recognizing the limits of AI assisted legacy code modernization.</h3>
+<p>The first sprint covered core functionality: 40,000 of 300,000 lines. The Fortran codebase was self-contained and runnable, which is a favorable starting condition. Migrations that depend on external systems, lack a runnable baseline, or encode physics documented nowhere would bring additional challenges not discussed in this post.</p>
+<h2>Applying three principles for modernizing complex legacy systems.</h2>
+<p>Three lessons from this project should carry over to any large legacy migration.</p>
+<ol><li><p>Build the parity harness before you write migration code—numerical agreement is the cheapest, most convincing proof that a module is done.</p></li><li><p>Get the documentation in order before you lean on the agents, because you can't migrate code nobody can read.</p></li><li><p>And at this scale, structured workflows with human review gates beat both full autonomy and hand-driven manual sessions.</p></li></ol>
+<hr/>
+<h2>We are hiring!</h2>
+<p>Mistral's Applied AI team is a group of engineers building full-stack solutions around Mistral models and Enterprise platform. We ship high-stakes, domain-specific solution to solve some of the world’s hardest problems.</p>
+<p>If this is the kind of work you want to be involved in, <a href="https://mistral.ai/careers/">apply to join our team</a>.</p>]]></content:encoded>
+      <guid isPermaLink="true">https://mistral.ai/news/legacy-code-modernization</guid>
+      <category>Solutions</category>
+      <pubDate>Wed, 09 Sep 2026 00:00:00 +0000</pubDate>
+      <media:content url="https://mistral.ai/_astro/thumbnail-10_1nYGlz.webp?dpl=6aa1d3faf09280034795e0d1" type="image/webp" medium="image"/>
+    </item>
     <item>
       <title>Mistral raises €3B to make sovereign, open-weight AI the technology frontier</title>
       <link>https://mistral.ai/news/mistral-makes-sovereign-open-weight-ai-to-frontier</link>
@@ -2434,37 +2486,6 @@ $ /usr/local/lib/heaptrack/libexec/heaptrack_interpret &lt; heaptrack.2028233 | 
       <category>Research</category>
       <pubDate>Tue, 10 Jun 2025 00:00:00 +0000</pubDate>
       <media:content url="https://mistral.ai/_astro/d73ee721-ea92-46f5-af77-79674fdb4163_1gJcoR.webp?dpl=6a622da400bba40008995ff8" type="image/webp" medium="image"/>
-    </item>
-    <item>
-      <title>Introducing Mistral Code</title>
-      <link>https://mistral.ai/news/mistral-code</link>
-      <description>Software engineering teams in enterprises can finally bring frontier-grade AI coding into their workflow in a secure, compliant manner. Mistral Code is an AI-powered coding assistant that bundles powerful models, an in-IDE assistant, local deployment options, and enterprise tooling into one fully supported package, so developers can 10X their productivity with the full backing of their IT and security teams.</description>
-      <content:encoded><![CDATA[<p>Software engineering teams in enterprises can finally bring frontier-grade AI coding into their workflow in a secure, compliant manner. Mistral Code is an AI-powered coding assistant that bundles powerful models, an in-IDE assistant, local deployment options, and enterprise tooling into one fully supported package, so developers can 10X their productivity with the full backing of their IT and security teams. </p>
-<p>Mistral Code builds on the proven open-source project <a href="https://github.com/continuedev/continue">Continue</a>, reinforced with the controls and observability that large enterprises require. Private beta is open today for <a href="https://plugins.jetbrains.com/plugin/27493-mistral-code-enterprise">JetBrains IDEs</a> and <a href="https://marketplace.visualstudio.com/items?itemName=mistralai.mistral-code">VSCode</a>, with general availability planned soon. Mistral Code is a continuation of our efforts to make developers successful with Al, following last month’s releases of <a href="https://mistral.ai/news/devstral">Devstral</a> and <a href="https://mistral.ai/news/codestral-embed">Codestral Embed</a>. </p>
-<p><figure><img alt="Mistral Code Hero" height="348" src="https://mistral.ai/_astro/6b71f3c5-d753-41b2-8ac5-6ec41534f0f0_wxiYz.webp?dpl=6a622da400bba40008995ff8" width="1078"/></figure></p>
-<h2>Why we built Mistral Code</h2>
-<p>Our goal with Mistral Code is simple: deliver best-in-class coding models to enterprise developers, enabling everything from instant completions to multi-step refactoring—through an integrated platform deployable in the cloud, on reserved capacity, or air-gapped on-prem GPUs.</p>
-<p>Unlike typical SaaS copilots, all parts of the stack—from models to code—are delivered by one provider subject to a single set of SLAs, and every line of code resides inside the customer’s enterprise boundary. </p>
-<p>When we spoke with VPs of engineering, platform leads, and CISOs, they surfaced four recurring blockers that stop mainstream copilots at the proof-of-concept stage:</p>
-<ol><li><p>Limited connectivity to proprietary repos and internal services.</p></li><li><p>Minimal customisation of the underlying models or prompts.</p></li><li><p>Shallow task coverage that ends at “autocomplete” instead of finishing multi-step work.</p></li><li><p>Fragmented SLAs spread across one vendor for the plug-in, another for the model, and a third for infra.</p></li></ol>
-<p>Mistral Code addresses those pain points with a single, vertically-integrated offering: models, plugin, admin controls, and 24X7 support—so platform teams retain visibility and can tie AI-powered productivity back to ROI.</p>
-<p><figure><img alt="Architecture" height="531" src="https://mistral.ai/_astro/0c2975a6-0964-4a39-9af7-6cabb8bec71e_Z2nn3N0.webp?dpl=6a622da400bba40008995ff8" width="1454"/></figure></p>
-<h2>Code with intelligence, control with confidence</h2>
-<p>At its core, Mistral Code is powered by four models that are state of the art in coding: </p>
-<ol><li><p><a href="https://mistral.ai/news/codestral">Codestral</a> for fill-in-the-middle / code autocomplete </p></li><li><p><a href="https://mistral.ai/news/codestral-embed">Codestral Embed</a> for code search and retrieval</p></li><li><p><a href="https://mistral.ai/news/devstral">Devstral</a> for agentic coding </p></li><li><p>And <a href="https://mistral.ai/news/mistral-medium-3">Mistral Medium</a> for chat assistance </p></li></ol>
-<p>Critically, customers can fine-tune or post-train the underlying models on private repositories or distill lightweight variants—capabilities that simply don’t exist in closed copilots tied to proprietary APIs. </p>
-<p>Mistral Code is proficient in 80+ programming languages and can reason over files, Git diffs, terminal output, and issues. We’re currently testing the product in helping engineers move beyond coding assistance and suggestions to complete fully scoped tickets: opening files, writing new modules, updating tests, and even executing shell commands—all under configurable approval workflows so senior engineers stay in control.</p>
-<p>For IT managers, a rich admin console exposes granular platform controls, deep observability, seat management, and usage analytics.</p>
-<h2>Adopted by global enterprises</h2>
-<p>Our customers validate the approach: <a href="https://www.abanca.com/es/">Abanca</a>, a leading bank in Spain and Portugal, has deployed Mistral Code at scale for development teams in a hybrid configuration so they can prototype in the cloud while core banking code stays on-prem. <a href="https://www.groupe-sncf.com/en">SNCF</a>, France's national railway company, is empowering its 4000 developers with AI through Mistral Code Serverless, and <a href="https://www.capgemini.com/news/press-releases/capgemini-partners-with-mistral-ai-to-spearhead-the-adoption-of-new-frontier-generative-ai-models/">Capgemini</a>, our first global systems-integrator partner, is to deploy Mistral Code on-premises for 1500+ developers in the service of client projects in regulated industries.</p>
-<p><figure><img alt="Capture Code" height="937" src="https://mistral.ai/_astro/46ca04b7-f62f-4855-b888-2c9ff09f90ce_UcPO3.webp?dpl=6a622da400bba40008995ff8" width="1054"/></figure></p>
-<p>We owe a debt of gratitude to the Continue community for pioneering the original developer experience; our fork preserves their extensibility but layers on significant improvements to multi-line editing, chat, and enterprise-grade extras such as fine-grained RBAC, audit logging, issue resolution / suggestion acceptance metrics, and so on. While our initial release is a private beta to collect customer feedback, we are excited to announce general availability soon, and aim to start making contributions to the upstream repo in forthcoming releases. </p>
-<h2>Getting started </h2>
-<p><a href="https://mistral.ai/contact">Request access</a> from your Mistral account team to spin up a pilot. You can choose serverless, cloud, or self-hosted deployment—and get coding with frontier intelligence in minutes.</p>]]></content:encoded>
-      <guid isPermaLink="true">https://mistral.ai/news/mistral-code</guid>
-      <category>Product</category>
-      <pubDate>Wed, 04 Jun 2025 00:00:00 +0000</pubDate>
-      <media:content url="https://mistral.ai/_astro/6b71f3c5-d753-41b2-8ac5-6ec41534f0f0_wxiYz.webp?dpl=6a622da400bba40008995ff8" type="image/webp" medium="image"/>
     </item>
   </channel>
 </rss>
