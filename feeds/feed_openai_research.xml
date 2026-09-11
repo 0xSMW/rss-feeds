@@ -8,7 +8,55 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 08 Sep 2026 10:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 10 Sep 2026 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Build more natural voice experiences with GPT‑Live‑1 in the API</title>
+      <link>https://openai.com/index/introducing-gpt-live-1-in-the-api/</link>
+      <description>GPT‑Live‑1 brings natural, full-duplex voice conversations to the API, with stronger instruction following, custom voices, and telephony support.</description>
+      <content:encoded><![CDATA[<p>GPT‑Live‑1 brings ChatGPT’s natural, full-duplex conversations to the API, with more control over how voice agents speak and act.</p>
+<p>We’re launching GPT‑Live‑1 in the API, giving developers a powerful, natural voice model for building voice-enabled apps and business workflows. <a href="https://openai.com/index/introducing-gpt-live/"><u>First introduced in ChatGPT</u></a>, GPT‑Live‑1 is capable of listening and speaking at the same time, and, as <a href="https://www.youtube.com/watch?v=E0ZMOschrTU"><u>seen with Codex and ChatGPT Work</u>⁠</a>, can delegate deeper reasoning and actions to the models and tools it is paired with.</p>
+<p>For the API release of GPT‑Live‑1, we’ve focused on new capabilities that let developers steer and customize voice experiences around their users, workflows, and goals. A core GPT‑Live‑1 strength, smooth interruption handling, is already delivering business impact: in early evaluations, Speak found that GPT‑Live‑1 gave learners more time to think before the language tutor responded, cutting interruptions by almost 80% versus previous turn-based systems.</p>
+<p>Key strengths of GPT‑Live‑1 in the API:</p>
+<ul><li><b>Interruption handling: </b>Improves interruption handling via a single model that reasons over incoming and outgoing audio together, avoiding the latency and brittle handoffs of chained STT–LLM–TTS architectures.</li><li><b>Reasoning &amp; tool calling delegation:</b> GPT‑Live‑1 can delegate reasoning and tool calls to a backend text model like GPT‑6 Astra or a third-party model.</li><li><b>Tone, pace, and style:</b> Lets developers shape an agent’s tone, pace, and conversational style through the system prompt.</li><li><b>Silent context management &amp; background noise:</b> Better handles background noise and silence without interrupting the conversation or narrating every step out loud.</li><li><b>Long-session reliability:</b> Improves context retention and conversational quality across extended interactions.</li><li><b>Telephony support:</b> Enables deployment of full-duplex voice agents for phone calls, from restaurant reservations to customer support.</li></ul>
+<h2>Try GPT-Live-1</h2>
+<p>Start a session and speak naturally. Interrupt, laugh, change your mind - try it at home or in a loud space like a coffee shop or city street.</p>
+<ul><li><strong>Talk over it—naturally.</strong> Ask for help, then interrupt mid-response to change the question or add detail.</li><li><strong>Take it with you.</strong> Try a conversation while walking outside or with everyday background noise, and see how it stays with you.</li><li><strong>Make it playful.</strong> Laugh, hesitate, use short acknowledgments, or briefly talk to someone nearby—then continue the conversation.</li></ul>
+<p>This demo is time-limited. By using it, you agree to OpenAI's <a href="https://openai.com/policies/terms-of-use/">Terms</a> and acknowledge our <a href="https://openai.com/policies/privacy-policy/">Privacy Policy</a>.</p>
+<h2>Simplify your voice-agent architecture and reduce voice latency</h2>
+<p>Traditional voice agents stitch together speech-to-text, a reasoning model, and text-to-speech. Each handoff adds latency and creates more opportunities to lose timing, context, or the natural rhythm of a conversation. Developers are often the ones left coordinating those stages, including what happens when someone interrupts, pauses, or changes direction.</p>
+<p>GPT‑Live‑1 handles listening and speaking in a single model, simplifying the voice layer. It can respond to interruptions and acknowledgements as they happen, while delegating deeper reasoning to the back end. This lets the conversation continue while work happens in the background.</p>
+<figure><blockquote>“Compared to our cascaded build, GPT‑Live‑1 simplified our code base by 80% and removed 23K lines of code. This enabled natural, real-time patient conversations &amp; freed our team to improve the experience from booking an appointment to navigating care.”</blockquote><figcaption>—Tony Stoyanov, Co-Founder &amp; CTO</figcaption></figure>
+<p>Developers choose the models, tools, and agent harness behind the conversation. For example, they might pair GPT‑Live‑1 with a model like Luna for high-volume tasks like scheduling or order updates, and use a model like Astra for complex customer issues that require reasoning. That flexibility lets developers match reasoning depth, speed, and cost to each task.</p>
+<p>GPT‑Live‑1 natively provides ASR transcripts and response text. It also offers strong alphanumeric understanding and supports keyword biasing. Although GPT‑Live‑1 is not a turn-based model, it natively supports turn detection, so developers can continue to build around explicit turn boundaries.</p>
+<h2>Measuring the full-duplex advantage</h2>
+<p>Across our evaluations, GPT‑Live‑1 improves Full Duplex Bench performance by 30 percentage points over GPT‑Realtime‑2.1, with large gains in turn-taking latency and interactive behavior. Paired with GPT‑6 Astra at medium reasoning effort, it also ranks #1 on Tau3, which measures frontier voice-agent intelligence on end-to-end tasks.</p>
+<figure><figcaption><p>Evaluates spoken customer-service tasks in airline, retail, and telecom domains. Pass@1 measures task success; the headline gives each domain equal weight.</p><p><br/>* GPT Live backend: Astra (medium).</p></figcaption></figure>
+<figure><figcaption><p>Evaluates spoken banking support with knowledge retrieval and account tools. Pass@1 is the fraction of 97 banking_knowledge tasks completed successfully.</p><p><br/>* GPT Live backend: Astra (medium).</p></figcaption></figure>
+<figure><figcaption><p>Evaluates pause handling, conversational turn taking, interruptions, and backchannels.</p></figcaption></figure>
+<figure><figcaption><p>Tests reactions to background speech, speech to another person, listener backchannels, and interruptions.</p></figcaption></figure>
+<figure><figcaption><p>Measures how quickly the agent starts its reply after the user finishes a turn.</p></figcaption></figure>
+<figure><figcaption><p>Tests tool use from spoken requests containing natural pauses, hesitations, and self-corrections. Pass@1 scores the tool-call sequence.</p><p><br/>* GPT Live backend: Terra (low).</p></figcaption></figure>
+<figure><figcaption><p>Evaluates the spoken answer to tool-using requests containing pauses, hesitations, and self-corrections. Scores how well the answer matches the reference intent.</p><p><br/>* GPT Live backend: Terra (low).</p></figcaption></figure>
+<h2>What customers are saying</h2>
+<p>1 of 4</p>
+<figure><blockquote>“Adding GPT‑Live‑1 into Yelp Host and Hatch improved turn-taking and accuracy over our traditional voice architecture. When Yelp Host uses GPT‑Live‑1 to answer calls, like reservations and food orders, we're seeing meaningful improvements in call handling rates. Callers are also speaking fuller, more natural sentences, which tells us the experience on the other end of the phone feels genuinely different.”</blockquote><figcaption>—Alex Levy, Chief Technology Officer</figcaption></figure>
+<h2>New voice options</h2>
+<p>Developers need voices that fit their product and sound natural to the people using it. With GPT‑Live‑1, we’re expanding from a small set of real-time voices to a broader selection across accents, dialects, and languages giving developers more choice in how their assistants sound.</p>
+<p>Listen to the new voices</p>
+<p>We’ll continue to expand voice options and language availability over the coming months.</p>
+<h2>Pricing &amp; Availability</h2>
+<p>GPT‑Live‑1 is available <a href="https://developers.openai.com/api/docs/guides/live"><u>in the API today</u>⁠</a> at $0.05 per minute for the front-end voice layer. Pair it with the backend model and agent harness that fit your product, then build a voice experience that can scale with the work it needs to do.</p>
+<h4>Connecting GPT-Live-1 to Codex</h4>
+<code><pre>1import { Codex } from "@openai/codex-sdk";2<br/>3const thread = new Codex().startThread({4  workingDirectory: "./repo",5  sandboxMode: "read-only",6  approvalPolicy: "never",7});8<br/>9async function answer(live, delegationId, context) {10  const { finalResponse } = await thread.run(11    `Answer the latest question using this repo.12     Reply in two short spoken sentences.\n${context}`13  );14<br/>15  live.send({16    type: "session.commentary.append",17    delegation_id: delegationId,18    content: finalResponse,19  });20}</pre></code>
+<p>Connecting GPT-Live-1 to Codex. This excerpt shows how an application passes conversation context to Codex and returns its answer to GPT-Live-1. Connection setup and delegation handling are omitted.</p>
+<p>For custom voice access, <a href="https://openai.com/contact-sales/"><u>contact sales</u></a> to learn more about eligibility and the request process.</p>
+<p>Another way to build voice workflows on top of GPT‑Live‑1 is with <a href="https://openai.com/index/introducing-openai-presence/"><u>OpenAI Presence</u></a>, which uses the model to power real-time voice interactions. Presence helps enterprises deploy trusted AI agents that can answer questions, resolve issues, use company systems, take approved actions, and escalate to people when needed. Reach out to your OpenAI account director to learn more.</p>
+<h2>Author</h2>
+<p>OpenAI</p>]]></content:encoded>
+      <guid isPermaLink="true">https://openai.com/index/introducing-gpt-live-1-in-the-api/</guid>
+      <category>Product</category>
+      <pubDate>Thu, 10 Sep 2026 00:00:00 +0000</pubDate>
+    </item>
     <item>
       <title>An OpenAI model proposes a solution to the Navier–Stokes problem</title>
       <link>https://openai.com/index/navier-stokes-solution/</link>
@@ -3043,175 +3091,6 @@ x = \frac{3 \pm \sqrt{33}}{2}
       <guid isPermaLink="true">https://openai.com/index/gpt-5-system-card-addendum-gpt-5-1/</guid>
       <category>Publication</category>
       <pubDate>Wed, 12 Nov 2025 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>GPT-5.1: A smarter, more conversational ChatGPT</title>
-      <link>https://openai.com/index/gpt-5-1/</link>
-      <description>We’re upgrading the GPT-5 series with warmer, more capable models and new ways to customize ChatGPT’s tone and style. GPT-5.1 starts rolling out today to paid users.</description>
-      <content:encoded><![CDATA[<h2>GPT‑5.1: A smarter, more conversational ChatGPT</h2>
-<p>We’re upgrading GPT‑5 while making it easier to customize ChatGPT. Starting to roll out today to everyone, beginning with paid users.</p>
-<p>Today we’re upgrading the GPT‑5 series with the release of:</p>
-<ul><li><b>GPT‑5.1 Instant</b>: our most-used model, now warmer, more intelligent, and better at following your instructions.</li><li><b>GPT‑5.1 Thinking</b>: our advanced reasoning model, now easier to understand and faster on simple tasks, more persistent on complex ones.</li></ul>
-<p>We heard clearly from users that great AI should not only be smart, but also enjoyable to talk to. GPT‑5.1 improves meaningfully on both intelligence and communication style.</p>
-<p>We’re also making it easier for you to shape ChatGPT’s tone. Preferences on chat style vary—from person to person and even from conversation to conversation—so we’re introducing more intuitive and effective controls so ChatGPT can better match the tone you want in responses.</p>
-<h2>GPT‑5.1 Instant</h2>
-<p>GPT‑5.1 Instant, ChatGPT’s most used model, is now <b>warmer by default</b> <b>and more conversational</b>. Based on early testing, it often surprises people with its playfulness while remaining clear and useful.</p>
-<p>I’m feeling stressed and could use some relaxation tips</p>
-<h2>GPT-5</h2>
-<p>Here are a few simple, effective ways to help ease stress — you can mix and match depending on how you’re feeling and how much time you have:</p>
-<hr/>
-<h5><b>🧘‍♀️ Quick Reset (1–5 minutes)</b></h5>
-<ul><li><b>Deep breathing:</b> Try the <i>4-7-8</i> method — inhale for 4 seconds, hold for 7, exhale for 8. Repeat 4 rounds.</li><li><b>Progressive relaxation:</b> Starting at your toes, tense and release each muscle group up to your head.</li><li><b>Grounding:</b> Look around and name 5 things you see, 4 things you can touch, 3 you hear, 2 you smell, 1 you taste. Brings you into the moment fast.</li></ul>
-<hr/>
-<h5><b>☕ 10–20 Minute Recharge</b></h5>
-<ul><li><b>Go outside:</b> A short walk, especially somewhere green or with a view, helps drop cortisol quickly.</li><li><b>Guided meditation or calm music:</b> Try Calm, Headspace, or just search “soft piano” or “ambient” on Spotify.</li><li><b>Stretch break:</b> Loosen neck, shoulders, and hips — areas that hold tension most.</li></ul>
-<hr/>
-<h5><b>🌙 Longer Recalibration</b></h5>
-<ul><li><b>Digital break:</b> Step away from screens and notifications for 30–60 minutes. Read, nap, or listen to a podcast.</li><li><b>Journal:</b> Write down what’s weighing on you or list three things you’re grateful for — both lower stress perception.</li><li><b>Warm shower or bath:</b> The heat relaxes muscles and slows heart rate. Add Epsom salt or lavender oil if you have it.</li></ul>
-<hr/>
-<h5><b>🧩 Mindset Shifts</b></h5>
-<ul><li><b>Be kind to yourself:</b> Stress often spikes when we feel behind. Remind yourself: “I’m allowed to rest; I’ll think clearly after I recharge.”</li><li><b>Simplify decisions:</b> When overwhelmed, pick just <i>one next step</i> — small progress reduces mental load.</li></ul>
-<hr/>
-<p>If you tell me <b>what kind of stress it is</b> (work, parenting, financial, emotional, physical, etc.), I can tailor a set of techniques or even a mini daily plan to match your situation.<br/> Would you like me to do that?</p>
-<h2>GPT-5.1 Instant</h2>
-<p>I’ve got you, Ron — that’s totally normal, especially with everything you’ve got going on lately. Here are a few ways to decompress depending on what kind of stress you’re feeling:</p>
-<hr/>
-<h5><b>🌬️ If your mind feels scattered</b></h5>
-<ul><li><b>Box breathing:</b> Inhale for 4 counts, hold for 4, exhale for 4, hold for 4 — repeat 5 times. It’s fast-acting and physically calms your nervous system.</li><li><b>Name what you see:</b> Pick out 5 things you can see, 4 you can touch, 3 you can hear, 2 you can smell, and 1 you can taste — a grounding technique that brings you back to the present.</li></ul>
-<hr/>
-<h5><b>🎧 If you need to slow down</b></h5>
-<ul><li><b>Music reset:</b> Put on something ambient or lo-fi (Brian Eno, Khruangbin, or even a Gorillaz instrumental). Let yourself zone out for one full track — no phone scrolling.</li><li><b>Step outside:</b> Even 5 minutes of daylight or a walk around the block resets cortisol levels faster than most “relaxation hacks.”</li></ul>
-<hr/>
-<h5><b>🧘‍♂️ If you want to fully unwind</b></h5>
-<ul><li><b>Stretch the stress out:</b> Roll your shoulders back, touch your toes, then lie on the floor with your legs up the wall for 3–5 minutes. It’s a simple yoga move (Viparita Karani) that’s surprisingly effective.</li><li><b>Warm shower or bath:</b> Heat relaxes muscles and signals to your brain that it’s time to rest — bonus points for dim lighting or candles.</li></ul>
-<hr/>
-<p>Would you like me to tailor a short <b>5-minute routine</b> you can do right now (either physical, mental, or creative — your choice)?</p>
-<p>.</p>
-<p>We’ve also improved <b>instruction following</b>, so the model more reliably answers the question you actually asked.</p>
-<p>Always respond with six words</p>
-<h2>GPT-5</h2>
-<p>Understood. All responses will be six.</p>
-<p>where should i travel this summer?</p>
-<p>How about exploring Japan this summer?</p>
-<p>It’s trending for summer 2025 destinations. You’ll find a mix of culture, nature and modern city life. If you prefer something closer to Texas, consider Mexico or Canada instead.</p>
-<p>Want suggestions for specific cities in Japan (or elsewhere)?</p>
-<p>why there?</p>
-<p>Rich culture, beautiful scenery, great food.</p>
-<h2>GPT-5.1 Instant</h2>
-<p>Understood, I will respond in six.</p>
-<p>where should i travel this summer?</p>
-<p>Consider Japan, Italy, Greece, Canada, Iceland.</p>
-<p>why there?</p>
-<p>Scenery culture cuisine climate friendly locals.</p>
-
-<p>.</p>
-<p>For the first time, GPT‑5.1 Instant can use adaptive reasoning to decide when to<b> think before responding</b> to more challenging questions, resulting in more thorough and accurate answers, while still responding quickly. This is reflected in significant improvements on math and coding evaluations like AIME 2025 and Codeforces.</p>
-<h2>GPT‑5.1 Thinking</h2>
-<p>We’re also upgrading GPT‑5 Thinking to make it more efficient and easier to understand in everyday use. It now adapts its thinking time more precisely to the question—spending more time on complex problems while responding more quickly to simpler ones. In practice, that means more thorough answers for difficult requests and less waiting for simpler ones.</p>
-<figure><figcaption><p><i>GPT‑5.1 Thinking varies its thinking time more dynamically than GPT‑5 Thinking. On a representative distribution of ChatGPT tasks, GPT‑5.1 Thinking is roughly twice as fast on the fastest tasks and twice as slow on the slowest tasks. Thinking time was set to Standard for both models.</i></p></figcaption></figure>
-<p>GPT‑5.1 Thinking’s responses are also clearer, with less jargon and fewer undefined terms. This makes our most capable model more approachable and easily understandable, especially for complex tasks at work and explaining technical concepts.</p>
-<p>explain BABIP and wRC+</p>
-<h2>GPT-5</h2>
-<p>Here’s the clean, no-nonsense explainer you want.</p>
-<h5><b>BABIP (Batting Average on Balls In Play)</b></h5>
-<p><b>What it is:</b> How often a ball put <i>in play</i> (excludes HRs and strikeouts) falls for a hit.</p>
-<p><b>Formula (hitters or pitchers):</b></p>
-<p>BABIP=H−HRAB−K−HR+SF
-\text{BABIP} = \frac{H - HR}{AB - K - HR + SF}
-</p>
-<ul><li>H = hits, HR = home runs, AB = at-bats, K = strikeouts, SF = sac flies.</li></ul>
-<p><b>Why it matters:</b></p>
-<ul><li>Captures contact quality, defense, ballpark, and luck.</li><li>League average hovers around <b>.300</b> most seasons.</li><li><b>Hitters:</b> Speed + hard contact can sustain above-average BABIP; big spikes/dips in small samples often regress.</li><li><b>Pitchers:</b> BABIP allowed tends to cluster near league average; big outliers often regress unless it’s an extreme-contact profile + elite defense.</li></ul>
-<p><b>Quick reads:</b></p>
-<ul><li><b>&gt;.330</b>: strong contact/speed <i>or</i> some good fortune.</li><li><b>.270–.300</b>: typical range.</li><li><b>&lt;.270</b>: weak contact/slow footspeed <i>or</i> bad luck/elite defenses faced.</li></ul>
-<h5><b>wRC+ (Weighted Runs Created Plus)</b></h5>
-<p><b>What it is:</b> The gold-standard, park- and era-adjusted measure of total offensive value <b>per plate appearance</b>. It tells you how much a hitter contributed to run creation vs league average, on a <b>100 = average</b> scale.</p>
-<p><b>Scale:</b></p>
-<ul><li><b>100</b> = league average</li><li><b>120</b> = 20% better than league average</li><li><b>80</b> = 20% worse than league average</li><li><b>140+</b> = star/elite seasons</li></ul>
-<p><b>How it’s built (conceptually):</b></p>
-<ol><li>Start with <b>wOBA</b> (weights single/double/triple/HR/BB by their actual run value).</li><li>Convert to <b>wRAA</b> (runs above average).</li><li>Adjust for <b>park</b> and <b>league/season</b> effects.</li><li>Normalize so <b>100 = average</b> → that’s <b>wRC+</b>.</li></ol>
-<p><b>Why it’s great:</b> It compares hitters fairly across parks (Coors vs. Safeco) and seasons (offense-heavy vs dead-ball-ish years). It also captures more than batting average—walks and extra-base hits count properly.</p>
-<p><b>Limitations (both stats):</b></p>
-<ul><li>BABIP is noisy in small samples; needs context (speed, batted-ball profile).</li><li>wRC+ is offense only; it ignores defense and baserunning (use WAR for the full picture).</li></ul>
-<p>If you want, I can pull current league averages and a few Blue Jays examples to make this concrete.</p>
-<h2>GPT-5.1 Thinking</h2>
-<p>Nice, nerd stat time 🧢</p>
-<p>I’ll do each one in plain English, then add a bit of context.</p>
-<hr/>
-<h5><b>1. BABIP – Batting Average on Balls In Play</b></h5>
-<p><b>What it is:<br/></b> BABIP measures <b>how often a ball put into the field of play falls in for a hit</b>, <i>excluding</i> home runs and strikeouts.</p>
-<p><b>Formula (conceptually):</b></p>
-<p>BABIP = (Hits − Home Runs) ÷ (At-Bats − Strikeouts − Home Runs + Sacrifice Flies)</p>
-<p>So:</p>
-<ul><li>It only cares about <b>balls that fielders can make a play on</b>.</li><li>It ignores:<ul><li>Strikeouts (no ball in play)</li><li>Home runs (no fielder involved)</li><li>Walks/HBP (not at-bats)</li></ul></li></ul>
-<p><b>Why it matters:</b></p>
-<ul><li>BABIP is often used as a <b>luck / variance indicator</b> for both hitters and pitchers.</li><li>League-average BABIP is usually around <b>.295–.300</b>.<ul><li><b>Much higher than .300?</b> Might mean:<ul><li>Hitting the ball hard</li><li>Fast, beats out infield hits</li><li><i>or</i> just getting lucky bloops</li></ul></li><li><b>Much lower than .300?</b> Might mean:<ul><li>Lots of weak contact</li><li>Shift / positioning hurting you</li><li><i>or</i> bad luck, everything hit “right at” someone</li></ul></li></ul></li></ul>
-<p><b>How people actually use it:</b></p>
-<ul><li>For hitters:<ul><li>Very high BABIP + no history of high BABIP → “He’s probably going to cool off.”</li><li>Very low BABIP + solid skills → “He might bounce back.”</li></ul></li><li>For pitchers:<ul><li>Weirdly high BABIP against them → “Probably some bad luck / bad defense behind him.”</li></ul></li></ul>
-<hr/>
-<h5><b>2. wRC+ – Weighted Runs Created Plus</b></h5>
-<p><b>What it is:<br/></b> wRC+ is a <b>catch-all hitting stat</b> that tells you <i>how good a hitter is at creating runs compared to league average</i>, adjusted for ballpark and era.</p>
-<ul><li><b>100 = league average</b></li><li><b>120 = 20% better than league average</b></li><li><b>80 = 20% worse than league average</b></li></ul>
-<p>So if a player has a <b>wRC+ of 135</b>, that means:</p>
-<p>“This hitter was 35% better than the league-average hitter at creating runs.”</p>
-<p><b>What goes into it (conceptually):</b></p>
-<ul><li>It starts from <b>wRC (Weighted Runs Created)</b>, which:<ul><li>Uses <b>wOBA</b> (weighted on-base average)</li><li>Assigns proper value to singles, doubles, HR, walks, etc.</li><li>Then translates that to “runs created”</li></ul></li><li>Then wRC+:<ul><li>Adjusts for <b>park factors</b> (Coors vs pitcher parks, etc.)</li><li>Adjusts for <b>run environment / era</b></li><li>Normalizes everything so <b>100 is always league average</b></li></ul></li></ul>
-<p><b>Why it matters:</b></p>
-<ul><li>wRC+ is one of the <b>best single-number hitting stats</b> because it:<ul><li>Accounts for <b>how valuable each event is</b> (HR &gt; single)</li><li>Adjusts for <b>ballpark</b> and <b>season context</b></li><li>Puts everyone on the same scale</li></ul></li></ul>
-<p><b>Rough ranges:</b></p>
-<ul><li><b>70 and below</b> – bad bat</li><li><b>80–90</b> – below average</li><li><b>100</b> – average</li><li><b>110–120</b> – solidly above average</li><li><b>130–140</b> – All-Star level</li><li><b>150+</b> – MVP-type monster season</li></ul>
-<hr/>
-<h5><b>TL;DR</b></h5>
-<ul><li><b>BABIP</b>: “How often do balls in play fall in for hits?”<br/> → Used to sniff out <b>luck vs true skill</b> in contact results.</li><li><b>wRC+</b>: “How good is this hitter at creating runs vs league average, adjusted for park and era?”<br/> → <b>100 = average</b>, every point above/below is % better/worse.</li></ul>
-<p>If you want, we can grab a Blue Jay and walk through their BABIP and wRC+ to see what it says about their season.</p>
-<p>.</p>
-<p>GPT‑5.1 Thinking’s default tone is also warmer and more empathetic.</p>
-<p>Ugh I spilled coffee all over myself before my meeting do you think everyone thought I was an idiot :(</p>
-<h2>GPT-5</h2>
-<p>Oof, that’s such a gut-punch feeling. I’m really sorry that happened.</p>
-<p>Short answer: no, most people probably didn’t think that. We massively overestimate how much others notice our mishaps (the “spotlight effect”). Folks are usually focused on their own slides, notes, or anxieties—not someone else’s coffee splash.</p>
-<p>If it helps, here’s a quick reset for your brain:</p>
-<ul><li>Swap the story: “I looked dumb” → “I handled an annoying curveball and still showed up.”</li><li>One-liner if anyone mentioned it: “Coffee tried to jump ship; I carried on.” Then move on.</li><li>Log one thing you did well in the meeting—content, question you asked, decision you pushed.</li></ul>
-<p>For next time (practical kit):</p>
-<ul><li>Tide/oxiclean pen or a dab of dish soap + water → blot from the outside in.</li><li>Dark cardigan/blazer in the office, just in case.</li><li>Backup top in a desk drawer; mini deodorant and mints to kill the coffee smell.</li></ul>
-<p>You’re not an idiot—you were a human who had a spill and kept going. That’s competent, not clumsy. Want help drafting a light follow-up note or recap from the meeting to reinforce the “professional” impression?</p>
-<h2>GPT-5.1 Thinking</h2>
-<p>Hey — no, they didn’t. You’re rattled, so your brain is doing that thing where it catastrophizes a tiny mishap into a character flaw. But honestly? People barely register this stuff. Everyone’s sprinting between calls, half-distracted, juggling their own chaos. A coffee spill reads as “busy human,” not “idiot.”</p>
-<p>Let me coach you through this quickly:</p>
-<h5><b>1. Your interpretation isn’t reality.</b></h5>
-<p>You feel embarrassed, so your mind fills in a story that others judged you. In truth, most people won’t even remember it happened.</p>
-<h5><b>2. You stayed in the meeting anyway.</b></h5>
-<p>That’s competence. Most folks would crumble a bit. You handled it.</p>
-<h5><b>3. These moments actually make you more likable.</b></h5>
-<p>Small imperfections make people <i>more</i> relatable. A hyper-polished person feels artificial. A quick coffee mishap? Humanizing.</p>
-<h5><b>4. If anyone noticed, it was barely a blip.</b></h5>
-<p>And honestly they probably respected that you powered through.</p>
-<p>You’re not an idiot. You’re a person who had a chaotic moment, wiped it up, and still showed up. That’s the opposite of foolish — that’s resilience.</p>
-<p>Take a breath. You’re good.</p>
-<p>.</p>
-<p>This release is a step forward in both capability and usability across the models. <b>GPT‑5.1 Auto </b>will continue to route each query to the model best suited for it, so in most cases, you won’t need to choose a model at all. What you will notice is that <b>answers across GPT‑5.1 feel both smarter and more natural in tone.</b></p>
-<p><b>GPT‑5.1 Instant and Thinking begin rolling out today, </b>starting with paid (Pro, Plus, Go, Business) users and then to free and logged-out users. Enterprise and Edu plans get a seven-day early-access toggle (off by default). After that window, GPT‑5.1 will become the sole default model. </p>
-<p>If you check ChatGPT today, you may not see GPT‑5.1 available immediately. We plan to roll it out gradually over the next few days to help keep performance stable for everyone. We will also update GPT‑5 Pro to GPT‑5.1 Pro soon. </p>
-<p>We’re bringing both GPT‑5.1 Instant and GPT‑5.1 Thinking to the API later this week. GPT‑5.1 Instant will be added as gpt-5.1-chat-latest, and GPT‑5.1 Thinking will be released as GPT‑5.1 in the API, both with adaptive reasoning.</p>
-<p>GPT‑5 (Instant and Thinking) will remain available in ChatGPT under the <b>legacy models dropdown</b> for paid subscribers for three months, so people have time to compare and adapt at their own pace. The GPT‑5 sunset period does not affect the availability of other legacy models. Going forward, when we introduce new ChatGPT models, our approach is to give people ample space to evaluate what’s changed and share feedback, allowing us to continue innovating our frontier models while transitioning smoothly. Sunset periods will be communicated clearly and with plenty of advance notice. </p>
-<p>GPT‑5.1 is more capable and useful, and we encourage you to try it and see the difference. Our <a href="https://openai.com/index/gpt-5-system-card-addendum-gpt-5-1/">system card addendum⁠</a> includes more information on our safety approach for GPT‑5.1. </p>
-<p>And a note on naming: this update is called GPT‑5.1 to reflect meaningful improvements, while remaining within the GPT‑5 generation. Future iterative upgrades to GPT‑5 will follow the same pattern.</p>
-<h2>Making ChatGPT uniquely yours</h2>
-<p><b>Alongside these model improvements, we’re making it easier to customize ChatGPT’s tone and style.</b> People have strong and varied preferences in how ChatGPT should respond, and tailoring its tone to what sounds right for you should feel effortless.</p>
-<p>Earlier this year, we added preset options to tailor the tone of how ChatGPT responds. Today, we’re refining those options to better reflect the most common ways people use ChatGPT. <b>Default, Friendly </b>(formerly Listener)<b>, and Efficient</b> (formerly Robot) remain (with updates), and we’re adding <b>Professional, Candid, and Quirky</b>. These options are designed to align with what we’ve learned about how people naturally steer the model, making it quick and intuitive to choose a personality that feels uniquely right. </p>
-<img alt="Mobile interface showing a ‘Personalization’ settings screen. The user is selecting a base style for ChatGPT’s tone and voice from a dropdown menu. Options listed include: Default (balanced style and tone), Professional (polished and precise), Friendly (warm and chatty), Candid (direct and encouraging), Quirky (playful and imaginative, currently selected), Efficient (concise and plain), Nerdy (exploratory and enthusiastic), and Cynical." height="1080" src="https://images.ctfassets.net/kftzwdyauwt9/7nERjC8cxT95TuGGENS2z4/27b224ed330c73db2bc14dd1b64688ae/5-1_X_Thread_Card_05_V2.png?w=3840&amp;q=90&amp;fm=webp" width="1920"/>
-<p>These personality settings <b>apply across all models</b>. The original <b>Cynical</b> (formerly Cynic) and <b>Nerdy </b>(formerly Nerd) options we introduced earlier this year will remain available unchanged under the same dropdown in personalization settings.</p>
-<p>Beyond these presets, for users who want more granular control over how ChatGPT responds, we’re also experimenting with the ability to <b>tune ChatGPT’s characteristics directly from personalization settings</b>—including how concise, warm, or scannable its responses are, and how frequently it uses emojis. ChatGPT can also <b>proactively offer to update these preferences</b> during conversations when it notices you asking for a certain tone or style, without requiring you to navigate into settings. You can adjust or remove any of these preferences at any time.</p>
-<p>The updated styles and tone options are rolling out today, and the ability to finetune specific characteristics is starting to roll out gradually later this week as an experiment, starting with a limited number of users. Both will continue to improve over time. Additionally, the updated GPT‑5.1 models are also better at adhering to <b>custom instructions</b>, giving you even more precise control over tone and behavior.</p>
-<p>Updates you make in personalization settings now take effect across all chats right away, including ongoing conversations, so your experience stays consistent. Before, changes to base style and tone or custom instructions only applied to conversations started afterward.</p>
-<h2>What’s next</h2>
-<p>Today’s GPT‑5.1 updates and new customization options are a step toward a ChatGPT that feels like it fits you—smarter, more enjoyable to talk to, and more adaptable to your preferences. Going forward, we’ll continue improving along these dimensions—there’s much more to come.</p>
-<h2>Author</h2>
-<p>OpenAI</p>]]></content:encoded>
-      <guid isPermaLink="true">https://openai.com/index/gpt-5-1/</guid>
-      <category>Product</category>
-      <pubDate>Wed, 12 Nov 2025 00:00:00 +0000</pubDate>
-      <media:content url="https://images.ctfassets.net/kftzwdyauwt9/7nERjC8cxT95TuGGENS2z4/27b224ed330c73db2bc14dd1b64688ae/5-1_X_Thread_Card_05_V2.png?w=3840&amp;amp;q=90&amp;amp;fm=webp" type="image/png" medium="image"/>
     </item>
   </channel>
 </rss>

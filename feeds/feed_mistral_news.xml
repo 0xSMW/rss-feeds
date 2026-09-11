@@ -1013,6 +1013,74 @@ response = await client.beta.conversations.start_async(    agent_id=my_agent.id,
       <media:content url="https://mistral.ai/_astro/logo-workflows_QKaXK.webp?dpl=6a622da400bba40008995ff8" type="image/webp" medium="image"/>
     </item>
     <item>
+      <title>Spaces: A CLI Built for Humans and Agents</title>
+      <link>https://mistral.ai/news/spaces</link>
+      <description>Most developer tools start the same way. You need to do a thing repeatedly, so you write a script. The script grows flags. The flags grow subcommands. Before you know it, you've got a CLI.</description>
+      <content:encoded><![CDATA[<p>Most developer tools start the same way. You need to do a thing repeatedly, so you write a script. The script grows flags. The flags grow subcommands. Before you know it, you've got a CLI.</p>
+<p>We had this exact experience when building an internal platform tool to help our solutions team ship faster. It scaffolds projects, spins up dev environments, generates configs, and deploys to staging.</p>
+<p>As our CLI grew in scope, so did the number of our internal users. But then, something interesting happened: suddenly, we were no longer building just for human developers, but for coding agents too.</p>
+<h2>What Good DX Looks Like</h2>
+<p>Before we talk about agents, let's talk about what makes a CLI actually pleasant for human developers.</p>
+<p>Spaces is opinionated about the boring stuff. It picks sane directory structures so you don't have to. It generates the config files you'd otherwise copy from the last project. It wires services together so your API and your frontend can talk on day one, not after an hour of YAML editing or “vibing”.</p>
+<p>Here's what a typical session looks like:</p>
+<figure><pre><code>$ spaces init my-project$ cd my-project$ spaces dev</code></pre></figure>
+<p>Three commands. You go from nothing to a running multi-service project with hot reload, a database, and generated Dockerfiles. That's the bar.</p>
+<p>The commands that matter tend to fall into three buckets:</p>
+<ul><li><p><strong>Scaffolding</strong> -- These create structure, ask questions, show options, let you explore.</p></li><li><p><strong>Development</strong> -- These are your inner loop. They just “run”.</p></li><li><p><strong>Operations</strong> -- These touch production. Careful, double-check before acting</p></li></ul>
+<p>This is all table stakes. But then our second user showed up and we discovered we needed something a little different, and a lot more interesting.</p>
+<h2>The Second User: The Agent</h2>
+<p>We built a TUI module picker for <code>init</code>. Fancy changes, commands, it looked super.</p>
+<p>Then an agent tried to use it.</p>
+<p>The agent saw raw ANSI escape codes. <code>\\\\x1b[36m?\\\\x1b[0m Select components</code>. It couldn't send arrow keys or toggle selections. It was locked out of the command entirely.</p>
+<p>The fix seems obvious in retrospect: add a <code>--components</code> flag. But the real insight was bigger than one flag.</p>
+<h2>Every prompt is a flag in disguise</h2>
+<p>Every time your CLI asks an interactive question, there's an implicit contract: "I need this piece of information to proceed." To fulfill that contract, you can use an interactive prompt. Or you can use a flag or config file.</p>
+<p>The trick is to think about the <em>information</em> first and the <em>input method</em> second.</p>
+<figure><pre><code>def init_command(    components: str | None = Option(None),    yes: bool = Option(False, "-y"),):    if components:        selected = components.split(",")    elif yes:        selected = get_defaults()    else:        selected = show_picker()
+    # Same logic from here    create_project(selected)</code></pre></figure>
+<p>Three input paths, one execution path. The business logic doesn't know how the inputs arrived. This means you test it once, not three times.</p>
+<p>The <code>-y</code> flag deserves special attention. It's not just "skip confirmations." It's a contract that says: <em>I'm providing everything you need programmatically, don't block on stdin.</em> When you run with <code>-y</code>, every prompt resolves to either a flag value or a smart default. If it can't, it fails loudly instead of hanging.</p>
+<p><strong>Example in practice: the interactive elements in this post.</strong></p>
+<p>The elements were built in a fresh repository. An agent was retroactively asked to wire the project into [spaces cli] for deployment. It started by running <code>--help</code> across the relevant commands to understand the interface. From that, it figured out which configuration files were needed, generated a <code>config.yaml</code>, and connected the Dockerfile and registry settings - no hand-holding required.</p>
+<p>In the same pass, it set up the GitHub Actions CI pipeline. From a single prompt to a live deployment took under 10 minutes (a cycle time we're actively working to bring down). After that, the repository was fully configured and the embeds were <a href="https://spaces-blogs-staging-mistral-01d83c8e.koyeb.app/">deployed</a> with <a href="https://www.koyeb.com/">Koyeb </a>— as a Space, scaffolded and deployed through Spaces itself. Yes, the interactive demos embedded in this blog post about Spaces are running as a Space. <em>Spaception</em>.</p>
+<p>Because every interactive input had a flag equivalent, the agent could operate autonomously end-to-end.</p>
+<h2>Structured Data as Interface</h2>
+<p>The CLI our team was building helped our applied AI engineers ship apps. But not every app looks the same. Some need a backend and a vector database. Others just need a relational database, a frontend, and some APIs. A few are worker-only services with no UI at all.</p>
+<p>We were not about to hardcode the module types. So we built a plugin system where each component is a plugin that declares its own properties:</p>
+<figure><pre><code>class ModulePlugin(BaseModel):    type_id: str    category: str    default_port: int
+    def get_env_vars(self) -&gt; list[EnvVarDef]: ...    def get_dev_command(self, port: int) -&gt; str: ...</code></pre></figure>
+<p>Plugins are introspectable. You can list them, serialize them, diff them. A human browses a TUI picker. An agent queries the registry and gets JSON back. Same data, different rendering.</p>
+<p>This accidentally solved a problem we didn't know we had. Before, adding a new module type meant updating the picker, the Dockerfile generator, the env file writer, and the compose template. Now it means writing one plugin class. The registry is the single source of truth and everything reads from it.</p>
+<h2>Teaching Agents About Your Project</h2>
+<blockquote><blockquote><p>There's an old saying that content is king. With agents, context is.</p></blockquote></blockquote>
+<p>The most impactful thing we did for agent usability was generating two files on every <code>init</code>:</p>
+<p><code>context.json</code> -- a structured snapshot of the project: what modules exist, ports they use, commands to run, env vars they need.</p>
+<p><code>AGENTS.md</code> -- a set of rules written for LLMs and more imperative than your regular one. Not "this project uses PostgreSQL" but "run <code>mycli dev --migrate</code> before testing database changes."</p>
+<p>An agent that reads these files before acting makes dramatically fewer mistakes. Basically, it won’t guess at port numbers, run the wrong test command, try to install dependencies that are already managed by the toolchain.</p>
+<p>The context file also acts as a cache-buster for stale agent assumptions. When you add a module or change a deploy target, the context file updates automatically on the next <code>dev</code> or <code>init</code>. The agent reads fresh state every time.</p>
+<h2>Implicit State is the Enemy</h2>
+<p>The subtlest problem we hit was implicit state. Our <code>add</code> command read <code>config.yaml</code> from the current working directory. A human <code>cd</code>s to the right folder without thinking. An agent running commands from a workspace root has no idea it needs to be in a subdirectory.</p>
+<p>The fix:</p>
+<figure><pre><code># Before: CWD dependencyconfig = load_config(Path.cwd() / "config.yaml")
+# After: explicit with fallbackconfig = load_config(    path or find_config_in_parents(Path.cwd()))</code></pre></figure>
+<p>Every hidden assumption -- CWD, environment variables, dotfiles in <code>$HOME</code> -- is a place where an agent will trip. Explicit parameters with sensible fallbacks solve it for agents and make scripting easier for humans too.</p>
+<h2>The Checklist</h2>
+<p>Looking back, the changes were small individually. Just a set of principles applied consistently:</p>
+<ul><li><p>Every interactive input has a flag equivalent</p></li><li><p>Every flag has a smart default for headless mode</p></li><li><p>State is explicit. CWD, env vars, and config paths are inputs, not assumptions</p></li><li><p>Plugins are data models, not just code. Introspectable by default</p></li><li><p>Context files give agents (and CI, and scripts) a structured description of the project</p></li></ul>
+<h2>Building a Better Tool for Everyone</h2>
+<p>The funny part is that none of this made the CLI worse for humans. The TUI picker still works and looks fancy, progress spinners still spin, confirmation dialogs still confirm. We just added a second door.</p>
+<p>And that second door turned out to be the more important one. Not because agents matter more than humans, but because the constraints they impose are the same constraints that make a CLI composable, scriptable, and testable. Designing for agents forced us to build a better tool for everyone.</p>
+<p>If you're building developer tools right now, you don't need a separate agent API. You need to look at every <code>input()</code> call, every CWD assumption, every pretty-printed-only output, and ask: what if the user on the other end is a process, not a person?</p>
+<p>The answer to that question will improve your tool either way.</p>
+<hr/>
+<p>Spaces CLI is built by Lorenzo Signoretti, Riwa Hoteit &amp; Sam Fenwick at Mistral AI. Special thanks to our Applied AI team, the earliest and most demanding users of the CLI, whose real-world usage shaped every pattern described here. We're excited to see the applications it will help them build with our Customers to solve painful use cases.</p>
+<hr/>
+<p><strong>The tooling layer between humans and agents is still being figured out. If building developer tools at the intersection of AI and infrastructure sounds like your thing, </strong><a href="https://mistral.ai/careers"><strong>we’re hiring</strong></a><strong>.</strong></p>]]></content:encoded>
+      <guid isPermaLink="true">https://mistral.ai/news/spaces</guid>
+      <category>Engineering</category>
+      <pubDate>Tue, 31 Mar 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
       <title>Voxtral TTS</title>
       <link>https://mistral.ai/news/voxtral-tts</link>
       <description>Mistral AI has launched Voxtral TTS, a 4B-parameter text-to-speech model delivering state-of-the-art multilingual voice generation with realistic, emotionally expressive speech in 9 languages, low latency, and easy voice adaptation. The model excels in contextual understanding, speaker modeling, and zero-shot cross-lingual voice adaptation, making it ideal for enterprise voice workflows and scalable AI agents. Available via API and Mistral Studio, it offers cost-effective, high-quality voice generation starting at $0.016 per 1k characters.</description>
@@ -2426,33 +2494,6 @@ $ /usr/local/lib/heaptrack/libexec/heaptrack_interpret &lt; heaptrack.2028233 | 
       <guid isPermaLink="true">https://mistral.ai/news/ai-for-citizens</guid>
       <category>Solutions</category>
       <pubDate>Thu, 03 Jul 2025 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Mistral Compute</title>
-      <link>https://mistral.ai/news/mistral-compute</link>
-      <description>Frontier AI. In Your Hands. This was the founding north star of Mistral AI and continues to guide our mission two years on. It has helped us evolve from a research lab to the world’s leading independent AI company, rooted in open science.</description>
-      <content:encoded><![CDATA[<p>Frontier AI. In Your Hands. This was the founding north star of Mistral AI and continues to guide our mission two years on. It has helped us evolve from a research lab to the world’s leading independent AI company, rooted in open science. </p>
-<p>Through this journey, however, we have realized that to truly democratize AI, it will require us to not just build open models and frontier AI products, but to provide everyone across the world the tools and environments to do so themselves, from infrastructure up. </p>
-<p>In particular, we believe that the buildout and ownership of AI infrastructure should not be restricted to two or three powerful companies, but rather, be independent and self-determined. </p>
-<p>Frontier AI should be in your hands. And in service of that mission, we are proud to announce the latest addition to our Mistral AI’s portfolio of offerings—Mistral Compute. </p>
-<h2>Frontier AI infrastructure for everyone.</h2>
-<p>Mistral Compute is a new AI infrastructure offering that will provide customers a private, integrated stack—GPUs, orchestration, APIs, products, and services in whatever form factor they need, from bare-metal servers to fully-managed PaaS. It is an unprecedented AI infrastructure undertaking in Europe, and a strategic initiative that will ensure that all nation states, enterprises, and research labs globally remain at the forefront of AI innovation.</p>
-<p>The genesis of Mistral Compute was organic. At Mistral AI, we faced our fair share of challenges training models and building state-of-the-art AI products. GPU hardware is expensive and scarce, tooling is patchy, and securing critical workloads is difficult. We learned hard lessons along the way, but eventually managed to build a robust AI platform on which we trained many state of the art models that today serve millions of users. And now, we’re unleashing its power for anyone to build on.</p>
-<p>Mistral Compute empowers sovereigns, companies, and research institutions to completely reimagine the way they build their AI stack. What used to be a choice between a few third party cloud providers is now the right to build your AI environment to your spec, and own it top to bottom. The offering will include Mistral AI’s training suite that can accelerate region and domain-specific AI efforts across <a href="https://www.htx.gov.sg/whats-happening/all-news---events/all-news/2025/media-release-htx-inks-contract-with-mistral-ai-and-microsoft-to-boost-ai-model-development-for-home-team">nation</a> and <a href="https://www.cmacgm-group.com/en/news-media/cma-cgm-group-adopts-custom-designed-ai-solutions-mistral-ai">industry</a>-wide endeavors such as defense technology, pharmaceutical discovery, financial markets, and more.</p>
-<p><figure><img alt="Image (3)" height="1472" src="https://mistral.ai/_astro/8303b765-01b3-4cae-85d0-ea41047e08f3_1YPo4x.webp?dpl=6a622da400bba40008995ff8" width="2120"/></figure></p>
-<h2>Purpose-built, built with purpose. </h2>
-<p>Customers can use Mistral Compute to train and serve any AI workload they imagine. It is being developed and managed by a team with decades of experience building state of the art AI and high-performance compute (HPC) infrastructure, and training and serving the world’s best AI models. </p>
-<p>As a premier NVIDIA partner, Mistral Compute will offer the latest NVIDIA reference architectures, with availability of tens of thousands of GPUs, and rapid expansion in the coming years.</p>
-<p>Critically, Mistral Compute aims to provide a competitive edge to entire industries and countries in Europe, the Middle East, Asia, and the entire Southern Hemisphere that have been waiting for an alternative to US or China-based cloud and AI providers. This applies equally to the global entities of US or Chinese companies that want to serve international customers, particularly in Europe, with AI that is operating and running regionally. </p>
-<p>With a strong emphasis on sustainability and data sovereignty, Mistral Compute is built to meet the stringent requirements of European regulations while minimizing environmental impact through the use of decarbonized energy. </p>
-<h2>Join us today. </h2>
-<p>We would like to thank our launch partners Black Forest Labs, BNP Paribas, Kyutai, Mirakl, Orange, Schneider Electric, SLB Groupe, SNCF, Thales, and Veolia for their support for Mistral Compute. If you would like to join them, please send us a note using the form. </p>
-<p>Along with Mistral Compute, we will continue to make the Mistral AI suite of models, products, and solutions available on-premises and on all global cloud leaders through our partners. </p>
-<p>Join us on our mission to place frontier AI in everyone’s hands.</p>]]></content:encoded>
-      <guid isPermaLink="true">https://mistral.ai/news/mistral-compute</guid>
-      <category>Company</category>
-      <pubDate>Wed, 11 Jun 2025 00:00:00 +0000</pubDate>
-      <media:content url="https://mistral.ai/_astro/8303b765-01b3-4cae-85d0-ea41047e08f3_1YPo4x.webp?dpl=6a622da400bba40008995ff8" type="image/webp" medium="image"/>
     </item>
   </channel>
 </rss>
