@@ -8,7 +8,24 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 17 Sep 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 18 Sep 2026 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Partnering with Accenture on embedded evaluation</title>
+      <link>https://www.anthropic.com/news/accenture-embedded-evaluation</link>
+      <description>We’re partnering with Accenture on independent evaluation of frontier AI—part of our recent commitment to embed evaluators at Anthropic. Both we and Accenture expect to invest at least $1 billion to build capacity in this area over the next five years.</description>
+      <content:encoded><![CDATA[<p>We're partnering with Accenture on independent evaluation of frontier AI. This is an important step toward the commitment, made in our CEO’s <a href="https://darioamodei.com/post/we-must-pace-the-frontier">essay</a> “We Must Pace the Frontier,” to embed evaluators within Anthropic.</p>
+<p>The partnership will be led by Faculty, Accenture’s specialist AI business, and will include evaluating and red-teaming models, conducting alignment assessments, and testing model safeguards. Accenture helps businesses and governments deploy AI across many industries. Their understanding of how enterprises use AI in practice informs their safety approach, and they will bring that perspective to evaluating our models.</p>
+<p>Anthropic and Accenture each expect to invest at least $1 billion in building capacity in this area over the next five years.</p>
+<p>Embedded evaluation is new, and many of the details about how it will operate are still being worked out. Unlike today’s external evaluators, embedded evaluators will work inside AI companies, with access comparable to an employee's. That access allows them to watch models take shape in training, follow the decisions that govern how those models are built and deployed, and speak directly to employees. From this vantage point, embedded evaluators can assess how a company operates, verify that it is keeping its safety commitments, and identify blind spots. They can also report incidents and give the public a more informed account of benefits and risks.</p>
+<p>To be clear, independent embedded evaluators do not reduce our accountability, but help to make it more verifiable. The safety of our models remains our responsibility.</p>
+<p>There are, as yet, no standards for what information embedded evaluators should have access to, or how they should report what they find. There is also no settled system for funding independent evaluation. Long-term, we think funding should come from pooled or government sources, as we called for in our <a href="https://www-cdn.anthropic.com/files/4zrzovbb/website/0a58d567024a8b448ff15158ebc3625328dfcc1f.pdf">Advanced AI Framework</a> in June. As neither exists today, we plan to work with different evaluators under different funding arrangements.</p>
+<p>Given the importance and urgency of this work, Anthropic will fund Accenture's work directly. We are also in dialogue with <a href="https://metr.org/">METR</a> and other nonprofit evaluators to pilot elements of embedded evaluation using their own funding. Ultimately, we believe frontier AI needs an ecosystem of evaluators operating with shared standards.</p>
+<p>We expect frontier labs to work with several organizations at once. Our partnership is non-exclusive; Anthropic will work with other evaluators to be announced in the coming weeks, and Accenture will work with other AI developers in similar capacities.</p>
+<p>We'll continue to train and release frontier models, and we want independent evaluators working alongside us as we do. We’re sharing these early efforts now so people and other AI developers can see our process. We expect our approach to evolve as the field matures, and we’ll share more as our work begins and as we bring on additional evaluators.</p>]]></content:encoded>
+      <guid isPermaLink="true">https://www.anthropic.com/news/accenture-embedded-evaluation</guid>
+      <category>Announcements</category>
+      <pubDate>Fri, 18 Sep 2026 00:00:00 +0000</pubDate>
+    </item>
     <item>
       <title>Introducing the Life Sciences Verification Program</title>
       <link>https://www.anthropic.com/news/life-sciences-verification-program</link>
@@ -107,6 +124,14 @@
       <category>Company</category>
       <pubDate>Wed, 16 Sep 2026 00:00:00 +0000</pubDate>
       <media:content url="https://mistral.ai/_astro/Linkedin-Partnership-Firefox%20copie_1nk6LB.webp?dpl=6aaaa3e6d4d2290017119943" type="image/webp" medium="image"/>
+    </item>
+    <item>
+      <title>Introducing Grok Voice Transcribe 2.0</title>
+      <link>https://x.ai/news/grok-voice-transcribe-2</link>
+      <description>Announcing SpaceXAI's newest speech-to-text model, with unparalleled accuracy and cost effectiveness.</description>
+      <guid isPermaLink="true">https://x.ai/news/grok-voice-transcribe-2</guid>
+      <category>News</category>
+      <pubDate>Wed, 16 Sep 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
       <title>Memory in Grok Build</title>
@@ -1573,38 +1598,6 @@ VOICE: with the operator — direct, dollars first, no fluff. External — per t
       <category>Digg AI from X</category>
       <pubDate>Tue, 01 Sep 2026 14:00:00 +0000</pubDate>
       <media:content url="https://digg.com/tech/4h21zxn6/opengraph-image" type="image/jpeg" medium="image"/>
-    </item>
-    <item>
-      <title>Physical Superintelligence Raises $58M Seed Round</title>
-      <link>https://ai-2040.com</link>
-      <description>Co-founders announce seed funding for an AI-powered physics research lab.</description>
-      <content:encoded><![CDATA[<p><img src="https://digg.com/tech/ahrrsnui/opengraph-image" alt="Physical Superintelligence Raises $58M Seed Round"/></p>
-<p>Co-founders announce seed funding for an AI-powered physics research lab.</p>
-<p><strong>Original source:</strong> <a href="https://ai-2040.com">https://ai-2040.com</a></p>
-<p><strong>Digg story:</strong> <a href="https://digg.com/tech/ahrrsnui">https://digg.com/tech/ahrrsnui</a></p>
-<p>Dr. Alex Wissner-Gross posted that Physical Superintelligence PBC, co-founded with Matthew Pines and Alex Klokus, raised a $58M seed round. The company aims to build a research lab that uses AI to find and commercialize physics breakthroughs at scale while keeping the work safe and verifiable. Alex Klokus replied that physics limits what is possible and that the team will map those limits. Jack Dorsey retweeted the announcement. No further details on investors or timelines appear in the posts.</p>
-<ul><li><strong>Views:</strong> 439,842</li><li><strong>Likes:</strong> 2,257</li><li><strong>Bookmarks:</strong> 460</li><li><strong>Quotes:</strong> 78</li><li><strong>Replies:</strong> 225</li><li><strong>Posts:</strong> 4</li></ul>
-<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/jack">jack</a></li><li><a href="https://x.com/DanielleFong">Danielle Fong 🔆</a></li></ul>]]></content:encoded>
-      <guid isPermaLink="true">https://ai-2040.com</guid>
-      <category>Digg AI from X</category>
-      <pubDate>Tue, 01 Sep 2026 13:00:15 +0000</pubDate>
-      <media:content url="https://digg.com/tech/ahrrsnui/opengraph-image" type="image/jpeg" medium="image"/>
-    </item>
-    <item>
-      <title>Ramp's Inspect AI Agent Writes Three of Four Pull Requests</title>
-      <link>https://x.com/sarthakgh/status/2094753043568873696</link>
-      <description>Ramp's internal coding agent Inspect, built on Linear, now authors most pull requests.</description>
-      <content:encoded><![CDATA[<p><img src="https://digg.com/tech/5rfev4wh/opengraph-image" alt="Ramp&#x27;s Inspect AI Agent Writes Three of Four Pull Requests"/></p>
-<p>Ramp&#x27;s internal coding agent Inspect, built on Linear, now authors most pull requests.</p>
-<p><strong>Original source:</strong> <a href="https://x.com/sarthakgh/status/2094753043568873696">https://x.com/sarthakgh/status/2094753043568873696</a></p>
-<p><strong>Digg story:</strong> <a href="https://digg.com/tech/5rfev4wh">https://digg.com/tech/5rfev4wh</a></p>
-<p>Source summaries state that Ramp&#x27;s internal AI coding agent Inspect, built on the Linear platform, authors 75 percent of the company&#x27;s pull requests. The company began as a Linear customer in 2019 and has since become a heavy user of AI agents on the platform. A separate quote from Sar Haribhakti notes that successful AI users recognize what makes a product good.</p>
-<ul><li><strong>Views:</strong> 1,467</li><li><strong>Likes:</strong> 9</li><li><strong>Bookmarks:</strong> 3</li><li><strong>Posts:</strong> 2</li></ul>
-<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/sarthakgh">Sar Haribhakti</a></li></ul>]]></content:encoded>
-      <guid isPermaLink="true">https://x.com/sarthakgh/status/2094753043568873696</guid>
-      <category>Digg AI from X</category>
-      <pubDate>Tue, 01 Sep 2026 11:43:38 +0000</pubDate>
-      <media:content url="https://digg.com/tech/5rfev4wh/opengraph-image" type="image/jpeg" medium="image"/>
     </item>
   </channel>
 </rss>
