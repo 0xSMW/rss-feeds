@@ -8,7 +8,71 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 10 Sep 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 22 Sep 2026 18:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Introducing GPT-6 Sol and Luna</title>
+      <link>https://openai.com/index/introducing-gpt-6-sol-and-luna/</link>
+      <description>Meet GPT-6 Sol and Luna, two models that bring frontier intelligence to everyday work with different balances of capability and cost.</description>
+      <content:encoded><![CDATA[<h2>Introducing GPT‑6 Sol and Luna</h2>
+<p>More ways to bring frontier intelligence into the work you do every day.</p>
+<p>Earlier this month, we introduced <a href="https://openai.com/index/gpt-6-astra/">GPT‑6 Astra</a>, the most intelligent and aligned model in the world. While the most demanding and important projects still call for Astra’s full depth, work happens at different scales, rhythms, and budgets.</p>
+<p>That’s why we’re expanding the GPT‑6 universe with <b>GPT‑6 Sol</b> and <b>GPT‑6 Luna. </b>GPT‑6 Astra introduced a new generation of intelligence—these models help distribute the benefits of that intelligence by advancing the frontier on cost efficiency. We trained GPT‑6 Sol and Luna with similar methods as GPT‑6 Astra, bringing the advances behind Astra’s state-of-the-art performance in professional work, factuality, coding, computer use, and alignment to faster, more affordable models.</p>
+<p>The GPT‑6 models lead across the cost–intelligence curve, combining exceptional capabilities at every tier with infrastructure that delivers them efficiently at scale. Improvements in caching and inference let us serve these models at lower cost, and we’re passing those savings directly on to users and customers by <b>reducing API prices for Sol and Luna by 50%</b> compared with their GPT‑5.6 promotional pricing. Together, these improvements make advanced AI practical for more everyday tasks and applications at scale.</p>
+<h3>GPT‑6 API pricing</h3>
+<table><tbody><tr><td><p><b>Model</b></p></td><td><p><b>Input</b></p></td><td><p><b>Output</b></p></td><td><p><b>Price reduction</b></p></td></tr><tr><td><p>GPT‑5.6 Sol → <b>GPT‑6 Sol</b></p></td><td><p>$4 → <b>$2</b></p></td><td><p>$20 → <b>$10</b></p></td><td><p>50% cheaper</p></td></tr><tr><td><p>GPT‑5.6 Luna → <b>GPT‑6 Luna</b></p></td><td><p>$0.20 → <b>$0.10</b></p></td><td><p>$1.20 → <b>$0.50</b></p></td><td><p>50% cheaper</p></td></tr></tbody></table>
+<p><i>Prices are per 1 million tokens.</i></p>
+<p><b>GPT‑6 Astra</b> continues to be our best model across the board. Choose it when you want the best results and an uncompromising experience.</p>
+<h2>A step up across the model family</h2>
+<p>GPT‑6 Sol and Luna bring intelligence upgrades and cost efficiency to the models you already know and use across capabilities most useful for getting complex work done.</p>
+<h3>Professional work</h3>
+<p>GPT‑6 Sol can take on difficult work tasks while giving you more room to iterate with higher usage limits and lower cost, offering more intelligence and better results versus similarly priced competitor models.</p>
+<p>On <b>AutomationBench,</b> a test of business workflows across apps, GPT‑6 Sol at xhigh effort outperforms Claude Opus 5 at max effort at just 9% of Opus 5’s cost per task. At high effort, GPT‑6 Luna improves on its predecessor by 5.4 percentage points at 58% lower cost per task.</p>
+<figure><figcaption><p><i>In </i><a href="https://zapier.com/benchmarks"><i>AutomationBench 1.0.6</i>⁠</a><i>, AI agents are tested on end-to-end workflows using 47 tools across sales, marketing, operations, support, finance, and HR. The datapoint for Claude Fable 5.1 understates its actual cost, as it omits the cost of the Opus 5 fallbacks, which occurred on ~40% of tasks.</i></p></figcaption></figure>
+<p>GPT‑6 Sol also exceeds Claude Fable 5.1 at far lower cost, and even bests low-effort GPT‑6 Astra.</p>
+<table><tbody><tr><th><p><b>Model (and effort)</b></p></th><th><p><b>Score</b></p></th><th><p><b>Cost per task</b></p></th></tr><tr><td><p>GPT‑6 Sol (xhigh)</p></td><td><p>33.2%</p></td><td><p>$0.27</p></td></tr><tr><td><p>GPT‑6 Astra (low)</p></td><td><p>30.3%</p></td><td><p><b>3.9x</b> GPT‑6 Sol</p></td></tr><tr><td><p>Claude Opus 5 (max)</p></td><td><p>26.9%</p></td><td><p><b>11.1x</b> GPT‑6 Sol</p></td></tr><tr><td><p>Claude Fable 5.1 w/ Opus 5 Fallback (max)</p></td><td><p>31.4%</p></td><td><p><b>&gt;8.9x</b> GPT‑6 Sol</p><p><i>(fallback cost not reported)</i></p></td></tr></tbody></table>
+<p>On <b>Agents’ Last Exam</b>, which evaluates agents on complex professional workflows, GPT‑6 Sol at max effort scores 56.4%, above Claude Opus 5’s highest score in the evaluation at 60% lower cost per task.</p>
+<figure><figcaption><p><i>In </i><a href="https://agents-last-exam.org/"><i>Agents’ Last Exam V1</i>⁠</a><i>, AI agents are evaluated on long-horizon, economically valuable tasks spanning 55 sub-industries, covering most major fields of professional work performed on a computer.</i></p></figcaption></figure>
+<h3>Factuality</h3>
+<p>The usefulness of an answer depends on getting the facts right, and we’re continuing to make progress on factual reliability. On our internal factuality evaluation, which is based on de-identified real-world conversations where users flagged mistakes by our models, GPT‑6 Sol makes about half as many mistakes as its predecessor, approaching Astra-level reliability at much lower cost. GPT‑6 Luna also improves substantially; at higher effort levels it matches GPT‑5.6 Sol at about a hundredth its cost.</p>
+<figure><figcaption><p><i>Here we evaluate factuality on de-identified ChatGPT conversations where users had flagged a factual error from a prior model. These error-inducing conversations are not representative of typical usage, where factual errors are more rare. Scores are not controlled for length; however, our verbosity sweeps showed almost no dependence on answer length.</i></p></figcaption></figure>
+<h3>Coding</h3>
+<p>This year, coding agents have begun tackling tasks with more complexity, scope, and duration than ever before. At OpenAI, our internal usage has grown exponentially. Valued at API prices, daily token usage has exceeded $600 for the median researcher and $7,000 for researchers at the 90th percentile (<a href="https://openai.com/index/research-acceleration-view-inside-openai/"><u>Research acceleration: The view inside OpenAI</u>⁠</a>). As coding agents take on longer and more demanding tasks, the cost of sustained use matters more. GPT‑6 Sol and Luna combine strong coding performance with lower API prices, giving developers more room to iterate and teams the confidence to be more ambitious about what they ask Codex to take on.</p>
+<p>On <b>FrontierCode</b>, which evaluates whether coding agents produce changes ready to merge into real codebases, GPT‑6 Sol improves substantially over GPT‑5.6 Sol, and is able to match Claude Fable 5.1 xhigh at much lower cost.</p>
+<figure><figcaption><p><i>In </i><a href="https://cognition.com/frontiercode"><i>FrontierCode 1.1 Main</i>⁠</a><i>, AI agents write code that’s graded not only on correctness but also “mergeability”: e.g., test quality, scope discipline, code style, and adherence to codebase standards.</i></p></figcaption></figure>
+<p>On<b> DeepSWE v1.1, </b>which tests performance on complex software-engineering tasks in real codebases, GPT‑6 Sol at max effort scores 68.8%, within 1.1 percentage points of Claude Fable 5’s highest score in the evaluation—69.9% at xhigh effort—at approximately 80% lower cost per task.</p>
+<p>GPT‑6 Luna at max effort scores 66.6%, comparable to Claude Opus 5 and Fable 5 at medium effort. In these comparisons, Luna costs 93% less per task than Opus 5 and 96% less than Fable 5.</p>
+<figure><figcaption><p><i>In </i><a href="https://deepswe.datacurve.ai/"><i>DeepSWE 1.1</i>⁠</a><i>, AI agents solve original, long-horizon software engineering tasks.</i></p></figcaption></figure>
+<h3>Computer use</h3>
+<p>While GPT‑6 Astra remains the world’s best model for computer use, GPT‑6 Sol and Luna offer more cost-efficient performance than their predecessors. On <b>OSWorld 2.0 offline</b>, GPT‑6 Sol at xhigh effort achieves a similar score to Claude Opus 5 at medium effort—60.5% versus 60.3%—at approximately 80% lower cost per task. GPT‑6 Luna (max) is able to exceed GPT‑5.6 Sol (medium) at one tenth of its cost.</p>
+<figure><figcaption><p><i>In </i><a href="https://osworld-v2.xlang.ai/"><i>OSWorld 2.0</i>⁠</a><i>, AI agents attempt long-horizon computer-use workflows spanning everyday and professional tasks. We report the partial reward on the offline set from the v2026.08.08 release.</i></p></figcaption></figure>
+<h3>Collaboration style</h3>
+<p>We’ve also brought GPT‑6 Astra’s improved communication style to Sol and Luna, which we think will be especially noticeable in technical and coding conversations. Expect to see more clarity, less jargon, fewer odd turns of phrase, fewer low-value details, and slightly shorter answers overall without losing substance.</p>
+<figure>PromptWebsite’s looking clean! Could we use a Bento Box design style and add a slider between the pages in the top right? You may need to dive into the React..GPT-5.6 Sol<p>Absolutely. I can get the bento feel and the top-right sliding page switcher without pulling in React—the interaction is small enough to stay fast and smooth in the current site. I’m reshaping all four pages around that system now.</p>
+<hr/>
+<p>Done — open the live site.</p>
+<p>It now has a colorful bento-box layout across all four pages and an animated top-right Home / Play / Place / Taste slider. React wasn’t necessary; native page transitions keep it lightweight and smooth.</p>
+<p>The built-in image tool created the food artwork. Prompt: “An energetic gouache-and-ink editorial illustration celebrating dumplings and spicy noodles, with bright colors, steam, spice, and no text or logos.”</p>GPT-6 Sol<p>I’ll reshape the pages into a bento grid and turn the top-right links into a sliding page switcher. I’ll keep the existing site and check whether that interaction needs React before changing its setup.</p>
+<hr/>
+<p>The updated site is live. Every page now has a playful bento layout, and the top-right page switcher slides between sections. I checked it on desktop and narrow mobile screens, including browser back navigation. The existing site didn’t need React for this.</p><figcaption><p><i>Although style is subjective, we prefer GPT‑6 Sol’s reply here. It doesn’t jump to conclusions as quickly, spends less time reiterating details that might be obvious to the asker (e.g., that the website has four pages), uses less vague language (e.g., “bento feel”, “reshaping… around that system”), is more forthcoming with what it did and didn’t check, and doesn’t unnecessarily share implementation details like its image tool prompt.</i></p></figcaption></figure>
+<h2>Improving caching for agents and long conversations</h2>
+<p>Alongside lower token prices, we’re helping developers building on GPT‑6 save more on the context their applications reuse. We’ve improved prompt caching for GPT‑6 to deliver higher cache hit rates by default, helping agents reuse more context, respond faster, and benefit from discounts of 90% on cached input-token reads.</p>
+<p>Developers also have more ways to measure and optimize their caching performance:</p>
+<ul><li><p><b>Monitor and diagnose.</b> The <a href="https://platform.openai.com/usage?usage_section=prompt-caching"><u>Prompt Caching Dashboard</u>⁠</a> shows how much input is cached and how that changes over time. The <a href="https://developers.openai.com/api/docs/guides/prompt-caching/diagnostics"><u>diagnostics tool</u>⁠</a> helps explain missed opportunities for caching and what to fix.</p></li><li><p><b>Adjust reasoning effort and tool availability without breaking cache.</b> Increase <a href="https://developers.openai.com/api/docs/guides/reasoning#change-reasoning-mid-conversation"><u>reasoning effort</u>⁠</a> for harder tasks or lower it for simpler follow-ups, and <a href="https://developers.openai.com/api/docs/guides/prompt-caching#how-to-optimize-prompt-caching"><u>enable or disable tools</u>⁠</a> as your agent’s needs change. Both controls now preserve earlier context for cache reuse.</p></li><li><p><b>Optimize which prefixes get cached.</b> Explicit breakpoints let developers choose where cached prompt prefixes end. This gives developers more control over cache reuse and can improve performance.</p></li></ul>
+<p>GitHub reports that, over the past several months, these improvements have reduced the share of prompt tokens requiring fresh processing by more than 50% across billions of requests to OpenAI models, helping Copilot respond faster.</p>
+<h2>Continuing to improve alignment</h2>
+<p>GPT‑6 Sol and Luna build on the alignment work introduced with Astra, our most aligned model to date. In our alignment evaluations, both Sol and Luna show improvements over their GPT‑5.6 counterparts, including lower rates of misleading claims about their coding work.</p>
+<p>The evaluations below deliberately test challenging situations and do not measure failure rates in typical use. See the <a href="https://deploymentsafety.openai.com/gpt-6-astra"><u>system card</u>⁠</a> for the full results.</p>
+<h2>Availability</h2>
+<p>GPT‑6 Sol and GPT‑6 Luna are available in ChatGPT Work and Codex starting today for all Plus, Pro, Business, Enterprise, and Edu users. Free and Go users can access GPT‑6 Luna in the desktop app. These models are not yet available in Chat. In the OpenAI API, they are available as <code>gpt-6-sol</code> and <code>gpt-6-luna</code>.</p>
+<p>To keep service stable for everyone, we plan to roll out these models in ChatGPT gradually throughout the day. If you don’t see the new models in ChatGPT Work or Codex, please try again later.</p>
+<hr/>
+<p><i>Evaluations of GPT were performed in our research environment or via our API, which may provide slightly different output from production ChatGPT due to differences in the system prompts, tools available, etc. Evaluations of competitor models were taken from publicly available reports. Scores for Claude Fable 5 were reported when scores for Claude Fable 5.1 were unavailable.</i></p>
+<h2>Author</h2>
+<p>OpenAI</p>]]></content:encoded>
+      <guid isPermaLink="true">https://openai.com/index/introducing-gpt-6-sol-and-luna/</guid>
+      <category>Product</category>
+      <pubDate>Tue, 22 Sep 2026 18:00:00 +0000</pubDate>
+    </item>
     <item>
       <title>Build more natural voice experiences with GPT‑Live‑1 in the API</title>
       <link>https://openai.com/index/introducing-gpt-live-1-in-the-api/</link>
@@ -3075,22 +3139,6 @@ x = \frac{3 \pm \sqrt{33}}{2}
       <category>Research</category>
       <pubDate>Thu, 13 Nov 2025 10:00:00 +0000</pubDate>
       <media:content url="https://images.ctfassets.net/kftzwdyauwt9/3IgwdnCJRjTjCJIliNOIub/b1f0a6ec3fae173a75723de47fb67614/IT_Blog_Static01_Desktop_Light__2_.svg?w=3840&amp;amp;q=90" type="image/svg+xml" medium="image"/>
-    </item>
-    <item>
-      <title>GPT-5.1 Instant and GPT-5.1 Thinking System Card Addendum</title>
-      <link>https://openai.com/index/gpt-5-system-card-addendum-gpt-5-1/</link>
-      <description>This GPT-5 system card addendum provides updated safety metrics for GPT-5.1 Instant and Thinking, including new evaluations for mental health and emotional reliance.</description>
-      <content:encoded><![CDATA[<h2>GPT‑5.1 Instant and GPT‑5.1 Thinking System Card Addendum</h2>
-<h2>Introduction</h2>
-<p>As described in our <a href="https://openai.com/index/gpt-5-1"><u>blog</u>⁠</a>, GPT‑5.1 Instant and GPT‑5.1 Thinking are the next iteration of our GPT‑5 models. GPT‑5.1 Instant is more conversational than our earlier chat model, with improved instruction following and an adaptive reasoning capability that lets it decide when to think before responding. GPT‑5.1 Thinking adapts thinking time more precisely to each question. GPT‑5.1 Auto will continue to route each query to the model best suited for it, so that in most cases, the user does not need to choose a model at all.</p>
-<p>The comprehensive safety mitigations for these models are largely the same as we described in the <a href="https://openai.com/index/gpt-5-system-card/"><u>GPT‑5 System Card</u>⁠</a>. This system card addendum provides updated baseline safety metrics for these new model versions. As we noted in our recent GPT‑5 system card <a href="https://cdn.openai.com/pdf/3da476af-b937-47fb-9931-88a851620101/addendum-to-gpt-5-system-card-sensitive-conversations.pdf"><u>addendum on sensitive conversations</u>⁠</a>, we have expanded the baseline safety evaluations that we conduct as part of pre-deployment safety review to include evaluations for mental health (covering situations where there are signs that a user may be experiencing isolated delusions, psychosis, or mania) and for emotional reliance (covering output related to unhealthy emotional dependence or attachment to ChatGPT). </p>
-<p>In this card we also refer to GPT‑5.1 Instant as gpt-5.1-instant, and GPT‑5.1 Thinking as gpt-5.1-thinking.</p>
-<ul><li><a href="https://openai.com/research/index/?tags=2025">2025</a></li><li><a href="https://openai.com/research/index/?tags=system-cards">System Cards</a></li></ul>
-<h2>Author</h2>
-<p>OpenAI</p>]]></content:encoded>
-      <guid isPermaLink="true">https://openai.com/index/gpt-5-system-card-addendum-gpt-5-1/</guid>
-      <category>Publication</category>
-      <pubDate>Wed, 12 Nov 2025 00:00:00 +0000</pubDate>
     </item>
   </channel>
 </rss>
