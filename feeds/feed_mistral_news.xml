@@ -8,7 +8,39 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 16 Sep 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 28 Sep 2026 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Hallo, Deutschland!</title>
+      <link>https://mistral.ai/news/hallo-deutschland</link>
+      <description>Mistral Opens German Hub in Munich to Advance Industrial AI in Europe’s Largest Economy</description>
+      <content:encoded><![CDATA[<figure><img height="624" src="https://mistral.ai/_astro/Linkedin_Mistral02%20(1)_9tFqU.webp?dpl=6abaa0fc2058ab9f6c6e4192" width="1200"/></figure>
+<p><strong>Mistral Opens German Hub in Munich to Advance Industrial AI in Europe’s Largest Economy</strong></p>
+<p>At Mistral, we have always believed that the most consequential AI applications will be built where real industrial problems are solved. Today, we are putting that conviction into practice by opening our new hub in Munich.</p>
+<p>Germany is the largest industrial economy in the European Union. Its enterprises have accumulated proprietary data and process knowledge over generations, across automotive, energy, aerospace, and advanced manufacturing. That depth of industrial knowledge is exactly where AI, done right, compounds into competitive advantage. Munich is where we want to do that work.</p>
+<p>Our Munich hub will house specialised research teams dedicated to Physics AI and Industrial AI, alongside applied engineers serving our enterprise partners directly. We are not coming as a software vendor. We are coming as a long-term technological partner.</p>
+<h2><strong>Building for sovereignty, not just access</strong></h2>
+<p>German industry, public institutions, and organizations already have access to our full AI stack: frontier language models, Physics AI capabilities, enterprise deployment, and sovereign compute infrastructure under one roof. To secure Europe’s AI sovereignty, Mistral will build one gigawatt of European compute capacity by 2030. In parallel, we continue to advance our frontier model development at full speed.</p>
+<p>What makes this stack genuinely sovereign is our open-weight architecture. Unlike closed AI systems where the model’s internal logic is hidden and runs on the vendor’s servers, Mistral’s model weights are fully accessible to the customer. Our models run on the customer’s own infrastructure, trained on their data, operated under European law, with full auditability and no data leaving the organization. The intelligence stays where it was built.</p>
+<p>Mistral is a powerful example of what Europe can achieve: developing cutting-edge technology, turning it into a global success, and taking responsibility at the same time. It demonstrates what European research, talent, and entrepreneurial spirit can achieve. And that technological success and responsible AI development are not contradictory.</p>
+<p>Dr. Karsten Wildberger, German Federal Minister for Digital Transformation and Government Modernisation</p>
+<h2><strong>Physics AI: a new capability for heavy industry</strong></h2>
+<p>The next major advance in industrial AI will come from systems that understand the physical world: fluid dynamics, material deformation, thermal behavior, mechanical stress. These are the calculations at the heart of German manufacturing and engineering. Today, the necessary simulations require enormous compute time, sometimes taking days per run.</p>
+<p>Following our acquisition of Emmi AI in May 2026, more than 30 physicists, researchers, and engineers with unique expertise in Physics and Engineering AI joined Mistral. Emmi AI has specialised in large-scale AI modelling of computational fluid dynamics, structural mechanics, and multi-physics simulations. In Munich, we are working with BMW on crash simulations and engineering AI, and with Siemens Energy on industrial AI applications – developing what we believe will be the blueprint for Physics AI in European heavy industry.</p>
+<h2><strong>Why Munich</strong></h2>
+<p>Bavaria has a long record of establishing and scaling new technologies, from precision manufacturing and defence tech to advanced materials and semiconductors. Munich gives us world-class research institutions and universities, deep industrial roots, a dense technology ecosystem, and the engineering talent to match – drawn from across Europe and beyond by the quality of life and proximity to the Alps.</p>
+<p>As part of our investment in Germany, we have formed a research partnership with the Technical University Munich (TUM), using TUM’s wind tunnel facilities to develop digital twins for automotive aerodynamics in collaboration with Prof. Dr. Nikolaus A. Adams. This research aims to fuse real-time experimental sensor data with offline computational fluid dynamics simulations to deliver highly accurate aerodynamic predictions in real time.</p>
+<p>Mistral stands for powerful AI made in Europe. Technological sovereignty is political sovereignty. That is why we need strong European AI champions that take a leading role in international competition. Mistral’s decision to choose Munich sends a strong signal for our position as a high-tech location. Bienvenue à Munich, bienvenue en Bavière!</p>
+<p>Dr. Florian Herrmann, Head of the Bavarian State Chancellery and State Minister for Federal and Media Affairs</p>
+<p>The Munich hub will anchor our hiring across research, engineering, and applied AI roles. We are actively recruiting in the Munich region as we scale our Physics AI and industrial AI capabilities.</p>
+<p>Our new hub in Germany is where we build. Germany’s industrial base is the backbone of Europe’s economy. The engineering problems defining the next decade of industrial AI are being solved right here – on the development floors, inside the facilities, and in the research institutes and universities that produce Europe’s best technical talents. We are here to support the German industry in mastering the most demanding AI applications. This is the transition that will drive the next phase of sovereign European AI.</p>
+<p>Arthur Mensch, Co-founder and CEO, Mistral</p>
+<p>Today marks a new chapter – for Mistral in Germany, and for industrial AI in Europe. </p>
+<p><strong>We are here to build.</strong></p>]]></content:encoded>
+      <guid isPermaLink="true">https://mistral.ai/news/hallo-deutschland</guid>
+      <category>Company</category>
+      <pubDate>Mon, 28 Sep 2026 00:00:00 +0000</pubDate>
+      <media:content url="https://mistral.ai/_astro/Linkedin_Mistral02%20(1)_9tFqU.webp?dpl=6abaa0fc2058ab9f6c6e4192" type="image/webp" medium="image"/>
+    </item>
     <item>
       <title>Mistral and Mozilla are bringing open, private and multilingual AI to your web browser</title>
       <link>https://mistral.ai/news/mistral-x-mozilla</link>
@@ -2450,34 +2482,6 @@ $ /usr/local/lib/heaptrack/libexec/heaptrack_interpret &lt; heaptrack.2028233 | 
       <category>Research</category>
       <pubDate>Tue, 15 Jul 2025 00:00:00 +0000</pubDate>
       <media:content url="https://mistral.ai/_astro/ec026954-d85f-4b11-94fd-d26fc8e13ae2_Z1SU1rQ.webp?dpl=6a622da400bba40008995ff8" type="image/webp" medium="image"/>
-    </item>
-    <item>
-      <title>Upgrading agentic coding capabilities with the new Devstral models</title>
-      <link>https://mistral.ai/news/devstral-2507</link>
-      <description>Today, we introduce Devstral Medium, as well as an upgrade to Devstral Small. These models are released under the collaboration between Mistral AI and All Hands AI 🙌, with a strong emphasis on generalization to different prompts and agentic scaffolds.</description>
-      <content:encoded><![CDATA[<p>Today, we introduce Devstral Medium, as well as an upgrade to Devstral Small. These models are released under the collaboration between Mistral AI and <a href="https://www.all-hands.dev/">All Hands AI</a> 🙌, with a strong emphasis on generalization to different prompts and agentic scaffolds. </p>
-<p>The new Devstral Small 1.1 is released under the Apache 2.0 license, and is state-of-the-art amongst open models for code agents. Devstral Medium is available through our API, and sets a new point on the cost/performance pareto frontier, surpassing Gemini 2.5 Pro and GPT 4.1 for a quarter of the price.</p>
-<h2>Devstral Small 1.1</h2>
-<p>As with the previous version of Devstral Small, we release Devstral Small 1.1 under the Apache 2.0 license. While the architecture remains the same, with only 24B parameters, Devstral Small 1.1 comes with significant improvements over its predecessor:</p>
-<h3>Enhanced Performance</h3>
-<p>Devstral Small 1.1 achieves a score of 53.6% on SWE-Bench Verified, and sets a new state-of-the-art for open models without test-time scaling.</p>
-<h3>Versatility and Generalization</h3>
-<p>Devstral Small 1.1 excels when paired with OpenHands, and also demonstrates better generalization to different prompts and coding environments. Its versatility is further enhanced by supporting both Mistral function calling and XML formats, making it adaptable to a wide range of applications and agentic scaffolds.</p>
-<p><figure><img alt="Devstral Oss.001 (1)" height="1080" src="https://mistral.ai/_astro/a8227ebf-fba7-4ad7-9d6b-83ce5da42a3e_Z1yAyas.webp?dpl=6a622da400bba40008995ff8" width="1920"/></figure></p>
-<h2>Devstral Medium</h2>
-<p>Devstral Medium builds upon the strengths of Devstral Small and takes performance to the next level with a score of 61.6% on SWE-Bench Verified. Devstral Medium is available through our public API, and offers exceptional performance at a competitive price point, making it an ideal choice for businesses and developers looking for a high-quality, cost-effective model.</p>
-<p>For those who prefer on-premise solutions, Devstral Medium can be directly deployed on private infrastructure, offering enhanced data privacy and control. We also support custom finetuning for Devstral Medium, allowing enterprises to customize the model for specific use cases, and achieve optimal performance tailored to their specific requirements. </p>
-<p><figure><img alt="Devstral Main Graph" height="996" src="https://mistral.ai/_astro/ae27ff96-c7b6-4a6b-a3a1-0e02e156198a_iY90N.webp?dpl=6a622da400bba40008995ff8" width="2046"/></figure></p>
-<h2>Availability </h2>
-<p>Both models are available through our API under the the following names: </p>
-<ul><li><p>devstral-small-2507 at the same price as Mistral Small 3.1: $0.1/M input tokens and $0.3/M output tokens. </p></li><li><p>devstral-medium-2507 at the same price as Mistral Medium 3: $0.4/M input tokens and $2/M output tokens. </p></li></ul>
-<p>We release Devstral Small 1.1 under the Apache 2.0 license for the community to build on, customize, and accelerate autonomous software development. To try it for yourself, head over to our <a href="https://huggingface.co/mistralai/Devstral-Small-2507">model card</a>. </p>
-<p>Devstral Medium will also be available on <a href="https://mistral.ai/news/mistral-code">Mistral Code</a> for enterprise customers and on our <a href="https://docs.mistral.ai/guides/finetuning/">finetuning API</a>. To deploy and customize the model in your environment, please <a href="https://mistral.ai/contact">contact us</a>. </p>
-<p>We are dedicated to open-sourcing our most accessible and impactful models, ensuring the open-source community can easily utilize and benefit from our advanced technology. While Devstral Small is easily usable for local deployment and available under the Apache 2.0 license for everyone to use and build upon, Devstral Medium is available on our API and offers high performance for developers and enterprises. </p>]]></content:encoded>
-      <guid isPermaLink="true">https://mistral.ai/news/devstral-2507</guid>
-      <category>Research</category>
-      <pubDate>Thu, 10 Jul 2025 00:00:00 +0000</pubDate>
-      <media:content url="https://mistral.ai/_astro/a8227ebf-fba7-4ad7-9d6b-83ce5da42a3e_Z1yAyas.webp?dpl=6a622da400bba40008995ff8" type="image/webp" medium="image"/>
     </item>
   </channel>
 </rss>
