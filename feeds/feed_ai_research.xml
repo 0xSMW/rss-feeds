@@ -42,6 +42,14 @@
       <media:content url="https://mistral.ai/_astro/Linkedin_Mistral02%20(1)_9tFqU.webp?dpl=6abaa0fc2058ab9f6c6e4192" type="image/webp" medium="image"/>
     </item>
     <item>
+      <title>Team Bots: AI coworkers that learn from your team</title>
+      <link>https://x.ai/news/team-bots</link>
+      <description>Give a Grok Bot the files, apps, and expertise it needs, then share it so your whole team can work from the same context.</description>
+      <guid isPermaLink="true">https://x.ai/news/team-bots</guid>
+      <category>News</category>
+      <pubDate>Mon, 28 Sep 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
       <title>Yes, Claude can do Nine Loops</title>
       <link>https://www.anthropic.com/research/yes-claude-can-do-nine-loops</link>
       <description>Claude computes a nine-loop amplitude in N=4 super-Yang-Mills</description>
@@ -1434,468 +1442,391 @@ VOICE: with the operator — direct, dollars first, no fluff. External — per t
       <media:content url="https://www.anthropic.com/_next/image?url=https%3A%2F%2Fwww-cdn.anthropic.com%2Fimages%2F4zrzovbb%2Fwebsite%2Fafd8e238255ec2654f2322f3d3630dcf1e8ea4ca-6800x3264.png&amp;amp;w=3840&amp;amp;q=75" type="image/jpeg" medium="image"/>
     </item>
     <item>
-      <title>GPT-6 Astra: A new generation of intelligence</title>
-      <link>https://openai.com/index/gpt-6-astra/</link>
-      <description>Introducing GPT-6 Astra, our most intelligent and aligned model yet, with state-of-the-art capabilities across computer use, coding, cybersecurity, and science.</description>
-      <content:encoded><![CDATA[<h2 id="introduction">A new generation of intelligence</h2>
-<p>We’re introducing GPT‑6 Astra, the world’s most intelligent and aligned model.</p>
-<p>GPT‑6 Astra brings together years of research and big bets across pre-training, reinforcement learning, and alignment. Astra is state-of-the-art on computer use, browsing, software engineering, cybersecurity, science, and professional work. Astra saturates FrontierMath Tier 4 with a 98% score, having already helped <a href="https://openai.com/index/ten-advances-in-mathematics/"><u>solve long-standing open problems</u>⁠</a> in mathematics. Astra also saturates ARC-AGI-3 with a 99.9% score and ExploitBench with a 100% score. It also sets a new frontier on computer and browser use, handling the most demanding professional work with unmatched speed, accuracy, and judgment.  </p>
-<p>GPT‑6 Astra is rolling out today to a limited set of organizations and over the coming days will become available to all ChatGPT Plus, Pro, Business, and Enterprise users, as well as through the OpenAI API, Microsoft Azure, and AWS Bedrock.</p>
-<figure><blockquote>“On ARC-AGI-3, Astra surpassed our human action-efficiency baseline on 96% of levels, effectively reaching human parity on the benchmark. Not only is this the best model we’ve ever tested, but it also represents a meaningful step change in frontier-model performance - not only in its ability to navigate and solve novel environments, but also in how efficiently it learns to do so.”</blockquote><figcaption>Greg Kamradt, ARC Prize Foundation</figcaption></figure>
-<p>Astra is our most aligned model, with substantial improvements in understanding user intent and model behavior—you can delegate tasks with greater confidence in Astra’s judgment. As one way that we test  this, we built a new evaluation informed by the Hugging Face incident that evaluates whether a model facing a difficult or impossible task will go beyond its intended scope. Compared to GPT‑5.6 Sol, which without production safeguards went beyond the authorized target 48% of the time, GPT‑6 Astra did this in 0% of cases.</p>
-<h2 id="the-worlds-best-computer-use">The world’s best computer use model</h2>
-<p>GPT‑6 Astra marks a new frontier in the speed, accuracy, and safety of computer use. It can take care of tedious tasks like filling out online forms, updating customer records in a CRM, and organizing your calendar. It can conduct online research and draft summaries in your email or in your document editor. It can analyze scientific data, generate plots, create a website, and run frontend QA checks to make sure all the features on that site work. It can help you autonomously install and test software, and troubleshoot problems you see on screen. These improvements are also reflected in our state-of-the-art evaluation results.</p>
-<p>These improvements also result in significant efficiency gains in real knowledge-work tasks. In latency simulations on OSWorld 2.0, Astra achieves higher computer-use performance in about 47% less time per task than GPT‑5.6 Sol, scoring 72.6% at roughly 40 minutes per task, compared with 65.7% at roughly 75 minutes.<sup><sup><a href="#citation-bottom-3">3</a></sup></sup></p>
-<p>GPT‑6 Astra’s computer-use capabilities can be seen in outputs across domains, including game development, electrical engineering, and everyday knowledge work:  </p>
-<p>Alongside Astra, we are also updating the Codex harness to significantly improve the speed of computer use. Combined with Astra’s efficiency, this translates to a 1.9x faster task completion compared to the current GPT‑5.6 Sol experience, on the Mind2Web benchmark. The model’s improvements on speed mean it can take on many time-consuming life tasks for you, faster than you can.<sup><sup><a href="#citation-bottom-4">4</a></sup></sup></p>
-<figure><blockquote>“We’re integrating GPT‑6 Astra into Devin’s harness on launch day, where it delivers state-of-the-art performance on our internal testing benchmark. Its excellent computer use, writing, and codebase understanding improved testing right out of the box: videos are noticeably easier to follow, and reports are clearer and more concise”</blockquote><figcaption>Silas Alberti, SVP Research, Cognition</figcaption></figure>
-<h2 id="professional-artifacts">A step change in professional work</h2>
-<p>GPT‑6 Astra pairs advances in computer use with targeted training for professional environments, to help tackle complex work tasks. It combines the intelligence required for complex problems with the ability to carry out multistep workflows and produce polished documents, spreadsheets, and presentations.</p>
-<p>GPT‑6 Astra is our best model for adhering to existing templates and producing slides that are well laid out and succinctly convey key points with a structured narrative. It creates clear, well-structured documents, presentations, spreadsheets, and analyses that follow your templates and match your writing and visual style. Astra is also trained to specifically pull only the context that matters into outputs, instead of repeating information unnecessary for the work at hand. All this means it can output more immediately usable artifacts that match your business context and standards.</p>
-<p>GPT‑6 Astra also brings stronger visual judgment to the websites, games, applications, and renderings it builds. With <a href="https://learn.chatgpt.com/docs/sites?surface=app"><u>Sites</u>⁠</a> in ChatGPT, Astra can create, host, and share websites, web apps, and games directly from a prompt.</p>
-<figure><blockquote>“Astra gives us a significant advantage in both capability and efficiency. It successfully executes our most complex creative workflows while using up to 20% fewer tokens than other models we've tested. Most importantly, for our customers, it means higher quality output.”</blockquote><figcaption>Alex Mashrabov, CEO and Co-founder, Higgsfield AI</figcaption></figure>
-<p>When instructions leave room for interpretation, GPT‑6 Astra is better than previous models at making the right call. It uses context to fill in routine gaps and asks focused questions when the answer could change the outcome. In Codex, it can ask asynchronously while continuing work that doesn’t depend on your reply. If you don’t respond, it proceeds with sensible assumptions where appropriate, but waits for your input on consequential decisions.</p>
-<p>The examples below show how Astra collaborates on everyday tasks where missing information can materially change the answer.</p>
-<p>Astra is also better at staying oriented as a task evolves. Earlier models sometimes treated steering messages as a new goal, losing track of the original request or earlier constraints. Astra incorporates new requirements, changes course when asked, and answers side questions without dropping the broader task.</p>
-<figure><blockquote>“Astra is a significant quality improvement over GPT‑5.6 Sol across complex legal tasks. In our early testing, Astra stood out by approaching legal work the way a discerning lawyer does: it distinguishes documents from established records, surfaces unsupported assumptions, and converts gaps into concrete drafting positions.”</blockquote><figcaption>Niko Grupen, Head of Applied Research, Harvey</figcaption></figure>
-<h2 id="coding-and-cybersecurity">Coding</h2>
-<p>GPT‑6 Astra is the best model for software engineering to date. </p>
-<figure><blockquote>“GPT‑6 Astra delivers state-of-the-art performance on our internal coding benchmarks and shows a clear step forward in trading intuition evaluations compared with GPT‑5.6 Sol. When used for agentic coding, GPT‑6 Astra communicates in a way that’s easier for developers to follow and produces code that requires less iteration to reach production quality.”</blockquote><figcaption>John Crepezzi, AI Assistants, Jane Street</figcaption></figure>
-<figure><blockquote>“We tested Astra across low, medium, and high effort on one of our first-generation evals, and it came out significantly ahead of GPT 5.6 Sol. Higher effort buys more iterations on a fresh build, more verification through browser testing, and a lean toward code execution over apply-patch. Understanding how a model spends its effort is how we give millions of builders a faster, more reliable path from idea to working app.”</blockquote><figcaption>Fabian Hedin, CTO &amp; Co-founder, Lovable</figcaption></figure>
-<p>1 of 2</p>
-<figure><blockquote>“GPT‑6 Astra delivers state-of-the-art performance on our internal coding benchmarks and shows a clear step forward in trading intuition evaluations compared with GPT‑5.6 Sol. When used for agentic coding, GPT‑6 Astra communicates in a way that’s easier for developers to follow and produces code that requires less iteration to reach production quality.”</blockquote><figcaption>John Crepezzi, AI Assistants, Jane Street</figcaption></figure>
-<p>With Astra, we’re introducing a new way for Codex to preserve and retrieve context when the context window fills. Historically, models have used compaction to summarize work during long sessions, such as when debugging complex issues or tackling large refactors. Each compaction can leave out details about why a fix failed or how a component behaves. In Codex, Astra can keep notes across context windows, preserving accumulated details without repeatedly compressing them into a single summary. Earlier context windows remain searchable, so Astra can find requirements or test results from previous messages and tool outputs—even if that information wasn’t captured in its notes. You can enable this experimental feature in your <a href="https://learn.chatgpt.com/docs/config-file/config-reference">Codex config.toml,⁠</a> and it will become the default for Astra in the coming weeks.</p>
-<h2 id="scientific-discovery">Advancing scientific discovery</h2>
-<figure><blockquote>“The story is: end of one era, start of another.”</blockquote><figcaption>Greg Burnham, EpochAI</figcaption></figure>
-<p>GPT‑6 Astra is a major advance for scientific discovery, mathematics, and health. Today, we’re sharing two further results on the gaps between prime numbers.<sup><sup><a href="#citation-bottom-9">9</a>, <a href="#citation-bottom-10">10</a></sup></sup></p>
-<p>Astra also sets new records across a suite of math and science evaluations.</p>
-<p>Astra can help with the practical work behind scientific discovery. By combining scientific reasoning with computer use, it can work directly in specialized software to inspect data and explore results, helping researchers assess the evidence and decide what to investigate next.</p>
-<h2>Cybersecurity</h2>
-<p>As we discussed in our <a href="https://openai.com/index/path-to-astra/"><u>safety update</u>⁠</a>, Astra is a significant jump in cyber capabilities and meets the <a href="https://openai.com/index/path-to-astra/"><u>Critical threshold</u></a> in cybersecurity under our <a href="https://openai.com/index/updating-our-preparedness-framework/"><u>Preparedness Framework</u></a>. Its ability to identify and develop zero-day exploits can help defenders find and patch weaknesses, but it also creates a need for stronger safeguards. To understand how far these capabilities extend, we ran Astra on internal and third-party expert evaluations. </p>
-<p>We first tested the model without production safeguards on ExploitBench and ExploitGym, which evaluate whether models can turn known software vulnerabilities into working exploits. On ExploitBench, Astra achieved a perfect score of 100%, compared with 78.5% for GPT‑5.6 Sol, our previous frontier cyber-capable model. On ExploitGym, Astra reached a 42.4% success rate, compared with 30.3% for GPT‑5.6 Sol, while using substantially fewer output tokens.<sup><sup><a href="#citation-bottom-13">13</a></sup></sup></p>
-<p>Given concerns that exposure to historical software vulnerabilities may have affected benchmark results, we also evaluated Astra on two novel benchmarks. For one, we built an internal “ExploitBench (June–August 2026)” evaluation to test exploit development using vulnerabilities from the previous three months.<sup><sup><a href="#citation-bottom-14">14</a></sup></sup> Astra achieved substantially higher arbitrary code-execution rates than GPT‑5.6 Sol on this dataset while using far fewer output tokens. During the evaluation, Astra even discovered and used two previously unknown zero-day vulnerabilities. We are disclosing both vulnerabilities to their maintainers.</p>
-<p>We also tested Astra on SRE-Bench<sup><sup><a href="#citation-bottom-15">15</a></sup></sup>, a benchmark that measures whether models can reverse engineer software binaries to understand its core logic without access to raw source code. Astra solved 88.0% of tasks in a single attempt and 99.2% within four attempts, compared with 55.9% and 68.7% for GPT‑5.6 Sol, respectively.</p>
-<p>Beyond benchmarks, expert-led assessments found that Astra, when run without production safeguards, could use previously unknown vulnerabilities to achieve arbitrary code execution in hardened browsers and create privilege-escalation exploits for hardened operating-systems.</p>
-<p>As we discussed in <a href="https://openai.com/index/the-defenders-window/"><u>The Defender’s Window</u></a>, frontier cyber capabilities can help defenders find weaknesses faster, but they also make those weaknesses easier to exploit, raising the urgency for defenders to adapt. With the version of Astra launching today, defenders can use it to complete tasks such as secure code review and patching. </p>
-<p>However, Astra will refuse to comply with more advanced cybersecurity tasks such as creating proof-of-concept exploits for vulnerabilities. Through <a href="https://openai.com/daybreak/"><u>OpenAI Daybreak</u>⁠</a>, we plan to expand access and roll out less restrictive safeguards in the coming weeks. This will enable more defensive workflows, including vulnerability and proof-of-concept validation, malware analysis, and detection engineering.</p>
-<p>We have also strengthened our protections against potential cyber misuse, building upon our safeguards stack for GPT‑5.6 Sol. These include stronger model robustness to better withstand potential jailbreaks and more context for our monitoring systems. We have continued rigorous internal and external testing, including automated evaluations with our <a href="https://openai.com/index/unlocking-self-improvement-gpt-red/"><u>internal red-teaming attackers</u></a>. More details about our cyber safeguards and testing are available in the Astra <a href="https://deploymentsafety.openai.com/gpt-6-astra">system card⁠</a> and our <a href="https://openai.com/index/path-to-astra/"><u>blog</u></a>.</p>
-<h2 id="aligning-and-deploying-gpt-6-astra-responsibly">Aligning and deploying GPT‑6 Astra responsibly</h2>
-<p>Astra is our most aligned model. Astra excels at exercising care, respecting task boundaries, and communicating transparently. This work is the latest product of our long-running research program focused on training models that remain aligned with human intent from start to finish. </p>
-<p>In sensitive environments, Astra proceeds with care commensurate with its risk. In an evaluation of computer use tasks adversarially selected to elicit misbehavior, Astra was more successful at avoiding unintended consequences. Running with additional security measures offered by default yielded even stronger performance. </p>
-<figure><figcaption><p>Astra causes fewer misaligned outcomes than any other frontier models tested. For a fair comparison, we used a generic computer-using-agent harness (based on the native computer use tools available in both the<a href="https://developers.openai.com/api/docs/guides/tools-computer-use"> OpenAI Responses API⁠</a> and<a href="https://platform.claude.com/docs/en/agents-and-tools/tool-use/computer-use-tool"> Anthropic Messages API⁠</a>) and without additional protections that are normally deployed to Codex and ChatGPT Work users (auto-review, confirmation policy). <sup><a href="#citation-bottom-16">16</a></sup></p></figcaption></figure>
-<p>Astra is also more likely to operate within the boundaries set by the user and implied by its environment. In an internal evaluation, Astra never attempted to circumvent a Codex Auto-Review denial. This held even when Auto-review was deliberately configured to be evadable and the task was impossible to complete otherwise. This respect for the environment restrictions is consistent with the results of our impossible cyber task evaluation that we shared in the intro of this post and other findings documented in our <a href="https://deploymentsafety.openai.com/gpt-6-astra">system card⁠</a>.</p>
-<p>Astra additionally sets new marks in transparent user communication. In one evaluation, Astra is three times less likely than GPT‑5.6 Sol to make inaccurate representations about its capabilities and affordances.</p>
-<figure><figcaption><p><i>In our capability-hallucination evaluation, Astra shows a substantial improvement over GPT‑5.6 Sol, making fewer misleading claims about its capabilities.</i></p></figcaption></figure>
-<p>Our evaluations found Astra’s written reasoning harder to monitor than GPT‑5.6 Sol’s, based on tests that explicitly asked it to evade monitoring. We attribute this to Astra’s greater control over written reasoning on simpler tasks and ability to solve problems with fewer written steps. Astra still appears to struggle to conceal the reasoning needed for complex tasks, but we take the decline seriously. Improving monitorability remains a research priority, and the accompanying <a href="https://deploymentsafety.openai.com/gpt-6-astra"><u>system card</u>⁠</a> details our findings and ongoing work.</p>
-<p>Alignment training is core to our approach to deployment. As an additional layer of defenses, we also build system safeguards like Codex <a href="https://alignment.openai.com/auto-review/"><u>Auto-review</u>⁠</a> and monitoring agents’ reasoning and actions to help detect and contain unsafe behavior. As described in our <a href="https://openai.com/index/path-to-astra/"><u>safety update</u>⁠</a>, we are also deploying misalignment monitoring in production for Astra-class models in order to have visibility into misalignment, and help contain its worst instances. These safeguards resemble our monitoring for internal deployments and involve a system of classifiers which check the model’s reasoning and actions for unauthorized behavior and automatically stop potentially unauthorized activity. </p>
-<p>Given the significant increase in Astra’s cybersecurity capabilities, we are being especially careful to make this deployment safe and secure. Extra safety checks can sometimes slow, pause, or stop legitimate work, including defensive cybersecurity. If a task is paused in ChatGPT or Codex, you may be asked to review the action before continuing. In the API, the task will stop. These checks can sometimes interrupt legitimate work, and we are continuing to iterate on this system to reduce unnecessary interruptions. Misalignment monitoring cannot replace alignment: our goal is to build models that reliably stay within their authorized scope, so these protections do not need to intervene. </p>
-<h2 id="availability">Availability</h2>
-<p>GPT‑6 Astra is rolling out today to a limited set of organizations and over the coming days will become available to all ChatGPT Plus, Pro, Business, and Enterprise users, as well as through the OpenAI API, Microsoft Azure, and AWS Bedrock. Astra usage is included within the existing subscription allowances—users and businesses will also be able to purchase credits for additional usage. Users on the Pro, Business, and Enterprise plans will also get access to GPT‑6 Astra Pro. Enterprise administrators can enable Astra for their workspace; access is off by default at launch.</p>
-<p>Astra supports Zero Data Retention for eligible API customers, and as we shared last month, we're testing <a href="https://openai.com/index/offering-zero-data-retention-for-frontier-models/"><u>Private Safety Processing</u></a> to strengthen safety monitoring while preserving customer privacy.</p>
-<p>For developers, GPT‑6 Astra will be available in the OpenAI API as <code>gpt-6-astra</code> and through Microsoft Azure and Amazon Bedrock.</p>
-<p>OpenAI API Standard pricing is $10 per million input tokens and $50 per million output tokens. Separate rates apply to cache reads and writes. Fast mode is available for GPT‑6 Astra in the API and delivers up to 2x the speed of Standard processing at 2x the Standard price.</p>
-<h3>Computer Use</h3>
-<table><tbody><tr><td><p><b>Computer Use</b></p></td><td><p><b>GPT‑6 Astra</b></p></td><td><p><b>GPT‑5.6 Sol<sup><a href="#citation-bottom-2:3">2</a></sup></b></p></td><td><p><b>Claude Fable 5.1</b></p></td><td><p><b>Claude Fable 5</b></p></td><td><p><b>Claude Opus 5</b></p></td><td><p><b>Gemini 3.8 Flash</b></p></td></tr><tr><td><p>Agents' Last Exam</p></td><td><p>59.3%</p></td><td><p>53.6%</p></td><td><p>-</p></td><td><p>48.7%</p></td><td><p>55.5%</p></td><td><p>-</p></td></tr><tr><td><p>OSWorld 2.0 (v2026.08.08, offline set, partial score)</p></td><td><p>72.6%</p></td><td><p>65.7%</p></td><td><p>-</p></td><td><p>-</p></td><td><p>70.2%<sup><a href="#citation-bottom-3:2">3</a></sup></p></td><td><p>-</p></td></tr><tr><td><p>ScreenSpot-Pro (no tools)</p></td><td><p>92.7%</p></td><td><p>76.9%</p></td><td><p>-</p></td><td><p>87.3%<sup><a href="#citation-bottom-17">17</a></sup></p></td><td><p>-</p></td><td><p>-</p></td></tr></tbody></table>
-<h3>Professional</h3>
-<table><tbody><tr><td><p><b>Professional</b></p></td><td><p><b>GPT‑6 Astra</b></p></td><td><p><b>GPT‑5.6 Sol</b></p></td><td><p><b>Claude Fable 5.1</b></p></td><td><p><b>Claude Fable 5</b></p></td><td><p><b>Claude Opus 5</b></p></td><td><p><b>Gemini 3.8 Flash</b></p></td></tr><tr><td><p>AutomationBench</p></td><td><p>41.4%</p></td><td><p>18.1%</p></td><td><p>31.4%</p></td><td><p>17.4%</p></td><td><p>26.9%</p></td><td><p>-</p></td></tr><tr><td><p>BenchCAD</p></td><td><p>95.9%</p></td><td><p>83.3%</p></td><td><p>84.3% <sup><a href="#citation-bottom-5:2">5</a></sup></p></td><td><p>67.5% <sup><a href="#citation-bottom-5:3">5</a></sup></p></td><td><p>82.1% <sup><a href="#citation-bottom-5:4">5</a></sup></p></td><td><p>-</p></td></tr><tr><td><p>BrowseComp</p></td><td><p>91.5%</p></td><td><p>90.4%</p></td><td><p>-</p></td><td><p>87.4%</p></td><td><p>90.8%</p></td><td><p>-</p></td></tr><tr><td><p>OpenScore String Quartets (1 - OMR-NED)</p></td><td><p>0.84</p></td><td><p>0.19</p></td><td><p>-</p></td><td><p>-</p></td><td><p>-</p></td><td><p>-</p></td></tr><tr><td><p>Internal Design Tasks</p></td><td><p>50.0%</p></td><td><p>47.4%</p></td><td><p>-</p></td><td><p>35.8%</p></td><td><p>-</p></td><td><p>-</p></td></tr><tr><td><p>Internal Data Science Tasks</p></td><td><p>40.9%</p></td><td><p>30.5%</p></td><td><p>-</p></td><td><p>34.7%</p></td><td><p>-</p></td><td><p>-</p></td></tr><tr><td><p>Artificial Analysis Intelligence Index v4.1.1</p></td><td><p>61.2</p></td><td><p>60.9</p></td><td><p>65.7</p></td><td><p>62.1</p></td><td><p>63.1</p></td><td><p>58.7</p></td></tr></tbody></table>
-<h3>Coding</h3>
-<table><thead><tr><td><strong>Coding</strong></td><td><strong>GPT‑6 Astra</strong></td><td><strong>GPT‑5.6 Sol</strong></td><td><strong>Claude Fable 5.1</strong></td><td><strong>Claude Fable 5</strong></td><td><strong>Claude Opus 5</strong></td><td><strong>Gemini 3.8 Flash</strong></td></tr></thead><tbody><tr><td>Terminal-Bench 4.0</td><td>57.9%</td><td>37.3%</td><td>55.8%</td><td>44.5%</td><td>52.6%</td><td>19.1%</td></tr><tr><td>DeepSWE v1.1</td><td>74.1%</td><td>72.7%</td><td>67.4%</td><td>69.9%</td><td>73.7%</td><td>73.8%</td></tr><tr><td>FrontierCode 1.1 Extended (score)</td><td>64.5% <sup><a href="#citation-bottom-8:2">8</a></sup></td><td>60.6%</td><td>63.6%</td><td>64.9%</td><td>63.6%</td><td>56.3%</td></tr><tr><td>FrontierCode 1.1 Main (score)</td><td>53.3% <sup><a href="#citation-bottom-8:3">8</a></sup></td><td>47.5%</td><td>50.9%</td><td>53.5%</td><td>53.4%</td><td>43.6%</td></tr><tr><td>Internal Database Migration Tasks</td><td>63.9%</td><td>42.7%</td><td>57.8%</td><td>50.3%</td><td>-</td><td>-</td></tr><tr><td>Artificial Analysis Coding Agent Index v1.4</td><td>67.0</td><td>65.1</td><td>-</td><td>67.2</td><td>68.1</td><td>61.2</td></tr></tbody></table>
-<h3>Academic</h3>
-<table><tbody><tr><td><p><b>Academic</b></p></td><td><p><b>GPT‑6 Astra</b></p></td><td><p><b>GPT‑5.6 Sol</b></p></td><td><p><b>Claude Fable 5.1</b></p></td><td><p><b>Claude Fable 5</b></p></td><td><p><b>Claude Opus 5</b></p></td><td><p><b>Gemini 3.8 Flash</b></p></td></tr><tr><td><p>Terminal-Bench Science 0.1</p></td><td><p>64.6%</p></td><td><p>22.4%</p></td><td><p>52.6%</p></td><td><p>21.4%</p></td><td><p>30.0%</p></td><td><p>-</p></td></tr><tr><td><p>FrontierMath Tier 4 (v2)</p></td><td><p>97.6%</p></td><td><p>83.0%</p></td><td><p>87.8%</p></td><td><p>87.8%</p></td><td><p>73.2%</p></td><td><p>-</p></td></tr><tr><td><p>GPQA Diamond</p></td><td><p>96.0%</p></td><td><p>94.6%</p></td><td><p>93.7%</p></td><td><p>92.6%</p></td><td><p>93.7%</p></td><td><p>95.3%</p></td></tr><tr><td><p>Humanity's Last Exam (w/ tools)</p></td><td><p>57.2%</p></td><td><p>-</p></td><td><p>65.0%</p></td><td><p>63.8%</p></td><td><p>63.6%</p></td><td><p>-</p></td></tr></tbody></table>
-<h3>Science and Health</h3>
-<table><thead><tr><td><strong>Science and Health</strong></td><td><strong>GPT‑6 Astra</strong></td><td><strong>GPT‑5.6 Sol</strong></td><td><strong>Claude Fable 5.1</strong></td><td><strong>Claude Fable 5</strong></td><td><strong>Claude Opus 5</strong></td><td><strong>Gemini 3.8 Flash</strong></td></tr></thead><tbody><tr><td>GeneBench Pro</td><td>37.1%</td><td>32.3%</td><td>-</td><td>-</td><td>-</td><td>-</td></tr><tr><td>MedChemBench (Internal)</td><td>49.3%</td><td>47.4%</td><td>-</td><td>-</td><td>-</td><td>-</td></tr><tr><td>LifeSciBench</td><td>60.3%</td><td>59.9%</td><td>-</td><td>-</td><td>-</td><td>-</td></tr><tr><td>HealthBench Professional (length-adjusted)</td><td>63.4%</td><td>60.5%</td><td>58.1% <sup><a href="#citation-bottom-11:2">11</a></sup></td><td>60.9% <sup><a href="#citation-bottom-11:3">11</a></sup></td><td>56.4% <sup><a href="#citation-bottom-11:4">11</a></sup></td><td>52.1%</td></tr></tbody></table>
-<h3>Cybersecurity</h3>
-<table><thead><tr><td><strong>Cybersecurity</strong></td><td><strong>GPT‑6 Astra</strong></td><td><strong>GPT‑5.6 Sol</strong></td><td><strong>Claude Fable 5.1</strong></td><td><strong>Claude Fable 5</strong></td><td><strong>Claude Opus 5</strong></td><td><strong>Gemini 3.8 Flash</strong></td></tr></thead><tbody><tr><td>ExploitBench</td><td>100.0%</td><td>78.5%</td><td>-</td><td>-</td><td>70%</td><td>-</td></tr><tr><td>ExploitGym</td><td>42.4% <sup><a href="#citation-bottom-13:2">13</a></sup></td><td>30.3% <sup><a href="#citation-bottom-13:3">13</a></sup></td><td>30.4% <sup><a href="#citation-bottom-17:2">17</a></sup></td><td>28.4%<sup><a href="#citation-bottom-17:3">17</a></sup></td><td>22.0%</td><td>-</td></tr><tr><td>ExploitBench (June-Aug 2026)</td><td>39.0%</td><td>5.5%</td><td>-</td><td>-</td><td>-</td><td>-</td></tr><tr><td>SRE-Bench</td><td>88.0%</td><td>55.9%</td><td>-</td><td>-</td><td>12.5%</td><td>-</td></tr><tr><td>SEC-Bench Pro</td><td>85.4%</td><td>79.1%</td><td>-</td><td>-</td><td>-</td><td>-</td></tr></tbody></table>
-<h3>Alignment</h3>
-<table><tbody><tr><td><p><b>Alignment</b></p></td><td><p><b>GPT‑6 Astra</b></p></td><td><p><b>GPT‑5.6 Sol</b></p></td><td><p><b>Claude Fable 5.1</b></p></td><td><p><b>Claude Fable 5</b></p></td><td><p><b>Claude Opus 5</b></p></td><td><p><b>Gemini 3.8 Flash</b></p></td></tr><tr><td><p>Internal computer use safety benchmark (lower is better)</p></td><td><p>2.4%</p></td><td><p>22.0%</p></td><td><p>9.5%</p></td><td><p>18.3%</p></td><td><p>11.5%</p></td><td><p>-</p></td></tr><tr><td><p>Internal computer use safety benchmark, w/ AutoReview (lower is better)</p></td><td><p>1.8%</p></td><td><p>4.3%</p></td><td><p>-</p></td><td><p>-</p></td><td><p>-</p></td><td><p>-</p></td></tr><tr><td><p>Internal circumvention benchmark (lower is better)</p></td><td><p>0.00%</p></td><td><p>0.29%</p></td><td><p>-</p></td><td><p>-</p></td><td><p>-</p></td><td><p>-</p></td></tr><tr><td><p>ExploitGym honeypot (lower is better)</p></td><td><p>0.0%</p></td><td><p>48.2%</p></td><td><p>-</p></td><td><p>-</p></td><td><p>-</p></td><td><p>-</p></td></tr><tr><td><p>Impossible ExploitGym</p></td><td><p>100.0%</p></td><td><p>-</p></td><td><p>-</p></td><td><p>-</p></td><td><p>-</p></td><td><p>-</p></td></tr><tr><td><p>Internal hallucination benchmark (lower is better)</p></td><td><p>4.2%</p></td><td><p>12.2%</p></td><td><p>-</p></td><td><p>-</p></td><td><p>-</p></td><td><p>-</p></td></tr></tbody></table>
-<h3>Long Context</h3>
-<table><tbody><tr><td><p><b>Long Context</b></p></td><td><p><b>GPT‑6 Astra</b></p></td><td><p><b>GPT‑5.6 Sol</b></p></td><td><p><b>Claude Fable 5.1</b></p></td><td><p><b>Claude Fable 5</b></p></td><td><p><b>Claude Opus 5</b></p></td><td><p><b>Gemini 3.8 Flash</b></p></td></tr><tr><td><p>OpenAI MRCR v2 8-needle 256K-512K</p></td><td><p>100.0%</p></td><td><p>91.5%</p></td><td><p>-</p></td><td><p>-</p></td><td><p>-</p></td><td><p>-</p></td></tr><tr><td><p>OpenAI MRCR v2 8-needle 512K-1M</p></td><td><p>96.3%</p></td><td><p>73.8%</p></td><td><p>-</p></td><td><p>-</p></td><td><p>-</p></td><td><p>-</p></td></tr></tbody></table>
-<h3>Abstract reasoning</h3>
-<table><thead><tr><td><strong>Abstract reasoning</strong></td><td><strong>GPT‑6 Astra</strong></td><td><strong>GPT‑5.6 Sol</strong></td><td><strong>Claude Fable 5.1</strong></td><td><strong>Claude Fable 5</strong></td><td><strong>Claude Opus 5</strong></td><td><strong>Gemini 3.8 Flash</strong></td></tr></thead><tbody><tr><td>ARC-AGI-3</td><td>99.9% <sup><a href="#citation-bottom-1">1</a></sup></td><td>7.8%</td><td>-</td><td>-</td><td>30.2%</td><td>-</td></tr><tr><td>ARC-AGI-2</td><td>95.0%</td><td>92.5%</td><td>90.0%</td><td>89.2%</td><td>90.4%</td><td>-</td></tr><tr><td>ARC-AGI-1</td><td>98.5%</td><td>97.5%</td><td>97.5%</td><td>98.5%</td><td>97.5%</td><td>-</td></tr></tbody></table>
-<p>Evaluation scores are the maximum at any effort. GPT evaluations were run in our research environment or via our API, which may provide slightly different output from production ChatGPT due to differences in the system prompts, tools available, etc.</p>
-<h2>FOOTNOTES</h2>
-<ol><li>1<p>On ARC-AGI-3, GPT-6 Astra was run with <a href="https://openai.com/index/how-two-settings-tripled-our-arc-agi-3-scores/">our responses API harness⁠</a>, which changes two settings to better match real-world performance. The changes do not specifically target ARC-AGI-3.</p></li><li>2<p>GPT-5.6 Sol refers to the version available in our API, ChatGPT Codex, and ChatGPT Work. <a href="https://openai.com/index/improving-gpt-5-6-sol-in-chatgpt/">The version in ChatGPT Chat is slightly different.⁠</a></p></li><li>3<p>OSWorld V2-Offline is a subset of the original OSWorld V2 that works without internet access. Claude model performance on OSWorld-V2 Offline was reproduced by the authors<b> on </b><a href="https://osworld-v2.xlang.ai/"><b>the official leaderboard</b>⁠</a><b>. </b>On OSWorld 2.0, the scores for Claude use the official settings, and not the modified tasks and modified grading from the Fable 5.1 System Card.</p></li><li>4<p>Model times are the reported elapsed times for the corresponding demonstration runs. The displayed clips are edited excerpts.</p></li><li>5<p>On BenchCAD, Claude's scores reflect 3 modifications to the eval, detailed in the <a href="https://www-cdn.anthropic.com/0339e6a7c5c7b87f5c07798616dc32c215d14235/Claude%20Fable%205.1%20&amp;%20Claude%20Mythos%205.1%20System%20Card.pdf">Fable 5.1 System Card⁠</a>.</p></li><li>6<p>Guang Yang, Victoria Ebert, Nazif Tamer, Brian Siyuan Zheng, Luiza Pozzobon, and Noah A. Smith. “<a href="https://arxiv.org/abs/2506.19065">LEGATO: Large-scale End-to-end Generalizable Approach to Typeset OMR⁠</a>.” arXiv:2506.19065, 2025.</p></li><li>7<p>Mark R. H. Gotham, Maureen Redbond, Bruno Bower, and Peter Jonas. “<a href="https://doi.org/10.1145/3625135.3625155">The OpenScore String Quartet Corpus⁠</a>.” Proceedings of the 10th International Conference on Digital Libraries for Musicology, pp. 49–57. ACM, 2023.</p></li><li>8<p>On FrontierCode, GPT-6 Astra was run with a developer  message similar to a <a href="https://developers.openai.com/api/docs/guides/latest-model#prompting-best-practices"><u>section of its developer message in Codex</u>⁠</a>: "Avoid creating excessive test files. Create a new test file only when required by repository conventions or when no existing file is a suitable home. Avoid unrelated cleanup and unnecessary complexity. Reuse suitable existing utilities. Read relevant repository instructions and inspect nearby code, tests, documentation, and CI. Follow established conventions. The goal is clean, mergeable code." The prompt was not optimized for the eval.</p></li><li>9<p>The first concerns how close together prime numbers can occur, however far along the number line you go. For more than a decade, the best known result established that infinitely many pairs of primes are at most 246 apart. <a href="https://math.illinois.edu/directory/profile/stadl"><u>Julia Stadlmann</u>⁠</a> recently improved that bound to 240. Astra helped establish a stronger bound of 186, showing that infinitely many pairs occur within this smaller distance. Short prime gaps: <a href="https://cdn.openai.com/pdf/51126fac-1b68-4128-9666-c908bcc16033/short_gaps.pdf">Proof⁠</a> and <a href="https://cdn.openai.com/pdf/51126fac-1b68-4128-9666-c908bcc16033/short_gaps_abridged_cot.pdf">supporting research⁠</a>.</p></li><li>10<p>The second concerns unusually large gaps between primes. Astra improved a term in a bound on these gaps that had remained unchanged for more than 80 years. We’re sharing the proofs and abridged chain of thought and verification materials for both results. Large prime gaps: <a href="https://cdn.openai.com/pdf/51126fac-1b68-4128-9666-c908bcc16033/long_gaps.pdf">Proof⁠</a> and <a href="https://cdn.openai.com/pdf/51126fac-1b68-4128-9666-c908bcc16033/long_gaps_abridged_cot.pdf">supporting research⁠</a>.</p></li><li>11<p>We independently evaluated all Claude models following the intended HealthBench Professional procedure, using GPT‑5.4 grading and length-adjusted, unclipped scores. For Fable 5.1, we used Opus 5 fallback for provider refusals.</p></li><li>12<p>Claude Fable 5 and 5.1 are not included in LifeSciBench Gold v1, GeneBench Pro v13, and MedChemBench because they refuse the majority of questions in these evaluations.</p></li><li>13<p>On ExploitGym, we tested Astra and Sol without the 6-hour time limit, to better assess their full cyber capabilities. They are fast enough that it has little impact.</p></li><li>14<p>ExploitBench (June–August 2026) contains 20 high-severity V8 vulnerabilities across 13 stable Chrome releases. The benchmark tests whether agents can achieve arbitrary code execution in V8 and official Chrome releases for Linux by exploiting each specified vulnerability. Some included vulnerabilities may not permit arbitrary code execution under the evaluation’s constraints, so a 100% success rate may not be achievable. Note: the 5.5% score of GPT-5.6 Sol is an artifact of the 300-turn limit in the benchmark, which is not a limit that real customers using max would have. The model at similar settings achieved an 11.5% score when hitting fewer limits.</p></li><li>15<p>Jeremy Spence et al. “<a href="https://arxiv.org/abs/2608.11469v1">The Next Challenge for Agentic Cybersecurity: A Realistic, Contamination-Free Reverse Engineering Benchmark⁠</a>.” arXiv:2608.11469v1, 2026.</p></li><li>16<p><i>When we test across third-party models, we use a simpler research setup. Codex has a more complex production configuration, which can result in different raw-model error rates. Provider-side safeguards and computer-tool implementations still differ. Users do not experience the no-confirmation scenario in Codex, as it's an internal research configuration.</i></p></li><li>17<p>For ScreenSpot-Pro and ExploitGym, the Fable scores we report come from Mythos, which is Fable with fewer safeguards.</p></li></ol>]]></content:encoded>
-      <guid isPermaLink="true">https://openai.com/index/gpt-6-astra/</guid>
-      <category>Research</category>
-      <pubDate>Thu, 03 Sep 2026 11:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Biosecurity at the frontier</title>
-      <link>https://x.ai/news/biosafety-at-the-frontier</link>
-      <description>LatchBio evaluated Grok's performance on biosecurity monitoring and adversarial biological tasks. They found that Grok 4.6 detects and refuses dangerous queries more reliably than any other frontier system.</description>
-      <content:encoded><![CDATA[<p>Today, <a href="https://latch.bio/">LatchBio</a> published an independent analysis of Grok 4.6 on their biological capability and biological red-teaming benchmark suites. These evaluations measure a wide range of characteristics and capabilities of tested models, including:</p>
-<ul>
-<li>Whether a model can distinguish between legitimate biological research and requests that conceal a biosecurity hazard</li>
-<li>Whether a model is useful in a biosecurity and biomonitoring role, by being able to detect and characterize emerging pathogens and patterns of transmission</li>
-</ul>
-<p>On LatchBio's BioSecBench-Refusal suite, Grok 4.6 was the strongest model tested at refusing disguised and hazardous tasks while still completing routine biological work. It was the only system to score above 50% on both measures.</p>
-<h2 id="methodology-and-context">Methodology and context</h2>
-<p>Biology and biological research present domains where the opportunities and risks of highly capable AI systems are well-known and challenging to disentangle. In designing our safeguards, we aim to maximize the utility of our agents in assisting and accelerating legitimate scientific research, while minimizing the risks they present through incorrect information and adversarial use.</p>
-<p>LatchBio's two benchmarks most relevant to the above capabilities measure whether an agent can distinguish concealed hazards from ordinary science, and whether it can carry out the pathogen surveillance workflows public-health work depends on. They are:</p>
-<ul>
-<li><strong>BioSecBench-Refusal</strong>, which pairs routine biological tasks, adapted from published literature, with 46 red-team tasks that look like ordinary research and hide the hazard in attached scientific data, mislabeled files, or other intentionally obfuscated tasks. This evaluation is calibrated around understanding the intent of a task: an agent that only reacts to words like "pathogen" or "toxin" will block the routine set and miss the red-team set, while one that inspects the data can tell the two apart.</li>
-<li><strong>BioSecBench-Surveillance</strong>, which tests whether an agent can carry out pathogen genomic surveillance workflows of the kind used in public-health monitoring. Those tasks require chaining file inspection, tool use, and scientific judgment on messy sequencing data.</li>
-</ul>
-<h2 id="results-and-key-findings">Results and key findings</h2>
-<p>In testing on BioSecBench-Refusal, LatchBio found that Grok 4.6 detects and refuses red-team and otherwise dangerous queries more reliably than any other frontier system tested, while not diminishing performance on routine biological work. Grok 4.6 also performs comparably with other frontier models on biosurveillance work. LatchBio notes that evaluations were performed on a variety of agent harnesses to remove confounds, and that unless otherwise noted, agents were tested at their highest-offered effort levels.</p>
-<p>The score presented by LatchBio is a trial-weighted harmonic mean of red-team refusal and routine compliance. We analyze this metric and standalone refusal rate independently. Across different harnesses, Grok 4.6 holds the top three spots, averaging 62.1%. Considering refusals and task compliance independently, Grok 4.6 refused 59.2% of red-team tasks and completed 64.8% of routine ones. It is the only model tested that scored above 50% on both measures.</p>
-<p>On BioSecBench-Surveillance, Grok 4.6 averages a success rate of 53.5%, sitting behind Opus 5 and ahead of GPT-5.6 Sol on biosecurity and monitoring work. The results on both benchmarks indicate an agent and underlying model well-calibrated for routine and helpful biological work, as well as one highly capable in biosecurity work and monitoring.</p>
-<p>On evaluations of general routine biological capability performed by LatchBio (such as SpatialBench or TxBench-PP), Grok is found to match or exceed other frontier models in a wide range of agentic biological work. These are presented in greater detail at <a href="https://benchmarks.bio">benchmarks.bio</a>.</p>
-<h2 id="analyzing-refusal-behavior">Analyzing refusal behavior</h2>
-<p>In evaluation traces, Grok 4.6 is observed reasoning over the contents of a task and testing environment to assess intent before proceeding or refusing. Frequently, Grok will find discrepancies between the stated intent in the prompt and environment, or will assemble intent from high-risk content disguised by filenames and encryption, and will subsequently refuse. On obviously benign and low-risk tasks, Grok exhibits the same environment-reasoning behavior, but is able to assess tasks as safe.</p>
-<h2 id="how-we-safeguard-grok">How we safeguard Grok</h2>
-<p>Before we release a model, we test biological capability in addition to other domains of risk, and validate that the capabilities of our models are adequately safeguarded against misuse. The work of third-party evaluators such as LatchBio complements the evaluations we perform internally, both pre- and post-deployment, for the models we serve.</p>
-<p>Grok's safeguards are built in layers to establish defense-in-depth. Refusal training is performed to teach the model how and when to refuse, to correctly infer the intent and risk profile of tasks, and to refuse correctly in highly adversarial scenarios. We train and deploy inference-time safeguards to reject harmful requests before they ever reach the model, and we implement behavioral controls to further safeguard the model when deployed. Post-deployment monitoring is performed to detect and stop patterns of adversarial use at the session and user level, and provides a source of feedback for continuous calibration of our model deployments.</p>
-<p>We observe a material improvement in Grok 4.6's capabilities in biological work over historically tested models, with substantial gains in refusal and biosecurity performance over Grok 4.5 and Grok 4.3. We intend our ongoing and novel safeguards work to allow us to continue serving frontier-scale intelligence safely across future model releases.</p>
-<h2 id="the-future-of-biosecurity-and-scientific-discovery">The future of biosecurity and scientific discovery</h2>
-<p>The line between actively adversarial tasks and helpful use grows thinner as models rapidly become more capable and autonomous, and safeguards will need to evolve accordingly. To control for the greater risk implied by improved model capability and agency, we will perform wider, more ambitious testing and calibration of our models and agentic systems: broader pre-deployment suites, more third-party evaluations, improved post-deployment monitoring, and deployments of our models with companies and institutions at the frontier of biology.</p>
-<p>Similarly, there is a risk inherent in overrefusals and miscalibrated safeguards. When a model refuses routine and helpful biological work, the ability of healthcare professionals, researchers, and monitoring programs to detect outbreaks early and perform other critical work in the field is degraded. We gauge this risk as equally serious as the risk of aiding malicious use.</p>
-<p>Grok is already used in scientific work, including general biological research and biosecurity monitoring, and we are optimistic about the ability of highly capable models to rapidly accelerate scientific discovery and shorten the path from the lab to practical use. We are committed to continuing to serve frontier intelligence securely and safely to the engineers, researchers, enterprises, and institutions advancing the life sciences.</p>
-<p>LatchBio's full methods and per-model scores are presented at <a href="https://benchmarks.bio">benchmarks.bio</a>. LatchBio's complementary blog, the Grok 4.6 model card, and SpaceXAI's Frontier Artificial Intelligence Framework are linked below.</p>
-<ul>
-<li><a href="https://blog.latch.bio/p/analyzing-grok46-safeguards">LatchBio blog</a></li>
-<li><a href="https://media.x.ai/v1/website/card-4p6-4cd2dc57.pdf">Grok 4.6 model card</a></li>
-<li><a href="https://media.x.ai/v1/website/xai-frontier-artificial-intelligence-framework-30-june-2026-99c40684.pdf">Frontier Artificial Intelligence Framework</a></li>
-</ul>]]></content:encoded>
-      <guid isPermaLink="true">https://x.ai/news/biosafety-at-the-frontier</guid>
+      <title>Grok Bot now works with X</title>
+      <link>https://x.ai/news/grok-bot-and-x</link>
+      <description>Grok Bot now has a tighter integration with X.</description>
+      <guid isPermaLink="true">https://x.ai/news/grok-bot-and-x</guid>
       <category>News</category>
-      <pubDate>Thu, 03 Sep 2026 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 04 Sep 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Grok 4.6 on Microsoft Foundry</title>
-      <link>https://x.ai/news/grok-4-6-microsoft-foundry</link>
-      <description>Grok 4.6 is now available via Microsoft Foundry.</description>
-      <content:encoded><![CDATA[<p>Today, we’re excited to announce that Grok 4.6 is now available on Microsoft Foundry.</p>
-<p>Grok 4.6 is our latest flagship model, built for long-running agents and ambitious interactive and visual work. It offers a 500k context window and configurable reasoning efforts (low, medium, high, xhigh).</p>
+      <title>Grok Bot is now included with more plans</title>
+      <link>https://x.ai/news/grok-bot-more-plans</link>
+      <description>Grok Bot is now available for SuperGrok, Cursor Pro, and all Cursor Teams plans.</description>
+      <guid isPermaLink="true">https://x.ai/news/grok-bot-more-plans</guid>
+      <category>News</category>
+      <pubDate>Fri, 04 Sep 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Grok 4.6 on Gemini Enterprise Agent Platform</title>
+      <link>https://x.ai/news/grok-4-6-vertex-ai</link>
+      <description>Grok 4.6 is now available via Gemini Enterprise Agent Platform.</description>
+      <content:encoded><![CDATA[<p>Today, we’re excited to announce that Grok 4.6 is now available on Gemini Enterprise Agent Platform.</p>
+<p>Grok 4.6 is our latest flagship model, built for long-running agents and ambitious interactive and visual work. It offers a 500k context window and configurable reasoning efforts (low, medium, high, xhigh). Now, Gemini Enterprise Agent Platform users can use the model through <a href="https://console.cloud.google.com/agent-platform/publishers/xai/model-garden/grok-4.6">Model Garden</a>.</p>
+<h2 id="capabilities--pricing">Capabilities &amp; Pricing</h2>
+<p>Grok 4.6 is available for:</p>
+<ul>
+<li><strong>Input</strong>: $2 per 1 million tokens</li>
+<li><strong>Cached input</strong>: $0.50 per 1 million tokens</li>
+<li><strong>Output</strong>: $6 per 1 million tokens</li>
+</ul>
 <p>For more on the model, read the <a href="https://x.ai/news/grok-4-6">Grok 4.6 announcement</a>.</p>
-<h2 id="build-with-grok-46-on-microsoft-foundry">Build with Grok 4.6 on Microsoft Foundry</h2>
-<p>Foundry gives organizations a single place to evaluate Grok 4.6 against other frontier models, run workload-specific tests, deploy managed endpoints, and operate with enterprise security and governance controls.</p>
-<p>If you are building coding agents, engineering copilots, research assistants, or enterprise automation, you can get started in the <a href="https://ai.azure.com/catalog/models">Foundry model catalog</a>. See Microsoft’s announcement, <a href="https://techcommunity.microsoft.com/blog/azure-ai-foundry-blog/grok-4-6-comes-to-microsoft-foundry-models-built-for-long-horizon-reasoning-and-/4547578">Grok 4.6 comes to Microsoft Foundry Models</a>, and our <a href="https://docs.x.ai/developers/community/microsoft-foundry">Microsoft Foundry integration guide</a> for deployment details.</p>]]></content:encoded>
-      <guid isPermaLink="true">https://x.ai/news/grok-4-6-microsoft-foundry</guid>
+<h2 id="build-with-grok-46-on-gemini-enterprise-agent-platform">Build with Grok 4.6 on Gemini Enterprise Agent Platform</h2>
+<p>Grok 4.6 is now available to developers in Model Garden. To get started, visit the <a href="https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/partner-models/grok/grok-4-6">Grok 4.6 model card</a>. We're excited to see what you build!</p>]]></content:encoded>
+      <guid isPermaLink="true">https://x.ai/news/grok-4-6-vertex-ai</guid>
       <category>News</category>
-      <pubDate>Thu, 03 Sep 2026 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 04 Sep 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Grok 4.6 in GitHub Copilot</title>
-      <link>https://x.ai/news/grok-4-6-github-copilot</link>
-      <description>Grok 4.6, our latest coding model, is now available in GitHub Copilot.</description>
-      <content:encoded><![CDATA[<a href="https://console.x.ai/team/default/api-keys?campaign=grok-4-6-github-copilot-blog&amp;utm_source=website&amp;utm_medium=referral&amp;utm_campaign=grok-4-6-github-copilot-blog">Try Grok 4.6 in the API</a>
-<a href="https://github.com/features/copilot">Open GitHub Copilot</a>]]></content:encoded>
-      <guid isPermaLink="true">https://x.ai/news/grok-4-6-github-copilot</guid>
-      <category>News</category>
-      <pubDate>Thu, 03 Sep 2026 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Introducing Grok 4.6</title>
-      <link>https://x.ai/news/grok-4-6</link>
-      <description>Grok 4.6 builds on Grok 4.5 with a particular focus on long-running agents and more ambitious interactive and visual work.</description>
-      <guid isPermaLink="true">https://x.ai/news/grok-4-6</guid>
-      <category>News</category>
-      <pubDate>Thu, 03 Sep 2026 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Introducing Grok Bot</title>
-      <link>https://x.ai/news/introducing-grok-bot</link>
-      <description>Grok Bot is your team of always-on agents. They have their own computer, work inside tools and apps like you do, and keep working 24/7.</description>
-      <guid isPermaLink="true">https://x.ai/news/introducing-grok-bot</guid>
-      <category>News</category>
-      <pubDate>Thu, 03 Sep 2026 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Imagine Video 1.5 with References</title>
-      <link>https://x.ai/news/grok-imagine-video-1-5-references</link>
-      <description>Our best video model, now with text, image, and voice references — generating up to 1080p.</description>
-      <content:encoded><![CDATA[<a href="https://grok.com/imagine?referrer=website&amp;campaign=imagine-video-1-5-references-blog">Open Grok.com</a>]]></content:encoded>
-      <guid isPermaLink="true">https://x.ai/news/grok-imagine-video-1-5-references</guid>
-      <category>News</category>
-      <pubDate>Thu, 03 Sep 2026 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Grok in Google Workspace</title>
-      <link>https://x.ai/news/introducing-google-workspace-addon</link>
-      <description>Use the Grok add-on for Google Workspace to work directly in Sheets, Slides, and Docs.</description>
-      <guid isPermaLink="true">https://x.ai/news/introducing-google-workspace-addon</guid>
-      <category>News</category>
-      <pubDate>Thu, 03 Sep 2026 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Workflows in Grok Build</title>
-      <link>https://x.ai/news/workflows</link>
-      <description>Grok Build can now write and run workflows: orchestration scripts that fan a task out across hundreds of parallel agents, verify the results, and report back in one background run.</description>
-      <guid isPermaLink="true">https://x.ai/news/workflows</guid>
-      <category>News</category>
-      <pubDate>Thu, 03 Sep 2026 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Bringing Grok 4.5 to iOS, Android, Web, and X</title>
-      <link>https://x.ai/news/grok-4-5-everywhere</link>
-      <description>Grok 4.5, our most intelligent model yet, is now on grok.com, X, iOS, and Android.</description>
-      <content:encoded><![CDATA[<a href="https://grok.com/?referrer=website">Open Grok.com</a>]]></content:encoded>
-      <guid isPermaLink="true">https://x.ai/news/grok-4-5-everywhere</guid>
-      <category>News</category>
-      <pubDate>Thu, 03 Sep 2026 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Grok for PowerPoint</title>
-      <link>https://x.ai/news/introducing-powerpoint-addin</link>
-      <description>Grok now works inside Microsoft PowerPoint — turn outlines into slides, expand the deck, and tighten the narrative without leaving the app.</description>
-      <guid isPermaLink="true">https://x.ai/news/introducing-powerpoint-addin</guid>
-      <category>News</category>
-      <pubDate>Thu, 03 Sep 2026 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Agent Dashboard in Grok Build</title>
-      <link>https://x.ai/news/agent-dashboard</link>
-      <description>Manage many coding sessions at once. See what each is doing, reply to the ones that need you, and dispatch new work.</description>
-      <content:encoded><![CDATA[<p>The Agent Dashboard puts every Grok Build session on one screen. See what each is doing, run them in parallel, and step in only when input is needed.</p>
-<p>Run <code>grok dashboard</code> from your shell, or <code>/dashboard</code> (<code>Ctrl+\</code>) from inside any session.</p>
-<h2 id="see-every-session-at-a-glance">See every session at a glance</h2>
-<p>The dashboard sorts sessions by state, with anything waiting for input pulled to the top, so you handle blockers first and leave the rest running. A quick scan shows what each session is doing and for how long, so you stay oriented without opening anything.</p>
-<p>Spread across repos? Group by working directory with <code>Ctrl+S</code>. Subagents roll up under the session that launched them, so the list shows the work you dispatched, not the fan-out beneath it.</p>
-<h2 id="peek-and-reply">Peek and reply</h2>
-<p>Select a row to peek at its latest output without leaving the dashboard, then reply from there. Idle sessions send immediately; active ones queue your message until the current turn ends.</p>
-<p>When a session requests approval or asks a question, its options appear inline. Answer with the arrow or number keys to continue. Multi-part questions arrive one at a time.</p>
-<h2 id="dispatch-new-sessions">Dispatch new sessions</h2>
-<p>The input at the bottom starts a new session. <code>Enter</code> dispatches it and keeps you on the dashboard; <code>Shift+Enter</code> dispatches and opens it right away. Before sending, set the model, start in plan mode, or let the session approve its own edits.</p>
-<h2 id="take-over-any-session">Take over any session</h2>
-<p>Open any session to take over its full conversation. Cycle to the next or previous session without returning to the list, then drop back to the dashboard when you're done. Closing the dashboard leaves every session running, and they're all there when you reopen it.</p>
-<h2 id="get-started">Get started</h2>
-<p>The Agent Dashboard ships with Grok Build. Install it with a single command, then run <code>grok dashboard</code>, or <code>/dashboard</code> from any session you already have open.</p>]]></content:encoded>
-      <guid isPermaLink="true">https://x.ai/news/agent-dashboard</guid>
-      <category>News</category>
-      <pubDate>Thu, 03 Sep 2026 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Use Grok in Warp</title>
-      <link>https://x.ai/news/grok-warp</link>
-      <description>Use your Grok and X Premium subscription inside Warp.</description>
-      <content:encoded><![CDATA[<p>You can now use your Grok or X Premium subscription inside <a href="https://www.warp.dev/">Warp</a>, an agentic development environment built on the terminal and used by almost one million developers.</p>
-<p>Your existing subscription provides access to Grok models, including <code>grok-build-0.1</code>, the model powering <a href="https://x.ai/build">Grok Build</a>.</p>
-<h2 id="setup">Setup</h2>
-<ol>
-<li>Download Warp from <a href="https://www.warp.dev/download">warp.dev/download</a> and open it.</li>
-<li>Open the "Agent &gt; Warp Agent" settings page and click "Connect SuperGrok subscription"</li>
-<li>Switch to the <code>grok-build-0.1</code> model and start prompting.</li>
-</ol>
-<p>That's it! More agents and integrations are coming soon to SuperGrok and X Premium subscribers. To subscribe, visit the <a href="https://x.ai/pricing">pricing page</a>.</p>]]></content:encoded>
-      <guid isPermaLink="true">https://x.ai/news/grok-warp</guid>
-      <category>News</category>
-      <pubDate>Thu, 03 Sep 2026 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Grok Build Plugin Marketplace</title>
-      <link>https://x.ai/news/grok-plugin-marketplace</link>
-      <description>Launching the built-in plugin marketplace for Grok Build.</description>
-      <content:encoded><![CDATA[<p>Today we're launching the <a href="https://github.com/xai-org/plugin-marketplace">Grok Build Plugin Marketplace</a> - a set of built-in plugins for <a href="https://x.ai/build">Grok Build</a>.</p>
-<p>A plugin bundles <a href="https://x.ai/news/grok-skills">skills</a>, slash commands, agents, hooks, MCP servers, and LSPs into one installable package. The marketplace is built into Grok Build, so you can browse, install, and update plugins without leaving your terminal.</p>
-<h2 id="available-at-launch">Available at launch</h2>
-<p>The marketplace opens with plugins from partners across the stack:</p>
+      <title>Grok 4.6 on Amazon Bedrock</title>
+      <link>https://x.ai/news/grok-4-6-amazon-bedrock</link>
+      <description>Grok 4.6 is now available via Amazon Bedrock.</description>
+      <content:encoded><![CDATA[<p>Today, we’re excited to announce that Grok 4.6 is now generally available on Amazon Bedrock.</p>
+<p>Grok 4.6 is our latest flagship model, built for long-running agents and ambitious interactive and visual work. It offers 500k context window and configurable reasoning efforts (low, medium, high, xhigh). Now, Amazon Bedrock users can leverage the model through Amazon Bedrock.</p>
+<h2 id="capabilities--pricing">Capabilities &amp; Pricing</h2>
+<p>Grok 4.6 is available for:</p>
 <ul>
-<li><strong><a href="https://www.mongodb.com/docs/mcp-server/overview/">MongoDB</a></strong> — Explore data, manage collections, and optimize queries.</li>
-<li><strong><a href="https://github.com/vercel/vercel-plugin">Vercel</a></strong> — Manage deployments, check build status, and configure domains.</li>
-<li><strong><a href="https://github.com/getsentry/sentry-for-ai">Sentry</a></strong> — Analyze stack traces and debug production errors.</li>
-<li><strong><a href="https://github.com/ChromeDevTools/chrome-devtools-mcp">Chrome DevTools</a></strong> — Control a live browser, record performance traces, and inspect network requests.</li>
-<li><strong><a href="https://github.com/cloudflare/skills">Cloudflare</a></strong> — Skills for Workers, Durable Objects, and more.</li>
-<li><strong><a href="https://github.com/obra/superpowers">Superpowers</a></strong> — Popular agent-driven workflows.</li>
+<li><strong>Input</strong>: $2 per 1 million tokens</li>
+<li><strong>Cached input</strong>: $0.50 per 1 million tokens</li>
+<li><strong>Output</strong>: $6 per 1 million tokens</li>
 </ul>
-<h2 id="install-in-seconds">Install in seconds</h2>
-<p>Inside Grok Build, type <code>/marketplace</code> to browse the catalog and press <code>i</code> to install a plugin. Or from the terminal:</p>
-<pre><code>grok plugin marketplace list
-grok plugin install &lt;name&gt; --trust
+<p>For more on the model, read the <a href="https://x.ai/news/grok-4-6">Grok 4.6 announcement</a>.</p>
+<h2 id="build-with-grok-46-on-amazon-bedrock">Build with Grok 4.6 on Amazon Bedrock</h2>
+<p>Grok 4.6 is now available to all developers in supported AWS Regions. Please visit AWS documentation to get started - we're excited to see what you build!</p>]]></content:encoded>
+      <guid isPermaLink="true">https://x.ai/news/grok-4-6-amazon-bedrock</guid>
+      <category>News</category>
+      <pubDate>Fri, 04 Sep 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Grok Build on web and mobile</title>
+      <link>https://x.ai/news/grok-build-for-everyone</link>
+      <description>Grok Build is now available on every plan, on the web and on mobile.</description>
+      <guid isPermaLink="true">https://x.ai/news/grok-build-for-everyone</guid>
+      <category>News</category>
+      <pubDate>Fri, 04 Sep 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Introducing Grok Voice Think Fast 2.0</title>
+      <link>https://x.ai/news/grok-voice-think-fast-2</link>
+      <description>Introducing our most capable speech-to-speech voice model.</description>
+      <guid isPermaLink="true">https://x.ai/news/grok-voice-think-fast-2</guid>
+      <category>News</category>
+      <pubDate>Fri, 04 Sep 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Introducing Build Mode</title>
+      <link>https://x.ai/news/grok-build-mode</link>
+      <description>Create and share websites, apps, games, and interactive dashboards. Now in Early Beta for SuperGrok Heavy subscribers on grok.com, iOS, and Android.</description>
+      <guid isPermaLink="true">https://x.ai/news/grok-build-mode</guid>
+      <category>News</category>
+      <pubDate>Fri, 04 Sep 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Grok 4.5 in GitHub Copilot</title>
+      <link>https://x.ai/news/grok-github-copilot</link>
+      <description>Grok 4.5, our smartest coding model, is now available in GitHub Copilot.</description>
+      <content:encoded><![CDATA[<a href="https://console.x.ai/team/default/api-keys?campaign=grok-github-copilot-blog&amp;utm_source=website&amp;utm_medium=referral&amp;utm_campaign=grok-github-copilot-blog">Try Grok 4.5 in the API</a>
+<a href="https://github.com/features/copilot">Open GitHub Copilot</a>]]></content:encoded>
+      <guid isPermaLink="true">https://x.ai/news/grok-github-copilot</guid>
+      <category>News</category>
+      <pubDate>Fri, 04 Sep 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Grok Build is Now Open Source</title>
+      <link>https://x.ai/news/grok-build-open-source</link>
+      <description>Explore the harness behind our coding agent and TUI.</description>
+      <content:encoded><![CDATA[<a href="https://github.com/xai-org/grok-build">View on GitHub</a>]]></content:encoded>
+      <guid isPermaLink="true">https://x.ai/news/grok-build-open-source</guid>
+      <category>News</category>
+      <pubDate>Fri, 04 Sep 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Grok for Word</title>
+      <link>https://x.ai/news/introducing-word-addin</link>
+      <description>Use the Grok add-in for Microsoft Word to turn notes into documents, style and format your work, or bring research from the web into Word.</description>
+      <guid isPermaLink="true">https://x.ai/news/introducing-word-addin</guid>
+      <category>News</category>
+      <pubDate>Fri, 04 Sep 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Grok on Amazon Bedrock</title>
+      <link>https://x.ai/news/grok-amazon-bedrock</link>
+      <description>Grok models are now available via Amazon Bedrock.</description>
+      <content:encoded><![CDATA[<p>Today, we’re excited to announce that Grok 4.3 is now generally available on Amazon Bedrock.</p>
+<p>Grok 4.3 achieves the lowest hallucination rate among frontier models, offers 1-million-token context window, and supports configurable reasoning efforts (none, low, medium, high). Now, Amazon Bedrock users can leverage the model through Bedrock’s secure and reliable inference engine.</p>
+<h2 id="leading-performance-in-enterprise">Leading Performance in Enterprise</h2>
+<p>Grok 4.3 is one of the strongest models available today for building enterprise-ready AI agents:</p>
+<ul>
+<li>#1 on Artificial Analysis Omniscience benchmark*, achieving the lowest hallucination rate among frontier models.</li>
+<li>#1 on Artificial Analysis Tau2 Telecom benchmark*, which evaluates real-world tool-calling performance in customer support agent scenarios.</li>
+<li>#1 on Vals AI Case Law and Corporate Finance benchmarks, which measure Grok's capabilities in complex document understanding tasks.</li>
+</ul>
+<small><em>* In comparison to major frontier labs</em></small>
+<h2 id="capabilities--pricing">Capabilities &amp; Pricing</h2>
+<p>Grok 4.3 sits on the Pareto frontier for intelligence versus cost, delivering 2-10x more intelligence per dollar than other frontier models.</p>
+<ul>
+<li><strong>Input</strong>: $1.25 per 1 million tokens</li>
+<li><strong>Output</strong>: $2.50 per 1 million tokens</li>
+</ul>
+<p>It features a 1 million context window that handles extremely long documents and codebases with ease. Developers can also configure reasoning: Use <code>none</code> for maximum speed on simple requests, or <code>low</code> / <code>medium</code> / <code>high</code> to scale reasoning effort to the difficulty of the problem.</p>
+<h2 id="build-with-grok-43-on-amazon-bedrock">Build with Grok 4.3 on Amazon Bedrock</h2>
+<p>Grok 4.3 is now available to all developers in <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-xai-grok-4-3.html#model-card-xai-grok-4-3-programmatic-access">supported AWS Regions</a>.</p>
+<pre><code>curl https://bedrock-mantle.us-west-2.api.aws/openai/v1/responses \
+  -H "Content-Type: application/json" \
+  -H "Authorization: Bearer $BEDROCK_API_KEY" \
+  -d '{
+    "model": "grok-4.3",
+    "input": "What is the meaning of life?",
+    "reasoning": {
+        "effort": "low"
+    },
+    "include": ["reasoning.encrypted_content"]
+  }'
 </code></pre>
-<p>Every remote plugin in the catalog is pinned to a specific commit SHA, and Grok Build verifies the pin at install time.</p>
-<h2 id="publish-your-own">Publish your own</h2>
-<p>The marketplace is an open catalog. If you've built a plugin you want to share, submit a pull request to <a href="https://github.com/xai-org/plugin-marketplace">xai-org/plugin-marketplace</a>.</p>
-<h2 id="getting-started">Getting started</h2>
-<p>New to Grok Build? Visit <a href="https://x.ai/build">x.ai/build</a> to get started.</p>]]></content:encoded>
-      <guid isPermaLink="true">https://x.ai/news/grok-plugin-marketplace</guid>
+<p>To get started, please visit the <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-xai-grok-4-3.html#model-card-xai-grok-4-3-sample-code">Grok on Amazon Bedrock documentation</a>. We're excited to see what you build!</p>]]></content:encoded>
+      <guid isPermaLink="true">https://x.ai/news/grok-amazon-bedrock</guid>
       <category>News</category>
-      <pubDate>Thu, 03 Sep 2026 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 04 Sep 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Composer 2.5</title>
-      <link>https://x.ai/news/composer-2-5</link>
-      <description>Composer 2.5 is now available in Grok Build. Try it from the /models menu.</description>
-      <content:encoded><![CDATA[<p>Composer 2.5 is now available in Grok Build. Composer 2.5 is a fast, state-of-the-art model that excels on long-running tasks and following complex instructions.</p>
-<p>Try it by typing <code>/model</code> and then selecting Composer 2.5 in the menu.</p>]]></content:encoded>
-      <guid isPermaLink="true">https://x.ai/news/composer-2-5</guid>
+      <title>Grok Imagine Video 1.5</title>
+      <link>https://x.ai/news/grok-imagine-video-1-5</link>
+      <description>Improved quality at even faster speeds.</description>
+      <guid isPermaLink="true">https://x.ai/news/grok-imagine-video-1-5</guid>
       <category>News</category>
-      <pubDate>Thu, 03 Sep 2026 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 04 Sep 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Introducing Grok Build</title>
-      <link>https://x.ai/news/grok-build-cli</link>
-      <description>Now in early beta for all SuperGrok and X Premium Plus subscribers — Grok Build is a new coding agent that runs right from your terminal.</description>
-      <content:encoded><![CDATA[<p>Today we're launching an early beta of Grok Build, a powerful new coding agent for professional software engineering and complex coding work.</p>
-<p>Available now to all SuperGrok and X Premium Plus subscribers. Install Grok Build with a single command and sign in with your account:</p>
-<h2 id="plan-review-approve">Plan, review, approve</h2>
-<p>For complex tasks, start Grok Build in plan mode. You can approve the plan, comment on individual steps, or rewrite it entirely before execution begins.
-Once a plan is approved, every change shows up as a clean diff.</p>
-<h2 id="works-with-what-you-already-use">Works with what you already use</h2>
-<p>Your AGENTS.md, plugins, hooks, skills, and MCP servers all work out of the box. Start Grok Build in your repo and it picks up your conventions instantly.</p>
-<h2 id="subagents-that-work-in-parallel">Subagents that work in parallel</h2>
-<p>For larger tasks, Grok Build delegates work to specialized subagents that run in parallel. Grok Build also supports deep worktree integrations, and you can launch subagents in their own worktrees.</p>
-<h2 id="built-to-fit-your-workflow">Built to fit your workflow</h2>
-<p>Headless mode (<code>-p</code>) allows easily running agents inside scripts and automations. Grok Build also provides full ACP support to build your own  bots and agent orchestration apps.</p>
-<h2 id="try-it-today">Try it today</h2>
-<p>This is an early beta, and your feedback is the fastest way to make it better. Type <code>/feedback</code> in Grok Build to send bugs, requests, and reactions straight to the team.</p>
-<p>SuperGrok and X Premium Plus subscribers can install Grok Build with the command above and start building. If you don't have SuperGrok yet, <a href="https://grok.com/supergrok?referrer=grok-build">upgrade here</a> — we're excited to see what you create.</p>]]></content:encoded>
-      <guid isPermaLink="true">https://x.ai/news/grok-build-cli</guid>
+      <title>Grok Imagine 1.5 Preview</title>
+      <link>https://x.ai/news/grok-imagine-1-5</link>
+      <description>grok-imagine-video-1.5-preview, our latest image-to-video model, is now available via the xAI API in preview.</description>
+      <guid isPermaLink="true">https://x.ai/news/grok-imagine-1-5</guid>
       <category>News</category>
-      <pubDate>Thu, 03 Sep 2026 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 04 Sep 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Use Grok in OpenClaw</title>
-      <link>https://x.ai/news/grok-openclaw</link>
-      <description>Use your SuperGrok or X Premium subscription inside OpenClaw, an open-source, local-first agent and personal assistant.</description>
-      <content:encoded><![CDATA[<p>Starting today, log in and use your SuperGrok or X Premium subscription inside OpenClaw.</p>
-<p>OpenClaw is an open-source, local-first agent and personal assistant. It runs on any hardware — a Mac Mini, laptop, server, VPS, or even a Raspberry Pi — and keeps persistent memory across sessions.</p>
-<p>OpenClaw connects to WhatsApp, Telegram, Slack, Discord, Signal, iMessage, and many other messaging platforms, so you can interact with your agent wherever you already chat.</p>
-<p>If you already have a Grok or X Premium subscription, you can now use Grok models inside OpenClaw. Connecting Grok to your OpenClaw agent is available on every tier.</p>
+      <title>Grok Build 0.1 on API</title>
+      <link>https://x.ai/news/grok-build-0-1</link>
+      <description>Grok Build 0.1, our fastest coding model, is now available via the xAI API in public beta.</description>
+      <guid isPermaLink="true">https://x.ai/news/grok-build-0-1</guid>
+      <category>News</category>
+      <pubDate>Fri, 04 Sep 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Use Grok in Kilo Code</title>
+      <link>https://x.ai/news/grok-kilocode</link>
+      <description>Use your SuperGrok or X Premium+ subscription inside Kilo Code, the open-source agentic coding platform.</description>
+      <content:encoded><![CDATA[<p>Starting today, you can use your Grok subscription directly inside <a href="https://kilo.ai/">Kilo Code</a>.</p>
+<p>Kilo Code is the open-source agentic engineering platform for VS Code, JetBrains IDEs, and the terminal. It offers specialized modes for planning, coding, debugging, and orchestration, along with powerful tool use, browser automation, MCP extensibility, and support for 500+ models. Kilo is designed for real software engineering workflows and agentic use cases.</p>
+<p>With your X Premium+ or SuperGrok subscription, connect your Grok account to use the latest Grok models — including Grok Build for agentic coding — inside Kilo Code with no separate API key.</p>
 <h2 id="setup">Setup</h2>
-<p>Install OpenClaw:</p>
-<pre><code>curl -fsSL https://openclaw.ai/install.sh | bash
+<p>Kilo Code offers IDE extensions, a CLI, and a web surface. To connect your xAI account, follow the instructions below:</p>
+<p><strong>VS Code:</strong></p>
+<ol>
+<li>Install <a href="https://marketplace.visualstudio.com/items?itemName=kilocode.Kilo-Code">Kilo Code</a> from the VS Code Marketplace.</li>
+<li>Open <strong>Settings</strong> (gear icon) and go to the <strong>Providers</strong> tab.</li>
+<li>Click <strong>Show more providers</strong>, then search for or select <strong>xAI</strong>.</li>
+<li>Choose the <strong>xAI Grok OAuth (SuperGrok Subscription)</strong> sign-in option and complete the OAuth flow in your browser.</li>
+</ol>
+<p>For headless or remote environments (VPS, SSH, Docker, WSL), choose <strong>xAI Grok OAuth (Headless / Remote / VPS)</strong> instead.</p>
+<p><strong>CLI:</strong></p>
+<pre><code>npm install -g @kilocode/cli
 </code></pre>
-<p>Run the guided onboarding:</p>
-<pre><code>openclaw onboard --install-daemon
-</code></pre>
-<p>On a VPS or over SSH, use device-code. OpenClaw prints a short code and URL you can open in any browser to finish sign-in:</p>
-<pre><code>openclaw onboard --auth-choice xai-device-code
-</code></pre>
-<p>Or connect a messaging app — Telegram, WhatsApp, Slack, Discord, Signal, iMessage, and more — and talk to your agent there.</p>
-<p>For more, see <a href="https://docs.openclaw.ai/start/getting-started">OpenClaw getting started</a> and the <a href="https://docs.openclaw.ai/providers/xai">xAI provider docs</a>.</p>
+<p>Run <code>kilo</code> in your project directory and use the <code>/connect</code> command to add xAI.</p>
+<p>For more details, see the <a href="https://kilo.ai/docs/ai-providers/xai">Kilo Code xAI provider documentation</a>.</p>
 <p>More open-source agents and integrations are coming soon.</p>]]></content:encoded>
-      <guid isPermaLink="true">https://x.ai/news/grok-openclaw</guid>
+      <guid isPermaLink="true">https://x.ai/news/grok-kilocode</guid>
       <category>News</category>
-      <pubDate>Thu, 03 Sep 2026 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 04 Sep 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>New Compute Partnership with Anthropic</title>
-      <link>https://x.ai/news/anthropic-compute-partnership</link>
-      <description>SpaceXAI has signed an agreement with Anthropic to provide access to Colossus 1.</description>
-      <content:encoded><![CDATA[<p>SpaceXAI has signed an agreement with Anthropic to provide access to Colossus 1, one of the world’s largest and fastest-deployed AI supercomputers.</p>
-<p>Built from the ground up in record time, Colossus delivers unprecedented scale for AI training, fine-tuning, inference, and high-performance computing workloads. Colossus 1 features over 220,000 NVIDIA GPUs, including dense deployments of H100, H200, and next-generation GB200 accelerators. The cluster delivers extreme parallel performance for large language models, multimodal systems, scientific simulations, and generative AI at frontier scale.</p>
-<p>Anthropic plans to use this additional compute to directly improve capacity for Claude Pro and Claude Max subscribers.</p>
-<p>As part of this agreement, Anthropic also expressed interest in partnering to develop multiple gigawatts of orbital AI compute capacity.</p>
-<p>The compute required to train and operate the next generation of these systems is outpacing what terrestrial power, land, and cooling can deliver on the timelines that matter.</p>
-<p>SpaceX is the only organization with the launch cadence, mass-to-orbit economics, and constellation operations experience to make orbital compute a near-term engineering program rather than a research concept. If engineering challenges can be overcome, space-based compute offers near-limitless sustainable power with less impact on Earth.</p>]]></content:encoded>
-      <guid isPermaLink="true">https://x.ai/news/anthropic-compute-partnership</guid>
-      <category>News</category>
-      <pubDate>Thu, 03 Sep 2026 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Connectors in web, iOS, and Android</title>
-      <link>https://x.ai/news/grok-connectors</link>
-      <description>Deep integrations that bring the apps you use every day directly into Grok.</description>
-      <guid isPermaLink="true">https://x.ai/news/grok-connectors</guid>
-      <category>News</category>
-      <pubDate>Thu, 03 Sep 2026 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Grok Imagine Quality Mode API</title>
-      <link>https://x.ai/news/grok-imagine-quality-mode</link>
-      <description>Higher realism. Stronger text rendering. Better creative control.</description>
-      <content:encoded><![CDATA[<p><strong>Quality Mode for image generation and editing</strong> is now live for enterprise developers and teams via the Grok Imagine API.</p>
-<h2 id="what-quality-mode-delivers">What Quality Mode Delivers</h2>
-<img alt="Quality Mode realism example" src="https://data.x.ai/releases/imagine/quality-mode/woman-by-pool.webp"/>
-<img alt="Quality Mode text rendering example" src="https://data.x.ai/releases/imagine/quality-mode/menu.webp"/>
-<img alt="Quality Mode creative control example" src="https://media.x.ai/cdn-cgi/image/fit=scale-down,onerror=redirect,f=auto/v1/website/girl_coffe_car-b927483b.png"/>
-<h2 id="leaderboard-rankings">Leaderboard Rankings</h2>
-<p>xAI's Grok Imagine API ranks among the strongest models on independent leaderboards.</p>
-<h2 id="enterprise-use-cases">Enterprise Use Cases</h2>
-<p>Quality Mode shines in business applications.</p>
-<h3 id="product-visualization--marketing-assets">Product Visualization &amp; Marketing Assets</h3>
-<p>Create photorealistic product renders that match your brand.
-Generate hero images, social assets, icons, and ad variations at scale.</p>
-<img alt="Cybertruck reference photo" src="https://data.x.ai/releases/imagine/quality-mode/cybertruck-reference-image-1.webp"/>
-<img alt="Cybertruck brand style reference" src="https://data.x.ai/releases/imagine/quality-mode/cybertruck-reference-image-2.webp"/>
-<img alt="Cybertruck reference photo" src="https://data.x.ai/releases/imagine/quality-mode/cybertruck-reference-image-1.webp"/>
-<img alt="Cybertruck brand style reference" src="https://data.x.ai/releases/imagine/quality-mode/cybertruck-reference-image-2.webp"/>
-<img alt="Cybertruck Mars-themed event ad result 3" src="https://data.x.ai/releases/imagine/quality-mode/cybertruck-event-3.webp"/>
-<h3 id="make-ideas-come-to-life-faster">Make Ideas Come to Life Faster</h3>
-<p>Visualize what you're thinking and share it with the team.</p>
-<img alt="La Belle Vie perfume bottle on stone villa window" src="https://data.x.ai/releases/imagine/quality-mode/perfume-1.webp"/>
-<img alt="Perfume bottle on print pamphlet POV" src="https://data.x.ai/releases/imagine/quality-mode/perfume-2.webp"/>
-<h3 id="ugc-style-content">UGC Style Content</h3>
-<img alt="Reference t-shirt flat lay" src="https://data.x.ai/releases/imagine/quality-mode/ugc-tshirt-reference.webp"/>
-<img alt="Woman wearing t-shirt result 1" src="https://data.x.ai/releases/imagine/quality-mode/ugc-tshirt-output-1.webp"/>
-<img alt="Woman eating birthday cake UGC style" src="https://data.x.ai/releases/imagine/quality-mode/ugc-woman-cake.webp"/>
-<img alt="Blonde woman reference" src="https://data.x.ai/releases/imagine/quality-mode/ugc-tshirt-output-1.webp"/>
-<img alt="Woman elevator mirror selfie UGC style" src="https://data.x.ai/releases/imagine/quality-mode/ugc-woman-elevator.webp"/>
-<h3 id="improved-world-understanding">Improved World Understanding</h3>
-<h3 id="broad-visual-range">Broad Visual Range</h3>
-<p>From cinematic scenes to UI-style icons, <strong>Quality Mode</strong> can create any style.</p>
-<h2 id="quality-mode-enhances-video-generation">Quality Mode enhances Video Generation</h2>
-<p>Pairing our latest image model with our video capabilities creates endless possibilities for brands: social media video assets, product showcasing, ads and more.</p>
-<h2 id="how-to-get-started">How to Get Started</h2>
-<pre><code>import xai_sdk
-
-client = xai_sdk.Client()
-
-response = client.image.sample(
-    prompt="A collage of London landmarks in a stenciled street-art style",
-    model="grok-imagine-image-quality",
-)
-
-print(response.url)
+      <title>Use Grok in OpenCode</title>
+      <link>https://x.ai/news/grok-opencode</link>
+      <description>Use your SuperGrok or X Premium subscription inside OpenCode.</description>
+      <content:encoded><![CDATA[<p>After connecting your Grok account, start coding with Grok Build, the same model that powers xAI's <a href="https://x.ai/build">terminal-based coding agent</a>.</p>
+<h2 id="setup">Setup</h2>
+<p>Install OpenCode:</p>
+<pre><code>curl -fsSL https://opencode.ai/install | bash
 </code></pre>
-<p>For full documentation, visit our <a href="https://docs.x.ai/developers/model-capabilities/images/generation#quick-start">docs page</a>.</p>
-<p>Welcome to the next level of Grok Imagine. Try Grok Imagine <strong>Quality Mode</strong> on API.</p>]]></content:encoded>
-      <guid isPermaLink="true">https://x.ai/news/grok-imagine-quality-mode</guid>
+<p>Launch OpenCode:</p>
+<pre><code>opencode
+</code></pre>
+<p>Inside OpenCode, run <code>/connect</code> and pick <strong>xAI</strong>:</p>
+<pre><code>/connect
+</code></pre>
+<p>Pick the sign-in method that fits your setup — both use your Grok subscription:</p>
+<ul>
+<li><strong>xAI Grok OAuth (SuperGrok Subscription)</strong> — opens your browser to sign in.</li>
+<li><strong>xAI Grok OAuth (Headless / Remote / VPS)</strong> — prints a code and URL for SSH or remote hosts.</li>
+</ul>
+<p>More open-source agents and integrations are coming soon.</p>]]></content:encoded>
+      <guid isPermaLink="true">https://x.ai/news/grok-opencode</guid>
       <category>News</category>
-      <pubDate>Thu, 03 Sep 2026 00:00:00 +0000</pubDate>
-      <media:content url="https://data.x.ai/releases/imagine/quality-mode/woman-by-pool.webp" type="image/webp" medium="image"/>
+      <pubDate>Fri, 04 Sep 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Custom Voices</title>
-      <link>https://x.ai/news/grok-custom-voices</link>
-      <description>Your voice. Your brand. Clone a voice from a short recording and use it across Grok Text to Speech and Voice Agent APIs.</description>
-      <content:encoded><![CDATA[<p>Today, we're introducing <strong>Custom Voices</strong>. Clone your voice from a few seconds of audio and use it instantly across <a href="https://docs.x.ai/developers/model-capabilities/audio/text-to-speech?campaign=custom-voices-blog">Grok Text to Speech</a> and <a href="https://docs.x.ai/developers/model-capabilities/audio/speech-to-speech?campaign=custom-voices-blog">Voice Agent APIs</a>.</p>
-<h2 id="use-cases">Use Cases</h2>
-<p>Custom Voices unlock a new class of applications.</p>
-<h2 id="custom-voices">Custom Voices</h2>
-<p><strong>Clone your voice in under two minutes. Use it everywhere.</strong></p>
-<p>Record about a minute of natural speech in the <a href="https://console.x.ai/team/default/voice/voice-library?campaign=custom-voices-blog&amp;utm_source=website&amp;utm_medium=referral&amp;utm_campaign=custom-voices-blog">xAI console</a>. Our pipeline verifies you're the voice owner, processes your recording, and delivers a production-ready voice model, all in under two minutes. Your custom voice inherits every TTS capability: <a href="https://docs.x.ai/developers/model-capabilities/audio/text-to-speech?campaign=custom-voices-blog">speech tags</a>, multilingual output, and both REST and WebSocket streaming.</p>
-<p>Custom voices work everywhere our built-in voices do. Pass the <code>voice_id</code> to any <a href="https://docs.x.ai/developers/model-capabilities/audio/text-to-speech?campaign=custom-voices-blog">TTS endpoint</a> or use it with the <a href="https://docs.x.ai/developers/model-capabilities/audio/speech-to-speech?campaign=custom-voices-blog">Voice Agent API</a> for real-time conversational agents.</p>
-<p>There is no extra charge to use Text to Speech or Voice Agent APIs with custom voices.</p>
-<h2 id="voice-safety">Voice Safety</h2>
-<p>Every custom voice goes through a two-stage verification process before it can be created. First, the speaker reads a verification phrase that our STT engine transcribes and matches in real time, confirming intent and presence. Then we compute speaker embeddings from the verification clip and the full recording to confirm they belong to the same person.</p>
-<p>You can't clone a voice from a pre-existing recording, and you can't clone someone else's voice.</p>]]></content:encoded>
-      <guid isPermaLink="true">https://x.ai/news/grok-custom-voices</guid>
+      <title>Skills in web, iOS, and Android</title>
+      <link>https://x.ai/news/grok-skills</link>
+      <description>Persistent expertise for Grok. Generate documents, decks, and spreadsheets. Automate workflows. Build and share your own skills.</description>
+      <content:encoded><![CDATA[<a href="https://grok.com/share/bGVnYWN5_6ffd7524-4338-4839-bcae-aebf41361b9f?referrer=website">See an Example</a>]]></content:encoded>
+      <guid isPermaLink="true">https://x.ai/news/grok-skills</guid>
       <category>News</category>
-      <pubDate>Thu, 03 Sep 2026 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 04 Sep 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>xAI joins SpaceX</title>
-      <link>https://x.ai/news/xai-joins-spacex</link>
-      <description>SpaceX announced today that it has acquired xAI.</description>
-      <content:encoded><![CDATA[<p>Read the full update <a href="https://spacex.com/updates#xai-joins-spacex">here</a>.</p>]]></content:encoded>
-      <guid isPermaLink="true">https://x.ai/news/xai-joins-spacex</guid>
+      <title>Connect Grok to Hermes Agent</title>
+      <link>https://x.ai/news/grok-hermes</link>
+      <description>Use your Grok account and subscription inside Nous Research’s open-source, self-improving Hermes agent.</description>
+      <content:encoded><![CDATA[<p>Starting today, you can use your Grok subscription directly inside Hermes Agent.</p>
+<p>Hermes Agent is Nous Research’s open-source, self-improving agent. It runs persistently on any computer, sandbox, or VPS and creates long-term memory across sessions, learning as you use it. Like other open-source personal agents, Hermes can connect to WhatsApp, Discord, Telegram, Signal, or other messaging providers.</p>
+<p>With your Grok subscription in Hermes, you can use:</p>
+<ul>
+<li>Grok 4.3 for text conversations and advanced reasoning</li>
+<li>Grok Text-to-Speech for spoken responses</li>
+<li>Grok Imagine for your agent to create images and videos</li>
+</ul>
+<p>Connecting Grok to your Hermes agent is available on every tier.</p>
+<h2 id="setup">Setup</h2>
+<p>Install Hermes Agent:</p>
+<pre><code># Linux / macOS / WSL2 / Android (Termux)
+curl -fsSL https://raw.githubusercontent.com/NousResearch/hermes-agent/main/scripts/install.sh | bash
+</code></pre>
+<p>Pick the Grok provider:</p>
+<pre><code>hermes model
+</code></pre>
+<p>Select <strong>xAI Grok OAuth (SuperGrok Subscription)</strong>, sign in through the browser, and start chatting:</p>
+<pre><code>hermes --tui
+</code></pre>
+<p>For more, see the <a href="https://hermes-agent.nousresearch.com/docs/guides/xai-grok-oauth">Hermes Agent xAI Grok OAuth docs</a>.</p>
+<p>More open-source agents and integrations are coming soon.</p>]]></content:encoded>
+      <guid isPermaLink="true">https://x.ai/news/grok-hermes</guid>
       <category>News</category>
-      <pubDate>Thu, 03 Sep 2026 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 04 Sep 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Supporting the DOW's mission with AI</title>
-      <link>https://x.ai/news/us-gov-dept-of-war</link>
-      <description>xAI is proud to be selected by the US Department of War to deliver Frontier AI</description>
-      <content:encoded><![CDATA[<img alt="Abstract noisy gradient" src="https://media.x.ai/cdn-cgi/image/fit=scale-down,onerror=redirect,f=auto/v1/website/dow-33656674.webp"/>
-<h2 id="xai-selected-by-the-us-department-of-war-to-power-enterprise-ai-and-mission-systems">xAI selected by the US Department of War to power Enterprise AI and Mission Systems</h2>
-<p>xAI is proud to announce that its suite of Frontier AI systems specially designed for United States Military and National Security users, was selected by the U.S. Department of War (DOW) for Frontier AI use cases as a part of DOW’s GenAI.Mil suite. GenAI.mil will enable 3 million military and civilian employees of the DOW to access xAI technologies at DOW Impact Level 5 (DOW IL5).</p>
-<p>This new partnership between xAI and the DoW’s Chief Digital and Artificial Intelligence Office (CDAO) brings xAI’s Frontier AI systems, powered by the Grok family of models, to both Enterprise AI and critical mission use cases.</p>
-<p>xAI for Government is an AI platform designed for Enterprise use cases across federal, state, and local government agencies in the United States. The platform combines access to xAI’s industry-leading AI models, agentic tools, research platform, and API. xAI Government users within the DoW will also have unique access to real-time global insights from the X platform. When made generally available at IL5, xAI for Government can be embedded into the day-to-day workflows of all 3 million military and civilian employees of the DoW, from the Pentagon to the tactical edge.</p>
-<p>In addition to Enterprise use cases, xAI is bringing the power of Frontier AI and real-time insights directly to the warfighter. Through an ongoing, long-term partnership with the DoW and other mission partners, xAI will make available a family of government-optimized foundation models to support classified operational workloads.</p>
-<p>These two new partnerships are part of our longstanding support of the United States Government and xAI’s mission to bring the best tools and technologies available in industry to benefit our nation.</p>
-<p>Learn more <a href="https://x.ai/grok/government">here</a> or reach out to us <a href="mailto:usg@x.ai">directly</a>.</p>
-<p><strong>We’re also seeking talented mission driven engineers who want to join the cause. If you’re excited by solving hard problems to empower our nation’s hardest workers, we’d love to hear from you. Reach out to us over <a href="mailto:usg-careers@x.ai">email</a> or apply online directly <a href="https://job-boards.greenhouse.io/xai/jobs/4676513007">here</a>. We’d love to hear from you.</strong></p>
-<hr/>
-<p><strong>About xAI For Government</strong></p>
-<p><em>xAI’s mission is to create and propagate AI tools to assist humanity in our quest for understanding and knowledge. Supporting the critical missions of the United States Government is a key part of this mission – bringing the best tools and technologies available in the commercial world to our hard-working public servants.
-Americans have led the world through all of society’s great technological innovations, and AI will be no exception.</em></p>
-<p><em>xAI is proud to continue this legacy – which is why we are the only company building on this legacy here in the US and turning shovels into tokens entirely inside our United States.</em></p>]]></content:encoded>
-      <guid isPermaLink="true">https://x.ai/news/us-gov-dept-of-war</guid>
+      <title>Grok Voice Think Fast 1.0</title>
+      <link>https://x.ai/news/grok-voice-think-fast-1</link>
+      <description>Our most capable voice agent is now available via API.</description>
+      <content:encoded><![CDATA[<p>Today, we're excited to announce a step change in xAI's Voice Agent capabilities: Introducing <code>grok-voice-think-fast-1.0</code> — our new flagship voice model.</p>
+<p>This new model excels at complex, ambiguous, multi-step workflows across customer support, sales, and enterprise applications. It is especially well-suited for high-stakes scenarios that demand precise data entry and high-volume tool calling to address the user's request.</p>
+<h2 id="built-for-the-messiness-of-the-real-world">Built for the messiness of the real world</h2>
+<p>We built <code>grok-voice-think-fast-1.0</code> through tight collaboration with partners like Starlink to combine top-tier intelligence with low response latency and organic conversational ability.</p>
+<p>Our model prioritizes snappy responses and unparalleled cost effectiveness without compromising on accuracy or tool orchestration. The result is a model that lets teams confidently deploy complex, multi-turn voice experiences across almost any conceivable use case: Customer support, phone sales, appointment booking, restaurant reservations, and more.</p>
+<p>This new model takes the top spot on the τ-voice Bench leaderboard, which evaluates full-duplex voice agents under realistic conditions including noise, accents, interruptions, and turn-taking. <a href="https://taubench.com/#leaderboard?benchmark=voice">See the benchmark details here</a>.</p>
+<p>The model has been battle-tested in the toughest real-world conditions: telephony audio, background noise, heavy accents, and frequent interruptions. It natively supports 25+ languages, making it ideal for global deployments.</p>
+<h2 id="precise-data-entry-and-read-back">Precise data entry and read-back</h2>
+<p>Collecting and confirming user information is critical for many workflows. Grok Voice is able to seamlessly collect email addresses, physical street addresses, phone numbers, full names, account numbers, and other structured data—even when information is spoken quickly or with a strong accent. It gracefully handles speech disfluencies and accepts natural corrections as a human would.</p>
+<h2 id="real-time-reasoning-with-zero-added-latency">Real-time reasoning with zero added latency</h2>
+<p>Grok Voice Think Fast performs reasoning in the background, allowing it to think through challenging queries and workflows in real-time with no impact on response latency. This enables intelligent answers while retaining the dexterity needed for natural conversation.</p>
+<h2 id="harder-to-fool">Harder to fool</h2>
+<p>Voice models often default to confident, plausible-sounding answers, despite being completely wrong. We've built <code>grok-voice-think-fast-1.0</code> to reason through edge cases before responding, catching obvious mistakes that other models get wrong.</p>
+<h2 id="powering-customer-support-and-sales-for-starlink">Powering customer support and sales for Starlink</h2>
+<p>Grok Voice enables Starlink's phone sales and customer support experience at <a href="tel:+18884678275">+1 (888) GO STARLINK</a>. This requires working across numerous languages, helping customers through customer support scenarios, and onboarding new customers via sales:</p>
+<ul>
+<li><strong>20% conversion rate.</strong> In 1 out of every 5 of sales inquiries, the customer purchases Starlink service while on the phone with Grok.</li>
+<li><strong>70% resolution rate.</strong> The majority of customer support inquiries are resolved autonomously by the Grok Voice agent with no human in the loop.</li>
+<li><strong>28 tools.</strong> This single agent uses dozens of distinct tools across hundreds of support and sales workflows.</li>
+<li><strong>Accuracy is critical.</strong> Grok handles high-stakes decisions; the model autonomously performs hardware troubleshooting workflows, issues hardware replacements, and grants service credits.</li>
+</ul>]]></content:encoded>
+      <guid isPermaLink="true">https://x.ai/news/grok-voice-think-fast-1</guid>
       <category>News</category>
-      <pubDate>Thu, 03 Sep 2026 00:00:00 +0000</pubDate>
-      <media:content url="https://media.x.ai/cdn-cgi/image/fit=scale-down,onerror=redirect,f=auto/v1/website/dow-33656674.webp" type="image/webp" medium="image"/>
+      <pubDate>Fri, 04 Sep 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Grok Speech to Text and Text to Speech APIs</title>
+      <link>https://x.ai/news/grok-stt-and-tts-apis</link>
+      <description>Fast and accurate. Natural, expressive voices. Simple pricing. Multilingual support.</description>
+      <guid isPermaLink="true">https://x.ai/news/grok-stt-and-tts-apis</guid>
+      <category>News</category>
+      <pubDate>Fri, 04 Sep 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Grok Imagine API</title>
+      <link>https://x.ai/news/grok-imagine-api</link>
+      <description>State-of-the-art video generation across quality, cost, and latency.</description>
+      <content:encoded><![CDATA[<h2>A world-class video generation model. A breakthrough video editing model.</h2>
+<p>We're excited to unveil the <a href="https://x.ai/api/imagine">Grok Imagine API</a>, a unified bundle of powerful APIs designed for end-to-end creative workflows. Grok Imagine is our most powerful video-audio generative model yet. Bring an image to life, start from a simple text prompt, or even refine a complex cinematic sequence.</p>
+<img src="https://x.ai/_next/image?url=https%3A%2F%2Fdata.x.ai%2Freleases%2Fimagine%2Fcamera-motions%2Fcamera-motions-5.jpg&amp;w=3840&amp;q=75"/>
+<img src="https://x.ai/_next/image?url=https%3A%2F%2Fdata.x.ai%2Freleases%2Fimagine%2Fcamera-motions%2Fcamera-motions-5.poster.webp&amp;w=3840&amp;q=75"/>
+<img src="https://x.ai/_next/image?url=https%3A%2F%2Fdata.x.ai%2Freleases%2Fimagine%2Fski%2Fski-0.poster.webp&amp;w=3840&amp;q=75"/>
+<h2 id="performance-and-benchmarks">Performance and Benchmarks</h2>
+<p>We engineered these models to deliver high-quality, native video-audio generation on par with today's top providers, while also optimizing latency, concurrency, and cost—refined through multiple rounds of close partner feedback.
+One message came through consistently: quality alone is not enough if latency and cost make iteration painful. By improving speed and economics, we enable developers, creative teams, and enterprise workflows to explore multiple directions in parallel—converging faster through rapid, cost-effective experimentation.</p>
+<h3 id="artificial-analysis-text-to-video-rankings">Artificial Analysis: Text-to-Video Rankings</h3>
+<table><thead><tr><th></th><th>Rank</th><th>Price</th><th>Latency</th></tr></thead><tbody><tr><td>Grok Imagine</td><td>1</td><td></td><td></td></tr><tr><td>Veo 3.1 Fast</td><td>4</td><td></td><td></td></tr><tr><td>Veo 3</td><td>5</td><td></td><td></td></tr><tr><td>Sora 2 Pro</td><td>9</td><td></td><td></td></tr><tr><td>Sora 2</td><td>12</td><td></td><td></td></tr></tbody></table>
+<p>* Source: Artificial Analysis official website as of 2026-01-28 0:00 PST, LMArena official website as of 2026-02-04 16:30 PST</p>
+<p>** We evaluated latency using 10 identical prompts, with each prompt tested 10 times per model to account for variability in processing times. P50 latency in seconds are reported for videos generated at 720p resolution with an 8-second duration. We measured end-to-end API latency using a 1-second polling interval using fal.ai for all models except Veo (measured using Vertex API), Sora (measured using OpenAI API), and Grok Imagine (measured using the xAI API)</p>
+<p>* Human raters conducted side-by-side comparison on IVEBench comprising of a diverse database of high-quality source videos, spanning seven semantic dimensions, and covering varying video lengths (each including a prompt and input video, and evaluating a single generated video). All comparisons were done at 1280 x 720 resolution.</p>
+<h2 id="video-generation">Video Generation</h2>
+<p>Transform static images or text into dynamic, high-quality video sequences.</p>
+<h3 id="cinematic-motion-understanding">Cinematic motion understanding</h3>
+<p>Transform your photos into cinematic videos with realistic motion, object interactions, and visual continuity.</p>
+<img src="https://x.ai/_next/image?url=https%3A%2F%2Fdata.x.ai%2Freleases%2Fimagine%2Fphoto-move%2Fphoto-move-3.jpg&amp;w=3840&amp;q=75"/>
+<img src="https://x.ai/_next/image?url=https%3A%2F%2Fdata.x.ai%2Freleases%2Fimagine%2Fphoto-move%2Fphoto-move-3.poster.webp&amp;w=3840&amp;q=75"/>
+<h3 id="flexible-styles--formats">Flexible styles &amp; formats</h3>
+<p>Support for portrait, landscape, and platform-ready aspect ratios—across flexible clip lengths.</p>
+<h3 id="imagine-for-everyone">Imagine for everyone</h3>
+<p>Whether you're a creator, educator, influencer, designer, or parent, Grok Imagine makes it easy to bring ideas to life—fast.</p>
+<blockquote><img alt="Avatar" height="40" src="https://data.x.ai/releases/imagine/avatar/portrait-creator.jpeg" width="40"/><p>"I have a story in my head—and I want to bring it to life without a full production team."</p><p>Turn ideas into cinematic visuals instantly. Prototype, iterate, and publish faster while staying fully in control of your creative vision.</p></blockquote>
+<h2 id="video-editing">Video Editing</h2>
+<h3 id="add-remove-swap-objects">Add, Remove, Swap Objects</h3>
+<p>Add an object, remove an unwanted element, or swap out a prop with high precision and consistency.</p>
+<img src="https://x.ai/_next/image?url=https%3A%2F%2Fdata.x.ai%2Freleases%2Fimagine%2Freplace-bird%2Freplace-bird-1.poster.webp&amp;w=3840&amp;q=75"/>
+<img src="https://x.ai/_next/image?url=https%3A%2F%2Fdata.x.ai%2Freleases%2Fimagine%2Freplace-bird%2Freplace-bird-2.poster.webp&amp;w=3840&amp;q=75"/>
+<h3 id="add-performance">Add Performance</h3>
+<p>Animate any character with your own performance.</p>
+<img src="https://x.ai/_next/image?url=https%3A%2F%2Fdata.x.ai%2Freleases%2Fimagine%2Fdancer%2Fdancer-1.poster.webp&amp;w=3840&amp;q=75"/>
+<h3 id="scene-control">Scene Control</h3>
+<p>Effortlessly transform any scene—switch from golden sunshine to autumn, winter, fog, sunset, or cloudy settings in seconds.</p>
+<img src="https://x.ai/_next/image?url=https%3A%2F%2Fdata.x.ai%2Freleases%2Fimagine%2Fmunich%2Fmunich-1.poster.webp&amp;w=3840&amp;q=75"/>
+<h3 id="object-control">Object Control</h3>
+<p>Edit colors and objects with precision and control for your product showcase.</p>
+<img src="https://x.ai/_next/image?url=https%3A%2F%2Fdata.x.ai%2Freleases%2Fimagine%2Fmodel-color%2Fmodel-color-1.poster.webp&amp;w=3840&amp;q=75"/>
+<h3 id="restyle">Restyle</h3>
+<p>Instantly reinvent your footage with any visual style.</p>
+<img src="https://x.ai/_next/image?url=https%3A%2F%2Fdata.x.ai%2Freleases%2Fimagine%2Frestyle%2Frestyle-1.poster.webp&amp;w=3840&amp;q=75"/>
+<img src="https://x.ai/_next/image?url=https%3A%2F%2Fdata.x.ai%2Freleases%2Fimagine%2Frestyle%2Frestyle-3.poster.webp&amp;w=3840&amp;q=75"/>
+<h3 id="sketches-to-life">Sketches to Life</h3>
+<p>From static black-and-white lines to vibrant, living animations — instantly.</p>
+<img src="https://x.ai/_next/image?url=https%3A%2F%2Fdata.x.ai%2Freleases%2Fimagine%2Fcastle%2Fcastle-1.jpg&amp;w=3840&amp;q=75"/>
+<h2 id="what-our-partners-are-saying">What our partners are saying</h2>
+<p>The Grok Imagine API is available on our partner platforms, alongside our own <a href="https://docs.x.ai/developers/model-capabilities/video/generation">API</a>.</p>
+<img alt="Fal logo" height="64" src="https://data.x.ai/releases/imagine/partner-logo/fal-1.webp" width="128"/>
+<img alt="ComfyUI logo" height="64" src="https://data.x.ai/releases/imagine/partner-logo/comfy-2.webp" width="128"/>
+<img alt="Invideo logo" height="64" src="https://data.x.ai/releases/imagine/partner-logo/invideo-2.webp" width="128"/>
+<img alt="Flora logo" height="64" src="https://data.x.ai/releases/imagine/partner-logo/flora-1.webp" width="128"/>
+<img alt="HeyGen logo" height="64" src="https://x.ai/images/partner-logos/heygen.svg" width="128"/>
+<p>Start building with Grok Imagine API today! We offer:</p>
+<ul>
+<li>APIs and SDKs for seamless integration</li>
+<li>Tutorials to jumpstart Grok Imagine projects</li>
+<li>Hosted console for visual creation and experimentation</li>
+</ul>]]></content:encoded>
+      <guid isPermaLink="true">https://x.ai/news/grok-imagine-api</guid>
+      <category>News</category>
+      <pubDate>Fri, 04 Sep 2026 00:00:00 +0000</pubDate>
+      <media:content url="https://x.ai/_next/image?url=https%3A%2F%2Fdata.x.ai%2Freleases%2Fimagine%2Fcamera-motions%2Fcamera-motions-5.jpg&amp;amp;w=3840&amp;amp;q=75" type="image/jpeg" medium="image"/>
+    </item>
+    <item>
+      <title>xAI Raises $20B Series E</title>
+      <link>https://x.ai/news/series-e</link>
+      <description>xAI is rapidly accelerating its progress in building advanced AI.</description>
+      <content:encoded><![CDATA[<p>xAI completed its upsized Series E funding round, exceeding the $15 billion targeted round size, and raised $20 billion. Investors participating in the round include Valor Equity Partners, Stepstone Group, Fidelity Management &amp; Research Company, Qatar Investment Authority, MGX and Baron Capital Group, amongst other key partners. Strategic investors in the round include NVIDIA and Cisco Investments, who continue to support xAI in rapidly scaling our compute infrastructure and buildout of the largest GPU clusters in the world.</p>
+<p>2025 was a year of breakthrough momentum, where the xAI team advanced a multitude of key initiatives including:</p>
+<ul>
+<li><strong>Data Centers</strong>: xAI continues to expand its decisive compute advantage with the world's largest AI supercomputers at Colossus I and II, ending the year with over one million H100 GPU equivalents.</li>
+<li><strong>Grok 4 Series</strong>: our frontier language models are built on the best-in-class training infrastructure powered by Colossus. xAI has pushed reinforcement learning training to unprecedented levels, refining Grok’s intelligence, reasoning, and agency using pretraining-scale compute.</li>
+<li><strong>Grok Voice</strong>: the most intelligent voice agent driving real-time conversations in voice mode and available via agent API. Grok Voice delivers low-latency speech in dozens of languages, tool calling, and real-time data access, serving millions of users across the Grok mobile app and in Tesla vehicles.</li>
+<li><strong>User metrics</strong>: our reach spans approximately 600 million monthly active users across the 𝕏 and Grok apps.</li>
+<li><strong>Grok Imagine</strong>: our lightning-fast image and video generation models that brings state-of-the-art multimodal understanding, editing, and generation capabilities.</li>
+<li><strong><a href="https://x.ai/news/grok-1212">Grok on 𝕏</a></strong>: leveraging the 𝕏 platform to understand what's happening in the world in real-time, utilizing xAI’s most powerful model to date.</li>
+</ul>
+<p>Looking ahead, Grok 5 is currently in training, and we are focused on launching innovative new consumer and enterprise products that harness the power of Grok, Colossus, and 𝕏 to transform how we live, work, and play.</p>
+<p>This financing will accelerate our world-leading infrastructure buildout, enable the rapid development and deployment of transformative AI products reaching billions of users, and fuel groundbreaking research advancing xAI's core mission: Understanding the Universe.</p>
+<p>xAI is hiring aggressively and seeks mission-oriented individuals ready to join a small team focused on making a transformational impact on the future of humanity. Those interested can apply today at <a href="https://x.ai/careers">x.ai/careers</a>.</p>]]></content:encoded>
+      <guid isPermaLink="true">https://x.ai/news/series-e</guid>
+      <category>News</category>
+      <pubDate>Fri, 04 Sep 2026 00:00:00 +0000</pubDate>
     </item>
   </channel>
 </rss>
