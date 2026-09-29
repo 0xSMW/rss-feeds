@@ -8,7 +8,50 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 23 Sep 2026 10:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 29 Sep 2026 10:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Introducing GPT-6.1 Sol</title>
+      <link>https://openai.com/index/introducing-gpt-6-1-sol/</link>
+      <description>Meet GPT-6.1 Sol: near-Astra intelligence for coding, computer use, and professional work at one-fifth of Astra’s standard API input and output token prices.</description>
+      <content:encoded><![CDATA[<h2>GPT-6.1Sol</h2>
+<h2>Near-Astra intelligence for a fifth of the price</h2>
+<p>We’re introducing <b>GPT‑6.1 Sol</b>, an upgrade to GPT‑6 Sol that nearly matches GPT‑6 Astra’s intelligence on agentic coding, computer use, and professional work at one-fifth of Astra’s standard input and output token prices. Cached input costs just <b>$0.10 per million tokens</b>—95% less than standard input pricing and 50% less than GPT‑6 Sol’s cached input pricing—giving developers more room to build and run capable agents that reuse context across requests.</p>
+<figure><img alt="Three model cards: GPT-6 Astra, our most intelligent model for the best results, $10 input, $50 output, and $1 cached input; GPT-6.1 Sol, near-Astra intelligence for a fifth of the price, $2 input, $10 output, and $0.10 cached input; GPT-6 Luna, fast and efficient everyday work at scale, $0.10 input, $0.50 output, and $0.01 cached input." height="1080" src="https://images.ctfassets.net/kftzwdyauwt9/68RU4PW9KL2Hk5fJOJiO7R/95058fa69ccb300b4c326cfdc057ac6e/desktop-transparent.png?w=3840&amp;q=90&amp;fm=webp" width="1920"/></figure>
+<h2>A more capable Sol across tasks</h2>
+<p>GPT‑6.1 Sol offers a new balance of capability and cost for important everyday work. It delivers substantial improvements over GPT‑6 Sol across complex professional tasks, from writing and debugging code to understanding documents and executing multi-step business workflows. On several of these evaluations, it approaches GPT‑6 Astra’s performance at substantially lower cost.</p>
+<h3>Coding</h3>
+<p>On <b>DeepSWE v1.1</b>, which evaluates complex software-engineering tasks in real codebases, GPT‑6.1 Sol matches GPT‑6 Astra at roughly one-fifth of the cost, while eclipsing GPT‑6 Sol’s best score by 6.4 percentage points at a lower reasoning effort and cost.</p>
+<figure><figcaption><p><i>In</i><a href="https://deepswe.datacurve.ai/"><i> DeepSWE 1.1⁠</i>⁠</a><i>, AI agents solve original, long-horizon software engineering tasks.</i></p></figcaption></figure>
+<h3>Professional work</h3>
+<p>On <b>GDP.pdf</b>, which measures how accurately models answer professional questions using complex PDF documents, including tables, charts, diagrams, and fine-print details, GPT‑6.1 Sol scores higher than Opus 5.5 with fallbacks at less than half the cost per task across the tested reasoning settings. It also approaches GPT‑6 Astra’s state-of-the-art performance at roughly one-fifth the cost per task.</p>
+<figure><figcaption><p><i>In </i><a href="https://surgehq.ai/benchmarks/gdp-pdf"><i>GDP.pdf</i>⁠</a><i>, models must answer real-world prompts about complex PDFs pulled from professional workflows in finance, healthcare, legal, and seven other professional domains.</i></p></figcaption></figure>
+<p>On <b>AutomationBench</b>, which measures whether agents correctly complete multi-step business workflows, GPT‑6.1 Sol scores 2.2 percentage points above Opus 5.5 at medium reasoning effort, at roughly a third of the cost. That score is also up 4.8 percentage points from GPT‑6 Sol at the same setting.</p>
+<figure><figcaption><p><i>In</i><a href="https://zapier.com/benchmarks"><i> AutomationBench 1.0.6⁠</i>⁠</a><i>, AI agents are tested on end-to-end workflows using 47 tools across sales, marketing, operations, support, finance, and HR. The datapoint for Claude Fable 5.1 understates its actual cost, as it omits the cost of fallbacks, which occurred on ~40% of tasks.</i></p></figcaption></figure>
+<h3>Computer use</h3>
+<p>GPT‑6.1 Sol also makes substantial progress on tasks that require interacting with computer applications. On <b>OSWorld 2.0</b>’s offline set, which evaluates agents on demanding computer-use workflows, GPT‑6.1 Sol outperforms GPT‑6 Sol by seven percentage points at maximum reasoning effort at less than half the cost. It comes within 2.1 percentage points of Astra’s score at maximum reasoning effort at roughly one-seventh the cost per task.</p>
+<figure><figcaption><p><i>In</i><a href="https://osworld-v2.xlang.ai/"><i> OSWorld 2.0⁠</i>⁠</a><i>, AI agents attempt long-horizon computer-use workflows spanning everyday and professional tasks. We report the partial reward on the offline set from the v2026.08.08 release.</i></p></figcaption></figure>
+<h3>Scientific research</h3>
+<p>On <b>Terminal-Bench Science 0.1</b>, which evaluates scientific workflows including data analysis, simulation, and theorem proving, GPT‑6.1 Sol more than doubles GPT‑6 Sol’s score at maximum reasoning effort at less than half the cost per task. At maximum effort, GPT‑6.1 Sol costs $5.47 per task on average, compared with $23.21 for Opus 5.5 and $23.80 for Astra, delivering substantial scientific capability at over 75% lower cost than either model.</p>
+<p>GPT‑6 Astra still achieves the highest score among the models tested at 68.1%, and should be used for the most difficult scientific research tasks.</p>
+<figure><figcaption><p><i>In </i><a href="https://www.terminal-bench-science.ai/"><i>Terminal-Bench Science 0.1</i>⁠</a><i>, agents complete scientific research workflows using code and terminal tools, including analyzing data, running simulations, and fitting models.</i></p></figcaption></figure>
+<h3>Factuality</h3>
+<p>GPT‑6.1 Sol also improves factual accuracy on difficult prompts. Its largest factuality improvement over GPT‑6 Sol comes at low reasoning effort, where it reduces the share of responses containing a factual error from 11.4% to 7.7%—a reduction of approximately 32%. Across the tested reasoning settings, its error rate remains within 1.9 percentage points of GPT‑6 Astra’s, at less than one-fifth the cost per task.</p>
+<p>This evaluation measures the share of answers containing at least one factual error on de-identified conversations where users flagged an earlier model’s error. These deliberately difficult prompts are not representative of typical usage.</p>
+<figure><figcaption><p><i>We evaluate factuality on de-identified ChatGPT conversations where users had flagged a factual error from a prior model. These error-inducing conversations are not representative of typical usage, where factual errors are more rare.</i></p></figcaption></figure>
+<h2>Deploying GPT‑6.1 Sol safely</h2>
+<p>GPT‑6.1 Sol shows substantial improvements over GPT‑6 Sol in our alignment evaluations, bringing it closer to GPT‑6 Astra.</p>
+<p>GPT‑6.1 Sol is more transparent about its limitations and more reliable at respecting user intent and safety constraints. In challenging evaluations, it shows lower failure rates than GPT‑6 Sol on transparency about broken search tools, respecting explicit restrictions, and avoiding unauthorized outcomes during agentic tasks. We observed no attempts to bypass an automated safety reviewer, matching GPT‑6 Astra and GPT‑6 Sol. Full details can be found in the <a href="https://cdn.openai.com/pdf/38e3efcf-545e-44cd-99ec-2b7eb395f4cc/oai_GPT_6_1_Sol.pdf">GPT‑6.1 Sol system card addendum⁠</a>.</p>
+<p>The evaluations below deliberately test challenging situations and do not measure failure rates in typical use.</p>
+<h2>Pricing and availability</h2>
+<p>GPT‑6.1 Sol is available starting today to all Plus, Pro, Business, Enterprise, and Edu users in ChatGPT Work and Codex. GPT‑6.1 Sol is not yet available in Chat. Developers can also access it through the OpenAI API as gpt-6.1-sol. Its standard API prices are $2 per million input tokens, $0.10 per million cached input tokens, and $10 per million output tokens. In the coming days, we’ll also offer GPT‑6.1 Sol <a href="https://openai.com/index/devday-2026-recap"><u>Ultrafast</u>⁠</a>, with up to 8x faster token generation compared to its standard speed in Codex.</p>
+<h2>Author</h2>
+<p>OpenAI</p>
+<p><i>Evaluations of GPT were performed in our research environment or via our API, which may provide slightly different output from production ChatGPT due to differences in the system prompts, tools available, efforts, etc. Evaluations of competitor models were taken from publicly available reports.</i></p>]]></content:encoded>
+      <guid isPermaLink="true">https://openai.com/index/introducing-gpt-6-1-sol/</guid>
+      <category>Product</category>
+      <pubDate>Tue, 29 Sep 2026 10:00:00 +0000</pubDate>
+      <media:content url="https://images.ctfassets.net/kftzwdyauwt9/68RU4PW9KL2Hk5fJOJiO7R/95058fa69ccb300b4c326cfdc057ac6e/desktop-transparent.png?w=3840&amp;amp;q=90&amp;amp;fm=webp" type="image/png" medium="image"/>
+    </item>
     <item>
       <title>Introducing MentalHealthBench</title>
       <link>https://openai.com/index/introducing-mentalhealthbench/</link>
@@ -3131,22 +3174,6 @@ x = \frac{3 \pm \sqrt{33}}{2}
 <p>OpenAI</p>]]></content:encoded>
       <guid isPermaLink="true">https://openai.com/index/gpt-5-1-codex-max/</guid>
       <category>Product</category>
-      <pubDate>Wed, 19 Nov 2025 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>GPT-5.1-Codex-Max System Card</title>
-      <link>https://openai.com/index/gpt-5-1-codex-max-system-card/</link>
-      <description>This system card outlines the comprehensive safety measures implemented for GPT‑5.1-CodexMax. It details both model-level mitigations, such as specialized safety training for harmful tasks and prompt injections, and product-level mitigations like agent sandboxing and configurable network access.</description>
-      <content:encoded><![CDATA[<h2>GPT‑5.1‑Codex‑Max System Card</h2>
-<h2>Introduction</h2>
-<p>GPT‑5.1‑Codex‑Max is our new frontier agentic coding model. It is built on an update to our foundational reasoning model trained on agentic tasks across software engineering, math, research, medicine, computer use and more. It is our first model natively trained to operate across multiple context windows through a process called compaction, coherently working over millions of tokens in a single task. Like its predecessors, GPT‑5.1‑Codex‑Max was trained on real-world software engineering tasks like PR creation, code review, frontend coding and Q&amp;A.</p>
-<p>This system card outlines the comprehensive safety measures implemented for GPT‑5.1-Codex-Max. It details both model-level mitigations, such as specialized safety training for harmful tasks and prompt injections, and product-level mitigations like agent sandboxing and configurable network access.</p>
-<p>GPT‑5.1‑Codex‑Max was evaluated under our Preparedness Framework. It is very capable in the cybersecurity domain but does not reach High capability on cybersecurity. We expect current trends of rapidly increasing capability to continue, and for models to cross the High cybersecurity threshold in the near future. Like other recent models, it is being treated as High capability on biology, and is being deployed with the corresponding suite of safeguards we use for GPT‑5. It does not reach High capability on AI self-improvement.</p>
-<ul><li><a href="https://openai.com/research/index/?tags=2025">2025</a></li><li><a href="https://openai.com/research/index/?tags=system-cards">System Cards</a></li></ul>
-<h2>Author</h2>
-<p>OpenAI</p>]]></content:encoded>
-      <guid isPermaLink="true">https://openai.com/index/gpt-5-1-codex-max-system-card/</guid>
-      <category>Publication</category>
       <pubDate>Wed, 19 Nov 2025 00:00:00 +0000</pubDate>
     </item>
   </channel>
