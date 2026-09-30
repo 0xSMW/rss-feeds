@@ -8,7 +8,297 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 29 Sep 2026 10:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 30 Sep 2026 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>What work can robots do?</title>
+      <link>https://www.anthropic.com/research/what-work-can-robots-do</link>
+      <description>What work can robots do? Anthropic's robot exposure index finds robots can do 3/4 of US physical job tasks, but are cost-competitive for only 0.3%.</description>
+      <content:encoded><![CDATA[<h2 id="key-findings"><strong>Key findings</strong></h2>
+<ul><li>We present a robot exposure index based on how well robots can perform job tasks today.</li><li>Robots, which we define as autonomous physical machines that sense and act, can perform three-quarters of physical tasks in the US, making up 34% of working hours, but mostly in limited settings. Workers exposed to robots are more likely to be male, less educated, and lower paid. For example, driving and warehouse jobs are highly exposed to currently available robots; nursing and general repair jobs are not, since present-day robots can do little of their work even in highly controlled environments.</li><li>Overall, about 80% of job tasks by working time are exposed to either robots or LLMs. Robots do work where LLMs cannot. The remaining unexposed work is highly interpersonal or requires physical skills that robots today don’t have.</li><li>While robots can do most physical work tasks today, they are much more expensive than human labor. Robots are cost-competitive for just 0.3% of job tasks. If robot price declines follow past trends, it will take 40 years for that share to reach 10%. Beyond price, factors including capabilities, preferences, and regulations pose further barriers to robot automation.</li><li>Over the past 50 years, jobs more exposed to robots experienced greater declines in wages and employment than others. At the same time, job exposure has grown: each year, robots have become able to do about 2% of the physical work they previously couldn’t.</li></ul>
+<h2 id="introduction"><strong>Introduction</strong></h2>
+<p>Advances in large language models have raised the possibility of automating large swaths of work. But many jobs are physical. AI’s impact on the economy will in part depend on robotics.¹</p>
+<p>Predicting the pace of robot advances is difficult, but enumerating capabilities today, we argue, can give insight into the coming years. We develop a measure of job exposure to robots, using Claude to assess how well present-day robots can perform work tasks. A job is more exposed when robots can do more of its tasks in less controlled environments. A robot is cost-competitive when it can do the same task for cheaper than a human worker.</p>
+<p>We find that robots can already perform 74% of physical tasks in the US, making up 34% of working hours. Robots and LLMs together expose all but one-fifth of employment.</p>
+<p>But we also find significant barriers to adoption: most robots require highly structured environments, and are cost-competitive with people for just 0.3% of work. If robot price declines follow past trends, it will take 40 years for that share to reach just 10%. After cost, the main barrier is capability, such as the dexterity needed to untangle wires. Human preferences and regulations further limit robot adoption for a significant share of tasks.</p>
+<p>Our core premise is that jobs are more likely to be impacted when robots can already do their work today. A backtest across 50 years validates this approach: from 1977 to today, jobs that were more exposed to existing robots experienced wage and employment declines in later decades.</p>
+<p>If the past is any guide, taxi drivers and warehouse packers will see changes sooner than nurses and mechanics. We expect that physical work will first be automated where robots have a foothold today.</p>
+<h2 id="robots-today-and-tomorrow"><strong>Robots today and tomorrow</strong></h2>
+<p>Most robots today operate in controlled environments like factories. Robots usually need to be programmed to interact with the physical world, whereas humans can adapt to their work environments. This has been a major hurdle for commercially viable robots.² But AI helps robots interpret and respond to their surroundings, allowing warehouse robots and autonomous vehicles to operate alongside humans.³</p>
+<p>Many observers expect AI to improve robot capabilities quickly.⁴ Although spending on robots remains about 1% of total US equipment investment, business surveys suggest US robot adoption could nearly double within three years.⁵ And firms are investing billions to develop AI-powered robots that match human physical abilities.⁶</p>
+<p>It’s difficult to predict exactly how these efforts will affect jobs and productivity. A <em>ranking</em> of occupations by current robot task coverage suggests where the impacts will appear first. Robots should affect jobs that they can already do before jobs they could do only with new technology and, in some cases, accommodating regulations. Current capabilities are also concrete and measurable, while forecasts of future capabilities must bet on which technologies will succeed.⁷ Robots still in development support our focus on current exposure: firms are testing humanoids in car factories and warehouses, structured environments where robots are already common.⁸</p>
+<h2 id="measuring-exposure"><strong>Measuring exposure</strong></h2>
+<p>Our analyses use data from O*NET, a database of around 900 occupations linked with descriptions of around 19,000 job tasks. We identify a set of physical job tasks that we think could not be automated without robots. To do so, we have Claude score task descriptions on a rubric measuring physical, cognitive, and interpersonal work requirements.⁹ The task “Dig trenches” is physical; so is “Teach dance students,” though this also requires cognitive and interpersonal skills. While typists use their hands to “Compute and verify totals on report forms, requisitions, or bills, using adding machine or calculator,” this task doesn’t count. Appendix A gives details, and Appendix F lists our prompts.</p>
+<p>Our task-level measure of robot exposure asks: can a robot today perform this task, and if so under what circumstances? We take robots to mean autonomous physical machines that sense and act, which includes car washes that scan cars to adjust sprayers and excludes teleoperated surgical machines fully controlled by a surgeon.¹⁰ We measure degrees of exposure by the kind of work environment a robot needs to perform a task.¹¹</p>
+<p>Specifically, we sort tasks into four tiers of increasing exposure by where a robot can perform each task:</p>
+<ul><li>E0: Robot cannot perform task.</li><li>E1: Robot can perform task in a purpose-built robotic work environment, like a factory assembly line.</li><li>E2: Robot can perform task in a structured human work facility, like a logistics warehouse.</li><li>E3: Robot can perform task in an unstructured environment, like a city road.</li></ul>
+<p>Figure 1 also displays this rubric.</p>
+<figure><img alt="Task robot exposure rubric" height="2792" src="https://www.anthropic.com/_next/image?url=https%3A%2F%2Fwww-cdn.anthropic.com%2Fimages%2F4zrzovbb%2Fwebsite%2Ffbed704c01c8149969125dcab143c9baf921ed76-7680x2792.png&amp;w=3840&amp;q=75" width="7680"/><figcaption><strong>Figure 1: Task robot exposure rubric<br/></strong>Job tasks identified as physical are rated on this robot exposure rubric. For example, the job task of unloading boxes from a truck at a warehouse is rated E2 if there’s a warehouse robot that can do that task.</figcaption></figure>
+<p>We think environmental control is a good measure of near-term automation risk. Because it’s hard for robots to adapt to unpredictable environments, most deployed robots work in engineered environments, like those that spray paint cars on assembly lines. While these difficulties are thought to have slowed physical automation in the past, AI-powered robots could better adapt to their environments.¹²</p>
+<p>To determine exposure, we instruct Claude to search for specific robots relevant to each task and assess their capabilities and operating environments, quoting sources directly. We ask whether a robot could perform a task in versions of that task’s typical work environment that are more or less structured. Getting robots to do seemingly simple tasks like loading a dishwasher requires many complex physical skills, so only demonstrated robot capabilities count.¹³ Robots must also do a task similarly well to humans, factoring in reliability, error rates, and speed.</p>
+<p>For instance, self-driving cars couldn’t “Drive taxicabs or privately owned vehicles to transport passengers” on real roads in the early 2010s. But they did drive around mock towns built for testing, a step toward today’s autonomous vehicles.¹⁴ Our rubric would rate driving passengers at exposure level E1 at that time (robot can perform task in a purpose-built robotic work environment) and E3 today (in an unstructured environment).¹⁵</p>
+<p>This rubric requires many judgment calls. The O*NET task statements are often terse, and omit details that may be easy for humans but hard for robots.¹⁶ To describe work more concretely, we elicit detailed examples of how tasks are performed today, and how often these occur. Claude then scores exposure for these examples using web search to gauge robot capabilities. Cited sources must show robot deployments, commercial sales, or demonstrations, and results are similar if we omit ratings relying on demonstrations. Task exposure is set by majority rule: the least structured environment in which robots can do at least half of a task’s examples, weighted by time.¹⁷</p>
+<p>Consider the task “Dig trenches.” We first ask Claude to provide examples describing how workers perform this task today and how often. For example, Claude estimates that 25% of the time, this task requires “cutting a linear trench in open ground.” Another 20% of the time, it requires “careful digging by hand around existing buried pipes, flowlines, cables and conduit.” These activities require different sorts of physical abilities, like navigation and strength (linear trenches) compared to fine motor dexterity and perception (digging by hand around pipes).</p>
+<p>Claude rates the first example at exposure E3, citing a control system that retrofits hydraulic excavators to autonomously dig trenches.¹⁸ Robots today can’t carefully dig around buried pipes, so the latter example is unexposed at E0. More examples for “Dig trenches” resemble careful digging than linear trenching, so overall this task is unexposed in our ratings.</p>
+<p>Figure 2 gives examples of task ratings, along with fuller descriptions of each exposure tier from our exposure prompt and a robot cited to support each rating. We also calculate the share of physical tasks in each tier: here and throughout, each task is weighted by the number of workers who do it, and by the fraction of working time they spend on it, which we estimate with Claude.¹⁹</p>
+<figure><img alt="Example task exposure ratings" height="9340" src="https://www.anthropic.com/_next/image?url=https%3A%2F%2Fwww-cdn.anthropic.com%2Fimages%2F4zrzovbb%2Fwebsite%2F7e4a470ece0ef2f1ea39accbdc67bed943dcc198-9600x9340.png&amp;w=3840&amp;q=75" width="9600"/><figcaption><strong>Figure 2: Example task exposure ratings</strong><br/>Levels of robot exposure are as described in the prompt we use to rate exposure with Claude. Exposure is rated for 7,594 job tasks classified as physical. Physical task shares in column 2 weight tasks by the fraction of time spent on each task in an occupation (estimated with Claude) and that occupation’s employment (BLS, 2025). For example, the RelayRx robot delivers drugs in hospitals. Hospitals are structured human workplaces, so the task “Deliver medications or pharmaceutical supplies to patients, nursing stations, or surgery” is rated E2. Tasks rated E2 make up 22% of physical tasks by working time.</figcaption></figure>
+<p>Tasks that robots can’t do (E0) make up about a quarter of physical tasks by estimated working time. These tasks require physical skills that are hard for robots, like fine motor dexterity for “Bleach, dye, or tint hair, using applicator or brush” and strength, balance, and mobility for “Erect scaffolding or ladders for assembling structures above ground level.”</p>
+<p>Robots can do half of physical tasks in purpose-built environments but not in wider settings (E1). Food prep robots pack ready-to-eat meals on conveyor belts, and new models with AI can adjust to different ingredients, portions, and trays, so the task “Assemble meal trays with foods in accordance with patients’ diets” is rated E1.</p>
+<p>Another 22% of physical tasks can be done by robots in structured human workplaces (E2). Hospital delivery robots, for example, “Deliver medications or pharmaceutical supplies to patients, nursing stations, or surgery.” Today’s robots do only 2% of physical tasks in unstructured environments (E3). These often involve driving, done by autonomous cars, tractors, and other vehicles.²⁰</p>
+<p>Our accompanying data release contains Claude’s reasoning and cited sources for all rated tasks. For example, Claude rates the task “Weld components in flat, vertical, or overhead positions” E1, and quotes an article about AI-powered robot welders: “Path Robotics said both of its welding cells can autonomously weld steel parts and are deployed in fabrication shops across the U.S. and Canada.”²¹</p>
+<p>We define a robot exposure index for jobs that averages a job’s task exposure ratings on a 0–3 scale. This index rises with the share of exposed tasks and robot capabilities on those tasks, weighting tasks by estimated working time.</p>
+<p>An ideal exposure index would perfectly predict robot automation in the coming years. Since we can’t look forward in time, we instead try to validate our measure using historical data on jobs and task descriptions. We rate robot exposure in several years since 1977, and link exposure to changes in wages and employment. When a job was more exposed to robots, its wages and employment fell in later decades, even after accounting for industry trends and other potential confounders. These results, detailed in Appendix B, give us some confidence that our measure can predict future job disruption.</p>
+<h2 id="what-work-can-robots-do"><strong>What work can robots do?</strong></h2>
+<p>Figure 3 summarizes robot exposure across all job tasks in the US economy, weighting tasks by the estimated fraction of time spent per task for an occupation and that occupation’s employment. Cognitive and interpersonal work makes up 54% of tasks by working time. The remaining 46% of tasks are physical. As a share of all tasks, around 12% cannot be done by any robot today (E0), 23% can be done by robots in specially built environments (E1), 10% in structured human workplaces (E2), and 1% in unstructured environments (E3). Counting any exposure level, 74% of physical work, or 34% of all work, can be done by robots in some circumstances.</p>
+<figure><img alt="Job tasks by robot exposure" height="4480" src="https://www.anthropic.com/_next/image?url=https%3A%2F%2Fwww-cdn.anthropic.com%2Fimages%2F4zrzovbb%2Fwebsite%2F1dfbdcd3ec1d2f240502194d008e9cc66ec2f364-7680x4480.png&amp;w=3840&amp;q=75" width="7680"/><figcaption><strong>Figure 3: Job tasks by robot exposure</strong><br/>All job tasks are included. Tasks are weighted by the fraction of time an occupation spends on each task as well as that occupation’s employment. Robot exposure is rated for tasks identified as physical. For example, 23% of worker time is spent on tasks that robots can do in a purpose-built environment. Example tasks by category: teaching classes, designing systems (Cognitive and interpersonal); taking people into custody, providing first aid (E0); dispensing medications, assembling electronics (E1); cleaning floors, moving warehouse goods (E2); regulating field irrigation, inspecting property from the air, and driving, which robots perform in unstructured environments (E3). Employment data come from the BLS (2025), and we use Claude to estimate occupation time on tasks.</figcaption></figure>
+<p>Robots can do physical tasks in many parts of the economy. Autonomous mobile warehouse robots drive to loading docks and inside trailers. They use suction cups to grab packages and load them onto mobile conveyor belts.²² Since these robots navigate structured human workplaces, many warehousing tasks are rated E2, like “Move freight, stock, or other materials to and from storage or production areas, loading docks, delivery vehicles, ships, or containers, by hand or using trucks, tractors, or other equipment.” Advances in navigation and handling have made robots like these common in logistics and transportation.²³</p>
+<p>Figure 4 shows the 10 most exposed occupations by our robot exposure index. Of these 10 occupations, 9 are vehicle operators. Robots cited for driving jobs include autonomous cars, tractors, trucks, and pavers. Taxi drivers lead exposure with an index of 2.2.²⁴ Since driving is most of the job, their median task by working time is exposed at E3, while auxiliary tasks like “Vacuum and clean interiors and wash and polish exteriors of automobiles” are doable by robots but in more structured settings than open roads. Autonomous vehicles have yet to upend driving jobs at scale, but their capabilities suggest that these jobs are at higher risk of automation than others.²⁵</p>
+<figure><img alt="Most exposed occupations" height="7672" src="https://www.anthropic.com/_next/image?url=https%3A%2F%2Fwww-cdn.anthropic.com%2Fimages%2F4zrzovbb%2Fwebsite%2F889fc5dfe3ba1248a3edd7529060d9d3c0b3683c-7680x7672.png&amp;w=3840&amp;q=75" width="7680"/><figcaption><strong>Figure 4: Most exposed occupations</strong><br/>Exposure ranges from 0 (no task can be done by a robot) to 3 (every task can be done by a robot in an unstructured environment). Job exposure averages task exposure, weighting by time spent on each task. A highly exposed task is listed for each occupation along with a cited robot that can perform this task. The 10 most exposed occupations with at least 20,000 jobs are displayed. For example, averaging task exposure for shuttle drivers and chauffeurs gives an index of 2.0 out of 3. Claude cites Waymo autonomous vehicles as performing some of their tasks. Employment data from BLS (2025) sometimes combine several O*NET occupation titles; we split their employment equally, as for recycling and reclamation workers. We estimate task time requirements with Claude.</figcaption></figure>
+<p>An occupation can cover many work settings. In the US, robots may only operate in some of these settings, while robots abroad sometimes cover all of them. For example, stockers and order fillers do the task “Stock shelves, racks, cases, bins, and tables with new or transferred merchandise” in retail stores and in warehouses. In US warehouses, AI-powered robots with touch sensors pick and stow merchandise.²⁶ In US retail, mobile robots scan for empty shelves, but must alert humans to restock them.²⁷ Robots in Japanese convenience stores restock fridges themselves.²⁸ Since stocker robots require items to be brought near them, this task is rated E1. We estimate that stockers spend 70% of their time on tasks rated E1 like this one, and another 16% on tasks rated E2. In total, they score 1.0 on the robot exposure index.</p>
+<p>Jobs can be exposed to robots if many of their tasks are moderately exposed, or if some of their most time-intensive tasks are highly exposed. Compare tapers, who finish drywall and whose exposure index is 1.6, with recycling and reclamation workers, who sort recycling and whose exposure index is 1.7.</p>
+<p>Tasks for tapers are split between unexposed and highly exposed. Workers building interior walls use paper tape and a paste called mud to smooth over seams, joints, and screws in drywall sheets. Mud and tape are messy materials, so robots cannot perform the task “Press paper tape over joints to embed tape into sealing compound and to seal joints.” After the first tape coat dries, workers “Apply additional coats to fill in holes and make surfaces smooth.” This task is rated E3: an autonomous drywall robot uses AI to scan walls, spray additional coats of sealant, and sand walls once dry.²⁹ Overall, by work time, 41% of tapers’ tasks are exposed at E3, while robots cannot do another 26%.</p>
+<p>In contrast, for recycling and reclamation workers, robots can perform over three-quarters of tasks by work time at level E2. Only 8% of their work time is unexposed. For example, robots with computer vision and suction grippers can do the task “Sort materials, such as metals, glass, wood, paper or plastics, into appropriate containers for recycling.”³⁰ These robots stand in for workers picking recycling from conveyor belts, so this and other tasks are rated E2.</p>
+<p>Robots are highly capable at specific tasks for tapers, while for recycling workers exposure is broader, but robots are less adaptable. Messy tasks for tapers may bottleneck automation. It’s also possible that the largest recycling facilities use robots early, while smaller facilities adopt them later. Either way, robots seem likely to change both jobs if widely deployed.</p>
+<h2 id="characteristics-of-exposed-jobs"><strong>Characteristics of exposed jobs</strong></h2>
+<p>Having established our exposure measure, we now consider what exposure might imply for the labor market.</p>
+<p>Figure 5 compares workers in the top quintile of the robot exposure index with unexposed workers, who make up another 20% or so of jobs. Data from the 2020–2024 American Community Survey show that highly exposed workers are 20 percentage points less likely to be female and 16 percentage points more likely to be Hispanic. These workers are also 55 percentage points less likely to hold a bachelor’s degree or higher, earn around $30 less per hour, and face an unemployment rate more than twice as high.³¹</p>
+<p>Occupational requirement statistics compiled by the Bureau of Labor Statistics also show that robot-exposed jobs are much more likely to require carrying weight and working in extreme heat or near hazardous contaminants. This exposure pattern is in many ways the opposite of what’s typically found for LLMs.³²</p>
+<figure><img alt="Occupation characteristics by robot exposure" height="9352" src="https://www.anthropic.com/_next/image?url=https%3A%2F%2Fwww-cdn.anthropic.com%2Fimages%2F4zrzovbb%2Fwebsite%2F2a9afdd7a01a1828aa3e93c0c0678fa525e74b50-7680x9352.png&amp;w=3840&amp;q=75" width="7680"/><figcaption><strong>Figure 5: Occupation characteristics by robot exposure</strong>The most exposed workers are those in the top quintile of the robot exposure index; unexposed workers have zero exposure and make up about another 20% of jobs. Demographics, education, and labor market data come from the 2020–2024 American Community Survey, save for union membership and licensing. Union membership comes from statistics tabulated by Hirsch et al. (2026) for the 2020–2024 Current Population Surveys. Licensing comes from the 2025 BLS Occupational Requirements Survey, as do physical demand and work environment variables (for some occupations, these come from the 2023 survey). Statistics are employment weighted.</figcaption></figure>
+<h2 id="robot-and-llm-exposure"><strong>Robot and LLM exposure</strong></h2>
+<p>We next analyze whether robots broaden job disruption risks beyond those from LLMs alone. Drawing on Eloundou et al. (2024) and Massenkoff and McCrory (2026), we compare two occupation exposure measures:</p>
+<ul><li>LLM exposure: the share of job tasks for which an LLM could halve required time (called theoretical capability in <a href="https://www.anthropic.com/research/labor-market-impacts">our prior work</a>).</li><li>LLM and robot exposure: the share of job tasks exposed to either LLMs or robots, taking the higher of LLM exposure and E1+ robot exposure for each task.</li></ul>
+<p>Robot and LLM exposure ratings measure somewhat different concepts, but both indicate that technology could do much of a given task. While integrating LLMs and robots in actual jobs may present new challenges or enable new capabilities, these two measures provide initial insight into job exposure based on today’s capabilities.</p>
+<p>Figure 6 plots job exposure to LLMs alone (in blue) and to LLMs and robots (in orange), grouped by broad occupation category. Robots expose more and different kinds of jobs than LLMs alone. While less than 15% of transportation &amp; moving tasks are exposed to LLMs alone, about 90% of these tasks are exposed with robots. Similarly, robots raise exposure in office &amp; admin support jobs, which largely involve computer work and light physical tasks, to nearly 100%. Overall, around half of work is exposed to LLMs alone, but that rises to 81% when considering robots.</p>
+<figure><img alt="LLM and robot exposure by occupation group" height="6100" src="https://www.anthropic.com/_next/image?url=https%3A%2F%2Fwww-cdn.anthropic.com%2Fimages%2F4zrzovbb%2Fwebsite%2F146ef52307f5d8526d5280a631fe8e1b6d605c47-7680x6100.png&amp;w=3840&amp;q=75" width="7680"/><figcaption><strong>Figure 6: LLM and robot exposure by occupation group</strong><br/>LLM exposure is the share of tasks rated exposed in Eloundou et al. (2024) (positive 𝛽). Occupation exposure to LLMs and robots adds tasks rated at E1 or higher robot exposure. Occupation groups are 2-digit SOC codes, and group averages weight by task time shares and employment. In protective service occupations, for example, 31% of job tasks are exposed to LLMs, and 61% are exposed to LLMs or robots. Employment data come from BLS (2025). We estimate task time shares with Claude.</figcaption></figure>
+<p>What work can’t LLMs and robots do today? Consider personal care &amp; service jobs, for which around 40% of tasks are exposed. In-person social interaction and physical contact with humans, which both LLMs and robots struggle with, are important for these jobs. This example suggests that highly interpersonal work, or work requiring delicate manipulation, may be less susceptible to near-term automation.³³ Occupation groups like installation &amp; repair, healthcare support, and community &amp; social service fit this pattern too, with relatively low exposure. While LLMs and robots can’t perform these tasks today, no occupation group overall is less than 40% exposed. And advances in technology may make possible new kinds of automation over time.</p>
+<p>Unexposed tasks also help describe what could make work hard to automate. We group unexposed task statements that share similar text, and ask Claude to describe these (Appendix C.1). Tasks not exposed to LLMs or robots today tend to be hands-on and face-to-face, and are sometimes regulated. Healthcare tasks often combine these features, like “Administer medications to patients and monitor patients for reactions or side effects.”</p>
+<p>In Appendix C.2, we study which barriers may most prevent the automation of physical tasks. We ask Claude which barriers today would prevent robots from doing a significant share of each physical task, exposed or not, if unresolved. We group these into four categories: capabilities, human preferences, regulation, and cost. For tasks limited by capabilities, we have Claude pick the most important missing skill from manipulation, planning and reasoning, mobility and strength, and perception.</p>
+<p>We find that capabilities and costs are the biggest impediments to robot adoption. Capabilities prevent adoption for around 70% of physical tasks. Manipulation capabilities stand out: half of physical tasks wouldn’t be automated at scale unless robots become more adept at touching and handling objects. Shortcomings in planning and reasoning skills, which AI seems most likely to improve, limit robot automation for 8% of physical tasks. For nearly all tasks, costs would also need to fall.</p>
+<p>Our estimates indicate that today’s regulations wouldn’t allow robots to perform 14% of physical tasks. Regulation matters for tasks in healthcare, protective service, and education, but less so for those in food preparation, cleaning, production, construction, repair, and material moving, which make up about half of physical work. Human preferences hold back robots for a quarter of tasks. That may be because people wouldn’t trust a robot (to “Dress children and change diapers”) or because they value social interaction (to “Greet guests, escort them to their seats, and present them with menus and wine lists”).</p>
+<p>If robot capabilities develop quickly, what do these results imply? Around 30% of physical tasks are limited either by preferences or by regulation. That would leave most physical work exposed if robots became capable and cost-effective, though the rest may become weak links that drag down aggregate productivity speedups. Uneven progress in capabilities could also slow adoption, if robots became smarter but still couldn’t handle objects like humans. That said, better robots could also reduce resistance to automation, for example by assuaging safety concerns. We turn next to robot costs, the most common barrier in these estimates.</p>
+<h2 id="robot-costs-and-adoption"><strong>Robot costs and adoption</strong></h2>
+<p>Though robots can perform most physical work today, it may not be economical for them to do so. Robots made with pricey hardware aren’t as easily copied and distributed as software or LLMs. Compared to LLM exposure measures that assess capabilities but not costs, it’s especially important to distinguish jobs exposed to cost-competitive robots.³⁴</p>
+<p>For every exposed task, we estimate the annual cost for robots to perform this task based on the specific robots cited in our task exposure measures. We prompt Claude to estimate costs using web search and the list of robots cited for each task. Automating an E1-exposed task could require redesigning workplaces to suit robots, while robots that do E3 tasks may use expensive sensors to navigate unstructured environments.</p>
+<p>Estimates cover the full cost of deploying a robot to perform each task.³⁵ To make robot and labor costs comparable, we first ask Claude to estimate how much a human worker typically produces on a task in a year. Bakers who “Roll, knead, cut, or shape dough,” for example, produce an estimated 180,000 shaped pieces per year. Claude then estimates what it would cost a robot to produce the same output. Because bakers do this task in different environments, Claude averages robot deployment costs across retail, mid-scale, and industrial bakeries. Fixed costs are annualized to reflect hardware lifespans and the time value of money.</p>
+<p>Calculated this way, costs for robots to do a task can be compared to worker pay. We say a task is exposed to cost-competitive robots if its robot cost is less than its labor cost, calculated as the occupation’s total compensation from the BLS scaled by the fraction of time spent on this task.³⁶ Standard economic models predict that these tasks are automated, though given adoption frictions and cost uncertainties this measure is more suggestive.³⁷ See Appendix D.1 for details and a worked example of robot task costs.</p>
+<p>Robots often perform multiple job tasks, but we estimate costs for individual tasks in an occupation. Simply adding up task costs may double count robots or undercount coordination costs in real deployments. We aggregate by occupation, providing Claude with task cost estimates and asking for a total cost, net of redundancies and new additions. We say that an occupation is exposed to cost-competitive robots if this total robot cost is less than its total compensation scaled by the fraction of time spent on tasks that robots can do.³⁸</p>
+<p>Figure 7 shows five highly physical jobs and cost estimates for robots to perform their exposed tasks. Packers and packagers are the largest occupation exposed to cost-competitive robots. Several robots are needed to do packers and packagers’ tasks, including those that pack containers, move materials around warehouses, visually inspect goods, erect cardboard boxes, print and apply labels, and seal packages.³⁹ These robots are estimated to cost over $2 million to purchase and install, but replace the yearly work of around 14 workers. Fixed costs are spread over a roughly 10-year service life at an 8% cost of capital. Operating expenses, such as maintenance, part-time human supervision, and energy, bring annual costs to around $45,000 to replace one human worker per year. Since packers and packagers spend 97% of their time on tasks that robots can do and cost around $49,000, robots cost about $2,500 less per year to do that work.</p>
+<figure><img alt="Robot costs for physical occupations" height="5552" src="https://www.anthropic.com/_next/image?url=https%3A%2F%2Fwww-cdn.anthropic.com%2Fimages%2F4zrzovbb%2Fwebsite%2Fdbca7308b6610e35e49fb4ffdc6d948277e7c3a1-7680x5552.png&amp;w=3840&amp;q=75" width="7680"/><figcaption><strong>Figure 7: Robot costs for physical occupations</strong><br/>Employment and total compensation use data from the BLS (OEWS 2025, ECEC 2026). Exposed tasks are the share of that occupation’s tasks at exposure E1–E3, weighted by estimated time spent on each task. Claude estimates annual costs for robots to perform exposed tasks for each occupation. Costs include annualized fixed costs and variable costs. The final column lists one robot included in each cost estimate and its estimated purchase price.</figcaption></figure>
+<p>The US currently employs around 560,000 packers and packagers. Firms face adoption frictions, like regulation or borrowing limits, and these cost estimates are approximate. For example, robotaxis are estimated to cost only around $7,000 more than taxi drivers, but face regulatory hurdles.⁴⁰ That said, automation risks are likely higher for physical jobs that cost-competitive robots can do. Employment for packers and packagers has fallen 22% since 2015. And the BLS projects this occupation will shed the 11th-most jobs of any occupation by 2035, behind only correctional officers and 9 sales and office occupations.⁴¹</p>
+<p>For the other jobs shown in Figure 7, robots cost much more than humans even though they can do much of the work. In metalworking, robots with cameras and AI can weld autonomously.⁴² But human welders perform many tasks that enable welding, like positioning large metal parts, climbing ladders to weld hard-to-reach joints, checking quality, and grinding and finishing materials. Automating this work requires robots that together cost around five times more than human welders.</p>
+<p>Dishwashers, along with janitors and cleaners, are paid $25,000 to $30,000 less than welders. But their robot analogs are still several times more expensive. Cleaning is hard to standardize and streamline, and robot cleaners are often slower than humans and limited to specific tasks.⁴³</p>
+<p>Figure 8 summarizes robot costs by plotting exposure to cost-competitive robots at hypothetical, uniform declines in robot costs. For example, if robots cost 20% less today, they would be cost-competitive for the physical work done by 2.8 million workers. These workers spend on average 42% of their time on work exposed to robots, 0.8% of all working time in the economy. For reference, industry and government data suggest that robot prices have declined roughly 3% per year since the 1990s. At this rate, it would take around seven years to reach a 20% cost decline. Appendix E discusses historical robot price data in more detail.</p>
+<p>Though robots can theoretically do tasks that add up to 34% of all work time, they are cost-competitive for just 0.3% today. Still, that includes roughly 300,000 workers for whom robots can do 95% of their tasks.⁴⁴ As Figure 7 suggested, robots today are cost-competitive or close to it for packers and packagers and taxi drivers, but far from it for most other jobs.</p>
+<p>For robots to be cost-competitive for 10% of human work today, costs would need to decline about 70%. At a 3% decline per year, that would take around 40 years. That said, it’s possible that new, more capable robots like humanoids or new manufacturing processes will drive down costs to automate human work. Reports suggest that global production could scale quickly if there were intense demand for humanoids and other robots.⁴⁵</p>
+<figure><img alt="Work exposed under hypothetical robot cost declines" height="4320" src="https://www.anthropic.com/_next/image?url=https%3A%2F%2Fwww-cdn.anthropic.com%2Fimages%2F4zrzovbb%2Fwebsite%2Fa010c2b04ed72ac124d232ae06dbacfbd8fb24d8-7680x4320.png&amp;w=3840&amp;q=75" width="7680"/><figcaption><strong>Figure 8: Work exposed under hypothetical robot cost declines</strong><br/>Calculated by comparing robot and labor costs. Labor costs are the fraction of time spent on exposed tasks multiplied by occupation total compensation. Given robot cost declines, the curve plots the share of all job tasks for which robots cost less than labor. Tasks are weighted by estimated time demands and occupation employment. Robot and labor costs are compared at six points in the worker pay distribution; see Appendix D.2 for details. Selected occupations are marked where their robot costs fall below their median labor cost. For example, robots do 94% of Postal Service mail carrier tasks. To match what workers produce in a year would cost $166,000 with robots. Median total compensation for Postal Service mail carriers is $82,000, so robots would be cost-competitive if cost declined 54% ($166,000 x 46%&lt; $82,000 x 94%). Total compensation is calculated with data from the BLS (OEWS 2025, ECEC 2026).</figcaption></figure>
+<p>Cost parity between humans and robots also needn’t imply high unemployment or rapid economic growth. Tasks that workers still perform may become bottlenecks, and these robot cost estimates often include human supervisory, exception-handling, or repair work. As emphasized by Acemoglu and Restrepo (2019) and Jones and Tonetti (2026), automation boosts productivity only after machines are much cheaper than humans, rather than at cost parity.</p>
+<p>We apply these cost estimates in two extensions. Appendix D.2 calculates an alternative occupation exposure measure that factors in both what robots can do and how cheaply they can do it. Accounting for cost produces a very similar ranking of jobs compared to our main, capabilities-focused measure (0.95 rank correlation).</p>
+<p>Appendix E also presents stylized scenarios for robot adoption if robots become cheaper and more productive. The scenarios draw on episodes of innovation and adoption for industrial robots since the 1990s, as well as analyst forecasts for humanoids. We hold fixed tasks and wages and ask how soon historical rates of cost declines and capability gains would make robots cost-competitive.</p>
+<p>To model how robots take on new work over time, we rate exposure for 1977 job tasks using today’s robots, and compare with robot exposure as of 1977. In 1977, robots could not do 62% of physical tasks. Today’s robots can do all but 24% of those same tasks. Over time, that means each year robots became able to do 2% of the tasks they previously could not (see Appendix B.4).</p>
+<p>Adding in 3% cost declines per year, robots aren’t cost-competitive for half of physical work today until 2085. But rapid advances in robotics may speed up these timelines. In a fast adoption scenario, where quality-adjusted costs fall up to four times faster and robots become able to do new tasks twice as fast, robots become cost-competitive for half of physical work by 2050. Automating 90% of physical work today still takes 53 years.</p>
+<p>One caveat is that our scenarios apply the same cost decline or capability increase to every task, so tasks become cost-competitive at today’s ranking of costs relative to worker pay. That ranking captures broad economic incentives, but robotics companies may also target certain capabilities first for other reasons. Humanoid demonstrations sometimes showcase household chores, for example, while robot makers may prioritize factory work useful to their own operations, much as AI companies prioritized coding agents.⁴⁶</p>
+<p>Overall, robots would need to sustain record rates of price declines and quality improvements over the coming decades to enable rapid physical automation. Even so, job impacts are less certain with these cost projections, since they set aside forces like preferences and regulation as well as feedback effects like falling wages.</p>
+<h2 id="discussion"><strong>Discussion</strong></h2>
+<p>We introduce a new measure of job exposure to robots. A job is exposed when robots can perform its tasks. Robots that work like humans count more toward exposure than those that require rebuilding the workplace, like factory robots.</p>
+<p>We find that driving jobs are most exposed, due to autonomous vehicles. Most robots today aren’t like driverless cars, and only operate in controlled environments. But robots could perform most physical work in some capacity, though they are several times more expensive than humans for the same jobs. Jobs exposed to robots are quite different from those exposed to LLMs. They pay less, and are more physically demanding.</p>
+<p>We hope these measures help analyze physical automation as AI expands what robots can do. Exposure patterns today may inform which jobs more capable robots will disrupt tomorrow. And periodic updates to this work can track robot capabilities.</p>
+<p>Our exposure scale is predicated on the idea that jobs are more at risk when today’s robots already do them in some settings. We find that this way of assessing robots predicts historical labor market impacts. But AI-powered robots could leapfrog our scale and do work they cannot today, for example by learning to climb ladders or use their arms and grippers more deftly.</p>
+<p>Much remains uncertain about how robots and AI could reshape the economy. Growth forecasts for AI often assume that physical bottlenecks, which robots could loosen, will drag down gains from automating cognitive work. We also have not considered how AI could affect physical work without robots, for example by better predicting when factory machines need maintenance. In the nearer term, efforts to track AI’s impacts could watch exposed occupations, like drivers and warehouse packers, for early signs of disruption. Further out, a key question is how work itself will change, perhaps becoming more social and interpersonal as robots and AI advance.</p>
+<h2 id="appendix"><strong>Appendix</strong></h2>
+<p>Available <a href="https://cdn.sanity.io/files/4zrzovbb/website/d27288375b0ac486cb9da0a30a94423b36ff0443.pdf">here</a>.</p>
+<h2 id="authors"><strong>Authors</strong></h2>
+<p>Russell Legate-Yang and Maxim Massenkoff.</p>
+<h2 id="acknowledgments"><strong>Acknowledgments</strong></h2>
+<p>James Akl, Tess Cotter, Sholto Douglas, Adam Farina, Megan Giacobetti, Ryan Heller, Johannes Hermle, Zoë Hitzig, Ben Jones, Chad Jones, Anton Korinek, Jan Leike, Eva Lyubich, Peter McCrory, Kerry Persen, Sarah Pollack, Santi Ruiz, Szymon Sacher, Monika Tuchowska, Zhengdong Wang, Heather Whitney, Nathan Wilmers, Kim Withee.</p>
+<h2 id="citation"><strong>Citation</strong></h2>
+<p>Please cite this as:</p>
+<pre><code>@online{legateyang2026robots,
+ author = {Legate-Yang, Russell and Massenkoff, Maxim},
+ title = {What work can robots do?},
+ date = {2026-09-30},
+ year = {2026},
+ url = {https://www.anthropic.com/research/what-work-can-robots-do}
+}</code></pre>
+<h2 id="references"><strong>References</strong></h2>
+<p>Abraham, Katharine G. and James R. Spletzer, "Are the New Jobs Good Jobs?," in Katharine G. Abraham, James R. Spletzer, and Michael J. Harper, eds., <em>Labor in the New Economy</em>, University of Chicago Press, 2010, 101-143.</p>
+<p>Acemoglu, Daron and David Autor, "Skills, Tasks and Technologies: Implications for Employment and Earnings," in <em>Handbook of Labor Economics</em>, Vol. 4B, Elsevier, 2011, 1043-1171.</p>
+<p>Acemoglu, Daron, David Autor, David Dorn, Gordon H. Hanson, and Brendan Price, "Import Competition and the Great US Employment Sag of the 2000s," <em>Journal of Labor Economics</em>, 2016, 34 (S1), S141-S198.</p>
+<p>Acemoglu, Daron, Andrea Manera, and Pascual Restrepo, "Does the US Tax Code Favor Automation?," <em>Brookings Papers on Economic Activity</em>, Spring 2020, 231-300.</p>
+<p>Acemoglu, Daron and Pascual Restrepo, "The Race between Man and Machine: Implications of Technology for Growth, Factor Shares, and Employment," <em>American Economic Review</em>, 2018, 108 (6), 1488-1542.</p>
+<p>Acemoglu, Daron and Pascual Restrepo, "Automation and New Tasks: How Technology Displaces and Reinstates Labor," <em>Journal of Economic Perspectives</em>, 2019, 33 (2), 3-30.</p>
+<p>Acemoglu, Daron and Pascual Restrepo, "Robots and Jobs: Evidence from US Labor Markets," <em>Journal of Political Economy</em>, 2020, 128 (6), 2188-2244.</p>
+<p>Acemoglu, Daron and Pascual Restrepo, "Tasks, Automation, and the Rise in U.S. Wage Inequality," <em>Econometrica</em>, 2022, 90 (5), 1973-2016.</p>
+<p>Agaskar, Ameya, Sriram Siva, William Pickering, Kyle O'Brien, Charles Kekeh, Alexandre Ormiga Galvao Barbosa, Ang Li, Brianna Gallo Sarker, Alicia Chua, Mayur Nemade, Charun Thattai, Jiaming Di, Isaac Iyengar, Ramya Dharoor, Dino Kirouani, Jimmy Erskine, Tamir Hegazy, Scott Niekum, Usman A. Khan, Federico Pecora, and Joseph W. Durham, "DeepFleet: Multi-Agent Foundation Models for Mobile Robots," arXiv:2508.08574, 2025.</p>
+<p>Aghion, Philippe, Benjamin F. Jones, and Charles I. Jones, "Artificial Intelligence and Economic Growth," in Ajay Agrawal, Joshua Gans, and Avi Goldfarb, eds., <em>The Economics of Artificial Intelligence: An Agenda</em>, University of Chicago Press, 2019, 237-282.</p>
+<p>Airbus, "Airbus Concludes ATTOL with Fully Autonomous Flight Tests," press release, June 29, 2020. <a href="https://www.airbus.com/en/newsroom/press-releases/2020-06-airbus-concludes-attol-with-fully-autonomous-flight-tests">https://www.airbus.com/en/newsroom/press-releases/2020-06-airbus-concludes-attol-with-fully-autonomous-flight-tests</a></p>
+<p>Airbus, "Airbus Tests New Technologies to Enhance Pilot Assistance," press release, January 12, 2023. <a href="https://www.airbus.com/en/newsroom/press-releases/2023-01-airbus-tests-new-technologies-to-enhance-pilot-assistance">https://www.airbus.com/en/newsroom/press-releases/2023-01-airbus-tests-new-technologies-to-enhance-pilot-assistance</a></p>
+<p>Amazon, "Introducing Vulcan: Amazon's First Robot with a Sense of Touch," About Amazon, May 7, 2025. <a href="https://www.aboutamazon.com/news/operations/amazon-vulcan-robot-pick-stow-touch">https://www.aboutamazon.com/news/operations/amazon-vulcan-robot-pick-stow-touch</a></p>
+<p>Andreassen, Dag, "A Robotic Success from Jæren," The Norwegian Museum of Science and Technology, September 3, 2024. <a href="https://www.tekniskmuseum.no/en/stories/a-robotic-success-from-the-fighter">https://www.tekniskmuseum.no/en/stories/a-robotic-success-from-the-fighter</a></p>
+<p>Andrychowicz, Marcin, Bowen Baker, Maciek Chociej, Rafal Józefowicz, Bob McGrew, Jakub Pachocki, Arthur Petron, Matthias Plappert, Glenn Powell, Alex Ray, Jonas Schneider, Szymon Sidor, Josh Tobin, Peter Welinder, Lilian Weng, and Wojciech Zaremba, "Learning Dexterous In-Hand Manipulation," <em>International Journal of Robotics Research</em>, 2020, 39 (1), 3-20.</p>
+<p>Arantes, Ana P., Nadja Bressan, Ludymila R. Borges, and Chris A. McGibbon, "Evaluation of a Novel Real-Time Adaptive Assist-as-Needed Controller for Robot-Assisted Upper Extremity Rehabilitation Following Stroke," <em>PLOS ONE</em>, 2023, 18 (10), e0292627.</p>
+<p>Atalay, Enghin, Phai Phongthiengtham, Sebastian Sotelo, and Daniel Tannenbaum, "The Evolution of Work in the United States," <em>American Economic Journal: Applied Economics</em>, 2020, 12 (2), 1-34.</p>
+<p>Autor, David H., "Why Are There Still So Many Jobs? The History and Future of Workplace Automation," <em>Journal of Economic Perspectives</em>, 2015, 29 (3), 3-30.</p>
+<p>Autor, David, Caroline Chin, Anna Salomons, and Bryan Seegmiller, "New Frontiers: The Origins and Content of New Work, 1940-2018," <em>Quarterly Journal of Economics</em>, 2024, 139 (3), 1399-1465.</p>
+<p>Autor, David H. and David Dorn, "The Growth of Low-Skill Service Jobs and the Polarization of the US Labor Market," <em>American Economic Review</em>, 2013, 103 (5), 1553-1597.</p>
+<p>Autor, David H., David Dorn, and Gordon H. Hanson, "The China Syndrome: Local Labor Market Effects of Import Competition in the United States," <em>American Economic Review</em>, 2013, 103 (6), 2121-2168.</p>
+<p>Autor, David H., Lawrence F. Katz, and Alan B. Krueger, "Computing Inequality: Have Computers Changed the Labor Market?," <em>Quarterly Journal of Economics</em>, 1998, 113 (4), 1169-1213.</p>
+<p>Autor, David H., Frank Levy, and Richard J. Murnane, "The Skill Content of Recent Technological Change: An Empirical Exploration," <em>Quarterly Journal of Economics</em>, 2003, 118 (4), 1279-1333.</p>
+<p>Autor, David, David Mindell, and Elisabeth Reynolds, "The Work of the Future: Building Better Jobs in an Age of Intelligent Machines," MIT Task Force on the Work of the Future, 2020.</p>
+<p>Autor, David H. and Neil Thompson, "Expertise," <em>Journal of the European Economic Association</em>, 2025, 23 (4), 1203-1271.</p>
+<p>Badger Technologies, "Badger Technologies and Stop &amp; Shop Stores Upgrade Marty the Robot at 300+ Locations to Improve Customer Shopping Experiences," press release, September 18, 2023. <a href="https://www.badger-technologies.com/news/press-releases/stop-and-shop-upgrade-marty-the-robot.html">https://www.badger-technologies.com/news/press-releases/stop-and-shop-upgrade-marty-the-robot.html</a></p>
+<p>Bank of America, "Humanoid Robots 101," BofA Global Research, April 29, 2025.</p>
+<p>Bank of Japan, "Producer Price Index, 2020 Base: Robots [PRCG20_2201350029]," Time-Series Data Search, 2026. <a href="https://www.stat-search.boj.or.jp/">https://www.stat-search.boj.or.jp/</a></p>
+<p>Baptista, Eduardo, Ju-min Park, and Laurie Chen, "Robots Poised for 'ChatGPT Moment,' Unitree CEO Says," Reuters, August 20, 2026. <a href="https://www.reuters.com/world/asia-pacific/robots-poised-chatgpt-moment-unitree-ceo-says-2026-08-20/">https://www.reuters.com/world/asia-pacific/robots-poised-chatgpt-moment-unitree-ceo-says-2026-08-20/</a></p>
+<p>Billard, Aude and Danica Kragic, "Trends and Challenges in Robot Manipulation," <em>Science</em>, 2019, 364 (6446), eaat8414.</p>
+<p>Binder, Damon, "AGI Will Set Off an Industrial Explosion," <em>AI Frontiers</em>, August 11, 2026. <a href="https://ai-frontiers.org/articles/agi-will-set-off-an-industrial-explosion">https://ai-frontiers.org/articles/agi-will-set-off-an-industrial-explosion</a></p>
+<p>Bishop, Todd, "Amazon Tops 1 Million Robots: Here's What They Do," <em>GeekWire</em>, July 1, 2025. <a href="https://www.geekwire.com/2025/amazons-robot-workforce-hits-1-million-heres-what-they-all-do/">https://www.geekwire.com/2025/amazons-robot-workforce-hits-1-million-heres-what-they-all-do/</a></p>
+<p>BMW Group, "BMW Group Advances the Use of Physical AI in Production with Figure 03 Project in Spartanburg," press release, June 25, 2026. <a href="https://www.press.bmwgroup.com/global/article/detail/T0458778EN/bmw-group-advances-the-use-of-physical-ai-in-production-with-figure-03-project-in-spartanburg?language=en">https://www.press.bmwgroup.com/global/article/detail/T0458778EN/bmw-group-advances-the-use-of-physical-ai-in-production-with-figure-03-project-in-spartanburg?language=en</a></p>
+<p>Boston Consulting Group, "The Robotics Revolution: The Next Great Leap in Manufacturing," report, September 2015. <a href="https://www.bcg.com/publications/2015/lean-manufacturing-innovation-robotics-revolution-next-great-leap-manufacturing">https://www.bcg.com/publications/2015/lean-manufacturing-innovation-robotics-revolution-next-great-leap-manufacturing</a></p>
+<p>Boston Dynamics, "Stretch," product page, 2026. <a href="https://bostondynamics.com/products/stretch/">https://bostondynamics.com/products/stretch/</a></p>
+<p>Brooks, Rodney, "Why Today's Humanoids Won't Learn Dexterity," rodneybrooks.com, September 26, 2025. <a href="https://rodneybrooks.com/why-todays-humanoids-wont-learn-dexterity/">https://rodneybrooks.com/why-todays-humanoids-wont-learn-dexterity/</a></p>
+<p>Built Robotics, "The World's First Fully Autonomous Trenching Solution," Exosystem product page, 2026. <a href="https://www.builtrobotics.com/solutions/trenching">https://www.builtrobotics.com/solutions/trenching</a></p>
+<p>Canvas, "Drywall Finishing Robot," product page, JLG Industries, 2026. <a href="https://www.jlg.com/en/canvas">https://www.jlg.com/en/canvas</a></p>
+<p>Cazzaniga, Mauro, Florence Jaumotte, Longji Li, Giovanni Melina, Augustus J. Panton, Carlo Pizzinelli, Emma J. Rockall, and Marina Mendes Tavares, "Gen-AI: Artificial Intelligence and the Future of Work," IMF Staff Discussion Note SDN/2024/001, 2024.</p>
+<p>Chaparro-Rico, Betsy D. M., Daniele Cafolla, Paolo Tortola, and Giuseppe Galardi, "Assessing Stiffness, Joint Torque and ROM for Paretic and Non-Paretic Lower Limbs during the Subacute Phase of Stroke Using Lokomat Tools," <em>Applied Sciences</em>, 2020, 10 (18), 6168.</p>
+<p>Chen, Jiafeng and Jonathan Roth, "Logs with Zeros? Some Problems and Solutions," <em>Quarterly Journal of Economics</em>, 2024, 139 (2), 891-936.</p>
+<p>Cleveland Clinic, "da Vinci Robotic Surgery," Health Library, last updated April 29, 2025. <a href="https://my.clevelandclinic.org/health/treatments/16908-da-vinci-surgery">https://my.clevelandclinic.org/health/treatments/16908-da-vinci-surgery</a></p>
+<p>Cockburn, Iain M., Rebecca Henderson, and Scott Stern, "The Impact of Artificial Intelligence on Innovation: An Exploratory Analysis," in Ajay Agrawal, Joshua Gans, and Avi Goldfarb, eds., <em>The Economics of Artificial Intelligence: An Agenda</em>, University of Chicago Press, 2019, 115-146.</p>
+<p>Code of Federal Regulations, "Composition of Flight Crew," 14 CFR 121.385, retrieved September 21, 2026. <a href="https://www.ecfr.gov/current/title-14/section-121.385">https://www.ecfr.gov/current/title-14/section-121.385</a></p>
+<p>CORDIS, "Automated System for Packaging Fresh Meat with Reduced Waste/Giveaway, Processing Time, Human Involvement and Contamination (AUTOMEATIC)," European Commission, grant agreement 775913, periodic reporting summary, 2018. <a href="https://cordis.europa.eu/project/id/775913">https://cordis.europa.eu/project/id/775913</a></p>
+<p>Counterpoint Research, "Global Humanoid Robot Shipments Soar Nearly 300% YoY in H1 2026, Driven by Commercial Deployments," August 20, 2026. <a href="https://counterpointresearch.com/en/insights/global-humanoid-robot-shipments-soar-nearly-300-percent-yoy-in-h1-2026">https://counterpointresearch.com/en/insights/global-humanoid-robot-shipments-soar-nearly-300-percent-yoy-in-h1-2026</a></p>
+<p>Davidson, Tom and Rose Hadshar, "The Industrial Explosion," Forethought Research, May 2025. <a href="https://www.forethought.org/research/the-industrial-explosion">https://www.forethought.org/research/the-industrial-explosion</a></p>
+<p>Davidson, Tom, Basil Halperin, Thomas Houlden, and Anton Korinek, "When Does Automating Research Produce Explosive Growth?," EconTAI Working Paper, January 2026. <a href="https://www.econtai.org/research/AutomatingAIResearch.pdf">https://www.econtai.org/research/AutomatingAIResearch.pdf</a></p>
+<p>Deming, David J., "The Growing Importance of Social Skills in the Labor Market," <em>Quarterly Journal of Economics</em>, 2017, 132 (4), 1593-1640.</p>
+<p>Denain, Jean-Stanislas and Yann Rivière, "How Fast Could Robot Production Scale Up?," Epoch AI, April 2026. <a href="https://epoch.ai/publications/how-fast-could-robot-production-scale-up">https://epoch.ai/publications/how-fast-could-robot-production-scale-up</a></p>
+<p>Drankhan, Holly, "Developments in Robotic Teat Sprayers Cut Costs and Labor," <em>Progressive Dairy</em>, September 30, 2016. <a href="https://www.agproud.com/articles/28362-developments-in-robotic-teat-sprayers-cut-costs-and-labor">https://www.agproud.com/articles/28362-developments-in-robotic-teat-sprayers-cut-costs-and-labor</a></p>
+<p>Dürr Group, "See and Drive Perfectly with x-light and x-wheel," duerrmore magazine, November 13, 2018. <a href="https://www.durr-group.com/en/duerrmore/2019/autonomous-driving/x-light-and-x-wheel">https://www.durr-group.com/en/duerrmore/2019/autonomous-driving/x-light-and-x-wheel</a></p>
+<p>Eloundou, Tyna, Sam Manning, Pamela Mishkin, and Daniel Rock, "GPTs are GPTs: Labor Market Impact Potential of LLMs," <em>Science</em>, 2024, 384 (6702), 1306-1308.</p>
+<p>Epiroc, "Autonomous Material Handling: A Crucial Step Toward the Mine of the Future," customer story, April 17, 2024. <a href="https://www.epiroc.com/en-me/customer-stories/2024/autonomous-material-handling-a-crucial-step-toward-the-mine-of-the-future">https://www.epiroc.com/en-me/customer-stories/2024/autonomous-material-handling-a-crucial-step-toward-the-mine-of-the-future</a></p>
+<p>Ewing, Jack, "Robots That Walk and Talk Are Coming to Car Factories," <em>The New York Times</em>, August 11, 2026. <a href="https://www.nytimes.com/2026/08/11/business/humanoid-robots-car-factories.html">https://www.nytimes.com/2026/08/11/business/humanoid-robots-car-factories.html</a></p>
+<p>Fabrico, "Maintenance Cost as Percent of RAV: The Benchmark That Cuts Through Excuses," blog, June 26, 2026. <a href="https://www.fabrico.io/blog/maintenance-cost-as-percent-of-rav/">https://www.fabrico.io/blog/maintenance-cost-as-percent-of-rav/</a></p>
+<p>Federal Aviation Administration (FAA), "Safety Framework for Aircraft Automation," September 2025. <a href="https://www.faa.gov/aircraft/air_cert/step/safety_framework_aircraft_automation">https://www.faa.gov/aircraft/air_cert/step/safety_framework_aircraft_automation</a></p>
+<p>Fine, Sidney A., "A Structure of Worker Functions," <em>Personnel and Guidance Journal</em>, 1955, 34 (2), 66-73.</p>
+<p>Fine, Sidney A. and Wretha W. Wiley, <em>An Introduction to Functional Job Analysis</em>, Kalamazoo, MI: W.E. Upjohn Institute for Employment Research, 1971.</p>
+<p>Firoozi, Roya, Johnathan Tucker, Stephen Tian, Anirudha Majumdar, Jiankai Sun, Weiyu Liu, Yuke Zhu, Shuran Song, Ashish Kapoor, Karol Hausman, Brian Ichter, Danny Driess, Jiajun Wu, Cewu Lu, and Mac Schwager, "Foundation Models in Robotics: Applications, Challenges, and the Future," <em>International Journal of Robotics Research</em>, 2025, 44 (5), 701-739.</p>
+<p>Fori Automation, "Toe Tool Systems," product page, 2025. <a href="https://foriauto.com/our-products/end-of-line/alignment-systems/wheel-alignment-systems/toe-tool-systems">https://foriauto.com/our-products/end-of-line/alignment-systems/wheel-alignment-systems/toe-tool-systems</a></p>
+<p>Frey, Carl Benedikt and Michael A. Osborne, "The Future of Employment: How Susceptible Are Jobs to Computerisation?," <em>Technological Forecasting and Social Change</em>, 2017, 114, 254-280.</p>
+<p>Friedel, William C., Jr., Thomas S. Bettencourt, and Daniel L. Freeman, "Tomato Harvesting Employing Electronic Sorting," U.S. Patent 4,033,099, issued July 5, 1977. <a href="https://patents.google.com/patent/US4033099A/en">https://patents.google.com/patent/US4033099A/en</a></p>
+<p>Friedel, William C., Jr. and Charles F. Dietz, "Tomato Harvesting Sorting System," U.S. Patent 4,118,311, issued October 3, 1978. <a href="https://patents.google.com/patent/US4118311A/en">https://patents.google.com/patent/US4118311A/en</a></p>
+<p>Goldman, Sharon, "A Year Ago, Nvidia's Jensen Huang Said the 'ChatGPT Moment' for Robotics Was Around the Corner. Now He Says It's 'Nearly Here.' But Is It?," <em>Fortune</em>, January 6, 2026. <a href="https://fortune.com/2026/01/06/nvidia-jensen-huang-chatgpt-moment-for-robotics/">https://fortune.com/2026/01/06/nvidia-jensen-huang-chatgpt-moment-for-robotics/</a></p>
+<p>González Huarte, Javier, Maite Ortiz de Zarate, and Aitor Ibarguren, "CAD-Based Robot Programming Solution for Wire Harness Manufacturing in Aeronautic Sector," <em>Robotics</em>, 2023, 12 (5), 130.</p>
+<p>Graetz, Georg and Guy Michaels, "Robots at Work," <em>Review of Economics and Statistics</em>, 2018, 100 (5), 753-768.</p>
+<p>Gridwise, "How Are Robotaxis Affecting Driver Pay in AV Cities?," blog, August 2025. <a href="https://gridwise.io/blog/how-are-robotaxis-affecting-driver-pay-in-av-cities">https://gridwise.io/blog/how-are-robotaxis-affecting-driver-pay-in-av-cities</a></p>
+<p>Hirsch, Barry T., David A. Macpherson, and William E. Even, "Union Membership, Coverage, and Earnings from the CPS" [dataset], Unionstats.com, 2026. <a href="https://unionstats.com/">https://unionstats.com/</a></p>
+<p>Honerkamp, Paxton, "Within Uber-Waymo Split, a Key Labor Battle over AVs Is Being Waged in the Nation's Capital," CNBC, August 1, 2026. <a href="https://www.cnbc.com/2026/08/01/uber-waymo-autonomous-vehicle-regulation.html">https://www.cnbc.com/2026/08/01/uber-waymo-autonomous-vehicle-regulation.html</a></p>
+<p>Huffman, Wallace E., "The Status of Labor-Saving Mechanization in U.S. Fruit and Vegetable Harvesting," <em>Choices</em>, 2012, 27 (2). <a href="https://www.choicesmagazine.org/choices-magazine/theme-articles/immigration-and-agriculture/the-status-of-labor-saving-mechanization-in-us-fruit-and-vegetable-harvesting">https://www.choicesmagazine.org/choices-magazine/theme-articles/immigration-and-agriculture/the-status-of-labor-saving-mechanization-in-us-fruit-and-vegetable-harvesting</a></p>
+<p>Humlum, Anders, "Robot Adoption and Labor Market Dynamics," Rockwool Foundation Research Unit Study Paper 175, 2021.</p>
+<p>Hwang, Jyh-Jing, Runsheng Xu, Hubert Lin, Wei-Chih Hung, Jingwei Ji, Kristy Choi, Di Huang, Tong He, Paul Covington, Benjamin Sapp, Yin Zhou, James Guo, Dragomir Anguelov, and Mingxing Tan, "EMMA: End-to-End Multimodal Model for Autonomous Driving," <em>Transactions on Machine Learning Research</em>, 2025.</p>
+<p>Ibarz, Julian, Jie Tan, Chelsea Finn, Mrinal Kalakrishnan, Peter Pastor, and Sergey Levine, "How to Train Your Robot with Deep Reinforcement Learning: Lessons We Have Learned," <em>International Journal of Robotics Research</em>, 2021, 40 (4-5), 698-721.</p>
+<p>Ingenia, "Fruit-Picking Robots," Issue 93, December 2022. <a href="https://www.ingenia.org.uk/articles/fruit-picking-robots/">https://www.ingenia.org.uk/articles/fruit-picking-robots/</a></p>
+<p>International Organization for Standardization (ISO), "Robotics — Vocabulary," ISO 8373:2021, Geneva, 2021.</p>
+<p>Jarrett, Cosette, "12 Cool Facts About the AI-Powered Robots That Help Deliver Your Amazon Packages," About Amazon, December 11, 2023. <a href="https://www.aboutamazon.com/news/operations/amazon-robotics-cool-facts">https://www.aboutamazon.com/news/operations/amazon-robotics-cool-facts</a></p>
+<p>Jones, Charles I. and Christopher Tonetti, "Past Automation and Future A.I.: How Weak Links Tame the Growth Explosion," working paper, Stanford University, 2026. <a href="https://web.stanford.edu/~chadj/JonesTonetti_Automation.pdf">https://web.stanford.edu/~chadj/JonesTonetti_Automation.pdf</a></p>
+<p>Jurkat, Anne, Rainer Klump, and Florian Schneider, "Tracking the Rise of Robots: A Survey of the IFR Database and its Applications," MPRA Paper 111812, Munich Personal RePEc Archive, October 2021. <a href="https://mpra.ub.uni-muenchen.de/111812/">https://mpra.ub.uni-muenchen.de/111812/</a></p>
+<p>Katz, Lawrence F. and Kevin M. Murphy, "Changes in Relative Wages, 1963-1987: Supply and Demand Factors," <em>Quarterly Journal of Economics</em>, 1992, 107 (1), 35-78.</p>
+<p>Kawasaki Robotics, "At the Forefront of FRP Automation: Spray-Up and Cutting Process Innovations Pioneered by KADO × IEC," case study, 2026. <a href="https://kawasakirobotics.com/case-studies/at-the-forefront-of-frp-automation-spray-up-and-cutting-process-innovations-pioneered-by-kado-x-iec/">https://kawasakirobotics.com/case-studies/at-the-forefront-of-frp-automation-spray-up-and-cutting-process-innovations-pioneered-by-kado-x-iec/</a></p>
+<p>Kemp, Charles C., Aaron Edsinger, and Eduardo Torres-Jara, "Challenges for Robot Manipulation in Human Environments," <em>IEEE Robotics &amp; Automation Magazine</em>, 2007, 14 (1), 20-29.</p>
+<p>Kim, Moo Jin, Karl Pertsch, Siddharth Karamcheti, Ted Xiao, Ashwin Balakrishna, Suraj Nair, Rafael Rafailov, Ethan P. Foster, Pannag R. Sanketi, Quan Vuong, Thomas Kollar, Benjamin Burchfiel, Russ Tedrake, Dorsa Sadigh, Sergey Levine, Percy Liang, and Chelsea Finn, "OpenVLA: An Open-Source Vision-Language-Action Model," in <em>Proceedings of the 8th Conference on Robot Learning (CoRL 2024)</em>, Proceedings of Machine Learning Research, 2025, 270, 2679-2713.</p>
+<p>Kober, Jens, J. Andrew Bagnell, and Jan Peters, "Reinforcement Learning in Robotics: A Survey," <em>International Journal of Robotics Research</em>, 2013, 32 (11), 1238-1274.</p>
+<p>Kogan, Leonid, Dimitris Papanikolaou, Lawrence D. W. Schmidt, and Bryan Seegmiller, "Technology and Labor Displacement: Evidence from Linking Patents with Worker-Level Data," NBER Working Paper 31846, 2023.</p>
+<p>Kroemer, Oliver, Scott Niekum, and George Konidaris, "A Review of Robot Learning for Manipulation: Challenges, Representations, and Algorithms," <em>Journal of Machine Learning Research</em>, 2021, 22 (30), 1-82.</p>
+<p>Link, Albert N., Zachary T. Oliver, and Alan C. O'Connor, "Economic Analysis of Technology Infrastructure Needs for Advanced Manufacturing: Advanced Robotics and Automation," NIST GCR 16-005, National Institute of Standards and Technology, August 2016. <a href="https://doi.org/10.6028/NIST.GCR.16-005">https://doi.org/10.6028/NIST.GCR.16-005</a></p>
+<p>Lise, Jeremy and Fabien Postel-Vinay, "Multidimensional Skills, Sorting, and Human Capital Accumulation," <em>American Economic Review</em>, 2020, 110 (8), 2328-2376.</p>
+<p>Ludwig, Jens, Sendhil Mullainathan, and Ashesh Rambachan, "Large Language Models: An Applied Econometric Framework," NBER Working Paper 33344, 2025.</p>
+<p>Lung, Natalie, "New York's Robotaxi Plan Pulled in Setback to Waymo Expansion," Bloomberg News, February 19, 2026. <a href="https://www.bloomberg.com/news/articles/2026-02-19/new-york-s-robotaxi-plan-pulled-in-setback-to-waymo-expansion">https://www.bloomberg.com/news/articles/2026-02-19/new-york-s-robotaxi-plan-pulled-in-setback-to-waymo-expansion</a></p>
+<p>Madrigal, Alexis C., "Inside Waymo's Secret World for Training Self-Driving Cars," <em>The Atlantic</em>, August 23, 2017. <a href="https://www.theatlantic.com/technology/archive/2017/08/inside-waymos-secret-testing-and-simulation-facilities/537648/">https://www.theatlantic.com/technology/archive/2017/08/inside-waymos-secret-testing-and-simulation-facilities/537648/</a></p>
+<p>Mason, Matthew T., "Toward Robotic Manipulation," <em>Annual Review of Control, Robotics, and Autonomous Systems</em>, 2018, 1, 1-28.</p>
+<p>Massenkoff, Maxim and Peter McCrory, "Labor Market Impacts of AI: A New Measure and Early Evidence," Anthropic, March 5, 2026. <a href="https://www.anthropic.com/research/labor-market-impacts">https://www.anthropic.com/research/labor-market-impacts</a></p>
+<p>Mayekawa, "Deboning Machines," product page, 2026a. <a href="https://mayekawa.com/products/deboning_machines/">https://mayekawa.com/products/deboning_machines/</a></p>
+<p>Mayekawa, "Reducing Workloads with Reliable Deboning Technology and Stabilizing Production to Meet Market Demands for Pork," With Mayekawa, 2026b (undated; retrieved September 29, 2026). <a href="https://mayekawa.com/with/stories/hamdas/">https://mayekawa.com/with/stories/hamdas/</a></p>
+<p>McKinsey &amp; Company, "The Future of Robotics: Intelligent, Adaptable, and on Your Team," The Next Normal, 2026. <a href="https://www.mckinsey.com/featured-insights/the-next-normal/robotics">https://www.mckinsey.com/featured-insights/the-next-normal/robotics</a></p>
+<p>Metzger, Jean-Claude, Olivier Lambercy, Antonella Califfi, Daria Dinacci, Claudio Petrillo, Paolo Rossi, Fabio M. Conti, and Roger Gassert, "Assessment-Driven Selection and Adaptation of Exercise Difficulty in Robot-Assisted Therapy: A Pilot Study with a Hand Rehabilitation Robot," <em>Journal of NeuroEngineering and Rehabilitation</em>, 2014, 11, 154.</p>
+<p>Moravec, Hans, <em>Mind Children: The Future of Robot and Human Intelligence</em>, Cambridge, MA: Harvard University Press, 1988.</p>
+<p>Morgan Stanley, "Humanoid Robot Market Expected to Reach $5 Trillion by 2050," May 14, 2025. <a href="https://www.morganstanley.com/insights/articles/humanoid-robot-market-5-trillion-by-2050">https://www.morganstanley.com/insights/articles/humanoid-robot-market-5-trillion-by-2050</a></p>
+<p>Morgan Stanley Research, "Humanoids: Investment Implications of Embodied AI," report, June 26, 2024.</p>
+<p>Navas-Reascos, Gabriel E., David Romero, Johan Stahre, and Alberto Caballero-Ruiz, "Wire Harness Assembly Process Supported by Collaborative Robots: Literature Review and Call for R&amp;D," <em>Robotics</em>, 2022, 11 (3), 65.</p>
+<p>Nissyoku Shimbun, "前川製作所が豚もも肉脱骨ロボット「ハムダス」発売" [Mayekawa Launches HAMDAS Pork Ham Deboning Robot], <em>Nihon Shokuryo Shimbun</em>, September 14, 1998. <a href="https://news.nissyoku.co.jp/news/nss-8423-0032">https://news.nissyoku.co.jp/news/nss-8423-0032</a></p>
+<p>Oitzman, Mike, "Pharm Robotics Advances Automated Dairy Cow Healthcare," <em>The Robot Report</em>, July 13, 2025. <a href="https://www.therobotreport.com/pharm-robotics-advances-automated-dairy-cow-healthcare/">https://www.therobotreport.com/pharm-robotics-advances-automated-dairy-cow-healthcare/</a></p>
+<p>Oxmaint, "Food Manufacturing Maintenance Budgeting: Planning, Benchmarks, and Cost Control," March 28, 2026. <a href="https://oxmaint.com/industries/food-manufacturing/food-manufacturing-maintenance-budgeting-benchmarks-cost-control">https://oxmaint.com/industries/food-manufacturing/food-manufacturing-maintenance-budgeting-benchmarks-cost-control</a></p>
+<p>Pallottino, Lucia, "Robotics for Warehouses and Logistics: Technologies, Challenges, and Future Directions," <em>Annual Review of Control, Robotics, and Autonomous Systems</em>, 2026, 9, 377-401.</p>
+<p>Polanyi, Michael, <em>The Tacit Dimension</em>, Garden City, NY: Doubleday, 1966.</p>
+<p>Pumacay, Wilbert, Ishika Singh, Jiafei Duan, Ranjay Krishna, Jesse Thomason, and Dieter Fox, "THE COLOSSEUM: A Benchmark for Evaluating Generalization for Robotic Manipulation," arXiv:2402.08191, 2024.</p>
+<p>Reuters, "Meet SwagBot, the AI-Powered Robot Cattle Herder Preventing Soil Degradation," Rappler, December 12, 2024. <a href="https://www.rappler.com/technology/innovations/swagbot-artificial-intelligence-powered-robot-cattle-herder/">https://www.rappler.com/technology/innovations/swagbot-artificial-intelligence-powered-robot-cattle-herder/</a></p>
+<p>Rivière, Yann and Jean-Stanislas Denain, "Where Autonomy Works: Evaluating Robot Capabilities in 2026," Epoch AI, 2026. <a href="https://epoch.ai/publications/where-autonomy-works-evaluating-robot-capabilities-in-2026">https://epoch.ai/publications/where-autonomy-works-evaluating-robot-capabilities-in-2026</a></p>
+<p>Robbins, Jacob, "Apptronik Raises $520M as VC Funding for Humanoid Robotics Explodes 300%," PitchBook News, February 11, 2026. <a href="https://pitchbook.com/news/articles/apptronik-raises-520m-as-vc-funding-for-humanoid-robotics-explodes-300">https://pitchbook.com/news/articles/apptronik-raises-520m-as-vc-funding-for-humanoid-robotics-explodes-300</a></p>
+<p>The Robot Report, "Path Robotics Raises $100M to Automate Welding," October 28, 2024. <a href="https://www.therobotreport.com/path-robotics-raises-100m-to-automate-welding/">https://www.therobotreport.com/path-robotics-raises-100m-to-automate-welding/</a></p>
+<p>The Robot Report, "Okibo Opens New Jersey HQ and Launches EG7 Robot in U.S. Market," April 11, 2025. <a href="https://www.therobotreport.com/okibo-opens-new-jersey-hq-and-launches-eg7-robot-in-u-s-market/">https://www.therobotreport.com/okibo-opens-new-jersey-hq-and-launches-eg7-robot-in-u-s-market/</a></p>
+<p>Rosen, C. A., "Machine Vision and Robotics: Industrial Requirements," in George G. Dodd and Lothar Rossol, eds., <em>Computer Vision and Sensor-Based Robots</em>, Springer, 1979, 3-22.</p>
+<p>SAE International, "Taxonomy and Definitions for Terms Related to Driving Automation Systems for On-Road Motor Vehicles," SAE Recommended Practice J3016_202104, April 2021.</p>
+<p>Sandvik, "Sandvik Introduces AutoMine AutoLoad 2.0 for Improved Autonomous Bucket Loading," press release, June 14, 2023. <a href="https://www.mining.sandvik/en/news-and-media/news-archive/2023/06/sandvik-introduces-automine-autoload-2.0-for-improved-autonomous-bucket-loading">https://www.mining.sandvik/en/news-and-media/news-archive/2023/06/sandvik-introduces-automine-autoload-2.0-for-improved-autonomous-bucket-loading</a></p>
+<p>Schenck RoTec, "Wheel Assembly Lines: Individual &amp; Complete Solutions," product page, 2025. <a href="https://www.schenck-rotec.com/en-us/product/wheel-assembly-lines/">https://www.schenck-rotec.com/en-us/product/wheel-assembly-lines/</a></p>
+<p>Scoop, "‘Golden Opportunity’ for Scott Technology with Silver Fern Farms," Scott Technology announcement, September 14, 2022. <a href="https://www.scoop.co.nz/stories/BU2209/S00201/golden-opportunity-for-scott-technology-with-silver-fern-farms.htm">https://www.scoop.co.nz/stories/BU2209/S00201/golden-opportunity-for-scott-technology-with-silver-fern-farms.htm</a></p>
+<p>Simbe Robotics, "Tally," product page, 2026. <a href="https://www.simberobotics.com/store-intelligence/tally">https://www.simberobotics.com/store-intelligence/tally</a></p>
+<p>Statista, "Average Retail Electricity Price for Industrial Consumers in the United States from 1970 to 2025," April 28, 2026. <a href="https://www.statista.com/statistics/190680/us-industrial-consumer-price-estimates-for-retail-electricity-since-1970/">https://www.statista.com/statistics/190680/us-industrial-consumer-price-estimates-for-retail-electricity-since-1970/</a></p>
+<p>Suresh, Sudharshan, Haozhi Qi, Tingfan Wu, Taosha Fan, Luis Pineda, Mike Lambeta, Jitendra Malik, Mrinal Kalakrishnan, Roberto Calandra, Michael Kaess, Joseph Ortiz, and Mustafa Mukadam, "NeuralFeels with Neural Fields: Visuotactile Perception for In-Hand Manipulation," <em>Science Robotics</em>, 2024, 9 (96), eadl0628.</p>
+<p>Svanberg, Maja, Wensu Li, Martin Fleming, Brian Goehring, and Neil Thompson, "Beyond AI Exposure: Which Tasks Are Cost-Effective to Automate with Computer Vision?," MIT FutureTech working paper, January 2024. <a href="https://futuretech.mit.edu/publication/beyond-ai-exposure-which-tasks-are-cost-effective-to-automate-with-computer-vision">https://futuretech.mit.edu/publication/beyond-ai-exposure-which-tasks-are-cost-effective-to-automate-with-computer-vision</a></p>
+<p>Tamkin, Alex, Miles McCain, Kunal Handa, Esin Durmus, Liane Lovitt, Ankur Rathi, Saffron Huang, Alfred Mountfield, Jerry Hong, Stuart Ritchie, Michael Stern, Brian Clarke, Landon Goldberg, Theodore R. Sumers, Jared Mueller, William McEachen, Wes Mitchell, Shan Carter, Jack Clark, Jared Kaplan, and Deep Ganguli, "Clio: Privacy-Preserving Insights into Real-World AI Use," arXiv:2412.13678, 2024.</p>
+<p>Tamkin, Alex and Peter McCrory, "Estimating AI Productivity Gains from Claude Conversations," Anthropic, 2025. <a href="https://www.anthropic.com/research/estimating-productivity-gains">https://www.anthropic.com/research/estimating-productivity-gains</a></p>
+<p>Tedrake, Russ, <em>Robotic Manipulation: Perception, Planning, and Control</em>, course notes for MIT 6.421, 2026. <a href="http://manipulation.mit.edu">http://manipulation.mit.edu</a></p>
+<p>Telexistence, "Telexistence to Begin Installing AI Robot 'TX SCARA' in 300 FamilyMart Stores," press release, August 10, 2022. <a href="https://tx-inc.com/en/blog/2022/08/10/11737/">https://tx-inc.com/en/blog/2022/08/10/11737/</a></p>
+<p>Thomas, Charlotte, "Rise of the Robots," METSTRADE, October 23, 2023. <a href="https://www.metstrade.com/news/superyacht/rise-of-the-robots">https://www.metstrade.com/news/superyacht/rise-of-the-robots</a></p>
+<p>Trammell, Philip and Anton Korinek, "Economic Growth Under Transformative AI," <em>Annual Review of Economics</em>, 2026, 18, 589-611.</p>
+<p>Transformation Hub Wiring Harness, "Robotics Challenge 2026," 2026. <a href="https://www.leitungssatz-hub.de/en/robotik-challenge/robotik-challenge-2026/">https://www.leitungssatz-hub.de/en/robotik-challenge/robotik-challenge-2026/</a></p>
+<p>UBS, "Is the World Ready for 1bn Robots?," UBS Global Research Q-Series, June 17, 2025.</p>
+<p>University of Michigan, "U-M Opens Mcity Test Environment for Connected and Driverless Vehicles," Michigan Engineering News, July 20, 2015. <a href="https://news.engin.umich.edu/2015/07/u-m-opens-mcity-test-environment-for-connected-and-driverless-vehicles/">https://news.engin.umich.edu/2015/07/u-m-opens-mcity-test-environment-for-connected-and-driverless-vehicles/</a></p>
+<p>U.S. Bureau of Economic Analysis (BEA), "Price Indexes for Private Fixed Investment in Equipment by Type: Computers and Peripheral Equipment [B935RG3A086NBEA]," NIPA Table 5.5.4, retrieved from FRED, Federal Reserve Bank of St. Louis, 2026. <a href="https://fred.stlouisfed.org/series/B935RG3A086NBEA">https://fred.stlouisfed.org/series/B935RG3A086NBEA</a></p>
+<p>U.S. Bureau of Labor Statistics (BLS), "A New Methodology for Estimating Hours Worked for U.S. Labor Productivity Measurement," Office of Productivity and Technology technical note, November 3, 2022. <a href="https://www.bls.gov/productivity/technical-notes/labor-productivity-hours-worked-method-using-ces-all-employee-hours-nov-2022.htm">https://www.bls.gov/productivity/technical-notes/labor-productivity-hours-worked-method-using-ces-all-employee-hours-nov-2022.htm</a></p>
+<p>U.S. Bureau of Labor Statistics (BLS), "Occupational Employment and Wage Statistics (OEWS): May 2025 National Occupational Employment and Wage Estimates," 2025. <a href="https://www.bls.gov/oes/tables.htm">https://www.bls.gov/oes/tables.htm</a></p>
+<p>U.S. Bureau of Labor Statistics (BLS), "Consumer Price Index for All Urban Consumers: New Vehicles, U.S. City Average, Not Seasonally Adjusted [CUUR0000SETA01]," 2026a. <a href="https://www.bls.gov/cpi/">https://www.bls.gov/cpi/</a></p>
+<p>U.S. Bureau of Labor Statistics (BLS), "Employment Level - Agriculture and Related Industries [LNS12034560] and Employment Level [CE16OV]," Current Population Survey, retrieved from FRED, Federal Reserve Bank of St. Louis, 2026b. <a href="https://fred.stlouisfed.org/series/LNS12034560">https://fred.stlouisfed.org/series/LNS12034560</a></p>
+<p>U.S. Bureau of Labor Statistics (BLS), "Occupational Employment and Wage Statistics: Frequently Asked Questions," 2026c, retrieved September 21, 2026. <a href="https://www.bls.gov/oes/oes_ques.htm">https://www.bls.gov/oes/oes_ques.htm</a></p>
+<p>U.S. Census Bureau, "Annual Capital Expenditures Survey: Robotic Equipment Expenditures, 2019-2022," 2024. <a href="https://www.census.gov/programs-surveys/aces.html">https://www.census.gov/programs-surveys/aces.html</a></p>
+<p>U.S. Department of Transportation Office of Inspector General, "Enhanced FAA Oversight Could Reduce Hazards Associated with Increased Use of Flight Deck Automation," Audit Report AV-2016-013, January 7, 2016. <a href="https://www.oig.dot.gov/sites/default/files/FAA%20Flight%20Decek%20Automation_Final%20Report%5E1-7-16.pdf">https://www.oig.dot.gov/sites/default/files/FAA%20Flight%20Decek%20Automation_Final%20Report%5E1-7-16.pdf</a></p>
+<p>Vitiello, V., K.-W. Kwok, and G.-Z. Yang, "Introduction to Robot-Assisted Minimally Invasive Surgery (MIS)," in Paula Gomes, ed., <em>Medical Robotics: Minimally Invasive Surgery</em>, Woodhead Publishing, 2012, 1-40.</p>
+<p>Wallace, Neal, "Butcher Bot Pays Off in Dollars per Carcase," <em>Farmers Weekly</em> (New Zealand), September 30, 2022. <a href="https://www.farmersweekly.co.nz/technology/butcher-bot-pays-off-in-dollars-per-carcase/">https://www.farmersweekly.co.nz/technology/butcher-bot-pays-off-in-dollars-per-carcase/</a></p>
+<p>Wallace, Neal, "One Giant LEAP for Robo Meatworks," <em>Farmers Weekly</em> (New Zealand), April 22, 2024. <a href="https://www.farmersweekly.co.nz/technology/one-giant-leap-for-robo-meatworks/">https://www.farmersweekly.co.nz/technology/one-giant-leap-for-robo-meatworks/</a></p>
+<p>Wang, Hanchen, Tianfan Fu, Yuanqi Du, Wenhao Gao, Kexin Huang, Ziming Liu, Payal Chandak, Shengchao Liu, Peter Van Katwyk, Andreea Deac, Anima Anandkumar, Karianne Bergen, Carla P. Gomes, Shirley Ho, Pushmeet Kohli, Joan Lasenby, Jure Leskovec, Tie-Yan Liu, Arjun Manrai, Debora Marks, Bharath Ramsundar, Le Song, Jimeng Sun, Jian Tang, Petar Veličković, Max Welling, Linfeng Zhang, Connor W. Coley, Yoshua Bengio, and Marinka Zitnik, "Scientific Discovery in the Age of Artificial Intelligence," <em>Nature</em>, 2023, 620, 47-60.</p>
+<p>Waste360, "Q&amp;A: AMP's Matanya Horowitz on Bringing AI to the Recycling World and How the Tech Is Advancing," November 2023. <a href="https://www.waste360.com/waste-recycling/q-a-amp-s-matanya-horowitz-on-bringing-ai-to-the-recycling-and-how-the-tech-is-advancing">https://www.waste360.com/waste-recycling/q-a-amp-s-matanya-horowitz-on-bringing-ai-to-the-recycling-and-how-the-tech-is-advancing</a></p>
+<p>WATTAgNet, "The New Generation of Automated Deboning Machines," October 1, 2018. <a href="https://www.wattagnet.com/broilers-turkeys/processing-slaughter/article/15526256/the-new-generation-of-automated-deboning-machines-wattagnet">https://www.wattagnet.com/broilers-turkeys/processing-slaughter/article/15526256/the-new-generation-of-automated-deboning-machines-wattagnet</a></p>
+<p>Webb, Michael, "The Impact of Artificial Intelligence on the Labor Market," working paper, Stanford University, 2020.</p>
+<p>Wessling, Brianna, "With New Funding, Monumental Plans to Bring Its Construction Robots to the U.S.," <em>The Robot Report</em>, July 17, 2026. <a href="https://www.therobotreport.com/with-new-funding-monumental-plans-bring-construction-robots-u-s/">https://www.therobotreport.com/with-new-funding-monumental-plans-bring-construction-robots-u-s/</a></p>
+<p>Wishart-Smith, Heather, "Built Robotics Unveils Autonomous Pile Driving Robot, Expediting Solar Rollout," <em>Forbes</em>, March 20, 2023. <a href="https://www.forbes.com/sites/heatherwishartsmith/2023/03/20/built-robotics-unveils-autonomous-pile-driving-robot-expediting-solar-rollout/">https://www.forbes.com/sites/heatherwishartsmith/2023/03/20/built-robotics-unveils-autonomous-pile-driving-robot-expediting-solar-rollout/</a></p>
+<p>Yotzov, Ivan, Jose Maria Barrero, Nicholas Bloom, Philip Bunn, Steven J. Davis, Kevin M. Foster, Aaron Jalca, Brent H. Meyer, Paul Mizen, Michael A. Navarrete, Pawel Smietanka, Gregory Thwaites, and Ben Zhe Wang, "Firm Data on AI," NBER Working Paper 34836, 2026. <a href="https://doi.org/10.3386/w34836">https://doi.org/10.3386/w34836</a></p>
+<p>Yu, Zhen, Jingyu Wang, Ting Zuo, James Alm, Xun Li, and Xue Li, "Robotaxis Reduce Taxi Drivers' Income," <em>Humanities and Social Sciences Communications</em>, 2026, 13, article 629.</p>
+<p>Zeira, Joseph, "Workers, Machines, and Economic Growth," <em>Quarterly Journal of Economics</em>, 1998, 113 (4), 1091-1117.</p>
+<p>Ziemerink, Jan, "How to Manage Automatic Calf Feeders Successfully," Förster-Technik North America presentation, Vita Plus, 2018. <a href="https://www.vitaplus.com/wp-content/uploads/2018/06/Successfull-Calfraising_with-Auto-feeders2018_2.pdf">https://www.vitaplus.com/wp-content/uploads/2018/06/Successfull-Calfraising_with-Auto-feeders2018_2.pdf</a></p>
+<h2 id="data-sources"><strong>Data sources</strong></h2>
+<p>Althobaiti, Shahad, Ahmad Alabdulkareem, Judy Hanwen Shen, Iyad Rahwan, Morgan Frank, Esteban Moro, and Alex Rutherford. "Dictionary of Titles" [dataset]. Harvard Dataverse, 2022. <a href="https://doi.org/10.7910/DVN/DQW8IP">https://doi.org/10.7910/DVN/DQW8IP</a></p>
+<p>Autor, David, Caroline Chin, Anna Salomons, and Bryan Seegmiller. Replication Data for: "New Frontiers: The Origins and Content of New Work, 1940-2018." Harvard Dataverse, V1.1, 2024. <a href="https://doi.org/10.7910/DVN/7RYD2E">https://doi.org/10.7910/DVN/7RYD2E</a>, retrieved July 30-31, 2026.</p>
+<p>Autor, David H. and David Dorn. 2013. "The Growth of Low-Skill Service Jobs and the Polarization of the US Labor Market." American Economic Review 103 (5): 1553-1597. Occupation crosswalks (occ1990dd) and offshorability measure: <a href="https://www.ddorn.net/data.htm">https://www.ddorn.net/data.htm</a>.</p>
+<p>Bank of Japan. Producer Price Index, 2020 Base: Robots [PRCG20_2201350029]. Time-Series Data Search, retrieved September 16, 2026. <a href="https://www.stat-search.boj.or.jp/">https://www.stat-search.boj.or.jp/</a></p>
+<p>Eloundou, Tyna, Sam Manning, Pamela Mishkin, and Daniel Rock. 2024. "GPTs are GPTs: Labor Market Impact Potential of LLMs." Science 384 (6702): 1306-1308. Task-level exposure labels: <a href="https://github.com/openai/GPTs-are-GPTs">https://github.com/openai/GPTs-are-GPTs</a>.</p>
+<p>Hirsch, Barry T., David A. Macpherson, and William E. Even. Union Membership, Coverage, and Earnings from the CPS [dataset]. Unionstats.com, 2026. <a href="https://unionstats.com/">https://unionstats.com/</a>. Described in Hirsch, Barry T. and David A. Macpherson. 2003. "Union Membership and Coverage Database from the Current Population Survey: Note." Industrial and Labor Relations Review 56 (2): 349-354.</p>
+<p>National Academy of Sciences, Committee on Occupational Classification and Analysis. Dictionary of Occupational Titles (DOT): Part I - Current Population Survey, April 1971, Augmented With DOT Characteristics, and Part II - Fourth Edition Dictionary of DOT Scores for 1970 Census Categories. Ann Arbor, MI: Inter-university Consortium for Political and Social Research [distributor], 2006-09-06. <a href="https://doi.org/10.3886/ICPSR07845.v2">https://doi.org/10.3886/ICPSR07845.v2</a></p>
+<p>National Center for O*NET Development. O*NET Database, versions 29.3 (2025), 13.0 (2008), and 4.0 (2002); the O*NET-SOC taxonomy crosswalks; and the DOT to O*NET-SOC 2019 Crosswalk. Washington, DC: U.S. Department of Labor, Employment and Training Administration. <a href="https://www.onetcenter.org/database.html">https://www.onetcenter.org/database.html</a>; <a href="https://www.onetcenter.org/taxonomy.html">https://www.onetcenter.org/taxonomy.html</a>; <a href="https://www.onetcenter.org/crosswalks/dot/">https://www.onetcenter.org/crosswalks/dot/</a></p>
+<p>Ruggles, Steven, Sarah Flood, Matthew Sobek, Daniel Backman, Grace Cooper, Julia A. Rivera Drew, Stephanie Richards, Renae Rodgers, Jonathan Schroeder, and Kari C.W. Williams. IPUMS USA: Version 16.0 [dataset]. Minneapolis, MN: IPUMS, 2025. <a href="https://doi.org/10.18128/D010.V16.0">https://doi.org/10.18128/D010.V16.0</a></p>
+<p>U.S. Bureau of Economic Analysis (BEA). Personal Consumption Expenditures: Chain-type Price Index [PCEPI], retrieved from FRED, Federal Reserve Bank of St. Louis. <a href="https://fred.stlouisfed.org/series/PCEPI">https://fred.stlouisfed.org/series/PCEPI</a>, September 21, 2026.</p>
+<p>U.S. Bureau of Economic Analysis (BEA). Table 5.5.4. Price Indexes for Private Fixed Investment in Equipment by Type: Computers and peripheral equipment [B935RG3A086NBEA], retrieved from FRED, Federal Reserve Bank of St. Louis. <a href="https://fred.stlouisfed.org/series/B935RG3A086NBEA">https://fred.stlouisfed.org/series/B935RG3A086NBEA</a>, September 16, 2026.</p>
+<p>U.S. Bureau of Labor Statistics (BLS). Consumer Price Index for All Urban Consumers, U.S. city average, not seasonally adjusted: New vehicles [CUUR0000SETA01]. Washington, DC: U.S. Department of Labor. Retrieved September 16, 2026. <a href="https://www.bls.gov/cpi/">https://www.bls.gov/cpi/</a></p>
+<p>U.S. Bureau of Labor Statistics (BLS). Employer Costs for Employee Compensation (ECEC), 2004-2023 and March 2026. Washington, DC: U.S. Department of Labor. <a href="https://www.bls.gov/ecec/">https://www.bls.gov/ecec/</a></p>
+<p>U.S. Bureau of Labor Statistics (BLS). Employment Projections, 2025-35: Table 1.6, Occupations with the Largest Job Declines. Washington, DC: U.S. Department of Labor, August 27, 2026. <a href="https://www.bls.gov/emp/tables/occupations-largest-job-declines.htm">https://www.bls.gov/emp/tables/occupations-largest-job-declines.htm</a></p>
+<p>U.S. Bureau of Labor Statistics (BLS). Occupational Employment and Wage Statistics (OEWS): 2002, May 2008, May 2015, and May 2025 National Occupational Employment and Wage Estimates. Washington, DC: U.S. Department of Labor. <a href="https://www.bls.gov/oes/tables.htm">https://www.bls.gov/oes/tables.htm</a></p>
+<p>U.S. Bureau of Labor Statistics (BLS). Occupational Requirements Survey (ORS), 2023 and 2025. Washington, DC: U.S. Department of Labor. <a href="https://www.bls.gov/ors/">https://www.bls.gov/ors/</a></p>
+<p>U.S. Census Bureau. 2018 Census Occupation Code List with Crosswalk, and 2018 ACS PUMS and 2018 SIPP Public-Use Occupation Code List [datasets], 2018. <a href="https://www2.census.gov/programs-surveys/demo/guidance/industry-occupation/2018-occupation-code-list-and-crosswalk.xlsx">https://www2.census.gov/programs-surveys/demo/guidance/industry-occupation/2018-occupation-code-list-and-crosswalk.xlsx</a>; <a href="https://www2.census.gov/programs-surveys/demo/guidance/industry-occupation/2018-ACS-PUMS-and-2018-SIPP-Public-Use-Occupation-Code-List.xlsx">https://www2.census.gov/programs-surveys/demo/guidance/industry-occupation/2018-ACS-PUMS-and-2018-SIPP-Public-Use-Occupation-Code-List.xlsx</a></p>
+<p>U.S. Census Bureau. Annual Capital Expenditures Survey: Capital Expenditures for Structures and Equipment, Tables 1a and 1b, 2019-2022 releases. <a href="https://www.census.gov/data/tables/2022/econ/aces/2022-aces-summary.html">https://www.census.gov/data/tables/2022/econ/aces/2022-aces-summary.html</a></p>
+<p>U.S. Department of Labor, Employment and Training Administration. Dictionary of Occupational Titles, Fourth Edition. Washington, DC: U.S. Government Printing Office, 1977.</p>
+<p>United States Department of Labor, United States Employment Service, and North Carolina Occupational Analysis Field Center. Dictionary of Occupational Titles (DOT): Revised Fourth Edition, 1991. Ann Arbor, MI: Inter-university Consortium for Political and Social Research [distributor], 2026-02-19. <a href="https://doi.org/10.3886/ICPSR06100.v2">https://doi.org/10.3886/ICPSR06100.v2</a>. Missing text from the Department of Labor Office of Administrative Law Judges DOT pages and <a href="https://occupationalinfo.org">https://occupationalinfo.org</a>.</p>
+<p>Webb, Michael. 2020. "The Impact of Artificial Intelligence on the Labor Market." Working paper, Stanford University. Robot exposure percentiles and 2010 labor-supply weights: <a href="https://web.stanford.edu/~mww/">https://web.stanford.edu/~mww/</a>, retrieved July 18, 2026; now at <a href="https://www.michaelwebb.co/">https://www.michaelwebb.co/</a>.</p>
+<h3 id="footnotes"><br/><br/>Footnotes</h3>
+<ol><li><p>See for example Aghion et al. (2019), Davidson et al. (2026), and Jones and Tonetti (2026) on the role of weak links and complementarities in explosive economic growth scenarios. AI is often thought to affect digital work more than physical work; see for example Cazzaniga et al. (2024).</p></li><li><p>See for example Autor (2015) on “environmental control” as a barrier to physical automation. See also Section 6 of Link et al. (2016). We discuss this point in more detail in “Measuring exposure.”</p></li><li><p>See Firoozi et al. (2025) on AI foundation models for robots. Rivière and Denain (2026) discuss robot capabilities afforded by AI. See Agaskar et al. (2025) and Hwang et al. (2025) on AI-powered robots in warehousing and driving. AI could also speed the pace of innovation in robotics; see Cockburn et al. (2019), Wang et al. (2023), and Davidson et al. (2026).</p></li><li><p>See Baptista et al. (2026) and Goldman (2026) on a potential “ChatGPT moment” in robotics. See also forecasts from Morgan Stanley Research (2024) and McKinsey &amp; Company (2026).</p></li><li><p>Robot investment data from the 2022 Annual Capital Expenditures Survey (U.S. Census Bureau, 2024). Surveys of US executives in November 2025 from Yotzov et al. (2026) show that 13% of firms use robotics now while 22% expect to within three years of surveying, weighted by employment. Expected use is broadly similar in the United Kingdom, Germany, and Australia.</p></li><li><p>See Robbins (2026) on investment in humanoid robotics startups and Ewing (2026) on efforts by large automakers to use humanoids.</p></li><li><p>For example, some robots use cameras only while others use touch sensors. See Brooks (2025) on these approaches, as well as research on vision and tactile robots by Andrychowicz et al. (2020) and Suresh et al. (2024).</p></li><li><p>See Counterpoint Research (2026) for a humanoid market overview; most humanoids today are used for entertainment and data collection. See BMW Group (2026) for a humanoid deployment in a car factory.</p></li><li><p>Our taxonomy builds on a long tradition in labor economics and occupational analysis. The predecessor to O*NET, the Dictionary of Occupational Titles, categorized jobs by “Data/People/Things.” See Fine (1955), Fine and Wiley (1971), Autor et al. (2003), Acemoglu and Autor (2011), and Deming (2017).</p></li><li><p>Precise definitions of a robot vary. We describe robots in our exposure prompt (Appendix F.3), and rely on Claude to judge which machines meet this criterion. The International Organization for Standardization defines a robot as a “programmed actuated mechanism with a degree of autonomy to perform locomotion, manipulation or positioning” and autonomy as the “ability to perform intended tasks based on current state and sensing, without human intervention” (ISO 2021).</p></li><li><p>Our focus on what today’s robots can do is similar to Eloundou et al. (2024), who measure AI exposure by what tasks LLMs could speed up as of 2023. Other AI exposure measures are described in Massenkoff and McCrory (2026).</p></li><li><p>See Autor (2015) on “environmental control” as a bottleneck to automation, and Autor et al. (2020) on how integration slows robot adoption. A report on the economic impacts of robotics for the National Institute of Standards and Technology highlights robot capabilities in unstructured environments; see Section 6 of Link et al. (2016). Kober et al. (2013), Ibarz et al. (2021), and Kim et al. (2025) discuss how robot performance generalizes to new tasks and environments. See Firoozi et al. (2025) on robotic foundation models versus specialized robot control systems. For surveys on progress in robotic manipulation, see Kemp et al. (2007) and Kroemer et al. (2021). See Pumacay et al. (2024) for manipulation benchmarks. For an inventory of robot capabilities in complex environments, see Rivière and Denain (2026).</p></li><li><p>Mason (2018) and Tedrake (2026), for example, discuss the complex skills robots need to manipulate objects.</p></li><li><p>See for example Madrigal (2017) on a mock town at a former Air Force base and University of Michigan (2015) on Mcity, a similar facility.</p></li><li><p>Our ratings indeed score this task E3 today and E1 in a version of our measure that rates exposure as of 2008 (Appendix B). As in our rubric, performance in unstructured environments factors into standards for autonomous vehicle performance; see SAE International (2021).</p></li><li><p>Moravec (1988) notably makes this point. See also Polanyi (1966), applied to automation in Autor (2015).</p></li><li><p>Appendix A.4 presents variants of our exposure measure; these produce a similar ranking of jobs by exposure.</p></li><li><p>See the Built Robotics Exosystem (2026).</p></li><li><p>Results are similar when also weighting across occupations by usual weekly hours from the 2020–2024 American Community Survey.</p></li><li><p>Humans also work in controlled environments: tasks like “Deliver medications or pharmaceutical supplies to patients, nursing stations, or surgery” are done in hospitals and clinics. In Appendix A.4 we measure robot exposure by the gap between where robots can do a task and where humans do it. This produces nearly the same ranking of jobs by exposure.</p></li><li><p>The Robot Report (2024).</p></li><li><p>See the Boston Dynamics Stretch.</p></li><li><p>See Pallottino (2026).</p></li><li><p>Employment data in Figure 4 come from the BLS OEWS, so independent contractors for ride-sharing services are excluded from taxi driver employment.</p></li><li><p>Early evidence suggests pay declines for drivers exposed to autonomous ride-hailing. See Gridwise (2025) and Yu et al. (2026).</p></li><li><p>See Amazon’s Vulcan robot.</p></li><li><p>See the Badger Marty and the Simbe Tally.</p></li><li><p>See the Telexistence TX SCARA.</p></li><li><p>See the Canvas drywall robot.</p></li><li><p>See the AMP Cortex (Waste360, 2023).</p></li><li><p>Restricting to physical jobs (at least half physical by work time), exposed workers are still paid less, less educated, less often female, more often Hispanic, and more often unemployed, though most gaps are somewhat smaller.</p></li><li><p>See for example Massenkoff and McCrory (2026).</p></li><li><p>Deming (2017) and Frey and Osborne (2017).</p></li><li><p>Analyses of automation and the labor market in the past few decades generally emphasize computers and software over physical automation. See for example Autor et al. (2003) on computerization and Acemoglu and Restrepo (2020) on the limited total impact of robots on US jobs so far. Svanberg et al. (2024) estimate costs to automate computer vision tasks.</p></li><li><p>We instruct Claude to include costs of the robot itself, accessories, integration and installation, maintenance and service, software, energy and other operating inputs, oversight and operation, insurance, and end-of-life decommissioning, plus any other costs. Claude annualizes fixed costs with an estimated cost of capital.</p></li><li><p>We estimate total compensation by multiplying BLS occupation wages by the ratio between total compensation and wages plus paid leave by occupation group in the BLS Employer Costs for Employee Compensation survey. Total compensation includes paid leave, supplemental pay, insurance, retirement and savings, and legally required employer payments like FICA and unemployment insurance.</p></li><li><p>On automation in task models, see for example Zeira (1998), Acemoglu and Autor (2011), and Acemoglu and Restrepo (2018).</p></li><li><p>In these comparisons, robots may be cheaper than workers but only do a few of their tasks. For example, archivists perform two physical tasks; their only robot-exposed one is “Preserve records, documents, and objects, copying records to film, videotape, audiotape, disk, or computer formats as necessary.” We estimate that it costs $5,500 per year for robots to do this task. Archivists spend about 8% of their time on it, and their median total compensation is $85,000, so labor costs for this task are $6,800 per year. Robots are cost-competitive for this task, but automating one task is unlikely to displace archivists.</p></li><li><p>Cited robots and systems include the Douglas top-load case packer (packing), Boston Dynamics’ Stretch and Agility Robotics’ Digit (material handling), machine-vision inspection stations (inspection), the Combi robotic random case erector (carton assembly), print-and-apply labelers (labeling), and the 3M-Matic random case sealer (sealing).</p></li><li><p>See for example Honerkamp (2026) and Lung (2026).</p></li><li><p>August 2026 forecasts from the BLS Employment Projections program, 2025–35, Table 1.6. Packers and packagers rank 11th in job loss, behind correctional officers and jailers and 9 sales and office occupations (the SOC “high-level aggregation” name for groups 41 and 43). Employment data from the BLS OEWS for 2015 and 2025.</p></li><li><p>See for example the Path Robotics AW-3 autonomous welding cell.</p></li><li><p>Though cleaning robots might work longer hours, they are up to 10 times slower than humans. See Rivière and Denain (2026).</p></li><li><p>This figure includes tire builders and packers and packagers. In these occupations, at least 95% of tasks by work time are exposed to robots, and robot costs fall below total compensation for a share of workers.</p></li><li><p>See Davidson and Hadshar (2025) and Denain and Rivière (2026).</p></li><li><p>Compare LLM exposure in Eloundou et al. (2024) for computer programmers (25th most exposed by human raters, 6th by the LLM rater) and poets, lyricists and creative writers (11th by humans, 14th by the LLM). The two occupations were similarly exposed, but AI developers have since directed effort toward coding more than creative writing.</p></li></ol>]]></content:encoded>
+      <guid isPermaLink="true">https://www.anthropic.com/research/what-work-can-robots-do</guid>
+      <category>Economics</category>
+      <pubDate>Wed, 30 Sep 2026 00:00:00 +0000</pubDate>
+      <media:content url="https://www.anthropic.com/_next/image?url=https%3A%2F%2Fwww-cdn.anthropic.com%2Fimages%2F4zrzovbb%2Fwebsite%2Ffbed704c01c8149969125dcab143c9baf921ed76-7680x2792.png&amp;amp;w=3840&amp;amp;q=75" type="image/jpeg" medium="image"/>
+    </item>
     <item>
       <title>Introducing GPT-6.1 Sol</title>
       <link>https://openai.com/index/introducing-gpt-6-1-sol/</link>
@@ -1575,291 +1865,276 @@ VOICE: with the operator — direct, dollars first, no fluff. External — per t
       <media:content url="https://www.anthropic.com/_next/image?url=https%3A%2F%2Fwww-cdn.anthropic.com%2Fimages%2F4zrzovbb%2Fwebsite%2Fafd8e238255ec2654f2322f3d3630dcf1e8ea4ca-6800x3264.png&amp;amp;w=3840&amp;amp;q=75" type="image/jpeg" medium="image"/>
     </item>
     <item>
-      <title>Biosecurity at the frontier</title>
-      <link>https://x.ai/news/biosafety-at-the-frontier</link>
-      <description>LatchBio evaluated Grok's performance on biosecurity monitoring and adversarial biological tasks. They found that Grok 4.6 detects and refuses dangerous queries more reliably than any other frontier system.</description>
-      <content:encoded><![CDATA[<p>Today, <a href="https://latch.bio/">LatchBio</a> published an independent analysis of Grok 4.6 on their biological capability and biological red-teaming benchmark suites. These evaluations measure a wide range of characteristics and capabilities of tested models, including:</p>
-<ul>
-<li>Whether a model can distinguish between legitimate biological research and requests that conceal a biosecurity hazard</li>
-<li>Whether a model is useful in a biosecurity and biomonitoring role, by being able to detect and characterize emerging pathogens and patterns of transmission</li>
-</ul>
-<p>On LatchBio's BioSecBench-Refusal suite, Grok 4.6 was the strongest model tested at refusing disguised and hazardous tasks while still completing routine biological work. It was the only system to score above 50% on both measures.</p>
-<h2 id="methodology-and-context">Methodology and context</h2>
-<p>Biology and biological research present domains where the opportunities and risks of highly capable AI systems are well-known and challenging to disentangle. In designing our safeguards, we aim to maximize the utility of our agents in assisting and accelerating legitimate scientific research, while minimizing the risks they present through incorrect information and adversarial use.</p>
-<p>LatchBio's two benchmarks most relevant to the above capabilities measure whether an agent can distinguish concealed hazards from ordinary science, and whether it can carry out the pathogen surveillance workflows public-health work depends on. They are:</p>
-<ul>
-<li><strong>BioSecBench-Refusal</strong>, which pairs routine biological tasks, adapted from published literature, with 46 red-team tasks that look like ordinary research and hide the hazard in attached scientific data, mislabeled files, or other intentionally obfuscated tasks. This evaluation is calibrated around understanding the intent of a task: an agent that only reacts to words like "pathogen" or "toxin" will block the routine set and miss the red-team set, while one that inspects the data can tell the two apart.</li>
-<li><strong>BioSecBench-Surveillance</strong>, which tests whether an agent can carry out pathogen genomic surveillance workflows of the kind used in public-health monitoring. Those tasks require chaining file inspection, tool use, and scientific judgment on messy sequencing data.</li>
-</ul>
-<h2 id="results-and-key-findings">Results and key findings</h2>
-<p>In testing on BioSecBench-Refusal, LatchBio found that Grok 4.6 detects and refuses red-team and otherwise dangerous queries more reliably than any other frontier system tested, while not diminishing performance on routine biological work. Grok 4.6 also performs comparably with other frontier models on biosurveillance work. LatchBio notes that evaluations were performed on a variety of agent harnesses to remove confounds, and that unless otherwise noted, agents were tested at their highest-offered effort levels.</p>
-<p>The score presented by LatchBio is a trial-weighted harmonic mean of red-team refusal and routine compliance. We analyze this metric and standalone refusal rate independently. Across different harnesses, Grok 4.6 holds the top three spots, averaging 62.1%. Considering refusals and task compliance independently, Grok 4.6 refused 59.2% of red-team tasks and completed 64.8% of routine ones. It is the only model tested that scored above 50% on both measures.</p>
-<p>On BioSecBench-Surveillance, Grok 4.6 averages a success rate of 53.5%, sitting behind Opus 5 and ahead of GPT-5.6 Sol on biosecurity and monitoring work. The results on both benchmarks indicate an agent and underlying model well-calibrated for routine and helpful biological work, as well as one highly capable in biosecurity work and monitoring.</p>
-<p>On evaluations of general routine biological capability performed by LatchBio (such as SpatialBench or TxBench-PP), Grok is found to match or exceed other frontier models in a wide range of agentic biological work. These are presented in greater detail at <a href="https://benchmarks.bio">benchmarks.bio</a>.</p>
-<h2 id="analyzing-refusal-behavior">Analyzing refusal behavior</h2>
-<p>In evaluation traces, Grok 4.6 is observed reasoning over the contents of a task and testing environment to assess intent before proceeding or refusing. Frequently, Grok will find discrepancies between the stated intent in the prompt and environment, or will assemble intent from high-risk content disguised by filenames and encryption, and will subsequently refuse. On obviously benign and low-risk tasks, Grok exhibits the same environment-reasoning behavior, but is able to assess tasks as safe.</p>
-<h2 id="how-we-safeguard-grok">How we safeguard Grok</h2>
-<p>Before we release a model, we test biological capability in addition to other domains of risk, and validate that the capabilities of our models are adequately safeguarded against misuse. The work of third-party evaluators such as LatchBio complements the evaluations we perform internally, both pre- and post-deployment, for the models we serve.</p>
-<p>Grok's safeguards are built in layers to establish defense-in-depth. Refusal training is performed to teach the model how and when to refuse, to correctly infer the intent and risk profile of tasks, and to refuse correctly in highly adversarial scenarios. We train and deploy inference-time safeguards to reject harmful requests before they ever reach the model, and we implement behavioral controls to further safeguard the model when deployed. Post-deployment monitoring is performed to detect and stop patterns of adversarial use at the session and user level, and provides a source of feedback for continuous calibration of our model deployments.</p>
-<p>We observe a material improvement in Grok 4.6's capabilities in biological work over historically tested models, with substantial gains in refusal and biosecurity performance over Grok 4.5 and Grok 4.3. We intend our ongoing and novel safeguards work to allow us to continue serving frontier-scale intelligence safely across future model releases.</p>
-<h2 id="the-future-of-biosecurity-and-scientific-discovery">The future of biosecurity and scientific discovery</h2>
-<p>The line between actively adversarial tasks and helpful use grows thinner as models rapidly become more capable and autonomous, and safeguards will need to evolve accordingly. To control for the greater risk implied by improved model capability and agency, we will perform wider, more ambitious testing and calibration of our models and agentic systems: broader pre-deployment suites, more third-party evaluations, improved post-deployment monitoring, and deployments of our models with companies and institutions at the frontier of biology.</p>
-<p>Similarly, there is a risk inherent in overrefusals and miscalibrated safeguards. When a model refuses routine and helpful biological work, the ability of healthcare professionals, researchers, and monitoring programs to detect outbreaks early and perform other critical work in the field is degraded. We gauge this risk as equally serious as the risk of aiding malicious use.</p>
-<p>Grok is already used in scientific work, including general biological research and biosecurity monitoring, and we are optimistic about the ability of highly capable models to rapidly accelerate scientific discovery and shorten the path from the lab to practical use. We are committed to continuing to serve frontier intelligence securely and safely to the engineers, researchers, enterprises, and institutions advancing the life sciences.</p>
-<p>LatchBio's full methods and per-model scores are presented at <a href="https://benchmarks.bio">benchmarks.bio</a>. LatchBio's complementary blog, the Grok 4.6 model card, and SpaceXAI's Frontier Artificial Intelligence Framework are linked below.</p>
-<ul>
-<li><a href="https://blog.latch.bio/p/analyzing-grok46-safeguards">LatchBio blog</a></li>
-<li><a href="https://media.x.ai/v1/website/card-4p6-4cd2dc57.pdf">Grok 4.6 model card</a></li>
-<li><a href="https://media.x.ai/v1/website/xai-frontier-artificial-intelligence-framework-30-june-2026-99c40684.pdf">Frontier Artificial Intelligence Framework</a></li>
-</ul>]]></content:encoded>
-      <guid isPermaLink="true">https://x.ai/news/biosafety-at-the-frontier</guid>
+      <title>Grok Bot now works with X</title>
+      <link>https://x.ai/news/grok-bot-and-x</link>
+      <description>Grok Bot now has a tighter integration with X.</description>
+      <guid isPermaLink="true">https://x.ai/news/grok-bot-and-x</guid>
       <category>News</category>
       <pubDate>Fri, 04 Sep 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Grok 4.6 on Microsoft Foundry</title>
-      <link>https://x.ai/news/grok-4-6-microsoft-foundry</link>
-      <description>Grok 4.6 is now available via Microsoft Foundry.</description>
-      <content:encoded><![CDATA[<p>Today, we’re excited to announce that Grok 4.6 is now available on Microsoft Foundry.</p>
-<p>Grok 4.6 is our latest flagship model, built for long-running agents and ambitious interactive and visual work. It offers a 500k context window and configurable reasoning efforts (low, medium, high, xhigh).</p>
-<p>For more on the model, read the <a href="https://x.ai/news/grok-4-6">Grok 4.6 announcement</a>.</p>
-<h2 id="build-with-grok-46-on-microsoft-foundry">Build with Grok 4.6 on Microsoft Foundry</h2>
-<p>Foundry gives organizations a single place to evaluate Grok 4.6 against other frontier models, run workload-specific tests, deploy managed endpoints, and operate with enterprise security and governance controls.</p>
-<p>If you are building coding agents, engineering copilots, research assistants, or enterprise automation, you can get started in the <a href="https://ai.azure.com/catalog/models">Foundry model catalog</a>. See Microsoft’s announcement, <a href="https://techcommunity.microsoft.com/blog/azure-ai-foundry-blog/grok-4-6-comes-to-microsoft-foundry-models-built-for-long-horizon-reasoning-and-/4547578">Grok 4.6 comes to Microsoft Foundry Models</a>, and our <a href="https://docs.x.ai/developers/community/microsoft-foundry">Microsoft Foundry integration guide</a> for deployment details.</p>]]></content:encoded>
-      <guid isPermaLink="true">https://x.ai/news/grok-4-6-microsoft-foundry</guid>
+      <title>Grok Bot is now included with more plans</title>
+      <link>https://x.ai/news/grok-bot-more-plans</link>
+      <description>Grok Bot is now available for SuperGrok, Cursor Pro, and all Cursor Teams plans.</description>
+      <guid isPermaLink="true">https://x.ai/news/grok-bot-more-plans</guid>
       <category>News</category>
       <pubDate>Fri, 04 Sep 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Grok 4.6 in GitHub Copilot</title>
-      <link>https://x.ai/news/grok-4-6-github-copilot</link>
-      <description>Grok 4.6, our latest coding model, is now available in GitHub Copilot.</description>
-      <content:encoded><![CDATA[<a href="https://console.x.ai/team/default/api-keys?campaign=grok-4-6-github-copilot-blog&amp;utm_source=website&amp;utm_medium=referral&amp;utm_campaign=grok-4-6-github-copilot-blog">Try Grok 4.6 in the API</a>
-<a href="https://github.com/features/copilot">Open GitHub Copilot</a>]]></content:encoded>
-      <guid isPermaLink="true">https://x.ai/news/grok-4-6-github-copilot</guid>
-      <category>News</category>
-      <pubDate>Fri, 04 Sep 2026 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Introducing Grok 4.6</title>
-      <link>https://x.ai/news/grok-4-6</link>
-      <description>Grok 4.6 builds on Grok 4.5 with a particular focus on long-running agents and more ambitious interactive and visual work.</description>
-      <guid isPermaLink="true">https://x.ai/news/grok-4-6</guid>
-      <category>News</category>
-      <pubDate>Fri, 04 Sep 2026 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Introducing Grok Bot</title>
-      <link>https://x.ai/news/introducing-grok-bot</link>
-      <description>Grok Bot is your team of always-on agents. They have their own computer, work inside tools and apps like you do, and keep working 24/7.</description>
-      <guid isPermaLink="true">https://x.ai/news/introducing-grok-bot</guid>
-      <category>News</category>
-      <pubDate>Fri, 04 Sep 2026 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Imagine Video 1.5 with References</title>
-      <link>https://x.ai/news/grok-imagine-video-1-5-references</link>
-      <description>Our best video model, now with text, image, and voice references — generating up to 1080p.</description>
-      <content:encoded><![CDATA[<a href="https://grok.com/imagine?referrer=website&amp;campaign=imagine-video-1-5-references-blog">Open Grok.com</a>]]></content:encoded>
-      <guid isPermaLink="true">https://x.ai/news/grok-imagine-video-1-5-references</guid>
-      <category>News</category>
-      <pubDate>Fri, 04 Sep 2026 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Grok 4.5 in GitHub Copilot</title>
-      <link>https://x.ai/news/grok-github-copilot</link>
-      <description>Grok 4.5, our smartest coding model, is now available in GitHub Copilot.</description>
-      <content:encoded><![CDATA[<a href="https://console.x.ai/team/default/api-keys?campaign=grok-github-copilot-blog&amp;utm_source=website&amp;utm_medium=referral&amp;utm_campaign=grok-github-copilot-blog">Try Grok 4.5 in the API</a>
-<a href="https://github.com/features/copilot">Open GitHub Copilot</a>]]></content:encoded>
-      <guid isPermaLink="true">https://x.ai/news/grok-github-copilot</guid>
-      <category>News</category>
-      <pubDate>Fri, 04 Sep 2026 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Grok in Google Workspace</title>
-      <link>https://x.ai/news/introducing-google-workspace-addon</link>
-      <description>Use the Grok add-on for Google Workspace to work directly in Sheets, Slides, and Docs.</description>
-      <guid isPermaLink="true">https://x.ai/news/introducing-google-workspace-addon</guid>
-      <category>News</category>
-      <pubDate>Fri, 04 Sep 2026 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Workflows in Grok Build</title>
-      <link>https://x.ai/news/workflows</link>
-      <description>Grok Build can now write and run workflows: orchestration scripts that fan a task out across hundreds of parallel agents, verify the results, and report back in one background run.</description>
-      <guid isPermaLink="true">https://x.ai/news/workflows</guid>
-      <category>News</category>
-      <pubDate>Fri, 04 Sep 2026 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Grok Build is Now Open Source</title>
-      <link>https://x.ai/news/grok-build-open-source</link>
-      <description>Explore the harness behind our coding agent and TUI.</description>
-      <content:encoded><![CDATA[<a href="https://github.com/xai-org/grok-build">View on GitHub</a>]]></content:encoded>
-      <guid isPermaLink="true">https://x.ai/news/grok-build-open-source</guid>
-      <category>News</category>
-      <pubDate>Fri, 04 Sep 2026 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Grok for Word</title>
-      <link>https://x.ai/news/introducing-word-addin</link>
-      <description>Use the Grok add-in for Microsoft Word to turn notes into documents, style and format your work, or bring research from the web into Word.</description>
-      <guid isPermaLink="true">https://x.ai/news/introducing-word-addin</guid>
-      <category>News</category>
-      <pubDate>Fri, 04 Sep 2026 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Grok on Amazon Bedrock</title>
-      <link>https://x.ai/news/grok-amazon-bedrock</link>
-      <description>Grok models are now available via Amazon Bedrock.</description>
-      <content:encoded><![CDATA[<p>Today, we’re excited to announce that Grok 4.3 is now generally available on Amazon Bedrock.</p>
-<p>Grok 4.3 achieves the lowest hallucination rate among frontier models, offers 1-million-token context window, and supports configurable reasoning efforts (none, low, medium, high). Now, Amazon Bedrock users can leverage the model through Bedrock’s secure and reliable inference engine.</p>
-<h2 id="leading-performance-in-enterprise">Leading Performance in Enterprise</h2>
-<p>Grok 4.3 is one of the strongest models available today for building enterprise-ready AI agents:</p>
-<ul>
-<li>#1 on Artificial Analysis Omniscience benchmark*, achieving the lowest hallucination rate among frontier models.</li>
-<li>#1 on Artificial Analysis Tau2 Telecom benchmark*, which evaluates real-world tool-calling performance in customer support agent scenarios.</li>
-<li>#1 on Vals AI Case Law and Corporate Finance benchmarks, which measure Grok's capabilities in complex document understanding tasks.</li>
-</ul>
-<small><em>* In comparison to major frontier labs</em></small>
+      <title>Grok 4.6 on Gemini Enterprise Agent Platform</title>
+      <link>https://x.ai/news/grok-4-6-vertex-ai</link>
+      <description>Grok 4.6 is now available via Gemini Enterprise Agent Platform.</description>
+      <content:encoded><![CDATA[<p>Today, we’re excited to announce that Grok 4.6 is now available on Gemini Enterprise Agent Platform.</p>
+<p>Grok 4.6 is our latest flagship model, built for long-running agents and ambitious interactive and visual work. It offers a 500k context window and configurable reasoning efforts (low, medium, high, xhigh). Now, Gemini Enterprise Agent Platform users can use the model through <a href="https://console.cloud.google.com/agent-platform/publishers/xai/model-garden/grok-4.6">Model Garden</a>.</p>
 <h2 id="capabilities--pricing">Capabilities &amp; Pricing</h2>
-<p>Grok 4.3 sits on the Pareto frontier for intelligence versus cost, delivering 2-10x more intelligence per dollar than other frontier models.</p>
+<p>Grok 4.6 is available for:</p>
 <ul>
-<li><strong>Input</strong>: $1.25 per 1 million tokens</li>
-<li><strong>Output</strong>: $2.50 per 1 million tokens</li>
+<li><strong>Input</strong>: $2 per 1 million tokens</li>
+<li><strong>Cached input</strong>: $0.50 per 1 million tokens</li>
+<li><strong>Output</strong>: $6 per 1 million tokens</li>
 </ul>
-<p>It features a 1 million context window that handles extremely long documents and codebases with ease. Developers can also configure reasoning: Use <code>none</code> for maximum speed on simple requests, or <code>low</code> / <code>medium</code> / <code>high</code> to scale reasoning effort to the difficulty of the problem.</p>
-<h2 id="build-with-grok-43-on-amazon-bedrock">Build with Grok 4.3 on Amazon Bedrock</h2>
-<p>Grok 4.3 is now available to all developers in <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-xai-grok-4-3.html#model-card-xai-grok-4-3-programmatic-access">supported AWS Regions</a>.</p>
-<pre><code>curl https://bedrock-mantle.us-west-2.api.aws/openai/v1/responses \
-  -H "Content-Type: application/json" \
-  -H "Authorization: Bearer $BEDROCK_API_KEY" \
-  -d '{
-    "model": "grok-4.3",
-    "input": "What is the meaning of life?",
-    "reasoning": {
-        "effort": "low"
-    },
-    "include": ["reasoning.encrypted_content"]
-  }'
+<p>For more on the model, read the <a href="https://x.ai/news/grok-4-6">Grok 4.6 announcement</a>.</p>
+<h2 id="build-with-grok-46-on-gemini-enterprise-agent-platform">Build with Grok 4.6 on Gemini Enterprise Agent Platform</h2>
+<p>Grok 4.6 is now available to developers in Model Garden. To get started, visit the <a href="https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/partner-models/grok/grok-4-6">Grok 4.6 model card</a>. We're excited to see what you build!</p>]]></content:encoded>
+      <guid isPermaLink="true">https://x.ai/news/grok-4-6-vertex-ai</guid>
+      <category>News</category>
+      <pubDate>Fri, 04 Sep 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Grok 4.6 on Amazon Bedrock</title>
+      <link>https://x.ai/news/grok-4-6-amazon-bedrock</link>
+      <description>Grok 4.6 is now available via Amazon Bedrock.</description>
+      <content:encoded><![CDATA[<p>Today, we’re excited to announce that Grok 4.6 is now generally available on Amazon Bedrock.</p>
+<p>Grok 4.6 is our latest flagship model, built for long-running agents and ambitious interactive and visual work. It offers 500k context window and configurable reasoning efforts (low, medium, high, xhigh). Now, Amazon Bedrock users can leverage the model through Amazon Bedrock.</p>
+<h2 id="capabilities--pricing">Capabilities &amp; Pricing</h2>
+<p>Grok 4.6 is available for:</p>
+<ul>
+<li><strong>Input</strong>: $2 per 1 million tokens</li>
+<li><strong>Cached input</strong>: $0.50 per 1 million tokens</li>
+<li><strong>Output</strong>: $6 per 1 million tokens</li>
+</ul>
+<p>For more on the model, read the <a href="https://x.ai/news/grok-4-6">Grok 4.6 announcement</a>.</p>
+<h2 id="build-with-grok-46-on-amazon-bedrock">Build with Grok 4.6 on Amazon Bedrock</h2>
+<p>Grok 4.6 is now available to all developers in supported AWS Regions. Please visit AWS documentation to get started - we're excited to see what you build!</p>]]></content:encoded>
+      <guid isPermaLink="true">https://x.ai/news/grok-4-6-amazon-bedrock</guid>
+      <category>News</category>
+      <pubDate>Fri, 04 Sep 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Grok Build on web and mobile</title>
+      <link>https://x.ai/news/grok-build-for-everyone</link>
+      <description>Grok Build is now available on every plan, on the web and on mobile.</description>
+      <guid isPermaLink="true">https://x.ai/news/grok-build-for-everyone</guid>
+      <category>News</category>
+      <pubDate>Fri, 04 Sep 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Introducing Grok Voice Think Fast 2.0</title>
+      <link>https://x.ai/news/grok-voice-think-fast-2</link>
+      <description>Introducing our most capable speech-to-speech voice model.</description>
+      <guid isPermaLink="true">https://x.ai/news/grok-voice-think-fast-2</guid>
+      <category>News</category>
+      <pubDate>Fri, 04 Sep 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Introducing Build Mode</title>
+      <link>https://x.ai/news/grok-build-mode</link>
+      <description>Create and share websites, apps, games, and interactive dashboards. Now in Early Beta for SuperGrok Heavy subscribers on grok.com, iOS, and Android.</description>
+      <guid isPermaLink="true">https://x.ai/news/grok-build-mode</guid>
+      <category>News</category>
+      <pubDate>Fri, 04 Sep 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Introducing the Voice Agent Builder</title>
+      <link>https://x.ai/news/grok-voice-agent-builder</link>
+      <description>Create a personalized voice agent in under 2 minutes without a single line of code.</description>
+      <guid isPermaLink="true">https://x.ai/news/grok-voice-agent-builder</guid>
+      <category>News</category>
+      <pubDate>Fri, 04 Sep 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Introducing /goal</title>
+      <link>https://x.ai/news/introducing-goal</link>
+      <description>Use /goal for long-running autonomous task execution in Grok Build.</description>
+      <content:encoded><![CDATA[<p>Today we're introducing <code>/goal</code> in Grok Build. This new mode yields long-running, autonomous execution, helping you hand off larger implementation tasks to the agent.</p>
+<p>Available now in Grok Build. Install with a single command and sign in with your account:</p>
+<p>Most coding sessions require back-and-forth execution and verification. With <code>/goal</code>, the agent continues until a task is completed and verified, whether that means reviewing code, inspecting webpages, or executing scripts.</p>
+<h2 id="set-a-goal-in-one-line">Set a goal in one line</h2>
+<p>Give <code>/goal</code> an objective and Grok Build takes it from there:</p>
+<pre><code>/goal Migrate the auth module to the new API
 </code></pre>
-<p>To get started, please visit the <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-xai-grok-4-3.html#model-card-xai-grok-4-3-sample-code">Grok on Amazon Bedrock documentation</a>. We're excited to see what you build!</p>]]></content:encoded>
-      <guid isPermaLink="true">https://x.ai/news/grok-amazon-bedrock</guid>
+<p>It plans an approach, breaks the work into a progress checklist, and starts executing. You can keep sharing additional instructions with the agent as it works.</p>
+<p>The new mode offers additional commands for monitoring and steering long-running tasks:</p>
+<pre><code>/goal status     # see the live progress panel
+/goal pause      # stop work, keep the goal
+/goal resume     # pick back up
+/goal clear      # drop the goal entirely
+</code></pre>
+<p>When the goal is finished, the panel flips to <strong>Complete</strong> with every checklist item checked.</p>
+<h2 id="getting-started">Getting started</h2>
+<p>Install Grok Build with the command above, then invoke <code>/goal</code> to hand off your first long-running task.</p>]]></content:encoded>
+      <guid isPermaLink="true">https://x.ai/news/introducing-goal</guid>
       <category>News</category>
       <pubDate>Fri, 04 Sep 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Grok Imagine Video 1.5</title>
-      <link>https://x.ai/news/grok-imagine-video-1-5</link>
-      <description>Improved quality at even faster speeds.</description>
-      <guid isPermaLink="true">https://x.ai/news/grok-imagine-video-1-5</guid>
+      <title>Grok on Databricks</title>
+      <link>https://x.ai/news/grok-databricks</link>
+      <description>Grok models are now available on Databricks Agent Bricks.</description>
+      <content:encoded><![CDATA[<p>We're excited to share that Grok models are now natively available on Databricks Agent Bricks, Databricks' developer agent platform.</p>
+<p>As part of the Databricks 2026 Data + AI Summit, Databricks is partnering with SpaceXAI to make Grok available alongside other frontier and open-source models in a single, governed platform.</p>
+<p>Agent Bricks connects context (derived from data in Lakehouse) with control and choice, enabling engineering teams to effectively build AI agents that operate on large volumes of data.</p>
+<p>Together with <a href="https://x.ai/news/grok-amazon-bedrock">Grok on Amazon Bedrock</a>, enterprises have more ways to run SpaceXAI models where their data already lives.</p>
+<p>For more on Agent Bricks, see the <a href="https://www.databricks.com/blog/agent-bricks-dais-2026">Databricks announcement</a>.</p>]]></content:encoded>
+      <guid isPermaLink="true">https://x.ai/news/grok-databricks</guid>
       <category>News</category>
       <pubDate>Fri, 04 Sep 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Grok Imagine 1.5 Preview</title>
-      <link>https://x.ai/news/grok-imagine-1-5</link>
-      <description>grok-imagine-video-1.5-preview, our latest image-to-video model, is now available via the xAI API in preview.</description>
-      <guid isPermaLink="true">https://x.ai/news/grok-imagine-1-5</guid>
+      <title>Grok for PowerPoint</title>
+      <link>https://x.ai/news/introducing-powerpoint-addin</link>
+      <description>Grok now works inside Microsoft PowerPoint — turn outlines into slides, expand the deck, and tighten the narrative without leaving the app.</description>
+      <guid isPermaLink="true">https://x.ai/news/introducing-powerpoint-addin</guid>
       <category>News</category>
       <pubDate>Fri, 04 Sep 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Grok Build 0.1 on API</title>
-      <link>https://x.ai/news/grok-build-0-1</link>
-      <description>Grok Build 0.1, our fastest coding model, is now available via the xAI API in public beta.</description>
-      <guid isPermaLink="true">https://x.ai/news/grok-build-0-1</guid>
+      <title>Agent Dashboard in Grok Build</title>
+      <link>https://x.ai/news/agent-dashboard</link>
+      <description>Manage many coding sessions at once. See what each is doing, reply to the ones that need you, and dispatch new work.</description>
+      <content:encoded><![CDATA[<p>The Agent Dashboard puts every Grok Build session on one screen. See what each is doing, run them in parallel, and step in only when input is needed.</p>
+<p>Run <code>grok dashboard</code> from your shell, or <code>/dashboard</code> (<code>Ctrl+\</code>) from inside any session.</p>
+<h2 id="see-every-session-at-a-glance">See every session at a glance</h2>
+<p>The dashboard sorts sessions by state, with anything waiting for input pulled to the top, so you handle blockers first and leave the rest running. A quick scan shows what each session is doing and for how long, so you stay oriented without opening anything.</p>
+<p>Spread across repos? Group by working directory with <code>Ctrl+S</code>. Subagents roll up under the session that launched them, so the list shows the work you dispatched, not the fan-out beneath it.</p>
+<h2 id="peek-and-reply">Peek and reply</h2>
+<p>Select a row to peek at its latest output without leaving the dashboard, then reply from there. Idle sessions send immediately; active ones queue your message until the current turn ends.</p>
+<p>When a session requests approval or asks a question, its options appear inline. Answer with the arrow or number keys to continue. Multi-part questions arrive one at a time.</p>
+<h2 id="dispatch-new-sessions">Dispatch new sessions</h2>
+<p>The input at the bottom starts a new session. <code>Enter</code> dispatches it and keeps you on the dashboard; <code>Shift+Enter</code> dispatches and opens it right away. Before sending, set the model, start in plan mode, or let the session approve its own edits.</p>
+<h2 id="take-over-any-session">Take over any session</h2>
+<p>Open any session to take over its full conversation. Cycle to the next or previous session without returning to the list, then drop back to the dashboard when you're done. Closing the dashboard leaves every session running, and they're all there when you reopen it.</p>
+<h2 id="get-started">Get started</h2>
+<p>The Agent Dashboard ships with Grok Build. Install it with a single command, then run <code>grok dashboard</code>, or <code>/dashboard</code> from any session you already have open.</p>]]></content:encoded>
+      <guid isPermaLink="true">https://x.ai/news/agent-dashboard</guid>
       <category>News</category>
       <pubDate>Fri, 04 Sep 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Use Grok in Kilo Code</title>
-      <link>https://x.ai/news/grok-kilocode</link>
-      <description>Use your SuperGrok or X Premium+ subscription inside Kilo Code, the open-source agentic coding platform.</description>
-      <content:encoded><![CDATA[<p>Starting today, you can use your Grok subscription directly inside <a href="https://kilo.ai/">Kilo Code</a>.</p>
-<p>Kilo Code is the open-source agentic engineering platform for VS Code, JetBrains IDEs, and the terminal. It offers specialized modes for planning, coding, debugging, and orchestration, along with powerful tool use, browser automation, MCP extensibility, and support for 500+ models. Kilo is designed for real software engineering workflows and agentic use cases.</p>
-<p>With your X Premium+ or SuperGrok subscription, connect your Grok account to use the latest Grok models — including Grok Build for agentic coding — inside Kilo Code with no separate API key.</p>
+      <title>Use Grok in Warp</title>
+      <link>https://x.ai/news/grok-warp</link>
+      <description>Use your Grok and X Premium subscription inside Warp.</description>
+      <content:encoded><![CDATA[<p>You can now use your Grok or X Premium subscription inside <a href="https://www.warp.dev/">Warp</a>, an agentic development environment built on the terminal and used by almost one million developers.</p>
+<p>Your existing subscription provides access to Grok models, including <code>grok-build-0.1</code>, the model powering <a href="https://x.ai/build">Grok Build</a>.</p>
 <h2 id="setup">Setup</h2>
-<p>Kilo Code offers IDE extensions, a CLI, and a web surface. To connect your xAI account, follow the instructions below:</p>
-<p><strong>VS Code:</strong></p>
 <ol>
-<li>Install <a href="https://marketplace.visualstudio.com/items?itemName=kilocode.Kilo-Code">Kilo Code</a> from the VS Code Marketplace.</li>
-<li>Open <strong>Settings</strong> (gear icon) and go to the <strong>Providers</strong> tab.</li>
-<li>Click <strong>Show more providers</strong>, then search for or select <strong>xAI</strong>.</li>
-<li>Choose the <strong>xAI Grok OAuth (SuperGrok Subscription)</strong> sign-in option and complete the OAuth flow in your browser.</li>
+<li>Download Warp from <a href="https://www.warp.dev/download">warp.dev/download</a> and open it.</li>
+<li>Open the "Agent &gt; Warp Agent" settings page and click "Connect SuperGrok subscription"</li>
+<li>Switch to the <code>grok-build-0.1</code> model and start prompting.</li>
 </ol>
-<p>For headless or remote environments (VPS, SSH, Docker, WSL), choose <strong>xAI Grok OAuth (Headless / Remote / VPS)</strong> instead.</p>
-<p><strong>CLI:</strong></p>
-<pre><code>npm install -g @kilocode/cli
-</code></pre>
-<p>Run <code>kilo</code> in your project directory and use the <code>/connect</code> command to add xAI.</p>
-<p>For more details, see the <a href="https://kilo.ai/docs/ai-providers/xai">Kilo Code xAI provider documentation</a>.</p>
-<p>More open-source agents and integrations are coming soon.</p>]]></content:encoded>
-      <guid isPermaLink="true">https://x.ai/news/grok-kilocode</guid>
+<p>That's it! More agents and integrations are coming soon to SuperGrok and X Premium subscribers. To subscribe, visit the <a href="https://x.ai/pricing">pricing page</a>.</p>]]></content:encoded>
+      <guid isPermaLink="true">https://x.ai/news/grok-warp</guid>
       <category>News</category>
       <pubDate>Fri, 04 Sep 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Use Grok in OpenCode</title>
-      <link>https://x.ai/news/grok-opencode</link>
-      <description>Use your SuperGrok or X Premium subscription inside OpenCode.</description>
-      <content:encoded><![CDATA[<p>After connecting your Grok account, start coding with Grok Build, the same model that powers xAI's <a href="https://x.ai/build">terminal-based coding agent</a>.</p>
-<h2 id="setup">Setup</h2>
-<p>Install OpenCode:</p>
-<pre><code>curl -fsSL https://opencode.ai/install | bash
-</code></pre>
-<p>Launch OpenCode:</p>
-<pre><code>opencode
-</code></pre>
-<p>Inside OpenCode, run <code>/connect</code> and pick <strong>xAI</strong>:</p>
-<pre><code>/connect
-</code></pre>
-<p>Pick the sign-in method that fits your setup — both use your Grok subscription:</p>
+      <title>Grok Build Plugin Marketplace</title>
+      <link>https://x.ai/news/grok-plugin-marketplace</link>
+      <description>Launching the built-in plugin marketplace for Grok Build.</description>
+      <content:encoded><![CDATA[<p>Today we're launching the <a href="https://github.com/xai-org/plugin-marketplace">Grok Build Plugin Marketplace</a> - a set of built-in plugins for <a href="https://x.ai/build">Grok Build</a>.</p>
+<p>A plugin bundles <a href="https://x.ai/news/grok-skills">skills</a>, slash commands, agents, hooks, MCP servers, and LSPs into one installable package. The marketplace is built into Grok Build, so you can browse, install, and update plugins without leaving your terminal.</p>
+<h2 id="available-at-launch">Available at launch</h2>
+<p>The marketplace opens with plugins from partners across the stack:</p>
 <ul>
-<li><strong>xAI Grok OAuth (SuperGrok Subscription)</strong> — opens your browser to sign in.</li>
-<li><strong>xAI Grok OAuth (Headless / Remote / VPS)</strong> — prints a code and URL for SSH or remote hosts.</li>
+<li><strong><a href="https://www.mongodb.com/docs/mcp-server/overview/">MongoDB</a></strong> — Explore data, manage collections, and optimize queries.</li>
+<li><strong><a href="https://github.com/vercel/vercel-plugin">Vercel</a></strong> — Manage deployments, check build status, and configure domains.</li>
+<li><strong><a href="https://github.com/getsentry/sentry-for-ai">Sentry</a></strong> — Analyze stack traces and debug production errors.</li>
+<li><strong><a href="https://github.com/ChromeDevTools/chrome-devtools-mcp">Chrome DevTools</a></strong> — Control a live browser, record performance traces, and inspect network requests.</li>
+<li><strong><a href="https://github.com/cloudflare/skills">Cloudflare</a></strong> — Skills for Workers, Durable Objects, and more.</li>
+<li><strong><a href="https://github.com/obra/superpowers">Superpowers</a></strong> — Popular agent-driven workflows.</li>
 </ul>
-<p>More open-source agents and integrations are coming soon.</p>]]></content:encoded>
-      <guid isPermaLink="true">https://x.ai/news/grok-opencode</guid>
+<h2 id="install-in-seconds">Install in seconds</h2>
+<p>Inside Grok Build, type <code>/marketplace</code> to browse the catalog and press <code>i</code> to install a plugin. Or from the terminal:</p>
+<pre><code>grok plugin marketplace list
+grok plugin install &lt;name&gt; --trust
+</code></pre>
+<p>Every remote plugin in the catalog is pinned to a specific commit SHA, and Grok Build verifies the pin at install time.</p>
+<h2 id="publish-your-own">Publish your own</h2>
+<p>The marketplace is an open catalog. If you've built a plugin you want to share, submit a pull request to <a href="https://github.com/xai-org/plugin-marketplace">xai-org/plugin-marketplace</a>.</p>
+<h2 id="getting-started">Getting started</h2>
+<p>New to Grok Build? Visit <a href="https://x.ai/build">x.ai/build</a> to get started.</p>]]></content:encoded>
+      <guid isPermaLink="true">https://x.ai/news/grok-plugin-marketplace</guid>
       <category>News</category>
       <pubDate>Fri, 04 Sep 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Skills in web, iOS, and Android</title>
-      <link>https://x.ai/news/grok-skills</link>
-      <description>Persistent expertise for Grok. Generate documents, decks, and spreadsheets. Automate workflows. Build and share your own skills.</description>
-      <content:encoded><![CDATA[<a href="https://grok.com/share/bGVnYWN5_6ffd7524-4338-4839-bcae-aebf41361b9f?referrer=website">See an Example</a>]]></content:encoded>
-      <guid isPermaLink="true">https://x.ai/news/grok-skills</guid>
+      <title>Composer 2.5</title>
+      <link>https://x.ai/news/composer-2-5</link>
+      <description>Composer 2.5 is now available in Grok Build. Try it from the /models menu.</description>
+      <content:encoded><![CDATA[<p>Composer 2.5 is now available in Grok Build. Composer 2.5 is a fast, state-of-the-art model that excels on long-running tasks and following complex instructions.</p>
+<p>Try it by typing <code>/model</code> and then selecting Composer 2.5 in the menu.</p>]]></content:encoded>
+      <guid isPermaLink="true">https://x.ai/news/composer-2-5</guid>
       <category>News</category>
       <pubDate>Fri, 04 Sep 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Connect Grok to Hermes Agent</title>
-      <link>https://x.ai/news/grok-hermes</link>
-      <description>Use your Grok account and subscription inside Nous Research’s open-source, self-improving Hermes agent.</description>
-      <content:encoded><![CDATA[<p>Starting today, you can use your Grok subscription directly inside Hermes Agent.</p>
-<p>Hermes Agent is Nous Research’s open-source, self-improving agent. It runs persistently on any computer, sandbox, or VPS and creates long-term memory across sessions, learning as you use it. Like other open-source personal agents, Hermes can connect to WhatsApp, Discord, Telegram, Signal, or other messaging providers.</p>
-<p>With your Grok subscription in Hermes, you can use:</p>
-<ul>
-<li>Grok 4.3 for text conversations and advanced reasoning</li>
-<li>Grok Text-to-Speech for spoken responses</li>
-<li>Grok Imagine for your agent to create images and videos</li>
-</ul>
-<p>Connecting Grok to your Hermes agent is available on every tier.</p>
+      <title>Introducing Grok Build</title>
+      <link>https://x.ai/news/grok-build-cli</link>
+      <description>Now in early beta for all SuperGrok and X Premium Plus subscribers — Grok Build is a new coding agent that runs right from your terminal.</description>
+      <content:encoded><![CDATA[<p>Today we're launching an early beta of Grok Build, a powerful new coding agent for professional software engineering and complex coding work.</p>
+<p>Available now to all SuperGrok and X Premium Plus subscribers. Install Grok Build with a single command and sign in with your account:</p>
+<h2 id="plan-review-approve">Plan, review, approve</h2>
+<p>For complex tasks, start Grok Build in plan mode. You can approve the plan, comment on individual steps, or rewrite it entirely before execution begins.
+Once a plan is approved, every change shows up as a clean diff.</p>
+<h2 id="works-with-what-you-already-use">Works with what you already use</h2>
+<p>Your AGENTS.md, plugins, hooks, skills, and MCP servers all work out of the box. Start Grok Build in your repo and it picks up your conventions instantly.</p>
+<h2 id="subagents-that-work-in-parallel">Subagents that work in parallel</h2>
+<p>For larger tasks, Grok Build delegates work to specialized subagents that run in parallel. Grok Build also supports deep worktree integrations, and you can launch subagents in their own worktrees.</p>
+<h2 id="built-to-fit-your-workflow">Built to fit your workflow</h2>
+<p>Headless mode (<code>-p</code>) allows easily running agents inside scripts and automations. Grok Build also provides full ACP support to build your own  bots and agent orchestration apps.</p>
+<h2 id="try-it-today">Try it today</h2>
+<p>This is an early beta, and your feedback is the fastest way to make it better. Type <code>/feedback</code> in Grok Build to send bugs, requests, and reactions straight to the team.</p>
+<p>SuperGrok and X Premium Plus subscribers can install Grok Build with the command above and start building. If you don't have SuperGrok yet, <a href="https://grok.com/supergrok?referrer=grok-build">upgrade here</a> — we're excited to see what you create.</p>]]></content:encoded>
+      <guid isPermaLink="true">https://x.ai/news/grok-build-cli</guid>
+      <category>News</category>
+      <pubDate>Fri, 04 Sep 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Use Grok in OpenClaw</title>
+      <link>https://x.ai/news/grok-openclaw</link>
+      <description>Use your SuperGrok or X Premium subscription inside OpenClaw, an open-source, local-first agent and personal assistant.</description>
+      <content:encoded><![CDATA[<p>Starting today, log in and use your SuperGrok or X Premium subscription inside OpenClaw.</p>
+<p>OpenClaw is an open-source, local-first agent and personal assistant. It runs on any hardware — a Mac Mini, laptop, server, VPS, or even a Raspberry Pi — and keeps persistent memory across sessions.</p>
+<p>OpenClaw connects to WhatsApp, Telegram, Slack, Discord, Signal, iMessage, and many other messaging platforms, so you can interact with your agent wherever you already chat.</p>
+<p>If you already have a Grok or X Premium subscription, you can now use Grok models inside OpenClaw. Connecting Grok to your OpenClaw agent is available on every tier.</p>
 <h2 id="setup">Setup</h2>
-<p>Install Hermes Agent:</p>
-<pre><code># Linux / macOS / WSL2 / Android (Termux)
-curl -fsSL https://raw.githubusercontent.com/NousResearch/hermes-agent/main/scripts/install.sh | bash
+<p>Install OpenClaw:</p>
+<pre><code>curl -fsSL https://openclaw.ai/install.sh | bash
 </code></pre>
-<p>Pick the Grok provider:</p>
-<pre><code>hermes model
+<p>Run the guided onboarding:</p>
+<pre><code>openclaw onboard --install-daemon
 </code></pre>
-<p>Select <strong>xAI Grok OAuth (SuperGrok Subscription)</strong>, sign in through the browser, and start chatting:</p>
-<pre><code>hermes --tui
+<p>On a VPS or over SSH, use device-code. OpenClaw prints a short code and URL you can open in any browser to finish sign-in:</p>
+<pre><code>openclaw onboard --auth-choice xai-device-code
 </code></pre>
-<p>For more, see the <a href="https://hermes-agent.nousresearch.com/docs/guides/xai-grok-oauth">Hermes Agent xAI Grok OAuth docs</a>.</p>
+<p>Or connect a messaging app — Telegram, WhatsApp, Slack, Discord, Signal, iMessage, and more — and talk to your agent there.</p>
+<p>For more, see <a href="https://docs.openclaw.ai/start/getting-started">OpenClaw getting started</a> and the <a href="https://docs.openclaw.ai/providers/xai">xAI provider docs</a>.</p>
 <p>More open-source agents and integrations are coming soon.</p>]]></content:encoded>
-      <guid isPermaLink="true">https://x.ai/news/grok-hermes</guid>
+      <guid isPermaLink="true">https://x.ai/news/grok-openclaw</guid>
+      <category>News</category>
+      <pubDate>Fri, 04 Sep 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>New Compute Partnership with Anthropic</title>
+      <link>https://x.ai/news/anthropic-compute-partnership</link>
+      <description>SpaceXAI has signed an agreement with Anthropic to provide access to Colossus 1.</description>
+      <content:encoded><![CDATA[<p>SpaceXAI has signed an agreement with Anthropic to provide access to Colossus 1, one of the world’s largest and fastest-deployed AI supercomputers.</p>
+<p>Built from the ground up in record time, Colossus delivers unprecedented scale for AI training, fine-tuning, inference, and high-performance computing workloads. Colossus 1 features over 220,000 NVIDIA GPUs, including dense deployments of H100, H200, and next-generation GB200 accelerators. The cluster delivers extreme parallel performance for large language models, multimodal systems, scientific simulations, and generative AI at frontier scale.</p>
+<p>Anthropic plans to use this additional compute to directly improve capacity for Claude Pro and Claude Max subscribers.</p>
+<p>As part of this agreement, Anthropic also expressed interest in partnering to develop multiple gigawatts of orbital AI compute capacity.</p>
+<p>The compute required to train and operate the next generation of these systems is outpacing what terrestrial power, land, and cooling can deliver on the timelines that matter.</p>
+<p>SpaceX is the only organization with the launch cadence, mass-to-orbit economics, and constellation operations experience to make orbital compute a near-term engineering program rather than a research concept. If engineering challenges can be overcome, space-based compute offers near-limitless sustainable power with less impact on Earth.</p>]]></content:encoded>
+      <guid isPermaLink="true">https://x.ai/news/anthropic-compute-partnership</guid>
       <category>News</category>
       <pubDate>Fri, 04 Sep 2026 00:00:00 +0000</pubDate>
     </item>
