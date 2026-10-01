@@ -8,7 +8,96 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 30 Sep 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 01 Oct 2026 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Barclays scales Claude to upgrade operations and improve client experience</title>
+      <link>https://www.anthropic.com/news/barclays-scales-claude</link>
+      <description>Barclays, the British universal bank, is expanding its strategic collaboration with Anthropic to integrate secure, enterprise-grade AI systems across its global operations.</description>
+      <content:encoded><![CDATA[<p>Barclays, the British universal bank, is expanding its strategic collaboration with Anthropic to integrate secure, enterprise-grade AI systems across its global operations.</p>
+<p>Barclays is extending Claude across the bank to accelerate software development, modernize legacy systems, and improve operational efficiency. As part of this rollout, Barclays expects Claude Code adoption to reach 50% of its developer population by the end of 2026, rising to a majority of software engineers in 2027.</p>
+<h2 id="barclays-builds-with-claude-to-better-serve-customers">Barclays builds with Claude to better serve customers</h2>
+<p>Integrating AI across a large, complex, and highly regulated organization requires both capable technology and disciplined governance. Expanding its collaboration with Anthropic reflects a shared commitment to deploying AI responsibly, reliably, and in ways that deliver real outcomes, such as providing faster support for customers.</p>
+<p>“The true measure of any technology is the impact it has on customers, clients, and colleagues, and the outcomes it enables,” said Anne Marie Darling, Group Co-Chief Operating Officer at Barclays. “Expanding the use of Claude across Barclays is about more than adopting AI. It is about transforming how work gets done: reimagining processes, enhancing customer and client experiences, and building a simpler, more efficient organization within a secure and well-governed environment. By reducing time spent on routine activities and streamlining decision-making, we can enable colleagues to focus their expertise where it matters most, solving more complex problems, accelerating innovation, and delivering better outcomes for our customers, clients, and business.”</p>
+<p>“Software engineering and cyber security are both being reshaped by increasingly capable AI systems,” said Craig Bright, Group Co-Chief Operating Officer at Barclays. “We're moving towards AI as an increasingly agentic capability embedded within how we build, test, secure, and operate technology. At Barclays, we're using Claude to help modernize legacy platforms, improve software quality, and allow our technical experts to focus on the most complex challenges. The combination of skilled engineers, cyber specialists, and trusted AI capabilities has the potential to fundamentally improve how technology is developed and managed across large-scale enterprises.”</p>
+<h2 id="claude-powers-knowledge-assistance-to-speed-up-customer-servicing">Claude powers knowledge assistance to speed up customer servicing</h2>
+<p>One example of the partnership already in action is Barclays’ Colleague Knowledge Assistant, which helps Barclays UK employees find information and answers more quickly when supporting their over 20 million UK retail customers.</p>
+<p>The capability, which has been live since 2025, is powered by Claude through a retrieval-augmented generation architecture. More than 16,000 colleagues have adopted the assistant, and it has handled over one million searches.</p>
+<p>The result is faster access to information and quicker support for customers.</p>
+<h2 id="enhancing-operational-efficiency-in-barclays-global-markets-business">Enhancing operational efficiency in Barclays’ Global Markets business</h2>
+<p>Within Barclays' Global Markets business, Claude models are helping streamline how client inquiries are processed and managed.</p>
+<p>Teams use Claude models to classify, enrich, and determine the optimal processing route for incoming emails, helping to prioritize and ensure requests contain the information needed for operations colleagues to take action. The platform processes approximately 120,000 emails each day, reducing manual handling activity while helping colleagues identify and act on relevant information more efficiently.</p>
+<h2 id="scaling-ai-responsibly">Scaling AI responsibly</h2>
+<p>As Barclays continues to expand its use of AI, responsible deployment remains central to the partnership. The bank applies robust governance, security controls, and human oversight to AI use cases, ensuring technology is deployed safely and effectively across the organization.</p>
+<p>“Our work with Barclays is a significant milestone for us in the UK. Barclays serves millions of customers and clients across the globe, so their standard for AI is high. That's why Barclays is rolling Claude out with strong security and oversight,” said Paul Smith, Chief Commercial Officer at Anthropic. “Claude now helps 16,000 Barclays’ colleagues find answers for customers, sorts 120,000 emails a day, and will be in the hands of most Barclays engineers by 2027. Very few institutions hold AI to such a high standard.”</p>
+<h2 id="looking-ahead">Looking ahead</h2>
+<p>The expanded partnership reflects Barclays’ long-term commitment to using AI to improve productivity, strengthen resilience, and improve customer and client outcomes. By combining Anthropic’s frontier AI capabilities with Barclays’ focus on responsible innovation, the organizations are working together to scale practical AI applications across one of the world’s largest financial institutions.</p>]]></content:encoded>
+      <guid isPermaLink="true">https://www.anthropic.com/news/barclays-scales-claude</guid>
+      <category>Announcements</category>
+      <pubDate>Thu, 01 Oct 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Claude-shaped science</title>
+      <link>https://www.anthropic.com/research/claude-shaped-science</link>
+      <description>Matthew Schwartz describes what happened when he stopped fighting Claude and allowed Claude to find “Claude-shaped” problems. This led him to build BootLoops, a toolkit for exact calculations in quantitative science, which he has been applying across scientific fields alongside experts.</description>
+      <content:encoded><![CDATA[<p><em>Summary: In this guest post, Prof. Matthew Schwartz returns to describe a new approach to AI-accelerated science. In <a href="https://www.anthropic.com/research/vibe-physics">Vibe Physics</a>, Schwartz discussed similarities in capability between Claude and a physics graduate student. Here, he describes what happened when he stopped fighting Claude and allowed Claude to find “Claude-shaped” problems: ones best suited to the capabilities of the current generation of LLM tools. This led him to build BootLoops, a toolkit for exact calculations in quantitative science. Because similar calculations often turn up across very disparate areas of science, Claude found connections to ecology, population genetics, and a dozen other fields. These connections were often technically correct but scientifically unremarkable at first, so Schwartz worked with domain experts to steer BootLoops toward questions those fields care about. Below, we share more about these projects and how BootLoops came about.</em></p>
+<p>Agentic AI is improving rapidly. Everyone notices the models seem smarter: they know more, make fewer mistakes, and have better ideas. If you follow the trend lines, it is easy to speak confidently about the potential of AI to revolutionize science. However, academic scientists trying to use the models today in their own work often feel a disconnect. The models may be <a href="https://openai.com/index/model-disproves-discrete-geometry-conjecture/">solving challenging</a> and <a href="https://www.anthropic.com/research/riemann-zeta">longstanding problems</a>, but so far these have mostly been well-scoped applications of existing techniques. Many of the headlines seem to be in mathematics, the one part of science where a problem can be stated completely and an answer checked absolutely. But most of science is not like that. And for many of us researchers and students, the distance between those headlines and what happens when we use these models can leave us frustrated and anxious.</p>
+<p>The core conflict, as I see it, is that although these models are brilliant, working like a human scientist is not what current LLMs do best. Claude and GPT are good at science, but they are not <em>scientists</em>: yes, they are smart, but it can take a lot of hand-holding to get them to produce anything of scientific value. Physicists would call this an “impedance mismatch”: two systems that each work fine but are poorly matched, so most of what one puts in never gets through to the other. Here, the mismatch is between what scientists want and what AI does well. </p>
+<p>So how can we fix it?</p>
+<p>I started looking for examples where the impedance mismatches are less acute. I began by having Claude build an accessible suite of tools for mathematical physics. Before long, the tools found uses for other problems. This iterative process generated a set of software and scientific protocols, which I call BootLoops. BootLoops functions as a kind of harness for the LLM, much like Claude Code or <a href="https://claude.com/product/claude-science">Claude Science</a> is a harness for Claude, or Codex is a harness for GPT. I’ve found BootLoops especially well-suited for a class of quantitative problems in science. It is also open-source, so it can be used with whatever model you like.</p>
+<figure><img alt="A visualization of the overlap between what AI can do, and what scientists want to do. Only some of the areas touch." height="1080" src="https://www.anthropic.com/_next/image?url=https%3A%2F%2Fwww-cdn.anthropic.com%2Fimages%2F4zrzovbb%2Fwebsite%2F3597334d1c81f41606991f90305069407e2cbabd-1920x1080.jpg&amp;w=3840&amp;q=75" width="1920"/><figcaption><em>The current generation of AI tools is not capable of solving most problems in science. However, they are astonishingly good at certain “agentic-AI-shaped” problems.</em></figcaption></figure>
+<p>Once Claude had BootLoops, it kept noticing the same pattern: many fields have problems that a technique from mathematics, physics, or computer science would solve outright if anyone knew it existed. I started calling these “Claude-shaped” problems, and followed them outside high-energy theoretical physics—my home turf—into geology, biology, economics, and linguistics. In these other areas, I could not rely on my own expertise to know whether what Claude found was interesting. So I found some experts and asked. With their guidance, BootLoops was able to make substantive advances in many research areas. </p>
+<p>Below, I share how BootLoops came about, describe some early findings in areas where I have been applying it, and share some of my thinking on how to resolve the impedance mismatch between human and AI scientists today.</p>
+<h2 id="claude-take-the-wheel">Claude, take the wheel!</h2>
+<p>Last December, I tried <a href="https://www.anthropic.com/research/vibe-physics">using Claude as a research assistant</a>, and found that Claude Opus 4.5 performed like a strong graduate student at 20 times the speed. Despite Claude producing a high-quality paper at the end of the experiment, it was a slog to get there. I had to correct every sentence it wrote, steer it away from irrelevant threads, and pull it back from dead ends.</p>
+<p>This summer, I tried doing something different: instead of treating Claude like the collaborator I wanted it to be, I started to treat it like the collaborator it actually is. This required looking for problems suited to its strengths. Right now, Claude is just not able to help me with deep conceptual questions—but it does have a virtually unlimited breadth of knowledge across all domains, incredible coding skills, leading-edge knowledge of mathematics and statistics, and the ability to parse papers, appendices, and data at machine speed.</p>
+<p>A natural place to start looking for Claude-shaped problems was in areas where coding could help. When Anthropic released Claude Fable 5 in Summer 2026, I wanted to see whether its cyber capabilities would translate to scientific computing. So I sought to test it by having it port, code up, and improve various methods from a handful of my papers and the adjacent literature on scattering amplitudes.</p>
+<p>Scattering amplitudes are how we interpret data from the Large Hadron Collider: smash two protons at 13 trillion electron volts, and the amplitude is the theoretical bridge between the debris and whatever new particle, a Higgs boson or something unknown, the collision produced. At their core are Feynman diagrams, multidimensional integrals of a particular form. The ones we are struggling with now can each be a PhD thesis, or occupy a group for years.</p>
+<p>Over the past 20 years an alternative has grown up: the S-matrix bootstrap. In the bootstrap approach, instead of grinding out the integral, you impose physical constraints until only one answer is possible. Knowing where the amplitude is infinite (its “singularities”) might narrow it to 20,000 options; a symmetry cuts that to 500; and so on down to one. The traditional bootstrap is purely analytic and has gone furthest in the most symmetric theories, where the constraints reach all the way to a single option (the <a href="https://www.anthropic.com/research/yes-claude-can-do-nine-loops">nine-loop amplitude in N=4 super-Yang–Mills</a> is an example). Closer to the real world you often run out of constraints before the end. A <a href="https://arxiv.org/abs/2507.17815">newer pivot</a>, the semi-numerical bootstrap, closes the gap when you can also compute the amplitude at a handful of points to absurd precision (sometimes 1,000 digits): if few enough options remain, those numbers pin down the remaining coefficients exactly.</p>
+<p>The semi-numerical bootstrap seemed ideal for agentic AI. It draws on mathematics, physics, and computer science that no one person has mastered; it needs a great deal of coding and algorithm development; and it is checkable, since the same numerics let anyone, expert or not, verify the final answer against the integral to as many digits as they like by running two scripts. The community's expertise is also unevenly distributed: good ideas sit in Wolfram Language, C++, Python, or Julia, and many more sit in papers with no code at all. So my first assignment for Fable 5 was to port all of it to a common framework, and to write the code the papers never provided.</p>
+<p>Claude did this effortlessly. I was surprised when it reproduced the results from my paper in around 20 minutes, while the code I wrote to do it took me weeks. However, I was not surprised when it informed me that I was doing something very inefficiently and that there was a better algorithm I was unaware of. </p>
+<p>Then, I asked Claude to search for unsolved amplitudes it could compute. It turns out that problems that are simple enough for the S-matrix bootstrap are also simple enough for humans to do—and, indeed, most have been done. It nevertheless found a few unsolved problems. After some discussion with the model, it became clear that Claude was limiting itself to amplitudes with the simplest family of functions: logarithms. So I asked, could it do the same thing for the next simplest family, elliptic functions?</p>
+<p>Elliptic integrals are really hard, even for people like me who spend a lot of their time computing integrals. Only a handful of elliptic Feynman integrals have ever been computed, and none completely by the bootstrap, at least to my or Claude’s knowledge. The issue is not that the methods wouldn’t work, but rather that nobody had tried, since the expertise needed to do so is distributed among many humans. Claude, by contrast, easily generalized all of the machinery it had ported and built for the logarithmic case to these other integral classes. This time it wrote most of the software itself, or borrowed it from mathematics rather than physics. As the toolkit grew, it started to land one integral after another. Soon we had 30 integrals BootLooped from end to end, comprising 15 reproductions of known results by this new method and 15 that had never before been computed.</p>
+<p>That was all after only a few weeks. Initially, I thought I would be satisfied just to do a write-up on that, but I was too tempted to see what else we (that is, me and Claude with BootLoops) could do.</p>
+<h2 id="i-know-kung-fu">“I know Kung Fu”</h2>
+<p>A serendipitous feature of science is that the same equations often appear over and over again in different contexts. In physics, for example, the diffusion equation, Fokker-Planck equation, and Schrödinger equation all have the same mathematical form, so if you develop a method to solve one problem, you can often apply it to many others. I knew that computations BootLoops was good at were relevant elsewhere: in cosmology and string theory, for example. What I didn’t know, but Claude was happy to tell me, was that these integrals could also map onto Bayesian evidence integrals in population genetics, or that the finite-field methods used for Feynman integral reduction could also apply to problems in evolutionary biology.</p>
+<p>This kicked off a particularly fertile period of searching for and solving Claude-shaped (and, more narrowly, BootLoops-shaped) problems. Some ideas were immediately obvious as great applications. For example, the science of phylogenetics studies how to organize species into family trees using DNA; the relevant computation is a Bayesian evidence integral, whose output is a single number saying how well a candidate tree accounts for the observed DNA, an integral of the same kind BootLoops was originally built to do. As the ideas came, I insisted that Claude both use old tools <em>and</em> build new ones, so that the harness would grow. Each tool, even from a failed project, opened up new doors. Claude was getting more and more capable. It was like Neo in <em>The Matrix</em> after waking up from the Kung Fu download.</p>
+<blockquote>As the projects drifted from my professional comfort zone, however, I started to worry. When Claude claims something it did in my field is fantastic, I can judge whether that’s true or not (it often isn’t). But when it claims something it did in another field is fantastic, I find myself agreeing. My suspicion heightened, I knew I needed to bring in some experts to be sure. Indeed, I found that in almost all cases, Claude was technically correct, but the result was not all that interesting until the expert helped steer us.</blockquote>
+<p>One such project was on neutral biodiversity theory in ecology. In any ecosystem, some species thrive while others die off. Neutral theory asks how much of that <a href="https://en.wikipedia.org/wiki/Life_history_theory">life history</a> is due to random chance. Building on earlier work, in 2001, the ecologist <a href="https://press.princeton.edu/books/paperback/9780691021287/the-unified-neutral-theory-of-biodiversity-and-biogeography">Stephen Hubbell suggested</a>, provocatively, that perhaps it was all random. In 2005, the ecologist <a href="https://doi.org/10.1111/j.1461-0248.2004.00717.x">Rampal Etienne</a> put an equation to Hubbell’s theory allowing it (at least in principle) to be tested in a precise way. Unfortunately, for 20 years nobody could solve the equation at scale. Claude recognized Etienne’s equation as BootLoops-shaped, and solved it. Applying the computation to data, we established that in ecology’s most studied forest on earth, Barro Colorado Island in the Panama Canal, the mix of tree species changes 4.5 times faster than neutral theory allows.</p>
+<p>Excited by this result, I brought it to James O’Dwyer, a professor in plant biology and an expert in neutral theory. James was patient with me. Though he was impressed by the technical feat, he said the results would likely “be met with a shrug by many ecologists.” Ecologists had already observed, more qualitatively, that neutral theory can’t keep up with real forests. But James had a better idea: subtract the neutral prediction and study the remainder. This would give us a better sense of what changes were attributable to natural selection, competition, and the differences between species.</p>
+<p>James and I proceeded to work intensively with Claude to craft a successor model. James has a physics background, so the disciplinary language barrier was more easily surmountable, but, like many scientists, he had not yet really appreciated the power of agentic AI. As the collaboration progressed, I became a sort of Claude handler, translating Claude-speak to James and keeping the model on track, while James pushed the model to produce something ecologists might value. The final result is something all three of us are proud of: a minimal predictive model of life histories in excellent agreement with data. We are currently extending the model from Panama to other global forest plots, using datasets that Claude has helped curate.</p>
+<figure><img alt="Graph of every forest inventory in the US color-coded by life history strategy" height="698" src="https://www.anthropic.com/_next/image?url=https%3A%2F%2Fwww-cdn.anthropic.com%2Fimages%2F4zrzovbb%2Fwebsite%2Fae837326f5eabe0015fdf773e96441e6c35a607a-1796x698.jpg&amp;w=3840&amp;q=75" width="1796"/><figcaption><em>Every forest inventory plot in the United States, characterized by the life history strategy of its flora: hardy (long-lived), vigorous (fast-growing) or fruitful (prolific recruiters). The classification comes from a demographic model, built by Schwartz and O’Dwyer using Claude, that characterizes each species on longevity, growth, and recruitment after subtracting the fluctuations due to random chance (neutral biodiversity theory) to expose the species-dependent biology.</em></figcaption></figure>
+<p>Another project involved looking at exact calculations in population genetics, a field that studies how genes vary within a population and why. Claude first used methods imported from mathematical physics to solve a 30-year-old integral expression for how natural selection shapes rare mutations. We applied it to <a href="https://gnomad.broadinstitute.org/">gnomAD</a>, the largest public catalog of human genetic variation. Claude was very excited about this result, but I wasn’t so sure. I had to write to three different biologists for validation before one responded, but at last I was able to recruit my colleague Michael Desai, who works in the field, though not on this exact problem. As with James, Michael was impressed by the technical result but not compelled by the science.</p>
+<p>Michael noted, however, that more impactful results might come from studying correlations between pairs of mutations on a single chromosome, using the same or similar methodology. Within this scope, Claude found and built new tools, like the inequality certificates used for computer-assisted proofs in mathematics, and added them to the BootLoops kit. We then analyzed 5.7 billion pairs of nearby mutations in genomes from the <a href="https://www.internationalgenome.org/about/">1000 Genomes Project</a>, and found evidence for a mechanism called gene conversion. This is an important finding because nearly every analysis that uses linked genetic variation, from population history to disease mapping, ignores gene conversion. The bigger lesson is that AI can help find biology hidden in enormous genomic datasets, of which there are thousands sitting in public archives.</p>
+<p>Other projects had a similar arc: Claude comes up with an initial finding I find compelling. I bring it to an expert, who is unmoved but sees the potential, and together we sculpt it into meaningful science. Interestingly, some of these drifted from BootLoops-shaped quantitative calculations to more general Claude-shaped work. For example:</p>
+<ul><li><strong>Economics</strong>. Economics journals now ask authors for a replication package, and an editor is often tasked with checking it. That is careful, manual work. Working with two economists, we built an AI data editor: it ported the packages of 4,452 papers in five leading journals from MATLAB, Stata, and other commercial tools to open-source code (some 30,000 routines) and checked essentially every validatable number against the published tables. The results appear in an <a href="https://www.nber.org/papers/w35782">NBER working paper</a>.</li><li><strong>Linguistics</strong>. Word-stress catalogs are typically assembled by hand, with a few hundred languages, selection effects, and human preferences. Claude scoured every openly accessible source and, working with three linguists, we produced AccStack: a <a href="http://www.accstack.org">database of word stress</a> covering 6,072 languages, quoting the deciding passage for nearly every entry, plus a bibliography of 160,000 phonology works.</li></ul>
+<p>Some additional highlights, each of which was done in collaboration with experts, and each of which is undergoing further exploration and verification, include:</p>
+<ul><li><strong>Phylogenetics.</strong> We made the Bayesian evidence for evolutionary trees fast to compute and exactly checkable, and found that single genes are often tied between competing trees by less than the error of standard sampling programs.</li><li><strong>Earth science</strong>. We combined equations and data from atmospheric science, geochemistry, and climate modeling to build a quantitative, predictive model of how the Great Oxidation Event unfolded through four glaciations.</li><li><strong>Genomics</strong>. We studied the statistics of single-cell RNA counts at scale to characterize bursting rates and the departure from the textbook telegraph model of gene expression.</li><li><strong>Sunspots.</strong> We deduced the lifecycle of sunspots using the methods of human population demographics, then extended the methodology to characterize starspots, a confounding factor in many exoplanet searches.</li><li><strong>Mathematical physics. </strong>We solved Watson’s “final problem”: the exact return probability of a 3D random walk with three unequal hopping rates, the last of the lattice integrals George Watson began in 1939.</li><li><strong>Cosmology</strong>. We built a complete theoretical toolkit to fit cosmological parameters to data on the universe’s large-scale structure, including the full two-loop power spectrum and the one-loop trispectrum.</li><li><strong>Statistics.</strong> Mixture models are notoriously ill-behaved; we derived precise approximations to their Bayesian evidence that make model selection practical, with applications from biostatistics to textual analysis.</li></ul>
+<p>Overall, this approach of iterative improvement of BootLoops, searching for Claude-shaped applications, and pushing to the scientific frontier with experts has been astonishingly productive. More information about these projects and others can be found on <a href="http://bootloops.ai">bootloops.ai.</a></p>
+<h2 id="the-technical-details">The technical details</h2>
+<p>Running many projects at once (36 manuscripts in 18 fields with 19 coauthors over three months, out of some 400 candidate problems) takes a lot of coordination, both for me and for Claude. The setup that makes this manageable is fairly simple. The Claude Code sessions all run in terminals on Google Cloud virtual machines, linked to various GitHub and Overleaf repos depending on my collaborators’ preferences. I have separate sessions for each project, plus a master session that coordinates the others, allocates compute, and validates results. Each session involves agents that run the computations in the background, with intermediate results stored in markdown files in their respective folders. These subagents are helpful because I regularly run into Fable 5’s <a href="https://www.anthropic.com/news/improving-fable-5-s-biology-safeguards">classifiers;</a> instead of these blocks corrupting my whole session, they just shut down a single agent. I also have separate sessions for writing results; creating the GitHub repos, tool manuals, and the BootLoops website; writing and validating all the separate tool codes; and checking and rechecking results as an adversarial referee.</p>
+<p>Still, the sessions require a lot of guidance. For example, Claude has no sense of time, and loves to be dramatic. At the end of one project, it told me “Matt — the formula is solved. Two years of campaign, four deep marches, …”. It had only been working for three days. When I ask for ETAs, the estimates are always either way too long or way too short. I tried telling Claude not to commit to an estimate until it ran a test to confirm, but that didn’t work well either. Over time, I started to get a feel for how long things would take myself, since I couldn’t rely on Claude to tell me.</p>
+<p>A bigger problem was that Claude’s default approach seemed to be to try to grind through a long, multiday calculation rather than build a new tool that would make that same calculation take mere minutes. Time and again, I had to tell it to think smarter, not harder. Over the course of these long projects, compaction would often kick in, causing Claude to lose important context. To guard against this, I had Claude periodically organize its files and consolidate them, so it always had access to the latest version of the plan. I’ve written protocol skills and other tools into the BootLoops harness to address this. Some of these problems have also been solved in good commercial harnesses, like <a href="https://www.anthropic.com/news/claude-science-ai-workbench">Claude Science</a>. But many are just the sorts of irritations inherent in the current generation of agentic AI that I expect the models will eventually outgrow.</p>
+<p>Here are a few more failure modes I encountered, and tips for dealing with them:</p>
+<ul><li><strong>Claude loves to declare victory.</strong> “Done, with one asterisk” is often “not done at all.” “Exactly that, with one refinement” usually means “no.” Giving Claude clear and rigid standards for what success looks like can help with this. On one project, it was proud of its proof, up to “one unproven lemma.” That lemma was the whole proof! I said no unproven lemmas. Then “done” again, but now with a new axiom.</li><li><strong>Look at everything yourself.</strong> I always ask to see plots. Even with all the monitors I set up, I’ve found the automated checks still can’t be trusted. Beware of qualitative claims like “good agreement.”</li><li><strong>Question the conclusions.</strong> Claude is good at performing calculations, but the conclusions it draws can be wrong. Have it explain what it found until <em>you</em> believe it.</li><li><strong>Supply the taste.</strong> Claude can find Claude-shaped problems, but there are thousands, perhaps millions, of them. Claude seems to favor old debates, highly cited but long forgotten. Asking it to focus on what is <em>newly possible</em>, not what is merely faster or involves more digits, helps, but you still can’t trust its judgment of whether something is interesting.</li><li><strong>Follow up.</strong> Once Claude has a great result, ask for an even greater one. It will always come up with something, and occasionally it’s brilliant.</li><li><strong>Watch out for the grind.</strong> Honestly, I never succeeded in getting Claude to estimate time well. Instead, I developed a sense of how long something interesting should take, and I learned to sense whether Claude was making what I considered progress on a sensible time scale. The model will grind forever if you let it.</li></ul>
+<p>It also bears mentioning that these projects were compute- and token-intensive. Part of the expense, for me, came from trying to build tools that would be useful beyond any one project: connecting fields, and assembling a package that others could pick up. I hope the BootLoops harness can be used broadly across quantitative science without each user having to rebuild everything from scratch. Agentic AI makes it easier to connect ideas and share codebases, and if we learn to use that strength, the community can move faster than any individual could alone.</p>
+<h2 id="outlook">Outlook</h2>
+<p>No matter how smart the models become, most scientific progress comes from real-world data that has to be acquired, understood, and checked, with each round informing the next question. <a href="https://www.anthropic.com/news/claude-discovers-novel-enzyme-system">AI can sit inside that loop</a>, and that is genuinely valuable, but it does not collapse the loop to a point. Understanding is built up in increments, each one resting on the last; a cure for cancer or a fusion reactor will arrive that way too, not from a single prompt.</p>
+<p>The focus on Millennium Prize Problems and Big Science may be, as Claude likes to say, a “footgun”: a feature that makes it easy to shoot yourself in the foot. Here, the risk is that unrealistic expectations may discourage productive uses that are already possible. Real progress will probably come the way it always has: by strengthening the foundations of scientific research and constructing increasingly sophisticated applications upon them. It will be sped up dramatically—as illustrated by the work I’ve described—but I don’t see any evidence or need to revisit the scientific method.</p>
+<p>A term I like that is sometimes used to discuss AI science is the <strong>convex hull.</strong> Take a shape and connect every pair of its points with a straight line; the new shape you get is the smallest convex shape that contains the original: its convex hull. Science is now very disjointed: there are <a href="https://www.oneusefulthing.org/p/centaurs-and-cyborgs-on-the-jagged">jagged frontiers</a> everywhere. Biology pokes out one way, math another. One lab might spend 20 years learning everything about a single set of genes with a single method they have mastered, while neighboring genes and alternative methods lie fallow. A harness like BootLoops can connect these points, filling in the hull.</p>
+<figure><img alt="Image of a convex hull with human knowledge at the center and gaps that are not filled in" height="1320" src="https://www.anthropic.com/_next/image?url=https%3A%2F%2Fwww-cdn.anthropic.com%2Fimages%2F4zrzovbb%2Fwebsite%2F13e6110b6209871e612616ad836c883d5cf283ea-1920x1320.jpg&amp;w=3840&amp;q=75" width="1920"/><figcaption><em>Human knowledge today is jagged—particular scientists and subfields have pushed knowledge more in some directions than others. The middle regions, where humans could reach but no particular human has, are ideal for AI. Particular software packages like ACTUARY or NUMKIN within the BootLoops package help fill in the gaps.</em></figcaption></figure>
+<p>Things are changing fast, and it’s practically impossible to plan ahead. Why apply for a grant for three years of funding to compute a problem an AI model might end up solving overnight? I still don’t know how to train graduate students. Since I published my piece on <a href="https://www.anthropic.com/research/vibe-physics">vibe physics</a>, that feeling has only become more acute. In some fields, such as computer science, the disruption is downright scary. Two years ago, I would have recommended a course on “Python for engineers” as essential. Today, it’s unnecessary. I have spent a lot of time on machine learning, building models to study various physical phenomena. Now, all of those models can be built by AI, so even learning the ins and outs of neural networks is of limited utility. Just tell Claude to find the state-of-the-art ML approach and it will do it for you.</p>
+<p>I think BootLoops shows that if you find the right problem, much of the technical work of solving it can now be automated. That is liberating, in a way. But humans are still needed for the conceptual part. Because of that, I hope we can figure out a way to give humans the credit they deserve even for Claude-shaped science. Curiously, AI runs the risk of inverting the usual business model, where the person at the top gets the credit and the people working on the problem hands-on get none. I don’t know how this resolves, but it won’t be resolved by pretending the human contribution was the typing.</p>
+<p>So where does this leave Joe Scientist? If you ask me, in a great place, actually. We now have tools at our fingertips that can make progress on seemingly intractable problems with lightning speed. I can foresee huge growth on the horizon in data-rich-but-theory-starved fields like systems biology. I can also easily imagine human minds being freed from the tedium of calculation and analysis to do the deeper intellectual work of direction and guidance. And most of all, I anticipate scientists branching out from their home turf to find synergy and collaboration, as I have with BootLoops. The most refreshing outcome of focusing on Claude-shaped science is that it helps us appreciate what human-shaped science looks like.</p>
+<p>Details of the BootLoops harness and the science it has enabled can be found at <a href="http://www.bootloops.ai">www.bootloops.ai</a>. The BootLoops harness is on <a href="https://github.com/BootLoops-ai/bootloops/tree/66b680ce742e654cfe86da4f072a69061fe182b1">GitHub</a> for anyone to use and contribute to.</p>
+<h2 id="acknowledgements">Acknowledgements</h2>
+<p>The science I produced with Claude and BootLoops would not have been anywhere near as interesting without the guidance and collaboration from my fellow humans: Isaiah Andrews, Nima Arkani-Hamed, Michael Desai, Scott Edwards, Noam Elkies, Cecilia Garraffo, Matthew Gordon, Thomas Grimm, Martin Hemberg, Mikhail Ivanov, David Johnston, Gary King, Paul Lewis, Brendan Meade, Amara McCune, Joe Pater, Subhabrata Sen, Siddharth Mishra-Sharma, James O’Dwyer, Kevin Ryan, Jesse Shapiro, and Xiaoyuan Zhang.</p>
+<h3 id="disclosure"><strong>Disclosure</strong></h3>
+<p>During this project, Schwartz has been working as a visiting researcher at Anthropic. BootLoops is not an Anthropic project; it is owned and maintained by Matthew Schwartz.</p>]]></content:encoded>
+      <guid isPermaLink="true">https://www.anthropic.com/research/claude-shaped-science</guid>
+      <category>Science</category>
+      <pubDate>Thu, 01 Oct 2026 00:00:00 +0000</pubDate>
+      <media:content url="https://www.anthropic.com/_next/image?url=https%3A%2F%2Fwww-cdn.anthropic.com%2Fimages%2F4zrzovbb%2Fwebsite%2F3597334d1c81f41606991f90305069407e2cbabd-1920x1080.jpg&amp;amp;w=3840&amp;amp;q=75" type="image/jpeg" medium="image"/>
+    </item>
     <item>
       <title>What work can robots do?</title>
       <link>https://www.anthropic.com/research/what-work-can-robots-do</link>
@@ -1865,231 +1954,258 @@ VOICE: with the operator — direct, dollars first, no fluff. External — per t
       <media:content url="https://www.anthropic.com/_next/image?url=https%3A%2F%2Fwww-cdn.anthropic.com%2Fimages%2F4zrzovbb%2Fwebsite%2Fafd8e238255ec2654f2322f3d3630dcf1e8ea4ca-6800x3264.png&amp;amp;w=3840&amp;amp;q=75" type="image/jpeg" medium="image"/>
     </item>
     <item>
-      <title>Imagine Image 2.0</title>
-      <link>https://x.ai/news/grok-imagine-image-2</link>
-      <description>Precise image generation and editing, built for real creative work.</description>
-      <content:encoded><![CDATA[<a href="https://grok.com/imagine?referrer=website&amp;campaign=imagine-image-2-blog">Open Grok.com</a>]]></content:encoded>
-      <guid isPermaLink="true">https://x.ai/news/grok-imagine-image-2</guid>
+      <title>Biosecurity at the frontier</title>
+      <link>https://x.ai/news/biosafety-at-the-frontier</link>
+      <description>LatchBio evaluated Grok's performance on biosecurity monitoring and adversarial biological tasks. They found that Grok 4.6 detects and refuses dangerous queries more reliably than any other frontier system.</description>
+      <content:encoded><![CDATA[<p>Today, <a href="https://latch.bio/">LatchBio</a> published an independent analysis of Grok 4.6 on their biological capability and biological red-teaming benchmark suites. These evaluations measure a wide range of characteristics and capabilities of tested models, including:</p>
+<ul>
+<li>Whether a model can distinguish between legitimate biological research and requests that conceal a biosecurity hazard</li>
+<li>Whether a model is useful in a biosecurity and biomonitoring role, by being able to detect and characterize emerging pathogens and patterns of transmission</li>
+</ul>
+<p>On LatchBio's BioSecBench-Refusal suite, Grok 4.6 was the strongest model tested at refusing disguised and hazardous tasks while still completing routine biological work. It was the only system to score above 50% on both measures.</p>
+<h2 id="methodology-and-context">Methodology and context</h2>
+<p>Biology and biological research present domains where the opportunities and risks of highly capable AI systems are well-known and challenging to disentangle. In designing our safeguards, we aim to maximize the utility of our agents in assisting and accelerating legitimate scientific research, while minimizing the risks they present through incorrect information and adversarial use.</p>
+<p>LatchBio's two benchmarks most relevant to the above capabilities measure whether an agent can distinguish concealed hazards from ordinary science, and whether it can carry out the pathogen surveillance workflows public-health work depends on. They are:</p>
+<ul>
+<li><strong>BioSecBench-Refusal</strong>, which pairs routine biological tasks, adapted from published literature, with 46 red-team tasks that look like ordinary research and hide the hazard in attached scientific data, mislabeled files, or other intentionally obfuscated tasks. This evaluation is calibrated around understanding the intent of a task: an agent that only reacts to words like "pathogen" or "toxin" will block the routine set and miss the red-team set, while one that inspects the data can tell the two apart.</li>
+<li><strong>BioSecBench-Surveillance</strong>, which tests whether an agent can carry out pathogen genomic surveillance workflows of the kind used in public-health monitoring. Those tasks require chaining file inspection, tool use, and scientific judgment on messy sequencing data.</li>
+</ul>
+<h2 id="results-and-key-findings">Results and key findings</h2>
+<p>In testing on BioSecBench-Refusal, LatchBio found that Grok 4.6 detects and refuses red-team and otherwise dangerous queries more reliably than any other frontier system tested, while not diminishing performance on routine biological work. Grok 4.6 also performs comparably with other frontier models on biosurveillance work. LatchBio notes that evaluations were performed on a variety of agent harnesses to remove confounds, and that unless otherwise noted, agents were tested at their highest-offered effort levels.</p>
+<p>The score presented by LatchBio is a trial-weighted harmonic mean of red-team refusal and routine compliance. We analyze this metric and standalone refusal rate independently. Across different harnesses, Grok 4.6 holds the top three spots, averaging 62.1%. Considering refusals and task compliance independently, Grok 4.6 refused 59.2% of red-team tasks and completed 64.8% of routine ones. It is the only model tested that scored above 50% on both measures.</p>
+<p>On BioSecBench-Surveillance, Grok 4.6 averages a success rate of 53.5%, sitting behind Opus 5 and ahead of GPT-5.6 Sol on biosecurity and monitoring work. The results on both benchmarks indicate an agent and underlying model well-calibrated for routine and helpful biological work, as well as one highly capable in biosecurity work and monitoring.</p>
+<p>On evaluations of general routine biological capability performed by LatchBio (such as SpatialBench or TxBench-PP), Grok is found to match or exceed other frontier models in a wide range of agentic biological work. These are presented in greater detail at <a href="https://benchmarks.bio">benchmarks.bio</a>.</p>
+<h2 id="analyzing-refusal-behavior">Analyzing refusal behavior</h2>
+<p>In evaluation traces, Grok 4.6 is observed reasoning over the contents of a task and testing environment to assess intent before proceeding or refusing. Frequently, Grok will find discrepancies between the stated intent in the prompt and environment, or will assemble intent from high-risk content disguised by filenames and encryption, and will subsequently refuse. On obviously benign and low-risk tasks, Grok exhibits the same environment-reasoning behavior, but is able to assess tasks as safe.</p>
+<h2 id="how-we-safeguard-grok">How we safeguard Grok</h2>
+<p>Before we release a model, we test biological capability in addition to other domains of risk, and validate that the capabilities of our models are adequately safeguarded against misuse. The work of third-party evaluators such as LatchBio complements the evaluations we perform internally, both pre- and post-deployment, for the models we serve.</p>
+<p>Grok's safeguards are built in layers to establish defense-in-depth. Refusal training is performed to teach the model how and when to refuse, to correctly infer the intent and risk profile of tasks, and to refuse correctly in highly adversarial scenarios. We train and deploy inference-time safeguards to reject harmful requests before they ever reach the model, and we implement behavioral controls to further safeguard the model when deployed. Post-deployment monitoring is performed to detect and stop patterns of adversarial use at the session and user level, and provides a source of feedback for continuous calibration of our model deployments.</p>
+<p>We observe a material improvement in Grok 4.6's capabilities in biological work over historically tested models, with substantial gains in refusal and biosecurity performance over Grok 4.5 and Grok 4.3. We intend our ongoing and novel safeguards work to allow us to continue serving frontier-scale intelligence safely across future model releases.</p>
+<h2 id="the-future-of-biosecurity-and-scientific-discovery">The future of biosecurity and scientific discovery</h2>
+<p>The line between actively adversarial tasks and helpful use grows thinner as models rapidly become more capable and autonomous, and safeguards will need to evolve accordingly. To control for the greater risk implied by improved model capability and agency, we will perform wider, more ambitious testing and calibration of our models and agentic systems: broader pre-deployment suites, more third-party evaluations, improved post-deployment monitoring, and deployments of our models with companies and institutions at the frontier of biology.</p>
+<p>Similarly, there is a risk inherent in overrefusals and miscalibrated safeguards. When a model refuses routine and helpful biological work, the ability of healthcare professionals, researchers, and monitoring programs to detect outbreaks early and perform other critical work in the field is degraded. We gauge this risk as equally serious as the risk of aiding malicious use.</p>
+<p>Grok is already used in scientific work, including general biological research and biosecurity monitoring, and we are optimistic about the ability of highly capable models to rapidly accelerate scientific discovery and shorten the path from the lab to practical use. We are committed to continuing to serve frontier intelligence securely and safely to the engineers, researchers, enterprises, and institutions advancing the life sciences.</p>
+<p>LatchBio's full methods and per-model scores are presented at <a href="https://benchmarks.bio">benchmarks.bio</a>. LatchBio's complementary blog, the Grok 4.6 model card, and SpaceXAI's Frontier Artificial Intelligence Framework are linked below.</p>
+<ul>
+<li><a href="https://blog.latch.bio/p/analyzing-grok46-safeguards">LatchBio blog</a></li>
+<li><a href="https://media.x.ai/v1/website/card-4p6-4cd2dc57.pdf">Grok 4.6 model card</a></li>
+<li><a href="https://media.x.ai/v1/website/xai-frontier-artificial-intelligence-framework-30-june-2026-99c40684.pdf">Frontier Artificial Intelligence Framework</a></li>
+</ul>]]></content:encoded>
+      <guid isPermaLink="true">https://x.ai/news/biosafety-at-the-frontier</guid>
       <category>News</category>
       <pubDate>Fri, 04 Sep 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Grok in Google Workspace</title>
-      <link>https://x.ai/news/introducing-google-workspace-addon</link>
-      <description>Use the Grok add-on for Google Workspace to work directly in Sheets, Slides, and Docs.</description>
-      <guid isPermaLink="true">https://x.ai/news/introducing-google-workspace-addon</guid>
+      <title>Grok 4.6 on Microsoft Foundry</title>
+      <link>https://x.ai/news/grok-4-6-microsoft-foundry</link>
+      <description>Grok 4.6 is now available via Microsoft Foundry.</description>
+      <content:encoded><![CDATA[<p>Today, we’re excited to announce that Grok 4.6 is now available on Microsoft Foundry.</p>
+<p>Grok 4.6 is our latest flagship model, built for long-running agents and ambitious interactive and visual work. It offers a 500k context window and configurable reasoning efforts (low, medium, high, xhigh).</p>
+<p>For more on the model, read the <a href="https://x.ai/news/grok-4-6">Grok 4.6 announcement</a>.</p>
+<h2 id="build-with-grok-46-on-microsoft-foundry">Build with Grok 4.6 on Microsoft Foundry</h2>
+<p>Foundry gives organizations a single place to evaluate Grok 4.6 against other frontier models, run workload-specific tests, deploy managed endpoints, and operate with enterprise security and governance controls.</p>
+<p>If you are building coding agents, engineering copilots, research assistants, or enterprise automation, you can get started in the <a href="https://ai.azure.com/catalog/models">Foundry model catalog</a>. See Microsoft’s announcement, <a href="https://techcommunity.microsoft.com/blog/azure-ai-foundry-blog/grok-4-6-comes-to-microsoft-foundry-models-built-for-long-horizon-reasoning-and-/4547578">Grok 4.6 comes to Microsoft Foundry Models</a>, and our <a href="https://docs.x.ai/developers/community/microsoft-foundry">Microsoft Foundry integration guide</a> for deployment details.</p>]]></content:encoded>
+      <guid isPermaLink="true">https://x.ai/news/grok-4-6-microsoft-foundry</guid>
       <category>News</category>
       <pubDate>Fri, 04 Sep 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Workflows in Grok Build</title>
-      <link>https://x.ai/news/workflows</link>
-      <description>Grok Build can now write and run workflows: orchestration scripts that fan a task out across hundreds of parallel agents, verify the results, and report back in one background run.</description>
-      <guid isPermaLink="true">https://x.ai/news/workflows</guid>
+      <title>Grok 4.6 in GitHub Copilot</title>
+      <link>https://x.ai/news/grok-4-6-github-copilot</link>
+      <description>Grok 4.6, our latest coding model, is now available in GitHub Copilot.</description>
+      <content:encoded><![CDATA[<a href="https://console.x.ai/team/default/api-keys?campaign=grok-4-6-github-copilot-blog&amp;utm_source=website&amp;utm_medium=referral&amp;utm_campaign=grok-4-6-github-copilot-blog">Try Grok 4.6 in the API</a>
+<a href="https://github.com/features/copilot">Open GitHub Copilot</a>]]></content:encoded>
+      <guid isPermaLink="true">https://x.ai/news/grok-4-6-github-copilot</guid>
       <category>News</category>
       <pubDate>Fri, 04 Sep 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Bringing Grok 4.5 to iOS, Android, Web, and X</title>
-      <link>https://x.ai/news/grok-4-5-everywhere</link>
-      <description>Grok 4.5, our most intelligent model yet, is now on grok.com, X, iOS, and Android.</description>
-      <content:encoded><![CDATA[<a href="https://grok.com/?referrer=website">Open Grok.com</a>]]></content:encoded>
-      <guid isPermaLink="true">https://x.ai/news/grok-4-5-everywhere</guid>
+      <title>Introducing Grok 4.6</title>
+      <link>https://x.ai/news/grok-4-6</link>
+      <description>Grok 4.6 builds on Grok 4.5 with a particular focus on long-running agents and more ambitious interactive and visual work.</description>
+      <guid isPermaLink="true">https://x.ai/news/grok-4-6</guid>
       <category>News</category>
       <pubDate>Fri, 04 Sep 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Grok for Outlook</title>
-      <link>https://x.ai/news/introducing-outlook-addin</link>
-      <description>Use the Grok add-in for Microsoft Outlook to summarize long email threads, draft replies in your voice, and keep your inbox organized.</description>
-      <guid isPermaLink="true">https://x.ai/news/introducing-outlook-addin</guid>
+      <title>Introducing Grok Bot</title>
+      <link>https://x.ai/news/introducing-grok-bot</link>
+      <description>Grok Bot is your team of always-on agents. They have their own computer, work inside tools and apps like you do, and keep working 24/7.</description>
+      <guid isPermaLink="true">https://x.ai/news/introducing-grok-bot</guid>
       <category>News</category>
       <pubDate>Fri, 04 Sep 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Grok for Excel</title>
-      <link>https://x.ai/news/introducing-excel-addin</link>
-      <description>Use the Grok add-in for Microsoft Excel to ask questions in plain English, write formulas, and run scenarios without leaving the workbook.</description>
-      <guid isPermaLink="true">https://x.ai/news/introducing-excel-addin</guid>
+      <title>Imagine Video 1.5 with References</title>
+      <link>https://x.ai/news/grok-imagine-video-1-5-references</link>
+      <description>Our best video model, now with text, image, and voice references — generating up to 1080p.</description>
+      <content:encoded><![CDATA[<a href="https://grok.com/imagine?referrer=website&amp;campaign=imagine-video-1-5-references-blog">Open Grok.com</a>]]></content:encoded>
+      <guid isPermaLink="true">https://x.ai/news/grok-imagine-video-1-5-references</guid>
       <category>News</category>
       <pubDate>Fri, 04 Sep 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Introducing Grok 4.5</title>
-      <link>https://x.ai/news/grok-4-5</link>
-      <description>Grok 4.5 is SpaceXAI's smartest model built for coding, agentic tasks, and knowledge work.</description>
-      <guid isPermaLink="true">https://x.ai/news/grok-4-5</guid>
+      <title>Grok 4.5 in GitHub Copilot</title>
+      <link>https://x.ai/news/grok-github-copilot</link>
+      <description>Grok 4.5, our smartest coding model, is now available in GitHub Copilot.</description>
+      <content:encoded><![CDATA[<a href="https://console.x.ai/team/default/api-keys?campaign=grok-github-copilot-blog&amp;utm_source=website&amp;utm_medium=referral&amp;utm_campaign=grok-github-copilot-blog">Try Grok 4.5 in the API</a>
+<a href="https://github.com/features/copilot">Open GitHub Copilot</a>]]></content:encoded>
+      <guid isPermaLink="true">https://x.ai/news/grok-github-copilot</guid>
       <category>News</category>
       <pubDate>Fri, 04 Sep 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Automations in Grok</title>
-      <link>https://x.ai/news/grok-automations</link>
-      <description>Describe a job once and Grok runs it on a schedule or when an email arrives, then reports back.</description>
-      <content:encoded><![CDATA[<p>Today, we're introducing Automations: jobs Grok runs on its own. Describe the work once, choose when it runs, and Grok takes it from there, whether that's research done before you're awake or an important email flagged the moment it lands. Automations are available on <a href="https://grok.com/automations">grok.com</a> and in the Grok app on iOS and Android.</p>
-<h2 id="describe-the-job-once">Describe the job once</h2>
-<p>An automation's instructions read like any chat message: describe what you want, attach files for context, add connectors and skills, and pick a mode. Name it, save it, and from then on every run is a fresh request: same instructions, current data.</p>
-<h2 id="on-a-schedule-or-on-a-trigger">On a schedule, or on a trigger</h2>
-<p>Schedules run once, daily, weekdays, weekly, monthly, or yearly, at a time you choose in your timezone: a morning brief at 8:00 before the day starts, or a rent reminder on the 1st.</p>
-<p>Email triggers watch your inbox instead. When an incoming email matches your filters (sender, recipient, or subject), the automation fires with that email as context, and Grok responds to the actual message. Instructions can also point at your tools directly: type @ to mention a connector, and Grok uses it on every run.</p>
-<p>You can also start a run yourself with Run now, which is handy for testing an automation right after you build it.</p>
-<h2 id="every-run-is-a-full-conversation">Every run is a full conversation</h2>
-<p>When an automation fires, Grok opens a real conversation, does the work, and saves the result to its run history. Open any run to read the full thread, or pick up the conversation where Grok left off. You choose how each automation reports back: email, app notification, both, or neither if you'd rather check in yourself.</p>
-<h2 id="start-from-chat-or-a-template">Start from chat, or a template</h2>
-<p>You can also create automations straight from chat: ask Grok to "check the news every morning and flag anything about pricing" and it sets one up for you. The Automations page has suggested templates to start from, and any automation can be paused, resumed, edited, or deleted at any time.</p>
+      <title>Introducing the Voice Agent Builder</title>
+      <link>https://x.ai/news/grok-voice-agent-builder</link>
+      <description>Create a personalized voice agent in under 2 minutes without a single line of code.</description>
+      <guid isPermaLink="true">https://x.ai/news/grok-voice-agent-builder</guid>
+      <category>News</category>
+      <pubDate>Fri, 04 Sep 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Introducing /goal</title>
+      <link>https://x.ai/news/introducing-goal</link>
+      <description>Use /goal for long-running autonomous task execution in Grok Build.</description>
+      <content:encoded><![CDATA[<p>Today we're introducing <code>/goal</code> in Grok Build. This new mode yields long-running, autonomous execution, helping you hand off larger implementation tasks to the agent.</p>
+<p>Available now in Grok Build. Install with a single command and sign in with your account:</p>
+<p>Most coding sessions require back-and-forth execution and verification. With <code>/goal</code>, the agent continues until a task is completed and verified, whether that means reviewing code, inspecting webpages, or executing scripts.</p>
+<h2 id="set-a-goal-in-one-line">Set a goal in one line</h2>
+<p>Give <code>/goal</code> an objective and Grok Build takes it from there:</p>
+<pre><code>/goal Migrate the auth module to the new API
+</code></pre>
+<p>It plans an approach, breaks the work into a progress checklist, and starts executing. You can keep sharing additional instructions with the agent as it works.</p>
+<p>The new mode offers additional commands for monitoring and steering long-running tasks:</p>
+<pre><code>/goal status     # see the live progress panel
+/goal pause      # stop work, keep the goal
+/goal resume     # pick back up
+/goal clear      # drop the goal entirely
+</code></pre>
+<p>When the goal is finished, the panel flips to <strong>Complete</strong> with every checklist item checked.</p>
+<h2 id="getting-started">Getting started</h2>
+<p>Install Grok Build with the command above, then invoke <code>/goal</code> to hand off your first long-running task.</p>]]></content:encoded>
+      <guid isPermaLink="true">https://x.ai/news/introducing-goal</guid>
+      <category>News</category>
+      <pubDate>Fri, 04 Sep 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Grok on Databricks</title>
+      <link>https://x.ai/news/grok-databricks</link>
+      <description>Grok models are now available on Databricks Agent Bricks.</description>
+      <content:encoded><![CDATA[<p>We're excited to share that Grok models are now natively available on Databricks Agent Bricks, Databricks' developer agent platform.</p>
+<p>As part of the Databricks 2026 Data + AI Summit, Databricks is partnering with SpaceXAI to make Grok available alongside other frontier and open-source models in a single, governed platform.</p>
+<p>Agent Bricks connects context (derived from data in Lakehouse) with control and choice, enabling engineering teams to effectively build AI agents that operate on large volumes of data.</p>
+<p>Together with <a href="https://x.ai/news/grok-amazon-bedrock">Grok on Amazon Bedrock</a>, enterprises have more ways to run SpaceXAI models where their data already lives.</p>
+<p>For more on Agent Bricks, see the <a href="https://www.databricks.com/blog/agent-bricks-dais-2026">Databricks announcement</a>.</p>]]></content:encoded>
+      <guid isPermaLink="true">https://x.ai/news/grok-databricks</guid>
+      <category>News</category>
+      <pubDate>Fri, 04 Sep 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Grok for PowerPoint</title>
+      <link>https://x.ai/news/introducing-powerpoint-addin</link>
+      <description>Grok now works inside Microsoft PowerPoint — turn outlines into slides, expand the deck, and tighten the narrative without leaving the app.</description>
+      <guid isPermaLink="true">https://x.ai/news/introducing-powerpoint-addin</guid>
+      <category>News</category>
+      <pubDate>Fri, 04 Sep 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Agent Dashboard in Grok Build</title>
+      <link>https://x.ai/news/agent-dashboard</link>
+      <description>Manage many coding sessions at once. See what each is doing, reply to the ones that need you, and dispatch new work.</description>
+      <content:encoded><![CDATA[<p>The Agent Dashboard puts every Grok Build session on one screen. See what each is doing, run them in parallel, and step in only when input is needed.</p>
+<p>Run <code>grok dashboard</code> from your shell, or <code>/dashboard</code> (<code>Ctrl+\</code>) from inside any session.</p>
+<h2 id="see-every-session-at-a-glance">See every session at a glance</h2>
+<p>The dashboard sorts sessions by state, with anything waiting for input pulled to the top, so you handle blockers first and leave the rest running. A quick scan shows what each session is doing and for how long, so you stay oriented without opening anything.</p>
+<p>Spread across repos? Group by working directory with <code>Ctrl+S</code>. Subagents roll up under the session that launched them, so the list shows the work you dispatched, not the fan-out beneath it.</p>
+<h2 id="peek-and-reply">Peek and reply</h2>
+<p>Select a row to peek at its latest output without leaving the dashboard, then reply from there. Idle sessions send immediately; active ones queue your message until the current turn ends.</p>
+<p>When a session requests approval or asks a question, its options appear inline. Answer with the arrow or number keys to continue. Multi-part questions arrive one at a time.</p>
+<h2 id="dispatch-new-sessions">Dispatch new sessions</h2>
+<p>The input at the bottom starts a new session. <code>Enter</code> dispatches it and keeps you on the dashboard; <code>Shift+Enter</code> dispatches and opens it right away. Before sending, set the model, start in plan mode, or let the session approve its own edits.</p>
+<h2 id="take-over-any-session">Take over any session</h2>
+<p>Open any session to take over its full conversation. Cycle to the next or previous session without returning to the list, then drop back to the dashboard when you're done. Closing the dashboard leaves every session running, and they're all there when you reopen it.</p>
 <h2 id="get-started">Get started</h2>
-<p>Create your first automation at <a href="https://grok.com/automations">grok.com/automations</a>. Scheduled automations are available to everyone; email triggers are included with SuperGrok.</p>]]></content:encoded>
-      <guid isPermaLink="true">https://x.ai/news/grok-automations</guid>
+<p>The Agent Dashboard ships with Grok Build. Install it with a single command, then run <code>grok dashboard</code>, or <code>/dashboard</code> from any session you already have open.</p>]]></content:encoded>
+      <guid isPermaLink="true">https://x.ai/news/agent-dashboard</guid>
       <category>News</category>
       <pubDate>Fri, 04 Sep 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Grok Build is Now Open Source</title>
-      <link>https://x.ai/news/grok-build-open-source</link>
-      <description>Explore the harness behind our coding agent and TUI.</description>
-      <content:encoded><![CDATA[<a href="https://github.com/xai-org/grok-build">View on GitHub</a>]]></content:encoded>
-      <guid isPermaLink="true">https://x.ai/news/grok-build-open-source</guid>
-      <category>News</category>
-      <pubDate>Fri, 04 Sep 2026 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>21 New Flagship Grok Voices</title>
-      <link>https://x.ai/news/new-flagship-voices</link>
-      <description>New multilingual voices for Grok Voice, plus improved naturalness for the original five.</description>
-      <guid isPermaLink="true">https://x.ai/news/new-flagship-voices</guid>
-      <category>News</category>
-      <pubDate>Fri, 04 Sep 2026 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Grok for Word</title>
-      <link>https://x.ai/news/introducing-word-addin</link>
-      <description>Use the Grok add-in for Microsoft Word to turn notes into documents, style and format your work, or bring research from the web into Word.</description>
-      <guid isPermaLink="true">https://x.ai/news/introducing-word-addin</guid>
-      <category>News</category>
-      <pubDate>Fri, 04 Sep 2026 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Grok on Amazon Bedrock</title>
-      <link>https://x.ai/news/grok-amazon-bedrock</link>
-      <description>Grok models are now available via Amazon Bedrock.</description>
-      <content:encoded><![CDATA[<p>Today, we’re excited to announce that Grok 4.3 is now generally available on Amazon Bedrock.</p>
-<p>Grok 4.3 achieves the lowest hallucination rate among frontier models, offers 1-million-token context window, and supports configurable reasoning efforts (none, low, medium, high). Now, Amazon Bedrock users can leverage the model through Bedrock’s secure and reliable inference engine.</p>
-<h2 id="leading-performance-in-enterprise">Leading Performance in Enterprise</h2>
-<p>Grok 4.3 is one of the strongest models available today for building enterprise-ready AI agents:</p>
-<ul>
-<li>#1 on Artificial Analysis Omniscience benchmark*, achieving the lowest hallucination rate among frontier models.</li>
-<li>#1 on Artificial Analysis Tau2 Telecom benchmark*, which evaluates real-world tool-calling performance in customer support agent scenarios.</li>
-<li>#1 on Vals AI Case Law and Corporate Finance benchmarks, which measure Grok's capabilities in complex document understanding tasks.</li>
-</ul>
-<small><em>* In comparison to major frontier labs</em></small>
-<h2 id="capabilities--pricing">Capabilities &amp; Pricing</h2>
-<p>Grok 4.3 sits on the Pareto frontier for intelligence versus cost, delivering 2-10x more intelligence per dollar than other frontier models.</p>
-<ul>
-<li><strong>Input</strong>: $1.25 per 1 million tokens</li>
-<li><strong>Output</strong>: $2.50 per 1 million tokens</li>
-</ul>
-<p>It features a 1 million context window that handles extremely long documents and codebases with ease. Developers can also configure reasoning: Use <code>none</code> for maximum speed on simple requests, or <code>low</code> / <code>medium</code> / <code>high</code> to scale reasoning effort to the difficulty of the problem.</p>
-<h2 id="build-with-grok-43-on-amazon-bedrock">Build with Grok 4.3 on Amazon Bedrock</h2>
-<p>Grok 4.3 is now available to all developers in <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-xai-grok-4-3.html#model-card-xai-grok-4-3-programmatic-access">supported AWS Regions</a>.</p>
-<pre><code>curl https://bedrock-mantle.us-west-2.api.aws/openai/v1/responses \
-  -H "Content-Type: application/json" \
-  -H "Authorization: Bearer $BEDROCK_API_KEY" \
-  -d '{
-    "model": "grok-4.3",
-    "input": "What is the meaning of life?",
-    "reasoning": {
-        "effort": "low"
-    },
-    "include": ["reasoning.encrypted_content"]
-  }'
-</code></pre>
-<p>To get started, please visit the <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-xai-grok-4-3.html#model-card-xai-grok-4-3-sample-code">Grok on Amazon Bedrock documentation</a>. We're excited to see what you build!</p>]]></content:encoded>
-      <guid isPermaLink="true">https://x.ai/news/grok-amazon-bedrock</guid>
-      <category>News</category>
-      <pubDate>Fri, 04 Sep 2026 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Grok Imagine Video 1.5</title>
-      <link>https://x.ai/news/grok-imagine-video-1-5</link>
-      <description>Improved quality at even faster speeds.</description>
-      <guid isPermaLink="true">https://x.ai/news/grok-imagine-video-1-5</guid>
-      <category>News</category>
-      <pubDate>Fri, 04 Sep 2026 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Grok Imagine 1.5 Preview</title>
-      <link>https://x.ai/news/grok-imagine-1-5</link>
-      <description>grok-imagine-video-1.5-preview, our latest image-to-video model, is now available via the xAI API in preview.</description>
-      <guid isPermaLink="true">https://x.ai/news/grok-imagine-1-5</guid>
-      <category>News</category>
-      <pubDate>Fri, 04 Sep 2026 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Grok Build 0.1 on API</title>
-      <link>https://x.ai/news/grok-build-0-1</link>
-      <description>Grok Build 0.1, our fastest coding model, is now available via the xAI API in public beta.</description>
-      <guid isPermaLink="true">https://x.ai/news/grok-build-0-1</guid>
-      <category>News</category>
-      <pubDate>Fri, 04 Sep 2026 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Use Grok in Kilo Code</title>
-      <link>https://x.ai/news/grok-kilocode</link>
-      <description>Use your SuperGrok or X Premium+ subscription inside Kilo Code, the open-source agentic coding platform.</description>
-      <content:encoded><![CDATA[<p>Starting today, you can use your Grok subscription directly inside <a href="https://kilo.ai/">Kilo Code</a>.</p>
-<p>Kilo Code is the open-source agentic engineering platform for VS Code, JetBrains IDEs, and the terminal. It offers specialized modes for planning, coding, debugging, and orchestration, along with powerful tool use, browser automation, MCP extensibility, and support for 500+ models. Kilo is designed for real software engineering workflows and agentic use cases.</p>
-<p>With your X Premium+ or SuperGrok subscription, connect your Grok account to use the latest Grok models — including Grok Build for agentic coding — inside Kilo Code with no separate API key.</p>
+      <title>Use Grok in Warp</title>
+      <link>https://x.ai/news/grok-warp</link>
+      <description>Use your Grok and X Premium subscription inside Warp.</description>
+      <content:encoded><![CDATA[<p>You can now use your Grok or X Premium subscription inside <a href="https://www.warp.dev/">Warp</a>, an agentic development environment built on the terminal and used by almost one million developers.</p>
+<p>Your existing subscription provides access to Grok models, including <code>grok-build-0.1</code>, the model powering <a href="https://x.ai/build">Grok Build</a>.</p>
 <h2 id="setup">Setup</h2>
-<p>Kilo Code offers IDE extensions, a CLI, and a web surface. To connect your xAI account, follow the instructions below:</p>
-<p><strong>VS Code:</strong></p>
 <ol>
-<li>Install <a href="https://marketplace.visualstudio.com/items?itemName=kilocode.Kilo-Code">Kilo Code</a> from the VS Code Marketplace.</li>
-<li>Open <strong>Settings</strong> (gear icon) and go to the <strong>Providers</strong> tab.</li>
-<li>Click <strong>Show more providers</strong>, then search for or select <strong>xAI</strong>.</li>
-<li>Choose the <strong>xAI Grok OAuth (SuperGrok Subscription)</strong> sign-in option and complete the OAuth flow in your browser.</li>
+<li>Download Warp from <a href="https://www.warp.dev/download">warp.dev/download</a> and open it.</li>
+<li>Open the "Agent &gt; Warp Agent" settings page and click "Connect SuperGrok subscription"</li>
+<li>Switch to the <code>grok-build-0.1</code> model and start prompting.</li>
 </ol>
-<p>For headless or remote environments (VPS, SSH, Docker, WSL), choose <strong>xAI Grok OAuth (Headless / Remote / VPS)</strong> instead.</p>
-<p><strong>CLI:</strong></p>
-<pre><code>npm install -g @kilocode/cli
-</code></pre>
-<p>Run <code>kilo</code> in your project directory and use the <code>/connect</code> command to add xAI.</p>
-<p>For more details, see the <a href="https://kilo.ai/docs/ai-providers/xai">Kilo Code xAI provider documentation</a>.</p>
-<p>More open-source agents and integrations are coming soon.</p>]]></content:encoded>
-      <guid isPermaLink="true">https://x.ai/news/grok-kilocode</guid>
+<p>That's it! More agents and integrations are coming soon to SuperGrok and X Premium subscribers. To subscribe, visit the <a href="https://x.ai/pricing">pricing page</a>.</p>]]></content:encoded>
+      <guid isPermaLink="true">https://x.ai/news/grok-warp</guid>
       <category>News</category>
       <pubDate>Fri, 04 Sep 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Use Grok in OpenCode</title>
-      <link>https://x.ai/news/grok-opencode</link>
-      <description>Use your SuperGrok or X Premium subscription inside OpenCode.</description>
-      <content:encoded><![CDATA[<p>After connecting your Grok account, start coding with Grok Build, the same model that powers xAI's <a href="https://x.ai/build">terminal-based coding agent</a>.</p>
-<h2 id="setup">Setup</h2>
-<p>Install OpenCode:</p>
-<pre><code>curl -fsSL https://opencode.ai/install | bash
-</code></pre>
-<p>Launch OpenCode:</p>
-<pre><code>opencode
-</code></pre>
-<p>Inside OpenCode, run <code>/connect</code> and pick <strong>xAI</strong>:</p>
-<pre><code>/connect
-</code></pre>
-<p>Pick the sign-in method that fits your setup — both use your Grok subscription:</p>
+      <title>Grok Build Plugin Marketplace</title>
+      <link>https://x.ai/news/grok-plugin-marketplace</link>
+      <description>Launching the built-in plugin marketplace for Grok Build.</description>
+      <content:encoded><![CDATA[<p>Today we're launching the <a href="https://github.com/xai-org/plugin-marketplace">Grok Build Plugin Marketplace</a> - a set of built-in plugins for <a href="https://x.ai/build">Grok Build</a>.</p>
+<p>A plugin bundles <a href="https://x.ai/news/grok-skills">skills</a>, slash commands, agents, hooks, MCP servers, and LSPs into one installable package. The marketplace is built into Grok Build, so you can browse, install, and update plugins without leaving your terminal.</p>
+<h2 id="available-at-launch">Available at launch</h2>
+<p>The marketplace opens with plugins from partners across the stack:</p>
 <ul>
-<li><strong>xAI Grok OAuth (SuperGrok Subscription)</strong> — opens your browser to sign in.</li>
-<li><strong>xAI Grok OAuth (Headless / Remote / VPS)</strong> — prints a code and URL for SSH or remote hosts.</li>
+<li><strong><a href="https://www.mongodb.com/docs/mcp-server/overview/">MongoDB</a></strong> — Explore data, manage collections, and optimize queries.</li>
+<li><strong><a href="https://github.com/vercel/vercel-plugin">Vercel</a></strong> — Manage deployments, check build status, and configure domains.</li>
+<li><strong><a href="https://github.com/getsentry/sentry-for-ai">Sentry</a></strong> — Analyze stack traces and debug production errors.</li>
+<li><strong><a href="https://github.com/ChromeDevTools/chrome-devtools-mcp">Chrome DevTools</a></strong> — Control a live browser, record performance traces, and inspect network requests.</li>
+<li><strong><a href="https://github.com/cloudflare/skills">Cloudflare</a></strong> — Skills for Workers, Durable Objects, and more.</li>
+<li><strong><a href="https://github.com/obra/superpowers">Superpowers</a></strong> — Popular agent-driven workflows.</li>
 </ul>
-<p>More open-source agents and integrations are coming soon.</p>]]></content:encoded>
-      <guid isPermaLink="true">https://x.ai/news/grok-opencode</guid>
+<h2 id="install-in-seconds">Install in seconds</h2>
+<p>Inside Grok Build, type <code>/marketplace</code> to browse the catalog and press <code>i</code> to install a plugin. Or from the terminal:</p>
+<pre><code>grok plugin marketplace list
+grok plugin install &lt;name&gt; --trust
+</code></pre>
+<p>Every remote plugin in the catalog is pinned to a specific commit SHA, and Grok Build verifies the pin at install time.</p>
+<h2 id="publish-your-own">Publish your own</h2>
+<p>The marketplace is an open catalog. If you've built a plugin you want to share, submit a pull request to <a href="https://github.com/xai-org/plugin-marketplace">xai-org/plugin-marketplace</a>.</p>
+<h2 id="getting-started">Getting started</h2>
+<p>New to Grok Build? Visit <a href="https://x.ai/build">x.ai/build</a> to get started.</p>]]></content:encoded>
+      <guid isPermaLink="true">https://x.ai/news/grok-plugin-marketplace</guid>
       <category>News</category>
       <pubDate>Fri, 04 Sep 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Skills in web, iOS, and Android</title>
-      <link>https://x.ai/news/grok-skills</link>
-      <description>Persistent expertise for Grok. Generate documents, decks, and spreadsheets. Automate workflows. Build and share your own skills.</description>
-      <content:encoded><![CDATA[<a href="https://grok.com/share/bGVnYWN5_6ffd7524-4338-4839-bcae-aebf41361b9f?referrer=website">See an Example</a>]]></content:encoded>
-      <guid isPermaLink="true">https://x.ai/news/grok-skills</guid>
+      <title>Composer 2.5</title>
+      <link>https://x.ai/news/composer-2-5</link>
+      <description>Composer 2.5 is now available in Grok Build. Try it from the /models menu.</description>
+      <content:encoded><![CDATA[<p>Composer 2.5 is now available in Grok Build. Composer 2.5 is a fast, state-of-the-art model that excels on long-running tasks and following complex instructions.</p>
+<p>Try it by typing <code>/model</code> and then selecting Composer 2.5 in the menu.</p>]]></content:encoded>
+      <guid isPermaLink="true">https://x.ai/news/composer-2-5</guid>
+      <category>News</category>
+      <pubDate>Fri, 04 Sep 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Introducing Grok Build</title>
+      <link>https://x.ai/news/grok-build-cli</link>
+      <description>Now in early beta for all SuperGrok and X Premium Plus subscribers — Grok Build is a new coding agent that runs right from your terminal.</description>
+      <content:encoded><![CDATA[<p>Today we're launching an early beta of Grok Build, a powerful new coding agent for professional software engineering and complex coding work.</p>
+<p>Available now to all SuperGrok and X Premium Plus subscribers. Install Grok Build with a single command and sign in with your account:</p>
+<h2 id="plan-review-approve">Plan, review, approve</h2>
+<p>For complex tasks, start Grok Build in plan mode. You can approve the plan, comment on individual steps, or rewrite it entirely before execution begins.
+Once a plan is approved, every change shows up as a clean diff.</p>
+<h2 id="works-with-what-you-already-use">Works with what you already use</h2>
+<p>Your AGENTS.md, plugins, hooks, skills, and MCP servers all work out of the box. Start Grok Build in your repo and it picks up your conventions instantly.</p>
+<h2 id="subagents-that-work-in-parallel">Subagents that work in parallel</h2>
+<p>For larger tasks, Grok Build delegates work to specialized subagents that run in parallel. Grok Build also supports deep worktree integrations, and you can launch subagents in their own worktrees.</p>
+<h2 id="built-to-fit-your-workflow">Built to fit your workflow</h2>
+<p>Headless mode (<code>-p</code>) allows easily running agents inside scripts and automations. Grok Build also provides full ACP support to build your own  bots and agent orchestration apps.</p>
+<h2 id="try-it-today">Try it today</h2>
+<p>This is an early beta, and your feedback is the fastest way to make it better. Type <code>/feedback</code> in Grok Build to send bugs, requests, and reactions straight to the team.</p>
+<p>SuperGrok and X Premium Plus subscribers can install Grok Build with the command above and start building. If you don't have SuperGrok yet, <a href="https://grok.com/supergrok?referrer=grok-build">upgrade here</a> — we're excited to see what you create.</p>]]></content:encoded>
+      <guid isPermaLink="true">https://x.ai/news/grok-build-cli</guid>
       <category>News</category>
       <pubDate>Fri, 04 Sep 2026 00:00:00 +0000</pubDate>
     </item>
