@@ -1985,193 +1985,213 @@ VOICE: with the operator — direct, dollars first, no fluff. External — per t
       <media:content url="https://www.anthropic.com/_next/image?url=https%3A%2F%2Fwww-cdn.anthropic.com%2Fimages%2F4zrzovbb%2Fwebsite%2Fafd8e238255ec2654f2322f3d3630dcf1e8ea4ca-6800x3264.png&amp;amp;w=3840&amp;amp;q=75" type="image/jpeg" medium="image"/>
     </item>
     <item>
-      <title>Imagine Image 2.0</title>
-      <link>https://x.ai/news/grok-imagine-image-2</link>
-      <description>Precise image generation and editing, built for real creative work.</description>
-      <content:encoded><![CDATA[<a href="https://grok.com/imagine?referrer=website&amp;campaign=imagine-image-2-blog">Open Grok.com</a>]]></content:encoded>
-      <guid isPermaLink="true">https://x.ai/news/grok-imagine-image-2</guid>
-      <category>News</category>
-      <pubDate>Fri, 04 Sep 2026 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Grok in Google Workspace</title>
-      <link>https://x.ai/news/introducing-google-workspace-addon</link>
-      <description>Use the Grok add-on for Google Workspace to work directly in Sheets, Slides, and Docs.</description>
-      <guid isPermaLink="true">https://x.ai/news/introducing-google-workspace-addon</guid>
-      <category>News</category>
-      <pubDate>Fri, 04 Sep 2026 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Workflows in Grok Build</title>
-      <link>https://x.ai/news/workflows</link>
-      <description>Grok Build can now write and run workflows: orchestration scripts that fan a task out across hundreds of parallel agents, verify the results, and report back in one background run.</description>
-      <guid isPermaLink="true">https://x.ai/news/workflows</guid>
-      <category>News</category>
-      <pubDate>Fri, 04 Sep 2026 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Bringing Grok 4.5 to iOS, Android, Web, and X</title>
-      <link>https://x.ai/news/grok-4-5-everywhere</link>
-      <description>Grok 4.5, our most intelligent model yet, is now on grok.com, X, iOS, and Android.</description>
-      <content:encoded><![CDATA[<a href="https://grok.com/?referrer=website">Open Grok.com</a>]]></content:encoded>
-      <guid isPermaLink="true">https://x.ai/news/grok-4-5-everywhere</guid>
-      <category>News</category>
-      <pubDate>Fri, 04 Sep 2026 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Grok for Outlook</title>
-      <link>https://x.ai/news/introducing-outlook-addin</link>
-      <description>Use the Grok add-in for Microsoft Outlook to summarize long email threads, draft replies in your voice, and keep your inbox organized.</description>
-      <guid isPermaLink="true">https://x.ai/news/introducing-outlook-addin</guid>
-      <category>News</category>
-      <pubDate>Fri, 04 Sep 2026 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Grok for Excel</title>
-      <link>https://x.ai/news/introducing-excel-addin</link>
-      <description>Use the Grok add-in for Microsoft Excel to ask questions in plain English, write formulas, and run scenarios without leaving the workbook.</description>
-      <guid isPermaLink="true">https://x.ai/news/introducing-excel-addin</guid>
-      <category>News</category>
-      <pubDate>Fri, 04 Sep 2026 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Introducing Grok 4.5</title>
-      <link>https://x.ai/news/grok-4-5</link>
-      <description>Grok 4.5 is SpaceXAI's smartest model built for coding, agentic tasks, and knowledge work.</description>
-      <guid isPermaLink="true">https://x.ai/news/grok-4-5</guid>
-      <category>News</category>
-      <pubDate>Fri, 04 Sep 2026 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Introducing the Voice Agent Builder</title>
-      <link>https://x.ai/news/grok-voice-agent-builder</link>
-      <description>Create a personalized voice agent in under 2 minutes without a single line of code.</description>
-      <guid isPermaLink="true">https://x.ai/news/grok-voice-agent-builder</guid>
-      <category>News</category>
-      <pubDate>Fri, 04 Sep 2026 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Introducing /goal</title>
-      <link>https://x.ai/news/introducing-goal</link>
-      <description>Use /goal for long-running autonomous task execution in Grok Build.</description>
-      <content:encoded><![CDATA[<p>Today we're introducing <code>/goal</code> in Grok Build. This new mode yields long-running, autonomous execution, helping you hand off larger implementation tasks to the agent.</p>
-<p>Available now in Grok Build. Install with a single command and sign in with your account:</p>
-<p>Most coding sessions require back-and-forth execution and verification. With <code>/goal</code>, the agent continues until a task is completed and verified, whether that means reviewing code, inspecting webpages, or executing scripts.</p>
-<h2 id="set-a-goal-in-one-line">Set a goal in one line</h2>
-<p>Give <code>/goal</code> an objective and Grok Build takes it from there:</p>
-<pre><code>/goal Migrate the auth module to the new API
-</code></pre>
-<p>It plans an approach, breaks the work into a progress checklist, and starts executing. You can keep sharing additional instructions with the agent as it works.</p>
-<p>The new mode offers additional commands for monitoring and steering long-running tasks:</p>
-<pre><code>/goal status     # see the live progress panel
-/goal pause      # stop work, keep the goal
-/goal resume     # pick back up
-/goal clear      # drop the goal entirely
-</code></pre>
-<p>When the goal is finished, the panel flips to <strong>Complete</strong> with every checklist item checked.</p>
-<h2 id="getting-started">Getting started</h2>
-<p>Install Grok Build with the command above, then invoke <code>/goal</code> to hand off your first long-running task.</p>]]></content:encoded>
-      <guid isPermaLink="true">https://x.ai/news/introducing-goal</guid>
-      <category>News</category>
-      <pubDate>Fri, 04 Sep 2026 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Grok on Databricks</title>
-      <link>https://x.ai/news/grok-databricks</link>
-      <description>Grok models are now available on Databricks Agent Bricks.</description>
-      <content:encoded><![CDATA[<p>We're excited to share that Grok models are now natively available on Databricks Agent Bricks, Databricks' developer agent platform.</p>
-<p>As part of the Databricks 2026 Data + AI Summit, Databricks is partnering with SpaceXAI to make Grok available alongside other frontier and open-source models in a single, governed platform.</p>
-<p>Agent Bricks connects context (derived from data in Lakehouse) with control and choice, enabling engineering teams to effectively build AI agents that operate on large volumes of data.</p>
-<p>Together with <a href="https://x.ai/news/grok-amazon-bedrock">Grok on Amazon Bedrock</a>, enterprises have more ways to run SpaceXAI models where their data already lives.</p>
-<p>For more on Agent Bricks, see the <a href="https://www.databricks.com/blog/agent-bricks-dais-2026">Databricks announcement</a>.</p>]]></content:encoded>
-      <guid isPermaLink="true">https://x.ai/news/grok-databricks</guid>
-      <category>News</category>
-      <pubDate>Fri, 04 Sep 2026 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Grok for PowerPoint</title>
-      <link>https://x.ai/news/introducing-powerpoint-addin</link>
-      <description>Grok now works inside Microsoft PowerPoint — turn outlines into slides, expand the deck, and tighten the narrative without leaving the app.</description>
-      <guid isPermaLink="true">https://x.ai/news/introducing-powerpoint-addin</guid>
-      <category>News</category>
-      <pubDate>Fri, 04 Sep 2026 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Agent Dashboard in Grok Build</title>
-      <link>https://x.ai/news/agent-dashboard</link>
-      <description>Manage many coding sessions at once. See what each is doing, reply to the ones that need you, and dispatch new work.</description>
-      <content:encoded><![CDATA[<p>The Agent Dashboard puts every Grok Build session on one screen. See what each is doing, run them in parallel, and step in only when input is needed.</p>
-<p>Run <code>grok dashboard</code> from your shell, or <code>/dashboard</code> (<code>Ctrl+\</code>) from inside any session.</p>
-<h2 id="see-every-session-at-a-glance">See every session at a glance</h2>
-<p>The dashboard sorts sessions by state, with anything waiting for input pulled to the top, so you handle blockers first and leave the rest running. A quick scan shows what each session is doing and for how long, so you stay oriented without opening anything.</p>
-<p>Spread across repos? Group by working directory with <code>Ctrl+S</code>. Subagents roll up under the session that launched them, so the list shows the work you dispatched, not the fan-out beneath it.</p>
-<h2 id="peek-and-reply">Peek and reply</h2>
-<p>Select a row to peek at its latest output without leaving the dashboard, then reply from there. Idle sessions send immediately; active ones queue your message until the current turn ends.</p>
-<p>When a session requests approval or asks a question, its options appear inline. Answer with the arrow or number keys to continue. Multi-part questions arrive one at a time.</p>
-<h2 id="dispatch-new-sessions">Dispatch new sessions</h2>
-<p>The input at the bottom starts a new session. <code>Enter</code> dispatches it and keeps you on the dashboard; <code>Shift+Enter</code> dispatches and opens it right away. Before sending, set the model, start in plan mode, or let the session approve its own edits.</p>
-<h2 id="take-over-any-session">Take over any session</h2>
-<p>Open any session to take over its full conversation. Cycle to the next or previous session without returning to the list, then drop back to the dashboard when you're done. Closing the dashboard leaves every session running, and they're all there when you reopen it.</p>
-<h2 id="get-started">Get started</h2>
-<p>The Agent Dashboard ships with Grok Build. Install it with a single command, then run <code>grok dashboard</code>, or <code>/dashboard</code> from any session you already have open.</p>]]></content:encoded>
-      <guid isPermaLink="true">https://x.ai/news/agent-dashboard</guid>
-      <category>News</category>
-      <pubDate>Fri, 04 Sep 2026 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Use Grok in Warp</title>
-      <link>https://x.ai/news/grok-warp</link>
-      <description>Use your Grok and X Premium subscription inside Warp.</description>
-      <content:encoded><![CDATA[<p>You can now use your Grok or X Premium subscription inside <a href="https://www.warp.dev/">Warp</a>, an agentic development environment built on the terminal and used by almost one million developers.</p>
-<p>Your existing subscription provides access to Grok models, including <code>grok-build-0.1</code>, the model powering <a href="https://x.ai/build">Grok Build</a>.</p>
-<h2 id="setup">Setup</h2>
-<ol>
-<li>Download Warp from <a href="https://www.warp.dev/download">warp.dev/download</a> and open it.</li>
-<li>Open the "Agent &gt; Warp Agent" settings page and click "Connect SuperGrok subscription"</li>
-<li>Switch to the <code>grok-build-0.1</code> model and start prompting.</li>
-</ol>
-<p>That's it! More agents and integrations are coming soon to SuperGrok and X Premium subscribers. To subscribe, visit the <a href="https://x.ai/pricing">pricing page</a>.</p>]]></content:encoded>
-      <guid isPermaLink="true">https://x.ai/news/grok-warp</guid>
-      <category>News</category>
-      <pubDate>Fri, 04 Sep 2026 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Grok Build Plugin Marketplace</title>
-      <link>https://x.ai/news/grok-plugin-marketplace</link>
-      <description>Launching the built-in plugin marketplace for Grok Build.</description>
-      <content:encoded><![CDATA[<p>Today we're launching the <a href="https://github.com/xai-org/plugin-marketplace">Grok Build Plugin Marketplace</a> - a set of built-in plugins for <a href="https://x.ai/build">Grok Build</a>.</p>
-<p>A plugin bundles <a href="https://x.ai/news/grok-skills">skills</a>, slash commands, agents, hooks, MCP servers, and LSPs into one installable package. The marketplace is built into Grok Build, so you can browse, install, and update plugins without leaving your terminal.</p>
-<h2 id="available-at-launch">Available at launch</h2>
-<p>The marketplace opens with plugins from partners across the stack:</p>
+      <title>Biosecurity at the frontier</title>
+      <link>https://x.ai/news/biosafety-at-the-frontier</link>
+      <description>LatchBio evaluated Grok's performance on biosecurity monitoring and adversarial biological tasks. They found that Grok 4.6 detects and refuses dangerous queries more reliably than any other frontier system.</description>
+      <content:encoded><![CDATA[<p>Today, <a href="https://latch.bio/">LatchBio</a> published an independent analysis of Grok 4.6 on their biological capability and biological red-teaming benchmark suites. These evaluations measure a wide range of characteristics and capabilities of tested models, including:</p>
 <ul>
-<li><strong><a href="https://www.mongodb.com/docs/mcp-server/overview/">MongoDB</a></strong> — Explore data, manage collections, and optimize queries.</li>
-<li><strong><a href="https://github.com/vercel/vercel-plugin">Vercel</a></strong> — Manage deployments, check build status, and configure domains.</li>
-<li><strong><a href="https://github.com/getsentry/sentry-for-ai">Sentry</a></strong> — Analyze stack traces and debug production errors.</li>
-<li><strong><a href="https://github.com/ChromeDevTools/chrome-devtools-mcp">Chrome DevTools</a></strong> — Control a live browser, record performance traces, and inspect network requests.</li>
-<li><strong><a href="https://github.com/cloudflare/skills">Cloudflare</a></strong> — Skills for Workers, Durable Objects, and more.</li>
-<li><strong><a href="https://github.com/obra/superpowers">Superpowers</a></strong> — Popular agent-driven workflows.</li>
+<li>Whether a model can distinguish between legitimate biological research and requests that conceal a biosecurity hazard</li>
+<li>Whether a model is useful in a biosecurity and biomonitoring role, by being able to detect and characterize emerging pathogens and patterns of transmission</li>
 </ul>
-<h2 id="install-in-seconds">Install in seconds</h2>
-<p>Inside Grok Build, type <code>/marketplace</code> to browse the catalog and press <code>i</code> to install a plugin. Or from the terminal:</p>
-<pre><code>grok plugin marketplace list
-grok plugin install &lt;name&gt; --trust
-</code></pre>
-<p>Every remote plugin in the catalog is pinned to a specific commit SHA, and Grok Build verifies the pin at install time.</p>
-<h2 id="publish-your-own">Publish your own</h2>
-<p>The marketplace is an open catalog. If you've built a plugin you want to share, submit a pull request to <a href="https://github.com/xai-org/plugin-marketplace">xai-org/plugin-marketplace</a>.</p>
-<h2 id="getting-started">Getting started</h2>
-<p>New to Grok Build? Visit <a href="https://x.ai/build">x.ai/build</a> to get started.</p>]]></content:encoded>
-      <guid isPermaLink="true">https://x.ai/news/grok-plugin-marketplace</guid>
+<p>On LatchBio's BioSecBench-Refusal suite, Grok 4.6 was the strongest model tested at refusing disguised and hazardous tasks while still completing routine biological work. It was the only system to score above 50% on both measures.</p>
+<h2 id="methodology-and-context">Methodology and context</h2>
+<p>Biology and biological research present domains where the opportunities and risks of highly capable AI systems are well-known and challenging to disentangle. In designing our safeguards, we aim to maximize the utility of our agents in assisting and accelerating legitimate scientific research, while minimizing the risks they present through incorrect information and adversarial use.</p>
+<p>LatchBio's two benchmarks most relevant to the above capabilities measure whether an agent can distinguish concealed hazards from ordinary science, and whether it can carry out the pathogen surveillance workflows public-health work depends on. They are:</p>
+<ul>
+<li><strong>BioSecBench-Refusal</strong>, which pairs routine biological tasks, adapted from published literature, with 46 red-team tasks that look like ordinary research and hide the hazard in attached scientific data, mislabeled files, or other intentionally obfuscated tasks. This evaluation is calibrated around understanding the intent of a task: an agent that only reacts to words like "pathogen" or "toxin" will block the routine set and miss the red-team set, while one that inspects the data can tell the two apart.</li>
+<li><strong>BioSecBench-Surveillance</strong>, which tests whether an agent can carry out pathogen genomic surveillance workflows of the kind used in public-health monitoring. Those tasks require chaining file inspection, tool use, and scientific judgment on messy sequencing data.</li>
+</ul>
+<h2 id="results-and-key-findings">Results and key findings</h2>
+<p>In testing on BioSecBench-Refusal, LatchBio found that Grok 4.6 detects and refuses red-team and otherwise dangerous queries more reliably than any other frontier system tested, while not diminishing performance on routine biological work. Grok 4.6 also performs comparably with other frontier models on biosurveillance work. LatchBio notes that evaluations were performed on a variety of agent harnesses to remove confounds, and that unless otherwise noted, agents were tested at their highest-offered effort levels.</p>
+<p>The score presented by LatchBio is a trial-weighted harmonic mean of red-team refusal and routine compliance. We analyze this metric and standalone refusal rate independently. Across different harnesses, Grok 4.6 holds the top three spots, averaging 62.1%. Considering refusals and task compliance independently, Grok 4.6 refused 59.2% of red-team tasks and completed 64.8% of routine ones. It is the only model tested that scored above 50% on both measures.</p>
+<p>On BioSecBench-Surveillance, Grok 4.6 averages a success rate of 53.5%, sitting behind Opus 5 and ahead of GPT-5.6 Sol on biosecurity and monitoring work. The results on both benchmarks indicate an agent and underlying model well-calibrated for routine and helpful biological work, as well as one highly capable in biosecurity work and monitoring.</p>
+<p>On evaluations of general routine biological capability performed by LatchBio (such as SpatialBench or TxBench-PP), Grok is found to match or exceed other frontier models in a wide range of agentic biological work. These are presented in greater detail at <a href="https://benchmarks.bio">benchmarks.bio</a>.</p>
+<h2 id="analyzing-refusal-behavior">Analyzing refusal behavior</h2>
+<p>In evaluation traces, Grok 4.6 is observed reasoning over the contents of a task and testing environment to assess intent before proceeding or refusing. Frequently, Grok will find discrepancies between the stated intent in the prompt and environment, or will assemble intent from high-risk content disguised by filenames and encryption, and will subsequently refuse. On obviously benign and low-risk tasks, Grok exhibits the same environment-reasoning behavior, but is able to assess tasks as safe.</p>
+<h2 id="how-we-safeguard-grok">How we safeguard Grok</h2>
+<p>Before we release a model, we test biological capability in addition to other domains of risk, and validate that the capabilities of our models are adequately safeguarded against misuse. The work of third-party evaluators such as LatchBio complements the evaluations we perform internally, both pre- and post-deployment, for the models we serve.</p>
+<p>Grok's safeguards are built in layers to establish defense-in-depth. Refusal training is performed to teach the model how and when to refuse, to correctly infer the intent and risk profile of tasks, and to refuse correctly in highly adversarial scenarios. We train and deploy inference-time safeguards to reject harmful requests before they ever reach the model, and we implement behavioral controls to further safeguard the model when deployed. Post-deployment monitoring is performed to detect and stop patterns of adversarial use at the session and user level, and provides a source of feedback for continuous calibration of our model deployments.</p>
+<p>We observe a material improvement in Grok 4.6's capabilities in biological work over historically tested models, with substantial gains in refusal and biosecurity performance over Grok 4.5 and Grok 4.3. We intend our ongoing and novel safeguards work to allow us to continue serving frontier-scale intelligence safely across future model releases.</p>
+<h2 id="the-future-of-biosecurity-and-scientific-discovery">The future of biosecurity and scientific discovery</h2>
+<p>The line between actively adversarial tasks and helpful use grows thinner as models rapidly become more capable and autonomous, and safeguards will need to evolve accordingly. To control for the greater risk implied by improved model capability and agency, we will perform wider, more ambitious testing and calibration of our models and agentic systems: broader pre-deployment suites, more third-party evaluations, improved post-deployment monitoring, and deployments of our models with companies and institutions at the frontier of biology.</p>
+<p>Similarly, there is a risk inherent in overrefusals and miscalibrated safeguards. When a model refuses routine and helpful biological work, the ability of healthcare professionals, researchers, and monitoring programs to detect outbreaks early and perform other critical work in the field is degraded. We gauge this risk as equally serious as the risk of aiding malicious use.</p>
+<p>Grok is already used in scientific work, including general biological research and biosecurity monitoring, and we are optimistic about the ability of highly capable models to rapidly accelerate scientific discovery and shorten the path from the lab to practical use. We are committed to continuing to serve frontier intelligence securely and safely to the engineers, researchers, enterprises, and institutions advancing the life sciences.</p>
+<p>LatchBio's full methods and per-model scores are presented at <a href="https://benchmarks.bio">benchmarks.bio</a>. LatchBio's complementary blog, the Grok 4.6 model card, and SpaceXAI's Frontier Artificial Intelligence Framework are linked below.</p>
+<ul>
+<li><a href="https://blog.latch.bio/p/analyzing-grok46-safeguards">LatchBio blog</a></li>
+<li><a href="https://media.x.ai/v1/website/card-4p6-4cd2dc57.pdf">Grok 4.6 model card</a></li>
+<li><a href="https://media.x.ai/v1/website/xai-frontier-artificial-intelligence-framework-30-june-2026-99c40684.pdf">Frontier Artificial Intelligence Framework</a></li>
+</ul>]]></content:encoded>
+      <guid isPermaLink="true">https://x.ai/news/biosafety-at-the-frontier</guid>
       <category>News</category>
       <pubDate>Fri, 04 Sep 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Composer 2.5</title>
-      <link>https://x.ai/news/composer-2-5</link>
-      <description>Composer 2.5 is now available in Grok Build. Try it from the /models menu.</description>
-      <content:encoded><![CDATA[<p>Composer 2.5 is now available in Grok Build. Composer 2.5 is a fast, state-of-the-art model that excels on long-running tasks and following complex instructions.</p>
-<p>Try it by typing <code>/model</code> and then selecting Composer 2.5 in the menu.</p>]]></content:encoded>
-      <guid isPermaLink="true">https://x.ai/news/composer-2-5</guid>
+      <title>Grok 4.6 on Microsoft Foundry</title>
+      <link>https://x.ai/news/grok-4-6-microsoft-foundry</link>
+      <description>Grok 4.6 is now available via Microsoft Foundry.</description>
+      <content:encoded><![CDATA[<p>Today, we’re excited to announce that Grok 4.6 is now available on Microsoft Foundry.</p>
+<p>Grok 4.6 is our latest flagship model, built for long-running agents and ambitious interactive and visual work. It offers a 500k context window and configurable reasoning efforts (low, medium, high, xhigh).</p>
+<p>For more on the model, read the <a href="https://x.ai/news/grok-4-6">Grok 4.6 announcement</a>.</p>
+<h2 id="build-with-grok-46-on-microsoft-foundry">Build with Grok 4.6 on Microsoft Foundry</h2>
+<p>Foundry gives organizations a single place to evaluate Grok 4.6 against other frontier models, run workload-specific tests, deploy managed endpoints, and operate with enterprise security and governance controls.</p>
+<p>If you are building coding agents, engineering copilots, research assistants, or enterprise automation, you can get started in the <a href="https://ai.azure.com/catalog/models">Foundry model catalog</a>. See Microsoft’s announcement, <a href="https://techcommunity.microsoft.com/blog/azure-ai-foundry-blog/grok-4-6-comes-to-microsoft-foundry-models-built-for-long-horizon-reasoning-and-/4547578">Grok 4.6 comes to Microsoft Foundry Models</a>, and our <a href="https://docs.x.ai/developers/community/microsoft-foundry">Microsoft Foundry integration guide</a> for deployment details.</p>]]></content:encoded>
+      <guid isPermaLink="true">https://x.ai/news/grok-4-6-microsoft-foundry</guid>
+      <category>News</category>
+      <pubDate>Fri, 04 Sep 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Grok 4.6 in GitHub Copilot</title>
+      <link>https://x.ai/news/grok-4-6-github-copilot</link>
+      <description>Grok 4.6, our latest coding model, is now available in GitHub Copilot.</description>
+      <content:encoded><![CDATA[<a href="https://console.x.ai/team/default/api-keys?campaign=grok-4-6-github-copilot-blog&amp;utm_source=website&amp;utm_medium=referral&amp;utm_campaign=grok-4-6-github-copilot-blog">Try Grok 4.6 in the API</a>
+<a href="https://github.com/features/copilot">Open GitHub Copilot</a>]]></content:encoded>
+      <guid isPermaLink="true">https://x.ai/news/grok-4-6-github-copilot</guid>
+      <category>News</category>
+      <pubDate>Fri, 04 Sep 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Introducing Grok 4.6</title>
+      <link>https://x.ai/news/grok-4-6</link>
+      <description>Grok 4.6 builds on Grok 4.5 with a particular focus on long-running agents and more ambitious interactive and visual work.</description>
+      <guid isPermaLink="true">https://x.ai/news/grok-4-6</guid>
+      <category>News</category>
+      <pubDate>Fri, 04 Sep 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Introducing Grok Bot</title>
+      <link>https://x.ai/news/introducing-grok-bot</link>
+      <description>Grok Bot is your team of always-on agents. They have their own computer, work inside tools and apps like you do, and keep working 24/7.</description>
+      <guid isPermaLink="true">https://x.ai/news/introducing-grok-bot</guid>
+      <category>News</category>
+      <pubDate>Fri, 04 Sep 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Imagine Video 1.5 with References</title>
+      <link>https://x.ai/news/grok-imagine-video-1-5-references</link>
+      <description>Our best video model, now with text, image, and voice references — generating up to 1080p.</description>
+      <content:encoded><![CDATA[<a href="https://grok.com/imagine?referrer=website&amp;campaign=imagine-video-1-5-references-blog">Open Grok.com</a>]]></content:encoded>
+      <guid isPermaLink="true">https://x.ai/news/grok-imagine-video-1-5-references</guid>
+      <category>News</category>
+      <pubDate>Fri, 04 Sep 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Grok 4.5 in GitHub Copilot</title>
+      <link>https://x.ai/news/grok-github-copilot</link>
+      <description>Grok 4.5, our smartest coding model, is now available in GitHub Copilot.</description>
+      <content:encoded><![CDATA[<a href="https://console.x.ai/team/default/api-keys?campaign=grok-github-copilot-blog&amp;utm_source=website&amp;utm_medium=referral&amp;utm_campaign=grok-github-copilot-blog">Try Grok 4.5 in the API</a>
+<a href="https://github.com/features/copilot">Open GitHub Copilot</a>]]></content:encoded>
+      <guid isPermaLink="true">https://x.ai/news/grok-github-copilot</guid>
+      <category>News</category>
+      <pubDate>Fri, 04 Sep 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Automations in Grok</title>
+      <link>https://x.ai/news/grok-automations</link>
+      <description>Describe a job once and Grok runs it on a schedule or when an email arrives, then reports back.</description>
+      <content:encoded><![CDATA[<p>Today, we're introducing Automations: jobs Grok runs on its own. Describe the work once, choose when it runs, and Grok takes it from there, whether that's research done before you're awake or an important email flagged the moment it lands. Automations are available on <a href="https://grok.com/automations">grok.com</a> and in the Grok app on iOS and Android.</p>
+<h2 id="describe-the-job-once">Describe the job once</h2>
+<p>An automation's instructions read like any chat message: describe what you want, attach files for context, add connectors and skills, and pick a mode. Name it, save it, and from then on every run is a fresh request: same instructions, current data.</p>
+<h2 id="on-a-schedule-or-on-a-trigger">On a schedule, or on a trigger</h2>
+<p>Schedules run once, daily, weekdays, weekly, monthly, or yearly, at a time you choose in your timezone: a morning brief at 8:00 before the day starts, or a rent reminder on the 1st.</p>
+<p>Email triggers watch your inbox instead. When an incoming email matches your filters (sender, recipient, or subject), the automation fires with that email as context, and Grok responds to the actual message. Instructions can also point at your tools directly: type @ to mention a connector, and Grok uses it on every run.</p>
+<p>You can also start a run yourself with Run now, which is handy for testing an automation right after you build it.</p>
+<h2 id="every-run-is-a-full-conversation">Every run is a full conversation</h2>
+<p>When an automation fires, Grok opens a real conversation, does the work, and saves the result to its run history. Open any run to read the full thread, or pick up the conversation where Grok left off. You choose how each automation reports back: email, app notification, both, or neither if you'd rather check in yourself.</p>
+<h2 id="start-from-chat-or-a-template">Start from chat, or a template</h2>
+<p>You can also create automations straight from chat: ask Grok to "check the news every morning and flag anything about pricing" and it sets one up for you. The Automations page has suggested templates to start from, and any automation can be paused, resumed, edited, or deleted at any time.</p>
+<h2 id="get-started">Get started</h2>
+<p>Create your first automation at <a href="https://grok.com/automations">grok.com/automations</a>. Scheduled automations are available to everyone; email triggers are included with SuperGrok.</p>]]></content:encoded>
+      <guid isPermaLink="true">https://x.ai/news/grok-automations</guid>
+      <category>News</category>
+      <pubDate>Fri, 04 Sep 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Grok Build is Now Open Source</title>
+      <link>https://x.ai/news/grok-build-open-source</link>
+      <description>Explore the harness behind our coding agent and TUI.</description>
+      <content:encoded><![CDATA[<a href="https://github.com/xai-org/grok-build">View on GitHub</a>]]></content:encoded>
+      <guid isPermaLink="true">https://x.ai/news/grok-build-open-source</guid>
+      <category>News</category>
+      <pubDate>Fri, 04 Sep 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>21 New Flagship Grok Voices</title>
+      <link>https://x.ai/news/new-flagship-voices</link>
+      <description>New multilingual voices for Grok Voice, plus improved naturalness for the original five.</description>
+      <guid isPermaLink="true">https://x.ai/news/new-flagship-voices</guid>
+      <category>News</category>
+      <pubDate>Fri, 04 Sep 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Grok for Word</title>
+      <link>https://x.ai/news/introducing-word-addin</link>
+      <description>Use the Grok add-in for Microsoft Word to turn notes into documents, style and format your work, or bring research from the web into Word.</description>
+      <guid isPermaLink="true">https://x.ai/news/introducing-word-addin</guid>
+      <category>News</category>
+      <pubDate>Fri, 04 Sep 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Grok on Amazon Bedrock</title>
+      <link>https://x.ai/news/grok-amazon-bedrock</link>
+      <description>Grok models are now available via Amazon Bedrock.</description>
+      <content:encoded><![CDATA[<p>Today, we’re excited to announce that Grok 4.3 is now generally available on Amazon Bedrock.</p>
+<p>Grok 4.3 achieves the lowest hallucination rate among frontier models, offers 1-million-token context window, and supports configurable reasoning efforts (none, low, medium, high). Now, Amazon Bedrock users can leverage the model through Bedrock’s secure and reliable inference engine.</p>
+<h2 id="leading-performance-in-enterprise">Leading Performance in Enterprise</h2>
+<p>Grok 4.3 is one of the strongest models available today for building enterprise-ready AI agents:</p>
+<ul>
+<li>#1 on Artificial Analysis Omniscience benchmark*, achieving the lowest hallucination rate among frontier models.</li>
+<li>#1 on Artificial Analysis Tau2 Telecom benchmark*, which evaluates real-world tool-calling performance in customer support agent scenarios.</li>
+<li>#1 on Vals AI Case Law and Corporate Finance benchmarks, which measure Grok's capabilities in complex document understanding tasks.</li>
+</ul>
+<small><em>* In comparison to major frontier labs</em></small>
+<h2 id="capabilities--pricing">Capabilities &amp; Pricing</h2>
+<p>Grok 4.3 sits on the Pareto frontier for intelligence versus cost, delivering 2-10x more intelligence per dollar than other frontier models.</p>
+<ul>
+<li><strong>Input</strong>: $1.25 per 1 million tokens</li>
+<li><strong>Output</strong>: $2.50 per 1 million tokens</li>
+</ul>
+<p>It features a 1 million context window that handles extremely long documents and codebases with ease. Developers can also configure reasoning: Use <code>none</code> for maximum speed on simple requests, or <code>low</code> / <code>medium</code> / <code>high</code> to scale reasoning effort to the difficulty of the problem.</p>
+<h2 id="build-with-grok-43-on-amazon-bedrock">Build with Grok 4.3 on Amazon Bedrock</h2>
+<p>Grok 4.3 is now available to all developers in <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-xai-grok-4-3.html#model-card-xai-grok-4-3-programmatic-access">supported AWS Regions</a>.</p>
+<pre><code>curl https://bedrock-mantle.us-west-2.api.aws/openai/v1/responses \
+  -H "Content-Type: application/json" \
+  -H "Authorization: Bearer $BEDROCK_API_KEY" \
+  -d '{
+    "model": "grok-4.3",
+    "input": "What is the meaning of life?",
+    "reasoning": {
+        "effort": "low"
+    },
+    "include": ["reasoning.encrypted_content"]
+  }'
+</code></pre>
+<p>To get started, please visit the <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-xai-grok-4-3.html#model-card-xai-grok-4-3-sample-code">Grok on Amazon Bedrock documentation</a>. We're excited to see what you build!</p>]]></content:encoded>
+      <guid isPermaLink="true">https://x.ai/news/grok-amazon-bedrock</guid>
+      <category>News</category>
+      <pubDate>Fri, 04 Sep 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Grok Imagine Video 1.5</title>
+      <link>https://x.ai/news/grok-imagine-video-1-5</link>
+      <description>Improved quality at even faster speeds.</description>
+      <guid isPermaLink="true">https://x.ai/news/grok-imagine-video-1-5</guid>
+      <category>News</category>
+      <pubDate>Fri, 04 Sep 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Grok Imagine 1.5 Preview</title>
+      <link>https://x.ai/news/grok-imagine-1-5</link>
+      <description>grok-imagine-video-1.5-preview, our latest image-to-video model, is now available via the xAI API in preview.</description>
+      <guid isPermaLink="true">https://x.ai/news/grok-imagine-1-5</guid>
+      <category>News</category>
+      <pubDate>Fri, 04 Sep 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Grok Build 0.1 on API</title>
+      <link>https://x.ai/news/grok-build-0-1</link>
+      <description>Grok Build 0.1, our fastest coding model, is now available via the xAI API in public beta.</description>
+      <guid isPermaLink="true">https://x.ai/news/grok-build-0-1</guid>
       <category>News</category>
       <pubDate>Fri, 04 Sep 2026 00:00:00 +0000</pubDate>
     </item>
