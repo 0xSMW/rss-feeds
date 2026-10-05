@@ -149,6 +149,16 @@
       <pubDate>Tue, 08 Sep 2026 15:45:38 +0000</pubDate>
     </item>
     <item>
+      <title>Latest research</title>
+      <link>https://mistral.ai/news/?categories=research</link>
+      <description>Mistral today announced that it has raised €3 billion in a Series D funding round at a post-money valuation of more than €21 billion.</description>
+      <content:encoded><![CDATA[<a href="https://mistral.ai/news/mistral-makes-sovereign-open-weight-ai-to-frontier/"><img height="2566" src="https://mistral.ai/_astro/Blog-thumbnail-featured-Fundraise%20copie_i7Ta8.webp?dpl=6ac3fa6ad1cf2d0008157ffe" width="2160"/><img height="1350" src="https://mistral.ai/_astro/Blog-thumbnail-Fundraise%20copie_E7yot.webp?dpl=6ac3fa6ad1cf2d0008157ffe" width="2400"/>Mistral raises €3B to make sovereign, open-weight AI the technology frontierMistral today announced that it has raised €3 billion in a Series D funding round at a post-money valuation of more than €21 billion.</a>]]></content:encoded>
+      <guid isPermaLink="true">https://mistral.ai/news/?categories=research</guid>
+      <category>Company</category>
+      <pubDate>Tue, 08 Sep 2026 00:00:00 +0000</pubDate>
+      <media:content url="https://mistral.ai/_astro/Blog-thumbnail-featured-Fundraise%20copie_i7Ta8.webp?dpl=6ac3fa6ad1cf2d0008157ffe" type="image/webp" medium="image"/>
+    </item>
+    <item>
       <title>Mistral x HUMAIN</title>
       <link>https://mistral.ai/news/mistral-x-humain</link>
       <description>Over the past few weeks, we have announced several important steps to expand sovereign AI by increasing access to local infrastructure capacity. Earlier this summer, we announced an expanded partnership with Microsoft to increase compute capacity in Europe. In early August, we introduced European Compute Units , a structure designed to bring together long-term enterprise commitments so the capacity Europe needs gets built and can support its global competitiveness. Today, we are announcing a new strategic collaboration with HUMAIN to support sovereign AI in Saudi Arabia and across the Middle East. See more below.</description>
@@ -2431,57 +2441,6 @@ $ /usr/local/lib/heaptrack/libexec/heaptrack_interpret &lt; heaptrack.2028233 | 
       <category>Product</category>
       <pubDate>Thu, 17 Jul 2025 00:00:00 +0000</pubDate>
       <media:content url="https://mistral.ai/_astro/6e528d1e-dcf8-42ef-94ec-81eedf407278_1NQE7F.webp?dpl=6a622da400bba40008995ff8" type="image/webp" medium="image"/>
-    </item>
-    <item>
-      <title>Voxtral</title>
-      <link>https://mistral.ai/news/voxtral</link>
-      <description>Voice was humanity’s first interface—long before writing or typing, it let us share ideas, coordinate work, and build relationships. As digital systems become more capable, voice is returning as our most natural form of human-computer interaction.</description>
-      <content:encoded><![CDATA[<p><figure><img alt="Triangle Voxtral Blog" height="1190" src="https://mistral.ai/_astro/ec026954-d85f-4b11-94fd-d26fc8e13ae2_Z1SU1rQ.webp?dpl=6a622da400bba40008995ff8" width="2206"/></figure></p>
-<h3>Voice: the original UI.</h3>
-<p>Voice was humanity’s first interface—long before writing or typing, it let us share ideas, coordinate work, and build relationships. As digital systems become more capable, voice is returning as our most natural form of human-computer interaction.</p>
-<p>Yet today’s systems remain limited—unreliable, proprietary, and too brittle for real-world use. Closing this gap demands tools with exceptional transcription, deep understanding, multilingual fluency, and open, flexible deployment.</p>
-<p>We release the Voxtral models to accelerate this future. These state‑of‑the‑art speech understanding models are  available in two sizes—a 24B variant for production-scale applications and a 3B variant for local and edge deployments. Both versions are released under the Apache 2.0 license, and are also available on our <a href="https://docs.mistral.ai/capabilities/audio/#transcription">API</a>. The API routes transcription queries to a transcribe-optimized version of Voxtral Mini (Voxtral Mini Transcribe) that delivers unparalleled cost and latency-efficiency. For a comprehensive understanding of the research and development behind Voxtral, please refer to our detailed research paper, available for download <a href="https://arxiv.org/abs/2507.13264">here</a>.</p>
-<h3>Open, affordable, and production-ready speech understanding for everyone. </h3>
-<p>Until recently, gaining truly usable speech intelligence in production meant choosing between two trade-offs:</p>
-<ol><li><p>Open-source ASR systems with high word error rates and limited semantic understanding</p></li><li><p>Closed, proprietary APIs that combine strong transcription with language understanding, but at significantly higher cost and with less control over deployment</p></li></ol>
-<p>Voxtral bridges this gap. It offers state-of-the-art accuracy and native semantic understanding in the open, at less than half the price of comparable APIs. This makes high-quality speech intelligence accessible and controllable at scale. </p>
-<p>Both Voxtral models go beyond simple transcription with capabilities that include:</p>
-<ul><li><p><em>Long-form context:</em> with a 32k token context length, Voxtral handles audios up to 30 minutes for transcription, or 40 minutes for understanding </p></li><li><p><em>Built-in Q&amp;A and summarization:</em> Supports asking questions directly about the audio content or generating structured summaries, without the need to chain separate ASR and language models</p></li><li><p><em>Natively multilingual:</em> Automatic language detection and state-of-the-art performance in the world’s most widely used languages (English, Spanish, French, Portuguese, Hindi, German, Dutch, Italian, to name a few), helping teams serve global audiences with a single system</p></li><li><p><em>Function-calling straight from voice:</em> Enables direct triggering of backend functions, workflows, or API calls based on spoken user intents, turning voice interactions into actionable system commands without intermediate parsing steps.</p></li><li><p><em>Highly capable at text:</em> Retains the text understanding capabilities of its language model backbone, Mistral Small 3.1</p></li></ul>
-<p>These capabilities make the Voxtral models ideal for real-world interactions and downstream actions, such as summaries, answers, analysis, and insights. For cost-sensitive use-cases, Voxtral Mini Transcribe outperforms OpenAI Whisper for less than half the price. For premium use cases, Voxtral Small matches the performance of ElevenLabs Scribe, also for less than half the price.</p>
-<h2>Benchmarks</h2>
-<h3>Speech Transcription</h3>
-<p>To assess Voxtral’s transcription capabilities, we evaluate it on a range of English and multilingual benchmarks. For each task, we report the macro-average word error rate (lower is better) across languages. For English, we report a short-form (&lt;30-seconds) and long-form (&gt;30-seconds) average.</p>
-<p>Voxtral comprehensively outperforms Whisper large-v3, the current leading open-source Speech Transcription model. It beats GPT-4o mini Transcribe and Gemini 2.5 Flash across all tasks, and achieves state-of-the-art results on English short-form and Mozilla Common Voice, surpassing ElevenLabs Scribe and demonstrating its strong multilingual capabilities.</p>
-<p><figure><img alt="V Plot 1" height="995" src="https://mistral.ai/_astro/3f77f74c-f1a9-4a42-af04-3c72c78fd295_ZMYGMn.webp?dpl=6a622da400bba40008995ff8" width="1600"/></figure></p>
-<p>When evaluated across languages in FLEURS, Voxtral Small outperforms Whisper on every task, achieving state-of-the-art performance in a number of European languages.</p>
-<p><figure><img alt="V Plot 2" height="900" src="https://mistral.ai/_astro/6a3aaf3e-7041-41c6-9cd0-14cde11e3cba_Ll7xx.webp?dpl=6a622da400bba40008995ff8" width="1600"/></figure></p>
-<p>Macro-average details:</p>
-<ul><li><p>En short-form: LibriSpeech Clean, LibriSpeech Other, GigaSpeech, VoxPopuli, Switchboard, CHiME-4, SPGISpeech</p></li><li><p>En long-form: Earnings-21 10-m, Earnings-22 10-m</p></li><li><p>Mozilla Common Voice 15.1: English, French, German, Spanish, Italian, Portuguese, Dutch, Hindi</p></li><li><p>FLEURS: English, French, German, Spanish, Italian, Portuguese, Dutch, Hindi, Arabic</p></li></ul>
-<h3>Audio Understanding</h3>
-<p>Voxtral Small and Mini are capable of answering questions directly from speech, or by providing an audio and a text-based prompt. To evaluate Audio Understanding capabilities, we create speech-synthesized versions of three common Text Understanding tasks. We also evaluate the models on an in-house Audio Understanding (AU) Benchmark, where the model is tasked with answering challenging questions on 40 long-form audio examples. Finally, we assess Speech Translation capabilities on the FLEURS-Translation benchmark.</p>
-<p>Voxtral Small is competitive with GPT-4o-mini and Gemini 2.5 Flash across all tasks, achieving state-of-the-art performance in Speech Translation.</p>
-<p><figure><img alt="V Plot 3" height="1482" src="https://mistral.ai/_astro/d77c4d21-84a9-437f-b9c9-3b27725261ff_ZECdUT.webp?dpl=6a622da400bba40008995ff8" width="2746"/></figure></p>
-<h3><strong>Text</strong></h3>
-<p>Voxtral retains the text capabilities of its Language-Model backbone, enabling it to be used as a drop-in replacement for Ministral and Mistral Small 3.1 respectively.</p>
-<p><figure><img alt="V Plot 4" height="958" src="https://mistral.ai/_astro/977d9b1c-a999-4e6a-9b84-87654cee6ec5_13kQQU.webp?dpl=6a622da400bba40008995ff8" width="1600"/></figure></p>
-<h2>Try it for free </h2>
-<p>Whether you’re prototyping on a laptop, running private workloads on-premises, or scaling to production in the cloud, getting started is straightforward.</p>
-<ul><li><p>Download and run locally: Both Voxtral (24B) and Voxtral Mini (3B) are available to <a href="https://huggingface.co/mistralai/">download</a> on Hugging Face</p></li><li><p>Try the API: Integrate frontier speech intelligence into your application with a single <a href="https://console.mistral.ai/">API call</a>. Pricing starts at $0.001 per minute, making high-quality transcription and understanding affordable at scale. Check out our documentation <a href="https://docs.mistral.ai/capabilities/audio/">here</a>. </p></li><li><p>Try it on Le Chat: Try Voxtral in <a href="http://chat.mistral.ai">Le Chat</a>’s voice mode (rolling out to all users in the next couple of weeks)—on web or mobile. Record or upload audio, get transcriptions, ask questions, or generate summaries.</p></li></ul>
-<h3>Advanced enterprise features. </h3>
-<p>We also offer capabilities for Voxtral designed for enterprises with higher security, scale, or domain-specific requirements. Please <a href="https://mistral.ai/contact">reach out to us</a> if you are considering: </p>
-<ul><li><p>Private deployment at production-scale: Our solutions team can help you set up Voxtral for production-scale inference entirely within your own infrastructure. This is ideal for use cases in regulated industries with strict data privacy requirements. This includes guidance and tooling for deploying Voxtral across multiple GPUs or nodes, with quantized builds optimized for production throughput and cost efficiency.</p></li><li><p>Domain-specific fine-tuning: Work with our <a href="https://mistral.ai/services">applied AI</a> team to adapt Voxtral to specialized contexts—such as legal, medical, customer support, or internal knowledge bases—improving accuracy for your use case.</p></li><li><p>Advanced context: We’re inviting design partners to build support for speaker identification, emotion detection, advanced diarization, and even longer context windows to meet a wider variety of needs out of the box.</p></li><li><p>Dedicated integration support: Priority access to engineering resources and consulting to help integrate Voxtral cleanly into your existing workflows, products, or data pipelines.</p></li></ul>
-<h3>Coming up.</h3>
-<p>We will be hosting a live webinar with our friends at Inworld (check out their cool speech-to-speech <a href="https://inworld-mistral-demo.inworld.ai/">demo</a> with Voxtral and Inworld TTS!) to showcase how you can build end-to-end voice-powered agents on Wednesday, Aug 6. If you’re interested, please register <a href="https://lu.ma/zzgc68zw">here</a>. </p>
-<p>We’re working on making our audio capabilities more feature-rich in the forthcoming months. In addition to speech understanding, will we soon support: </p>
-<ul><li><p>Speaker segmentation </p></li><li><p>Audio markups such as age and emotion</p></li><li><p>Word-level timestamps</p></li><li><p>Non-speech audio recognition</p></li><li><p>And more!</p></li></ul>
-<p>We’re excited to see what you will build with Voxtral.</p>
-<h2>BTW, we’re hiring!</h2>
-<p>The release of our Voxtral models marks a significant step forward, but our journey is far from over. Our ambition is to build the most natural, delightful near-human-like voice interfaces and there's lot more work to do. We are actively expanding our nascent audio team and looking for talented research scientists and engineers who share our ambition.</p>
-<p>If you’re interested in joining us on our mission to democratize artificial intelligenceI, we welcome your applications to <a href="https://mistral.ai/careers">join our team</a>! </p>]]></content:encoded>
-      <guid isPermaLink="true">https://mistral.ai/news/voxtral</guid>
-      <category>Research</category>
-      <pubDate>Tue, 15 Jul 2025 00:00:00 +0000</pubDate>
-      <media:content url="https://mistral.ai/_astro/ec026954-d85f-4b11-94fd-d26fc8e13ae2_Z1SU1rQ.webp?dpl=6a622da400bba40008995ff8" type="image/webp" medium="image"/>
     </item>
   </channel>
 </rss>
