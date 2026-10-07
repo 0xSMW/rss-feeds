@@ -8,7 +8,100 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 06 Oct 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 06 Oct 2026 12:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Sharing AI progress in mathematics</title>
+      <link>https://openai.com/index/sharing-ai-progress-in-mathematics/</link>
+      <description>OpenAI publishes new results on open problems in mathematics from an internal frontier model and shares Lean proof formalizations and research details on GitHub.</description>
+      <content:encoded><![CDATA[<p>We’re releasing a broad range of new mathematical results produced by an <a href="https://openai.com/index/navier-stokes-solution/">internal frontier model</a>.</p>
+<p>As we look to improve how we share results with the math community, we’ve been consulting with the independent <a href="https://agmai.org/">Advisory Group on Mathematics and Artificial Intelligence at the Institute for Advanced Study⁠</a> to develop best practices, and we have drawn on their advice and <a href="https://agmai.org/general-sep29/">public recommendations⁠</a> to inform how we release these results. </p>
+<p>For this release, we’re publishing the results in a GitHub repository, with protocols for paper revisions and citations. We’re continuing to explore other community-hosted alternatives for this release which meet the committee’s guidelines. For future releases, we are committed to further improving the quality of the papers via the citations, mathematical exposition, and presentation of the results for better understanding.</p>
+<p>As part of our GitHub repository, we are sharing formalizations of many of the proofs in Lean, a programming language that allows mathematical proofs to be checked by a computer. We will update the repository with more formalizations as we obtain them. </p>
+<p>To promote scientific transparency and openness, we are also publishing additional details about how we obtained the results in the repository. These include 10 summaries of the model’s reasoning, estimations of compute spent in terms of Pro usage on ChatGPT, and statistics about the number of attempted problems. The average result used the equivalent compute of roughly three hours of ChatGPT Pro thinking.</p>
+<p>We want this progress to push the frontier of human knowledge and enable further progress in mathematics. We will be funding a series of workshops, conferences, and special programs around the understanding of major results produced by AI—we will share more on this in the near future. </p>
+<p>We want to directly empower scientists with state-of-the-art capabilities and are working to responsibly release the model that produced these results. This is why it is important to continue to evaluate our internal frontier models on mathematics and other sciences, so we can accelerate developing the tools to advance those fields. We will continue to act on feedback from the community and update our standards for future disclosures of major scientific advancements.</p>
+<h2>Author</h2>
+<p>OpenAI</p>]]></content:encoded>
+      <guid isPermaLink="true">https://openai.com/index/sharing-ai-progress-in-mathematics/</guid>
+      <category>Research</category>
+      <pubDate>Tue, 06 Oct 2026 12:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Advancing computer use with Ironclad</title>
+      <link>https://openai.com/index/advancing-computer-use-with-ironclad/</link>
+      <description>Learn how OpenAI and Ironclad are training and evaluating AI agents on complex contracting workflows to advance computer use for professional work.</description>
+      <content:encoded><![CDATA[<p>How a research collaboration in contracting is helping us train and evaluate AI agents on complex professional work.</p>
+<p>When we introduced<a href="https://openai.com/index/gpt-6-astra/"> GPT‑6 Astra</a>, we demonstrated how far our models have come in using computers for professional work, from preparing documents to testing websites. Our next goal is to make agents more capable and efficient at using specialized software to solve complex business problems. We’re exploring how to train models to understand a company’s business rules, execute multi-step workflows, and verify that their work meets the original requirements.</p>
+<p>To accelerate this research, we’re partnering directly with a small number of software companies that understand these workflows best. Together, we’re identifying challenging, high-value tasks and turning them into research problems for training and evaluating our models, ultimately making our models more capable and useful in real-world business applications.</p>
+<p>Our first partner is Ironclad, a leader in AI contracting. Working closely with Ironclad’s team, we’ve developed tasks that require agents to configure agreements, approvals, and reusable legal terms, and demonstrated progress on these complex workflows. Ironclad’s expertise has been instrumental in defining what success looks like and bringing real customer needs directly into frontier model development. We’re grateful for their partnership and excited to share what we’ve accomplished together.</p>
+<p>GPT‑6 Astra is our first frontier model trained on Ironclad tasks. On our research evaluation, its average score was 32% higher than GPT‑5.6 Sol’s, while estimated time per attempt was 48% lower.<sup><a href="#citation-bottom-1">1</a></sup></p>
+<h2>Turning contracting workflows into training tasks</h2>
+<p>Consider a legal operations team setting up a process for buying software. Finance may need to approve purchases above a certain amount, Security may need to review certain requests, and Legal may need to review nonstandard terms. The person setting up the process has to turn that short list into an intake form, document templates, approval rules, and a record of the final agreement.</p>
+<p>An AI agent doing the same work has to keep those requirements in view as it moves through the software. For example, it must configure Finance approval above the spending threshold and check that requests above and below it follow the right paths. Getting individual steps right is not enough: the finished process must work across the situations it was designed to handle.</p>
+<p>Ironclad employees and people who use Ironclad at OpenAI helped our researchers identify 11 tasks across legal, commercial, and procurement work. These included tasks like setting up nondisclosure agreements, creating procurement approval processes, and updating a reusable legal clause so that it reflects the jurisdiction a requester selects. We estimate that this work would take an experienced user about 30 to 40 minutes per task, on average.</p>
+<p>We evaluated each task against 8 to 50 criteria, depending on its complexity. This let us see which parts a model got right and where it fell short. Ironclad also provided hosted software environments of their product where the models could practice these tasks. Our researchers developed synthetic training tasks<sup><a href="#citation-bottom-2">2</a></sup> around representative workflows and used reinforcement learning to help the models improve through practice and feedback. This combination—tasks selected with people who know the work, detailed criteria, and a place for models to practice—ensures we are improving on real-world tasks that are most important to our customers.</p>
+<h2>How Astra performed</h2>
+<p>We compared Astra and GPT‑5.6 Sol using Max reasoning for Astra and High reasoning for Sol, the settings where each model scored highest. Across the 11 research tasks, Astra’s average score was 55.0%, compared with 41.6% for GPT‑5.6 Sol, while estimated average time per attempt fell from 37.0 minutes for Sol to 19.2 minutes for Astra.<sup><a href="#citation-bottom-3">3</a></sup> An internal model used in the development of Astra achieved an even stronger 63.7% on these tasks, and we aim to bring these further gains to future models.</p>
+<table><tbody><tr><td><p><b>Metric</b></p></td><td><p><b>GPT‑5.6 Sol</b><br/>High reasoning</p></td><td><p><b>GPT‑6 Astra</b><br/>Max reasoning</p></td></tr><tr><td><p>Mean rubric score</p></td><td><p>41.6%</p></td><td><p>55.0%</p></td></tr><tr><td><p>Estimated average time per attempt</p></td><td><p>37.0 minutes</p></td><td><p>19.2 minutes</p></td></tr></tbody></table>
+<p>Astra met more of the task requirements with less simulated time per attempt. The two clips below show how the models handled the same research task. Astra (first) met about 94% of the task criteria in an estimated 20 minutes; GPT‑5.6 Sol (second) met about 85% in an estimated 32 minutes.</p>
+<p><b>GPT‑6 Astra</b> met about 94% of the task criteria in an estimated 20 minutes.</p>
+<p><b>GPT‑5.6 Sol</b> met about 85% of the task criteria in an estimated 32 minutes.</p>
+<h2>What this collaboration means for Ironclad</h2>
+<p>Ironclad’s role in this work reflects a challenge its customers know well: a contracting process must handle exceptions while preserving the rules a business depends on. If an agent loses track of one of those rules halfway through a task, that limits what a software company can confidently ask it to do. This underscores why human oversight still matters as agents get better at complex contracting tasks, and why a full contracting platform remains essential. Working with our researchers gives Ironclad a way to bring these problems into the development of the underlying model, where we can study them together.</p>
+<p>As models become more capable, Ironclad has an opportunity to use them in more of its own products. For legal and business teams, that could mean AI taking on more of the effort involved in complex contracting while preserving the controls those teams rely on.</p>
+<figure><blockquote>“For AI to be genuinely useful in complex areas of contracting, it has to do more than complete individual actions. Agents need to understand the full contracting lifecycle, including how business workflows connect while preserving the controls teams rely on. Our collaboration with OpenAI brings these real-world challenges into the research process and helps move the technology forward.”</blockquote><figcaption>—Sunita Verma, Chief Technology Officer, Ironclad</figcaption></figure>
+<h2>Work with us to advance AI for complex professional work</h2>
+<p>We’re inviting a small number of software companies to work directly with our research and engineering teams on important professional tasks that today’s agents still can’t reliably complete. If your team has one, we’d like to see a concrete example: what you’re asking the agent to do, evidence of where it fails, and how you would judge a successful result. Partners should also be able to bring people who know the work deeply, a secure environment for testing, and data that can be safely used for research. This gives us a starting point for investigating the failure and measuring whether the model improves.</p>
+<p>If that describes your team,<a href="https://openai.com/form/computer-use-research-collaboration/"><b>apply to explore a research collaboration</b></a>.</p>
+<ul><li><a href="https://openai.com/research/index/?tags=2026">2026</a></li></ul>
+<h2>Author</h2>
+<p>OpenAI</p>
+<h2>Footnotes</h2>
+<ol><li>1<p>These results cover the 11 research tasks, not all Ironclad workflows. The times are simulated estimates based on assumed model processing and generation speeds, not measured customer time savings.</p></li><li>2<p>We created simulated tasks from contracts publicly available in the SEC’s EDGAR database after applying filters designed to remove personal information. We did not use OpenAI customer data, OpenAI’s internal contracts, or nonpublic Ironclad customer data or contracts for training or evaluation.</p></li><li>3<p>See the research-evaluation footnote above.</p></li></ol>]]></content:encoded>
+      <guid isPermaLink="true">https://openai.com/index/advancing-computer-use-with-ironclad/</guid>
+      <category>Publication</category>
+      <pubDate>Tue, 06 Oct 2026 10:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Expanding the Cyber Verification Program</title>
+      <link>https://www.anthropic.com/news/cyber-verification-program</link>
+      <description>We’re launching a new, expanded version of our Cyber Verification Program (CVP), which makes advanced cyber capabilities and reduced blocking classifiers available to qualifying security professionals.</description>
+      <content:encoded><![CDATA[<p>We’re launching a new, expanded version of our Cyber Verification Program (CVP), which makes advanced cyber capabilities and reduced blocking classifiers available to qualifying security professionals. The program now consists of three access tiers, which allow security teams to apply for the level of access that best suits their work. Each tier includes access to our most capable models, including Claude Opus 5.5, Claude Sonnet 5.5, Claude Mythos 5.1, and new models moving forward. Interested customers can <a href="https://portal.anthropic.com/programs/cvp">apply here</a>.</p>
+<p>Cybersecurity is inherently dual use: the same capabilities that enable a security team to find and fix a vulnerability can also help a malicious actor exploit it. For this reason, our generally available models, such as <a href="https://www.anthropic.com/claude-opus-5-5">Claude Opus 5.5</a>, <a href="https://www.anthropic.com/claude-fable-and-mythos-5-1">Claude Fable 5.1</a>, and <a href="https://www.anthropic.com/claude-sonnet-5-5">Claude Sonnet 5.5</a>, have conservative cyber safeguards that block most cyber work. This is intended to limit the harmful activities malicious actors can carry out using our models, while we continue to work to reduce false positives for secure coding.</p>
+<p>But defenders also need access to the best tools and most powerful capabilities to secure their systems. For the past six months, we’ve enabled trusted access through two programs: <a href="https://www.anthropic.com/glasswing">Project Glasswing</a> and the <a href="https://support.claude.com/en/articles/14604842-real-time-cyber-safeguards-on-claude-opus-and-sonnet">CVP</a>. The former gave a group of organizations securing the most critical software access to Claude Mythos; the latter gave vetted security teams access to reduced safeguards on Claude Opus and Claude Sonnet models.</p>
+<p>Now, we’re integrating these programs into one expanded offering, designed to give more security organizations access to the capabilities they need to protect their systems.</p>
+<h3 id="new-access-tiers"><br/>New access tiers</h3>
+<p>The updated access tiers make specific model capabilities available to security professionals based on the scope of their cyber work. Each has different verification requirements and security controls.</p>
+<p><strong>Defense Access</strong> is for defensive work, including security operations center and incident response tasks, reverse-engineering malware, and analyzing and validating vulnerabilities. Examples of qualifying organizations include security teams at companies, nonprofits, universities, and government bodies who are defending systems they own or maintain; operators of critical infrastructure of any size, such as regional hospitals or municipal utilities; smaller security firms; open-source maintainers; and individual researchers with a track record of reported vulnerabilities.</p>
+<p>We expect many organizations conducting defensive cybersecurity work to qualify for this tier. We aim to respond to applications within a few days.</p>
+<p><strong>Red Team Access</strong> adds authorized penetration testing and red-teaming to the defensive uses above. Examples of qualifying organizations include in-house red teams, government red teams, and security and penetration testing firms. Organizations in this tier can only perform adversarial testing against systems they are authorized to test, including IT systems in critical industries. Users will still experience real-time blocks on actions that could cause physical harm or mass disruption, such as deploying ransomware, damaging physical systems, or pen testing high-risk safety systems.</p>
+<p>Given the increased eligibility requirements and security controls, we expect applications in this tier to take a few weeks to review. Qualifying organizations will be enrolled in the Defense Accesstier while we review their Red Team Access applications. Currently, this tier is for organizations only; individual researchers are not eligible.</p>
+<p><strong>Specialized Access</strong>, which has the fewest cyber blocks, is reserved for a limited set of verified organizations that are authorized to test safety systems that could impact people’s lives or disrupt markets, such as flight operating systems, power grids, telecom networks, interbank transfer infrastructure, and government administrative networks.</p>
+<p>For this tier, we currently review every organization in depth in collaboration with the US government. Existing members of Project Glasswing will transition to this tier and do not require reapproval for current models.</p>
+<p>Our generally available models can continue to be used for tasks such as code review, patching known issues, vulnerability finding in owned source code, and triage of security alerts.</p>
+<p>Data retention is required for organizations enrolled in the program so that we can monitor for cyber misuse. Once <a href="https://www.anthropic.com/news/enterprise-frontier-safeguards">Enterprise Frontier Safeguards</a> (EFS)—a new solution that combines the privacy of zero data retention with robust safeguards—is available later this fall, eligible organizations will be able to store data in cloud infrastructure they control. Until EFS is available, organizations with access to Claude Fable 5.1 or Claude Mythos 5.1 with zero data retention can also use CVP with zero data retention. To register interest in EFS, <a href="https://claude.com/form/enterprise-frontier-safeguards">fill out this form</a>.</p>
+<p>Below, we share an overview of what’s available at each CVP access level, as well as requirements for security and privacy controls:</p>
+<figure><img height="2322" src="https://www.anthropic.com/_next/image?url=https%3A%2F%2Fwww-cdn.anthropic.com%2Fimages%2F4zrzovbb%2Fwebsite%2F2b1d3817fe9aa732e1be4ed18446a1b1367379e7-1920x2322.png&amp;w=3840&amp;q=75" width="1920"/><figcaption>Overview of the Cyber Verification Program tiers.</figcaption></figure>
+<h3 id="testing-the-efficacy-of-our-tiers"><br/>Testing the efficacy of our tiers</h3>
+<p>To assess the efficacy of our CVP protections, we ran Claude Opus 5.5 through CyScenarioBench—an evaluation that measures whether models can plan and execute multi-stage cyber operations under realistic constraints—with safeguards tuned for our different CVP tiers. Because this evaluation involves complex, interactive offensive scenarios, we would expect Claude to experience significant blocks both on the generally available model and in the Defense Access tier, while experiencing no blocks in the Red Team Access and Specialized Access tiers.</p>
+<p>Across five attempts at each of the 10 CyScenarioBench challenges in each access tier, we found that:</p>
+<ul><li>Without CVP access, every task was blocked on the first prompt;</li><li>In the Defense Access tier, 46 of the 50 trials were blocked at some point in the challenge, while the remaining four tasks succeeded; and</li><li>In the Red Team Access tier, no blocks occurred, and Claude Opus 5.5 successfully completed 34 of the 50 tasks—effectively equivalent to the model’s 67.6% success rate on this evaluation with no safeguards applied (representative of Specialized Access).</li></ul>
+<p>These evaluations give us confidence that we can make advanced cyber capabilities safely available to a broader set of defenders, expanding the defensive efforts we began with Project Glasswing. We will continue to refine our tier-based classifiers over time.</p>
+<figure><img height="1080" src="https://www.anthropic.com/_next/image?url=https%3A%2F%2Fwww-cdn.anthropic.com%2Fimages%2F4zrzovbb%2Fwebsite%2Fbdb05797e26ba2d096ebda6df1c762518da39db2-1920x1080.png&amp;w=3840&amp;q=75" width="1920"/><figcaption>On CyScenarioBench, our safeguards blocked 46 of 50 tasks on Claude Opus 5.5 in the Defense Access tier, while the Red Team Access tier on Claude Opus 5.5 did not block any tasks, and completed 34 of 50—the same completion rate as when no safeguards are applied.</figcaption></figure>
+<h2 id="giving-defenders-the-advantage">Giving defenders the advantage</h2>
+<p>Through Project Glasswing, we found that Claude Mythos models significantly increased the rate at which organizations were able to identify vulnerabilities in their systems. Through the program, our partners uncovered at least 129,000 verified software vulnerabilities between April and July 2026. And through our own open-source scanning efforts, we found an additional 5,500 verified software vulnerabilities between April and October 2026. Of these verified vulnerabilities, more than 33,000 have so far been rated as critical- or high-severity. This is likely an undercount, as it is based on survey data from only a subset of Glasswing partners. As such, we expect the true impact to be at least five times higher.</p>
+<p>When asked how long it would have taken them to find the same number of vulnerabilities without Claude Mythos models, several partners told us that the models had increased their rate of vulnerability finding by months or even years. Read more from our partners at <a href="https://claude.com/blog/how-comcast-booz-allen-use-claude-mythos-to-secure-their-codebases">Booz Allen and Comcast</a> about their experience.</p>
+<figure><img height="862" src="https://www.anthropic.com/_next/image?url=https%3A%2F%2Fwww-cdn.anthropic.com%2Fimages%2F4zrzovbb%2Fwebsite%2F172894c37182d28628eb922929f134400c3ef1b5-1920x862.png&amp;w=3840&amp;q=75" width="1920"/><figcaption>These results represent a lower bound on the program’s impact on third-party code, as they’re based on partial data from 33 partner reports and Anthropic’s open-source partnerships. Data limitations include that organizations took different approaches to triaging, and fewer than 50% of partners disclosed patched numbers, often because their fixes were still in progress, so the patch rate is significantly undercounted.</figcaption></figure>
+<p>The changes we’re making to our Cyber Verification Program today are intended to extend the impact of Project Glasswing to a much larger number of cyber defenders. We’re also continuing our efforts to help secure open-source software and critical infrastructure. In the coming weeks, we’ll share more about this work and what we’ve learned as we continue to work to give defenders a permanent advantage.</p>
+<h2 id="apply-for-access">Apply for access</h2>
+<p>Interested organizations can <a href="https://portal.anthropic.com/programs/cvp">apply to CVP here</a>. As part of the application process, we will verify all applicants and request proof of the required security controls for the relevant access tier. Existing CVP members will keep their current settings for previous models and will be automatically evaluated for access to Claude Opus 5.5, Claude Sonnet 5.5, and Claude Mythos 5.1 through the updated program. Admins will need to assign access to specific workspaces by following <a href="https://support.claude.com/en/articles/16764810-assign-a-program-to-workspaces-in-claude-console">these steps</a>.</p>
+<p>CVP is available on the Claude Platform, Google Cloud’s Vertex AI, and Microsoft Foundry. CVP is only available on Amazon Bedrock for customers eligible for <a href="https://www.anthropic.com/news/enterprise-frontier-safeguards">Enterprise Frontier Safeguards</a>.</p>
+<p>If you’re blocked on work you think your tier should allow, you can <a href="https://claude.com/form/cyber-block-false-positive-report-cvp-rejection-appeal">report it here</a>. Full details on each tier can be found in our <a href="https://support.claude.com/en/articles/14604842-real-time-cyber-safeguards-on-claude-opus-and-sonnet">Help Center</a>.</p>]]></content:encoded>
+      <guid isPermaLink="true">https://www.anthropic.com/news/cyber-verification-program</guid>
+      <category>Announcements</category>
+      <pubDate>Tue, 06 Oct 2026 00:00:00 +0000</pubDate>
+      <media:content url="https://www.anthropic.com/_next/image?url=https%3A%2F%2Fwww-cdn.anthropic.com%2Fimages%2F4zrzovbb%2Fwebsite%2F2b1d3817fe9aa732e1be4ed18446a1b1367379e7-1920x2322.png&amp;amp;w=3840&amp;amp;q=75" type="image/jpeg" medium="image"/>
+    </item>
     <item>
       <title>Introducing Mistral Large 4</title>
       <link>https://mistral.ai/news/mistral-large-4</link>
@@ -2096,175 +2189,98 @@ VOICE: with the operator — direct, dollars first, no fluff. External — per t
       <media:content url="https://www.anthropic.com/_next/image?url=https%3A%2F%2Fwww-cdn.anthropic.com%2Fimages%2F4zrzovbb%2Fwebsite%2Fafd8e238255ec2654f2322f3d3630dcf1e8ea4ca-6800x3264.png&amp;amp;w=3840&amp;amp;q=75" type="image/jpeg" medium="image"/>
     </item>
     <item>
-      <title>Grok Bot now works with X</title>
-      <link>https://x.ai/news/grok-bot-and-x</link>
-      <description>Grok Bot now has a tighter integration with X.</description>
-      <guid isPermaLink="true">https://x.ai/news/grok-bot-and-x</guid>
+      <title>Imagine Image 2.0</title>
+      <link>https://x.ai/news/grok-imagine-image-2</link>
+      <description>Precise image generation and editing, built for real creative work.</description>
+      <content:encoded><![CDATA[<a href="https://grok.com/imagine?referrer=website&amp;campaign=imagine-image-2-blog">Open Grok.com</a>]]></content:encoded>
+      <guid isPermaLink="true">https://x.ai/news/grok-imagine-image-2</guid>
       <category>News</category>
       <pubDate>Fri, 04 Sep 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Grok Bot is now included with more plans</title>
-      <link>https://x.ai/news/grok-bot-more-plans</link>
-      <description>Grok Bot is now available for SuperGrok, Cursor Pro, and all Cursor Teams plans.</description>
-      <guid isPermaLink="true">https://x.ai/news/grok-bot-more-plans</guid>
+      <title>Grok in Google Workspace</title>
+      <link>https://x.ai/news/introducing-google-workspace-addon</link>
+      <description>Use the Grok add-on for Google Workspace to work directly in Sheets, Slides, and Docs.</description>
+      <guid isPermaLink="true">https://x.ai/news/introducing-google-workspace-addon</guid>
       <category>News</category>
       <pubDate>Fri, 04 Sep 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Grok 4.6 on Gemini Enterprise Agent Platform</title>
-      <link>https://x.ai/news/grok-4-6-vertex-ai</link>
-      <description>Grok 4.6 is now available via Gemini Enterprise Agent Platform.</description>
-      <content:encoded><![CDATA[<p>Today, we’re excited to announce that Grok 4.6 is now available on Gemini Enterprise Agent Platform.</p>
-<p>Grok 4.6 is our latest flagship model, built for long-running agents and ambitious interactive and visual work. It offers a 500k context window and configurable reasoning efforts (low, medium, high, xhigh). Now, Gemini Enterprise Agent Platform users can use the model through <a href="https://console.cloud.google.com/agent-platform/publishers/xai/model-garden/grok-4.6">Model Garden</a>.</p>
-<h2 id="capabilities--pricing">Capabilities &amp; Pricing</h2>
-<p>Grok 4.6 is available for:</p>
-<ul>
-<li><strong>Input</strong>: $2 per 1 million tokens</li>
-<li><strong>Cached input</strong>: $0.50 per 1 million tokens</li>
-<li><strong>Output</strong>: $6 per 1 million tokens</li>
-</ul>
-<p>For more on the model, read the <a href="https://x.ai/news/grok-4-6">Grok 4.6 announcement</a>.</p>
-<h2 id="build-with-grok-46-on-gemini-enterprise-agent-platform">Build with Grok 4.6 on Gemini Enterprise Agent Platform</h2>
-<p>Grok 4.6 is now available to developers in Model Garden. To get started, visit the <a href="https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/partner-models/grok/grok-4-6">Grok 4.6 model card</a>. We're excited to see what you build!</p>]]></content:encoded>
-      <guid isPermaLink="true">https://x.ai/news/grok-4-6-vertex-ai</guid>
+      <title>Workflows in Grok Build</title>
+      <link>https://x.ai/news/workflows</link>
+      <description>Grok Build can now write and run workflows: orchestration scripts that fan a task out across hundreds of parallel agents, verify the results, and report back in one background run.</description>
+      <guid isPermaLink="true">https://x.ai/news/workflows</guid>
       <category>News</category>
       <pubDate>Fri, 04 Sep 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Grok 4.6 on Amazon Bedrock</title>
-      <link>https://x.ai/news/grok-4-6-amazon-bedrock</link>
-      <description>Grok 4.6 is now available via Amazon Bedrock.</description>
-      <content:encoded><![CDATA[<p>Today, we’re excited to announce that Grok 4.6 is now generally available on Amazon Bedrock.</p>
-<p>Grok 4.6 is our latest flagship model, built for long-running agents and ambitious interactive and visual work. It offers 500k context window and configurable reasoning efforts (low, medium, high, xhigh). Now, Amazon Bedrock users can leverage the model through Amazon Bedrock.</p>
-<h2 id="capabilities--pricing">Capabilities &amp; Pricing</h2>
-<p>Grok 4.6 is available for:</p>
-<ul>
-<li><strong>Input</strong>: $2 per 1 million tokens</li>
-<li><strong>Cached input</strong>: $0.50 per 1 million tokens</li>
-<li><strong>Output</strong>: $6 per 1 million tokens</li>
-</ul>
-<p>For more on the model, read the <a href="https://x.ai/news/grok-4-6">Grok 4.6 announcement</a>.</p>
-<h2 id="build-with-grok-46-on-amazon-bedrock">Build with Grok 4.6 on Amazon Bedrock</h2>
-<p>Grok 4.6 is now available to all developers in supported AWS Regions. Please visit AWS documentation to get started - we're excited to see what you build!</p>]]></content:encoded>
-      <guid isPermaLink="true">https://x.ai/news/grok-4-6-amazon-bedrock</guid>
+      <title>Bringing Grok 4.5 to iOS, Android, Web, and X</title>
+      <link>https://x.ai/news/grok-4-5-everywhere</link>
+      <description>Grok 4.5, our most intelligent model yet, is now on grok.com, X, iOS, and Android.</description>
+      <content:encoded><![CDATA[<a href="https://grok.com/?referrer=website">Open Grok.com</a>]]></content:encoded>
+      <guid isPermaLink="true">https://x.ai/news/grok-4-5-everywhere</guid>
       <category>News</category>
       <pubDate>Fri, 04 Sep 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Grok Build on web and mobile</title>
-      <link>https://x.ai/news/grok-build-for-everyone</link>
-      <description>Grok Build is now available on every plan, on the web and on mobile.</description>
-      <guid isPermaLink="true">https://x.ai/news/grok-build-for-everyone</guid>
+      <title>Grok for Outlook</title>
+      <link>https://x.ai/news/introducing-outlook-addin</link>
+      <description>Use the Grok add-in for Microsoft Outlook to summarize long email threads, draft replies in your voice, and keep your inbox organized.</description>
+      <guid isPermaLink="true">https://x.ai/news/introducing-outlook-addin</guid>
       <category>News</category>
       <pubDate>Fri, 04 Sep 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Introducing Grok Voice Think Fast 2.0</title>
-      <link>https://x.ai/news/grok-voice-think-fast-2</link>
-      <description>Introducing our most capable speech-to-speech voice model.</description>
-      <guid isPermaLink="true">https://x.ai/news/grok-voice-think-fast-2</guid>
+      <title>Grok for Excel</title>
+      <link>https://x.ai/news/introducing-excel-addin</link>
+      <description>Use the Grok add-in for Microsoft Excel to ask questions in plain English, write formulas, and run scenarios without leaving the workbook.</description>
+      <guid isPermaLink="true">https://x.ai/news/introducing-excel-addin</guid>
       <category>News</category>
       <pubDate>Fri, 04 Sep 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Introducing Build Mode</title>
-      <link>https://x.ai/news/grok-build-mode</link>
-      <description>Create and share websites, apps, games, and interactive dashboards. Now in Early Beta for SuperGrok Heavy subscribers on grok.com, iOS, and Android.</description>
-      <guid isPermaLink="true">https://x.ai/news/grok-build-mode</guid>
+      <title>Introducing Grok 4.5</title>
+      <link>https://x.ai/news/grok-4-5</link>
+      <description>Grok 4.5 is SpaceXAI's smartest model built for coding, agentic tasks, and knowledge work.</description>
+      <guid isPermaLink="true">https://x.ai/news/grok-4-5</guid>
       <category>News</category>
       <pubDate>Fri, 04 Sep 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Introducing the Voice Agent Builder</title>
-      <link>https://x.ai/news/grok-voice-agent-builder</link>
-      <description>Create a personalized voice agent in under 2 minutes without a single line of code.</description>
-      <guid isPermaLink="true">https://x.ai/news/grok-voice-agent-builder</guid>
-      <category>News</category>
-      <pubDate>Fri, 04 Sep 2026 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Introducing /goal</title>
-      <link>https://x.ai/news/introducing-goal</link>
-      <description>Use /goal for long-running autonomous task execution in Grok Build.</description>
-      <content:encoded><![CDATA[<p>Today we're introducing <code>/goal</code> in Grok Build. This new mode yields long-running, autonomous execution, helping you hand off larger implementation tasks to the agent.</p>
-<p>Available now in Grok Build. Install with a single command and sign in with your account:</p>
-<p>Most coding sessions require back-and-forth execution and verification. With <code>/goal</code>, the agent continues until a task is completed and verified, whether that means reviewing code, inspecting webpages, or executing scripts.</p>
-<h2 id="set-a-goal-in-one-line">Set a goal in one line</h2>
-<p>Give <code>/goal</code> an objective and Grok Build takes it from there:</p>
-<pre><code>/goal Migrate the auth module to the new API
-</code></pre>
-<p>It plans an approach, breaks the work into a progress checklist, and starts executing. You can keep sharing additional instructions with the agent as it works.</p>
-<p>The new mode offers additional commands for monitoring and steering long-running tasks:</p>
-<pre><code>/goal status     # see the live progress panel
-/goal pause      # stop work, keep the goal
-/goal resume     # pick back up
-/goal clear      # drop the goal entirely
-</code></pre>
-<p>When the goal is finished, the panel flips to <strong>Complete</strong> with every checklist item checked.</p>
-<h2 id="getting-started">Getting started</h2>
-<p>Install Grok Build with the command above, then invoke <code>/goal</code> to hand off your first long-running task.</p>]]></content:encoded>
-      <guid isPermaLink="true">https://x.ai/news/introducing-goal</guid>
-      <category>News</category>
-      <pubDate>Fri, 04 Sep 2026 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Grok on Databricks</title>
-      <link>https://x.ai/news/grok-databricks</link>
-      <description>Grok models are now available on Databricks Agent Bricks.</description>
-      <content:encoded><![CDATA[<p>We're excited to share that Grok models are now natively available on Databricks Agent Bricks, Databricks' developer agent platform.</p>
-<p>As part of the Databricks 2026 Data + AI Summit, Databricks is partnering with SpaceXAI to make Grok available alongside other frontier and open-source models in a single, governed platform.</p>
-<p>Agent Bricks connects context (derived from data in Lakehouse) with control and choice, enabling engineering teams to effectively build AI agents that operate on large volumes of data.</p>
-<p>Together with <a href="https://x.ai/news/grok-amazon-bedrock">Grok on Amazon Bedrock</a>, enterprises have more ways to run SpaceXAI models where their data already lives.</p>
-<p>For more on Agent Bricks, see the <a href="https://www.databricks.com/blog/agent-bricks-dais-2026">Databricks announcement</a>.</p>]]></content:encoded>
-      <guid isPermaLink="true">https://x.ai/news/grok-databricks</guid>
-      <category>News</category>
-      <pubDate>Fri, 04 Sep 2026 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Grok for PowerPoint</title>
-      <link>https://x.ai/news/introducing-powerpoint-addin</link>
-      <description>Grok now works inside Microsoft PowerPoint — turn outlines into slides, expand the deck, and tighten the narrative without leaving the app.</description>
-      <guid isPermaLink="true">https://x.ai/news/introducing-powerpoint-addin</guid>
-      <category>News</category>
-      <pubDate>Fri, 04 Sep 2026 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Agent Dashboard in Grok Build</title>
-      <link>https://x.ai/news/agent-dashboard</link>
-      <description>Manage many coding sessions at once. See what each is doing, reply to the ones that need you, and dispatch new work.</description>
-      <content:encoded><![CDATA[<p>The Agent Dashboard puts every Grok Build session on one screen. See what each is doing, run them in parallel, and step in only when input is needed.</p>
-<p>Run <code>grok dashboard</code> from your shell, or <code>/dashboard</code> (<code>Ctrl+\</code>) from inside any session.</p>
-<h2 id="see-every-session-at-a-glance">See every session at a glance</h2>
-<p>The dashboard sorts sessions by state, with anything waiting for input pulled to the top, so you handle blockers first and leave the rest running. A quick scan shows what each session is doing and for how long, so you stay oriented without opening anything.</p>
-<p>Spread across repos? Group by working directory with <code>Ctrl+S</code>. Subagents roll up under the session that launched them, so the list shows the work you dispatched, not the fan-out beneath it.</p>
-<h2 id="peek-and-reply">Peek and reply</h2>
-<p>Select a row to peek at its latest output without leaving the dashboard, then reply from there. Idle sessions send immediately; active ones queue your message until the current turn ends.</p>
-<p>When a session requests approval or asks a question, its options appear inline. Answer with the arrow or number keys to continue. Multi-part questions arrive one at a time.</p>
-<h2 id="dispatch-new-sessions">Dispatch new sessions</h2>
-<p>The input at the bottom starts a new session. <code>Enter</code> dispatches it and keeps you on the dashboard; <code>Shift+Enter</code> dispatches and opens it right away. Before sending, set the model, start in plan mode, or let the session approve its own edits.</p>
-<h2 id="take-over-any-session">Take over any session</h2>
-<p>Open any session to take over its full conversation. Cycle to the next or previous session without returning to the list, then drop back to the dashboard when you're done. Closing the dashboard leaves every session running, and they're all there when you reopen it.</p>
+      <title>Automations in Grok</title>
+      <link>https://x.ai/news/grok-automations</link>
+      <description>Describe a job once and Grok runs it on a schedule or when an email arrives, then reports back.</description>
+      <content:encoded><![CDATA[<p>Today, we're introducing Automations: jobs Grok runs on its own. Describe the work once, choose when it runs, and Grok takes it from there, whether that's research done before you're awake or an important email flagged the moment it lands. Automations are available on <a href="https://grok.com/automations">grok.com</a> and in the Grok app on iOS and Android.</p>
+<h2 id="describe-the-job-once">Describe the job once</h2>
+<p>An automation's instructions read like any chat message: describe what you want, attach files for context, add connectors and skills, and pick a mode. Name it, save it, and from then on every run is a fresh request: same instructions, current data.</p>
+<h2 id="on-a-schedule-or-on-a-trigger">On a schedule, or on a trigger</h2>
+<p>Schedules run once, daily, weekdays, weekly, monthly, or yearly, at a time you choose in your timezone: a morning brief at 8:00 before the day starts, or a rent reminder on the 1st.</p>
+<p>Email triggers watch your inbox instead. When an incoming email matches your filters (sender, recipient, or subject), the automation fires with that email as context, and Grok responds to the actual message. Instructions can also point at your tools directly: type @ to mention a connector, and Grok uses it on every run.</p>
+<p>You can also start a run yourself with Run now, which is handy for testing an automation right after you build it.</p>
+<h2 id="every-run-is-a-full-conversation">Every run is a full conversation</h2>
+<p>When an automation fires, Grok opens a real conversation, does the work, and saves the result to its run history. Open any run to read the full thread, or pick up the conversation where Grok left off. You choose how each automation reports back: email, app notification, both, or neither if you'd rather check in yourself.</p>
+<h2 id="start-from-chat-or-a-template">Start from chat, or a template</h2>
+<p>You can also create automations straight from chat: ask Grok to "check the news every morning and flag anything about pricing" and it sets one up for you. The Automations page has suggested templates to start from, and any automation can be paused, resumed, edited, or deleted at any time.</p>
 <h2 id="get-started">Get started</h2>
-<p>The Agent Dashboard ships with Grok Build. Install it with a single command, then run <code>grok dashboard</code>, or <code>/dashboard</code> from any session you already have open.</p>]]></content:encoded>
-      <guid isPermaLink="true">https://x.ai/news/agent-dashboard</guid>
+<p>Create your first automation at <a href="https://grok.com/automations">grok.com/automations</a>. Scheduled automations are available to everyone; email triggers are included with SuperGrok.</p>]]></content:encoded>
+      <guid isPermaLink="true">https://x.ai/news/grok-automations</guid>
       <category>News</category>
       <pubDate>Fri, 04 Sep 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Use Grok in Warp</title>
-      <link>https://x.ai/news/grok-warp</link>
-      <description>Use your Grok and X Premium subscription inside Warp.</description>
-      <content:encoded><![CDATA[<p>You can now use your Grok or X Premium subscription inside <a href="https://www.warp.dev/">Warp</a>, an agentic development environment built on the terminal and used by almost one million developers.</p>
-<p>Your existing subscription provides access to Grok models, including <code>grok-build-0.1</code>, the model powering <a href="https://x.ai/build">Grok Build</a>.</p>
-<h2 id="setup">Setup</h2>
-<ol>
-<li>Download Warp from <a href="https://www.warp.dev/download">warp.dev/download</a> and open it.</li>
-<li>Open the "Agent &gt; Warp Agent" settings page and click "Connect SuperGrok subscription"</li>
-<li>Switch to the <code>grok-build-0.1</code> model and start prompting.</li>
-</ol>
-<p>That's it! More agents and integrations are coming soon to SuperGrok and X Premium subscribers. To subscribe, visit the <a href="https://x.ai/pricing">pricing page</a>.</p>]]></content:encoded>
-      <guid isPermaLink="true">https://x.ai/news/grok-warp</guid>
+      <title>Grok Build is Now Open Source</title>
+      <link>https://x.ai/news/grok-build-open-source</link>
+      <description>Explore the harness behind our coding agent and TUI.</description>
+      <content:encoded><![CDATA[<a href="https://github.com/xai-org/grok-build">View on GitHub</a>]]></content:encoded>
+      <guid isPermaLink="true">https://x.ai/news/grok-build-open-source</guid>
+      <category>News</category>
+      <pubDate>Fri, 04 Sep 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>21 New Flagship Grok Voices</title>
+      <link>https://x.ai/news/new-flagship-voices</link>
+      <description>New multilingual voices for Grok Voice, plus improved naturalness for the original five.</description>
+      <guid isPermaLink="true">https://x.ai/news/new-flagship-voices</guid>
       <category>News</category>
       <pubDate>Fri, 04 Sep 2026 00:00:00 +0000</pubDate>
     </item>
