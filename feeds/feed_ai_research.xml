@@ -10,6 +10,45 @@
     <language>en</language>
     <lastBuildDate>Wed, 14 Oct 2026 00:00:00 +0000</lastBuildDate>
     <item>
+      <title>Preparing for the 2026 US midterms</title>
+      <link>https://www.anthropic.com/news/2026-us-midterms</link>
+      <description>Earlier this year, we shared an update on our election safeguards. Here, we outline how we’ve continued to strengthen these safeguards ahead of this year’s US midterms.</description>
+      <content:encoded><![CDATA[<p>Earlier this year, we shared an <a href="https://www.anthropic.com/news/election-safeguards-update">update on our election safeguards</a>, which described how we measure and prevent political bias, detect misuse, and direct people to accurate voting information.</p>
+<p>Below, we outline how we've built on that work and continued to strengthen our election safeguards ahead of this year’s US midterms.</p>
+<h3 id="how-people-use-claude-for-elections-and-politics">How people use Claude for elections and politics</h3>
+<p>Our goal is for Claude to be a useful tool for political conversations, while preventing election-related abuse. That starts with understanding how people actually use Claude in these contexts. To do this, we used Anthropic Insights to develop a new analysis of 250,000 conversations over the course of a recent one-week period.<sup><a href="#footnote-1">1</a></sup></p>
+<p>Today, conversations that touch broadly on politics, public policy, or social issues account for about 5.75% of all conversations in the United States on Claude.ai, our consumer app. This includes people turning to Claude to follow the news, conduct academic or professional research on public policy, learn about candidates, and navigate government services. About 0.51% of all conversations are specifically about elections or voting. As we get closer to Election Day, we expect the share of political and election-related queries to <a href="https://www.anthropic.com/news/elections-ai-2024">increase</a>.</p>
+<p>This sample suggests people rarely ask Claude whom or what to vote for. These kinds of requests showed up in about 0.01% of US Claude conversations. More often, we observed people asking Claude questions that could help them reach their own conclusions, like where candidates stand on a particular issue. Requests that violated our <a href="https://www.anthropic.com/legal/aup">election integrity policies</a> were even less common, appearing in about 0.002% of conversations.<sup><a href="#footnote-2">2</a></sup></p>
+<figure><img height="1080" src="https://www.anthropic.com/_next/image?url=https%3A%2F%2Fwww-cdn.anthropic.com%2Fimages%2F4zrzovbb%2Fwebsite%2Fd0efef057e61d2c590d06d8902da2167fe93200a-1920x1080.png&amp;w=3840&amp;q=75" width="1920"/><figcaption><strong>How many US Claude.ai conversations touch on politics, are about elections, or ask Claude whom or what to vote for.</strong> Each dot represents 1 in every 10,000 conversations in a random sample of about 250,000 US Claude.ai consumer conversations from September 21 to 27, 2026, which Claude classified using <a href="https://www.anthropic.com/research/clio">a privacy-preserving method</a>. Because requests for a recommendation on whom or what to vote for are so rare, we show the upper end of a 95% confidence interval for that group. Examples are illustrative only. Most of the requests we see are informational in nature. People turn to Claude to make sense of geopolitical events, research candidates, draft documents, assist with coursework, and weigh arguments for and against policies.</figcaption></figure>
+<figure><img height="1386" src="https://www.anthropic.com/_next/image?url=https%3A%2F%2Fwww-cdn.anthropic.com%2Fimages%2F4zrzovbb%2Fwebsite%2F7b638266c2b8de46e1732a5e471b9a95b79b052d-1920x1386.png&amp;w=3840&amp;q=75" width="1920"/><figcaption><strong>What people ask Claude for in political conversations. </strong>Conversations were clustered in a privacy-preserving, bottom-up manner through <a href="https://www.anthropic.com/research/clio">Anthropic Insights</a>.</figcaption></figure>
+<h2 id="connecting-people-to-trusted-sources"><strong>Connecting people to trusted sources</strong></h2>
+<p>Ahead of Election Day, we've added two ways for people to get reliable information directly in their conversations with Claude. As we shared in April, when people ask Claude.ai about voter registration, polling places, or election dates, we’ll continue to display a banner linking to TurboVote, a nonpartisan resource from <a href="https://www.democracy.works/">Democracy Works</a>. </p>
+<p>Later this month, Claude will start drawing official voting information from Democracy Works into its responses on Claude.ai for users in the US. Someone asking where to vote or what ID to bring to their polling place will now get an answer specific to their state, without leaving the conversation. These responses draw on publicly available information that Democracy Works collects from state and local election sources.</p>
+<figure><img height="1834" src="https://www.anthropic.com/_next/image?url=https%3A%2F%2Fwww-cdn.anthropic.com%2Fimages%2F4zrzovbb%2Fwebsite%2F35c702ec42254d97fd11618ff3f5dcc6845d4612-1920x1834.png&amp;w=3840&amp;q=75" width="1920"/><figcaption>Official voting information presented by Democracy Works.</figcaption></figure>
+<p>Additionally, Claude will begin showing up-to-date results on election night and in the days that follow, so that when people ask for current vote counts or election results, they'll be shown the latest official numbers directly in their conversation.</p>
+<h2 id="measuring-and-preventing-political-bias"><strong>Measuring and preventing political bias</strong></h2>
+<p>When people ask Claude about politics, they should get accurate and evenhanded answers that don't favor any particular political viewpoint. That’s why we test our models extensively for political bias before every model launch. Claude Opus 5.5, Sonnet 5.5, and Haiku 5.5 are our most evenhanded to date, scoring 99% on our <a href="https://www.anthropic.com/news/political-even-handedness">political evenhandedness evaluation</a>.Our latest models also engage more readily with political discussions and decline fewer requests, so people can get the information they came for. We're continuing to refine these evaluations, and also looking beyond them for new ways to pressure-test how our models handle political topics.</p>
+<p>As part of that effort, we asked three independent groups to review how Claude handles free expression, each from a different angle with different methodologies. <a href="https://futurefreespeech.org/">The Future of Free Speech</a>, an independent think tank at Vanderbilt University, tested Claude on hundreds of requests on contentious topics, and the <a href="https://www.thefai.org/">Foundation for American Innovation</a> compared how Claude responded to matched prompts from the left and right, ranging from mainstream policy debates to more extreme scenarios. On both of these evaluations, most of the responses were rated as strong, engaging substantively with requests. The <a href="https://www.cip.org/">Collective Intelligence Project</a> surveyed more than 2,000 people in the US, UK, and India in developing an evaluation. Through a three-stage process, participants proposed principles for handling sensitive topics, ranging from health to politics, identified topics to test, and helped develop criteria for judging model responses. CIP synthesized this input and tested for agreement across demographic and cultural groups to establish shared principles.</p>
+<p>These evaluations also identified areas where Claude still falls short. The Future of Free Speech and the Collective Intelligence Project both found that Claude rarely refused requests, but sometimes added unsolicited caveats and counterarguments, such as inserting an opposing view into an advocacy email. And the Foundation for American Innovation found that Claude Sonnet 4.5 didn’t always hedge evenly, and was more likely to soften arguments for right-leaning positions. </p>
+<p>We're addressing this in a few ways. We've improved how Claude responds to direct yes-or-no questions and requests for shorter answers, where we found its answers could be less balanced. We're also using these findings to improve when and how Claude adds caveats or counterarguments, so it treats requests from across the political spectrum more consistently. And we're continuing to improve how we test for uneven hedging, building on existing evaluations that use matched prompts from the left and right. More broadly, we're working to expand our political bias evaluations to better reflect real conversations and to cover candidates and voting questions as well as policy issues.</p>
+<h2 id="how-we-define-misuse"><strong>How we define misuse</strong></h2>
+<p>Our <a href="https://www.anthropic.com/legal/aup">Usage Policy</a> prohibits using Claude to deceive voters or disrupt elections, from spreading false information about candidates or how to vote, to impersonating election officials or trying to suppress turnout. Each year, we update the policy to reflect our models’ evolving capabilities and feedback from our customers. This year’s update, which we <a href="https://www.anthropic.com/news/2026-usage-policy-update">announced</a> last week, clarifies what our election rules cover and what they don't, and adds new examples to help people understand where the lines fall.</p>
+<p>We know many political campaigns use Claude for legitimate, everyday tasks, so we recently <a href="https://cdn.sanity.io/files/4zrzovbb/website/027b10ca405e9bb66b98c88d911b4b21a0b70123.pdf">published a guide</a> to help them understand where these policies apply. It covers the many ways campaigns can put Claude to work, such as drafting press statements and fundraising emails, prepping for debates, analyzing turnout data, and building voter outreach materials. It also spells out what’s prohibited, such as using Claude to create fake social media profiles that pose as real people, mass-producing comments to inflate a campaign’s engagement, or writing content for news sites and pages that falsely claim to be independent.</p>
+<h3 id="testing-and-strengthening-our-defenses">Testing and strengthening our defenses</h3>
+<p>We deploy automated classifiers that are trained to detect election-related abuse. To see how these safeguards hold up in practice, we partnered with the <a href="https://www.isdglobal.org/">Institute for Strategic Dialogue</a> (ISD) and the <a href="https://www.mccaininstitute.org/">McCain Institute</a>, both independent research organizations, to pressure-test our protections in the US, Israel, and Brazil. Analysts tested whether Claude would assist with deceptive campaigning, misinformation, and other forms of election abuse. They began with direct requests, then broke full campaigns into smaller tasks that could look harmless on their own, such as audience research, building news sites, drafting content, and planning its distribution. They found that Claude reliably refused a single harmful request, but could miss a malicious campaign when it was spread across many individual requests that looked harmless on their own.</p>
+<p>Building on these findings and our own, we've added new classifiers to better identify novel and multi-step misuse, including attempts to build fake social media accounts and news sites aimed at political discussions, or to run financially motivated election schemes. We also enhanced our ability to detect election-related misuse by foreign state actors, and strengthened our cyber protections for election infrastructure and campaigns. Finally, we built targeted safeguards for localized risks identified in the US, Israel, and Brazil, which all have major national elections this year.</p>
+<p>Our threat intelligence and enforcement teams review flagged activity and take action when they confirm a violation, including banning accounts. We also routinely share <a href="https://www.anthropic.com/research/investigating-unintended-model-actions">examples</a> of unintended model actions or behavior we've observed during our evaluations and internal use of Claude.</p>
+<h3 id="what-weve-found">What we've found</h3>
+<p>Our recent <a href="https://www.anthropic.com/threat-intelligence-report-september-2026">threat intelligence report</a> reflects a broader shift in election-related abuse trends. Political, state-aligned, and commercial actors are now incorporating AI into nearly every aspect of their influence operations, from planning and content creation to building platforms used to disseminate a message. Because we see these early stages of an operation happening on Claude, we often have a chance to stop these efforts before they ever reach the public.</p>
+<p>Our teams have continued to investigate and prevent coordinated abuse around elections, including the US midterms. In one case, foreign-based operators of a fake news site used Claude to produce US midterm coverage favoring Russian, Iranian, and North Korean narratives. We've also observed threat actors seeking to exploit the election for financial gain, using Claude to produce fabricated news and other content designed to attract American audiences and generate advertising revenue. We banned the accounts involved in these cases and improved our ability to detect this type of abuse.</p>
+<h3 id="looking-ahead">Looking ahead</h3>
+<p>More people are turning to Claude for information about this year’s elections than ever before. We have a responsibility to make sure the answers they get are accurate and balanced, and that Claude isn’t used to undermine the democratic process. We’ll continue to invest in making Claude more evenhanded, preventing and addressing misuse, and being transparent in our actions. This work will be critical in the upcoming US midterms and extends to elections around the world as well. In the coming months, we also hope to share a more comprehensive look at how people used Claude throughout the election cycle, with the goal of strengthening our election-related evaluations and safeguards.</p>]]></content:encoded>
+      <guid isPermaLink="true">https://www.anthropic.com/news/2026-us-midterms</guid>
+      <category>Policy</category>
+      <pubDate>Wed, 14 Oct 2026 00:00:00 +0000</pubDate>
+      <media:content url="https://www.anthropic.com/_next/image?url=https%3A%2F%2Fwww-cdn.anthropic.com%2Fimages%2F4zrzovbb%2Fwebsite%2Fd0efef057e61d2c590d06d8902da2167fe93200a-1920x1080.png&amp;amp;w=3840&amp;amp;q=75" type="image/jpeg" medium="image"/>
+    </item>
+    <item>
       <title>Anthropic opens Singapore office and signs MOU with the Government of Singapore</title>
       <link>https://www.anthropic.com/news/singapore-office-opening</link>
       <description>Anthropic opens its fifth Asia-Pacific office in Singapore and signs an MOU with the government on AI safety, evaluation, and responsible adoption.</description>
@@ -192,6 +231,14 @@
       <category>Research</category>
       <pubDate>Mon, 12 Oct 2026 00:00:00 +0000</pubDate>
       <media:content url="https://www.anthropic.com/_next/image?url=https%3A%2F%2Fwww-cdn.anthropic.com%2Fimages%2F4zrzovbb%2Fwebsite%2Faab3f9927b5be6b7abba51df907e05c925dbe4c5-1920x1080.png&amp;amp;w=3840&amp;amp;q=75" type="image/jpeg" medium="image"/>
+    </item>
+    <item>
+      <title>Introducing Grok Voice 3.0</title>
+      <link>https://x.ai/news/grok-voice-3</link>
+      <description>The world’s most intelligent voice model.</description>
+      <guid isPermaLink="true">https://x.ai/news/grok-voice-3</guid>
+      <category>News</category>
+      <pubDate>Mon, 12 Oct 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
       <title>Introducing The X Subscription</title>
@@ -1666,275 +1713,253 @@
       <pubDate>Fri, 18 Sep 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Introducing Grok Voice Transcribe 2.0</title>
-      <link>https://x.ai/news/grok-voice-transcribe-2</link>
-      <description>Announcing SpaceXSI's newest speech-to-text model, with unparalleled accuracy and cost effectiveness.</description>
-      <guid isPermaLink="true">https://x.ai/news/grok-voice-transcribe-2</guid>
+      <title>Biosecurity at the frontier</title>
+      <link>https://x.ai/news/biosafety-at-the-frontier</link>
+      <description>LatchBio evaluated Grok's performance on biosecurity monitoring and adversarial biological tasks. They found that Grok 4.6 detects and refuses dangerous queries more reliably than any other frontier system.</description>
+      <content:encoded><![CDATA[<p>Today, <a href="https://latch.bio/">LatchBio</a> published an independent analysis of Grok 4.6 on their biological capability and biological red-teaming benchmark suites. These evaluations measure a wide range of characteristics and capabilities of tested models, including:</p>
+<ul>
+<li>Whether a model can distinguish between legitimate biological research and requests that conceal a biosecurity hazard</li>
+<li>Whether a model is useful in a biosecurity and biomonitoring role, by being able to detect and characterize emerging pathogens and patterns of transmission</li>
+</ul>
+<p>On LatchBio's BioSecBench-Refusal suite, Grok 4.6 was the strongest model tested at refusing disguised and hazardous tasks while still completing routine biological work. It was the only system to score above 50% on both measures.</p>
+<h2 id="methodology-and-context">Methodology and context</h2>
+<p>Biology and biological research present domains where the opportunities and risks of highly capable AI systems are well-known and challenging to disentangle. In designing our safeguards, we aim to maximize the utility of our agents in assisting and accelerating legitimate scientific research, while minimizing the risks they present through incorrect information and adversarial use.</p>
+<p>LatchBio's two benchmarks most relevant to the above capabilities measure whether an agent can distinguish concealed hazards from ordinary science, and whether it can carry out the pathogen surveillance workflows public-health work depends on. They are:</p>
+<ul>
+<li><strong>BioSecBench-Refusal</strong>, which pairs routine biological tasks, adapted from published literature, with 46 red-team tasks that look like ordinary research and hide the hazard in attached scientific data, mislabeled files, or other intentionally obfuscated tasks. This evaluation is calibrated around understanding the intent of a task: an agent that only reacts to words like "pathogen" or "toxin" will block the routine set and miss the red-team set, while one that inspects the data can tell the two apart.</li>
+<li><strong>BioSecBench-Surveillance</strong>, which tests whether an agent can carry out pathogen genomic surveillance workflows of the kind used in public-health monitoring. Those tasks require chaining file inspection, tool use, and scientific judgment on messy sequencing data.</li>
+</ul>
+<h2 id="results-and-key-findings">Results and key findings</h2>
+<p>In testing on BioSecBench-Refusal, LatchBio found that Grok 4.6 detects and refuses red-team and otherwise dangerous queries more reliably than any other frontier system tested, while not diminishing performance on routine biological work. Grok 4.6 also performs comparably with other frontier models on biosurveillance work. LatchBio notes that evaluations were performed on a variety of agent harnesses to remove confounds, and that unless otherwise noted, agents were tested at their highest-offered effort levels.</p>
+<p>The score presented by LatchBio is a trial-weighted harmonic mean of red-team refusal and routine compliance. We analyze this metric and standalone refusal rate independently. Across different harnesses, Grok 4.6 holds the top three spots, averaging 62.1%. Considering refusals and task compliance independently, Grok 4.6 refused 59.2% of red-team tasks and completed 64.8% of routine ones. It is the only model tested that scored above 50% on both measures.</p>
+<p>On BioSecBench-Surveillance, Grok 4.6 averages a success rate of 53.5%, sitting behind Opus 5 and ahead of GPT-5.6 Sol on biosecurity and monitoring work. The results on both benchmarks indicate an agent and underlying model well-calibrated for routine and helpful biological work, as well as one highly capable in biosecurity work and monitoring.</p>
+<p>On evaluations of general routine biological capability performed by LatchBio (such as SpatialBench or TxBench-PP), Grok is found to match or exceed other frontier models in a wide range of agentic biological work. These are presented in greater detail at <a href="https://benchmarks.bio">benchmarks.bio</a>.</p>
+<h2 id="analyzing-refusal-behavior">Analyzing refusal behavior</h2>
+<p>In evaluation traces, Grok 4.6 is observed reasoning over the contents of a task and testing environment to assess intent before proceeding or refusing. Frequently, Grok will find discrepancies between the stated intent in the prompt and environment, or will assemble intent from high-risk content disguised by filenames and encryption, and will subsequently refuse. On obviously benign and low-risk tasks, Grok exhibits the same environment-reasoning behavior, but is able to assess tasks as safe.</p>
+<h2 id="how-we-safeguard-grok">How we safeguard Grok</h2>
+<p>Before we release a model, we test biological capability in addition to other domains of risk, and validate that the capabilities of our models are adequately safeguarded against misuse. The work of third-party evaluators such as LatchBio complements the evaluations we perform internally, both pre- and post-deployment, for the models we serve.</p>
+<p>Grok's safeguards are built in layers to establish defense-in-depth. Refusal training is performed to teach the model how and when to refuse, to correctly infer the intent and risk profile of tasks, and to refuse correctly in highly adversarial scenarios. We train and deploy inference-time safeguards to reject harmful requests before they ever reach the model, and we implement behavioral controls to further safeguard the model when deployed. Post-deployment monitoring is performed to detect and stop patterns of adversarial use at the session and user level, and provides a source of feedback for continuous calibration of our model deployments.</p>
+<p>We observe a material improvement in Grok 4.6's capabilities in biological work over historically tested models, with substantial gains in refusal and biosecurity performance over Grok 4.5 and Grok 4.3. We intend our ongoing and novel safeguards work to allow us to continue serving frontier-scale intelligence safely across future model releases.</p>
+<h2 id="the-future-of-biosecurity-and-scientific-discovery">The future of biosecurity and scientific discovery</h2>
+<p>The line between actively adversarial tasks and helpful use grows thinner as models rapidly become more capable and autonomous, and safeguards will need to evolve accordingly. To control for the greater risk implied by improved model capability and agency, we will perform wider, more ambitious testing and calibration of our models and agentic systems: broader pre-deployment suites, more third-party evaluations, improved post-deployment monitoring, and deployments of our models with companies and institutions at the frontier of biology.</p>
+<p>Similarly, there is a risk inherent in overrefusals and miscalibrated safeguards. When a model refuses routine and helpful biological work, the ability of healthcare professionals, researchers, and monitoring programs to detect outbreaks early and perform other critical work in the field is degraded. We gauge this risk as equally serious as the risk of aiding malicious use.</p>
+<p>Grok is already used in scientific work, including general biological research and biosecurity monitoring, and we are optimistic about the ability of highly capable models to rapidly accelerate scientific discovery and shorten the path from the lab to practical use. We are committed to continuing to serve frontier intelligence securely and safely to the engineers, researchers, enterprises, and institutions advancing the life sciences.</p>
+<p>LatchBio's full methods and per-model scores are presented at <a href="https://benchmarks.bio">benchmarks.bio</a>. LatchBio's complementary blog, the Grok 4.6 model card, and SpaceXSI's Frontier Artificial Intelligence Framework are linked below.</p>
+<ul>
+<li><a href="https://blog.latch.bio/p/analyzing-grok46-safeguards">LatchBio blog</a></li>
+<li><a href="https://media.x.ai/v1/website/card-4p6-4cd2dc57.pdf">Grok 4.6 model card</a></li>
+<li><a href="https://media.x.ai/v1/website/xai-frontier-artificial-intelligence-framework-30-june-2026-99c40684.pdf">Frontier Artificial Intelligence Framework</a></li>
+</ul>]]></content:encoded>
+      <guid isPermaLink="true">https://x.ai/news/biosafety-at-the-frontier</guid>
       <category>News</category>
       <pubDate>Fri, 18 Sep 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>IntroducingGrok 4.7</title>
-      <link>https://x.ai/news/grok-4-7</link>
-      <description>SpaceXSI's most powerful model for coding and knowledge work. Twice as fast, at half the price of comparable models.</description>
-      <guid isPermaLink="true">https://x.ai/news/grok-4-7</guid>
+      <title>Grok 4.6 on Microsoft Foundry</title>
+      <link>https://x.ai/news/grok-4-6-microsoft-foundry</link>
+      <description>Grok 4.6 is now available via Microsoft Foundry.</description>
+      <content:encoded><![CDATA[<p>Today, we’re excited to announce that Grok 4.6 is now available on Microsoft Foundry.</p>
+<p>Grok 4.6 is our latest flagship model, built for long-running agents and ambitious interactive and visual work. It offers a 500k context window and configurable reasoning efforts (low, medium, high, xhigh).</p>
+<p>For more on the model, read the <a href="https://x.ai/news/grok-4-6">Grok 4.6 announcement</a>.</p>
+<h2 id="build-with-grok-46-on-microsoft-foundry">Build with Grok 4.6 on Microsoft Foundry</h2>
+<p>Foundry gives organizations a single place to evaluate Grok 4.6 against other frontier models, run workload-specific tests, deploy managed endpoints, and operate with enterprise security and governance controls.</p>
+<p>If you are building coding agents, engineering copilots, research assistants, or enterprise automation, you can get started in the <a href="https://ai.azure.com/catalog/models">Foundry model catalog</a>. See Microsoft’s announcement, <a href="https://techcommunity.microsoft.com/blog/azure-ai-foundry-blog/grok-4-6-comes-to-microsoft-foundry-models-built-for-long-horizon-reasoning-and-/4547578">Grok 4.6 comes to Microsoft Foundry Models</a>, and our <a href="https://docs.x.ai/developers/community/microsoft-foundry">Microsoft Foundry integration guide</a> for deployment details.</p>]]></content:encoded>
+      <guid isPermaLink="true">https://x.ai/news/grok-4-6-microsoft-foundry</guid>
       <category>News</category>
       <pubDate>Fri, 18 Sep 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Introducing the Life Sciences Verification Program</title>
-      <link>https://www.anthropic.com/news/life-sciences-verification-program</link>
-      <description>Today, we are introducing the Life Sciences Verification Program (LSVP), which gives life science professionals access to our Mythos, Opus, and Sonnet models with a refined set of safeguards more permissive for biology-related work. We have already onboarded dozens of organizations through an early-access program, and are now opening applications to the broader life science community ( apply here ). The program is launching in beta, initially for teams and institutions. We will continue to improve the program and expand access to individual Pro and Max plans over time.</description>
-      <content:encoded><![CDATA[<p>Today, we are introducing the Life Sciences Verification Program (LSVP), which gives life science professionals access to our Mythos, Opus, and Sonnet models with a refined set of safeguards more permissive for biology-related work. We have already onboarded dozens of organizations through an early-access program, and are now opening applications to the broader life science community (<a href="https://claude.com/form/life-sciences-verification-program">apply here</a>). The program is launching in beta, initially for teams and institutions. We will continue to improve the program and expand access to individual Pro and Max plans over time.</p>
-<p>The LSVP is designed to enable life science professionals to use our models across a wide range of tasks that are currently blocked in our generally available Fable models, like drug discovery, research biology, clinical development, and manufacturing. It’s built for teams of all kinds—from academic labs to startups, pharma companies, and more.</p>
-<h2 id="verification-and-access-types"><strong>Verification and access types</strong></h2>
-<p>To qualify for these grants, each applicant goes through a verification process that includes a review of their research credentials, security standards, and ethical research oversight. Once verified, teams may apply for two types of LSVP grants, “Standard Use” or “High-risk Use,” depending on their access needs. These grants can be used through all our product surfaces, including <a href="https://claude.com/product/claude-science">Claude Science</a>, <a href="http://claude.ai/redirect/website.v1.6acc9b5d-63a1-434b-912f-f5b6a18814a5">Claude.ai</a>, Claude Code and the API.<br/><br/><strong>Standard Use</strong> grants are suitable for most life science work, including the majority of biology research and development workflows. These grants can be extended to entire teams for diverse, daily workloads, and are renewed once a year. They give those teams access to our Mythos, Opus, and Sonnet models, with refined classifiers that are more permissive for science tasks than our generally available models. Standard Use grants apply to Mythos 5.1, Opus 5, and Sonnet 5 today, and to future models as they launch. They’re specifically designed to enable the full breadth of life science activities in areas spanning basic science, R&amp;D, supply chain and manufacturing, clinical development, quality assurance, regulatory affairs, investing and diligence, and more.</p>
-<p>Although we expect Standard Use to cover the majority of access needs, some work carries a higher potential for misuse and therefore requires additional vetting. </p>
-<p><strong>High-risk Use</strong> is an add-on grant for teams working in areas blocked under Standard Use. It removes all safeguards that block life sciences requests. This grant applies to a single research project as opposed to a full team, and must be renewed every six months. Typically, a single researcher with dual-use work would have access to one Standard Use grant for diverse, daily activities, and one or more High-risk Use grants which only apply to work on specific projects (for example, characterizing how one specific family of viral vectors is recognized by human immune pathways).</p>
-<p>High-risk grants for Claude Opus 5 and Claude Sonnet 5 are available today. We are working with the US government to make high-risk grants more broadly available for Claude Mythos, but at the time of this launch they will remain limited to a small set of entities with additional vetting.</p>
-<p>All other safeguards, such as cyber classifiers, will remain in place under LSVP grants.</p>
-<h2 id="enabling-trusted-access-through-shared-responsibility">Enabling trusted access through shared responsibility</h2>
-<p>As we’ve shown in our recent <a href="https://www.anthropic.com/threat-intelligence-report-september-2026">threat report</a>, there are increasingly sophisticated misuse attempts happening on our platform, including attempts that could support biological weapons development. In biology, where it’s often not possible to differentiate between a user doing valid work (e.g. research a viral pathogen to develop vaccines against it) and pursuing harm (e.g. trying to increase the transmissibility of a virus maliciously), the most concerning threat models are ones where valid access has been diverted or overtaken by an actor with bad intent. Indeed, insider threats and rogue-use have been major factors in significant biosafety incidents and scares. In developing the LSVP’s safeguards, we aimed to protect against three concerning threat models in particular:</p>
-<ul><li><em>Access compromise:</em> Malware or account takeover diverting access to a bad actor</li><li><em>Insider threats:</em> Rogue or coerced employees intentionally taking malicious action or diverting their access to a bad actor</li><li><em>Agent misuse:</em> Agents, especially working in swarms or over long-horizon tasks, taking unintended dangerous actions</li></ul>
-<p>In order to defend against these threats and in close collaboration with enterprise CISOs, we designed the new LSVP safeguards around the concept of shared responsibility by monitoring usage against the <em>intended use-case</em> for the model access. Because we vet the LSVP organizations for their life sciences credibility and oversight, we can empower them to specify for themselves what constitutes safe usage for teams or projects within their program.</p>
-<p>Each entity’s access is tied to the use cases it has specified in its grant applications, and we continuously monitor LSVP traffic to identify usage or patterns that are outside the stated safe scope. Should unauthorized activity occur, we can flag these cases to organization admins to take action within pre-agreed timeframes for triaging and remediating incidents. The use cases should include high-level descriptions of the intended work, like one would share in a job listing, and not include any sensitive information or IP.</p>
-<h2 id="how-monitoring-works-in-lsvp">How monitoring works in LSVP</h2>
-<p>Serious misuse is often spread across many requests and sessions to look disconnected and evade detection. In the LSVP, we are shifting safeguards from real-time blocking, where we reject potentially harmful access at the time of each request, to offline monitoring, which allows us to more clearly identify potential misuse across patterns of behavior. Shifting enforcement from real-time blocking to offline monitoring allows legitimate work to proceed with fewer interruptions, but it requires us to retain data associated with flagged activity for review. For LSVP traffic, we are requiring data retention for 30 days to be able to do this monitoring effectively.</p>
-<p>This data is strictly compartmentalized and cannot be used for model training or accessed by members of Anthropic’s life sciences research teams. For organizations that qualify, we are also working to understand how LSVP can integrate with features from our <a href="https://www.anthropic.com/news/enterprise-frontier-safeguards">Enterprise Frontier Safeguards</a> (EFS) systems.</p>
-<h2 id="what-researchers-are-saying">What researchers are saying</h2>
-<blockquote>Xaira is making biology more computable, generating biological data at unprecedented scale and building foundation models of cell, protein and disease biology that turn it into the next generation of life-changing medicines. We’re excited to put Anthropic's frontier models to work across our drug discovery engine, and we believe pairing trusted access with intelligence is the right way to realize AI’s promise in biology.</blockquote>
-<blockquote>Edison’s mission is to accelerate science and the discovery and development of new medicines. With the Life Sciences Verification Program, we are excited to be able to bring Anthropic’s most intelligent models to bear on these problems. We look forward to collaborating with Anthropic further to end disease and improve the lives of patients everywhere.</blockquote>
-<blockquote>At Manifold Bio, we’re building a massively parallel interface into living systems to enable powerful AI to create medicines. We look forward to putting frontier intelligence to work safely in our engine, and we welcome Anthropic’s approach of pairing access with accountability.</blockquote>
-<p>01</p>
-<p> /</p>
-<p>03</p>
-<h2 id="applications-and-availability">Applications and availability</h2>
-<p>Organizations interested in joining the LSVP can <a href="https://claude.com/form/life-sciences-verification-program">submit an application here</a>. We expect to enroll hundreds of organizations within the first week, and to scale the program further to support the majority of the life science community in the coming weeks.</p>
-<p>Today, LSVP is available in our first-party console for API usage, as well as in Claude for Enterprise and Team plans. We do not yet support individual plans but are working to expand access for these users. It is also not yet available on third-party platforms.</p>
-<p>As a beta, LSVP is not available for BAA-enabled orgs. This means customers with PHI data should use separate non-BAA orgs with non-HIPAA.</p>
-<p>In API and Claude Science, users can switch between grants natively. In <a href="http://claude.ai/redirect/website.v1.6acc9b5d-63a1-434b-912f-f5b6a18814a5">Claude.ai</a> and Claude Code, initially only a preselected default grant applies (except while using Claude Code with API authentication). This should be fine for the vast majority of users, who will only ever require a Standard Use grant. However, we will improve support and portability of these LSVP features over time.</p>
-<h2 id="what-comes-next">What comes next</h2>
-<p>Providing these frontier capabilities is part of our broader efforts in supporting the life sciences community in our shared mission to accelerate curing disease and improving human health. We will share more about new products, research collaborations, and improvements to the program in the coming months.</p>]]></content:encoded>
-      <guid isPermaLink="true">https://www.anthropic.com/news/life-sciences-verification-program</guid>
-      <category>Announcements</category>
-      <pubDate>Thu, 17 Sep 2026 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>How Claude is uplifting biomolecular modeling</title>
-      <link>https://www.anthropic.com/research/claude-uplifts-biomolecular-modeling</link>
-      <description>In this post, we share how Claude made the open-source models that scientists use to predict and design biomolecules faster and more memory-efficient. Claude, working within Claude Science, optimized more than 30 of these models in just under four weeks, speeding them up roughly 4x on average. It also created a low-memory mode that enables the accurate prediction of biomolecular systems larger than 10,000 tokens (amino acids, nucleotides, and atoms from small molecules and ions) on a single NVIDIA GPU node. We are open-sourcing all of the optimized code and announcing a protein design competition co-sponsored with Adaptyv Bio, backed by up to $1 million in Claude credits and wet lab validation for over 5,000 designs. Recently, we shared results demonstrating Claude’s abilities to design de novo protein binders through expert-level orchestration of open-source protein design and structure prediction models. De novo binders are small, computationally designed proteins that attach tightly to a specific target molecule to activate, block, or deliver something to it.</description>
-      <content:encoded><![CDATA[<figure><p><a href="https://cdn.sanity.io/files/4zrzovbb/website/ea3d83fc4edfcfcc025dd149e3f64e4965ffe7c8.mp4">▶ Watch video</a></p></figure>
-<p><em>In this post, we share how Claude made the open-source models that scientists use to predict and design biomolecules faster and more memory-efficient. Claude, working within <a href="https://claude.com/product/claude-science">Claude Science,</a> optimized more than 30 of these models in just under four weeks, speeding them up roughly 4x on average. It also created a low-memory mode that enables the accurate prediction of biomolecular systems larger than 10,000 tokens (amino acids, nucleotides, and atoms from small molecules and ions) on a single NVIDIA GPU node. We are open-sourcing all of the optimized code and announcing a protein design competition co-sponsored with Adaptyv Bio, backed by up to $1 million in Claude credits and wet lab validation for over 5,000 designs.<br/><br/></em>Recently, we <a href="https://www.anthropic.com/research/Claude-accelerates-protein-design">shared results</a> demonstrating Claude’s abilities to design <em>de novo </em>protein binders through expert-level orchestration of open-source protein design and structure prediction models. <em>De novo</em> binders are small, computationally designed proteins that attach tightly to a specific target molecule to activate, block, or deliver something to it.</p>
-<p>Although this was an encouraging demonstration of AI’s scientific capabilities and an early step towards advancing drug discovery, it took more resources than would be available to the vast majority of protein designers. We allowed Claude to spend up to $10,000 per target on the AI infrastructure platform Modal, roughly equivalent to 2,500 NVIDIA H100 GPU hours.</p>
-<p>To make such research more accessible, we began to explore inference optimizations to run these models more efficiently. As an early result of these optimizations, <a href="https://www.anthropic.com/claude-fable-and-mythos-5-1">Claude Mythos 5.1</a> accelerated seven open-source biology models, enabling them to run up to 2.5 times faster.</p>
-<p>Here, we present new results showing how an internal, general-purpose research model was able to optimize more than 30 deep learning models trained for a variety of biological tasks, such as structure prediction and protein design, as well as for genomics and protein language models. On average, Claude was able to speed up such tasks roughly 4x while sacrificing a minimal amount of precision, and nearly 2x with identical outputs. Claude also improved the memory utilization of these models, making it possible to predict biomolecular systems of unprecedented sizes. By combining these results with simplifications to our previous agentic protein design approach, we show that Claude can achieve comparable <em>in silico </em>performance to the results we previously reported using two orders of magnitude fewer GPU hours.</p>
-<p>Beyond protein design, these specialized biological models are widely used by molecular biologists, including for drug discovery and development. We are open-sourcing the optimized code for all of these models today (<a href="https://github.com/anthropics/uplifting-biomolecular-modeling">here</a>) so that the broader community can make use of them. You can find more detail in our technical report (<a href="https://www-cdn.anthropic.com/c03643714397d9d396fa1ce1794f5f9f7863a82c.pdf">here</a>).</p>
-<p>To further support the community, we are also co-sponsoring a protein design competition with Adaptyv Bio, which has pioneered <a href="https://proteinbase.com/competitions">open protein design competitions</a>. We’ve jointly selected five challenging problems at the frontier of today’s capabilities. Together with Adaptyv, and thanks to generous contributions from Modal and Twist Bioscience, we’re committing up to $1 million in Claude credits and $250,000 in Modal compute credits, as well as wet lab validation for over 5,000 designs. Find more information (<a href="https://proteinbase.com/competitions/anthropic-adaptyv-2026">here</a>) and (<a href="https://docs.google.com/forms/d/e/1FAIpQLSc0Hz1ZWYTt_wkn76ViVxDghmEhG_OeVEcj9YGHxLWqxF1kWw/viewform?usp=dialog">apply here</a>).</p>
-<h2 id="accelerating-protein-structure-prediction-and-design-models"><strong>Accelerating protein structure prediction and design models</strong></h2>
-<p>Protein structure prediction is the problem of determining the three-dimensional structure of a protein from its sequence of amino acids alone. Protein design, meanwhile, is the process of creating a protein with a specific structure, function, or set of properties. Together, these computational tools allow scientists to interrogate key biomolecular processes, such as how cancers form, and to create useful molecules, such as drugs that could target these cancers.</p>
-<p>Modern structure prediction models, such as AlphaFold3, OpenFold3, and Boltz-2, spend much of their computational runtime and memory on two operations: triangle attention and triangle multiplication, which act on triplets of tokens. These operations make it possible to model the geometry of biomolecular systems, but they are extremely computationally expensive, because they are cubic in both runtime and memory: doubling the size of the system uses 8x more time and memory, while tripling it uses 27x more.</p>
-<p>Writing kernels—low-level software translation layers for accelerated computing hardware such as GPUs—is a standard approach for reducing these costs. Given their significance, triangle attention and multiplication have been the subject of dedicated kernel development efforts, first with NVIDIA’s <a href="https://github.com/nvidia/cuequivariance">cuEquivariance</a> and more recently with NVIDIA’s <a href="https://github.com/NVIDIA-BioNeMo/BioNeMo-Inference-Runtime">BioNeMo Inference Runtime</a> (BioNeMo-IR).</p>
-<p>For our own effort to optimize inference for structure prediction models, we worked with Claude to develop FlashPairformer, a set of custom kernels that speed up triangle attention and multiplication. It achieves a new state-of-the-art, outperforming <a href="https://github.com/nvidia/cuequivariance">the field standard</a> on average by 2.7-2.9x on triangle attention and 1.7-3.2x on triangle multiplication, depending on the model configuration.</p>
-<figure><img alt="Chart showing Claude's kernel optimization" height="1483" src="https://www.anthropic.com/_next/image?url=https%3A%2F%2Fwww-cdn.anthropic.com%2Fimages%2F4zrzovbb%2Fwebsite%2F56c4bf34b8eacaa7e1c30648a1d87dd284c9c9b3-2048x1483.jpg&amp;w=3840&amp;q=75" width="2048"/><figcaption><em>We worked with Claude to develop FlashPairformer, a set of custom kernels that accelerate triangle attention and multiplication, which are the main components of the Pairformer architecture that underlies state-of-the-art biomolecular structure prediction models. Results are reported relative to <a href="https://github.com/nvidia/cuequivariance">the field standard</a>.</em></figcaption></figure>
-<p>In addition to developing transferable kernels, we pointed Claude at each individual model with the goal of producing more specific optimizations. These included changes like caching redundant recomputed work and simplifying dead branches into their constant outputs. The combination of these improvements accelerated the structure prediction models by 4x, on average, and for each model, we confirmed that Claude’s accelerated versions did not impact performance on the downstream task (such as structure prediction).</p>
-<p>It normally takes an experienced team of engineers weeks to produce such optimizations for each model, and the work often does not transfer between models. Claude, supervised by two members of Anthropic’s technical staff who are experienced in biomolecular modeling but who had no prior experience in inference optimization or kernel engineering, carried out the acceleration of more than 30 open-source models across biomolecular structure prediction, protein design, protein language modeling, and genomics in just under four weeks. Our results suggest that frontier AI models will help others in the field build scientific tools with greater speed and ease.</p>
-<figure><img alt="Bar chart showing Claude's accelerated optimizations over dozens of structure models" height="1318" src="https://www.anthropic.com/_next/image?url=https%3A%2F%2Fwww-cdn.anthropic.com%2Fimages%2F4zrzovbb%2Fwebsite%2Fb5ed53a2cb9d20cf369be85a586c1b4d1c171c47-2048x1318.jpg&amp;w=3840&amp;q=75" width="2048"/><figcaption><em>Claude’s optimizations accelerated over a dozen biomolecular structure prediction models, achieving, on average, a roughly 4x speed-up with minimal decrease in precision and a roughly 1.6x speed-up with identical outputs. Note: ColabFold 1.6.3’s concurrently-released optional fast kernels are not yet benchmarked here.</em></figcaption></figure>
-<figure><img alt="Bar chart showing how Claude’s optimizations also sped up multiple protein design models spanning hallucination, structure generation, and inverse folding." height="1029" src="https://www.anthropic.com/_next/image?url=https%3A%2F%2Fwww-cdn.anthropic.com%2Fimages%2F4zrzovbb%2Fwebsite%2F55c1085595aeefe9253d497e046b9a007e33d689-2048x1029.jpg&amp;w=3840&amp;q=75" width="2048"/><figcaption><em>Claude’s optimizations also sped up multiple protein design models spanning hallucination, structure generation, and inverse folding. These models rely on a variety of architectures, including AlphaFold-class structure transformers, diffusion, flow matching, and graph neural networks.</em></figcaption></figure>
-<figure><img alt="Chart showing the performance of Claude's fast mode" height="1323" src="https://www.anthropic.com/_next/image?url=https%3A%2F%2Fwww-cdn.anthropic.com%2Fimages%2F4zrzovbb%2Fwebsite%2F7ff86777678b41a6e8852ffbade8737923dd80d3-2048x1323.jpg&amp;w=3840&amp;q=75" width="2048"/><figcaption><em>The fast modes we developed for structure prediction are statistically indistinguishable from the default settings across a pooled set of biomolecular interfaces. We call a predicted interface acceptable if its DockQ score is greater than 0.23.</em></figcaption></figure>
-<h2 id="enabling-modeling-of-massive-biomolecular-systems"><strong>Enabling modeling of massive biomolecular systems</strong></h2>
-<p>In addition to making these protein structure prediction and design models faster, we also tasked Claude with reducing the memory usage involved in modeling large molecular machines. Much of the work in a cell is done by such systems, including the ribosome that builds proteins, the respiratory complexes that power the cell, and the chaperones that help other proteins fold. Each is built from dozens of components, and its function depends on how those components fit together and interact. Predicting the structures of systems this large has typically required substantial computing resources inaccessible to most molecular biologists, such as inference spread across multiple GPU nodes. </p>
-<p>Claude created a low-memory “Big” mode that enables the accurate modeling of systems larger than 10,000 tokens and successful inference on systems larger than 70,000 tokens using just one NVIDIA GPU node—a previously out-of-reach task. Molecular machines folded successfully using Big mode include human mitochondrial complex I, the TRiC chaperone complex, a proteasome, and a bacterial ribosome, each closely matching its experimentally determined structure. To our knowledge, these are among the largest structures ever folded accurately using structure prediction models, with complex I and the 70S ribosome consisting of more than 10,000 tokens each, in comparison to the 40S ribosome predicted accurately by <a href="https://www.nature.com/articles/s41586-024-07487-w">AlphaFold3</a>, which consisted of 7,663 tokens.</p>
-<figure><img alt="Image of large molecular complexes created by Claude's &quot;big&quot; mode" height="2048" src="https://www.anthropic.com/_next/image?url=https%3A%2F%2Fwww-cdn.anthropic.com%2Fimages%2F4zrzovbb%2Fwebsite%2Ff050c0e37767591e3a7a0f1ea3346515b027f1f6-1908x2048.jpg&amp;w=3840&amp;q=75" width="1908"/><figcaption><em>The low-memory “Big” mode Claude created enables open-source structure prediction models to accurately predict biomolecular systems consisting of over 10,000 tokens on a single NVIDIA GPU node, demonstrating that these specialized models are able to generalize nearly 1.5 orders of magnitude beyond their training context. The top three rows show accurately predicted systems; the bottom row shows inaccurately predicted ones. Interfaces are considered accurate if their DockQ score is at least 0.23.</em></figcaption></figure>
-<p>To test the limits of Claude’s optimizations, we asked Claude to predict structures of a greater size than anything that had previously been achieved. Using a single 8-GPU B300 node, Claude generated predictions of entire viral capsids and protein compartments ranging in size from more than 31,000 to more than 70,000 tokens. These systems are nearly two orders of magnitude larger than the training context of these structure prediction models, and, perhaps unsurprisingly, are not predicted correctly. However, the barrier to inferencing at this scale has been significantly lowered now that it takes just one NVIDIA B300 node, suggesting that with improved tools researchers will soon be able to computationally model an increasingly complex set of biological systems.</p>
-<figure><img alt="More images of large molecular machines" height="680" src="https://www.anthropic.com/_next/image?url=https%3A%2F%2Fwww-cdn.anthropic.com%2Fimages%2F4zrzovbb%2Fwebsite%2F783de4f90edb45cdc1ace96c1fcee7694e7b8c26-2048x680.jpg&amp;w=3840&amp;q=75" width="2048"/><figcaption><em>“Big” mode allows open-source structure prediction models to successfully run inference at an unprecedented size using a single NVIDIA B300 node. Capability runs are executed with a single trunk pass (no recycles) as proof-of-concept. Predicted structures collapse, suggesting a lack of generalization nearly two orders of magnitude beyond the training context.</em></figcaption></figure>
-<h2 id="claude-efficiently-designs-"><strong>Claude efficiently designs <em>de novo </em>protein binders</strong></h2>
-<p>In our earlier work on protein design, we provided Claude with an approximately 16,000-word prompt that encouraged it to utilize sub-agents and spend up to $10,000 per target on Modal (roughly 2,500 NVIDIA H100 GPU hours) in a 24-hour span. Here, we gave a single Claude model access to one NVIDIA H200 and 24 hours of wall time, a prompt of about 1,100 words, and a reference sheet for the pre-installed tools, with no sub-agents and no human steering the designs. </p>
-<p>We ran three Claude models (Mythos 5.1, Mythos 5, and Opus 5) against 16 targets with the accelerated biomolecular models described in this post. We scored designs by <a href="https://www.biorxiv.org/content/10.1101/2025.02.10.637595v2">ipSAE</a>, an <em>in silico</em> score that has been shown to be predictive of binding in the wet lab. Averaged over 16 targets, the median-scoring and highest-scoring designs from all three Claude models evaluated achieve approximately the same ipSAE values as our earlier Mythos 5.1 campaigns despite using about two orders of magnitude fewer GPU hours. We also considered Claude token costs and found that with a combined spend of approximately $150 on GPUs and tokens, we can achieve <em>in silico</em> performance matching the levels of our previous campaigns.</p>
-<figure><img alt="Chart showing Claude's performance on de protein design on these optimized models compared to Mythos 5.1 compared" height="1030" src="https://www.anthropic.com/_next/image?url=https%3A%2F%2Fwww-cdn.anthropic.com%2Fimages%2F4zrzovbb%2Fwebsite%2F4c5c23f4aa600e7cd3837db9de7972dfce2e0b28-2048x1030.jpg&amp;w=3840&amp;q=75" width="2048"/><figcaption>A single Claude model with access to one NVIDIA H200 and 24 hours of wall time designed <em>de novo </em>protein binders with comparable <em>in silico </em>binding scores to those of our earlier Mythos 5.1 campaign (dashed line), which could utilize sub-agents and use about 100 times as many GPU hours. Each curve represents the median (top) or the max (bottom) of ipSAE scores (<em>in silico</em> binding scores) from a Claude model orchestrating the accelerated biomolecular models. We show scores vs. estimated GPU spend (left), token spend (center), and their combination (right). The results are averaged over 16 targets and up to five independent runs per target.</figcaption></figure>
-<h2 id="co-sponsoring-a-protein-design-competition-with-adaptyv-bio"><strong>Co-sponsoring a protein design competition with Adaptyv Bio</strong></h2>
-<p>The optimizations described above help us predict and design molecules more efficiently, while unlocking capabilities that would have otherwise been resource-prohibitive. To demonstrate the uplift they provide and the impact of Claude on molecule design more broadly, we’re partnering with Adaptyv Bio to launch <a href="https://proteinbase.com/competitions/anthropic-adaptyv-2026">a protein design competition</a>. We’ve selected five problems at the frontier of today’s protein design capabilities, including challenges such as species cross-reactivity, pH-sensitivity, and peptide-MHC specificity, as well as difficult targets such as GPCRs.</p>
-<p>With the Adaptyv team, we’ll be experimentally validating over 5,000 designs submitted by the community against these problems. We will be providing up to $1 million in Claude credits and additional funds for experimental validation at Adaptyv for participating researchers, Modal will provide up to $250,000 in compute credits, and Twist Bioscience will provide DNA for the competition. You can find more information, including eligibility criteria (<a href="https://proteinbase.com/competitions/anthropic-adaptyv-2026">here</a>) and (<a href="https://docs.google.com/forms/d/e/1FAIpQLSc0Hz1ZWYTt_wkn76ViVxDghmEhG_OeVEcj9YGHxLWqxF1kWw/viewform?usp=dialog">apply here</a>).</p>
-<p>We have also begun to provide frontier AI capabilities to life scientists for biology-related work via our Life Sciences Verification Program. We recently enrolled our first group of organizations, and opened up the program in public beta today. You can find more information (<a href="https://www.anthropic.com/news/life-sciences-verification-program">here</a>).</p>]]></content:encoded>
-      <guid isPermaLink="true">https://www.anthropic.com/research/claude-uplifts-biomolecular-modeling</guid>
-      <category>Science</category>
-      <pubDate>Thu, 17 Sep 2026 00:00:00 +0000</pubDate>
-      <media:content url="https://www.anthropic.com/_next/image?url=https%3A%2F%2Fwww-cdn.anthropic.com%2Fimages%2F4zrzovbb%2Fwebsite%2F56c4bf34b8eacaa7e1c30648a1d87dd284c9c9b3-2048x1483.jpg&amp;amp;w=3840&amp;amp;q=75" type="image/jpeg" medium="image"/>
-    </item>
-    <item>
-      <title>Mistral and Mozilla are bringing open, private and multilingual AI to your web browser</title>
-      <link>https://mistral.ai/news/mistral-x-mozilla</link>
-      <description>Today, we are announcing a partnership with Mozilla to bring privacy, control and choice to people using AI to browse online.</description>
-      <content:encoded><![CDATA[<figure><img height="1254" src="https://mistral.ai/_astro/Linkedin-Partnership-Firefox%20copie_1nk6LB.webp?dpl=6aaaa3e6d4d2290017119943" width="2400"/></figure>
-<p>Today, we are announcing a partnership with Mozilla to bring privacy, control and choice to people using AI to browse online.</p>
-<p><a href="https://blog.mozilla.org/en/firefox/firefox-smart-window/"><u>Firefox Smart Window</u></a> (beta), Mozilla’s AI browsing assistant, is now powered by Mistral models. Smart Window helps you make sense of complex searches, remember something important you clicked away from and source information important to you based on your browser tabs. Mistral will help power Smart Window for users in France and North America, with the United Kingdom and Germany expected to follow later this year.</p>
-<p>This partnership represents two open source advocates working together to bring Mistal’s scientific innovations to consumers around the world. We are building AI systems that are trained and fine-tuned on regional languages, dialects and cultural context, so anyone can get responses that understand their local nuance.</p>
-<p>This announcement is important to the global AI ecosystem for four reasons:</p>
-<ol><li><p><strong>Open technology needs open distribution: </strong>Mozilla has spent more than two decades fighting for an open web and Mistral has been releasing open weight, frontier models since our first release. This partnership is about demonstrating the potential of open source to serve people around the world.</p></li><li><p><strong>AI optimized for local countries and cultures, not exported to them:</strong> We’re fine-tuning our models on regional languages and dialects so that everyone, no matter where they are or how they communicate, can benefit from AI that understands their local nuances. This partnership extends this capability to people who use Firefox worldwide so that their AI experience feels native to them.</p></li><li><p><strong>Giving people control of their interactions with AI: </strong>Firefox has a long history of control and privacy in its DNA, and these are values we share at Mistral. Our partnership is rooted in a shared commitment to user choice, control and openness. Together, we’re blending Firefox’s privacy-first legacy with Mistral’s cutting-edge open models to give people autonomy over their browsing experience. Privacy protections are built into how Firefox Smart Window works: conversations aren’t saved on Mozilla’s servers by default, and partners like Mistral agree to zero data retention. </p></li><li><p><strong>Putting sovereign AI in everyone’s hands: </strong>At Mistral, we’re committed to putting sovereign AI in everyone's hands. While we traditionally focus on serving the enterprise, by partnering with ecosystem leaders like Firefox, we extend beyond businesses and reach their consumers worldwide. This way, end users can benefit from our technology that’s rooted in user control, transparency and open innovation.</p></li></ol>
-<p>You can learn more about Smart Window <a href="https://www.firefox.com/en-US/smart-window/?view=download"><u>here</u></a>.</p>
-<p>AI is becoming part of how people experience the web every day. We want to make sure that doesn’t mean people are chained to one company’s self-serving pipeline. With the browser sitting at the heart of the web and online experience, it should be a place where different AI providers can compete and open source has a seat at the table. This isn't just a product partnership. A browser shouldn’t be a one-way funnel. It should preserve what made the internet powerful to begin with: the freedom to explore, discover different ideas and tech, and decide for ourselves where to go next.</p>
-<p>Anthony Enzor-DeMeo, CEO, Mozilla Corporation</p>
-<p>This partnership represents two open source advocates working together to bring Mistral’s scientific innovations to Mozilla’s consumers around the world. Together, we are bringing privacy, control and choice to AI-powered web browsing.</p>
-<p>Arthur Mensch, co-founder and CEO of Mistral</p>]]></content:encoded>
-      <guid isPermaLink="true">https://mistral.ai/news/mistral-x-mozilla</guid>
-      <category>Company</category>
-      <pubDate>Wed, 16 Sep 2026 00:00:00 +0000</pubDate>
-      <media:content url="https://mistral.ai/_astro/Linkedin-Partnership-Firefox%20copie_1nk6LB.webp?dpl=6aaaa3e6d4d2290017119943" type="image/webp" medium="image"/>
-    </item>
-    <item>
-      <title>Imagine Image 2.0</title>
-      <link>https://x.ai/news/grok-imagine-image-2</link>
-      <description>Precise image generation and editing, built for real creative work.</description>
-      <content:encoded><![CDATA[<a href="https://grok.com/imagine?referrer=website&amp;campaign=imagine-image-2-blog">Open Grok.com</a>]]></content:encoded>
-      <guid isPermaLink="true">https://x.ai/news/grok-imagine-image-2</guid>
+      <title>Grok 4.6 in GitHub Copilot</title>
+      <link>https://x.ai/news/grok-4-6-github-copilot</link>
+      <description>Grok 4.6, our latest coding model, is now available in GitHub Copilot.</description>
+      <content:encoded><![CDATA[<a href="https://console.x.ai/team/default/api-keys?campaign=grok-4-6-github-copilot-blog&amp;utm_source=website&amp;utm_medium=referral&amp;utm_campaign=grok-4-6-github-copilot-blog">Try Grok 4.6 in the API</a>
+<a href="https://github.com/features/copilot">Open GitHub Copilot</a>]]></content:encoded>
+      <guid isPermaLink="true">https://x.ai/news/grok-4-6-github-copilot</guid>
       <category>News</category>
-      <pubDate>Wed, 16 Sep 2026 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 18 Sep 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Grok in Google Workspace</title>
-      <link>https://x.ai/news/introducing-google-workspace-addon</link>
-      <description>Use the Grok add-on for Google Workspace to work directly in Sheets, Slides, and Docs.</description>
-      <guid isPermaLink="true">https://x.ai/news/introducing-google-workspace-addon</guid>
+      <title>Introducing Grok 4.6</title>
+      <link>https://x.ai/news/grok-4-6</link>
+      <description>Grok 4.6 builds on Grok 4.5 with a particular focus on long-running agents and more ambitious interactive and visual work.</description>
+      <guid isPermaLink="true">https://x.ai/news/grok-4-6</guid>
       <category>News</category>
-      <pubDate>Wed, 16 Sep 2026 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 18 Sep 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Workflows in Grok Build</title>
-      <link>https://x.ai/news/workflows</link>
-      <description>Grok Build can now write and run workflows: orchestration scripts that fan a task out across hundreds of parallel agents, verify the results, and report back in one background run.</description>
-      <guid isPermaLink="true">https://x.ai/news/workflows</guid>
+      <title>Introducing Grok Bot</title>
+      <link>https://x.ai/news/introducing-grok-bot</link>
+      <description>Grok Bot is your team of always-on agents. They have their own computer, work inside tools and apps like you do, and keep working 24/7.</description>
+      <guid isPermaLink="true">https://x.ai/news/introducing-grok-bot</guid>
       <category>News</category>
-      <pubDate>Wed, 16 Sep 2026 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 18 Sep 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Bringing Grok 4.5 to iOS, Android, Web, and X</title>
-      <link>https://x.ai/news/grok-4-5-everywhere</link>
-      <description>Grok 4.5, our most intelligent model yet, is now on grok.com, X, iOS, and Android.</description>
-      <content:encoded><![CDATA[<a href="https://grok.com/?referrer=website">Open Grok.com</a>]]></content:encoded>
-      <guid isPermaLink="true">https://x.ai/news/grok-4-5-everywhere</guid>
+      <title>Imagine Video 1.5 with References</title>
+      <link>https://x.ai/news/grok-imagine-video-1-5-references</link>
+      <description>Our best video model, now with text, image, and voice references — generating up to 1080p.</description>
+      <content:encoded><![CDATA[<a href="https://grok.com/imagine?referrer=website&amp;campaign=imagine-video-1-5-references-blog">Open Grok.com</a>]]></content:encoded>
+      <guid isPermaLink="true">https://x.ai/news/grok-imagine-video-1-5-references</guid>
       <category>News</category>
-      <pubDate>Wed, 16 Sep 2026 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 18 Sep 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Introducing Grok for Outlook</title>
-      <link>https://x.ai/news/introducing-outlook-addin</link>
-      <description>Use the Grok add-in for Microsoft Outlook to summarize long email threads, draft replies in your voice, and keep your inbox organized.</description>
-      <guid isPermaLink="true">https://x.ai/news/introducing-outlook-addin</guid>
+      <title>Introducing Grok Voice 2.0</title>
+      <link>https://x.ai/news/grok-voice-think-fast-2</link>
+      <description>Introducing our most capable speech-to-speech voice model.</description>
+      <guid isPermaLink="true">https://x.ai/news/grok-voice-think-fast-2</guid>
       <category>News</category>
-      <pubDate>Wed, 16 Sep 2026 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 18 Sep 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Introducing Grok for Excel</title>
-      <link>https://x.ai/news/introducing-excel-addin</link>
-      <description>Use the Grok add-in for Microsoft Excel to ask questions in plain English, write formulas, and run scenarios without leaving the workbook.</description>
-      <guid isPermaLink="true">https://x.ai/news/introducing-excel-addin</guid>
+      <title>Introducing Build Mode</title>
+      <link>https://x.ai/news/grok-build-mode</link>
+      <description>Create and share websites, apps, games, and interactive dashboards. Now in Early Beta for SuperGrok Heavy subscribers on grok.com, iOS, and Android.</description>
+      <guid isPermaLink="true">https://x.ai/news/grok-build-mode</guid>
       <category>News</category>
-      <pubDate>Wed, 16 Sep 2026 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 18 Sep 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Introducing Grok 4.5</title>
-      <link>https://x.ai/news/grok-4-5</link>
-      <description>Grok 4.5 is SpaceXSI's smartest model built for coding, agentic tasks, and knowledge work.</description>
-      <guid isPermaLink="true">https://x.ai/news/grok-4-5</guid>
+      <title>Grok 4.5 in GitHub Copilot</title>
+      <link>https://x.ai/news/grok-github-copilot</link>
+      <description>Grok 4.5, our smartest coding model, is now available in GitHub Copilot.</description>
+      <content:encoded><![CDATA[<a href="https://console.x.ai/team/default/api-keys?campaign=grok-github-copilot-blog&amp;utm_source=website&amp;utm_medium=referral&amp;utm_campaign=grok-github-copilot-blog">Try Grok 4.5 in the API</a>
+<a href="https://github.com/features/copilot">Open GitHub Copilot</a>]]></content:encoded>
+      <guid isPermaLink="true">https://x.ai/news/grok-github-copilot</guid>
       <category>News</category>
-      <pubDate>Wed, 16 Sep 2026 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 18 Sep 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Automations in Grok</title>
-      <link>https://x.ai/news/grok-automations</link>
-      <description>Describe a job once and Grok runs it on a schedule or when an email arrives, then reports back.</description>
-      <content:encoded><![CDATA[<p>Today, we're introducing Automations: jobs Grok runs on its own. Describe the work once, choose when it runs, and Grok takes it from there, whether that's research done before you're awake or an important email flagged the moment it lands. Automations are available on <a href="https://grok.com/automations">grok.com</a> and in the Grok app on iOS and Android.</p>
-<h2 id="describe-the-job-once">Describe the job once</h2>
-<p>An automation's instructions read like any chat message: describe what you want, attach files for context, add connectors and skills, and pick a mode. Name it, save it, and from then on every run is a fresh request: same instructions, current data.</p>
-<h2 id="on-a-schedule-or-on-a-trigger">On a schedule, or on a trigger</h2>
-<p>Schedules run once, daily, weekdays, weekly, monthly, or yearly, at a time you choose in your timezone: a morning brief at 8:00 before the day starts, or a rent reminder on the 1st.</p>
-<p>Email triggers watch your inbox instead. When an incoming email matches your filters (sender, recipient, or subject), the automation fires with that email as context, and Grok responds to the actual message. Instructions can also point at your tools directly: type @ to mention a connector, and Grok uses it on every run.</p>
-<p>You can also start a run yourself with Run now, which is handy for testing an automation right after you build it.</p>
-<h2 id="every-run-is-a-full-conversation">Every run is a full conversation</h2>
-<p>When an automation fires, Grok opens a real conversation, does the work, and saves the result to its run history. Open any run to read the full thread, or pick up the conversation where Grok left off. You choose how each automation reports back: email, app notification, both, or neither if you'd rather check in yourself.</p>
-<h2 id="start-from-chat-or-a-template">Start from chat, or a template</h2>
-<p>You can also create automations straight from chat: ask Grok to "check the news every morning and flag anything about pricing" and it sets one up for you. The Automations page has suggested templates to start from, and any automation can be paused, resumed, edited, or deleted at any time.</p>
-<h2 id="get-started">Get started</h2>
-<p>Create your first automation at <a href="https://grok.com/automations">grok.com/automations</a>. Scheduled automations are available to everyone; email triggers are included with SuperGrok.</p>]]></content:encoded>
-      <guid isPermaLink="true">https://x.ai/news/grok-automations</guid>
+      <title>Introducing the Voice Agent Builder</title>
+      <link>https://x.ai/news/grok-voice-agent-builder</link>
+      <description>Create a personalized voice agent in under 2 minutes without a single line of code.</description>
+      <guid isPermaLink="true">https://x.ai/news/grok-voice-agent-builder</guid>
       <category>News</category>
-      <pubDate>Wed, 16 Sep 2026 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 18 Sep 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Grok Build is Now Open Source</title>
-      <link>https://x.ai/news/grok-build-open-source</link>
-      <description>Explore the harness behind our coding agent and TUI.</description>
-      <content:encoded><![CDATA[<a href="https://github.com/xai-org/grok-build">View on GitHub</a>]]></content:encoded>
-      <guid isPermaLink="true">https://x.ai/news/grok-build-open-source</guid>
+      <title>Introducing /goal</title>
+      <link>https://x.ai/news/introducing-goal</link>
+      <description>Use /goal for long-running autonomous task execution in Grok Build.</description>
+      <content:encoded><![CDATA[<p>Today we're introducing <code>/goal</code> in Grok Build. This new mode yields long-running, autonomous execution, helping you hand off larger implementation tasks to the agent.</p>
+<p>Available now in Grok Build. Install with a single command and sign in with your account:</p>
+<p>Most coding sessions require back-and-forth execution and verification. With <code>/goal</code>, the agent continues until a task is completed and verified, whether that means reviewing code, inspecting webpages, or executing scripts.</p>
+<h2 id="set-a-goal-in-one-line">Set a goal in one line</h2>
+<p>Give <code>/goal</code> an objective and Grok Build takes it from there:</p>
+<pre><code>/goal Migrate the auth module to the new API
+</code></pre>
+<p>It plans an approach, breaks the work into a progress checklist, and starts executing. You can keep sharing additional instructions with the agent as it works.</p>
+<p>The new mode offers additional commands for monitoring and steering long-running tasks:</p>
+<pre><code>/goal status     # see the live progress panel
+/goal pause      # stop work, keep the goal
+/goal resume     # pick back up
+/goal clear      # drop the goal entirely
+</code></pre>
+<p>When the goal is finished, the panel flips to <strong>Complete</strong> with every checklist item checked.</p>
+<h2 id="getting-started">Getting started</h2>
+<p>Install Grok Build with the command above, then invoke <code>/goal</code> to hand off your first long-running task.</p>]]></content:encoded>
+      <guid isPermaLink="true">https://x.ai/news/introducing-goal</guid>
       <category>News</category>
-      <pubDate>Wed, 16 Sep 2026 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 18 Sep 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>21 New Flagship Grok Voices</title>
-      <link>https://x.ai/news/new-flagship-voices</link>
-      <description>New multilingual voices for Grok Voice, plus improved naturalness for the original five.</description>
-      <guid isPermaLink="true">https://x.ai/news/new-flagship-voices</guid>
+      <title>Introducing Grok for Word</title>
+      <link>https://x.ai/news/introducing-word-addin</link>
+      <description>Use the Grok add-in for Microsoft Word to turn notes into documents, style and format your work, or bring research from the web into Word.</description>
+      <guid isPermaLink="true">https://x.ai/news/introducing-word-addin</guid>
       <category>News</category>
-      <pubDate>Wed, 16 Sep 2026 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 18 Sep 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Grok on Databricks</title>
-      <link>https://x.ai/news/grok-databricks</link>
-      <description>Grok models are now available on Databricks Agent Bricks.</description>
-      <content:encoded><![CDATA[<p>We're excited to share that Grok models are now natively available on Databricks Agent Bricks, Databricks' developer agent platform.</p>
-<p>As part of the Databricks 2026 Data + AI Summit, Databricks is partnering with SpaceXSI to make Grok available alongside other frontier and open-source models in a single, governed platform.</p>
-<p>Agent Bricks connects context (derived from data in Lakehouse) with control and choice, enabling engineering teams to effectively build AI agents that operate on large volumes of data.</p>
-<p>Together with <a href="https://x.ai/news/grok-amazon-bedrock">Grok on Amazon Bedrock</a>, enterprises have more ways to run SpaceXSI models where their data already lives.</p>
-<p>For more on Agent Bricks, see the <a href="https://www.databricks.com/blog/agent-bricks-dais-2026">Databricks announcement</a>.</p>]]></content:encoded>
-      <guid isPermaLink="true">https://x.ai/news/grok-databricks</guid>
+      <title>Grok on Amazon Bedrock</title>
+      <link>https://x.ai/news/grok-amazon-bedrock</link>
+      <description>Grok models are now available via Amazon Bedrock.</description>
+      <content:encoded><![CDATA[<p>Today, we’re excited to announce that Grok 4.3 is now generally available on Amazon Bedrock.</p>
+<p>Grok 4.3 achieves the lowest hallucination rate among frontier models, offers 1-million-token context window, and supports configurable reasoning efforts (none, low, medium, high). Now, Amazon Bedrock users can leverage the model through Bedrock’s secure and reliable inference engine.</p>
+<h2 id="leading-performance-in-enterprise">Leading Performance in Enterprise</h2>
+<p>Grok 4.3 is one of the strongest models available today for building enterprise-ready AI agents:</p>
+<ul>
+<li>#1 on Artificial Analysis Omniscience benchmark*, achieving the lowest hallucination rate among frontier models.</li>
+<li>#1 on Artificial Analysis Tau2 Telecom benchmark*, which evaluates real-world tool-calling performance in customer support agent scenarios.</li>
+<li>#1 on Vals AI Case Law and Corporate Finance benchmarks, which measure Grok's capabilities in complex document understanding tasks.</li>
+</ul>
+<small><em>* In comparison to major frontier labs</em></small>
+<h2 id="capabilities--pricing">Capabilities &amp; Pricing</h2>
+<p>Grok 4.3 sits on the Pareto frontier for intelligence versus cost, delivering 2-10x more intelligence per dollar than other frontier models.</p>
+<ul>
+<li><strong>Input</strong>: $1.25 per 1 million tokens</li>
+<li><strong>Output</strong>: $2.50 per 1 million tokens</li>
+</ul>
+<p>It features a 1 million context window that handles extremely long documents and codebases with ease. Developers can also configure reasoning: Use <code>none</code> for maximum speed on simple requests, or <code>low</code> / <code>medium</code> / <code>high</code> to scale reasoning effort to the difficulty of the problem.</p>
+<h2 id="build-with-grok-43-on-amazon-bedrock">Build with Grok 4.3 on Amazon Bedrock</h2>
+<p>Grok 4.3 is now available to all developers in <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-xai-grok-4-3.html#model-card-xai-grok-4-3-programmatic-access">supported AWS Regions</a>.</p>
+<pre><code>curl https://bedrock-mantle.us-west-2.api.aws/openai/v1/responses \
+  -H "Content-Type: application/json" \
+  -H "Authorization: Bearer $BEDROCK_API_KEY" \
+  -d '{
+    "model": "grok-4.3",
+    "input": "What is the meaning of life?",
+    "reasoning": {
+        "effort": "low"
+    },
+    "include": ["reasoning.encrypted_content"]
+  }'
+</code></pre>
+<p>To get started, please visit the <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-xai-grok-4-3.html#model-card-xai-grok-4-3-sample-code">Grok on Amazon Bedrock documentation</a>. We're excited to see what you build!</p>]]></content:encoded>
+      <guid isPermaLink="true">https://x.ai/news/grok-amazon-bedrock</guid>
       <category>News</category>
-      <pubDate>Wed, 16 Sep 2026 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 18 Sep 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Introducing Grok for PowerPoint</title>
-      <link>https://x.ai/news/introducing-powerpoint-addin</link>
-      <description>Grok now works inside Microsoft PowerPoint — turn outlines into slides, expand the deck, and tighten the narrative without leaving the app.</description>
-      <guid isPermaLink="true">https://x.ai/news/introducing-powerpoint-addin</guid>
+      <title>Grok Imagine Video 1.5</title>
+      <link>https://x.ai/news/grok-imagine-video-1-5</link>
+      <description>Improved quality at even faster speeds.</description>
+      <guid isPermaLink="true">https://x.ai/news/grok-imagine-video-1-5</guid>
       <category>News</category>
-      <pubDate>Wed, 16 Sep 2026 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 18 Sep 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Agent Dashboard in Grok Build</title>
-      <link>https://x.ai/news/agent-dashboard</link>
-      <description>Manage many coding sessions at once. See what each is doing, reply to the ones that need you, and dispatch new work.</description>
-      <content:encoded><![CDATA[<p>The Agent Dashboard puts every Grok Build session on one screen. See what each is doing, run them in parallel, and step in only when input is needed.</p>
-<p>Run <code>grok dashboard</code> from your shell, or <code>/dashboard</code> (<code>Ctrl+\</code>) from inside any session.</p>
-<h2 id="see-every-session-at-a-glance">See every session at a glance</h2>
-<p>The dashboard sorts sessions by state, with anything waiting for input pulled to the top, so you handle blockers first and leave the rest running. A quick scan shows what each session is doing and for how long, so you stay oriented without opening anything.</p>
-<p>Spread across repos? Group by working directory with <code>Ctrl+S</code>. Subagents roll up under the session that launched them, so the list shows the work you dispatched, not the fan-out beneath it.</p>
-<h2 id="peek-and-reply">Peek and reply</h2>
-<p>Select a row to peek at its latest output without leaving the dashboard, then reply from there. Idle sessions send immediately; active ones queue your message until the current turn ends.</p>
-<p>When a session requests approval or asks a question, its options appear inline. Answer with the arrow or number keys to continue. Multi-part questions arrive one at a time.</p>
-<h2 id="dispatch-new-sessions">Dispatch new sessions</h2>
-<p>The input at the bottom starts a new session. <code>Enter</code> dispatches it and keeps you on the dashboard; <code>Shift+Enter</code> dispatches and opens it right away. Before sending, set the model, start in plan mode, or let the session approve its own edits.</p>
-<h2 id="take-over-any-session">Take over any session</h2>
-<p>Open any session to take over its full conversation. Cycle to the next or previous session without returning to the list, then drop back to the dashboard when you're done. Closing the dashboard leaves every session running, and they're all there when you reopen it.</p>
-<h2 id="get-started">Get started</h2>
-<p>The Agent Dashboard ships with Grok Build. Install it with a single command, then run <code>grok dashboard</code>, or <code>/dashboard</code> from any session you already have open.</p>]]></content:encoded>
-      <guid isPermaLink="true">https://x.ai/news/agent-dashboard</guid>
+      <title>Grok Imagine 1.5 Preview</title>
+      <link>https://x.ai/news/grok-imagine-1-5</link>
+      <description>grok-imagine-video-1.5-preview, our latest image-to-video model, is now available via the xAI API in preview.</description>
+      <guid isPermaLink="true">https://x.ai/news/grok-imagine-1-5</guid>
       <category>News</category>
-      <pubDate>Wed, 16 Sep 2026 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 18 Sep 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Use Grok in Warp</title>
-      <link>https://x.ai/news/grok-warp</link>
-      <description>Use your Grok and X Premium subscription inside Warp.</description>
-      <content:encoded><![CDATA[<p>You can now use your Grok or X Premium subscription inside <a href="https://www.warp.dev/">Warp</a>, an agentic development environment built on the terminal and used by almost one million developers.</p>
-<p>Your existing subscription provides access to Grok models, including <code>grok-build-0.1</code>, the model powering <a href="https://x.ai/build">Grok Build</a>.</p>
+      <title>Grok Build 0.1 on API</title>
+      <link>https://x.ai/news/grok-build-0-1</link>
+      <description>Grok Build 0.1, our fastest coding model, is now available via the xAI API in public beta.</description>
+      <guid isPermaLink="true">https://x.ai/news/grok-build-0-1</guid>
+      <category>News</category>
+      <pubDate>Fri, 18 Sep 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Use Grok in Kilo Code</title>
+      <link>https://x.ai/news/grok-kilocode</link>
+      <description>Use your SuperGrok or X Premium+ subscription inside Kilo Code, the open-source agentic coding platform.</description>
+      <content:encoded><![CDATA[<p>Starting today, you can use your Grok subscription directly inside <a href="https://kilo.ai/">Kilo Code</a>.</p>
+<p>Kilo Code is the open-source agentic engineering platform for VS Code, JetBrains IDEs, and the terminal. It offers specialized modes for planning, coding, debugging, and orchestration, along with powerful tool use, browser automation, MCP extensibility, and support for 500+ models. Kilo is designed for real software engineering workflows and agentic use cases.</p>
+<p>With your X Premium+ or SuperGrok subscription, connect your Grok account to use the latest Grok models — including Grok Build for agentic coding — inside Kilo Code with no separate API key.</p>
 <h2 id="setup">Setup</h2>
+<p>Kilo Code offers IDE extensions, a CLI, and a web surface. To connect your xAI account, follow the instructions below:</p>
+<p><strong>VS Code:</strong></p>
 <ol>
-<li>Download Warp from <a href="https://www.warp.dev/download">warp.dev/download</a> and open it.</li>
-<li>Open the "Agent &gt; Warp Agent" settings page and click "Connect SuperGrok subscription"</li>
-<li>Switch to the <code>grok-build-0.1</code> model and start prompting.</li>
+<li>Install <a href="https://marketplace.visualstudio.com/items?itemName=kilocode.Kilo-Code">Kilo Code</a> from the VS Code Marketplace.</li>
+<li>Open <strong>Settings</strong> (gear icon) and go to the <strong>Providers</strong> tab.</li>
+<li>Click <strong>Show more providers</strong>, then search for or select <strong>xAI</strong>.</li>
+<li>Choose the <strong>xAI Grok OAuth (SuperGrok Subscription)</strong> sign-in option and complete the OAuth flow in your browser.</li>
 </ol>
-<p>That's it! More agents and integrations are coming soon to SuperGrok and X Premium subscribers. To subscribe, visit the <a href="https://x.ai/pricing">pricing page</a>.</p>]]></content:encoded>
-      <guid isPermaLink="true">https://x.ai/news/grok-warp</guid>
+<p>For headless or remote environments (VPS, SSH, Docker, WSL), choose <strong>xAI Grok OAuth (Headless / Remote / VPS)</strong> instead.</p>
+<p><strong>CLI:</strong></p>
+<pre><code>npm install -g @kilocode/cli
+</code></pre>
+<p>Run <code>kilo</code> in your project directory and use the <code>/connect</code> command to add xAI.</p>
+<p>For more details, see the <a href="https://kilo.ai/docs/ai-providers/xai">Kilo Code xAI provider documentation</a>.</p>
+<p>More open-source agents and integrations are coming soon.</p>]]></content:encoded>
+      <guid isPermaLink="true">https://x.ai/news/grok-kilocode</guid>
       <category>News</category>
-      <pubDate>Wed, 16 Sep 2026 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 18 Sep 2026 00:00:00 +0000</pubDate>
     </item>
   </channel>
 </rss>
