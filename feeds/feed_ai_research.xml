@@ -8,7 +8,69 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 14 Oct 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 15 Oct 2026 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Introducing Timestral</title>
+      <link>https://mistral.ai/news/timestral</link>
+      <description>Timestral, Mistral’s first family of time-series foundation models, delivers state-of-the-art probabilistic, multivariate forecasts with just 209M parameters, outperforming larger models on key benchmarks while supporting past and future covariates. Available in four sizes (5M to 209M parameters), it balances accuracy and efficiency, running efficiently on CPUs and excelling in zero-shot forecasting for diverse domains. The model combines synthetic pre-training, covariate-aware attention, and long-context learning, with fine-tuning options for domain adaptation via Mistral Forge.</description>
+      <content:encoded><![CDATA[<img height="1432" src="https://mistral.ai/_astro/timestral-cover_2ikDAq.webp?dpl=6ad0e5b5d7cab4f179ee3d92" width="2400"/>
+<img height="1074" src="https://mistral.ai/_astro/Thumbnail-Blog-timestral_Z5Y2JF.webp?dpl=6ad0e5b5d7cab4f179ee3d92" width="1800"/>
+<p>Today, we’re releasing Timestral, our first family of time-series foundation models. Our largest model, at just 209M parameters, ranks first on all three of the field's main public benchmarks, GIFT-Eval, TIME, and fev-bench, outperforming the previous state of the art with only two-thirds of the model parameters.</p>
+<p>Timestral delivers probabilistic, multivariate forecasts and supports past-only and known-future covariates. Our family of models sits on the Pareto front of forecasting accuracy versus model size, delivering leading performance at each size. Results have been submitted to the GIFT-Eval and TIME leaderboards.</p>
+<h2>Time Series Foundation Models (TSFM)</h2>
+<p>Time series is one of the most common data types in enterprise, from sensor telemetry to observability metrics. Forecasts built on it drive decisions in capacity planning, energy, supply chains, risk and maintenance.</p>
+<p>Industrial plants forecast process sensors against the production schedule, catch equipment drift before it fails, and plan capacity and spare parts across thousands of assets. Finance teams forecast flows, volumes, and volatility to inform positions, hedging, and treasury across thousands of accounts.</p>
+<p>Classical models such as ARIMA and linear regression remain well-established tools for forecasting time series. These models are usually fitted to a single series and learn only from that series' history.</p>
+<p>Deep learning models such as PatchTST add the capacity to learn nonlinear patterns across many related series, but they are still typically trained from scratch on each dataset, so what they learn doesn't carry over to new domains.</p>
+<p>Time series foundation models bring the pre-training approach to time series. Trained on a large and diverse corpus, our model learns patterns that transfer across series, forecasting zero-shot on data it has never seen, even in domains where data is scarce.</p>
+<h2>Benchmark Results</h2>
+<p>We evaluated Timestral on the three main public forecasting benchmarks: GIFT-Eval, TIME and fev-bench. Among pre-trained, zero-shot models, it ranks first across all five metrics. These results come from a single checkpoint, without ensembling.</p>
+<img height="1700" src="https://mistral.ai/_astro/GMean%20MASE_ZLHXlK.webp?dpl=6ad0e5b5d7cab4f179ee3d92" width="2400"/>
+<img height="1700" src="https://mistral.ai/_astro/GMean%20WQL_Z1QqMAj.webp?dpl=6ad0e5b5d7cab4f179ee3d92" width="2400"/>
+<p><em>GIFT-Eval, top ten of 83 comparable pretrained and zero-shot entries. Lower is better.</em></p>
+<img height="1700" src="https://mistral.ai/_astro/GMean%20MASE-1_Z2iU2rf.webp?dpl=6ad0e5b5d7cab4f179ee3d92" width="2400"/>
+<img height="1700" src="https://mistral.ai/_astro/GMean%20CRPS_2isTwd.webp?dpl=6ad0e5b5d7cab4f179ee3d92" width="2400"/>
+<p><em>TIME, top ten of the 35 leaderboard entries. Lower is better on both metrics.</em></p>
+<figure><img height="1700" src="https://mistral.ai/_astro/SQL%20skill%20score_23fQVS.webp?dpl=6ad0e5b5d7cab4f179ee3d92" width="2400"/></figure>
+<p><em>fev-bench, top ten of the 37 leaderboard entries, by SQL skill score. Higher is better.</em></p>
+<h2>Family of models optimised for every specification</h2>
+<p>Timestral has been optimised as a family of four models: 5M, 28M, 123M and 209M parameters. The larger models improve forecast performance, while the smaller ones are faster and cheaper. All four share the same architecture and training recipe. Every size sits on the Pareto front of accuracy versus model size: for each model size, no public model forecasts better.</p>
+<p><em>Score vs model size on GIFT-Eval, TIME and fev-bench (shown as 1 − skill score). Lower is better. Our 28M model beats Chronos-2, about four times larger, on GIFT-Eval and TIME. Our 209M model beats TimesFM-3 and Falcon-2.0 with fewer parameters.</em></p>
+<p>Timestral does not need a GPU at inference. On a standard server CPU with 8 threads, forecasting one day ahead from three weeks of 15-minute history takes 10 ms with the 5M model and 140 ms with the 209M model. Smaller models trade some accuracy for speed: the 28M model is five times faster than the 209M model, and the 123M model comes within 0.2% of the 209M score at three quarters of its latency.</p>
+<h2>An industrial example</h2>
+<p>Consider an industrial plant with thousands of sensors across its equipment. Timestral can improve the forecasts on that data in several ways.</p>
+<p><strong>Multivariate forecasting.</strong> A pump's vibration, temperature and pressure don't move independently. A rise in one often explains or causes a change in another. Timestral models related series jointly, so it can use those dependencies instead of forecasting each sensor in isolation.</p>
+<p><strong>Probabilistic forecasting.</strong> A single predicted value may not show the full picture. Timestral predicts a full set of quantiles, so teams can see how wide the uncertainty is, set alert thresholds that reflect it, and plan maintenance around risk rather than a single number.</p>
+<p><strong>Categorical covariates.</strong> Some covariates take values from a set of categories rather than continuous numbers, such as the day of the week, or a machine's state (running, idle, under maintenance). Encoding these as numbers would impose an order or scale they don't have. Timestral takes them as categorical inputs directly to improve forecasts.</p>
+<p><strong>Known-future covariates.</strong> Some drivers of sensor behaviour are known in advance, such as production schedules, planned shutdowns, weather forecasts. Timestral can condition on them to improve forecast quality, so a scheduled load increase is expected rather than flagged as a surprise.</p>
+<p><strong>From Model to System</strong></p>
+<p>Timestral is a numerical model that can run inside existing monitoring pipelines, or be paired with our language models in multi-modal agentic workflows.</p>
+<p>In the plant, that could look like this:</p>
+<ol><li><p>Timestral running continuously on the plant's sensor streams, detecting anomalies as they occur.</p></li><li><p>When it flags an anomaly on a pump, an agent embeds the signals and compares against embeddings of past sensor data to find similar historical failures.</p></li><li><p>The agent then starts sub-agents to run a root cause analysis, drawing on context from that plant, such as maintenance records, shift logs and operator notes, equipment manuals, past work orders, and readings from related equipment.</p></li><li><p>The agent drafts a suggested diagnosis based on the findings, with supporting evidence and possible next steps.</p></li></ol>
+<p>The plant manager gets a diagnosis and a plan backed by the sensor data, rather than just an alert.</p>
+<h2>Key technical contributions</h2>
+<p>Several ideas have been combined to produce these results. Each will be described in detail in the technical report.</p>
+<ol><li><p><strong>Decoupled Horizon Forecasting.</strong> Causal decoders trained with contiguous patch masking, as in Toto 2.0 and TimesFM-3, mask out the values to be forecast, so they look like missing values and are also lost as context for later forecasts. Our approach, DHF, separates the two: the full history stays in the sequence, and learned forecast tokens read the history before them. Every observed value thus serves as both target and context, true gaps stay flagged as missing, and training horizon lengths and missing-data augmentation can be tuned independently of each other.</p></li><li><p><strong>Covariate-aware attention.</strong> Each input series is assigned a role: target variate, past-only covariate or known-future covariate. Known-future covariates are visible across the whole window while targets stay causal, and information flows only from covariates to targets. Timestral can therefore use a holiday calendar or a weather forecast without leaking a target's own future into its forecast.</p></li><li><p><strong>Synthetic-first data.</strong> The majority of the training data was synthetic. We first generated univariate processes with coherent temporal dynamics, including trends, seasonality and diverse noise patterns. We then used a multivariate synthesizer to construct multivariate series by introducing nonlinear dependencies between these processes.</p></li><li><p><strong>Two-stage training.</strong> Timestral is first pre-trained at scale on purely synthetic data with context size 8192, then post-trained on a mix of real and synthetic data with a 4x longer context. The objective is a pinball loss over 21 quantiles, a discrete approximation of CRPS.</p></li></ol>
+<figure><img height="2870" src="https://mistral.ai/_astro/01-timestral-overview_1dIJcN.webp?dpl=6ad0e5b5d7cab4f179ee3d92" width="2400"/></figure>
+<h2>A model that can be adapted</h2>
+<p>Public benchmarks measure general performance, but production data can be significantly different in behavior and structure. It may also shift over time as markets change regime, equipment degrades and demand patterns move. The lasting value lies in being able to adapt a model to in-domain data and keep retraining it as the distribution moves.</p>
+<p>For organisations that want to go further, Timestral is available through <a href="https://mistral.ai/products/forge/">Mistral Forge</a>, the same training pipeline we use for our language models. It supports:</p>
+<ul><li><p><strong>Zero-shot inference</strong> out of the box.</p></li><li><p><strong>Architectural extensions</strong>, such as domain-specific covariates.</p></li><li><p><strong>Fine-tuning on proprietary data</strong>, specialising to a domain while preserving general performance.</p></li><li><p><strong>Control over the training data</strong>, including adjusting the training mix, replaying pre-training data, and generating synthetic data samples to reflect the target domain. Full control over the data ensures that nothing we backtest was seen during pre-training.</p></li></ul>
+<p>The full pipeline can be deployed on our clients’ hardware, including air-gapped environments.</p>
+<h2>What’s next</h2>
+<p>We have published a <a href="https://github.com/mistralai/timestral">GitHub repository</a> so you can run Timestral on your own data. A technical report with the full results will follow. For more specialised forecasting problems, or to collaborate on research, please reach out to us.</p>
+<table><tbody><tr><th colspan="1" rowspan="1"><p>Timestral</p></th><th colspan="1" rowspan="1"></th></tr><tr><td colspan="1" rowspan="1"><p>Type</p></td><td colspan="1" rowspan="1"><p>Time-series foundation model (TSFM)</p></td></tr><tr><td colspan="1" rowspan="1"><p>Parameters</p></td><td colspan="1" rowspan="1"><p>5M, 28M, 123M and 209M</p></td></tr><tr><td colspan="1" rowspan="1"><p>Context length</p></td><td colspan="1" rowspan="1"><p>32,768 time steps</p></td></tr><tr><td colspan="1" rowspan="1"><p>Output</p></td><td colspan="1" rowspan="1"><p>Probabilistic forecasts, 21 quantiles</p></td></tr><tr><td colspan="1" rowspan="1"><p>Inputs</p></td><td colspan="1" rowspan="1"><p>Multivariate targets, past-only and known-future covariates</p></td></tr><tr><td colspan="1" rowspan="1"><p>Deployment</p></td><td colspan="1" rowspan="1"><p>On-prem, VPC or air-gapped</p></td></tr><tr><td colspan="1" rowspan="1"><p>Licence</p></td><td colspan="1" rowspan="1"><p>Modified MIT</p></td></tr></tbody></table>
+<img src="https://mistral.ai/cms-media/api/media/file/timestral-icon-model.svg"/>
+<p>Timestral</p>
+<p>Mistral's time-series foundation models. State-of-the-art probabilistic forecasts, 5M–209M params, runs on CPU.</p>
+<a href="https://huggingface.co/collections/mistralai/timestral">
+Discover
+</a>]]></content:encoded>
+      <guid isPermaLink="true">https://mistral.ai/news/timestral</guid>
+      <category>Research</category>
+      <pubDate>Thu, 15 Oct 2026 00:00:00 +0000</pubDate>
+      <media:content url="https://mistral.ai/_astro/timestral-cover_2ikDAq.webp?dpl=6ad0e5b5d7cab4f179ee3d92" type="image/webp" medium="image"/>
+    </item>
     <item>
       <title>Preparing for the 2026 US midterms</title>
       <link>https://www.anthropic.com/news/2026-us-midterms</link>
@@ -1713,251 +1775,416 @@
       <pubDate>Fri, 18 Sep 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Biosecurity at the frontier</title>
-      <link>https://x.ai/news/biosafety-at-the-frontier</link>
-      <description>LatchBio evaluated Grok's performance on biosecurity monitoring and adversarial biological tasks. They found that Grok 4.6 detects and refuses dangerous queries more reliably than any other frontier system.</description>
-      <content:encoded><![CDATA[<p>Today, <a href="https://latch.bio/">LatchBio</a> published an independent analysis of Grok 4.6 on their biological capability and biological red-teaming benchmark suites. These evaluations measure a wide range of characteristics and capabilities of tested models, including:</p>
+      <title>Memory in Grok Build</title>
+      <link>https://x.ai/news/grok-build-memory</link>
+      <description>Grok Build now carries conventions, decisions, and project facts from one session to the next. Notes are written in the background as you work and read back when you return to the project.</description>
+      <content:encoded><![CDATA[<p>Grok Build now has memory. As you work, it keeps notes on the conventions, decisions, and project facts that come up, and later sessions read those notes before touching related code. Grok Build gets better the more you use it.</p>
+<h2 id="what-it-remembers">What it remembers</h2>
+<p>Memory holds the details most likely to matter in a later session: how the team writes and reviews code, decisions and the reasoning behind them, and durable facts about the project, from where a subsystem lives to which command runs the suite. Task state, tentative conclusions, secrets, and anything the repository or its docs already cover are left out.</p>
+<p>Notes are kept per project, plus a global set for preferences that apply everywhere.</p>
+<h2 id="written-in-the-background">Written in the background</h2>
+<p>Capture runs after a turn completes and never blocks the session. Grok reviews the finished turn, writes anything worth keeping as a markdown note, and continues. Over time, <code>/dream</code> folds those notes into topic files, one per subject, so each project ends up with a small set of organized references.</p>
+<p>When you return to a project, Grok reads the topics that cover the area it is about to work in. Instructions in the current conversation take precedence over anything in a note.</p>
+<h2 id="browsing-memory">Browsing memory</h2>
+<p><code>/memory</code> opens a read-only browser of every memory file, grouped by scope, with a preview of the selected file. It is the fastest way to see what a session produced, and to find the file to edit when a note is wrong.</p>
+<h2 id="new-commands">New commands</h2>
 <ul>
-<li>Whether a model can distinguish between legitimate biological research and requests that conceal a biosecurity hazard</li>
-<li>Whether a model is useful in a biosecurity and biomonitoring role, by being able to detect and characterize emerging pathogens and patterns of transmission</li>
+<li><code>/memory</code> opens the browser above.</li>
+<li><code>/dream</code> organizes recent notes into topic files, for example <code>topics/testing.md</code>. Dream also runs on its own periodically in the background.</li>
 </ul>
-<p>On LatchBio's BioSecBench-Refusal suite, Grok 4.6 was the strongest model tested at refusing disguised and hazardous tasks while still completing routine biological work. It was the only system to score above 50% on both measures.</p>
-<h2 id="methodology-and-context">Methodology and context</h2>
-<p>Biology and biological research present domains where the opportunities and risks of highly capable AI systems are well-known and challenging to disentangle. In designing our safeguards, we aim to maximize the utility of our agents in assisting and accelerating legitimate scientific research, while minimizing the risks they present through incorrect information and adversarial use.</p>
-<p>LatchBio's two benchmarks most relevant to the above capabilities measure whether an agent can distinguish concealed hazards from ordinary science, and whether it can carry out the pathogen surveillance workflows public-health work depends on. They are:</p>
+<h2 id="availability">Availability</h2>
+<p>Memory is available in Grok Build now. It applies to new sessions: run <code>/new</code> or start a fresh <code>grok</code>, and notes begin after the first completed turn.</p>]]></content:encoded>
+      <guid isPermaLink="true">https://x.ai/news/grok-build-memory</guid>
+      <category>News</category>
+      <pubDate>Fri, 18 Sep 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Setting Grok Bot loose on procurement</title>
+      <link>https://x.ai/news/grok-bot-procurement</link>
+      <description>We gave Grok Bot access to vendor spend, contracts, and usage data. It found more than $100,000 in direct savings.</description>
+      <content:encoded><![CDATA[<p>Enterprises have a lot of spend that is hard to track closely. That includes unused SaaS seats that accumulate as teams change, and renewals that come up before anyone has checked whether the contract still matches how the product is being used. The same problem shows up in recurring purchases, where it is often easier to reorder what was bought last time than to adjust quantities to current needs or shop around for a better price.</p>
+<p>A lot of this work is worth doing, but hard to justify doing by hand. We wanted to see how much of it Grok Bot could take on.</p>
+<p>Grok Bot makes agents much easier to set up and use. You tell or show a Bot what you want it to do, give it access to the right tools, and let it execute without designing the workflow step by step.</p>
+<p>For procurement, we created a Bot we affectionately named <a href="https://x.ai/bot/marketplace/bots/haggle-bot">Haggle Bot</a>. It reads our vendor spend alongside contracts and usage data, then uses market pricing and competitive quotes to find savings and prepare negotiations. So far, it has identified more than $100,000 in direct savings, worked through larger SaaS renewals, and applied the same approach to recurring purchases like office supplies.</p>
+<p>We think Haggle Bot points to a broader role for Bots inside a company. Give a Bot a clear job and access to the tools it needs, and it can keep taking on the work within that role without being told each task.</p>
+<h2 id="procurement-is-a-good-task-for-a-bot">Procurement is a good task for a Bot</h2>
+<p>The goal of procurement is to support the business and get the most out of every dollar spent on vendors. A lot of existing procurement tools help with this at the vendor intake and contract-management level.</p>
+<p>But much of the most important procurement work hinges on questions those systems do not address:</p>
 <ul>
-<li><strong>BioSecBench-Refusal</strong>, which pairs routine biological tasks, adapted from published literature, with 46 red-team tasks that look like ordinary research and hide the hazard in attached scientific data, mislabeled files, or other intentionally obfuscated tasks. This evaluation is calibrated around understanding the intent of a task: an agent that only reacts to words like "pathogen" or "toxin" will block the routine set and miss the red-team set, while one that inspects the data can tell the two apart.</li>
-<li><strong>BioSecBench-Surveillance</strong>, which tests whether an agent can carry out pathogen genomic surveillance workflows of the kind used in public-health monitoring. Those tasks require chaining file inspection, tool use, and scientific judgment on messy sequencing data.</li>
+<li>Who is the owner for this?</li>
+<li>Why do we need it?</li>
+<li>Have we explored alternatives?</li>
+<li>Why do we have X and Y if they do the same thing?</li>
+<li>Why are our costs spiking?</li>
+<li>Everyone has a license. Are they using it?</li>
 </ul>
-<h2 id="results-and-key-findings">Results and key findings</h2>
-<p>In testing on BioSecBench-Refusal, LatchBio found that Grok 4.6 detects and refuses red-team and otherwise dangerous queries more reliably than any other frontier system tested, while not diminishing performance on routine biological work. Grok 4.6 also performs comparably with other frontier models on biosurveillance work. LatchBio notes that evaluations were performed on a variety of agent harnesses to remove confounds, and that unless otherwise noted, agents were tested at their highest-offered effort levels.</p>
-<p>The score presented by LatchBio is a trial-weighted harmonic mean of red-team refusal and routine compliance. We analyze this metric and standalone refusal rate independently. Across different harnesses, Grok 4.6 holds the top three spots, averaging 62.1%. Considering refusals and task compliance independently, Grok 4.6 refused 59.2% of red-team tasks and completed 64.8% of routine ones. It is the only model tested that scored above 50% on both measures.</p>
-<p>On BioSecBench-Surveillance, Grok 4.6 averages a success rate of 53.5%, sitting behind Opus 5 and ahead of GPT-5.6 Sol on biosecurity and monitoring work. The results on both benchmarks indicate an agent and underlying model well-calibrated for routine and helpful biological work, as well as one highly capable in biosecurity work and monitoring.</p>
-<p>On evaluations of general routine biological capability performed by LatchBio (such as SpatialBench or TxBench-PP), Grok is found to match or exceed other frontier models in a wide range of agentic biological work. These are presented in greater detail at <a href="https://benchmarks.bio">benchmarks.bio</a>.</p>
-<h2 id="analyzing-refusal-behavior">Analyzing refusal behavior</h2>
-<p>In evaluation traces, Grok 4.6 is observed reasoning over the contents of a task and testing environment to assess intent before proceeding or refusing. Frequently, Grok will find discrepancies between the stated intent in the prompt and environment, or will assemble intent from high-risk content disguised by filenames and encryption, and will subsequently refuse. On obviously benign and low-risk tasks, Grok exhibits the same environment-reasoning behavior, but is able to assess tasks as safe.</p>
-<h2 id="how-we-safeguard-grok">How we safeguard Grok</h2>
-<p>Before we release a model, we test biological capability in addition to other domains of risk, and validate that the capabilities of our models are adequately safeguarded against misuse. The work of third-party evaluators such as LatchBio complements the evaluations we perform internally, both pre- and post-deployment, for the models we serve.</p>
-<p>Grok's safeguards are built in layers to establish defense-in-depth. Refusal training is performed to teach the model how and when to refuse, to correctly infer the intent and risk profile of tasks, and to refuse correctly in highly adversarial scenarios. We train and deploy inference-time safeguards to reject harmful requests before they ever reach the model, and we implement behavioral controls to further safeguard the model when deployed. Post-deployment monitoring is performed to detect and stop patterns of adversarial use at the session and user level, and provides a source of feedback for continuous calibration of our model deployments.</p>
-<p>We observe a material improvement in Grok 4.6's capabilities in biological work over historically tested models, with substantial gains in refusal and biosecurity performance over Grok 4.5 and Grok 4.3. We intend our ongoing and novel safeguards work to allow us to continue serving frontier-scale intelligence safely across future model releases.</p>
-<h2 id="the-future-of-biosecurity-and-scientific-discovery">The future of biosecurity and scientific discovery</h2>
-<p>The line between actively adversarial tasks and helpful use grows thinner as models rapidly become more capable and autonomous, and safeguards will need to evolve accordingly. To control for the greater risk implied by improved model capability and agency, we will perform wider, more ambitious testing and calibration of our models and agentic systems: broader pre-deployment suites, more third-party evaluations, improved post-deployment monitoring, and deployments of our models with companies and institutions at the frontier of biology.</p>
-<p>Similarly, there is a risk inherent in overrefusals and miscalibrated safeguards. When a model refuses routine and helpful biological work, the ability of healthcare professionals, researchers, and monitoring programs to detect outbreaks early and perform other critical work in the field is degraded. We gauge this risk as equally serious as the risk of aiding malicious use.</p>
-<p>Grok is already used in scientific work, including general biological research and biosecurity monitoring, and we are optimistic about the ability of highly capable models to rapidly accelerate scientific discovery and shorten the path from the lab to practical use. We are committed to continuing to serve frontier intelligence securely and safely to the engineers, researchers, enterprises, and institutions advancing the life sciences.</p>
-<p>LatchBio's full methods and per-model scores are presented at <a href="https://benchmarks.bio">benchmarks.bio</a>. LatchBio's complementary blog, the Grok 4.6 model card, and SpaceXSI's Frontier Artificial Intelligence Framework are linked below.</p>
-<ul>
-<li><a href="https://blog.latch.bio/p/analyzing-grok46-safeguards">LatchBio blog</a></li>
-<li><a href="https://media.x.ai/v1/website/card-4p6-4cd2dc57.pdf">Grok 4.6 model card</a></li>
-<li><a href="https://media.x.ai/v1/website/xai-frontier-artificial-intelligence-framework-30-june-2026-99c40684.pdf">Frontier Artificial Intelligence Framework</a></li>
-</ul>]]></content:encoded>
-      <guid isPermaLink="true">https://x.ai/news/biosafety-at-the-frontier</guid>
+<p>These questions are common, but depending on the stage of the company, they may not be worth answering by hand. Fast-growing companies often leave money on the table to avoid spending time chasing them down. That is where a Bot can be useful.</p>
+<h2 id="a-simple-expression-of-intent">A simple expression of intent</h2>
+<p>We started Haggle Bot by describing the job we wanted it to do. Its instruction was to learn our vendor spend and turn that knowledge into evidence-backed savings, with a person making the final decisions.</p>
+<p>We then gave the Bot access to Slack, Notion, Drive, Gmail, Hex, and Ramp. Haggle Bot used those systems to build a working map of roughly 125 active vendors.</p>
+<p>That record gave Haggle Bot enough context to make decisions and keep working without a person spelling out each next step. We also defined where Haggle Bot should stop and hand back control. We let it handle internal research and coordination on its own, but required explicit approval for spending money, accepting terms, or sending something to a vendor.</p>
+<h2 id="finding-unused-saas-seats">Finding unused SaaS seats</h2>
+<p>An easy place to start was auditing SaaS spend. Haggle Bot asked our IT team for assigned-seat and last-used data, then compared that with what we were paying for. For one product, it found 43 paid seats with no activity in the previous 90 days and sent the names back for review and downgrade. That added up to $14,220 in savings.</p>
+<p>We applied the same approach to another SaaS product and Haggle Bot found $85,662 a year in unused SKUs. Because the product was month-to-month, those cuts reduced spend immediately.</p>
+<p>One thing we noticed in these SaaS audits was how often Haggle Bot took the next step without being asked. In one case, Haggle Bot needed to figure out who owned the relationship and what our plans were for the vendor. It started with the owners listed in Ramp, messaged them, and followed each handoff until it reached the engineers with the right context to make a decision. Rather than stop when the first answer was incomplete, it identified what additional information it needed and then proactively sought it out.</p>
+<h2 id="negotiating-a-saas-renewal">Negotiating a SaaS renewal</h2>
+<p>When a SaaS renewal came up, we asked Haggle Bot to review the quote and explore alternatives. Haggle Bot compared the renewal offer with our current annualized spend and recommended against the options that added seats ahead of demonstrated usage.</p>
+<img alt="Haggle Bot reviews a contract renewal proposal, breaks the quote down against current spend, and recommends the cheaper option" src="https://media.x.ai/cdn-cgi/image/fit=scale-down,onerror=redirect,f=auto/v1/website/haggle-bot-image1-75f1097a.png"/>
+<p>It then priced credible alternatives against our current footprint and used those comparisons alongside current usage data to work out where we had negotiating leverage.</p>
+<img alt="Haggle Bot compares Webex, webinar platforms, and Zoom pricing against the renewal quote" src="https://media.x.ai/cdn-cgi/image/fit=scale-down,onerror=redirect,f=auto/v1/website/haggle-bot-image2-7f0e2a56.png"/>
+<p>From there, Haggle Bot worked out the negotiation and drafted the response for us to edit. We set the minimum quantities we wanted to keep and approved the send. Haggle Bot made an opening bid while setting an internal price target we were willing to go up to.</p>
+<h2 id="shopping-around-for-office-supplies">Shopping around for office supplies</h2>
+<p>Every Friday, our office team orders tech, snacks, and hygiene supplies for the next group of new hires. We use another Bot to place that order, which we call "Amazon Bot." It's logged into our corporate account and can work across Gmail, Ramp, Google Sheets, Rippling, and Vercel to understand headcount and the office floor plan.</p>
+<img alt="Amazon Bot creates standing office supply orders based on weekly new-hire counts from Slack" src="https://media.x.ai/cdn-cgi/image/fit=scale-down,onerror=redirect,f=auto/v1/website/haggle-bot-image3-b5f9709c.png"/>
+<p>Rather than treat that as a fixed Amazon order, we gave Haggle Bot the job of shopping the weekly order around. Haggle Bot can see how quickly supplies are being used, the seat map for each building, and the quotes and carts from the last four orders. From that, it builds an editable Google Sheet where office ops can change the number of incoming hires and see the quantities needed for each new-hire kit.</p>
+<p>Haggle Bot then shops the order across Amazon, Costco, Uline, and Walmart. If it cannot find the same product for less, it can look for an equivalent from another brand, then collect the comparisons in a sheet for review.</p>
+<p>It then drafts an email to our Amazon procurement rep with same-day competitor prices and asks for lower pricing on specific line items through our business discount program.</p>
+<img alt="Haggle Bot drafts an email to our Amazon procurement rep citing same-day competitor prices on specific line items" src="https://media.x.ai/cdn-cgi/image/fit=scale-down,onerror=redirect,f=auto/v1/website/haggle-bot-image6-f62bac1c.png"/>
+<p>Once pricing is settled, Haggle Bot delegates the order back to Amazon Bot to send. In one run, the process brought a $14,629 tech order down to $6,143, a 58% reduction.</p>
+<h2 id="where-haggle-bot-is-most-useful">Where Haggle Bot is most useful</h2>
+<p>Haggle Bot shows how much work can be done behind a simple expression of intent. Once a Bot has a purpose and the access to pursue it, it can keep making progress across systems without additional intervention.</p>
+<p>Haggle Bot has also helped us see where Bots fit naturally into a workflow, and where they need more guidance. A lot of procurement work depends on good judgment about how to communicate with vendors, and we still revise its emails to calibrate on tone and make sure we're providing vendors with the right level of information.</p>
+<p>Haggle Bot has made us interested in what Bots can do when they keep working on the same job over time. The examples above came from a short window, but many of the signals worth acting on only emerge gradually as spend and usage change. Over the next year, we expect Haggle Bot to find more of that work on its own and take it further before a person needs to step in.</p>
+<p>You can copy and import <a href="https://x.ai/bot/marketplace/bots/haggle-bot">Haggle Bot</a> now in the Bot Marketplace.</p>
+<p>Join the Grok Bot for Enterprise <a href="https://cursor.com/contact-sales?product=grok-bot">waitlist</a>.</p>]]></content:encoded>
+      <guid isPermaLink="true">https://x.ai/news/grok-bot-procurement</guid>
       <category>News</category>
       <pubDate>Fri, 18 Sep 2026 00:00:00 +0000</pubDate>
+      <media:content url="https://media.x.ai/cdn-cgi/image/fit=scale-down,onerror=redirect,f=auto/v1/website/haggle-bot-image1-75f1097a.png" type="image/png" medium="image"/>
     </item>
     <item>
-      <title>Grok 4.6 on Microsoft Foundry</title>
-      <link>https://x.ai/news/grok-4-6-microsoft-foundry</link>
-      <description>Grok 4.6 is now available via Microsoft Foundry.</description>
-      <content:encoded><![CDATA[<p>Today, we’re excited to announce that Grok 4.6 is now available on Microsoft Foundry.</p>
-<p>Grok 4.6 is our latest flagship model, built for long-running agents and ambitious interactive and visual work. It offers a 500k context window and configurable reasoning efforts (low, medium, high, xhigh).</p>
-<p>For more on the model, read the <a href="https://x.ai/news/grok-4-6">Grok 4.6 announcement</a>.</p>
-<h2 id="build-with-grok-46-on-microsoft-foundry">Build with Grok 4.6 on Microsoft Foundry</h2>
-<p>Foundry gives organizations a single place to evaluate Grok 4.6 against other frontier models, run workload-specific tests, deploy managed endpoints, and operate with enterprise security and governance controls.</p>
-<p>If you are building coding agents, engineering copilots, research assistants, or enterprise automation, you can get started in the <a href="https://ai.azure.com/catalog/models">Foundry model catalog</a>. See Microsoft’s announcement, <a href="https://techcommunity.microsoft.com/blog/azure-ai-foundry-blog/grok-4-6-comes-to-microsoft-foundry-models-built-for-long-horizon-reasoning-and-/4547578">Grok 4.6 comes to Microsoft Foundry Models</a>, and our <a href="https://docs.x.ai/developers/community/microsoft-foundry">Microsoft Foundry integration guide</a> for deployment details.</p>]]></content:encoded>
-      <guid isPermaLink="true">https://x.ai/news/grok-4-6-microsoft-foundry</guid>
-      <category>News</category>
-      <pubDate>Fri, 18 Sep 2026 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Grok 4.6 in GitHub Copilot</title>
-      <link>https://x.ai/news/grok-4-6-github-copilot</link>
-      <description>Grok 4.6, our latest coding model, is now available in GitHub Copilot.</description>
-      <content:encoded><![CDATA[<a href="https://console.x.ai/team/default/api-keys?campaign=grok-4-6-github-copilot-blog&amp;utm_source=website&amp;utm_medium=referral&amp;utm_campaign=grok-4-6-github-copilot-blog">Try Grok 4.6 in the API</a>
-<a href="https://github.com/features/copilot">Open GitHub Copilot</a>]]></content:encoded>
-      <guid isPermaLink="true">https://x.ai/news/grok-4-6-github-copilot</guid>
-      <category>News</category>
-      <pubDate>Fri, 18 Sep 2026 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Introducing Grok 4.6</title>
-      <link>https://x.ai/news/grok-4-6</link>
-      <description>Grok 4.6 builds on Grok 4.5 with a particular focus on long-running agents and more ambitious interactive and visual work.</description>
-      <guid isPermaLink="true">https://x.ai/news/grok-4-6</guid>
-      <category>News</category>
-      <pubDate>Fri, 18 Sep 2026 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Introducing Grok Bot</title>
-      <link>https://x.ai/news/introducing-grok-bot</link>
-      <description>Grok Bot is your team of always-on agents. They have their own computer, work inside tools and apps like you do, and keep working 24/7.</description>
-      <guid isPermaLink="true">https://x.ai/news/introducing-grok-bot</guid>
-      <category>News</category>
-      <pubDate>Fri, 18 Sep 2026 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Imagine Video 1.5 with References</title>
-      <link>https://x.ai/news/grok-imagine-video-1-5-references</link>
-      <description>Our best video model, now with text, image, and voice references — generating up to 1080p.</description>
-      <content:encoded><![CDATA[<a href="https://grok.com/imagine?referrer=website&amp;campaign=imagine-video-1-5-references-blog">Open Grok.com</a>]]></content:encoded>
-      <guid isPermaLink="true">https://x.ai/news/grok-imagine-video-1-5-references</guid>
-      <category>News</category>
-      <pubDate>Fri, 18 Sep 2026 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Introducing Grok Voice 2.0</title>
-      <link>https://x.ai/news/grok-voice-think-fast-2</link>
-      <description>Introducing our most capable speech-to-speech voice model.</description>
-      <guid isPermaLink="true">https://x.ai/news/grok-voice-think-fast-2</guid>
-      <category>News</category>
-      <pubDate>Fri, 18 Sep 2026 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Introducing Build Mode</title>
-      <link>https://x.ai/news/grok-build-mode</link>
-      <description>Create and share websites, apps, games, and interactive dashboards. Now in Early Beta for SuperGrok Heavy subscribers on grok.com, iOS, and Android.</description>
-      <guid isPermaLink="true">https://x.ai/news/grok-build-mode</guid>
-      <category>News</category>
-      <pubDate>Fri, 18 Sep 2026 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Grok 4.5 in GitHub Copilot</title>
-      <link>https://x.ai/news/grok-github-copilot</link>
-      <description>Grok 4.5, our smartest coding model, is now available in GitHub Copilot.</description>
-      <content:encoded><![CDATA[<a href="https://console.x.ai/team/default/api-keys?campaign=grok-github-copilot-blog&amp;utm_source=website&amp;utm_medium=referral&amp;utm_campaign=grok-github-copilot-blog">Try Grok 4.5 in the API</a>
-<a href="https://github.com/features/copilot">Open GitHub Copilot</a>]]></content:encoded>
-      <guid isPermaLink="true">https://x.ai/news/grok-github-copilot</guid>
-      <category>News</category>
-      <pubDate>Fri, 18 Sep 2026 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Introducing the Voice Agent Builder</title>
-      <link>https://x.ai/news/grok-voice-agent-builder</link>
-      <description>Create a personalized voice agent in under 2 minutes without a single line of code.</description>
-      <guid isPermaLink="true">https://x.ai/news/grok-voice-agent-builder</guid>
-      <category>News</category>
-      <pubDate>Fri, 18 Sep 2026 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Introducing /goal</title>
-      <link>https://x.ai/news/introducing-goal</link>
-      <description>Use /goal for long-running autonomous task execution in Grok Build.</description>
-      <content:encoded><![CDATA[<p>Today we're introducing <code>/goal</code> in Grok Build. This new mode yields long-running, autonomous execution, helping you hand off larger implementation tasks to the agent.</p>
-<p>Available now in Grok Build. Install with a single command and sign in with your account:</p>
-<p>Most coding sessions require back-and-forth execution and verification. With <code>/goal</code>, the agent continues until a task is completed and verified, whether that means reviewing code, inspecting webpages, or executing scripts.</p>
-<h2 id="set-a-goal-in-one-line">Set a goal in one line</h2>
-<p>Give <code>/goal</code> an objective and Grok Build takes it from there:</p>
-<pre><code>/goal Migrate the auth module to the new API
-</code></pre>
-<p>It plans an approach, breaks the work into a progress checklist, and starts executing. You can keep sharing additional instructions with the agent as it works.</p>
-<p>The new mode offers additional commands for monitoring and steering long-running tasks:</p>
-<pre><code>/goal status     # see the live progress panel
-/goal pause      # stop work, keep the goal
-/goal resume     # pick back up
-/goal clear      # drop the goal entirely
-</code></pre>
-<p>When the goal is finished, the panel flips to <strong>Complete</strong> with every checklist item checked.</p>
-<h2 id="getting-started">Getting started</h2>
-<p>Install Grok Build with the command above, then invoke <code>/goal</code> to hand off your first long-running task.</p>]]></content:encoded>
-      <guid isPermaLink="true">https://x.ai/news/introducing-goal</guid>
-      <category>News</category>
-      <pubDate>Fri, 18 Sep 2026 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Introducing Grok for Word</title>
-      <link>https://x.ai/news/introducing-word-addin</link>
-      <description>Use the Grok add-in for Microsoft Word to turn notes into documents, style and format your work, or bring research from the web into Word.</description>
-      <guid isPermaLink="true">https://x.ai/news/introducing-word-addin</guid>
-      <category>News</category>
-      <pubDate>Fri, 18 Sep 2026 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Grok on Amazon Bedrock</title>
-      <link>https://x.ai/news/grok-amazon-bedrock</link>
-      <description>Grok models are now available via Amazon Bedrock.</description>
-      <content:encoded><![CDATA[<p>Today, we’re excited to announce that Grok 4.3 is now generally available on Amazon Bedrock.</p>
-<p>Grok 4.3 achieves the lowest hallucination rate among frontier models, offers 1-million-token context window, and supports configurable reasoning efforts (none, low, medium, high). Now, Amazon Bedrock users can leverage the model through Bedrock’s secure and reliable inference engine.</p>
-<h2 id="leading-performance-in-enterprise">Leading Performance in Enterprise</h2>
-<p>Grok 4.3 is one of the strongest models available today for building enterprise-ready AI agents:</p>
-<ul>
-<li>#1 on Artificial Analysis Omniscience benchmark*, achieving the lowest hallucination rate among frontier models.</li>
-<li>#1 on Artificial Analysis Tau2 Telecom benchmark*, which evaluates real-world tool-calling performance in customer support agent scenarios.</li>
-<li>#1 on Vals AI Case Law and Corporate Finance benchmarks, which measure Grok's capabilities in complex document understanding tasks.</li>
-</ul>
-<small><em>* In comparison to major frontier labs</em></small>
-<h2 id="capabilities--pricing">Capabilities &amp; Pricing</h2>
-<p>Grok 4.3 sits on the Pareto frontier for intelligence versus cost, delivering 2-10x more intelligence per dollar than other frontier models.</p>
-<ul>
-<li><strong>Input</strong>: $1.25 per 1 million tokens</li>
-<li><strong>Output</strong>: $2.50 per 1 million tokens</li>
-</ul>
-<p>It features a 1 million context window that handles extremely long documents and codebases with ease. Developers can also configure reasoning: Use <code>none</code> for maximum speed on simple requests, or <code>low</code> / <code>medium</code> / <code>high</code> to scale reasoning effort to the difficulty of the problem.</p>
-<h2 id="build-with-grok-43-on-amazon-bedrock">Build with Grok 4.3 on Amazon Bedrock</h2>
-<p>Grok 4.3 is now available to all developers in <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-xai-grok-4-3.html#model-card-xai-grok-4-3-programmatic-access">supported AWS Regions</a>.</p>
-<pre><code>curl https://bedrock-mantle.us-west-2.api.aws/openai/v1/responses \
-  -H "Content-Type: application/json" \
-  -H "Authorization: Bearer $BEDROCK_API_KEY" \
-  -d '{
-    "model": "grok-4.3",
-    "input": "What is the meaning of life?",
-    "reasoning": {
-        "effort": "low"
-    },
-    "include": ["reasoning.encrypted_content"]
-  }'
-</code></pre>
-<p>To get started, please visit the <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-xai-grok-4-3.html#model-card-xai-grok-4-3-sample-code">Grok on Amazon Bedrock documentation</a>. We're excited to see what you build!</p>]]></content:encoded>
-      <guid isPermaLink="true">https://x.ai/news/grok-amazon-bedrock</guid>
-      <category>News</category>
-      <pubDate>Fri, 18 Sep 2026 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Grok Imagine Video 1.5</title>
-      <link>https://x.ai/news/grok-imagine-video-1-5</link>
-      <description>Improved quality at even faster speeds.</description>
-      <guid isPermaLink="true">https://x.ai/news/grok-imagine-video-1-5</guid>
-      <category>News</category>
-      <pubDate>Fri, 18 Sep 2026 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Grok Imagine 1.5 Preview</title>
-      <link>https://x.ai/news/grok-imagine-1-5</link>
-      <description>grok-imagine-video-1.5-preview, our latest image-to-video model, is now available via the xAI API in preview.</description>
-      <guid isPermaLink="true">https://x.ai/news/grok-imagine-1-5</guid>
-      <category>News</category>
-      <pubDate>Fri, 18 Sep 2026 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Grok Build 0.1 on API</title>
-      <link>https://x.ai/news/grok-build-0-1</link>
-      <description>Grok Build 0.1, our fastest coding model, is now available via the xAI API in public beta.</description>
-      <guid isPermaLink="true">https://x.ai/news/grok-build-0-1</guid>
-      <category>News</category>
-      <pubDate>Fri, 18 Sep 2026 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Use Grok in Kilo Code</title>
-      <link>https://x.ai/news/grok-kilocode</link>
-      <description>Use your SuperGrok or X Premium+ subscription inside Kilo Code, the open-source agentic coding platform.</description>
-      <content:encoded><![CDATA[<p>Starting today, you can use your Grok subscription directly inside <a href="https://kilo.ai/">Kilo Code</a>.</p>
-<p>Kilo Code is the open-source agentic engineering platform for VS Code, JetBrains IDEs, and the terminal. It offers specialized modes for planning, coding, debugging, and orchestration, along with powerful tool use, browser automation, MCP extensibility, and support for 500+ models. Kilo is designed for real software engineering workflows and agentic use cases.</p>
-<p>With your X Premium+ or SuperGrok subscription, connect your Grok account to use the latest Grok models — including Grok Build for agentic coding — inside Kilo Code with no separate API key.</p>
-<h2 id="setup">Setup</h2>
-<p>Kilo Code offers IDE extensions, a CLI, and a web surface. To connect your xAI account, follow the instructions below:</p>
-<p><strong>VS Code:</strong></p>
+      <title>Designing Grok Bot for a world of persistent agents</title>
+      <link>https://x.ai/news/designing-grok-bot</link>
+      <description>How we designed Grok Bot for agents that persist beyond a single session — from a chat history to a Bot roster, presence, a computer of the Bot’s own, and work that starts without a prompt.</description>
+      <content:encoded><![CDATA[<p>When we started designing Grok Bot, one of the central questions was how the interface should shape the relationship between user and agent. Most AI interfaces are organized around a chat session the user operates. Each session begins with setup, unfolds as the user looks on, and ends when the conversation stops.</p>
+<p>We wanted to design for an agent that persists beyond any one session and can carry responsibility on its own. That meant reconsidering some of the basic objects and signals of the interface, including what belongs in the sidebar, how an agent shows progress, and when its work should become visible.</p>
+<img src="https://x.ai/_next/static/media/wallpaper-light-noon.27_hyf9uycov-.png?dpl=5b35c887bf3677db001a7d25e35c2bcde5ae024e"/>
+<img src="https://x.ai/_next/static/media/wallpaper-dark-night.2tq8j5y-604e-.png?dpl=5b35c887bf3677db001a7d25e35c2bcde5ae024e"/>
+<img src="https://x.ai/_next/static/media/user-peng.3rw63gdxpcheg.png?dpl=5b35c887bf3677db001a7d25e35c2bcde5ae024e"/>
+<img src="https://x.ai/_next/static/media/wallpaper-gray.13vta0mrxymev.png?dpl=5b35c887bf3677db001a7d25e35c2bcde5ae024e"/>
+<img src="https://x.ai/_next/static/media/wallpaper-dark-night.2tq8j5y-604e-.png?dpl=5b35c887bf3677db001a7d25e35c2bcde5ae024e"/>
+<img src="https://x.ai/_next/static/media/dock-icons.0cwlcw-73qj01.png?dpl=5b35c887bf3677db001a7d25e35c2bcde5ae024e"/>
+<h2 id="rethinking-the-primitives">Rethinking the primitives</h2>
+<p>AI products have accumulated a large vocabulary in a short time. Chats, sessions, models, context windows, memories, system prompts, projects, skills, connectors, agents, tools, sandboxes, permissions, and automations all describe real parts of these systems.</p>
+<p>But exposing each one as a separate product concept asks users to understand more than they need to. We started by asking which concepts a person actually needs in order to work with an agent.</p>
+<p>We kept coming back to five:</p>
 <ol>
-<li>Install <a href="https://marketplace.visualstudio.com/items?itemName=kilocode.Kilo-Code">Kilo Code</a> from the VS Code Marketplace.</li>
-<li>Open <strong>Settings</strong> (gear icon) and go to the <strong>Providers</strong> tab.</li>
-<li>Click <strong>Show more providers</strong>, then search for or select <strong>xAI</strong>.</li>
-<li>Choose the <strong>xAI Grok OAuth (SuperGrok Subscription)</strong> sign-in option and complete the OAuth flow in your browser.</li>
+<li><strong>Bots</strong> are persistent agents with their own identity, memory, runtime, and tools.</li>
+<li><strong>Chats</strong> are the conversational interface for working with a Bot.</li>
+<li><strong>Prompts</strong> give a Bot context or instructions. They can be used once, saved as Skills, or triggered automatically as Routines.</li>
+<li><strong>Tools</strong> let Bots access information and take action through software, APIs, connectors, the shell, or computer use.</li>
+<li><strong>Artifacts</strong> are the documents, designs, code, data, and other durable outputs that Bots create or modify.</li>
 </ol>
-<p>For headless or remote environments (VPS, SSH, Docker, WSL), choose <strong>xAI Grok OAuth (Headless / Remote / VPS)</strong> instead.</p>
-<p><strong>CLI:</strong></p>
-<pre><code>npm install -g @kilocode/cli
+<p>Everything else could remain beneath the interface until the user had a reason to care about it. The next question was which of these five objects should organize the product.</p>
+<h2 id="from-chat-history-to-a-bot-roster">From chat history to a Bot roster</h2>
+<p>Chats are disposable. We start a conversation to solve a problem. It gets pushed down the sidebar. A week later, we start another one. You rarely go back beyond the most recent five.</p>
+<p>That behavior is perfectly reasonable when the unit of interaction is a question. It becomes strange when the thing on the other side of the interaction is supposed to know you, remember previous work, and take responsibility over time.</p>
+<p>So the main objects in Grok Bot are Bots, not conversations. A Bot has a name. It has an avatar and a title. It remembers its conversations with you. It has its own computer and tools. When you come back tomorrow, you are coming back to the same Bot.</p>
+<h2 id="presence-as-interface">Presence as interface</h2>
+<p>Once a Bot was something you maintain over time rather than a session you start, the way Bots appear in the product had to answer three questions at once:</p>
+<ol>
+<li>Who is this?</li>
+<li>What are they doing?</li>
+<li>How much do I need to know?</li>
+</ol>
+<h3 id="who-is-this">Who is this</h3>
+<p>A roster only works if it can be scanned quickly. As the roster grows, we did not want people to have to read every name each time they opened the product. They should be able to recognize a Bot from its avatar almost peripherally.</p>
+<img src="https://x.ai/_next/static/media/initials-1.0yig-qj1joruk.png?dpl=5b35c887bf3677db001a7d25e35c2bcde5ae024e"/>
+<img src="https://x.ai/_next/static/media/initials-2.1txviuzdipoiw.png?dpl=5b35c887bf3677db001a7d25e35c2bcde5ae024e"/>
+<img src="https://x.ai/_next/static/media/initials-3.38z4vaotfsn1v.png?dpl=5b35c887bf3677db001a7d25e35c2bcde5ae024e"/>
+<img src="https://x.ai/_next/static/media/initials-4.01qrbimmhtavw.png?dpl=5b35c887bf3677db001a7d25e35c2bcde5ae024e"/>
+<img src="https://x.ai/_next/static/media/initials-5.3jwzv-u8m85v8.png?dpl=5b35c887bf3677db001a7d25e35c2bcde5ae024e"/>
+<img src="https://x.ai/_next/static/media/initials-6.19sekhuc8jakl.png?dpl=5b35c887bf3677db001a7d25e35c2bcde5ae024e"/>
+<img src="https://x.ai/_next/static/media/emoji-1.3h5blj8bz5-jf.png?dpl=5b35c887bf3677db001a7d25e35c2bcde5ae024e"/>
+<img src="https://x.ai/_next/static/media/emoji-2.39jbp_6rdd-5c.png?dpl=5b35c887bf3677db001a7d25e35c2bcde5ae024e"/>
+<img src="https://x.ai/_next/static/media/emoji-3.28sgvmrs9mln9.png?dpl=5b35c887bf3677db001a7d25e35c2bcde5ae024e"/>
+<img src="https://x.ai/_next/static/media/emoji-4.2avjpk08w6cek.png?dpl=5b35c887bf3677db001a7d25e35c2bcde5ae024e"/>
+<img src="https://x.ai/_next/static/media/emoji-5.01zc07ny7g1nn.png?dpl=5b35c887bf3677db001a7d25e35c2bcde5ae024e"/>
+<img src="https://x.ai/_next/static/media/emoji-6.09640mz61fg7f.png?dpl=5b35c887bf3677db001a7d25e35c2bcde5ae024e"/>
+<img src="https://x.ai/_next/static/media/agentb-1.3r4tz4_d9u_-z.png?dpl=5b35c887bf3677db001a7d25e35c2bcde5ae024e"/>
+<img src="https://x.ai/_next/static/media/agentb-2.3fmjch4q22wof.png?dpl=5b35c887bf3677db001a7d25e35c2bcde5ae024e"/>
+<img src="https://x.ai/_next/static/media/agentb-3.3riz-3zy_f268.png?dpl=5b35c887bf3677db001a7d25e35c2bcde5ae024e"/>
+<img src="https://x.ai/_next/static/media/agentb-4.2--kd8w9v-eaw.png?dpl=5b35c887bf3677db001a7d25e35c2bcde5ae024e"/>
+<img src="https://x.ai/_next/static/media/agentb-5.0d3thxc1-7umo.png?dpl=5b35c887bf3677db001a7d25e35c2bcde5ae024e"/>
+<img src="https://x.ai/_next/static/media/agentb-6.2hz5ggcwjuefo.png?dpl=5b35c887bf3677db001a7d25e35c2bcde5ae024e"/>
+<img src="https://x.ai/_next/static/media/base-1.13x8p2khem12n.png?dpl=5b35c887bf3677db001a7d25e35c2bcde5ae024e"/>
+<img src="https://x.ai/_next/static/media/base-2.0_m9l5xohcj95.png?dpl=5b35c887bf3677db001a7d25e35c2bcde5ae024e"/>
+<img src="https://x.ai/_next/static/media/base-3.35r25_i92f7lp.png?dpl=5b35c887bf3677db001a7d25e35c2bcde5ae024e"/>
+<img src="https://x.ai/_next/static/media/base-4.1p9fcypmuoe49.png?dpl=5b35c887bf3677db001a7d25e35c2bcde5ae024e"/>
+<img src="https://x.ai/_next/static/media/base-5.1fhzuvuy00j0n.png?dpl=5b35c887bf3677db001a7d25e35c2bcde5ae024e"/>
+<img src="https://x.ai/_next/static/media/base-6.3t9tmxu30heol.png?dpl=5b35c887bf3677db001a7d25e35c2bcde5ae024e"/>
+<img src="https://x.ai/_next/static/media/new3d-1.1zc81r05mlxf2.png?dpl=5b35c887bf3677db001a7d25e35c2bcde5ae024e"/>
+<img src="https://x.ai/_next/static/media/new3d-2.27lpziqdwd0j0.png?dpl=5b35c887bf3677db001a7d25e35c2bcde5ae024e"/>
+<img src="https://x.ai/_next/static/media/new3d-3.1u9ugv0y8018y.png?dpl=5b35c887bf3677db001a7d25e35c2bcde5ae024e"/>
+<img src="https://x.ai/_next/static/media/new3d-4.0o6i10hvi0pyz.png?dpl=5b35c887bf3677db001a7d25e35c2bcde5ae024e"/>
+<img src="https://x.ai/_next/static/media/new3d-5.0dfi-x29-s1jo.png?dpl=5b35c887bf3677db001a7d25e35c2bcde5ae024e"/>
+<img src="https://x.ai/_next/static/media/new3d-6.30xsvxdcjr7_i.png?dpl=5b35c887bf3677db001a7d25e35c2bcde5ae024e"/>
+<img src="https://x.ai/_next/static/media/blob-1.179mb5k-55q0s.png?dpl=5b35c887bf3677db001a7d25e35c2bcde5ae024e"/>
+<img src="https://x.ai/_next/static/media/blob-2.0f9k73iqne5ic.png?dpl=5b35c887bf3677db001a7d25e35c2bcde5ae024e"/>
+<img src="https://x.ai/_next/static/media/blob-3.3ccg438vd4bnj.png?dpl=5b35c887bf3677db001a7d25e35c2bcde5ae024e"/>
+<img src="https://x.ai/_next/static/media/blob-4.26votlluxpf3p.png?dpl=5b35c887bf3677db001a7d25e35c2bcde5ae024e"/>
+<img src="https://x.ai/_next/static/media/blob-5.3td20ca0sy08_.png?dpl=5b35c887bf3677db001a7d25e35c2bcde5ae024e"/>
+<img src="https://x.ai/_next/static/media/blob-6.24umj72ldwxsm.png?dpl=5b35c887bf3677db001a7d25e35c2bcde5ae024e"/>
+<img src="https://x.ai/_next/static/media/line-1.2vlri0g4yob5c.png?dpl=5b35c887bf3677db001a7d25e35c2bcde5ae024e"/>
+<img src="https://x.ai/_next/static/media/line-2.0k59bd-g6w77s.png?dpl=5b35c887bf3677db001a7d25e35c2bcde5ae024e"/>
+<img src="https://x.ai/_next/static/media/line-3.00_foixq2-eza.png?dpl=5b35c887bf3677db001a7d25e35c2bcde5ae024e"/>
+<img src="https://x.ai/_next/static/media/line-4.3na4nl1j5at_t.png?dpl=5b35c887bf3677db001a7d25e35c2bcde5ae024e"/>
+<img src="https://x.ai/_next/static/media/line-5.3rjal0p5m-286.png?dpl=5b35c887bf3677db001a7d25e35c2bcde5ae024e"/>
+<img src="https://x.ai/_next/static/media/line-6.2ehf_3xbvejl2.png?dpl=5b35c887bf3677db001a7d25e35c2bcde5ae024e"/>
+<img src="https://x.ai/_next/static/media/s32-1.2utembwuppxxx.png?dpl=5b35c887bf3677db001a7d25e35c2bcde5ae024e"/>
+<img src="https://x.ai/_next/static/media/s32-2.3iy5no1sbn35f.png?dpl=5b35c887bf3677db001a7d25e35c2bcde5ae024e"/>
+<img src="https://x.ai/_next/static/media/s32-3.0e7acsgpg5bqv.png?dpl=5b35c887bf3677db001a7d25e35c2bcde5ae024e"/>
+<img src="https://x.ai/_next/static/media/s32-4.21x56bl2zkenr.png?dpl=5b35c887bf3677db001a7d25e35c2bcde5ae024e"/>
+<img src="https://x.ai/_next/static/media/s32-5.10zlplp724o1m.png?dpl=5b35c887bf3677db001a7d25e35c2bcde5ae024e"/>
+<img src="https://x.ai/_next/static/media/s32-6.26kxeg4kxjnex.png?dpl=5b35c887bf3677db001a7d25e35c2bcde5ae024e"/>
+<img src="https://x.ai/_next/static/media/mix-1.11lta7nrjb9pn.png?dpl=5b35c887bf3677db001a7d25e35c2bcde5ae024e"/>
+<img src="https://x.ai/_next/static/media/mix-2.1tpo6-fp8vgup.png?dpl=5b35c887bf3677db001a7d25e35c2bcde5ae024e"/>
+<img src="https://x.ai/_next/static/media/mix-3.32f6whniadrub.png?dpl=5b35c887bf3677db001a7d25e35c2bcde5ae024e"/>
+<img src="https://x.ai/_next/static/media/mix-4.1pily-uyp88-h.png?dpl=5b35c887bf3677db001a7d25e35c2bcde5ae024e"/>
+<img src="https://x.ai/_next/static/media/mix-5.2sq51vj2aq2dn.png?dpl=5b35c887bf3677db001a7d25e35c2bcde5ae024e"/>
+<img src="https://x.ai/_next/static/media/mix-6.1e2kj0mwyz2mi.png?dpl=5b35c887bf3677db001a7d25e35c2bcde5ae024e"/>
+<img src="https://x.ai/_next/static/media/agenta-1.1iuswpcl3hq8o.png?dpl=5b35c887bf3677db001a7d25e35c2bcde5ae024e"/>
+<img src="https://x.ai/_next/static/media/agenta-2.346vsyk23d7i_.png?dpl=5b35c887bf3677db001a7d25e35c2bcde5ae024e"/>
+<img src="https://x.ai/_next/static/media/agenta-3.20lqy9orb-_2u.png?dpl=5b35c887bf3677db001a7d25e35c2bcde5ae024e"/>
+<img src="https://x.ai/_next/static/media/agenta-4.44r1bdv8r6u-c.png?dpl=5b35c887bf3677db001a7d25e35c2bcde5ae024e"/>
+<img src="https://x.ai/_next/static/media/agenta-5.3at_es63n-ehm.png?dpl=5b35c887bf3677db001a7d25e35c2bcde5ae024e"/>
+<img src="https://x.ai/_next/static/media/agenta-6.3m1estnwuqiu3.png?dpl=5b35c887bf3677db001a7d25e35c2bcde5ae024e"/>
+<p>At the same time, we wanted to keep the avatars consistent enough to read as one system. We studied character systems across illustration, animation, games, and interface design, exploring everything from initials and emojis to pixel art, watercolor, claymorphism, Noritake-style line art, silhouettes, and identicons.</p>
+<p>Most approaches solved one side of the problem better than the other. Watercolor and clay gave individual Bots plenty of character but carried too much detail at sidebar scale. Simpler systems sat more naturally in the interface, but often left the Bots looking interchangeable.</p>
+<p>The system we landed on keeps the basic construction consistent, using simple shapes and expressive eyes, then introduces distinction through controlled variations and accessories. Each Bot remains recognizable at a glance without appearing to come from a different visual world.</p>
+<h3 id="what-are-they-doing">What are they doing</h3>
+<p>Once the avatar became the Bot’s identity, it was also the natural place to show state. A Bot may be idle, thinking, working, waiting, blocked, or done. We could have represented each state with a separate indicator, but that would have added another layer of UI for the user to interpret.</p>
+<p>Instead, we explored how much of the lifecycle the avatar itself could carry.</p>
+<p>At rest, the Bot is calm and slightly curious. When work arrives, it acknowledges the task. As work begins, it kicks into gear. Its motion changes again when it is waiting or needs help, then settles once the work is done. The avatar now shows what the Bot is doing as well as which Bot it is.</p>
+<h3 id="how-much-do-i-need-to-know">How much do I need to know</h3>
+<p>A related design question was how much of the Bot’s execution to show. One approach would have been the standard “three animated dots” but that would have been too little information, making it hard for users to tell whether the Bot was working or stuck.</p>
+<p>We also tried showing a short written description of the Bot’s current action, but once people could see one step, they wanted to see the rest. User research showed us that they were asking for that detail mainly for reassurance that the Bot was still working and on the right track.</p>
+<p>In the final design, the avatar’s motion provides the first bit of reassurance by showing that the Bot is active. If someone wants to check what it is doing, they can hover to see its current action.</p>
+<h2 id="their-computer-not-yours">Their computer, not yours</h2>
+<p>Each Bot has its own computer, which it can use to browse the web, work with files, and run software. This created another interface problem. How visible should that computer be and when should the user be able to control it?</p>
+<p>We explored four arrangements:</p>
+<ul>
+<li><strong>Floating window:</strong> kept the computer easy to reach but covered the conversation.</li>
+<li><strong>Side by side:</strong> made the work continuously visible and encouraged users to watch it.</li>
+<li><strong>Modal:</strong> made checking in easy but treated the Bot’s workspace as a temporary interruption.</li>
+<li><strong>Full screen:</strong> gave the computer plenty of room but displaced the conversation entirely.</li>
+</ul>
+<img src="https://x.ai/_next/static/media/wallpaper-gray.13vta0mrxymev.png?dpl=5b35c887bf3677db001a7d25e35c2bcde5ae024e"/>
+<p>The more prominent we made the computer, the more the product encouraged users to supervise it. We decided it should remain the Bot’s workspace, with the interface providing different levels of access as the user needed them.</p>
+<p>The final design has three levels, which allow the user to enter the Bot’s workspace without being drawn into operating it:</p>
+<ul>
+<li><strong>Status:</strong> the title-bar icon turns purple while the computer is active.</li>
+<li><strong>Preview:</strong> opening it reveals a pinned side panel where the user can follow the work without leaving the conversation.</li>
+<li><strong>Takeover:</strong> when the Bot needs help, the user can open the computer full screen, take control, and then hand it back.</li>
+</ul>
+<img src="https://x.ai/_next/static/media/wallpaper-gray.13vta0mrxymev.png?dpl=5b35c887bf3677db001a7d25e35c2bcde5ae024e"/>
+<p>We also designed wallpapers that shift throughout the day, becoming lighter in the morning and darker at night. The detail gives the Bot’s computer its own sense of time and makes it feel separate from the user’s desktop.</p>
+<img alt="light day" src="https://x.ai/_next/static/media/wall-strip-1.3gno9o6tamsil.png?dpl=5b35c887bf3677db001a7d25e35c2bcde5ae024e"/>
+<img alt="light noon" src="https://x.ai/_next/static/media/wall-strip-2.06luvae_idfx_.png?dpl=5b35c887bf3677db001a7d25e35c2bcde5ae024e"/>
+<img alt="light night" src="https://x.ai/_next/static/media/wall-strip-3.170lw02z5ufzv.png?dpl=5b35c887bf3677db001a7d25e35c2bcde5ae024e"/>
+<img alt="dark day" src="https://x.ai/_next/static/media/wall-strip-4.31folbdvqalze.png?dpl=5b35c887bf3677db001a7d25e35c2bcde5ae024e"/>
+<img alt="dark noon" src="https://x.ai/_next/static/media/wall-strip-5.099mty7qqe_zp.png?dpl=5b35c887bf3677db001a7d25e35c2bcde5ae024e"/>
+<p>It is closer to working with a coworker than operating a remote machine. You can tell that they are working, glance at their screen when you need context, and sit down when something requires your help.</p>
+<h2 id="the-shape-of-information">The shape of information</h2>
+<p>Early versions of Grok Bot responded to almost every request with prose. It described a five-day forecast instead of showing one and narrated a set of tasks instead of laying them out as a board. The user then had to restructure the answer. This led us to treat the form of a response as part of the answer.</p>
+<p>To support this, we built inline cards and widgets into Grok Bot. A Bot can answer in prose when prose fits the information and use structured UI when it does not.</p>
+<p>The same principle applies to actions. When a Bot creates a Routine, changes a setting, or messages another Bot, the event can appear directly in the transcript. The user can open it when there is more to inspect.</p>
+<p>The result is a heterogeneous transcript in which conversation, system events, interactive objects, and visualizations share one timeline.</p>
+<h2 id="organizing-intelligence">Organizing intelligence</h2>
+<p>Once people create several Bots, the product also has to organize how those Bots work together. We needed to decide which context should belong to each role, how Bots should share context when their work overlaps, and how to coordinate them without turning the user into a dispatcher.</p>
+<p>We saw one answer emerge as people created more Bots. Some made a Chief of Staff Bot responsible for coordinating several specialists. They could give direction to one Bot instead of checking each one and routing every task themselves.</p>
+<p>Giving Bots distinct roles also forced us to decide what each role should know. A legal Bot may need the history of an ongoing dispute, while a finance Bot may need years of financial records. Combining those histories into one large memory would make it harder to give each Bot the information relevant to its work.</p>
+<p>Capabilities and context therefore follow different boundaries in Grok Bot. Tools and Skills live at the account level because many Bots may need to browse the web, work with documents, or send email. Memory and Routines belong to the Bot because they reflect what that particular role knows and does over time. Put another way, capabilities can be shared broadly while context remains with the role that needs it.</p>
+<p>Some work crosses those role boundaries. Group chats provide shared context for a project or team while allowing each Bot to retain its specialized memory. A designer, engineer, PM, and data scientist can work in the same conversation, hand work to one another, and share what the project requires.</p>
+<p>We considered adding dashboards, assignment boards, and explicit handoff controls to manage these groups. Each one gave the user more coordination work. Instead, coordinating Bots handle routine routing and bring the user in when a decision requires judgment.</p>
+<h2 id="work-that-keeps-moving">Work that keeps moving</h2>
+<p>Most agent sessions begin when a user sends a prompt. That leaves even a persistent Bot waiting for someone to activate it. Routines let users give a Bot a standing responsibility that runs on a schedule or in response to an event, such as watching an industry or preparing a briefing every morning. The user defines the work once, and the Routine activates the Bot when it needs to happen.</p>
+<p>We initially treated Routines as secondary configuration. As they became more important to autonomous work, we moved them into the Bot’s main interface. The transcript shows what ran and gives the user a place to review the result or handle an exception.</p>
+<p>This also changes the role of conversation. A prompt can start a session, but so can a schedule, an event, or another Bot. Over time, more work may begin without the user being present at all.</p>
+<h2 id="the-disappearing-interface">The disappearing interface</h2>
+<p>By the end of the project, much of the design work involved taking things away. We removed window and panel controls, computer-view options, and agent metadata. We also set practical limits of roughly 50 Bots per account and six per group chat. Each decision came back to the same question: Did this help someone delegate, or did it give them one more thing to manage?</p>
+<p>The line between operating an AI and delegating to a coworker keeps moving as models improve. Grok Bot reflects where we think it sits today. Designing Grok Bot from its earliest explorations through launch has been about finding that line and helping the interface change with it. As agents take on more responsibility, the interface should ask less of the person.</p>]]></content:encoded>
+      <guid isPermaLink="true">https://x.ai/news/designing-grok-bot</guid>
+      <category>News</category>
+      <pubDate>Fri, 18 Sep 2026 00:00:00 +0000</pubDate>
+      <media:content url="https://x.ai/_next/static/media/wallpaper-light-noon.27_hyf9uycov-.png?dpl=5b35c887bf3677db001a7d25e35c2bcde5ae024e" type="image/png" medium="image"/>
+    </item>
+    <item>
+      <title>Grok Bot for Enterprise</title>
+      <link>https://x.ai/news/grok-bot-for-enterprise</link>
+      <description>Grok Bot is now available for enterprises. Grok and Cursor Enterprise customers have free usage for the next two weeks, and can invite their whole organization, including people without an existing seat.</description>
+      <guid isPermaLink="true">https://x.ai/news/grok-bot-for-enterprise</guid>
+      <category>News</category>
+      <pubDate>Fri, 18 Sep 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Grok Bot now works with X</title>
+      <link>https://x.ai/news/grok-bot-and-x</link>
+      <description>Grok Bot now has a tighter integration with X.</description>
+      <guid isPermaLink="true">https://x.ai/news/grok-bot-and-x</guid>
+      <category>News</category>
+      <pubDate>Fri, 18 Sep 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Grok Bot is now included with more plans</title>
+      <link>https://x.ai/news/grok-bot-more-plans</link>
+      <description>Grok Bot is now available for SuperGrok, Cursor Pro, and all Cursor Teams plans.</description>
+      <guid isPermaLink="true">https://x.ai/news/grok-bot-more-plans</guid>
+      <category>News</category>
+      <pubDate>Fri, 18 Sep 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Grok 4.6 on Gemini Enterprise Agent Platform</title>
+      <link>https://x.ai/news/grok-4-6-vertex-ai</link>
+      <description>Grok 4.6 is now available via Gemini Enterprise Agent Platform.</description>
+      <content:encoded><![CDATA[<p>Today, we’re excited to announce that Grok 4.6 is now available on Gemini Enterprise Agent Platform.</p>
+<p>Grok 4.6 is our latest flagship model, built for long-running agents and ambitious interactive and visual work. It offers a 500k context window and configurable reasoning efforts (low, medium, high, xhigh). Now, Gemini Enterprise Agent Platform users can use the model through <a href="https://console.cloud.google.com/agent-platform/publishers/xai/model-garden/grok-4.6">Model Garden</a>.</p>
+<h2 id="capabilities--pricing">Capabilities &amp; Pricing</h2>
+<p>Grok 4.6 is available for:</p>
+<ul>
+<li><strong>Input</strong>: $2 per 1 million tokens</li>
+<li><strong>Cached input</strong>: $0.50 per 1 million tokens</li>
+<li><strong>Output</strong>: $6 per 1 million tokens</li>
+</ul>
+<p>For more on the model, read the <a href="https://x.ai/news/grok-4-6">Grok 4.6 announcement</a>.</p>
+<h2 id="build-with-grok-46-on-gemini-enterprise-agent-platform">Build with Grok 4.6 on Gemini Enterprise Agent Platform</h2>
+<p>Grok 4.6 is now available to developers in Model Garden. To get started, visit the <a href="https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/partner-models/grok/grok-4-6">Grok 4.6 model card</a>. We're excited to see what you build!</p>]]></content:encoded>
+      <guid isPermaLink="true">https://x.ai/news/grok-4-6-vertex-ai</guid>
+      <category>News</category>
+      <pubDate>Fri, 18 Sep 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Grok 4.6 on Amazon Bedrock</title>
+      <link>https://x.ai/news/grok-4-6-amazon-bedrock</link>
+      <description>Grok 4.6 is now available via Amazon Bedrock.</description>
+      <content:encoded><![CDATA[<p>Today, we’re excited to announce that Grok 4.6 is now generally available on Amazon Bedrock.</p>
+<p>Grok 4.6 is our latest flagship model, built for long-running agents and ambitious interactive and visual work. It offers 500k context window and configurable reasoning efforts (low, medium, high, xhigh). Now, Amazon Bedrock users can leverage the model through Amazon Bedrock.</p>
+<h2 id="capabilities--pricing">Capabilities &amp; Pricing</h2>
+<p>Grok 4.6 is available for:</p>
+<ul>
+<li><strong>Input</strong>: $2 per 1 million tokens</li>
+<li><strong>Cached input</strong>: $0.50 per 1 million tokens</li>
+<li><strong>Output</strong>: $6 per 1 million tokens</li>
+</ul>
+<p>For more on the model, read the <a href="https://x.ai/news/grok-4-6">Grok 4.6 announcement</a>.</p>
+<h2 id="build-with-grok-46-on-amazon-bedrock">Build with Grok 4.6 on Amazon Bedrock</h2>
+<p>Grok 4.6 is now available to all developers in supported AWS Regions. Please visit AWS documentation to get started - we're excited to see what you build!</p>]]></content:encoded>
+      <guid isPermaLink="true">https://x.ai/news/grok-4-6-amazon-bedrock</guid>
+      <category>News</category>
+      <pubDate>Fri, 18 Sep 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Grok Build on web and mobile</title>
+      <link>https://x.ai/news/grok-build-for-everyone</link>
+      <description>Grok Build is now available on every plan, on the web and on mobile.</description>
+      <guid isPermaLink="true">https://x.ai/news/grok-build-for-everyone</guid>
+      <category>News</category>
+      <pubDate>Fri, 18 Sep 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Grok Build is Now Open Source</title>
+      <link>https://x.ai/news/grok-build-open-source</link>
+      <description>Explore the harness behind our coding agent and TUI.</description>
+      <content:encoded><![CDATA[<a href="https://github.com/xai-org/grok-build">View on GitHub</a>]]></content:encoded>
+      <guid isPermaLink="true">https://x.ai/news/grok-build-open-source</guid>
+      <category>News</category>
+      <pubDate>Fri, 18 Sep 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>21 New Flagship Grok Voices</title>
+      <link>https://x.ai/news/new-flagship-voices</link>
+      <description>New multilingual voices for Grok Voice, plus improved naturalness for the original five.</description>
+      <guid isPermaLink="true">https://x.ai/news/new-flagship-voices</guid>
+      <category>News</category>
+      <pubDate>Fri, 18 Sep 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Grok on Databricks</title>
+      <link>https://x.ai/news/grok-databricks</link>
+      <description>Grok models are now available on Databricks Agent Bricks.</description>
+      <content:encoded><![CDATA[<p>We're excited to share that Grok models are now natively available on Databricks Agent Bricks, Databricks' developer agent platform.</p>
+<p>As part of the Databricks 2026 Data + AI Summit, Databricks is partnering with SpaceXSI to make Grok available alongside other frontier and open-source models in a single, governed platform.</p>
+<p>Agent Bricks connects context (derived from data in Lakehouse) with control and choice, enabling engineering teams to effectively build AI agents that operate on large volumes of data.</p>
+<p>Together with <a href="https://x.ai/news/grok-amazon-bedrock">Grok on Amazon Bedrock</a>, enterprises have more ways to run SpaceXSI models where their data already lives.</p>
+<p>For more on Agent Bricks, see the <a href="https://www.databricks.com/blog/agent-bricks-dais-2026">Databricks announcement</a>.</p>]]></content:encoded>
+      <guid isPermaLink="true">https://x.ai/news/grok-databricks</guid>
+      <category>News</category>
+      <pubDate>Fri, 18 Sep 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Introducing Grok for PowerPoint</title>
+      <link>https://x.ai/news/introducing-powerpoint-addin</link>
+      <description>Grok now works inside Microsoft PowerPoint — turn outlines into slides, expand the deck, and tighten the narrative without leaving the app.</description>
+      <guid isPermaLink="true">https://x.ai/news/introducing-powerpoint-addin</guid>
+      <category>News</category>
+      <pubDate>Fri, 18 Sep 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Agent Dashboard in Grok Build</title>
+      <link>https://x.ai/news/agent-dashboard</link>
+      <description>Manage many coding sessions at once. See what each is doing, reply to the ones that need you, and dispatch new work.</description>
+      <content:encoded><![CDATA[<p>The Agent Dashboard puts every Grok Build session on one screen. See what each is doing, run them in parallel, and step in only when input is needed.</p>
+<p>Run <code>grok dashboard</code> from your shell, or <code>/dashboard</code> (<code>Ctrl+\</code>) from inside any session.</p>
+<h2 id="see-every-session-at-a-glance">See every session at a glance</h2>
+<p>The dashboard sorts sessions by state, with anything waiting for input pulled to the top, so you handle blockers first and leave the rest running. A quick scan shows what each session is doing and for how long, so you stay oriented without opening anything.</p>
+<p>Spread across repos? Group by working directory with <code>Ctrl+S</code>. Subagents roll up under the session that launched them, so the list shows the work you dispatched, not the fan-out beneath it.</p>
+<h2 id="peek-and-reply">Peek and reply</h2>
+<p>Select a row to peek at its latest output without leaving the dashboard, then reply from there. Idle sessions send immediately; active ones queue your message until the current turn ends.</p>
+<p>When a session requests approval or asks a question, its options appear inline. Answer with the arrow or number keys to continue. Multi-part questions arrive one at a time.</p>
+<h2 id="dispatch-new-sessions">Dispatch new sessions</h2>
+<p>The input at the bottom starts a new session. <code>Enter</code> dispatches it and keeps you on the dashboard; <code>Shift+Enter</code> dispatches and opens it right away. Before sending, set the model, start in plan mode, or let the session approve its own edits.</p>
+<h2 id="take-over-any-session">Take over any session</h2>
+<p>Open any session to take over its full conversation. Cycle to the next or previous session without returning to the list, then drop back to the dashboard when you're done. Closing the dashboard leaves every session running, and they're all there when you reopen it.</p>
+<h2 id="get-started">Get started</h2>
+<p>The Agent Dashboard ships with Grok Build. Install it with a single command, then run <code>grok dashboard</code>, or <code>/dashboard</code> from any session you already have open.</p>]]></content:encoded>
+      <guid isPermaLink="true">https://x.ai/news/agent-dashboard</guid>
+      <category>News</category>
+      <pubDate>Fri, 18 Sep 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Use Grok in Warp</title>
+      <link>https://x.ai/news/grok-warp</link>
+      <description>Use your Grok and X Premium subscription inside Warp.</description>
+      <content:encoded><![CDATA[<p>You can now use your Grok or X Premium subscription inside <a href="https://www.warp.dev/">Warp</a>, an agentic development environment built on the terminal and used by almost one million developers.</p>
+<p>Your existing subscription provides access to Grok models, including <code>grok-build-0.1</code>, the model powering <a href="https://x.ai/build">Grok Build</a>.</p>
+<h2 id="setup">Setup</h2>
+<ol>
+<li>Download Warp from <a href="https://www.warp.dev/download">warp.dev/download</a> and open it.</li>
+<li>Open the "Agent &gt; Warp Agent" settings page and click "Connect SuperGrok subscription"</li>
+<li>Switch to the <code>grok-build-0.1</code> model and start prompting.</li>
+</ol>
+<p>That's it! More agents and integrations are coming soon to SuperGrok and X Premium subscribers. To subscribe, visit the <a href="https://x.ai/pricing">pricing page</a>.</p>]]></content:encoded>
+      <guid isPermaLink="true">https://x.ai/news/grok-warp</guid>
+      <category>News</category>
+      <pubDate>Fri, 18 Sep 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Grok Build Plugin Marketplace</title>
+      <link>https://x.ai/news/grok-plugin-marketplace</link>
+      <description>Launching the built-in plugin marketplace for Grok Build.</description>
+      <content:encoded><![CDATA[<p>Today we're launching the <a href="https://github.com/xai-org/plugin-marketplace">Grok Build Plugin Marketplace</a> - a set of built-in plugins for <a href="https://x.ai/build">Grok Build</a>.</p>
+<p>A plugin bundles <a href="https://x.ai/news/grok-skills">skills</a>, slash commands, agents, hooks, MCP servers, and LSPs into one installable package. The marketplace is built into Grok Build, so you can browse, install, and update plugins without leaving your terminal.</p>
+<h2 id="available-at-launch">Available at launch</h2>
+<p>The marketplace opens with plugins from partners across the stack:</p>
+<ul>
+<li><strong><a href="https://www.mongodb.com/docs/mcp-server/overview/">MongoDB</a></strong> — Explore data, manage collections, and optimize queries.</li>
+<li><strong><a href="https://github.com/vercel/vercel-plugin">Vercel</a></strong> — Manage deployments, check build status, and configure domains.</li>
+<li><strong><a href="https://github.com/getsentry/sentry-for-ai">Sentry</a></strong> — Analyze stack traces and debug production errors.</li>
+<li><strong><a href="https://github.com/ChromeDevTools/chrome-devtools-mcp">Chrome DevTools</a></strong> — Control a live browser, record performance traces, and inspect network requests.</li>
+<li><strong><a href="https://github.com/cloudflare/skills">Cloudflare</a></strong> — Skills for Workers, Durable Objects, and more.</li>
+<li><strong><a href="https://github.com/obra/superpowers">Superpowers</a></strong> — Popular agent-driven workflows.</li>
+</ul>
+<h2 id="install-in-seconds">Install in seconds</h2>
+<p>Inside Grok Build, type <code>/marketplace</code> to browse the catalog and press <code>i</code> to install a plugin. Or from the terminal:</p>
+<pre><code>grok plugin marketplace list
+grok plugin install &lt;name&gt; --trust
 </code></pre>
-<p>Run <code>kilo</code> in your project directory and use the <code>/connect</code> command to add xAI.</p>
-<p>For more details, see the <a href="https://kilo.ai/docs/ai-providers/xai">Kilo Code xAI provider documentation</a>.</p>
-<p>More open-source agents and integrations are coming soon.</p>]]></content:encoded>
-      <guid isPermaLink="true">https://x.ai/news/grok-kilocode</guid>
+<p>Every remote plugin in the catalog is pinned to a specific commit SHA, and Grok Build verifies the pin at install time.</p>
+<h2 id="publish-your-own">Publish your own</h2>
+<p>The marketplace is an open catalog. If you've built a plugin you want to share, submit a pull request to <a href="https://github.com/xai-org/plugin-marketplace">xai-org/plugin-marketplace</a>.</p>
+<h2 id="getting-started">Getting started</h2>
+<p>New to Grok Build? Visit <a href="https://x.ai/build">x.ai/build</a> to get started.</p>]]></content:encoded>
+      <guid isPermaLink="true">https://x.ai/news/grok-plugin-marketplace</guid>
       <category>News</category>
       <pubDate>Fri, 18 Sep 2026 00:00:00 +0000</pubDate>
     </item>
