@@ -8,7 +8,456 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 15 Oct 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 16 Oct 2026 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Claude reveals ECDSA curve origins</title>
+      <link>https://www.anthropic.com/research/ecdsa-curve-origins</link>
+      <description>The decades-old mystery of the origins of one of the most popular cryptographic standards has been explained.</description>
+      <content:encoded><![CDATA[<p><em>“It’s just timestamps”: the decades-old mystery of the origins of one of the most popular cryptographic standards has been explained.</em></p>
+<p><em>We pursued this long-standing open question of the cryptographic community to settle concerns about ECDSA, which is one of our most widely used cryptographic standards.</em></p>
+<p><em>Readers should take this as a fun closing chapter and the end of years of speculation. There is no action to be taken or things to do differently. Most researchers trusted the curves already. Enjoy.</em><br/></p>
+<p>ECDSA is the most widely used elliptic curve cryptography standard. It was adopted by NIST in 2000 as part of the <a href="https://csrc.nist.gov/files/pubs/fips/186-2/final/docs/fips186-2.pdf">FIPS 186-2 Digital Signature Standard</a> which lists a set of standard elliptic curves of varying sizes and security levels. For curves over prime and binary fields, the specifications published a “seed” parameter whose hash value is used to define the coefficient b of the curve. The provenance of these seeds has been a long-standing question, as they were provided by the NSA with no explanation or justification. As an example, the NIST P-256 curve seed was <code>SEED = C49D3608 86E70493 6A6678E1 139D26B7 819F7E90</code> with no information where it came from.</p>
+<p><a href="https://sites.math.washington.edu/~koblitz/">Neal Koblitz</a> and <a href="https://uwaterloo.ca/scholar/ajmeneze">Alfred Menezes</a> wrote an excellent summary on this controversy, “<a href="https://eprint.iacr.org/2015/1018.pdf">A Riddle Wrapped in an Enigma</a>”, which discusses the history and concerns around the seed values. This mystery led to an <a href="https://saweis.net/posts/nist-curve-seed-origins.html">amateur investigation into the origin of the seeds</a> and a <a href="https://words.filippo.io/seeds-bounty/">bounty for anyone who could find them</a>.</p>
+<p>The best story was that Jerry Solinas, longtime NSA employee, generated the seeds using a hash of a humorous passphrase:	</p>
+<blockquote><em>“I believe there was a counter rather than multiple hashing, but I don’t know details. The message was along the lines of ‘Give Bob and Jerry a raise’ or ‘Bob and Jerry rule’ or something like that. It was Bob Reiter who actually wrote the code, and he doesn’t remember the details either. Nor were we able to find archives from so long ago. If they exist, they are no doubt sitting on a hard drive near the Ark of the Covenant.”</em></blockquote>
+<blockquote>Jerry Solinas, 2015</blockquote>
+<p>Unfortunately, Jerry died in 2023 and other colleagues at the time were not responsive, leaving open the question of how these seeds were originally derived.</p>
+<h2 id="claude-found-the-seeds">Claude found the seeds</h2>
+<p>Several Anthropic employees had unsuccessfully chased the seeds following the tip about it being a hash of a humorous phrase. That turned out to be wrong. In October 2026, a curious Anthropic employee asked an internal research model if it could figure out how those seeds were generated without pointing at the clue.</p>
+<p><strong>In under half an hour</strong>, Claude discovered the origins of the NIST P-192, P-224, P-256, P-384 and P-521 seeds. None of them were the results of any hash algorithm at all, but rather the output of the C library’s <code>lrand48</code> random-number generator, seeded with a Unix timestamp!</p>
+<p>The algorithm used would sample bytes from the random number generator (RNG) initialized by a Unix timestamp (<strong>t</strong>) for some number of iterations (<strong>n</strong>). Each iteration would draw 20 bytes as a candidate seed. So, the first 20 bytes are candidate 1, the next 20 bytes are candidate 2, and so on. For example, P-256 required 1842 iterations to output the standardized seed.</p>
+<figure><img height="1064" src="https://www.anthropic.com/_next/image?url=https%3A%2F%2Fwww-cdn.anthropic.com%2Fimages%2F4zrzovbb%2Fwebsite%2Fe4948d016f5879d721c3297b1ee1073b1e6b5734-2912x1064.png&amp;w=3840&amp;q=75" width="2912"/></figure>
+<figure><p><a href="https://cdn.sanity.io/files/4zrzovbb/website/56865322bd9974c7be23abf7d654fb5a79155791.mp4">▶ Watch video</a></p></figure>
+<h2 id="what-this-means">What this means</h2>
+<p>This is not a cryptographic break, new attack, or weakness in the ECDSA curves. In fact, this makes us more confident the curves were chosen without any backdoors or intentional weaknesses. For many years, people have been suspicious of the origins of the NIST curve parameters. They were presented to NIST without any mention of how they were chosen, leaving people wondering if they may have been chosen to have deliberate backdoors in them. These findings make that much less plausible. The seeds were generated in a very simple way: a common pseudorandom number generator initialized from the clock, which anyone can now reproduce. That leaves much less room for subversion and that we can be confident the parameters are secure.</p>
+<h2 id="how-it-was-found">How it was found</h2>
+<p>Searches for the phrase, built from the rumors, had come up empty. Claude tried a different angle: anticipating how the software that generated the curves must have worked. Claude guessed the software used a pseudorandom number generator (PRNG) that shipped with 1990s C libraries. These old PRNGs are weak enough that their output can be recognized. Recognizing that output would reveal which PRNG was used and possibly allow recovery of its initialization state. </p>
+<p>Claude wrote a scanner that slid along each published seed one bit at a time and tested whether adjacent chunks were consecutive outputs of a 1990s-vintage generator. The scan covered 34 combinations of generator and output slices. At that point, Claude noticed a pattern in the top bits for some seeds: they were all zero. Written as five 32-bit words, four of the ten seeds have a 0 in the top bit for all 20 words. That would happen by chance with probability 1/5810. That was a signature of the linear congruential generator <a href="https://linux.die.net/man/3/lrand48"><code>lrand48</code></a>, which only returns the top 31 bits of a 48-bit state. The pattern is visible by eye once you know to look for it. To recover the state, Claude took the first word, tried all 2¹⁷ values of the 17 hidden bits, and checked that the next four words followed. That worked for all four seeds under discussion.</p>
+<figure><img height="1836" src="https://www.anthropic.com/_next/image?url=https%3A%2F%2Fwww-cdn.anthropic.com%2Fimages%2F4zrzovbb%2Fwebsite%2Ff7bf17121dfacb0a5b39dfdcd035816fbb789874-2327x1836.jpg&amp;w=3840&amp;q=75" width="2327"/></figure>
+<p>The prime-curve seeds came from the same lrand48 generator but kept fewer bits of each output. Claude had to recover the internal state of the PRNG from those bits. It turns out recovering the state of a truncated linear congruential generator is a textbook lattice problem, solved with the <a href="https://en.wikipedia.org/wiki/Lenstra%E2%80%93Lenstra%E2%80%93Lov%C3%A1sz_lattice_basis_reduction_algorithm">Lenstra–Lenstra–Lovász (LLL)</a> basis reduction algorithm. Claude didn’t know which bits of the state the seeds might show, so it ran the solver over every window. Five NIST prime-curve seeds plus five more from the ANSI X9.62 standard all had the same pattern: lrand48() &gt;&gt; 23. Each recovered 48-bit state regenerates all 160 bits of its seed, which does not happen by chance.</p>
+<figure><img height="1016" src="https://www.anthropic.com/_next/image?url=https%3A%2F%2Fwww-cdn.anthropic.com%2Fimages%2F4zrzovbb%2Fwebsite%2Fe8e7bb885a5e83cbcfe80e5b25f5ef7203c558ba-2912x1016.png&amp;w=3840&amp;q=75" width="2912"/></figure>
+<p>This linear congruential generator runs backwards as easily as forwards, so for each seed Claude stepped the state back until it reached the form that it would have been initialized by <a href="https://linux.die.net/man/3/srand48">srand48</a>, with the low 16 bits equal to 0x330E. The internal PRNG state of that form would come up once every 65,536 steps, so reaching one is not evidence on its own.</p>
+<p>However, for the ten prime-curve seeds, every srand48 initialization was a Unix timestamp representing a date between May 1997 and April 1998. They were using the weak PRNG seeded by Unix timestamp. The four binary-curve initializations read as February 1984. With the timestamps doubled, they map to April 17, 1998, two weeks after the P-224 run. So, the program may have halved the clock.</p>
+<p>Claude’s internal thinking at the time was:</p>
+<blockquote>This is astonishing: it solves the 25-year-old mystery. Hmm wait. Let me be skeptical: am I in some sort of simulated/test environment? … The seeds match my memory of actual values … Hmm, is it plausible in reality? As of my knowledge … the bounty was unsolved. … All top bits clear—20 bits, chance 1e-6. So indeed real-world. Wow, it's a real discovery.</blockquote>
+<blockquote>Hmm wait. Let me be careful about the plausibility: is it suspicious that such an obvious thing wasn’t discovered in 25 years? It’s verified by direct computation on my side: 160-bit match from a 32-bit seed + small index: no chance coincidences (10 × 160 bits). It’s real.</blockquote>
+<h2 id="claude-found-some-base-points-too">Claude found some base points too</h2>
+<p>But wait, there’s more… Each curve also comes with a base point, G, the fixed point that every ECDSA public key is a multiple of. The seed found above does not determine this G, and so another question arises: how were these base points generated?</p>
+<p>While checking the seeds, Claude also found where some of the base points came from. The base points of the six curves generated in May 1997 (P-192 and the five ANSI X9.62 example curves prime192v2, prime192v3 and prime239v1 to v3) come from the random number generator in <a href="https://cr.yp.to/speed/mult/freelip.html">FreeLIP</a>, <a href="https://en.wikipedia.org/wiki/Arjen_Lenstra">Arjen Lenstra</a>'s long-integer arithmetic package. Early versions of <a href="https://shoup.net/">Victor Shoup</a>'s <a href="https://libntl.org/">NTL library</a> shipped the same code.</p>
+<p>The recipe here is simple:</p>
+<ol><li>Seed the generator with a small integer.</li><li>Throw away seven outputs.</li><li>Generate candidate x-coordinates from 26-bit outputs reduced mod p.</li><li>Repeat step 3 until x is on the curve.</li></ol>
+<p>Claude found the generator seeds are 20000 for P-192, 20420, 20507 and 20509 for prime239v1 to v3, and 20512 and 20517 for prime192v2 and v3.</p>
+<figure><img height="977" src="https://www.anthropic.com/_next/image?url=https%3A%2F%2Fwww-cdn.anthropic.com%2Fimages%2F4zrzovbb%2Fwebsite%2F2933f700c626b6495e90489ef644da08d9879e33-1168x977.jpg&amp;w=3840&amp;q=75" width="1168"/></figure>
+<p>As far as we know, no NIST base point has been explained before. The base points of P-224, P-256, P-384 and P-521 don’t fit this recipe; we weren’t able to explain how they were selected.</p>
+<h2 id="open-questions">Open questions</h2>
+<p>Not every 20-byte candidate seed could generate a viable curve and we observed that some potentially viable curves were skipped. For P-256, the published seed is candidate 1842, but candidate 876 of the same run also gives a prime-order curve of the right size and with parameters chosen the same way as on the published curve. P-224's run passed over three such curves, and the two runs behind the ANSI X9.62 example curves passed over seven more (see figure). We do not know what criteria may have been used, or whether this was an unintentional artifact.</p>
+<figure><img height="1880" src="https://www.anthropic.com/_next/image?url=https%3A%2F%2Fwww-cdn.anthropic.com%2Fimages%2F4zrzovbb%2Fwebsite%2F7ca7925885873b75479af7573759d7b784cf67ac-2912x1880.png&amp;w=3840&amp;q=75" width="2912"/></figure>
+<figure><img height="3768" src="https://www.anthropic.com/_next/image?url=https%3A%2F%2Fwww-cdn.anthropic.com%2Fimages%2F4zrzovbb%2Fwebsite%2F38a85c534c21b7786af3c321056ae6527946f706-2912x3768.png&amp;w=3840&amp;q=75" width="2912"/></figure>
+<p>Because the number of skipped candidates is small, we do not believe it is plausible that weakened curves were selected. That would imply that weakened curves are common and easy to find. It is still conceivable that these curves were selected to have a specific property in principle by searching over timestamps to the random number generator. However, you would only need to do that if you were going to disclose the timestamp as some evidence that the seed was innocuously generated. Nothing in the numbers shows how many runs there were.</p>
+<p>There is also one seed we were unable to recover. The fifth binary seed, B-163, fits nothing Claude has tried and remains unexplained. Finally, we don’t know how the base points for P-224, P-256, P-384, and P-521 were generated. The same goes for the NIST binary curves.</p>
+<h2 id="the-bounty">The bounty</h2>
+<p>The $36,864 for finding the seeds will be donated to the <a href="https://www.abetterinternet.org/">Internet Security Research Group</a>.</p>
+<h2 id="who-we-are">Who we are</h2>
+<p>This work was conducted at Anthropic by John Wood, Henry de Valence, Ava Howell, Zack Voase, Lucy Sweet, Amir Omidi, Paul Crowley, Iain McGinniss, Nicholas Carlini, and Steve Weis.</p>
+<h2 id="acknowledgements">Acknowledgements</h2>
+<p>We would like to posthumously recognize Jerry Solinas who took being labeled an “<a href="https://cr.yp.to/papers/safecurves-20240809.pdf">evil Internet meme</a>” and the “<a href="https://sockpuppet.org/blog/2015/08/04/is-extended-random-malicious/">Yo La Tengo of NSA bogeymen</a>” with good humor. Also thanks to <a href="https://filippo.io/">Filippo Valsorda</a> for organizing the NIST Elliptic Curves Seeds Bounty.</p>
+<h2 id="code-to-reproduce-the-seeds">Code to reproduce the seeds</h2>
+<pre><code>from datetime import datetime, timezone
+
+def unix(when):
+    return int(datetime.fromisoformat(when).replace(tzinfo=timezone.utc).timestamp())
+
+def candidate(t, n, per, shift, width):
+    x, out = (t &lt;&lt; 16) | 0x330E, ""                      # the state srand48(t) sets
+    for i in range(per * n):
+        x = (0x5DEECE66D * x + 0xB) % 2**48              # one step of lrand48
+        if i &gt;= per * (n - 1):
+            out += "%0*X" % (width, x &gt;&gt; shift)
+    return out
+
+PRIME = {  # srand48(time); 20 bytes per candidate: lrand48() &gt;&gt; 23
+    "prime239v1": ("1997-05-15 15:49:03", 2185),
+    "prime239v2": ("1997-05-15 15:49:03", 2320),
+    "prime239v3": ("1997-05-15 15:49:03", 3048),
+    "P-192":      ("1997-05-18 14:45:34", 139),
+    "prime192v3": ("1997-05-18 14:45:34", 5228),
+    "prime192v2": ("1997-05-18 14:45:34", 6013),
+    "P-521":      ("1997-08-08 01:12:04", 1136),
+    "P-256":      ("1997-08-16 01:52:34", 1842),
+    "P-384":      ("1997-08-30 14:50:08", 2688),
+    "P-224":      ("1998-04-03 12:52:07", 7026),
+}
+BINARY = {  # srand48(time / 2), if that reading is right; 5 words per candidate: lrand48()
+    "B-233": ("1998-04-17 15:24:18", 155),
+    "B-283": ("1998-04-17 15:27:44", 32),
+    "B-409": ("1998-04-17 15:30:18", 60),
+    "B-571": ("1998-04-17 15:32:08", 73),
+}
+for name, (when, n) in PRIME.items():
+    print(f"{name:10} {when} {n:5} {candidate(unix(when), n, 20, 40, 2)}")
+for name, (when, n) in BINARY.items():
+    print(f"{name:10} {when} {n:5} {candidate(unix(when) // 2, n, 5, 17, 8)}")
+</code></pre>
+<p>The output of this code:</p>
+<pre><code>prime239v1 1997-05-15 15:49:03  2185 E43BB460F0B80CC0C0B075798E948060F8321B7D
+prime239v2 1997-05-15 15:49:03  2320 E8B4011604095303CA3B8099982BE09FCB9AE616
+prime239v3 1997-05-15 15:49:03  3048 7D7374168FFE3471B60A857686A19475D3BFA2FF
+P-192      1997-05-18 14:45:34   139 3045AE6FC8422F64ED579528D38120EAE12196D5
+prime192v3 1997-05-18 14:45:34  5228 C469684435DEB378C4B65CA9591E2A5763059A2E
+prime192v2 1997-05-18 14:45:34  6013 31A92EE2029FD10D901B113E990710F0D21AC6B6
+P-521      1997-08-08 01:12:04  1136 D09E8800291CB85396CC6717393284AAA0DA64BA
+P-256      1997-08-16 01:52:34  1842 C49D360886E704936A6678E1139D26B7819F7E90
+P-384      1997-08-30 14:50:08  2688 A335926AA319A27A1D00896A6773A4827ACDAC73
+P-224      1998-04-03 12:52:07  7026 BD71344799D5C7FCDC45B59FA3B9AB8F6A948BC5
+B-233      1998-04-17 15:24:18   155 74D59FF07F6B413D0EA14B344B20A2DB049B50C3
+B-283      1998-04-17 15:27:44    32 77E2B07370EB0F832A6DD5B62DFC88CD06BB84BE
+B-409      1998-04-17 15:30:18    60 4099B5A457F9D69F79213D094C4BCD4D4262210B
+B-571      1998-04-17 15:32:08    73 2AA058F73A0E33AB486B0F610410C53A7F132310
+</code></pre>
+<h2 id="code-to-reproduce-selected-base-points">Code to reproduce selected base points</h2>
+<pre><code>M, A = 2**107 - 1, pow(3, 121, 2**107 - 1)       # zrandom: state = state * 3^121 mod (2^107 - 1)
+P192 = 2**192 - 2**64 - 1
+P239 = 2**239 - 2**143 - 2**95 + 2**47 - 1
+
+CURVES = [  # name, LIP seed, p, b, published Gx   (a = -3 throughout)
+    ("prime192v1", 20000, P192,
+     0x64210519e59c80e70fa7e9ab72243049feb8deecc146b9b1,
+     0x188da80eb03090f67cbf20eb43a18800f4ff0afd82ff1012),
+    ("prime239v1", 20420, P239,
+     0x6b016c3bdcf18941d0d654921475ca71a9db2fb27d1d37796185c2942c0a,
+     0xffa963cdca8816ccc33b8642bedf905c3d358573d3f27fbbd3b3cb9aaaf),
+    ("prime239v2", 20507, P239,
+     0x617fab6832576cbbfed50d99f0249c3fee58b94ba0038c7ae84c8c832f2c,
+     0x38af09d98727705120c921bb5e9e26296a3cdcf2f35757a0eafd87b830e7),
+    ("prime239v3", 20509, P239,
+     0x255705fa2a306654b1f4cb03d6a750a30c250102d4988717d9ba15ab6d3e,
+     0x6768ae8e18bb92cfcf005c949aa2c6d94853d0e660bbf854b1c9505fe95a),
+    ("prime192v2", 20512, P192,
+     0xcc22d6dfb95c6b25e49c0d6364a4e5980c393aa21668d953,
+     0xeea2bae7e1497842f2de7769cfe9c989c072ad696f48034a),
+    ("prime192v3", 20517, P192,
+     0x22123dc2395a05caa7423daeccc94760a7d462256bd56916,
+     0x7d29778100c65a1da1783716588dce2b8b4aee8e228f1896),
+]
+
+def base_point_x(seed, p, b):
+    state = seed                         # zrstarts(seed)
+    def limb():                          # zrandom(2^26): low 26 bits of the new state
+        nonlocal state
+        state = state * A % M
+        return state % 2**26
+    for _ in range(7):                   # seven single-limb draws come first
+        limb()
+    limbs = -(-p.bit_length() // 26) + 1 # zrandomb(p): limbs of p plus one, top limb first
+    tries = 0
+    while True:
+        x = 0
+        for _ in range(limbs):
+            x = x &lt;&lt; 26 | limb()
+        x %= p
+        tries += 1
+        if pow(x**3 - 3*x + b, (p - 1) // 2, p) == 1:   # is x on the curve?
+            return x, tries
+
+for name, seed, p, b, gx in CURVES:
+    x, tries = base_point_x(seed, p, b)
+    print(f"{name:20} seed {seed}  tries {tries}  matches published Gx: {x == gx}")
+</code></pre>
+<p>The output of this code:</p>
+<pre><code>prime192v1           seed 20000  tries 2  matches published Gx: True
+prime239v1           seed 20420  tries 3  matches published Gx: True
+prime239v2           seed 20507  tries 2  matches published Gx: True
+prime239v3           seed 20509  tries 1  matches published Gx: True
+prime192v2           seed 20512  tries 5  matches published Gx: True
+prime192v3           seed 20517  tries 1  matches published Gx: True</code></pre>
+<h2 id="license">License</h2>
+<p>To the extent possible under law, the authors have waived all copyright and related or neighboring rights to the code on this page, dedicating it to the public domain under CC0 1.0 Universal (<a>https://creativecommons.org/publicdomain/zero/1.0/</a>).<br/></p>]]></content:encoded>
+      <guid isPermaLink="true">https://www.anthropic.com/research/ecdsa-curve-origins</guid>
+      <category>Frontier Red Team</category>
+      <pubDate>Fri, 16 Oct 2026 00:00:00 +0000</pubDate>
+      <media:content url="https://www.anthropic.com/_next/image?url=https%3A%2F%2Fwww-cdn.anthropic.com%2Fimages%2F4zrzovbb%2Fwebsite%2Fe4948d016f5879d721c3297b1ee1073b1e6b5734-2912x1064.png&amp;amp;w=3840&amp;amp;q=75" type="image/jpeg" medium="image"/>
+    </item>
+    <item>
+      <title>Designing more efficient quantum circuits with Claude</title>
+      <link>https://www.anthropic.com/research/designing-efficient-quantum-circuits</link>
+      <description>Working largely on its own, Claude designed quantum circuits that improve on the best published versions, in some cases by an order of magnitude or more.</description>
+      <content:encoded><![CDATA[<p><em>Quantum computers will need carefully designed circuits to run useful algorithms on limited hardware. We gave Claude plain-language specifications for eight such circuits, drawn from chemistry, optimization, physics simulation, and number theory, along with an automated evaluator that checks and scores each design. Working largely on its own, Claude found designs that improve on the best published circuits, in some cases by an order of magnitude or more. Such improvements substantially reduce the quantum resources that useful applications require, so practical quantum computers could arrive sooner than previously anticipated.</em></p>
+<p><em>This work was led by Andi Gu as part of Anthropic’s STEM Fellows Program, with mentorship from Alek Kemeny, a quantum physicist at Anthropic, in collaboration with Susanne Yelin (Harvard University) and Mikhail Lukin (Harvard University and QuEra Computing). <a href="https://arxiv.org/abs/2610.22367">Read the full paper on arXiv</a>.</em></p>
+<p>Unlike classical computers, which store information in bits whose value is either 0 or 1, quantum computers store information in <em>qubits,</em> which can be built from single atoms, superconducting circuits, or particles of light. These qubits make use of quantum phenomena such as <em>superposition</em>—which allows a quantum system to exist in a combination of states at once—in order to process information in ways that could make certain problems in fields like chemistry, materials science, and number theory tractable, even when they are too hard for traditional computers.</p>
+<p>The quantum computers the field has built to date only have hundreds to thousands of qubits—too few to run many of the algorithms that promise practical advantages over classical computers. And these qubits are highly sensitive to environmental noise, such as heat, vibration, and even cosmic rays. A tiny disturbance can nudge a qubit’s state, and these small errors pile up until the computer gives the wrong answer. </p>
+<p>Given that both qubits and computing time are scarce resources, researchers have been working to redesign quantum algorithms to use fewer qubits and complete computations in less time. An illustrative example is simulating FeMoco, the iron–sulfur cluster at the heart of nitrogenase, the enzyme that bacteria use to turn nitrogen from the air into ammonia. Understanding how it works could help scientists design better industrial catalysts—the substances manufacturers use to speed up chemical reactions.</p>
+<p>In 2017, researchers estimated that a quantum computer would need about 50 trillion Toffoli gates to compute FeMoco’s ground-state energy—the energy of its most stable configuration, which chemists need in order to predict how FeMoco reacts. (Similar to ordinary computers, quantum computers work by applying a long sequence of simple operations, called gates, to their qubits. The Toffoli gate is one of the most expensive gates to run, so counting Toffoli gates is a standard way to estimate how long a computation will take.)</p>
+<p>Through a series of algorithmic advances, the estimated number of gates has come down to about 340 million—a roughly 150,000-fold reduction, corresponding to a few hours of computation on a future machine with about three million physical qubits.<sup><a href="#footnote-1">1</a></sup> </p>
+<p>These reductions largely came from redesigning the circuits that carry out the computation, rather than from making better hardware. Claude has proven particularly adept at optimizing <a href="https://www.anthropic.com/research/claude-uplifts-biomolecular-modeling">classical</a> <a href="https://www.anthropic.com/engineering/AI-resistant-technical-evaluations">algorithms</a>, so we wanted to see whether it could do the same for quantum algorithms if it were given only a plain-language description of what each circuit must compute.</p>
+<p>Claude is unusually well suited to this task, for several reasons. First, quantum algorithms are implemented as quantum <em>circuits</em>. These are composed of sequences of gates, like the Toffoli gates mentioned above. Importantly, these circuits can be described in code, so we can make use of Claude’s coding capabilities to write, run, and revise circuit designs as ordinary programs. Second, the (fairly common) class of quantum algorithms we were most interested in optimizing can be tested efficiently for correctness, as each input gives one definite output that an ordinary computer can check. This means we could have an external evaluator program validate Claude’s proposals. Finally, we can give Claude a clear, objective score to improve: the number of qubits used, multiplied by the number of gates, which serves as a proxy for how long the circuit would take to run.</p>
+<p>We found that Claude Mythos 5 could successfully work in a closed loop, proposing a circuit design, receiving feedback and a score from the evaluator program, and using that feedback to improve its next attempt, with no human input between rounds (see Figure 1). Across eight computational primitives—the basic routines that larger quantum algorithms are built from—for chemistry, optimization, quantum simulation, number theory, and numerical computing, Claude discovered novel designs that used both fewer qubits and fewer gates than the best previously published algorithms (Figure 2). </p>
+<p>In each case, the improvement resulted from uncovering new structural and mathematical insights about the problem, rather than from fine-tuning existing designs. For example, when compiling a circuit for simulating an iron-sulfide molecule, Claude noticed that the molecule’s symmetries and repeating structure meant that some results could be calculated once and reused, rather than recomputed for every part of the system. In other cases, it found that existing circuits included costly components that were needed to handle only extremely rare inputs, and it redesigned them without those components. </p>
+<p>Below, we describe two of Claude’s discoveries. The first is a new way to perform modular inversion, a bit of arithmetic that is the most expensive step in elliptic-curve calculations. The second makes the costliest step of a leading quantum optimization algorithm about 12x cheaper.</p>
+<p>These results suggest that AI can now help redesign quantum circuits, a key step in making quantum algorithms faster and easier to run. Faster circuit design could bring the problems quantum computers are meant to solve—from designing new medicines and better batteries to finding cleaner ways of making fertilizer—within reach sooner.</p>
+<figure><p><a href="https://cdn.sanity.io/files/4zrzovbb/website/0e9f7b41ac662fb1b2544315dc7cae1967f1fff8.mp4">▶ Watch video</a></p><figcaption>Figure 1: Closed–loop quantum circuit optimization. Claude designs new implementations in Python, which are then sent to a programmatic evaluator. The evaluator checks whether the proposed implementation is correct, then scores it on the number of qubits and gates it requires. This information is then sent to Claude, which uses it to improve its implementation. The code and values shown are illustrative.</figcaption></figure>
+<figure><img height="2430" src="https://www.anthropic.com/_next/image?url=https%3A%2F%2Fwww-cdn.anthropic.com%2Fimages%2F4zrzovbb%2Fwebsite%2Fd5d27ec3f141696918c6bed3f6b887f5b84e75f0-3840x2430.png&amp;w=3840&amp;q=75" width="3840"/><figcaption>Figure 2: Claude designed smaller and faster circuits across eight different quantum-circuit design tasks. Gray marks show the best previously published designs; orange marks and lines show Claude’s designs. Point addition, the eighth task, is compared in Table 1 below.</figcaption></figure>
+<h2 id="a-new-reversible-algorithm">A new reversible algorithm</h2>
+<p>Designing a quantum circuit involves two constraints that ordinary programming doesn’t have. The first is that a quantum circuit can’t make “if-then” decisions the way an ordinary program can. An ordinary program can check a value and then run only one of two pieces of code. But a quantum computer runs on a superposition of many inputs at once, some of which would run the first piece of code and some of which would run the second, so the circuit has to include the operations for both every time it runs. </p>
+<p>The second is that a quantum circuit can’t discard information. An ordinary program can overwrite or delete its scratch work once it’s completed it; in a quantum computer, such intermediate information can’t simply be erased, because every step of a quantum circuit must be reversible. Leaving that information in place isn’t an option, either, because leftover scratch work would corrupt the final result. The only way to discard information is to “uncompute” it by running the computation that created it in reverse, at the cost of additional gates. Both of these constraints make quantum circuits far more expensive, in both runtime and qubits, than their classical counterparts.</p>
+<p>This constraint forces a difficult trade-off between space (i.e., qubits) and time. At one extreme, a quantum circuit can uncompute intermediate results as soon as they have been used. This frees up qubits, but if those same results are needed again later, the circuit must recompute them, which adds gates and increases the runtime. At the other extreme, the circuit can retain intermediate results until they’re no longer needed. This avoids repeating work, but it can require many more qubits.</p>
+<p>This is what makes quantum circuit design an especially interesting test of Claude’s capabilities. The circuits can be written as ordinary code, but improving them requires the model to reason under a set of constraints quite unlike those of ordinary programming.</p>
+<h3 id="a-hard-first-test-modular-inversion">A hard first test: modular inversion</h3>
+<p>The first task we gave Claude was point addition, a rule for combining two points on a mathematical curve (an elliptic curve) to produce a third. Point addition is the core step in quantum algorithms for the discrete logarithm problem on elliptic curves: given a starting point and the result of adding it to itself <em>n</em> times, find <em>n</em>. For large curves, ordinary computers can’t solve this problem in any reasonable amount of time, but a sufficiently large quantum computer could.</p>
+<p>These algorithms perform point addition many times over, including in reverse, and these additions account for most of their qubit and runtime costs. Problems like this—easy to compute, extremely hard to reverse—were among the first where quantum computers were shown to offer an exponential speedup over ordinary ones. For these reasons, point addition has become one of the field’s standard benchmarks. This made it a demanding test for Claude. So, we asked it to map out how few qubits, as well as how few gates, point addition really needs.</p>
+<p>We gave Claude a one-paragraph brief. It explained the mathematical rule for point addition, and how the evaluator would check each proposed circuit for correctness and score it on the number of qubits and gates it used. It also instructed Claude to explore several approaches in parallel. After working for 53 hours with minimal human input (limited to the initial brief and occasional prompts to think more broadly), Claude arrived at a completely new approach to the problem.</p>
+<h3 id="the-memory-demands-of-divsteps">The memory demands of divsteps</h3>
+<p>Most of the cost of point addition comes from a single step, called<em> modular inversion</em>. Elliptic-curve arithmetic uses numbers that wrap back around when they reach a fixed limit. Modular inversion is the wraparound version of division: given an integer <em>a</em>, find <em>x</em> such that <em>ax</em> ≡ 1 (mod <em>p</em>). Ordinary computers can perform this operation efficiently using a method called <a href="https://tches.iacr.org/index.php/TCHES/article/view/8298"><em>divsteps</em></a>. Divsteps starts with a pair of numbers and repeatedly simplifies them over many rounds of iteration. In each round, divsteps examines the current pair of numbers and conditionally swaps, adds, subtracts, or halves them. Along the way, it preserves just enough information to produce the modular inverse at the end.</p>
+<p>Despite its success on ordinary computers, divsteps had not yet produced a practical quantum circuit, because of the reversibility constraint described above. The record of which operation was chosen at each iteration, called <em>branch information</em>, is the kind of scratch work that a traditional program can simply discard. In contrast, a quantum circuit has to retain that record so the computation can be run backward. A straightforward quantum version of divsteps is therefore forced to accumulate a long history of branch information, which requires an enormous number of additional qubits to store.</p>
+<h3 id="how-claude-got-around-the-memory-problem">How Claude got around the memory problem</h3>
+<p>Claude recognized that this divsteps approach could be promising for quantum circuits, but only if there were a way around needing to store the full history. It had an idea: perhaps the record didn’t need to be stored at all. Claude reasoned that it might be possible to directly infer (or “decode”) the branch information by carefully inspecting the pair of numbers after each iteration. In essence, the numbers themselves would store the record. The circuit could then be run backward without needing any extra qubits.</p>
+<p>To test this idea, Claude explored a number of simple candidate rules for performing the decoding. These early rules worked on small test cases, but they failed when Claude tested them at the full problem size, on 256-bit numbers.</p>
+<p>Claude then tried a more theoretical approach. Rather than guessing and testing rules, it set out to understand mathematically why divsteps behaves the way it does. It proved a series of results about the iteration process, including several new algebraic identities. From these identities, Claude derived a precise formula for the decoding rule that would correctly recover the branch information from the numerical pairs. It then checked the formula, first by running it through large-scale numerical simulations, and then formalizing the claim in Lean. With the full validation complete, Claude produced the first reversible implementation of divsteps with no stored branch history. </p>
+<h3 id="a-family-of-designs">A family of designs</h3>
+<p>Decoding saves qubits, but it costs time. So, as a further refinement, Claude looked for situations in which it would be cheaper to store the branch information than to decode it. By varying the threshold at which the circuit stores rather than decodes the branch information, Claude produced a new family of designs between the two extremes. Compared with the smallest previous design, one circuit in the family uses 12% more qubits but 17x fewer gates. More generally, the new designs expand the Pareto frontier, offering combinations of qubit count and runtime that weren’t available before (Table 1).</p>
+<figure><img height="1052" src="https://www.anthropic.com/_next/image?url=https%3A%2F%2Fwww-cdn.anthropic.com%2Fimages%2F4zrzovbb%2Fwebsite%2F7e8a0d4b9d7e826f25379d351ee6d2cab3900f84-3840x1052.png&amp;w=3840&amp;q=75" width="3840"/><figcaption>Table 1: Resources for elliptic-curve point addition. Bold rows are Claude’s designs; the others are the best previously published designs. Sources: <a href="https://arxiv.org/abs/2606.02235">Schrottenloher</a> (2026), <a href="https://arxiv.org/abs/2607.13816">Luo et al.</a> (2026).</figcaption></figure>
+<h2 id="optimizing-a-quantum-optimizer">Optimizing a quantum optimizer</h2>
+<p>Optimization problems are at the heart of a wide range of tasks, including scheduling, logistics, and materials design. An optimization problem presents a set of competing constraints and asks for the solution that satisfies as many of them as possible. Many quantum algorithms have been proposed for problems like these, but most promise only modest or uncertain gains over ordinary computers. <a href="https://arxiv.org/abs/2408.08292">Decoded quantum interferometry (DQI)</a> is one of the strongest candidates for offering a <em>superpolynomial quantum speedup—</em>an advantage that rapidly widens as the problems get larger.</p>
+<p>When a quantum computer finishes a computation, reading out its qubits produces just one answer, selected at random from the possibilities they were holding in superposition. DQI works by preparing a quantum state in which good solutions are more likely to be read out than bad ones. Doing this involves using an error-correcting decoder, which recovers a short list of “errors” from a compact summary. This is the most expensive step in the algorithm. So, if we could make a faster decoder, we could also perform DQI faster.</p>
+<h3 id="a-more-efficient-quantum-decoder">A more efficient quantum decoder</h3>
+<p>The researchers who introduced DQI demonstrated it on a problem called <em>optimal polynomial intersection</em> (OPI), a grid-based version of curve fitting (Figure 3). Imagine a grid in which each position <em>x </em>contains several acceptable values of <em>y</em>. The goal is to find a simple curve (a low-degree polynomial) that passes through an acceptable square for as many <em>x</em> positions as possible. DQI tackles this optimization problem using a specific type of decoder, called a Reed–Solomon decoder.</p>
+<figure><img height="2000" src="https://www.anthropic.com/_next/image?url=https%3A%2F%2Fwww-cdn.anthropic.com%2Fimages%2F4zrzovbb%2Fwebsite%2Fffc6c06497f985e9162489dffa83c0bbaf50a909-3840x2000.png&amp;w=3840&amp;q=75" width="3840"/><figcaption>Figure 3: Optimal Polynomial Intersection (OPI) as discrete curve fitting. Each column contains several acceptable values. The optimization problem is to find a polynomial that passes through as many of the acceptable values as possible.</figcaption></figure>
+<p>Reed–Solomon decoding starts from the compact summary of errors mentioned above, which is known as a <em>syndrome</em>. The decoder’s job is to infer, from this summary, where in the data the errors occurred and what they were. The previous state-of-the-art quantum circuit processed these syndromes using the extended Euclidean algorithm, a sequence of divisions and swaps in which the number and order of steps depend on the particular input it’s given. Here, the constraints of quantum circuits reemerge: while an ordinary program can follow a different path for every input, a quantum circuit, working on many inputs at once, has to handle all of them with a single fixed sequence of gates. To manage this, the previous design had to stretch the computation over many more rounds of iteration than any single input would need, and had to run every operation in every round, even when doing so was unnecessary.</p>
+<p>Improving this decoder could substantially reduce DQI’s runtime. Estimates by researchers at <a href="https://arxiv.org/abs/2510.10967">Google Quantum AI</a> imply that solving one particular OPI problem would take about three months on <a href="https://www.olcf.ornl.gov/frontier/">Frontier</a>, one of the world’s most powerful supercomputers, compared with roughly an hour on a future quantum computer running DQI. Most of that hour would be spent on Reed–Solomon decoding.</p>
+<p>So, we asked Claude to design a more efficient quantum circuit for the decoding step. Claude quickly concluded that the extended Euclidean algorithm was a poor fit for a quantum circuit. Instead, it organized its circuit around a different decoding method, known as Berlekamp–Massey decoding, which reads through syndromes (summaries of errors) one at a time and gradually works out the simplest rule that predicts each number in the list based on the ones that came before it. Once that rule is found, it reveals the errors. Unlike the extended Euclidean algorithm, Berlekamp–Massey performs the same kind of step in every round and always runs the same number of rounds, which suits a quantum circuit’s single fixed sequence of gates, ultimately giving Claude a much more efficient foundation to build on.</p>
+<h3 id="a-simplified-approach-to-storage">A simplified approach to storage</h3>
+<p>Switching to Berlekamp–Massey removed the need for the circuit to take different paths for different inputs. But making it reversible introduced another challenge, this time as a result of the uncomputing constraint discussed above. In every round, the circuit calculates temporary values that it needs only briefly, but this information can’t simply be deleted: to uncompute it later, the circuit has to be able to recover that information. </p>
+<p>Storing this information would have been prohibitively expensive. So Claude took the same kind of approach as it had for divsteps: it found a way to reconstruct most of this information from the circuit’s current state, so it didn’t need to be stored. However, a few exceptional values couldn’t be recovered in this way and had to be saved.</p>
+<p>Setting aside enough memory for the worst possible case, in which an exceptional value arises in 35 different rounds, would take 665 qubits. Instead, Claude wrote a high-speed simulator and ran 403 million sample decodings to measure how often these exceptions actually occurred. Almost every run needed to save one value at most. So Claude’s circuit sets aside room for just one saved value, or 19 qubits. About one run in 10,000 needs more than that and fails, which is well within the error rate the task allows. These improvements replaced large, worst-case reserves with a small, fixed number of qubits and gates (Figure 4).</p>
+<p>Together, these optimizations reduced the number of gates in the decoder by a factor of 12 relative to <a href="https://arxiv.org/abs/2510.10967">Google’s previous construction</a>. The improvement came from redesigning the computation at three levels: a different method (replacing the extended Euclidean algorithm with Berlekamp–Massey decoding), a different circuit architecture (reconstructing temporary values instead of storing them), and a different resource budget (measuring precisely how much memory and computation the circuit really needed). No single change would have been enough on its own, but together, they make the most expensive step of DQI just a little over an order of magnitude cheaper.</p>
+<figure><img height="1650" src="https://www.anthropic.com/_next/image?url=https%3A%2F%2Fwww-cdn.anthropic.com%2Fimages%2F4zrzovbb%2Fwebsite%2F340e106a0a928c4736aa5ccd865b4d6eeb3a5611-3840x1650.png&amp;w=3840&amp;q=75" width="3840"/><figcaption>Figure 4: Three designs for the locator step of the Reed–Solomon decoder. The designs are drawn to scale: each block’s width is proportional to its gate count. (a) The previous design, based on the extended Euclidean algorithm (Khattar et al., 2025). (b) A design based on Berlekamp–Massey needs far fewer gates, but a naive reversible version has to store a 12-qubit record in every round, adding up to 840 qubits. (c) Claude’s circuit reconstructs most of the history from the updated state, so it needs to have room only for a single saved value of 19 qubits.</figcaption></figure>
+<h2 id="what-we-learned">What we learned</h2>
+<p>Scientific progress often comes from making theoretical ideas practical. One of the main ways this happens is by making a process that was once thought to be impractical fast and cheap enough to carry out. Quantum circuit design is a prime example: the 150,000-fold drop in the FeMoco estimate described above took many research groups eight years, with each step typically representing months of work. By contrast, Claude’s elliptic-curve design was the result of a single 53-hour run.</p>
+<p>Our results suggest that AI can support the work of circuit design, producing implementations that bring useful quantum computations closer to the capabilities of real hardware. If AI can speed up that work, useful quantum computing could arrive sooner.</p>
+<p>Despite Claude’s encouraging performance on these tasks, we also observed some limitations. In our early experiments, Claude was conservative by nature. It repeatedly second-guessed apparent improvements, and sometimes continued to double- and even triple-check results that were already well supported. This caution was sometimes valuable: for example, it prompted Claude to write Lean proofs to verify its divsteps design. But it also manifested in a tendency to prefer existing, well-known approaches to more novel ones. </p>
+<p>We took two steps to mitigate this. First, our setup required Claude to propose several qualitatively different approaches, and to develop them in parallel. Second, we also occasionally prompted Claude to broaden its search. These interventions succeeded in getting Claude to pursue more ambitious ideas. The elliptic-curve result, for example, didn’t come from shaving gates off of a pre-existing design but from exploring a method of doing reversible modular inversion that hadn’t been possible previously, and then deriving the mathematical results needed to make it practical. Once it had come up with the idea, Claude developed the approach, implemented it, and verified its correctness autonomously.</p>
+<p>Circuit design is only one part of building a useful quantum computer. Because qubits are so fragile, the machine must also catch and fix its own errors as it runs, and that depends on many other components, ranging from error-correcting codes to fast decoders to control of the hardware itself. These components all affect one another, but to manage complexity, each is usually designed separately. Many of them share the characteristics that made circuit design a good fit for Claude: a design can be written as code, checked for correctness, and scored by its cost. </p>
+<p>This raises an intriguing possibility. Rather than designing each component on its own, AI could optimize all of them jointly, from the algorithm down to the hardware, to build an entire error-corrected quantum computer tailored to a specific problem. Such designs could also tell hardware builders which capabilities matter most for a given application. That could put problems such as designing catalysts and understanding new materials within reach of the first fault-tolerant machines.</p>
+<h2 id="acknowledgments">Acknowledgments</h2>
+<p>We thank Arjun Kar and Vinay Ramasesh for helpful discussions in the early stages of the project.</p>]]></content:encoded>
+      <guid isPermaLink="true">https://www.anthropic.com/research/designing-efficient-quantum-circuits</guid>
+      <category>Science</category>
+      <pubDate>Fri, 16 Oct 2026 00:00:00 +0000</pubDate>
+      <media:content url="https://www.anthropic.com/_next/image?url=https%3A%2F%2Fwww-cdn.anthropic.com%2Fimages%2F4zrzovbb%2Fwebsite%2Fd5d27ec3f141696918c6bed3f6b887f5b84e75f0-3840x2430.png&amp;amp;w=3840&amp;amp;q=75" type="image/jpeg" medium="image"/>
+    </item>
+    <item>
+      <title>The AI expectations gap</title>
+      <link>https://www.anthropic.com/research/ai-expectations-gap</link>
+      <description>How will AI reshape the economy in the years ahead? What is the core source of disagreement about AI's future impact on the economy? This note presents new survey evidence on these questions.</description>
+      <content:encoded><![CDATA[<p><em>Szymon Sacher, Tess Cotter, Charles I. Jones, Anton Korinek, Peter McCrory</em></p>
+<h2 id="key-findings"><strong>Key findings</strong></h2>
+<ol><li>US adults expect AI capabilities to advance rapidly in the coming years; Anthropic staff expect even faster progress; 39% of US adults and 91% of staff expect that AI will be able to make a Nobel-level discovery by 2030.</li><li>Anthropic staff expect much larger productivity gains from AI on the tasks it is well-suited for. Among US adults who use AI at work, 26% say a task takes a quarter of the time or less with AI, compared to 59% of Anthropic staff.</li><li>When it comes to their own job, over half of Anthropic staff expect AI to be able to do at least 80% of their current work by 2030, compared with 5% of US workers.</li><li>Among both US workers and Anthropic staff, people who expect AI to do more of their own work anticipate higher unemployment. While there are differences in beliefs about future capabilities, the perceived link between how AI might change one’s own job and broader unemployment is very similar for both groups.<br/></li></ol>
+<h2 id="introduction"><strong>Introduction</strong></h2>
+<p>How will AI reshape the economy in the years ahead? AI capabilities are advancing rapidly, and the possibility that future AI models may be able to build their own successors (recursive self-improvement) could further accelerate the rate of progress. How quickly this might materialize and to what extent is unclear. Forecasts vary widely and are fiercely debated.</p>
+<p>What is the core source of disagreement about AI's future impact on the economy? Is it principally due to differences in beliefs about how quickly AI capabilities will improve? Or does it reflect disagreement about how quickly and in what form those capabilities translate to real-world adoption? Which views on the future path of AI are consistent with rapid economic growth?</p>
+<p>This note presents new survey evidence on these questions. In August 2026, we surveyed two groups: a sample of US adults that was nationally representative and Anthropic staff.<sup><a href="#footnote-1">1</a></sup> The questions covered, among other things, AI’s capabilities, how widely it will be used, how much time it saves, how autonomous it will be, and how difficult it will be for a displaced worker to find a job in a different occupation.<sup><a href="#footnote-2">2</a></sup> Anthropic staff build and use frontier AI every day. The second survey therefore shows how people closest to the technology anticipate its future, both in capabilities and in broader economic impact.</p>
+<p>We report the following main findings. First, the two groups largely agree about what AI can do today but disagree about the pace of future progress. Anthropic staff expect capabilities to advance faster, AI to be used more widely and with less human involvement, and the time it saves on a task to be much larger. For example, 91% of staff expect AI to be able to make a Nobel-level discovery by 2030, compared to 39% of US adults.</p>
+<p>Second, there are sharp differences concerning people's own jobs. On average, staff members expect AI to be able to do 75% of their current work by 2030, compared to 28% for US workers overall.</p>
+<p>Third, the two groups seem to reason about the labor market in a similar way: people who expect AI to do more of their own work in the future forecast higher unemployment. And, at the same level of expected AI automation of their own work, both groups forecast about the same unemployment rate.</p>
+<h2 id="what-people-expect-ai-to-do"><strong>What people expect AI to do</strong></h2>
+<h3 id="capabilities"><strong>Capabilities</strong></h3>
+<p>We first investigate expectations about AI capabilities. We asked when AI will be able to do each of eight tasks as well as a skilled professional, from writing routine emails to making a Nobel-level scientific discovery. US adults and Anthropic staff largely agree on what AI can do today, particularly when it comes to more complex tasks. Both groups rank tasks in nearly the same order of difficulty (Figure 1, panel A).</p>
+<p>The groups disagree on the path of future AI progress. For example, around a quarter of US adults and Anthropic staff think that AI can design, conduct, and publish scientific studies today. But by next year, 9 in 10 staff expect this to be feasible for AI as compared to just 38% for the general public. By 2030, 39% of US adults expect AI to be able to make a Nobel-level discovery (panel C), compared with 91% of staff. What is perhaps the most striking difference, depending on the task, between 19 and 40% of US adults say AI will <em>never</em> be able to do a given task, compared with at most 2% of staff.</p>
+<p>In part, differences in views reflect differences in frequency of AI use. Among those who use AI at work regularly (about a fifth of respondents), 56% expect AI to be able to do at least seven of the eight named tasks by 2030. This is substantially higher than among all US adults (41%) and among those who have never used an AI tool (28%), but still well short of the staff view (96%).</p>
+<figure><img height="1262" src="https://www.anthropic.com/_next/image?url=https%3A%2F%2Fwww-cdn.anthropic.com%2Fimages%2F4zrzovbb%2Fwebsite%2F0f1da70f67b1d1106cf896237abb69033ff810e5-1920x1262.png&amp;w=3840&amp;q=75" width="1920"/><figcaption><strong>Figure 1: Share of respondents who expect AI to be able to complete the listed tasks as well as a skilled professional.</strong> Respondents were asked when AI will be able to complete these tasks, regardless of whether companies will actually use it. Panels show the share answering (A) already, (B) by 2027, and (C) by 2030. US adults’ responses (N=10,980) are weighted to be nationally representative, Anthropic staff responses are unweighted.</figcaption></figure>
+<h2 id="adoption-and-its-obstacles"><strong>Adoption and its obstacles</strong></h2>
+<p>The impact of AI on the economy is not solely determined by raw capabilities. People and businesses need to actually use AI, which takes time and experimentation. Of the work tasks AI will be able to do, US adults expect that 42% will be done with AI by 2030. Anthropic staff expect noticeably faster diffusion over the next few years, with AI used for 65% of all tasks for which it could be used.</p>
+<p>To understand what might hold back AI adoption at work, we asked US adults to choose up to three obstacles from a list of nine that they expect to be the biggest. The general public expects that people's preferences and rules, more than the technological constraints, may be what holds adoption back (Figure 2). “Customers preferring to deal with a person” was the obstacle selected most often, followed by “data privacy and security concerns,” “AI not being reliable enough,” and “laws, regulations or liability.”</p>
+<figure><img height="1348" src="https://www.anthropic.com/_next/image?url=https%3A%2F%2Fwww-cdn.anthropic.com%2Fimages%2F4zrzovbb%2Fwebsite%2Fee5b9b5d8af4bc1f38cc3451e98a15e6d38aa067-1920x1348.png&amp;w=3840&amp;q=75" width="1920"/><figcaption><strong>Figure 2: Obstacles to AI use at work in 2030 named by US adults.</strong> Respondents were told that businesses do not always use AI even when it is technically capable of doing a task, and were asked which of nine obstacles will be the biggest to AI being used at work in 2030. Each could choose up to three, so shares sum to more than 100%. We did not ask this question to Anthropic staff.</figcaption></figure>
+<p><br/>Notably, US adults who use AI regularly at work rank data privacy and security concerns first (42% consider it among the top 3 obstacles, compared with 37% among the rest) and see customer preferences to deal with humans as slightly less important (37% vs 42%).</p>
+<h2 id="how-autonomous-ai-will-be"><strong>How autonomous AI will be</strong></h2>
+<p>The impact of AI on the labor market will in part depend on whether AI completes complex tasks autonomously or in collaboration with a human. The former tends to displace human workers. Alternatively, when AI complements human capabilities, workers become more productive. To get a sense for anticipated automation versus augmentation in 2030 among Anthropic staff and the general public, we asked how AI and humans will work together on various tasks ranging from email drafting to legal contracting by 2030. At Anthropic, the vast majority of staff say that by 2030 AI will either complete tasks alone or with a worker evaluating the work (Figure 3). By contrast, 4 in 10 US adults instead expect that humans will do most of the work themselves or with some AI help.</p>
+<figure><img height="1204" src="https://www.anthropic.com/_next/image?url=https%3A%2F%2Fwww-cdn.anthropic.com%2Fimages%2F4zrzovbb%2Fwebsite%2F28963a3d0ad7315ec336b3cac3b0547324e02f0d-1920x1204.png&amp;w=3840&amp;q=75" width="1920"/><figcaption><strong>Figure 3: Share of respondents who expect AI to do each task alone or with a worker checking.</strong> Respondents were asked to imagine that AI is useful for each of the five tasks and asked who will be doing them: AI alone; AI does most of it, with workers checking; workers do most of it, with AI helping; or workers alone. Bars show the share choosing either of the first two.</figcaption></figure>
+<h4 id="time-savings">Time savings</h4>
+<p>How much AI raises output depends not only on which tasks it can do and how widely it is used, but also on how much faster and better it does them. A technology that is just good enough to replace workers—what Acemoglu and Restrepo (2019) call a "so-so" technology—displaces work without much increase in GDP. By contrast, a technology that completes tasks at a small fraction of cost or in a fraction of time can meaningfully raise GDP.</p>
+<p>To measure perceptions about the productivity lift from AI, we asked the general public and Anthropic staff how long a task for which AI is well suited takes with AI, compared with doing it without AI. A task done in half the time corresponds to a doubling of output per hour.<sup><a href="#footnote-3">3</a></sup></p>
+<p>Anthropic staff report much larger expected savings, with 85% saying that it takes half the time or less. Among US adults who use AI at work, the typical answer is half the time, and 29% say the task takes just as long or longer, while only 5% of staff say so. Among US adults, 26% of those who use AI at work say a task takes a quarter of the time or less, and 21% of those who do not use AI at work say the same. For staff, that share is 59% (Figure 4).</p>
+<p>Staff may be describing what they experience at work. As discussed further in <a href="http://anthropic.com/research/employment-at-anthropic"><em>How Employment is Changing at Anthropic</em></a>, Anthropic employees increased productivity on some dimensions after adopting agentic tools: the lines of code engineers added tripled in the month after adopting coding agents and sales representatives closed more deals with clients after adopting AI agents. Output per person also rose in other business functions, like legal and recruiting.</p>
+<figure><img height="876" src="https://www.anthropic.com/_next/image?url=https%3A%2F%2Fwww-cdn.anthropic.com%2Fimages%2F4zrzovbb%2Fwebsite%2F4c3da1aa5e255c4f6fe62ef2dfb521473ac8d105-1920x876.png&amp;w=3840&amp;q=75" width="1920"/><figcaption><strong>Figure 4: Share of respondents who say a task takes a quarter of the time or less with AI.</strong> Respondents were asked to think of a task that today's AI is well suited for, such as summarizing a document or drafting an email, and how long it takes to finish using AI, counting the time spent checking and fixing its work, compared with not using AI. Bars show the share answering "about a quarter of the time" or "about a tenth of the time or less." Figure A2 shows all answers.</figcaption></figure>
+<h2 id="own-work-and-jobs"><strong>Own work and jobs</strong></h2>
+<h3 id="how-much-of-their-own-work-ai-will-be-able-to-do"><strong>How much of their own work AI will be able to do</strong></h3>
+<p>Perhaps unsurprisingly, we find a large gap in perceptions between the general public and Anthropic staff when it comes to AI’s impact on their own jobs (Figure 5). On average, Anthropic staff members say AI will be able to do 75% of their current work hours by 2030. US workers (respondents who report having a job) put the share at 28% on average, and only 1 in 20 say that AI could do 80% or more of their work hours by 2030.</p>
+<p>Across US workers, expectations vary by occupation: AI is expected to be able to do 25% of work hours among manual trades, production and transport workers and 33% for workers in computer, engineering and science occupations. For this latter group, those who use AI regularly expect only 40%, a belief that is closer to the average US worker than to the average Anthropic staff member (75%).</p>
+<figure><img height="1026" src="https://www.anthropic.com/_next/image?url=https%3A%2F%2Fwww-cdn.anthropic.com%2Fimages%2F4zrzovbb%2Fwebsite%2F23b4644432371743e7aab1c386977d1157826002-1920x1026.png&amp;w=3840&amp;q=75" width="1920"/><figcaption><strong>Figure 5: Share of their own work hours that respondents expect AI to be able to do by 2030. </strong>Share of the respondent's current work hours that AI will be able to do by 2030. The US adults sample is restricted to employed respondents only. Staff answered on a slider while US adults choose a range and we use range midpoints. Bars show 95% confidence intervals.</figcaption></figure>
+<h3 id="own-job-exposure-and-unemployment-forecasts"><strong>Own-job exposure and unemployment forecasts</strong></h3>
+<p>How much of their own work people expect AI to do goes a long way toward explaining what they expect for the labor market. We told respondents that the current unemployment rate was about 4.2% and asked them to forecast the rate in 2030. Figure 6 groups respondents by the share of their own hours they expect AI to be able to do by 2030, and shows each group's average unemployment rate forecast.</p>
+<p>US workers who expect AI to be able to do less than half of their work forecast unemployment of 7 to 8%. Above half, the forecast increases with the share of AI-exposed work. Those who expect AI to do 80% or more of their work expect, on average, an unemployment rate of 12.2% in 2030, above its peak during the Great Financial Crisis. Across US workers, ten more percentage points of work affected is associated with 0.4 points more forecasted unemployment. General optimism about AI does not explain this. Holding their own work exposure fixed, the share of the eight tasks a worker expects AI to master is unrelated to the forecast.</p>
+<p>Even though their own reported exposure is much higher, the same gradient appears among Anthropic staff, with forecasts closely mirroring those of the general population. Therefore, these two groups do not seem to hold different theories of how AI will simultaneously affect their own jobs and the broader labor market. They have different experiences of what AI capabilities are and, in turn, expectations.</p>
+<figure><img height="1527" src="https://www.anthropic.com/_next/image?url=https%3A%2F%2Fwww-cdn.anthropic.com%2Fimages%2F4zrzovbb%2Fwebsite%2Ff9e98906000b6ff03c73ab6aaa9a71cbc2e85020-1920x1527.png&amp;w=3840&amp;q=75" width="1920"/><figcaption><strong>Figure 6: Mean forecast of the 2030 unemployment rate, by the share of their own work hours that respondents expect AI to be able to do.</strong> Respondents were told that the US unemployment rate is 4.2% today and asked what they expect it to be in 2030. Panel (A) groups employed respondents by the share of their current work hours they expect AI to be able to do by 2030, and shows each group's mean forecast and 95% confidence interval. Groups with fewer than 20 respondents are omitted. Panel (B) shows the share of US workers and of Anthropic staff in each group.</figcaption></figure>
+<h2 id="hiring-and-re-employment"><strong>Hiring and re-employment</strong></h2>
+<p>Even though Anthropic staff expect AI to be able to do most of their work, they also expect Anthropic to keep hiring. 95% of Anthropic staff expect headcount to grow over the next 12 months, the median staff member expects it to grow by 66%, and 27% expect it at least to double. These are the personal expectations of staff members in an internal poll and do not represent Anthropic's plans or its view of its headcount. Even so, they show that automating tasks and shedding jobs are different forecasts, at least at a frontier AI lab.</p>
+<p>Anthropic staff, however, are slightly more pessimistic than US adults about how quickly workers displaced by AI can find new work. We asked how long it would take a person who loses their job to AI automation in 2030—and who needs to switch occupations—to find a new one.<sup><a href="#footnote-4">4</a></sup> The median Anthropic staff member expects that a worker displaced by AI would take 12 months to find a role in a new occupation. This compares to the median US adult response in the range of 7-12 months.</p>
+<h2 id="expectations-about-ai-and-their-economic-implications"><br/><strong>Expectations about AI and their economic implications</strong></h2>
+<h3 id="mapping-survey-responses-to-model-implied-economic-scenarios"><strong>Mapping survey responses to model-implied economic scenarios</strong></h3>
+<p>In <a href="https://www-cdn.anthropic.com/files/4zrzovbb/website/cf58f84d46a4a76bf5a5b039ac695fba6b80041c.pdf"><em>Economic Scenarios for Transformative AI</em></a> we introduced a structured framework for assessing how different future paths for AI capabilities and diffusion might translate into differences in economic outcomes. The model allows us to translate each respondent’s answers across five dimensions — capabilities, diffusion, automation, productivity, and worker transition frictions — into model-implied economic outcomes.<sup><a href="#footnote-5">5</a></sup> Across both our US adult and Anthropic staff samples, we identify every respondent who answered all questions related to the key model inputs (3,259 US adults and 1,093 staff). We then evaluate the economic scenario implied by those answers for each respondent, focusing below on implications for GDP growth in 2030.</p>
+<p>The median US adult's answers imply GDP growth of 5.4% in 2030, according to the model. The median staff member's answers imply GDP growth accelerating to 17.1% by 2030. There is significant variation within each group, so the distributions overlap widely (Figure 7). Figure A1 in the appendix shows how much each belief contributes to this gap.</p>
+<h3 id="responses-from-online-scenario-explorer-quiz"><strong>Responses from online scenario explorer quiz</strong></h3>
+<p>Figure 7 also shows the economic scenarios implied by inputs provided by site visitors to an interactive scenario explorer based on this economic model that was published at <a href="https://www.anthropic.com/institute/econ-scenarios">www.anthropic.com/institute/econ-scenarios</a> on September 9, 2026.</p>
+<p>The interactive explorer asked shorter form versions of the questions we fielded to US adults and Anthropic staff in August 2026. 23,075 visitors completed the survey in the first 48 hours after publication, connecting from more than 140 countries worldwide. These visitors chose to come to a page on Anthropic's website and to take the quiz, so they are likely to be more interested in AI than the general public. Indeed, their answers place them between those of US adults and Anthropic staff: the median visitor's answers imply 12.5% growth.</p>
+<figure><img height="1080" src="https://www.anthropic.com/_next/image?url=https%3A%2F%2Fwww-cdn.anthropic.com%2Fimages%2F4zrzovbb%2Fwebsite%2Fd4b5d6daebc5d653cfee156baff992ddf9b22a50-1920x1080.png&amp;w=3840&amp;q=75" width="1920"/><figcaption><strong>Figure 7: Model-implied GDP growth in 2030, based on the expectations of US adults, website visitors and Anthropic staff.</strong> Each respondent's answers to the five questions on capabilities, adoption, autonomy, time savings and re-employment are run through the model from Economic Scenarios for Transformative AI; see Appendix B therein for details. The thick bar spans the 25th to 75th percentile and the thin line the 10th to 90th percentile. Dotted lines mark three scenarios laid out in the paper: Modest (annual GDP growth of 2.4%), Substantial (5.4% GDP growth) and Extreme (15.4% GDP growth). The figure includes respondents who answered all five questions: 3,259 US adults (2030 half only), 1,093 Anthropic staff, and the 23,075 website visitors who completed the quiz available at <a>anthropic.com/institute/econ-scenarios</a> in the 48 hours after its launch on September 9, 2026.</figcaption></figure>
+<h2 id="inside-the-lab"><strong>Inside the lab</strong></h2>
+<p>One reason staff are more optimistic about AI capabilities may be that they have greater visibility into the development process. The Anthropic Institute recently published a report on progress toward recursive self-improvement (RSI), a process where AI systems increasingly improve their own capabilities (Favaro and Clark, 2026).</p>
+<p>To shed light on whether staff themselves expect this to happen, we asked Anthropic staff what share of the work of building an early-2026 frontier model is done by AI today, and what they expect it to be in the future (Figure 8).<sup><a href="#footnote-6">6</a></sup> Among surveyed Anthropic staff, the median answer today is 51%, 80% by the end of 2027 and 95% by the end of 2030.</p>
+<p>Estimates of the share of work that AI does in AI development vary far more within teams than between them. Still, staff on research teams, who are closest to the work of building models, put AI's share today somewhat higher: 60% on average, against 53% for all other survey respondents. This is consistent with information playing some role, although researchers—by virtue of the nature of their work—may also use AI more in their own work than other employees.</p>
+<p>As with the hiring forecasts, these responses are the personal views of staff members in an internal poll fielded to Anthropic staff in August 2026.</p>
+<figure><img height="954" src="https://www.anthropic.com/_next/image?url=https%3A%2F%2Fwww-cdn.anthropic.com%2Fimages%2F4zrzovbb%2Fwebsite%2F24428d3d8dc7ffe8e60a8218db2570d491ea47b1-1920x954.png&amp;w=3840&amp;q=75" width="1920"/><figcaption><strong>Figure 8: Anthropic staff's estimates of the share of the work of building a frontier model that is done by AI.</strong> Anthropic staff were asked what share of the work of building an early-2026 frontier model is done by AI today, and what they expect that share to be at the end of 2027 and 2030. The tick marks the median answer, the boxes span 25th to 75th percentile, and the lines span 10th to 90th percentile. Answers are the personal estimates of staff members in an internal poll and are not a measurement by Anthropic or a company forecast.</figcaption></figure>
+<h2 id="conclusion"><strong>Conclusion</strong></h2>
+<p>US adults and Anthropic staff largely agree about what AI can do today. However, they disagree about how quickly it will improve, how widely it will be used, and how large the productivity gains measured by time saved will be. Through the lens of the model in <a href="https://www.anthropic.com/institute/econ-scenarios">Economic Scenarios for Transformative AI</a>, the median US adult's answers imply a scenario in which the US economy grows at more than twice its typical rate. Among Anthropic staff working at the frontier of AI development and usage, expectations about AI progress, adoption, and automation of knowledge work imply a transformative and historically unprecedented change to the economy: by 2030, GDP is doubling in size roughly every four and a half years.</p>
+<p>Those who expect AI to do more of their own work in the years ahead expect higher unemployment as well. This is true for the general public in the US and among Anthropic employees; on average, Anthropic staff expect faster automation of their own work and, in turn, higher unemployment. We find that this disagreement in expectations is closely tied to differing views between Anthropic staff and the general public about how much of their own work will be automated in the years ahead.</p>
+<p>The day-to-day experience with AI varies widely between the two groups. Most Anthropic staff already work alongside AI that does much of their job, whereas few US workers do. Those who do already hold expectations closer to those of Anthropic staff, which suggests that public expectations may shift as AI use spreads. How far they shift will depend on whether AI comes to do as much of the work elsewhere as it does at a frontier lab.</p>
+<h3 id="suggested-citation">Suggested citation</h3>
+<pre><code>@techreport{sacher2026expectations,
+	author = {Sacher, Szymon and Cotter, Tess and Jones, Charles I. and Korinek, Anton and McCrory, Peter},
+	title = {The {AI} Expectations Gap: Public and Frontier Lab Views on {AI}'s Impact on Work},
+	institution = {The Anthropic Institute},
+	type = {Technical Report},
+	year = {2026},
+	month = oct,
+	url = {https://www.anthropic.com/research/ai-expectations-gap}
+}</code></pre>
+<h3 id="acknowledgments">Acknowledgments</h3>
+<p>Scott Booth, Meredith Callan, Yena Cho, Adam Farina, Ben Fowler, Ryan Heller, Aisling Keenan, Eva Lyubich, Maxim Massenkoff, Matt Mohn (Morning Consult), Matt Monday (Morning Consult), Kerry Persen, Sarah Pollack, Santi Ruiz, Monika Tuchowska, Heather Whitney, Nathan Wilmers, Kim Withee, Charles Yang, Jack Clark, Dario Amodei</p>
+<h3 id="references">References</h3>
+<p>Acemoglu, D. and P. Restrepo (2019). "Automation and New Tasks: How Technology Displaces and Reinstates Labor." Journal of Economic Perspectives 33(2), 3–30.</p>
+<p>Favaro, M. and J. Clark (2026). “When AI Builds Itself.” The Anthropic Institute. <a href="https://www.anthropic.com/institute/recursive-self-improvement">https://www.anthropic.com/institute/recursive-self-improvement</a>.</p>
+<p>Korinek, A., C. I. Jones, S. Sacher, T. Cotter and P. McCrory (2026). "Economic Scenarios for Transformative AI." The Anthropic Institute Working Paper No. 2026-02.</p>
+<p>Massenkoff, M., E. Lyubich, S. Sacher, Z. Hitzig, S. Zhang, R. Heller and P. McCrory (2026). “Anthropic Economic Index report: Cadences.” The Anthropic Institute. <a href="https://www.anthropic.com/research/economic-index-june-2026-report">https://www.anthropic.com/research/economic-index-june-2026-report</a>.</p>
+<p>Wilmers, N., R. Catipon, M. Massenkoff and P. McCrory (2026). “How Employment is Changing at Anthropic.” The Anthropic Institute. <a href="https://www.anthropic.com/research/employment-at-anthropic">https://www.anthropic.com/research/employment-at-anthropic</a>.</p>
+<h3 id="appendix">Appendix</h3>
+<p>Available <a href="https://www-cdn.anthropic.com/1bc1a3067f9c9883d6d556b38f26fd4f1e1b640f/The AI Expectations Gap - Appendix.pdf">here</a>.</p>]]></content:encoded>
+      <guid isPermaLink="true">https://www.anthropic.com/research/ai-expectations-gap</guid>
+      <category>Economics</category>
+      <pubDate>Fri, 16 Oct 2026 00:00:00 +0000</pubDate>
+      <media:content url="https://www.anthropic.com/_next/image?url=https%3A%2F%2Fwww-cdn.anthropic.com%2Fimages%2F4zrzovbb%2Fwebsite%2F0f1da70f67b1d1106cf896237abb69033ff810e5-1920x1262.png&amp;amp;w=3840&amp;amp;q=75" type="image/jpeg" medium="image"/>
+    </item>
+    <item>
+      <title>How employment is changing at Anthropic</title>
+      <link>https://www.anthropic.com/research/employment-at-anthropic</link>
+      <description>How has AI restructured work and employment at Anthropic? As a company at the frontier of AI adoption, Anthropic could be a leading indicator of how AI will shift work organization, hiring, and labor demand across the economy.</description>
+      <content:encoded><![CDATA[<p><em>Nathan Wilmers, Regina Catipon, Maxim Massenkoff, Peter McCrory</em></p>
+<p>How has AI restructured work and employment at Anthropic? As a company at the frontier of AI adoption, Anthropic could be a leading indicator of how AI will shift work organization, hiring, and labor demand across the economy.</p>
+<h2 id="key-findings">Key findings</h2>
+<ul><li>Anthropic has been hiring for a smaller share of junior technical positions. This occurred as hours worked by AI agents relative to employees rapidly expanded. By August interactive AI agent hours outnumbered employees’ 6 to 1.</li><li>As AI agents diffused through the company, Anthropic began producing more code per person, closing more sales per rep, and processing more contracts. Following the same employee over time, output rose as they adopted new AI tools.</li><li>This acceleration makes human attention the bottleneck for agent output. Even among non-technical employees, reading all the output of their Claude agents would take half their work week. In response, employees turn to “meta-work,” of building visibility tools and monitoring agent pipelines.</li><li>Changes in work organization are reflected in shifting priorities among hiring managers, who increasingly emphasize autonomy and judgment, relative to technical domain expertise and implementation.</li></ul>
+<h2 id="introduction">Introduction</h2>
+<p>What transformations of work and employment can we expect under increasingly powerful AI? Anthropic is worth studying because it has thoroughly molded its workflows around AI. Agents flit through Slack chats and schedule meetings. They autonomously fix bugs and collectively tackle huge engineering projects. Agent hours worked outnumber human hours 6 to 1. Changes happening at Anthropic now give advanced signals about a possible future of work and employment.</p>
+<p>This report draws on comprehensive internal Anthropic data covering employment, AI use, output metrics, employee surveys, internal communication patterns, employee calendar data, and hiring decision records. It contextualizes these quantitative data with 17 employee interviews.</p>
+<p>We find that even as the company grows, relative hiring in junior technical positions has slowed. Productivity for both engineers and non-technical employees has leapt up and did so sharply when they adopted coding agents. Hiring managers increasingly emphasize applicants’ autonomy and judgement relative to specific technical expertise. A defining feature of working in an AI-heavy organization is constant pressure to streamline oneself out of this bottleneck position when possible. One engineer described work as facing “an army of Claudes, with every one asking for my attention.” Employees at Anthropic remain critical. But the nature of their contributions has changed.</p>
+<p>Anthropic has responded to these changes by setting up an early warning system to track jobs at risk of disruption, and as jobs evolve the company has prioritized internal redeployments. These actions, taken at the frontier of both AI development and workplace change, show how specific organizational commitments can shape the impact of AI on employment. But they also raise difficult questions about exactly what those commitments should be.</p>
+<h2 id="labor-demand-at-the-frontier">Labor demand at the frontier</h2>
+<p>Anthropic has expanded rapidly. But it has hired less per dollar of revenue than an earlier generation of large tech companies. At five years old, Anthropic takes in between 2–4 times as much revenue per employee as Meta and Google as they crested in their own rapid growth.<sup><a href="#footnote-1">1</a></sup></p>
+<p>What jobs are missing? Within Anthropic, discussion of a decline in demand for junior technical employees emerged in core technical functions in January 2026. The teams that relied most heavily on Claude in their own work found that writing code and finding bugs could increasingly be offloaded to Claude. Newly capable models accelerated this perception: “the thing that raised eyebrows was the uplift for performance engineers in particular and it basically overnight changed what we were looking for.”</p>
+<p>By April, engineering and research teams had deemphasized hiring for lower band technical positions. When surveyed in the same month, a majority of managers described hiring for a different set of skills due to AI. Around a third of ML and a fifth of SWE managers reported hiring less due to AI.</p>
+<p>The shift in employment shares is striking. Figure 1 shows that the share of junior-level employees in technical departments at Anthropic slipped from 21% to 14% since early 2025. The proportion of junior technical hires fell even faster, from 27% to 9%. Postings for juniors have fallen particularly sharply since December 2025.</p>
+<figure><img height="1080" src="https://www.anthropic.com/_next/image?url=https%3A%2F%2Fwww-cdn.anthropic.com%2Fimages%2F4zrzovbb%2Fwebsite%2Fe5dc89d3bceb2fcb9509ec35aa22f11131a9d8eb-1920x1080.png&amp;w=3840&amp;q=75" width="1920"/><figcaption><strong>Figure 1: Decline of entry-level technical hiring at Anthropic.</strong></figcaption></figure>
+<p>At the same time, the overall employment share of technical departments within Anthropic has fallen, from 61% to 56% in the last year. As the company expands, technical hiring has continued growing in absolute terms, but intensive hiring in sales, finance, and recruiting has outpaced it. Part of this shift is the natural expansion of business functions as the company scales. Part could reflect coding tools increasingly allowing non-technical employees to make software themselves. For example, a sales representative designed a custom dashboard and pipeline tailored to their work: “a build like this was out of my wheelhouse, especially with the UI, connecting all the tools, the MCPs. But I built this probably in three to four hours, just iterating on it.” Coding-focused AI agent sessions for non-technical employees (identified as those with no code commits at baseline, excluding new hires) leapt from 2 per month in August 2025 to 90 in May 2026.</p>
+<p>Yet this shift in hiring composition is not only a story about automated coding allowing it to diffuse to <a href="https://www.anthropic.com/research/claude-code-expertise">other domain experts</a>. Within technical departments, the share of employees not actively coding (defined as those making no code commits in the prior 30 days) fell by almost half over the year through April 2026. Part of this is due to a thinning share of non-engineers: the ratio of engineers to product managers, for example, sits at around 17 to 1 and has increased since 2025. The number of commits from managers has also doubled. The supervising and coordinating roles within technical teams increasingly involve building and shipping code.</p>
+<p>One area in which non-technical hiring has not accelerated is in the administrative functions that typically scale with a company’s size. A combination of agent assistants, automated review and ticket service outsourcing has left Anthropic clerical-light even as it has grown rapidly. A financial manager built a purchase request review agent and explained to colleagues “it's just trying to find the things that take a lot of hours so they can focus on the other stuff.”</p>
+<p>Even clerical work tightly connected to in-person interaction has grown slowly. An executive assistant, who built a personal assistant agent for scheduling and email triage, explained: “I think we've already moved past the point of Claude augmenting away the really entry-level admin type role,” and instead focused their work on higher-order “chief of staff” tasks.</p>
+<p>These changes have already involved reallocation: employees working at the company for at least a year were 50% more likely to move across departments each month in 2026 than they were in 2025. Whole teams have also been reallocated as they handed off their work to agents. Consider one product design team, which wrote content like the greetings on Claude.ai: “Hello night owl;” “Coffee and Claude time?” In spring 2026, the team developed a context graph that effectively guided agents to write compelling product content. This “scaled the team out,” its manager explained, but also raised the question of what was left for human writers. The team then rotated into agent prompting and began writing model evals and prompts for Claude. “Writers who used language to drive human behavior are now using it to drive Claude behavior.”</p>
+<h2 id="is-ai-driving-productivity-increases-at-anthropic">Is AI driving productivity increases at Anthropic?</h2>
+<p>Are these shifts attributable to AI? At Anthropic, humans are a thin layer atop a growing contingent of AI agents. Based on agent session telemetry, in March 2026, the sum of autonomous and interactive agent work hours leapt past human work hours for the first time. Part of this is fleets of agents conducting industrial scale software engineering, filling in myriad routine tests and checks, conducting maintenance on a growing mass of infrastructure code, and driving concerted campaigns to translate massive codebases. But even narrowing in on the agents deployed by individual employees, as in Figure 2, by August the agents worked 6 times as many hours as their human handlers.</p>
+<figure><img height="1080" src="https://www.anthropic.com/_next/image?url=https%3A%2F%2Fwww-cdn.anthropic.com%2Fimages%2F4zrzovbb%2Fwebsite%2F042b829f8c8850b596dfb6feaa323d1e911b21bb-1920x1080.png&amp;w=3840&amp;q=75" width="1920"/><figcaption><strong>Figure 2: Agent hours overtake human hours. </strong>Note: We limit to employee-directed interactive sessions and pool subagents. Working time concept is agent runtime, including inference and active tool use, but excluding any wait longer than 30 minutes. Human work hours are calculated as headcount and assumed 40 hours per week.</figcaption></figure>
+<p>Anthropic is a software producer, and the vast bulk of tokens flowing through these agents is spent producing software code. Dashboards monitor fleets of agents operating across the company. But personal assistant agents also monitor employee calendars and messages, scheduling, sending to-do lists accumulated from incoming messages, and automatically briefing employees on the people and purpose of their upcoming meetings. Tokens touch a growing range of everyday work tasks.</p>
+<figure><img height="1252" src="https://www.anthropic.com/_next/image?url=https%3A%2F%2Fwww-cdn.anthropic.com%2Fimages%2F4zrzovbb%2Fwebsite%2F1865c3a561e790824826f29a27c771ce62c67eaf-1920x1252.png&amp;w=3840&amp;q=75" width="1920"/><figcaption><strong>Figure 3: Productivity boom across functions.</strong> Note: Loess smoother fit across underlying indexed output data.</figcaption></figure>
+<p>What do all of these tokens amount to? Figure 3 plots output over time for a range of job functions with measurable output. Consistent with prior reports <a href="https://www.anthropic.com/research/how-ai-is-transforming-work-at-anthropic">surveying Anthropic engineers</a> and describing <a href="https://www.anthropic.com/institute/recursive-self-improvement">automation of model training and research</a>, code commits per engineer have risen the fastest, coming in at 5x their velocity as 6 months ago. Data scientists are also querying the growing mass of Anthropic data more, asking Claude agents to get real-time metrics to dashboards and decisionmakers. But Figure 3 shows that even non-technical employees saw output rise as coding agents diffused: lawyers processed more contracts; accounts payable ushered through invoices; salespeople closed more deals.</p>
+<p>But is all of this due to Claude usage? During this same period, the company saw explosive business growth. It is easier to close deals when you sell a strong model. To assess the independent effect of AI, we compare the output of employees who adopt agentic coding tools to those who have not yet adopted the tools. This lets us compare employees working in the same month at the company, and therefore exposed to a similar business context, but approaching it with different tools. Note however that tool adoption is not random: if employees on the cusp of driving some big new project decide to tool up for it, for example, this would bias our estimates.</p>
+<p>We follow 192 engineers over time as they adopt coding agents, compared to 74 engineers who do not adopt agents during the period studied. Figure 4 shows that in the months following adoption, the amount of code that engineers add rises sharply. More code does not necessarily mean better code or <a href="https://www.nber.org/papers/w35275">business impact</a>. To test for AI code slop, we study code commits made at Anthropic. We compare code committed by the same employee, in the same month, in the same coding directory, but written by coding agents rather than written directly by the human employee. There are many dimensions of code quality, and AI errors may be harder to identify than human ones. But we find no difference in rates of lines of code subsequently removed or reverted.</p>
+<p>Figure 4 also looks at what happens after an engineer adopts their first fully autonomous agent. Those who adopt were already on a steeply upward trajectory compared to non-adopters. This suggests that employees shifting toward fully autonomous agents were already ramping up their output.</p>
+<figure><img height="1641" src="https://www.anthropic.com/_next/image?url=https%3A%2F%2Fwww-cdn.anthropic.com%2Fimages%2F4zrzovbb%2Fwebsite%2F15abba062e588ec86e0f9466f16bccbc701444e3-1920x1641.png&amp;w=3840&amp;q=75" width="1920"/><figcaption><strong>Figure 4: Productivity increases estimated within-person from staggered AI adoption.</strong> Note: Coefficients compare coding agent adopters to non adopters with person and calendar-month two-way fixed effects. Treatment timing is based on the person’s first month with at least 5 agentic sessions. Bars are 95% confidence intervals from standard errors clustered on person. The quality panel compares code written directly by a person to code written by the same person’s coding agent. Quality proxies are the share of lines deleted for any reason within 90 days; the share deleted by a bug-fix specifically; whether the whole commit is explicitly reverted; adding a lint-suppression comment; adding a need fixing note; and marking a test to be skipped, retried, or allowed to fail.</figcaption></figure>
+<p>Do these patterns go beyond coding, into a broader transformation of knowledge work? Anthropic sales representatives steadily adopted AI agents starting last September. Figure 4 shows that after sales representatives adopt agents, they close deals with more clients. Part of this pattern could be driven by representatives with more sales opportunities selecting into automation. But it could also reflect automation of logging and routine communication. One account executive explained that Claude automations handled email drafting and customer management software integrations, replacing around 20% of their prior work tasks. Another noted that similar automations freed them up to focus on face-to-face time, letting them talk to 30% more of their customers than was previously possible: “anytime you do anything a second time, you're kind of like, okay, how can I use Claude to make it so that I don't have to do it a third time?”</p>
+<p>Beyond sales, an Anthropic lawyer built a series of Claude automations to scan risks and opportunities, triage legal questions and take first passes through public-facing copy for legal review. A recruiter used Claude to help with candidate sourcing, tracking applications and an analysis that would have taken “maybe a couple of weeks,” freeing him to redesign outdated interview questions and meet with more applicants.</p>
+<p>All of this suggests that as AI capabilities improve, it impacts a wide range of jobs across Anthropic. Descriptively, we see junior employment slowing in jobs that use Claude for the most complex tasks (Figure 5).</p>
+<figure><img height="1331" src="https://www.anthropic.com/_next/image?url=https%3A%2F%2Fwww-cdn.anthropic.com%2Fimages%2F4zrzovbb%2Fwebsite%2Ff68fdd1f18d36b4e45e17f0aaaa49541bade7dcd-1920x1331.png&amp;w=3840&amp;q=75" width="1920"/><figcaption><strong>Figure 5: Junior employment growth by Claude usage complexity.</strong> Notes: Plot at job level. Growth compares January 2026 headcount to July 2026. AI complexity is based on an automated coder of agent logs (prior to the employment decline, October to December 2025 ) and percentile transformed. Dots are scaled by January employment in the job; regression line is fit across weighted points.</figcaption></figure>
+<h2 id="bottlenecks-and-process-new-and-old-tasks-in-an-ai-intensive-workplace">Bottlenecks and process: new and old tasks in an AI-intensive workplace</h2>
+<p>Heavy AI adoption reshapes more than employment and productivity. It also drives continual changes in work processes, generating new tasks and shifting employees’ perceptions of their workplace. One employee described this as the “eternal pressure at Anthropic to move as fast as possible and use Claude for everything” and another that “things we expect in a week are things that would take three months elsewhere.” An internal employee survey asked whether work processes at Anthropic made respondents as productive as possible: 44% of employees agreed in late 2024; 58% by November 2025 (in April 2026, 75% answered yes, but the question weakened by dropping “as possible”). As of August, <a href="https://www.anthropic.com/research/ai-expectations-gap">employees at Anthropic expected</a> that AI will be able to do 75% of their work by 2030, compared to 28% for other Americans.</p>
+<p>These ratcheting productivity expectations are dramatized by the cadence of internal model releases. As soon as a new model is available, Anthropic employees start tackling harder problems in interactive coding agent sessions. We measure this with an automated Claude grader rating deidentified sessions’ task demands based on depth, scope and number of systems implicated. The share of tasks above the 90th percentile of difficulty for the old model rises sharply by around 30% (from 10% to 13% of all tasks) and stays elevated in the weeks following model releases. The easy end of tasks given to agents changes little.</p>
+<p>Spiraling agent productivity translates into output pitched across humans’ screens and attention. One engineer compared this to babysitting:</p>
+<p>They're like, I need my juice box opened and it's an emergency that my juice box is opened. And that is voiced with the same level of concern as the one who has sliced their finger and is bleeding. [...] When you are babysitting, every child brings to you concerns with an equal demand for your attention and the various [Claudes] also do that.</p>
+<p>In the April 2026 survey, an open-ended question about how AI has impacted day-to-day work, 27% described productivity gains from Claude tools and 20% described their role shifting from actually doing work to managing Claudes.</p>
+<p>Amid this model-driven acceleration, human attention is a constant bottleneck. In interactive, multi-turn sessions, the vast majority of agents’ session time is not spent working at all, but spent waiting. We track idle time by subtracting each agent’s active working time from each interactive session’s total wall-clock time. Claude sessions amount to around 80% idly waiting for human input. As one engineer put it, people are “bottlenecking the agents.”</p>
+<p>How much time exactly would be needed to read all of Claude’s output from interactive sessions? For each interactive session, we convert each session’s agent output token to word count, assuming average human reading speed. Figure 6 shows that technical functions have seen the volume of coding agent output leap up over the last 6 months. But even for non-technical groups, interactive Claude sessions are outputting enough content to take up over half of the work week. The deluge of Claude text needs organizing.</p>
+<figure><img height="1200" src="https://www.anthropic.com/_next/image?url=https%3A%2F%2Fwww-cdn.anthropic.com%2Fimages%2F4zrzovbb%2Fwebsite%2F1eb1610d350eeae63bf6300c5a17b66a42667da6-1920x1200.png&amp;w=3840&amp;q=75" width="1920"/><figcaption><strong>Figure 6: Reading Claude as a full-time job.</strong> Note: Hours estimated by converting output tokens to words, assuming 0.75 words per token and 250 words read per minute.</figcaption></figure>
+<p>One solution to this deluge is rising automation. But this requires work of a different kind. Written standing instructions for agents grew from a few hundred in July 2025 to 8,500 a year later. One engineer set up an agent chief of staff to triage agent requests. Another wrote a performance review for their Claude team: “Hey, let’s talk about what is and is not working about our communication style.” Recruiters built integrated dashboards with agents surfacing problems and initiating actions. A lawyer shifted their attention from reviewing legal questions to doing “SEO for legal advice, you need to write frameworks that [clients’] agents discover.”</p>
+<p>Figure 7 shows that this kind of meta-work leapt from 10% of the average employee’s interactive Claude sessions in fall 2025 to 22% in spring 2026. Much of this rise was due specifically to agent management: writing specs for multi-agent runs, looping one agent to review another’s output, and monitoring pipelines. Across functions, human involvement increasingly abstracted from a particular piece of code or writing to the tooling necessary to get agents to do their tasks effectively.</p>
+<figure><img height="1187" src="https://www.anthropic.com/_next/image?url=https%3A%2F%2Fwww-cdn.anthropic.com%2Fimages%2F4zrzovbb%2Fwebsite%2F94aede8c44a52ad7ecf8efdc9cb72156d72b7c6d-1920x1187.png&amp;w=3840&amp;q=75" width="1920"/><figcaption><strong>Figure 7: Becoming managers of Claudes.</strong> Note: Meta-work estimates are based on an automated coder assessing a sample of 2,000 1-line chat summaries according to whether they focus on building Claude skills, plans and reviews for other agents, dashboards and monitors for agent pipelines, and documenting how work is done, in contrast to the actual work itself.</figcaption></figure>
+<p>Despite increases in agent reliability and these significant investments in tooling to supervise them, human trust and accountability remains critical. One employee explained that, increasingly, chasing down bugs “uncovers these organizational or systemic or tech debt things that actually require some amount of human convening and decision-making and governance to solve.” In interview after interview, employees described face-to-face coordination as indispensable. Based on calendar data, the median employee spends 20% more time in meetings than a year ago. Part of this reflects the growth of the company, and a shift toward meeting-intensive non-technical roles. But even among employees in technical individual contributor roles, meeting time is up 16% over the past year. Big picture strategic questions touch a broad range of leveraged positions, and typically require debate and engagement with others. A break from managing the agents typically looks like jumping into a meeting.</p>
+<p>Broadly, both technical and non-technical roles have seen implementation parts of their job automated (writing code, identifying bugs, logging progress, drafting emails). Engineers described becoming leaders and managers of agents; non-technical employees described doing more and more of the strategic parts of their job: “that 20% that was strategic becomes 90% of the job.” But for many non-technical roles, core implementation work is also interpersonal: a sales call, an interview, cross-functional alignment on a complex problem. All of this remains human.</p>
+<p>Consider too the Slack channels that provide both the front page and backchannels of Anthropic communication. Agents diffused through Slack and eventually appeared in nearly half of active, public channels. Figure 8 zooms in on the communication network of a single large department, drawing on all public Slack channels that department members interacted through. It links both human and agent participants by whether they participated in a Slack thread. The figure shows the remarkable rise of agents, as orange dots blossom and dominate the network.</p>
+<figure><p><a href="https://cdn.sanity.io/files/4zrzovbb/website/8f9591116db7ee91487f770222ddc524d551d867.mp4">▶ Watch video</a></p><figcaption><strong>Figure 8: Agents come to the communication network. </strong>Note: Blue dots are employees; orange dots are agent threads. Ties are interaction among humans or agents in the same thread.</figcaption></figure>
+<p>Agents appear disproportionately in dedicated channels for Claude-human interactions, rather than messaging a lot in incumbent human channels. The underlying structure and density of human communication changes little. Agents did not replace human interaction, but rather added to it: human threads in this department sustained the same number of human responses, while additionally layering on agent responses. Agents become teams for a single employee, rather than nodes with high connectivity to many employees at once.</p>
+<p>As humans work amid a growing fleet of AI agents, they face pressure to shift human work into agent-visible channels. If a decision is made in an in-person meeting, and no notes or report-out appears, agents are missing crucial context for updating their goals and assumptions. An employee explained how having their name on a months-old document about Claude swag meant agents kept bringing requests for t-shirts and mugs, long after their responsibilities had changed. Private work, in unlogged meetings and direct messages, is invisible, confusing and discouraged in an AI-heavy workplace. One researcher described this default toward openness as critical to Anthropic’s thoroughgoing integration of AI: “most organizations do not run that way and I think that's a big shift because leaders have to defend feedback out in the open.” The need to feed AI context requires observability of human work and decisions.</p>
+<p>Who will thrive in a workplace like this? Shifts in the content of work at Anthropic also show up as changes in the skills that hiring managers prioritize in hiring decisions. We used an automated coder to process hiring manager interview score cards for thousands of employees hired at Anthropic since 2024. These comments are qualitative reactions by interviewers assessing candidates’ performance. The clearest change is increased emphasis on whether candidates have demonstrated creative use of AI tools. In 2024, hiring managers noted candidates' track record on AI tooling in around 5% of assessments for technical roles, and 7% for non-technical roles. By 2026, these rates had tripled for technical roles and quadrupled for non-technical roles. Hiring managers increasingly focus on whether candidates effectively use AI.</p>
+<p>Deeper changes in assessment are also visible. Among interviews for technical candidates, the single biggest increases were in comments on applicants’ autonomy and judgment. Discussion of domain expertise shrank as a share of overall assessment. As one manager explained, “I expect models to continue to be jagged, so for my team I want them to be fungible across domains.” Similarly, for non-technical candidates, customer and mission orientation increased, while discussion of execution skills fell. Increasingly, hiring managers assess applicants based on their judgment and commitment, rather than the domain-specific skills and execution automated by AI tools.</p>
+<h2 id="what-employers-can-do">What employers can do</h2>
+<p>The deep adoption of AI at Anthropic makes it a useful case. As AI diffuses and improves, the organization of work could shift as it has in prior waves of technological change. The railroads gave us the managerial corporation, steam power allowed factories, and personal computers delivered the startup. What new organizations will tool-using, reasoning LLMs require, and what will be our role in them? One possibility is single-person start-ups, each with a human founder steering swarms of agents to rake in billions in revenue. Another is companies built by AI genius CEOs employing human agents only to wield pipettes and testify before congress.</p>
+<p>Anthropic does not look like either of these. It has tripled in size in the last year. It is no longer a small startup. It has also not ceded executive control to its models. Written Slack debates and in-person meetings steer everything from company strategy to team decisions, with little input from AI agents. Keeping human work visible across the company ensures autonomous agents reason from fresh context. Individual contributors orchestrating teams of agents look more like managers in terms of the knowledge they need and the interdependencies in their work. Working and deciding in the open is critical at an AI-intensive organization.</p>
+<p>As employees increasingly see their work as managing teams of Claudes, they spend more time building the tools needed to do this effectively in their own distinctive domains. This experimentation means that employees are continually automating their own tasks away. In some roles, they are increasingly removed from the object-level work that originally built their skills. As agents sprint through workflows, human attention and judgment are a bottleneck that the system strains against. From sales to legal, human employees are expected to do more and different tasks. Roles broaden to include building products, managing agents and tackling the strategic and interpersonal work that remain beyond the scope of the best LLMs.</p>
+<p>These changes in the organization and content of work have appeared alongside declining shares of junior technical roles in headcount, hiring, and posting. Hiring managers increasingly focus on applicants’ autonomy and judgment, rather than execution and narrow expertise. Overall, Anthropic’s revenue growth relative to its employment growth has sped past even the rapid early productivity growth of a prior generation of technology companies.</p>
+<p>Reading these patterns forward and out across the economy suggests that AI diffusion could risk worker displacement. Prior work also finds that <a href="https://www.hbs.edu/ris/Publication%20Files/26-090_96f92aa0-37d9-4789-beaa-5c0cb87a4032.pdf">AI-native start-ups</a> and <a href="https://www.nber.org/papers/w34162">AI-adopters</a> are flatter and employ <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5425555">fewer entry-level</a> employees.. What can we learn from Anthropic about how to manage AI upheavals in a way that serves the humans working around them?</p>
+<p>Here we want to proceed carefully. There are many parts of Anthropic’s employment practices that cannot be replicated across the economy.</p>
+<p>But three features stand out. First, widespread stock ownership gives employees a strong interest in the company’s success. Of course, this is an easy posture for a company that has seen substantial increases in valuation. For many firms, shared ownership may be insufficient or otherwise undesirable. But it is difficult to imagine a version of pro-worker AI adoption in which workers do not hold a financial stake in successful rollout. If individual contributors are expected to “manage agents,” “make VP level decisions” and be “their own business line,” as interviewees put it, then aligning their interests with the organization is crucial. The post-World War II union-management settlement forged in the 1950s rested on exactly this kind of bargain: labor unions like the United Auto Workers and the United Steel Workers allowed management prerogative over work reorganization (and even intensification) in return for pay increases tied to productivity increases and to a rich array of benefits. Whatever the new deal between AI-affected employees and their employers, a mechanism to share benefits of adoption is essential. At Anthropic, workers codify their expertise for the machine, see their work routines constantly roiled and disrupted, and have seen a large part of their job become speedreading the output of their AI collaborators. They do not do this for free.</p>
+<p>Second, Anthropic is standing up an ongoing early warning system to monitor jobs facing AI-driven transformation. A series of role-level metrics for demand and productivity are read against AI capabilities and use. These aggregate metrics help flag where work is shifting. An early warning system allows the company to start reallocating affected employees to jobs with a skills fit that may be less immediately at risk. As companies across the economy reorient to an accelerated pace of work reorganization, effective systems for guiding internal employee reallocation will become increasingly valuable. Turning to the external labor market to meet every new task demanded by AI advances will be a stronger bottleneck the faster AI advances. In this report, we found increased mobility between departments, changing work content, and employees shifting to new tasks as old ones were automated. Building systems to flexibly reallocate workers internally will be critical for AI-intensive organizations.</p>
+<p>This commitment to internal worker reallocation raises important tradeoffs. A well-functioning labor market should shift workers into their most productive positions, whether that is at their current employer or another one. Commitments to reallocate incumbent workers could make employers hesitant to take a risk on hiring new employees. In normal economic conditions, particularly intensely competitive ones, such commitments could be costly.</p>
+<p>But prioritizing reallocation forces AI-adopting companies to consider ways that AI can create new tasks for new products and new markets, rather than funneling AI applications into replacing human workers to save on labor costs. This could help employers resist the temptation of ‘<a href="https://pubs.aeaweb.org/doi/pdfplus/10.1257/jep.33.2.3">so-so’</a> or ‘<a href="https://academic.oup.com/restud/article-abstract/92/1/69/7612958?redirectedFrom=fulltext">inefficient</a>’ automation in which AI or other technologies just barely outcompete human workers: employers replace human workers, imposing substantial social costs in lost income for displaced workers, while delivering minimal productivity benefits.</p>
+<p>From what we see in Anthropic, both novel and persistently human tasks remain alongside intensive AI use. Uncertainty about the future set of these tasks should recommend preserving a flexible workforce. As one Anthropic executive noted, “a workforce that is anxiously worried is not a workforce doing its best work.”</p>
+<p>None of these actions will prevent powerful AI from disrupting jobs. And indeed none directly address the slowdown in junior hires documented in this report. Employment protections for incumbents will not benefit those not hired to begin with. Private action on the part of employers must come alongside farsighted government policy around <a href="https://www.anthropic.com/research/reviewing-the-evidence-on-worker-retraining-programs">retraining</a> and income support. Such policy should be guided by a clear picture of the scale of workplace transformation that AI can bring.</p>
+<h2 id="suggested-citation">Suggested citation</h2>
+<pre><code>@techreport{wilmers2026employment,
+
+author = {Nathan Wilmers and Regina Catipon and Maxim Massenkoff and Peter McCrory},
+
+title = {How employment is changing at Anthropic},
+
+institution = {The Anthropic Institute},
+
+type = {Technical Report},
+
+year = {2026},
+
+month = oct,
+
+url = {https://www.anthropic.com/research/employment-at-anthropic}
+
+}</code></pre>
+<h2 id="acknowledgements">Acknowledgements</h2>
+<p>We are grateful to the Anthropic employees who gave time for interviews about how their work has changed. For very helpful comments and assistance, we thank Kate Astbury, Shehzad Bashir, Zoe Blumenfeld, Scott Booth, Henry Brill, Yena Cho, Henry de Valence, Adam Farina, Johannes Hermle, Zoe Hitzig, , Hasnain Lakhani, Eva Lyubich, Kerry Persen, Kristina Pham, Sarah Pollack, Hannah Pritchett, Georg Rilinger, Santi Ruiz, Szymon Sacher, Florian Scholz, Meg Tong, Monika Tuchowska, Helen Wang, Kim Withee, Charles Yang, and Jack Clark.</p>
+<h2 id="works-cited">Works cited</h2>
+<p>Acemoglu, Daron, and Pascual Restrepo. 2019. “Automation and New Tasks: How Technology Displaces and Reinstates Labor.” Journal of Economic Perspectives 33 (2): 3–30. <a href="https://doi.org/10.1257/jep.33.2.3">https://doi.org/10.1257/jep.33.2.3</a></p>
+<p>Beraja, Martin, and Nathan Zorzi. 2025. “Inefficient Automation.” Review of Economic Studies 92 (1): 69–96. <a href="https://academic.oup.com/restud/article-abstract/92/1/69/7612958">https://academic.oup.com/restud/article-abstract/92/1/69/7612958</a></p>
+<p>Demirer, Mert, Leon Musolff, and Liyuan Yang. 2026. “Writing Code vs. Shipping Code: Productivity Effects Across Generations of AI Coding Tools.” NBER Working Paper 35275. <a href="https://doi.org/10.3386/w35275">https://doi.org/10.3386/w35275</a></p>
+<p>Ewens, Michael, and Xavier Giroud. 2025. “Corporate Hierarchy.” NBER Working Paper 34162. <a href="https://doi.org/10.3386/w34162">https://doi.org/10.3386/w34162</a></p>
+<p>Favaro, Marina, and Jack Clark. 2026. “When AI Builds Itself.” The Anthropic Institute. <a href="https://www.anthropic.com/institute/recursive-self-improvement">https://www.anthropic.com/institute/recursive-self-improvement</a></p>
+<p>Hitzig, Zoe, Maxim Massenkoff, Eva Lyubich, Shaoyi Zhang, Ryan Heller, and Peter McCrory. 2026. “Agentic Coding and Persistent Returns to Expertise.” Anthropic, June 16. <a href="https://www.anthropic.com/research/claude-code-expertise">https://www.anthropic.com/research/claude-code-expertise</a></p>
+<p>Hosseini Maasoum, Seyed Mahdi, and Guy Lichtinger. 2025. “Generative AI as Seniority-Biased Technological Change: Evidence from U.S. Résumé and Job Posting Data.” SSRN Working Paper 5425555. <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5425555">https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5425555</a></p>
+<p>Huang, Saffron, Bryan Seethor, Esin Durmus, Kunal Handa, Miles McCain, Michael Stern, and Deep Ganguli. 2025. “How AI Is Transforming Work at Anthropic.” Anthropic, December 2. <a href="https://www.anthropic.com/research/how-ai-is-transforming-work-at-anthropic">https://www.anthropic.com/research/how-ai-is-transforming-work-at-anthropic</a></p>
+<p>Kim, Hyunjin, and Rembrand Koning. 2026. “AI-Native Firms.” Harvard Business School Working Paper 26-090. <a href="https://www.hbs.edu/ris/Publication%20Files/26-090_96f92aa0-37d9-4789-beaa-5c0cb87a4032.pdf">https://www.hbs.edu/ris/Publication%20Files/26-090_96f92aa0-37d9-4789-beaa-5c0cb87a4032.pdf</a></p>
+<p>Roodman, David, and Maxim Massenkoff. 2026. “An Evidence Review of Subsidized Job Training.” The Anthropic Institute Working Paper 2026-01. <a href="https://www.anthropic.com/research/reviewing-the-evidence-on-worker-retraining-programs">https://www.anthropic.com/research/reviewing-the-evidence-on-worker-retraining-programs</a></p>]]></content:encoded>
+      <guid isPermaLink="true">https://www.anthropic.com/research/employment-at-anthropic</guid>
+      <category>Economics</category>
+      <pubDate>Fri, 16 Oct 2026 00:00:00 +0000</pubDate>
+      <media:content url="https://www.anthropic.com/_next/image?url=https%3A%2F%2Fwww-cdn.anthropic.com%2Fimages%2F4zrzovbb%2Fwebsite%2Fe5dc89d3bceb2fcb9509ec35aa22f11131a9d8eb-1920x1080.png&amp;amp;w=3840&amp;amp;q=75" type="image/jpeg" medium="image"/>
+    </item>
+    <item>
+      <title>Working at the frontier shapes expectations for the future</title>
+      <link>https://www.anthropic.com/research/expectations-for-the-future</link>
+      <description>We’re sharing two reports: the first covers how AI is changing employment inside Anthropic, and the second looks at the gap between how the public and Anthropic employees expect AI to affect work and the economy.</description>
+      <content:encoded><![CDATA[<p>We’re sharing two reports: <a href="https://www.anthropic.com/research/employment-at-anthropic">the first</a> covers how AI is changing employment inside Anthropic, and <a href="https://www.anthropic.com/research/ai-expectations-gap">the second</a>looks at the gap between how the public and Anthropic employees expect AI to affect work and the economy.</p>
+<p>Anthropic staff and US workers don’t seem to have different theories about how AI affects jobs. Instead, they have different experiences of what AI capabilities are. Those different experiences seem closely related to perceptions about what will happen to work in the future.</p>
+<p>Anthropic is a company at the frontier of AI adoption, and that adoption has changed the way we hire. We find that over the past year, we're hiring for a smaller share of junior positions, and a smaller share of our employees work in technical roles. At the same time, the rate of hours worked by AI agents has shot up. By March 2026, agents worked more hours than employees. By August, there were six times more agents than employees at Anthropic, and productivity increased.</p>
+<p>That’s led to Anthropic producing more code per person, but that’s a notoriously imperfect measure. We see signs of increased productivity elsewhere: we’ve closed more sales per sales representative, and processed more contracts. When our researchers follow the same employee over time, they find the employee’s output rises as their adoption of AI tools increases.</p>
+<p>All this acceleration means that, increasingly, the bottleneck is human attention. As a result, employees spend more time building ways to better monitor work their agents are doing.</p>
+<p>Anthropic could be a leading indicator of how AI will shift work organization, hiring, and labor demand across the economy. An AI lab is different from more traditional businesses in how it adopts AI into its work, but <a href="https://www.anthropic.com/research/how-ai-is-transforming-work-at-anthropic">research findings</a> about our own workplace may still be instructive about broader transformations, including dynamics for future AI-native companies.</p>
+<p>Because Anthropic employees experience AI’s effect on work so differently, it stands to reason that they might have different predictions about AI’s effect on the <em>future </em>of work. That’s what our second report investigates. We surveyed Anthropic employees, and compared them to an August survey of almost 11,000 US adults, fielded by Morning Consult and weighted to be representative of the adult population.</p>
+<p>The public expects AI capabilities to advance rapidly in the coming years; Anthropic staff tend to expect even faster progress. There are a number of questions with big gaps between staff and the public. For example, 39% of US adults—and 91% of staff—expect AI will be able to make a Nobel-level discovery by 2030. More than half of Anthropic staff expect AI to be able to do at least 80% of their current work by 2030; only 5% of Americans expect AI to be that capable.</p>
+<p>That said, there’s considerable variation in both groups: 2 out of 10 Anthropic staff have expectations similar to those of the typical US adult. And Anthropic staff and the public also agree on some key questions. In each bucket, people who expect AI to do comparably more of their own work anticipate similar increases in unemployment. In other words, both the public and Anthropic staff have similar economic models of how AI affects the labor market, but ultimately their personal experiences with AI lead them to different expectations for the economy of the future.</p>]]></content:encoded>
+      <guid isPermaLink="true">https://www.anthropic.com/research/expectations-for-the-future</guid>
+      <category>Economics</category>
+      <pubDate>Fri, 16 Oct 2026 00:00:00 +0000</pubDate>
+    </item>
     <item>
       <title>An update on independent evaluators</title>
       <link>https://www.anthropic.com/news/an-update-on-independent-evaluators</link>
@@ -1813,179 +2262,309 @@ Discover
       <pubDate>Fri, 18 Sep 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Biosecurity at the frontier</title>
-      <link>https://x.ai/news/biosafety-at-the-frontier</link>
-      <description>LatchBio evaluated Grok's performance on biosecurity monitoring and adversarial biological tasks. They found that Grok 4.6 detects and refuses dangerous queries more reliably than any other frontier system.</description>
-      <content:encoded><![CDATA[<p>Today, <a href="https://latch.bio/">LatchBio</a> published an independent analysis of Grok 4.6 on their biological capability and biological red-teaming benchmark suites. These evaluations measure a wide range of characteristics and capabilities of tested models, including:</p>
+      <title>Memory in Grok Build</title>
+      <link>https://x.ai/news/grok-build-memory</link>
+      <description>Grok Build now carries conventions, decisions, and project facts from one session to the next. Notes are written in the background as you work and read back when you return to the project.</description>
+      <content:encoded><![CDATA[<p>Grok Build now has memory. As you work, it keeps notes on the conventions, decisions, and project facts that come up, and later sessions read those notes before touching related code. Grok Build gets better the more you use it.</p>
+<h2 id="what-it-remembers">What it remembers</h2>
+<p>Memory holds the details most likely to matter in a later session: how the team writes and reviews code, decisions and the reasoning behind them, and durable facts about the project, from where a subsystem lives to which command runs the suite. Task state, tentative conclusions, secrets, and anything the repository or its docs already cover are left out.</p>
+<p>Notes are kept per project, plus a global set for preferences that apply everywhere.</p>
+<h2 id="written-in-the-background">Written in the background</h2>
+<p>Capture runs after a turn completes and never blocks the session. Grok reviews the finished turn, writes anything worth keeping as a markdown note, and continues. Over time, <code>/dream</code> folds those notes into topic files, one per subject, so each project ends up with a small set of organized references.</p>
+<p>When you return to a project, Grok reads the topics that cover the area it is about to work in. Instructions in the current conversation take precedence over anything in a note.</p>
+<h2 id="browsing-memory">Browsing memory</h2>
+<p><code>/memory</code> opens a read-only browser of every memory file, grouped by scope, with a preview of the selected file. It is the fastest way to see what a session produced, and to find the file to edit when a note is wrong.</p>
+<h2 id="new-commands">New commands</h2>
 <ul>
-<li>Whether a model can distinguish between legitimate biological research and requests that conceal a biosecurity hazard</li>
-<li>Whether a model is useful in a biosecurity and biomonitoring role, by being able to detect and characterize emerging pathogens and patterns of transmission</li>
+<li><code>/memory</code> opens the browser above.</li>
+<li><code>/dream</code> organizes recent notes into topic files, for example <code>topics/testing.md</code>. Dream also runs on its own periodically in the background.</li>
 </ul>
-<p>On LatchBio's BioSecBench-Refusal suite, Grok 4.6 was the strongest model tested at refusing disguised and hazardous tasks while still completing routine biological work. It was the only system to score above 50% on both measures.</p>
-<h2 id="methodology-and-context">Methodology and context</h2>
-<p>Biology and biological research present domains where the opportunities and risks of highly capable AI systems are well-known and challenging to disentangle. In designing our safeguards, we aim to maximize the utility of our agents in assisting and accelerating legitimate scientific research, while minimizing the risks they present through incorrect information and adversarial use.</p>
-<p>LatchBio's two benchmarks most relevant to the above capabilities measure whether an agent can distinguish concealed hazards from ordinary science, and whether it can carry out the pathogen surveillance workflows public-health work depends on. They are:</p>
-<ul>
-<li><strong>BioSecBench-Refusal</strong>, which pairs routine biological tasks, adapted from published literature, with 46 red-team tasks that look like ordinary research and hide the hazard in attached scientific data, mislabeled files, or other intentionally obfuscated tasks. This evaluation is calibrated around understanding the intent of a task: an agent that only reacts to words like "pathogen" or "toxin" will block the routine set and miss the red-team set, while one that inspects the data can tell the two apart.</li>
-<li><strong>BioSecBench-Surveillance</strong>, which tests whether an agent can carry out pathogen genomic surveillance workflows of the kind used in public-health monitoring. Those tasks require chaining file inspection, tool use, and scientific judgment on messy sequencing data.</li>
-</ul>
-<h2 id="results-and-key-findings">Results and key findings</h2>
-<p>In testing on BioSecBench-Refusal, LatchBio found that Grok 4.6 detects and refuses red-team and otherwise dangerous queries more reliably than any other frontier system tested, while not diminishing performance on routine biological work. Grok 4.6 also performs comparably with other frontier models on biosurveillance work. LatchBio notes that evaluations were performed on a variety of agent harnesses to remove confounds, and that unless otherwise noted, agents were tested at their highest-offered effort levels.</p>
-<p>The score presented by LatchBio is a trial-weighted harmonic mean of red-team refusal and routine compliance. We analyze this metric and standalone refusal rate independently. Across different harnesses, Grok 4.6 holds the top three spots, averaging 62.1%. Considering refusals and task compliance independently, Grok 4.6 refused 59.2% of red-team tasks and completed 64.8% of routine ones. It is the only model tested that scored above 50% on both measures.</p>
-<p>On BioSecBench-Surveillance, Grok 4.6 averages a success rate of 53.5%, sitting behind Opus 5 and ahead of GPT-5.6 Sol on biosecurity and monitoring work. The results on both benchmarks indicate an agent and underlying model well-calibrated for routine and helpful biological work, as well as one highly capable in biosecurity work and monitoring.</p>
-<p>On evaluations of general routine biological capability performed by LatchBio (such as SpatialBench or TxBench-PP), Grok is found to match or exceed other frontier models in a wide range of agentic biological work. These are presented in greater detail at <a href="https://benchmarks.bio">benchmarks.bio</a>.</p>
-<h2 id="analyzing-refusal-behavior">Analyzing refusal behavior</h2>
-<p>In evaluation traces, Grok 4.6 is observed reasoning over the contents of a task and testing environment to assess intent before proceeding or refusing. Frequently, Grok will find discrepancies between the stated intent in the prompt and environment, or will assemble intent from high-risk content disguised by filenames and encryption, and will subsequently refuse. On obviously benign and low-risk tasks, Grok exhibits the same environment-reasoning behavior, but is able to assess tasks as safe.</p>
-<h2 id="how-we-safeguard-grok">How we safeguard Grok</h2>
-<p>Before we release a model, we test biological capability in addition to other domains of risk, and validate that the capabilities of our models are adequately safeguarded against misuse. The work of third-party evaluators such as LatchBio complements the evaluations we perform internally, both pre- and post-deployment, for the models we serve.</p>
-<p>Grok's safeguards are built in layers to establish defense-in-depth. Refusal training is performed to teach the model how and when to refuse, to correctly infer the intent and risk profile of tasks, and to refuse correctly in highly adversarial scenarios. We train and deploy inference-time safeguards to reject harmful requests before they ever reach the model, and we implement behavioral controls to further safeguard the model when deployed. Post-deployment monitoring is performed to detect and stop patterns of adversarial use at the session and user level, and provides a source of feedback for continuous calibration of our model deployments.</p>
-<p>We observe a material improvement in Grok 4.6's capabilities in biological work over historically tested models, with substantial gains in refusal and biosecurity performance over Grok 4.5 and Grok 4.3. We intend our ongoing and novel safeguards work to allow us to continue serving frontier-scale intelligence safely across future model releases.</p>
-<h2 id="the-future-of-biosecurity-and-scientific-discovery">The future of biosecurity and scientific discovery</h2>
-<p>The line between actively adversarial tasks and helpful use grows thinner as models rapidly become more capable and autonomous, and safeguards will need to evolve accordingly. To control for the greater risk implied by improved model capability and agency, we will perform wider, more ambitious testing and calibration of our models and agentic systems: broader pre-deployment suites, more third-party evaluations, improved post-deployment monitoring, and deployments of our models with companies and institutions at the frontier of biology.</p>
-<p>Similarly, there is a risk inherent in overrefusals and miscalibrated safeguards. When a model refuses routine and helpful biological work, the ability of healthcare professionals, researchers, and monitoring programs to detect outbreaks early and perform other critical work in the field is degraded. We gauge this risk as equally serious as the risk of aiding malicious use.</p>
-<p>Grok is already used in scientific work, including general biological research and biosecurity monitoring, and we are optimistic about the ability of highly capable models to rapidly accelerate scientific discovery and shorten the path from the lab to practical use. We are committed to continuing to serve frontier intelligence securely and safely to the engineers, researchers, enterprises, and institutions advancing the life sciences.</p>
-<p>LatchBio's full methods and per-model scores are presented at <a href="https://benchmarks.bio">benchmarks.bio</a>. LatchBio's complementary blog, the Grok 4.6 model card, and SpaceXSI's Frontier Artificial Intelligence Framework are linked below.</p>
-<ul>
-<li><a href="https://blog.latch.bio/p/analyzing-grok46-safeguards">LatchBio blog</a></li>
-<li><a href="https://media.x.ai/v1/website/card-4p6-4cd2dc57.pdf">Grok 4.6 model card</a></li>
-<li><a href="https://media.x.ai/v1/website/xai-frontier-artificial-intelligence-framework-30-june-2026-99c40684.pdf">Frontier Artificial Intelligence Framework</a></li>
-</ul>]]></content:encoded>
-      <guid isPermaLink="true">https://x.ai/news/biosafety-at-the-frontier</guid>
+<h2 id="availability">Availability</h2>
+<p>Memory is available in Grok Build now. It applies to new sessions: run <code>/new</code> or start a fresh <code>grok</code>, and notes begin after the first completed turn.</p>]]></content:encoded>
+      <guid isPermaLink="true">https://x.ai/news/grok-build-memory</guid>
       <category>News</category>
       <pubDate>Fri, 18 Sep 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Grok 4.6 on Microsoft Foundry</title>
-      <link>https://x.ai/news/grok-4-6-microsoft-foundry</link>
-      <description>Grok 4.6 is now available via Microsoft Foundry.</description>
-      <content:encoded><![CDATA[<p>Today, we’re excited to announce that Grok 4.6 is now available on Microsoft Foundry.</p>
-<p>Grok 4.6 is our latest flagship model, built for long-running agents and ambitious interactive and visual work. It offers a 500k context window and configurable reasoning efforts (low, medium, high, xhigh).</p>
+      <title>Setting Grok Bot loose on procurement</title>
+      <link>https://x.ai/news/grok-bot-procurement</link>
+      <description>We gave Grok Bot access to vendor spend, contracts, and usage data. It found more than $100,000 in direct savings.</description>
+      <content:encoded><![CDATA[<p>Enterprises have a lot of spend that is hard to track closely. That includes unused SaaS seats that accumulate as teams change, and renewals that come up before anyone has checked whether the contract still matches how the product is being used. The same problem shows up in recurring purchases, where it is often easier to reorder what was bought last time than to adjust quantities to current needs or shop around for a better price.</p>
+<p>A lot of this work is worth doing, but hard to justify doing by hand. We wanted to see how much of it Grok Bot could take on.</p>
+<p>Grok Bot makes agents much easier to set up and use. You tell or show a Bot what you want it to do, give it access to the right tools, and let it execute without designing the workflow step by step.</p>
+<p>For procurement, we created a Bot we affectionately named <a href="https://x.ai/bot/marketplace/bots/haggle-bot">Haggle Bot</a>. It reads our vendor spend alongside contracts and usage data, then uses market pricing and competitive quotes to find savings and prepare negotiations. So far, it has identified more than $100,000 in direct savings, worked through larger SaaS renewals, and applied the same approach to recurring purchases like office supplies.</p>
+<p>We think Haggle Bot points to a broader role for Bots inside a company. Give a Bot a clear job and access to the tools it needs, and it can keep taking on the work within that role without being told each task.</p>
+<h2 id="procurement-is-a-good-task-for-a-bot">Procurement is a good task for a Bot</h2>
+<p>The goal of procurement is to support the business and get the most out of every dollar spent on vendors. A lot of existing procurement tools help with this at the vendor intake and contract-management level.</p>
+<p>But much of the most important procurement work hinges on questions those systems do not address:</p>
+<ul>
+<li>Who is the owner for this?</li>
+<li>Why do we need it?</li>
+<li>Have we explored alternatives?</li>
+<li>Why do we have X and Y if they do the same thing?</li>
+<li>Why are our costs spiking?</li>
+<li>Everyone has a license. Are they using it?</li>
+</ul>
+<p>These questions are common, but depending on the stage of the company, they may not be worth answering by hand. Fast-growing companies often leave money on the table to avoid spending time chasing them down. That is where a Bot can be useful.</p>
+<h2 id="a-simple-expression-of-intent">A simple expression of intent</h2>
+<p>We started Haggle Bot by describing the job we wanted it to do. Its instruction was to learn our vendor spend and turn that knowledge into evidence-backed savings, with a person making the final decisions.</p>
+<p>We then gave the Bot access to Slack, Notion, Drive, Gmail, Hex, and Ramp. Haggle Bot used those systems to build a working map of roughly 125 active vendors.</p>
+<p>That record gave Haggle Bot enough context to make decisions and keep working without a person spelling out each next step. We also defined where Haggle Bot should stop and hand back control. We let it handle internal research and coordination on its own, but required explicit approval for spending money, accepting terms, or sending something to a vendor.</p>
+<h2 id="finding-unused-saas-seats">Finding unused SaaS seats</h2>
+<p>An easy place to start was auditing SaaS spend. Haggle Bot asked our IT team for assigned-seat and last-used data, then compared that with what we were paying for. For one product, it found 43 paid seats with no activity in the previous 90 days and sent the names back for review and downgrade. That added up to $14,220 in savings.</p>
+<p>We applied the same approach to another SaaS product and Haggle Bot found $85,662 a year in unused SKUs. Because the product was month-to-month, those cuts reduced spend immediately.</p>
+<p>One thing we noticed in these SaaS audits was how often Haggle Bot took the next step without being asked. In one case, Haggle Bot needed to figure out who owned the relationship and what our plans were for the vendor. It started with the owners listed in Ramp, messaged them, and followed each handoff until it reached the engineers with the right context to make a decision. Rather than stop when the first answer was incomplete, it identified what additional information it needed and then proactively sought it out.</p>
+<h2 id="negotiating-a-saas-renewal">Negotiating a SaaS renewal</h2>
+<p>When a SaaS renewal came up, we asked Haggle Bot to review the quote and explore alternatives. Haggle Bot compared the renewal offer with our current annualized spend and recommended against the options that added seats ahead of demonstrated usage.</p>
+<img alt="Haggle Bot reviews a contract renewal proposal, breaks the quote down against current spend, and recommends the cheaper option" src="https://media.x.ai/cdn-cgi/image/fit=scale-down,onerror=redirect,f=auto/v1/website/haggle-bot-image1-75f1097a.png"/>
+<p>It then priced credible alternatives against our current footprint and used those comparisons alongside current usage data to work out where we had negotiating leverage.</p>
+<img alt="Haggle Bot compares Webex, webinar platforms, and Zoom pricing against the renewal quote" src="https://media.x.ai/cdn-cgi/image/fit=scale-down,onerror=redirect,f=auto/v1/website/haggle-bot-image2-7f0e2a56.png"/>
+<p>From there, Haggle Bot worked out the negotiation and drafted the response for us to edit. We set the minimum quantities we wanted to keep and approved the send. Haggle Bot made an opening bid while setting an internal price target we were willing to go up to.</p>
+<h2 id="shopping-around-for-office-supplies">Shopping around for office supplies</h2>
+<p>Every Friday, our office team orders tech, snacks, and hygiene supplies for the next group of new hires. We use another Bot to place that order, which we call "Amazon Bot." It's logged into our corporate account and can work across Gmail, Ramp, Google Sheets, Rippling, and Vercel to understand headcount and the office floor plan.</p>
+<img alt="Amazon Bot creates standing office supply orders based on weekly new-hire counts from Slack" src="https://media.x.ai/cdn-cgi/image/fit=scale-down,onerror=redirect,f=auto/v1/website/haggle-bot-image3-b5f9709c.png"/>
+<p>Rather than treat that as a fixed Amazon order, we gave Haggle Bot the job of shopping the weekly order around. Haggle Bot can see how quickly supplies are being used, the seat map for each building, and the quotes and carts from the last four orders. From that, it builds an editable Google Sheet where office ops can change the number of incoming hires and see the quantities needed for each new-hire kit.</p>
+<p>Haggle Bot then shops the order across Amazon, Costco, Uline, and Walmart. If it cannot find the same product for less, it can look for an equivalent from another brand, then collect the comparisons in a sheet for review.</p>
+<p>It then drafts an email to our Amazon procurement rep with same-day competitor prices and asks for lower pricing on specific line items through our business discount program.</p>
+<img alt="Haggle Bot drafts an email to our Amazon procurement rep citing same-day competitor prices on specific line items" src="https://media.x.ai/cdn-cgi/image/fit=scale-down,onerror=redirect,f=auto/v1/website/haggle-bot-image6-f62bac1c.png"/>
+<p>Once pricing is settled, Haggle Bot delegates the order back to Amazon Bot to send. In one run, the process brought a $14,629 tech order down to $6,143, a 58% reduction.</p>
+<h2 id="where-haggle-bot-is-most-useful">Where Haggle Bot is most useful</h2>
+<p>Haggle Bot shows how much work can be done behind a simple expression of intent. Once a Bot has a purpose and the access to pursue it, it can keep making progress across systems without additional intervention.</p>
+<p>Haggle Bot has also helped us see where Bots fit naturally into a workflow, and where they need more guidance. A lot of procurement work depends on good judgment about how to communicate with vendors, and we still revise its emails to calibrate on tone and make sure we're providing vendors with the right level of information.</p>
+<p>Haggle Bot has made us interested in what Bots can do when they keep working on the same job over time. The examples above came from a short window, but many of the signals worth acting on only emerge gradually as spend and usage change. Over the next year, we expect Haggle Bot to find more of that work on its own and take it further before a person needs to step in.</p>
+<p>You can copy and import <a href="https://x.ai/bot/marketplace/bots/haggle-bot">Haggle Bot</a> now in the Bot Marketplace.</p>
+<p>Join the Grok Bot for Enterprise <a href="https://cursor.com/contact-sales?product=grok-bot">waitlist</a>.</p>]]></content:encoded>
+      <guid isPermaLink="true">https://x.ai/news/grok-bot-procurement</guid>
+      <category>News</category>
+      <pubDate>Fri, 18 Sep 2026 00:00:00 +0000</pubDate>
+      <media:content url="https://media.x.ai/cdn-cgi/image/fit=scale-down,onerror=redirect,f=auto/v1/website/haggle-bot-image1-75f1097a.png" type="image/png" medium="image"/>
+    </item>
+    <item>
+      <title>Designing Grok Bot for a world of persistent agents</title>
+      <link>https://x.ai/news/designing-grok-bot</link>
+      <description>How we designed Grok Bot for agents that persist beyond a single session — from a chat history to a Bot roster, presence, a computer of the Bot’s own, and work that starts without a prompt.</description>
+      <content:encoded><![CDATA[<p>When we started designing Grok Bot, one of the central questions was how the interface should shape the relationship between user and agent. Most AI interfaces are organized around a chat session the user operates. Each session begins with setup, unfolds as the user looks on, and ends when the conversation stops.</p>
+<p>We wanted to design for an agent that persists beyond any one session and can carry responsibility on its own. That meant reconsidering some of the basic objects and signals of the interface, including what belongs in the sidebar, how an agent shows progress, and when its work should become visible.</p>
+<img src="https://x.ai/_next/static/media/wallpaper-light-noon.27_hyf9uycov-.png?dpl=270e6ec7856a61e2e1689c74197e8f37497ebd48"/>
+<img src="https://x.ai/_next/static/media/wallpaper-dark-night.2tq8j5y-604e-.png?dpl=270e6ec7856a61e2e1689c74197e8f37497ebd48"/>
+<img src="https://x.ai/_next/static/media/user-peng.3rw63gdxpcheg.png?dpl=270e6ec7856a61e2e1689c74197e8f37497ebd48"/>
+<img src="https://x.ai/_next/static/media/wallpaper-gray.13vta0mrxymev.png?dpl=270e6ec7856a61e2e1689c74197e8f37497ebd48"/>
+<img src="https://x.ai/_next/static/media/wallpaper-dark-night.2tq8j5y-604e-.png?dpl=270e6ec7856a61e2e1689c74197e8f37497ebd48"/>
+<img src="https://x.ai/_next/static/media/dock-icons.0cwlcw-73qj01.png?dpl=270e6ec7856a61e2e1689c74197e8f37497ebd48"/>
+<h2 id="rethinking-the-primitives">Rethinking the primitives</h2>
+<p>AI products have accumulated a large vocabulary in a short time. Chats, sessions, models, context windows, memories, system prompts, projects, skills, connectors, agents, tools, sandboxes, permissions, and automations all describe real parts of these systems.</p>
+<p>But exposing each one as a separate product concept asks users to understand more than they need to. We started by asking which concepts a person actually needs in order to work with an agent.</p>
+<p>We kept coming back to five:</p>
+<ol>
+<li><strong>Bots</strong> are persistent agents with their own identity, memory, runtime, and tools.</li>
+<li><strong>Chats</strong> are the conversational interface for working with a Bot.</li>
+<li><strong>Prompts</strong> give a Bot context or instructions. They can be used once, saved as Skills, or triggered automatically as Routines.</li>
+<li><strong>Tools</strong> let Bots access information and take action through software, APIs, connectors, the shell, or computer use.</li>
+<li><strong>Artifacts</strong> are the documents, designs, code, data, and other durable outputs that Bots create or modify.</li>
+</ol>
+<p>Everything else could remain beneath the interface until the user had a reason to care about it. The next question was which of these five objects should organize the product.</p>
+<h2 id="from-chat-history-to-a-bot-roster">From chat history to a Bot roster</h2>
+<p>Chats are disposable. We start a conversation to solve a problem. It gets pushed down the sidebar. A week later, we start another one. You rarely go back beyond the most recent five.</p>
+<p>That behavior is perfectly reasonable when the unit of interaction is a question. It becomes strange when the thing on the other side of the interaction is supposed to know you, remember previous work, and take responsibility over time.</p>
+<p>So the main objects in Grok Bot are Bots, not conversations. A Bot has a name. It has an avatar and a title. It remembers its conversations with you. It has its own computer and tools. When you come back tomorrow, you are coming back to the same Bot.</p>
+<h2 id="presence-as-interface">Presence as interface</h2>
+<p>Once a Bot was something you maintain over time rather than a session you start, the way Bots appear in the product had to answer three questions at once:</p>
+<ol>
+<li>Who is this?</li>
+<li>What are they doing?</li>
+<li>How much do I need to know?</li>
+</ol>
+<h3 id="who-is-this">Who is this</h3>
+<p>A roster only works if it can be scanned quickly. As the roster grows, we did not want people to have to read every name each time they opened the product. They should be able to recognize a Bot from its avatar almost peripherally.</p>
+<img src="https://x.ai/_next/static/media/initials-1.0yig-qj1joruk.png?dpl=270e6ec7856a61e2e1689c74197e8f37497ebd48"/>
+<img src="https://x.ai/_next/static/media/initials-2.1txviuzdipoiw.png?dpl=270e6ec7856a61e2e1689c74197e8f37497ebd48"/>
+<img src="https://x.ai/_next/static/media/initials-3.38z4vaotfsn1v.png?dpl=270e6ec7856a61e2e1689c74197e8f37497ebd48"/>
+<img src="https://x.ai/_next/static/media/initials-4.01qrbimmhtavw.png?dpl=270e6ec7856a61e2e1689c74197e8f37497ebd48"/>
+<img src="https://x.ai/_next/static/media/initials-5.3jwzv-u8m85v8.png?dpl=270e6ec7856a61e2e1689c74197e8f37497ebd48"/>
+<img src="https://x.ai/_next/static/media/initials-6.19sekhuc8jakl.png?dpl=270e6ec7856a61e2e1689c74197e8f37497ebd48"/>
+<img src="https://x.ai/_next/static/media/emoji-1.3h5blj8bz5-jf.png?dpl=270e6ec7856a61e2e1689c74197e8f37497ebd48"/>
+<img src="https://x.ai/_next/static/media/emoji-2.39jbp_6rdd-5c.png?dpl=270e6ec7856a61e2e1689c74197e8f37497ebd48"/>
+<img src="https://x.ai/_next/static/media/emoji-3.28sgvmrs9mln9.png?dpl=270e6ec7856a61e2e1689c74197e8f37497ebd48"/>
+<img src="https://x.ai/_next/static/media/emoji-4.2avjpk08w6cek.png?dpl=270e6ec7856a61e2e1689c74197e8f37497ebd48"/>
+<img src="https://x.ai/_next/static/media/emoji-5.01zc07ny7g1nn.png?dpl=270e6ec7856a61e2e1689c74197e8f37497ebd48"/>
+<img src="https://x.ai/_next/static/media/emoji-6.09640mz61fg7f.png?dpl=270e6ec7856a61e2e1689c74197e8f37497ebd48"/>
+<img src="https://x.ai/_next/static/media/agentb-1.3r4tz4_d9u_-z.png?dpl=270e6ec7856a61e2e1689c74197e8f37497ebd48"/>
+<img src="https://x.ai/_next/static/media/agentb-2.3fmjch4q22wof.png?dpl=270e6ec7856a61e2e1689c74197e8f37497ebd48"/>
+<img src="https://x.ai/_next/static/media/agentb-3.3riz-3zy_f268.png?dpl=270e6ec7856a61e2e1689c74197e8f37497ebd48"/>
+<img src="https://x.ai/_next/static/media/agentb-4.2--kd8w9v-eaw.png?dpl=270e6ec7856a61e2e1689c74197e8f37497ebd48"/>
+<img src="https://x.ai/_next/static/media/agentb-5.0d3thxc1-7umo.png?dpl=270e6ec7856a61e2e1689c74197e8f37497ebd48"/>
+<img src="https://x.ai/_next/static/media/agentb-6.2hz5ggcwjuefo.png?dpl=270e6ec7856a61e2e1689c74197e8f37497ebd48"/>
+<img src="https://x.ai/_next/static/media/base-1.13x8p2khem12n.png?dpl=270e6ec7856a61e2e1689c74197e8f37497ebd48"/>
+<img src="https://x.ai/_next/static/media/base-2.0_m9l5xohcj95.png?dpl=270e6ec7856a61e2e1689c74197e8f37497ebd48"/>
+<img src="https://x.ai/_next/static/media/base-3.35r25_i92f7lp.png?dpl=270e6ec7856a61e2e1689c74197e8f37497ebd48"/>
+<img src="https://x.ai/_next/static/media/base-4.1p9fcypmuoe49.png?dpl=270e6ec7856a61e2e1689c74197e8f37497ebd48"/>
+<img src="https://x.ai/_next/static/media/base-5.1fhzuvuy00j0n.png?dpl=270e6ec7856a61e2e1689c74197e8f37497ebd48"/>
+<img src="https://x.ai/_next/static/media/base-6.3t9tmxu30heol.png?dpl=270e6ec7856a61e2e1689c74197e8f37497ebd48"/>
+<img src="https://x.ai/_next/static/media/new3d-1.1zc81r05mlxf2.png?dpl=270e6ec7856a61e2e1689c74197e8f37497ebd48"/>
+<img src="https://x.ai/_next/static/media/new3d-2.27lpziqdwd0j0.png?dpl=270e6ec7856a61e2e1689c74197e8f37497ebd48"/>
+<img src="https://x.ai/_next/static/media/new3d-3.1u9ugv0y8018y.png?dpl=270e6ec7856a61e2e1689c74197e8f37497ebd48"/>
+<img src="https://x.ai/_next/static/media/new3d-4.0o6i10hvi0pyz.png?dpl=270e6ec7856a61e2e1689c74197e8f37497ebd48"/>
+<img src="https://x.ai/_next/static/media/new3d-5.0dfi-x29-s1jo.png?dpl=270e6ec7856a61e2e1689c74197e8f37497ebd48"/>
+<img src="https://x.ai/_next/static/media/new3d-6.30xsvxdcjr7_i.png?dpl=270e6ec7856a61e2e1689c74197e8f37497ebd48"/>
+<img src="https://x.ai/_next/static/media/blob-1.179mb5k-55q0s.png?dpl=270e6ec7856a61e2e1689c74197e8f37497ebd48"/>
+<img src="https://x.ai/_next/static/media/blob-2.0f9k73iqne5ic.png?dpl=270e6ec7856a61e2e1689c74197e8f37497ebd48"/>
+<img src="https://x.ai/_next/static/media/blob-3.3ccg438vd4bnj.png?dpl=270e6ec7856a61e2e1689c74197e8f37497ebd48"/>
+<img src="https://x.ai/_next/static/media/blob-4.26votlluxpf3p.png?dpl=270e6ec7856a61e2e1689c74197e8f37497ebd48"/>
+<img src="https://x.ai/_next/static/media/blob-5.3td20ca0sy08_.png?dpl=270e6ec7856a61e2e1689c74197e8f37497ebd48"/>
+<img src="https://x.ai/_next/static/media/blob-6.24umj72ldwxsm.png?dpl=270e6ec7856a61e2e1689c74197e8f37497ebd48"/>
+<img src="https://x.ai/_next/static/media/line-1.2vlri0g4yob5c.png?dpl=270e6ec7856a61e2e1689c74197e8f37497ebd48"/>
+<img src="https://x.ai/_next/static/media/line-2.0k59bd-g6w77s.png?dpl=270e6ec7856a61e2e1689c74197e8f37497ebd48"/>
+<img src="https://x.ai/_next/static/media/line-3.00_foixq2-eza.png?dpl=270e6ec7856a61e2e1689c74197e8f37497ebd48"/>
+<img src="https://x.ai/_next/static/media/line-4.3na4nl1j5at_t.png?dpl=270e6ec7856a61e2e1689c74197e8f37497ebd48"/>
+<img src="https://x.ai/_next/static/media/line-5.3rjal0p5m-286.png?dpl=270e6ec7856a61e2e1689c74197e8f37497ebd48"/>
+<img src="https://x.ai/_next/static/media/line-6.2ehf_3xbvejl2.png?dpl=270e6ec7856a61e2e1689c74197e8f37497ebd48"/>
+<img src="https://x.ai/_next/static/media/s32-1.2utembwuppxxx.png?dpl=270e6ec7856a61e2e1689c74197e8f37497ebd48"/>
+<img src="https://x.ai/_next/static/media/s32-2.3iy5no1sbn35f.png?dpl=270e6ec7856a61e2e1689c74197e8f37497ebd48"/>
+<img src="https://x.ai/_next/static/media/s32-3.0e7acsgpg5bqv.png?dpl=270e6ec7856a61e2e1689c74197e8f37497ebd48"/>
+<img src="https://x.ai/_next/static/media/s32-4.21x56bl2zkenr.png?dpl=270e6ec7856a61e2e1689c74197e8f37497ebd48"/>
+<img src="https://x.ai/_next/static/media/s32-5.10zlplp724o1m.png?dpl=270e6ec7856a61e2e1689c74197e8f37497ebd48"/>
+<img src="https://x.ai/_next/static/media/s32-6.26kxeg4kxjnex.png?dpl=270e6ec7856a61e2e1689c74197e8f37497ebd48"/>
+<img src="https://x.ai/_next/static/media/mix-1.11lta7nrjb9pn.png?dpl=270e6ec7856a61e2e1689c74197e8f37497ebd48"/>
+<img src="https://x.ai/_next/static/media/mix-2.1tpo6-fp8vgup.png?dpl=270e6ec7856a61e2e1689c74197e8f37497ebd48"/>
+<img src="https://x.ai/_next/static/media/mix-3.32f6whniadrub.png?dpl=270e6ec7856a61e2e1689c74197e8f37497ebd48"/>
+<img src="https://x.ai/_next/static/media/mix-4.1pily-uyp88-h.png?dpl=270e6ec7856a61e2e1689c74197e8f37497ebd48"/>
+<img src="https://x.ai/_next/static/media/mix-5.2sq51vj2aq2dn.png?dpl=270e6ec7856a61e2e1689c74197e8f37497ebd48"/>
+<img src="https://x.ai/_next/static/media/mix-6.1e2kj0mwyz2mi.png?dpl=270e6ec7856a61e2e1689c74197e8f37497ebd48"/>
+<img src="https://x.ai/_next/static/media/agenta-1.1iuswpcl3hq8o.png?dpl=270e6ec7856a61e2e1689c74197e8f37497ebd48"/>
+<img src="https://x.ai/_next/static/media/agenta-2.346vsyk23d7i_.png?dpl=270e6ec7856a61e2e1689c74197e8f37497ebd48"/>
+<img src="https://x.ai/_next/static/media/agenta-3.20lqy9orb-_2u.png?dpl=270e6ec7856a61e2e1689c74197e8f37497ebd48"/>
+<img src="https://x.ai/_next/static/media/agenta-4.44r1bdv8r6u-c.png?dpl=270e6ec7856a61e2e1689c74197e8f37497ebd48"/>
+<img src="https://x.ai/_next/static/media/agenta-5.3at_es63n-ehm.png?dpl=270e6ec7856a61e2e1689c74197e8f37497ebd48"/>
+<img src="https://x.ai/_next/static/media/agenta-6.3m1estnwuqiu3.png?dpl=270e6ec7856a61e2e1689c74197e8f37497ebd48"/>
+<p>At the same time, we wanted to keep the avatars consistent enough to read as one system. We studied character systems across illustration, animation, games, and interface design, exploring everything from initials and emojis to pixel art, watercolor, claymorphism, Noritake-style line art, silhouettes, and identicons.</p>
+<p>Most approaches solved one side of the problem better than the other. Watercolor and clay gave individual Bots plenty of character but carried too much detail at sidebar scale. Simpler systems sat more naturally in the interface, but often left the Bots looking interchangeable.</p>
+<p>The system we landed on keeps the basic construction consistent, using simple shapes and expressive eyes, then introduces distinction through controlled variations and accessories. Each Bot remains recognizable at a glance without appearing to come from a different visual world.</p>
+<h3 id="what-are-they-doing">What are they doing</h3>
+<p>Once the avatar became the Bot’s identity, it was also the natural place to show state. A Bot may be idle, thinking, working, waiting, blocked, or done. We could have represented each state with a separate indicator, but that would have added another layer of UI for the user to interpret.</p>
+<p>Instead, we explored how much of the lifecycle the avatar itself could carry.</p>
+<p>At rest, the Bot is calm and slightly curious. When work arrives, it acknowledges the task. As work begins, it kicks into gear. Its motion changes again when it is waiting or needs help, then settles once the work is done. The avatar now shows what the Bot is doing as well as which Bot it is.</p>
+<h3 id="how-much-do-i-need-to-know">How much do I need to know</h3>
+<p>A related design question was how much of the Bot’s execution to show. One approach would have been the standard “three animated dots” but that would have been too little information, making it hard for users to tell whether the Bot was working or stuck.</p>
+<p>We also tried showing a short written description of the Bot’s current action, but once people could see one step, they wanted to see the rest. User research showed us that they were asking for that detail mainly for reassurance that the Bot was still working and on the right track.</p>
+<p>In the final design, the avatar’s motion provides the first bit of reassurance by showing that the Bot is active. If someone wants to check what it is doing, they can hover to see its current action.</p>
+<h2 id="their-computer-not-yours">Their computer, not yours</h2>
+<p>Each Bot has its own computer, which it can use to browse the web, work with files, and run software. This created another interface problem. How visible should that computer be and when should the user be able to control it?</p>
+<p>We explored four arrangements:</p>
+<ul>
+<li><strong>Floating window:</strong> kept the computer easy to reach but covered the conversation.</li>
+<li><strong>Side by side:</strong> made the work continuously visible and encouraged users to watch it.</li>
+<li><strong>Modal:</strong> made checking in easy but treated the Bot’s workspace as a temporary interruption.</li>
+<li><strong>Full screen:</strong> gave the computer plenty of room but displaced the conversation entirely.</li>
+</ul>
+<img src="https://x.ai/_next/static/media/wallpaper-gray.13vta0mrxymev.png?dpl=270e6ec7856a61e2e1689c74197e8f37497ebd48"/>
+<p>The more prominent we made the computer, the more the product encouraged users to supervise it. We decided it should remain the Bot’s workspace, with the interface providing different levels of access as the user needed them.</p>
+<p>The final design has three levels, which allow the user to enter the Bot’s workspace without being drawn into operating it:</p>
+<ul>
+<li><strong>Status:</strong> the title-bar icon turns purple while the computer is active.</li>
+<li><strong>Preview:</strong> opening it reveals a pinned side panel where the user can follow the work without leaving the conversation.</li>
+<li><strong>Takeover:</strong> when the Bot needs help, the user can open the computer full screen, take control, and then hand it back.</li>
+</ul>
+<img src="https://x.ai/_next/static/media/wallpaper-gray.13vta0mrxymev.png?dpl=270e6ec7856a61e2e1689c74197e8f37497ebd48"/>
+<p>We also designed wallpapers that shift throughout the day, becoming lighter in the morning and darker at night. The detail gives the Bot’s computer its own sense of time and makes it feel separate from the user’s desktop.</p>
+<img alt="light day" src="https://x.ai/_next/static/media/wall-strip-1.3gno9o6tamsil.png?dpl=270e6ec7856a61e2e1689c74197e8f37497ebd48"/>
+<img alt="light noon" src="https://x.ai/_next/static/media/wall-strip-2.06luvae_idfx_.png?dpl=270e6ec7856a61e2e1689c74197e8f37497ebd48"/>
+<img alt="light night" src="https://x.ai/_next/static/media/wall-strip-3.170lw02z5ufzv.png?dpl=270e6ec7856a61e2e1689c74197e8f37497ebd48"/>
+<img alt="dark day" src="https://x.ai/_next/static/media/wall-strip-4.31folbdvqalze.png?dpl=270e6ec7856a61e2e1689c74197e8f37497ebd48"/>
+<img alt="dark noon" src="https://x.ai/_next/static/media/wall-strip-5.099mty7qqe_zp.png?dpl=270e6ec7856a61e2e1689c74197e8f37497ebd48"/>
+<p>It is closer to working with a coworker than operating a remote machine. You can tell that they are working, glance at their screen when you need context, and sit down when something requires your help.</p>
+<h2 id="the-shape-of-information">The shape of information</h2>
+<p>Early versions of Grok Bot responded to almost every request with prose. It described a five-day forecast instead of showing one and narrated a set of tasks instead of laying them out as a board. The user then had to restructure the answer. This led us to treat the form of a response as part of the answer.</p>
+<p>To support this, we built inline cards and widgets into Grok Bot. A Bot can answer in prose when prose fits the information and use structured UI when it does not.</p>
+<p>The same principle applies to actions. When a Bot creates a Routine, changes a setting, or messages another Bot, the event can appear directly in the transcript. The user can open it when there is more to inspect.</p>
+<p>The result is a heterogeneous transcript in which conversation, system events, interactive objects, and visualizations share one timeline.</p>
+<h2 id="organizing-intelligence">Organizing intelligence</h2>
+<p>Once people create several Bots, the product also has to organize how those Bots work together. We needed to decide which context should belong to each role, how Bots should share context when their work overlaps, and how to coordinate them without turning the user into a dispatcher.</p>
+<p>We saw one answer emerge as people created more Bots. Some made a Chief of Staff Bot responsible for coordinating several specialists. They could give direction to one Bot instead of checking each one and routing every task themselves.</p>
+<p>Giving Bots distinct roles also forced us to decide what each role should know. A legal Bot may need the history of an ongoing dispute, while a finance Bot may need years of financial records. Combining those histories into one large memory would make it harder to give each Bot the information relevant to its work.</p>
+<p>Capabilities and context therefore follow different boundaries in Grok Bot. Tools and Skills live at the account level because many Bots may need to browse the web, work with documents, or send email. Memory and Routines belong to the Bot because they reflect what that particular role knows and does over time. Put another way, capabilities can be shared broadly while context remains with the role that needs it.</p>
+<p>Some work crosses those role boundaries. Group chats provide shared context for a project or team while allowing each Bot to retain its specialized memory. A designer, engineer, PM, and data scientist can work in the same conversation, hand work to one another, and share what the project requires.</p>
+<p>We considered adding dashboards, assignment boards, and explicit handoff controls to manage these groups. Each one gave the user more coordination work. Instead, coordinating Bots handle routine routing and bring the user in when a decision requires judgment.</p>
+<h2 id="work-that-keeps-moving">Work that keeps moving</h2>
+<p>Most agent sessions begin when a user sends a prompt. That leaves even a persistent Bot waiting for someone to activate it. Routines let users give a Bot a standing responsibility that runs on a schedule or in response to an event, such as watching an industry or preparing a briefing every morning. The user defines the work once, and the Routine activates the Bot when it needs to happen.</p>
+<p>We initially treated Routines as secondary configuration. As they became more important to autonomous work, we moved them into the Bot’s main interface. The transcript shows what ran and gives the user a place to review the result or handle an exception.</p>
+<p>This also changes the role of conversation. A prompt can start a session, but so can a schedule, an event, or another Bot. Over time, more work may begin without the user being present at all.</p>
+<h2 id="the-disappearing-interface">The disappearing interface</h2>
+<p>By the end of the project, much of the design work involved taking things away. We removed window and panel controls, computer-view options, and agent metadata. We also set practical limits of roughly 50 Bots per account and six per group chat. Each decision came back to the same question: Did this help someone delegate, or did it give them one more thing to manage?</p>
+<p>The line between operating an AI and delegating to a coworker keeps moving as models improve. Grok Bot reflects where we think it sits today. Designing Grok Bot from its earliest explorations through launch has been about finding that line and helping the interface change with it. As agents take on more responsibility, the interface should ask less of the person.</p>]]></content:encoded>
+      <guid isPermaLink="true">https://x.ai/news/designing-grok-bot</guid>
+      <category>News</category>
+      <pubDate>Fri, 18 Sep 2026 00:00:00 +0000</pubDate>
+      <media:content url="https://x.ai/_next/static/media/wallpaper-light-noon.27_hyf9uycov-.png?dpl=270e6ec7856a61e2e1689c74197e8f37497ebd48" type="image/png" medium="image"/>
+    </item>
+    <item>
+      <title>Grok Bot for Enterprise</title>
+      <link>https://x.ai/news/grok-bot-for-enterprise</link>
+      <description>Grok Bot is now available for enterprises. Grok and Cursor Enterprise customers have free usage for the next two weeks, and can invite their whole organization, including people without an existing seat.</description>
+      <guid isPermaLink="true">https://x.ai/news/grok-bot-for-enterprise</guid>
+      <category>News</category>
+      <pubDate>Fri, 18 Sep 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Grok Bot now works with X</title>
+      <link>https://x.ai/news/grok-bot-and-x</link>
+      <description>Grok Bot now has a tighter integration with X.</description>
+      <guid isPermaLink="true">https://x.ai/news/grok-bot-and-x</guid>
+      <category>News</category>
+      <pubDate>Fri, 18 Sep 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Grok Bot is now included with more plans</title>
+      <link>https://x.ai/news/grok-bot-more-plans</link>
+      <description>Grok Bot is now available for SuperGrok, Cursor Pro, and all Cursor Teams plans.</description>
+      <guid isPermaLink="true">https://x.ai/news/grok-bot-more-plans</guid>
+      <category>News</category>
+      <pubDate>Fri, 18 Sep 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Grok 4.6 on Gemini Enterprise Agent Platform</title>
+      <link>https://x.ai/news/grok-4-6-vertex-ai</link>
+      <description>Grok 4.6 is now available via Gemini Enterprise Agent Platform.</description>
+      <content:encoded><![CDATA[<p>Today, we’re excited to announce that Grok 4.6 is now available on Gemini Enterprise Agent Platform.</p>
+<p>Grok 4.6 is our latest flagship model, built for long-running agents and ambitious interactive and visual work. It offers a 500k context window and configurable reasoning efforts (low, medium, high, xhigh). Now, Gemini Enterprise Agent Platform users can use the model through <a href="https://console.cloud.google.com/agent-platform/publishers/xai/model-garden/grok-4.6">Model Garden</a>.</p>
+<h2 id="capabilities--pricing">Capabilities &amp; Pricing</h2>
+<p>Grok 4.6 is available for:</p>
+<ul>
+<li><strong>Input</strong>: $2 per 1 million tokens</li>
+<li><strong>Cached input</strong>: $0.50 per 1 million tokens</li>
+<li><strong>Output</strong>: $6 per 1 million tokens</li>
+</ul>
 <p>For more on the model, read the <a href="https://x.ai/news/grok-4-6">Grok 4.6 announcement</a>.</p>
-<h2 id="build-with-grok-46-on-microsoft-foundry">Build with Grok 4.6 on Microsoft Foundry</h2>
-<p>Foundry gives organizations a single place to evaluate Grok 4.6 against other frontier models, run workload-specific tests, deploy managed endpoints, and operate with enterprise security and governance controls.</p>
-<p>If you are building coding agents, engineering copilots, research assistants, or enterprise automation, you can get started in the <a href="https://ai.azure.com/catalog/models">Foundry model catalog</a>. See Microsoft’s announcement, <a href="https://techcommunity.microsoft.com/blog/azure-ai-foundry-blog/grok-4-6-comes-to-microsoft-foundry-models-built-for-long-horizon-reasoning-and-/4547578">Grok 4.6 comes to Microsoft Foundry Models</a>, and our <a href="https://docs.x.ai/developers/community/microsoft-foundry">Microsoft Foundry integration guide</a> for deployment details.</p>]]></content:encoded>
-      <guid isPermaLink="true">https://x.ai/news/grok-4-6-microsoft-foundry</guid>
+<h2 id="build-with-grok-46-on-gemini-enterprise-agent-platform">Build with Grok 4.6 on Gemini Enterprise Agent Platform</h2>
+<p>Grok 4.6 is now available to developers in Model Garden. To get started, visit the <a href="https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/partner-models/grok/grok-4-6">Grok 4.6 model card</a>. We're excited to see what you build!</p>]]></content:encoded>
+      <guid isPermaLink="true">https://x.ai/news/grok-4-6-vertex-ai</guid>
       <category>News</category>
       <pubDate>Fri, 18 Sep 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Grok 4.6 in GitHub Copilot</title>
-      <link>https://x.ai/news/grok-4-6-github-copilot</link>
-      <description>Grok 4.6, our latest coding model, is now available in GitHub Copilot.</description>
-      <content:encoded><![CDATA[<a href="https://console.x.ai/team/default/api-keys?campaign=grok-4-6-github-copilot-blog&amp;utm_source=website&amp;utm_medium=referral&amp;utm_campaign=grok-4-6-github-copilot-blog">Try Grok 4.6 in the API</a>
-<a href="https://github.com/features/copilot">Open GitHub Copilot</a>]]></content:encoded>
-      <guid isPermaLink="true">https://x.ai/news/grok-4-6-github-copilot</guid>
+      <title>Grok 4.6 on Amazon Bedrock</title>
+      <link>https://x.ai/news/grok-4-6-amazon-bedrock</link>
+      <description>Grok 4.6 is now available via Amazon Bedrock.</description>
+      <content:encoded><![CDATA[<p>Today, we’re excited to announce that Grok 4.6 is now generally available on Amazon Bedrock.</p>
+<p>Grok 4.6 is our latest flagship model, built for long-running agents and ambitious interactive and visual work. It offers 500k context window and configurable reasoning efforts (low, medium, high, xhigh). Now, Amazon Bedrock users can leverage the model through Amazon Bedrock.</p>
+<h2 id="capabilities--pricing">Capabilities &amp; Pricing</h2>
+<p>Grok 4.6 is available for:</p>
+<ul>
+<li><strong>Input</strong>: $2 per 1 million tokens</li>
+<li><strong>Cached input</strong>: $0.50 per 1 million tokens</li>
+<li><strong>Output</strong>: $6 per 1 million tokens</li>
+</ul>
+<p>For more on the model, read the <a href="https://x.ai/news/grok-4-6">Grok 4.6 announcement</a>.</p>
+<h2 id="build-with-grok-46-on-amazon-bedrock">Build with Grok 4.6 on Amazon Bedrock</h2>
+<p>Grok 4.6 is now available to all developers in supported AWS Regions. Please visit AWS documentation to get started - we're excited to see what you build!</p>]]></content:encoded>
+      <guid isPermaLink="true">https://x.ai/news/grok-4-6-amazon-bedrock</guid>
       <category>News</category>
       <pubDate>Fri, 18 Sep 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Introducing Grok 4.6</title>
-      <link>https://x.ai/news/grok-4-6</link>
-      <description>Grok 4.6 builds on Grok 4.5 with a particular focus on long-running agents and more ambitious interactive and visual work.</description>
-      <guid isPermaLink="true">https://x.ai/news/grok-4-6</guid>
-      <category>News</category>
-      <pubDate>Fri, 18 Sep 2026 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Introducing Grok Bot</title>
-      <link>https://x.ai/news/introducing-grok-bot</link>
-      <description>Grok Bot is your team of always-on agents. They have their own computer, work inside tools and apps like you do, and keep working 24/7.</description>
-      <guid isPermaLink="true">https://x.ai/news/introducing-grok-bot</guid>
-      <category>News</category>
-      <pubDate>Fri, 18 Sep 2026 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Imagine Video 1.5 with References</title>
-      <link>https://x.ai/news/grok-imagine-video-1-5-references</link>
-      <description>Our best video model, now with text, image, and voice references — generating up to 1080p.</description>
-      <content:encoded><![CDATA[<a href="https://grok.com/imagine?referrer=website&amp;campaign=imagine-video-1-5-references-blog">Open Grok.com</a>]]></content:encoded>
-      <guid isPermaLink="true">https://x.ai/news/grok-imagine-video-1-5-references</guid>
-      <category>News</category>
-      <pubDate>Fri, 18 Sep 2026 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Introducing Grok Voice 2.0</title>
-      <link>https://x.ai/news/grok-voice-think-fast-2</link>
-      <description>Introducing our most capable speech-to-speech voice model.</description>
-      <guid isPermaLink="true">https://x.ai/news/grok-voice-think-fast-2</guid>
-      <category>News</category>
-      <pubDate>Fri, 18 Sep 2026 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Introducing Build Mode</title>
-      <link>https://x.ai/news/grok-build-mode</link>
-      <description>Create and share websites, apps, games, and interactive dashboards. Now in Early Beta for SuperGrok Heavy subscribers on grok.com, iOS, and Android.</description>
-      <guid isPermaLink="true">https://x.ai/news/grok-build-mode</guid>
-      <category>News</category>
-      <pubDate>Fri, 18 Sep 2026 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Grok 4.5 in GitHub Copilot</title>
-      <link>https://x.ai/news/grok-github-copilot</link>
-      <description>Grok 4.5, our smartest coding model, is now available in GitHub Copilot.</description>
-      <content:encoded><![CDATA[<a href="https://console.x.ai/team/default/api-keys?campaign=grok-github-copilot-blog&amp;utm_source=website&amp;utm_medium=referral&amp;utm_campaign=grok-github-copilot-blog">Try Grok 4.5 in the API</a>
-<a href="https://github.com/features/copilot">Open GitHub Copilot</a>]]></content:encoded>
-      <guid isPermaLink="true">https://x.ai/news/grok-github-copilot</guid>
-      <category>News</category>
-      <pubDate>Fri, 18 Sep 2026 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Grok Build is Now Open Source</title>
-      <link>https://x.ai/news/grok-build-open-source</link>
-      <description>Explore the harness behind our coding agent and TUI.</description>
-      <content:encoded><![CDATA[<a href="https://github.com/xai-org/grok-build">View on GitHub</a>]]></content:encoded>
-      <guid isPermaLink="true">https://x.ai/news/grok-build-open-source</guid>
-      <category>News</category>
-      <pubDate>Fri, 18 Sep 2026 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>21 New Flagship Grok Voices</title>
-      <link>https://x.ai/news/new-flagship-voices</link>
-      <description>New multilingual voices for Grok Voice, plus improved naturalness for the original five.</description>
-      <guid isPermaLink="true">https://x.ai/news/new-flagship-voices</guid>
-      <category>News</category>
-      <pubDate>Fri, 18 Sep 2026 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Grok on Databricks</title>
-      <link>https://x.ai/news/grok-databricks</link>
-      <description>Grok models are now available on Databricks Agent Bricks.</description>
-      <content:encoded><![CDATA[<p>We're excited to share that Grok models are now natively available on Databricks Agent Bricks, Databricks' developer agent platform.</p>
-<p>As part of the Databricks 2026 Data + AI Summit, Databricks is partnering with SpaceXSI to make Grok available alongside other frontier and open-source models in a single, governed platform.</p>
-<p>Agent Bricks connects context (derived from data in Lakehouse) with control and choice, enabling engineering teams to effectively build AI agents that operate on large volumes of data.</p>
-<p>Together with <a href="https://x.ai/news/grok-amazon-bedrock">Grok on Amazon Bedrock</a>, enterprises have more ways to run SpaceXSI models where their data already lives.</p>
-<p>For more on Agent Bricks, see the <a href="https://www.databricks.com/blog/agent-bricks-dais-2026">Databricks announcement</a>.</p>]]></content:encoded>
-      <guid isPermaLink="true">https://x.ai/news/grok-databricks</guid>
-      <category>News</category>
-      <pubDate>Fri, 18 Sep 2026 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Introducing Grok for PowerPoint</title>
-      <link>https://x.ai/news/introducing-powerpoint-addin</link>
-      <description>Grok now works inside Microsoft PowerPoint — turn outlines into slides, expand the deck, and tighten the narrative without leaving the app.</description>
-      <guid isPermaLink="true">https://x.ai/news/introducing-powerpoint-addin</guid>
-      <category>News</category>
-      <pubDate>Fri, 18 Sep 2026 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Agent Dashboard in Grok Build</title>
-      <link>https://x.ai/news/agent-dashboard</link>
-      <description>Manage many coding sessions at once. See what each is doing, reply to the ones that need you, and dispatch new work.</description>
-      <content:encoded><![CDATA[<p>The Agent Dashboard puts every Grok Build session on one screen. See what each is doing, run them in parallel, and step in only when input is needed.</p>
-<p>Run <code>grok dashboard</code> from your shell, or <code>/dashboard</code> (<code>Ctrl+\</code>) from inside any session.</p>
-<h2 id="see-every-session-at-a-glance">See every session at a glance</h2>
-<p>The dashboard sorts sessions by state, with anything waiting for input pulled to the top, so you handle blockers first and leave the rest running. A quick scan shows what each session is doing and for how long, so you stay oriented without opening anything.</p>
-<p>Spread across repos? Group by working directory with <code>Ctrl+S</code>. Subagents roll up under the session that launched them, so the list shows the work you dispatched, not the fan-out beneath it.</p>
-<h2 id="peek-and-reply">Peek and reply</h2>
-<p>Select a row to peek at its latest output without leaving the dashboard, then reply from there. Idle sessions send immediately; active ones queue your message until the current turn ends.</p>
-<p>When a session requests approval or asks a question, its options appear inline. Answer with the arrow or number keys to continue. Multi-part questions arrive one at a time.</p>
-<h2 id="dispatch-new-sessions">Dispatch new sessions</h2>
-<p>The input at the bottom starts a new session. <code>Enter</code> dispatches it and keeps you on the dashboard; <code>Shift+Enter</code> dispatches and opens it right away. Before sending, set the model, start in plan mode, or let the session approve its own edits.</p>
-<h2 id="take-over-any-session">Take over any session</h2>
-<p>Open any session to take over its full conversation. Cycle to the next or previous session without returning to the list, then drop back to the dashboard when you're done. Closing the dashboard leaves every session running, and they're all there when you reopen it.</p>
-<h2 id="get-started">Get started</h2>
-<p>The Agent Dashboard ships with Grok Build. Install it with a single command, then run <code>grok dashboard</code>, or <code>/dashboard</code> from any session you already have open.</p>]]></content:encoded>
-      <guid isPermaLink="true">https://x.ai/news/agent-dashboard</guid>
+      <title>Grok Build on web and mobile</title>
+      <link>https://x.ai/news/grok-build-for-everyone</link>
+      <description>Grok Build is now available on every plan, on the web and on mobile.</description>
+      <guid isPermaLink="true">https://x.ai/news/grok-build-for-everyone</guid>
       <category>News</category>
       <pubDate>Fri, 18 Sep 2026 00:00:00 +0000</pubDate>
     </item>
