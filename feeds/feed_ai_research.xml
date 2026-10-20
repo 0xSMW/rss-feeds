@@ -8,7 +8,172 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 19 Oct 2026 12:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 20 Oct 2026 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>How Claude designed protein binders against scorpion neurotoxins</title>
+      <link>https://www.anthropic.com/research/claude-scorpion-toxin-binder-design</link>
+      <description>We asked an internal research Claude model to design minibinders (small proteins that attach tightly to a target) against scorpion neurotoxins.</description>
+      <content:encoded><![CDATA[<p><em><strong>Summary: </strong>As part of our work experimenting with how Claude can help accelerate drug discovery, we asked an internal research model to design </em>minibinders <em>(small proteins that attach tightly to a target) against scorpion neurotoxins. Claude worked from our prompt and four follow-ups, which we developed in collaboration with the financial investment research firm Citrini Research. Teams at Adaptyv Bio and Twist Bioscience experimentally tested 211 designs for binding. Of these, 17 met our criteria. We’re releasing all 211 designs and their data as a resource for the field.</em></p>
+<figure><p><a href="https://cdn.sanity.io/files/4zrzovbb/website/ed77ef7e1a1fc40d96df2ffb4eeaad008ccb702f.mp4">▶ Watch video</a></p></figure>
+<p>In August, we showed <a href="https://www.anthropic.com/research/Claude-accelerates-protein-design">how Claude designed protein minibinders</a> after being given a single prompt. A month before we released those results, a team from <a href="https://www.citriniresearch.com/">Citrini Research</a> had approached us with an interesting question: could Claude (and AI drug discovery more generally) enable a group of motivated nonexperts to tackle a genuine problem in human health? Members of our life science research team set out to answer this, first by brainstorming problems with Claude. We landed on asking for Claude’s help designing novel protein binders against scorpion neurotoxins, with the hope that they could one day be used to develop a scorpion antivenom.</p>
+<p>Scorpions sting 1.2 million people or more every year, resulting in more than 3,250 deaths, mostly among children in parts of the world with limited access to medical care. New treatments are expensive to make, and are also unlikely to earn back the cost of developing them. With so little investment, scorpion envenomation has been <a href="https://gh.bmj.com/content/10/11/e020682">described as</a> a neglected tropical disease.</p>
+<p>We started by giving Claude the same prompt we’d used in our earlier protein-binder study, after modifying it with Citrini.<sup><a href="#footnote-1">1</a></sup> Over the next 64 hours, an internal research model, operating within Claude Science, worked mainly autonomously, although we directed its work with four follow-ups. Under our supervision, Claude analyzed the research data, generated the figures, and drafted the final report.</p>
+<p>Claude’s design campaign produced 17 protein binders that each bind to one of four scorpion neurotoxins that are known to be dangerous to humans. Throughout the process, Claude generated 318,484 protein designs and selected 180 of them for testing. Our team added 31 more, with Claude’s help. Our partners at Adaptyv Bio and Twist Bioscience, two contract research organizations (CROs), lab-tested all 211 designs to see if they would bind to the toxins they were designed against, and 17 designs met our criteria for a binder. We have not confirmed whether these binders neutralize scorpion venom in a cellular environment, so we do not claim to have produced an antivenom.</p>
+<p>We sent Claude’s work to two outside experts, Susana Vázquez Torres and Timothy P. Jenkins, who said they felt this work was a promising first step. If AI can now design credible binders against several hard-to-target toxins in days and they can be confirmed in the lab within weeks, this could, in theory, speed up discovery for envenomation and other neglected diseases. The challenge, as always, is turning those binders into safe, affordable, and widely accessible drugs.</p>
+<p>We share more detail in our <a href="https://www-cdn.anthropic.com/31ac578806cffd8b3d92d8affe6edc4c04d502e1.pdf">technical report</a>, and are making <a href="https://huggingface.co/datasets/Anthropic/scorpion-toxin-binder-design">all 211 designs and their data available</a>.</p>
+<blockquote>Designing a binder against almost any target no longer seems unrealistic. We can now obtain very tight binders remarkably quickly, and binding itself is no longer the main bottleneck. For venomous animals such as snakes and scorpions, whose bites and stings kill or seriously injure large numbers of people, particularly in underserved regions, the real impact will come from tackling the parts of the therapeutic pipeline that go beyond binding. The challenge is to use these extraordinary tools to develop molecules that can become real drugs, ones that are safe, affordable, and widely accessible.</blockquote>
+<p><em><strong>Susana Vázquez Torres</strong>, Postdoctoral Researcher, Structural Biology Programme, Spanish National Cancer Research Centre (CNIO), Madrid, Spain.</em></p>
+<h2 id="designing-de-novo-binders-against-five-toxins-from-four-species-of-scorpions">Designing <em>de novo</em> binders against five toxins from four species of scorpions</h2>
+<p>Scorpion venom contains multiple protein neurotoxins. The neurotoxins that are most likely to harm or kill humans attach to <em>sodium channels</em>, large proteins embedded in the membranes of nerve cells that allow them to fire. When sodium channels are disrupted, nerves fire at the wrong time—this releases large amounts of stress chemicals, like adrenaline. In severe cases, this can cause heart failure and excess fluid buildup in the lungs, occasionally resulting in death.</p>
+<p>There are some antivenoms available for scorpion stings. They’re generally made using the antibodies of immunized animals, a process that can take months. Venom is milked from thousands of scorpions and used to immunize horses; scientists then purify the resulting antibodies from the horses’ blood. Traditional antivenoms can work when given early, but they’re usually effective for only a small number of neurotoxins. They’re also expensive to produce, and in many regions are costly or in short supply.</p>
+<p><em>De novo </em>design offers a potential solution. A binder is a molecule that attaches tightly to a specific target; antibodies are one natural example. In principle, a binder that targets the part of a neurotoxin that latches onto sodium channels could stop the toxin from reaching the channel. In <em>de novo</em> design, protein binders are generated from scratch against a specific target. These binders are designed computationally and can be optimized for druglike properties such as potency and stability, which could make them easier to supply in regions where stings most often occur.</p>
+<p>Our approach was inspired by <a href="https://www.nature.com/articles/s41586-024-08393-x">an earlier effort</a> that designed <em>de novo</em> proteins that neutralized snake neurotoxins and protected mice. To our knowledge, no <em>de novo</em>-designed binders against scorpion neurotoxins have been described.</p>
+<p>For this campaign, we chose to target five scorpion-venom neurotoxins across four regions: Mexico (Cn2), Brazil (Ts1), North Africa (AaH I and AaH II), and the Middle East (LqhIII). We also chose to aim the designs at each toxin’s channel-binding site. Claude picked the toxin structures to use for design by searching the Protein Data Bank (PDB) as well as the AlphaFold database (AFDB). For each toxin, it selected five <em>hotspots</em>, specific amino acid positions on the toxin that its binder designs were meant to latch onto.</p>
+<figure><img height="2349" src="https://www.anthropic.com/_next/image?url=https%3A%2F%2Fwww-cdn.anthropic.com%2Fimages%2F4zrzovbb%2Fwebsite%2Fa75592f9509840d8fe7b9137d4b76197342f9395-3923x2349.png&amp;w=3840&amp;q=75" width="3923"/></figure>
+<p>We were primarily wondering if Claude could design binders against <em>individual</em> toxins. But we were also curious if Claude could design binders that targeted <em>multiple</em> toxins. There’s a practical reason for trying to design multitoxin binders, namely that it would reduce the number of molecules needed for a universal antivenom cocktail—which would be the most cost-effective and regionally neutral treatment. We selected these five scorpion toxins (Cn2, Ts1, AaH I, AaH II, and LqhIII) as a challenging test of multitoxin design: they share one fold for the overall shape of the protein, but any two are only 26% to 62% identical in their amino acid sequences.</p>
+<p>To see how far Claude could go, we asked it to design four kinds of binders: binders against each of the five toxins individually; binders that targeted the β-family toxins Ts1 and Cn2; binders that targeted the α-family toxins AaH II, AaH I, and LqhIII; and binders that targeted all five toxins simultaneously.</p>
+<blockquote>Designing credible binders against five toxins in parallel, in a matter of days, is a great showcase of the AI-driven paradigm shift we are seeing in therapeutic discovery. This is especially true for neglected diseases such as animal envenomings, which have been largely starved of innovation due to low commercial incentives. Being able to agentically tackle the uniquely broad target space across animal toxins provides a significant speed-up in discovery, and brings realistic therapeutic solutions much closer.</blockquote>
+<p><em><strong>Timothy P. Jenkins</strong>, Associate Professor, Technical University of Denmark.</em></p>
+<h3 id="claude-ran-the-design-campaign-with-considerable-autonomy">Claude ran the design campaign with considerable autonomy</h3>
+<p>Our initial prompt defined the neurotoxin targets, the protein design and folding tools, and the rules for novelty, scoring, and filtering. Beyond choosing the structures and amino acid hotspots, Claude also set the quality thresholds a design had to clear, decided how much to lean on each available design tool, and developed the strategies for designing binders against multiple toxins.</p>
+<p>Ultimately, Claude used 12 design tools to generate 318,484 designs, filtering out any that resembled a toxin or a known protein. Claude co-folded and screened 553,052 design-toxin pairs, predicting each pair’s structure as one complex. Sixty-four hours after we gave Claude our initial prompt, it produced its final list of 180 designs. The campaign used on the order of 10,000 GPU hours.<sup><a href="#footnote-2">2</a></sup> </p>
+<p>Claude worked autonomously for 24 hours following our first prompt. Its results encouraged us to prompt Claude to continue its campaign and look for better designs. Our follow-up prompts were mainly focused on directing Claude to design a multitoxin binder. Claude selected most of the 180 designs—including our strongest binder (Cn2-B1)—only after our third follow-up. At our request, Claude sent the protein sequences to Twist Bioscience (in emails indicating they were written by Claude), which produced the proteins in order to see how well they would bind to the toxins. We later worked with Claude to add another 31 designs, increasing the total to 211 designs: 60 designs against a single toxin (12 per toxin), 30 designs against the two β-family toxins, 30 designs against the three α-family toxins, and 91 designs against all five toxins.</p>
+<p>Of the 211 designs our teams assessed, 17 met our criteria for a binder, each against a single toxin. None of the designs made against multiple toxins met our criteria for more than one. (Beyond being limited by its current capabilities, there could be many explanations for why Claude struggled with this, including our prompting, the limitations of available design tools, and even the biological feasibility of multitoxin design.) Seven designs were binders against Cn2, four against AaH II, four against AaH I, and two against LqhIII. Among the 60 single-toxin designs, 11 were binders (18%). This rate is consistent with typical protein design campaigns, including our previous work.</p>
+<figure><img height="1182" src="https://www.anthropic.com/_next/image?url=https%3A%2F%2Fwww-cdn.anthropic.com%2Fimages%2F4zrzovbb%2Fwebsite%2Fc0a8c7f4a34bb8fa4ca9fbed5697f275beef82a8-2880x1182.png&amp;w=3840&amp;q=75" width="2880"/></figure>
+<h3 id="testing-claudes-designs-in-the-lab">Testing Claude's designs in the lab</h3>
+<p>After completing the campaign, we sent the designs to Adaptyv Bio and Twist Bioscience to test them for binding. Each group produced the designs in their labs, but in different formats. Adaptyv Bio expressed them in a <em>cell-free system</em>, which uses protein-making machinery extracted from bacteria rather than living cells. Twist Bioscience expressed the designs in mammalian cells (in this case, human kidney cells) as fusions to <em>Fc</em>, the stem of an antibody. These are complementary ways to measure the underlying binding process, and we combined them in order to improve confidence in our results.</p>
+<p>Both labs measured binding by <em>surface plasmon resonance</em> (SPR), in which a toxin flows over the design while the SPR instrument tracks in real time how quickly a toxin binds to and detaches from it. The resulting trace, called a sensorgram, produces a measurement known as the <em>dissociation constant</em> (KD), which is a measurement for binding strength (or <em>affinity</em>). The lower the KD, the tighter the binding.</p>
+<p>When it came to evaluating the resulting designs, we set out strict criteria for labeling a design a binder against a toxin. The design needed to be a <em>hit</em> at both labs<sup><a href="#footnote-3">3</a></sup>—that is, it needed to show evidence of binding against that toxin in every replicate, and every KD needed to be 1 µM or tighter. We also required that the design show no signal against CLEC12A, an unrelated human protein used to measure off-target binding or “stickiness.”</p>
+<h3 id="claudes-cn2-binders-likely-bind-the-same-site-as-a-toxin-neutralizing-antibody">Claude’s Cn2 binders likely bind the same site as a toxin-neutralizing antibody</h3>
+<p>Antibodies and nanobodies remain the standard for <em>de novo</em> designs to beat. Three such molecules have reported affinities (KD) below 1 nM (nanomolar) against Cn2 or AaH II, and they have been shown to protect mice from scorpion toxins.</p>
+<p>Our two strongest binders, which we call Cn2-B1 and Cn2-B2, target Cn2, a neurotoxin from the Mexican scorpion <em>Centruroides noxius</em>. They each bound Cn2 tightly at both Adaptyv Bio and Twist Bioscience, with affinities (KD) in the single-digit nanomolar range.</p>
+<p>One way to find out whether two molecules (e.g., an antibody and a miniprotein) bind the same site on a target is with a <em>competition experiment,</em> which tests whether both binders can attach to the target at the same time<em>. </em>If the presence of one molecule reduces the other molecule’s binding, then they likely compete for the same binding site.</p>
+<p>Our competition experiments suggest our Cn2 binders each attach on or near the same <em>epitope</em> (binding site) as an antibody called LR, which <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4722445/">has been reported to neutralize Cn2</a> in mice. LR’s binding site covers the part of Cn2 that attaches to the sodium channel and causes nerves to misfire. We have not tested our strongest binders, Cn2-B1 and Cn2-B2, in a cellular environment or in live animals, but the fact that they compete with LR suggests that they will likely neutralize Cn2.</p>
+<figure><img height="1478" src="https://www.anthropic.com/_next/image?url=https%3A%2F%2Fwww-cdn.anthropic.com%2Fimages%2F4zrzovbb%2Fwebsite%2F3c9ec1588052bacd27a3e6b60031ff44ecab86a9-3871x1478.png&amp;w=3840&amp;q=75" width="3871"/></figure>
+<h2 id="a-binder-is-only-the-first-step-to-developing-an-antivenom">A binder is only the first step to developing an antivenom</h2>
+<p>Our results show binding only against <em>recombinant</em> toxins, which are grown in the lab from each toxin’s gene rather than purified from venom. The two biggest limitations of this study are that we didn’t test any design for neutralization <em>in vitro</em> (against cells grown in the lab) or for efficacy <em>in vivo </em>(in living animals, such as mice).</p>
+<p>If we were to advance one design toward a therapy, Cn2-B1 would be one of our strongest candidates. First, though, we would need to confirm the design also binds toxin purified from venom. We would then assess it for function <em>in vitro</em> with patch-clamp recordings (which can measure the electrical current passing through sodium channels) to see whether it stops the toxin from acting on the channel. Then, we would need to test the binder in mice to see whether it actually protects them. Beyond neutralizing the toxin, a treatment must also be safe, stable, affordable, and available where stings occur. Reaching patients will also take cooperation from clinicians, funders, and policymakers.</p>
+<p>We are releasing <a href="https://huggingface.co/datasets/Anthropic/scorpion-toxin-binder-design">all 211 designs and their binding data</a> so that other researchers can build on our work. We hope this demonstration of Claude’s capabilities, along with the data we are releasing, will help accelerate further research into antivenom design.</p>]]></content:encoded>
+      <guid isPermaLink="true">https://www.anthropic.com/research/claude-scorpion-toxin-binder-design</guid>
+      <category>Science</category>
+      <pubDate>Tue, 20 Oct 2026 00:00:00 +0000</pubDate>
+      <media:content url="https://www.anthropic.com/_next/image?url=https%3A%2F%2Fwww-cdn.anthropic.com%2Fimages%2F4zrzovbb%2Fwebsite%2Fa75592f9509840d8fe7b9137d4b76197342f9395-3923x2349.png&amp;amp;w=3840&amp;amp;q=75" type="image/jpeg" medium="image"/>
+    </item>
+    <item>
+      <title>Voxtral 3</title>
+      <link>https://mistral.ai/news/voxtral-3</link>
+      <description>Merci de recevoir ce patient pour un avis dermatologique. Traitement en cours : crème à l’hydrocortisone. Dr Martin, Clinique du Parc.</description>
+      <content:encoded><![CDATA[<img alt="The Voxtral agent" height="400" src="https://mistral.ai/images/heros/voxtral/agent.svg?dpl=6ad78eeae2c86aaf57435522" width="240"/>
+<img alt="Béatrice, the caller" height="400" src="https://mistral.ai/images/heros/voxtral/user.webp?dpl=6ad78eeae2c86aaf57435522" width="240"/>
+<p>Speech transcription and voice generation have come a long way, but building end-to-end voice agents that can listen, reason, interact, and handle complex workflows remains difficult. </p>
+<p>A reliable voice agent needs to do four things very well (and simultaneously): </p>
+<ol><li><p><strong>Listen accurately </strong>across languages, accents, speakers, and interruptions,</p></li><li><p><strong>Reason</strong> <strong>deeply </strong>about what users mean in specific contexts,</p></li><li><p><strong>Speak naturally </strong>with emotion and expression, and </p></li><li><p><strong>Take action </strong>over multiple steps through connected systems. </p></li></ol>
+<p>Getting all four to work together reliably in real time remains a challenge. </p>
+<p>To address this, we introduce Voxtral 3: a new family of state-of-the-art <a href="https://docs.mistral.ai/studio/audio/speech-to-text/overview"><u>speech-to-text</u></a> and <a href="https://docs.mistral.ai/models/voxtral-mini-tts-3"><u>text-to-speech</u></a> models, alongside a voice agent SDK that brings listening, thinking, tool calling, and speaking into a single real-time streaming pipeline.</p>
+<p>Voxtral 3 is built to create natural conversational experiences, from contact-center agents and service desks to virtual assistants and hands-free copilots. With support for dozens of languages, expressive speech, complex reasoning, and deep integration with your own tools and data, agents built with Voxtral can interpret nuanced intent, reason through sophisticated requests, and execute multi-step actions across connected systems.</p>
+<p>As with other Mistral models, the Voxtral 3 family is designed for sovereign deployment. Available today through Mistral's EU-hosted API or for self-deployment on your own infrastructure, it gives organizations control over where audio is processed, how data is handled, and whether conversations are retained.</p>
+<iframe allowfullscreen="" src="https://www.youtube.com/embed/xFhyfPC-VzI"></iframe>
+<h2>Highlights</h2>
+<ol><li><p><strong>Accurate transcription across 50+ languages</strong>. The speech-to-text model, <em>Voxtral Small Transcribe 3</em>, is state-of-the-art in multilingual transcription, identifying who said what (diarization), using keyphrases to improve its accuracy (context-biasing). It detects when someone has finished speaking so agents can respond without delay (end-of-turn detection).</p></li><li><p><strong>Natural speech that adapts to the conversation</strong>. The text-to-speech model, <em>Voxtral Mini TTS 3</em>, introduces new voices that adjust their emotion, pace, and emphasis based on conversational context, with support for 35+ languages and 50+ dialects.</p></li><li><p><strong>Human-like intelligence at your (spoken) command</strong>. The new voice agent SDK combines listening, reasoning, tool calling, and speaking into a real-time experience. Agents can retrieve information, interact with business systems, and complete tasks during live conversations over phone or web.</p></li><li><p><strong>Pro Voice for distinctly accurate voice adaptation</strong>. For professional use cases where basic voice cloning does not suffice, Voxtral’s <em>Pro Voice</em> adaptation is able to reproduce a speaker’s distinctive character, emotional range, and speaking style across languages, using just 30 minutes of audio. </p></li><li><p><strong>Your voice AI, on your infrastructure</strong>. Use Mistral's EU-hosted API or deploy Voxtral 3 on your own infrastructure. Keep sensitive conversations within your environment and control whether any audio is retained. </p></li></ol>
+<p><a href="https://console.mistral.ai/api-keys"><u>Try Voxtral now </u></a> | <a href="https://docs.mistral.ai/studio/audio/overview"><u>Learn more</u></a></p>
+<h2>It hears 50+ languages, with state-of-the-art accuracy.</h2>
+<p><a href="http://docs.mistral.ai/models/voxtral-small-transcribe-3-0"><u>Voxtral Transcribe 3</u></a> represents a significant milestone across transcription, diarization (who spoke when) and context biasing capabilities. The supported list of languages is expanded to 50, including 24 official EU languages and many low-resource Asian and Indic languages.</p>
+<p>The Small version achieves state-of-the-art results across diarization and multilingual transcription, including in English, French and Spanish. It outperforms Whisper, Scribe v2 and Gemini 3.5 Transcribe. The <a href="https://docs.mistral.ai/models/voxtral-mini-transcribe-3-0"><u>Mini variant</u></a> is 4B parameters, enabling fast and accurate transcriptions at a price of $0.0035/min.</p>
+<p>Both models support context biasing, where key terms and free-form text can be given to bias the transcription and improve recall on technical terms. This enables them to be used in production settings with domain-specific vocabulary without the need for fine-tuning.</p>
+<iframe allowfullscreen="" src="https://www.youtube.com/embed/7a65lAUvAxQ?si=g_XfgQRB9cZQBiME"></iframe>
+<iframe allowfullscreen="" src="https://www.youtube.com/embed/hHIs0pc-RVQ"></iframe>
+<p><a href="http://docs.mistral.ai/models/voxtral-mini-transcribe-realtime-3-0"><u>Voxtral Realtime Transcribe 3</u></a> is a realtime transcription model built for agentic use-cases. It achieves high-quality transcriptions at sub-500ms latency in over 35 languages, including with diarization and context biasing.</p>
+<p>End-of-turn prediction is natively supported, incorporating both acoustic and semantic information to accurately predict when a user is finished speaking. This allows for low-latency voice agent applications, while minimizing false cut-off rates when the user is prematurely interrupted.</p>
+<h2>It answers with the right emotion, in your or your customer’s brand's own voice and local dialect.</h2>
+<p><a href="http://docs.mistral.ai/models/voxtral-mini-tts-3-0"><u>Voxtral Mini TTS 3.0</u></a>, available in batch and realtime, achieves state-of-the-art expressiveness and instruction following for 35+ languages and 50+ dialects. At $13 per 1M characters, Voxtral Speech 3 costs less to run than comparable models from OpenAI TTS-1, Deepgram, ElevenLabs Flash and Gemini Flash.</p>
+<p>The speech model implicitly interprets the semantic meaning of context better, producing natural speech across a diverse range of emotions and languages. New and improved features include voice cloning from 30+ minutes of sampled audio, custom prompt instruction following (IF), contextual TTS, and a vocabulary library, all of which serve the goal of speech reliability in deployment. Variables for Explicit IF include <code>emotion</code>, <code>pacing</code>, and <code>emphasis</code>.</p>
+<p>Let's end the debate here: it's GIF.</p>
+<p>Default</p>
+<audio src="https://mistral.ai/cms-media/api/media/file/audio_(20).wav"></audio>
+<p>Non-standard phoneme hint: dʒ ɪ f</p>
+<audio src="https://mistral.ai/cms-media/api/media/file/audio_(21).wav"></audio>
+<p>Attends… Ce n’est pas possible. Ce tableau vient de Reims ? Mais alors… C’est celui que ma grand-mère cherchait depuis cinquante ans !</p>
+<p>Default</p>
+<audio src="https://mistral.ai/cms-media/api/media/file/audio_(8).wav"></audio>
+<p>Non-standard phoneme hint: ʁ e i m s</p>
+<audio src="https://mistral.ai/cms-media/api/media/file/audio_(9).wav"></audio>
+<p>Il nostro nuovo assistente si chiama Quivello.</p>
+<p>Default</p>
+<audio src="https://mistral.ai/cms-media/api/media/file/quivelo.wav"></audio>
+<p>Non-standard phoneme hint: tʃ i v ɛ l l o</p>
+<audio src="https://mistral.ai/cms-media/api/media/file/chievelo.wav"></audio>
+<p>Hallo! Ich bin Xyra, deine persönliche Assistentin.</p>
+<p>Default</p>
+<audio src="https://mistral.ai/cms-media/api/media/file/ger-2.wav"></audio>
+<p>Non-standard phoneme hint: z aɪ ɹ ə</p>
+<audio src="https://mistral.ai/cms-media/api/media/file/ger-1.wav"></audio>
+<p>All natural-sounding speech relies on emotion, which determines its prosody, rhythm, pacing, emphasis, and transitions. Voxtral TTS natively interprets a prompt’s text context to determine the emotion and voice style, making the model inherently better at natural speech without requiring additional instructions or voice prompts.</p>
+<h3>Illustrating Voxtral hill-climbing in expressiveness, numbers and unique names.</h3>
+<p>Thank you for calling Mistral! I understand you're having difficulty logging into AI Studio. Can I confirm your email address? I have here elena.vance82@yahoo.com, is that correct?</p>
+<p>Voxtral 1</p>
+<audio src="https://mistral.ai/cms-media/api/media/file/Voxtral%201%20-%20Customer%20Support.wav"></audio>
+<p>Voxtral 3</p>
+<audio src="https://mistral.ai/cms-media/api/media/file/Voxtral%203%20-%20Customer%20Support.wav"></audio>
+<p>Gosh that was quick, I've found a flight for your upcoming travel. How about the Emirates flight at 21:00pm on 10/10 returning 10/25 at 22:00pm for £1881? Say the word, and I'll book a window seat now.</p>
+<p>Voxtral 1</p>
+<audio src="https://mistral.ai/cms-media/api/media/file/Voxtral%201%20-%20personal%20ai%20agent.wav"></audio>
+<p>Voxtral 3</p>
+<audio src="https://mistral.ai/cms-media/api/media/file/Voxtral%203%20-%20personal%20ai%20agent.wav"></audio>
+<p>Wow I can't believe you're pregnant! This is so exciting, congratulations Corina, I'm so happy for you!</p>
+<p>Voxtral 1</p>
+<audio src="https://mistral.ai/cms-media/api/media/file/Voxtral%201%20-%20EQ%20Excited.wav"></audio>
+<p>Voxtral 3</p>
+<audio src="https://mistral.ai/cms-media/api/media/file/Voxtral%203%20-%20EQ%20Excited.wav"></audio>
+<p>What do you mean my passport won't be finished this week -- I've told you several times how I need to go to Paris for work. This is ridiculous. I can't even begin to describe how infuriating this has been.</p>
+<p>Voxtral 1</p>
+<audio src="https://mistral.ai/cms-media/api/media/file/Voxtral%201%20-%20Angry%20EQ.wav"></audio>
+<p>Voxtral 3</p>
+<audio src="https://mistral.ai/cms-media/api/media/file/Voxtral%203%20-%20Angry%20EQ.wav"></audio>
+<iframe allowfullscreen="" src="https://www.youtube.com/embed/y7Dtkjz3MZM"></iframe>
+<iframe allowfullscreen="" src="https://www.youtube.com/embed/1czHOKcAtfY"></iframe>
+<h3>Speech sounds local in 35 languages and over 50 dialects.</h3>
+<p>Voxtral TTS supports over <strong>35 languages</strong> and regional dialects. Our multilingual evals adhere to dialect differences in pronunciation, formal vs. informal register, spelling, verbosity, and locale conventions (time, dates, temperatures, addresses, currencies).</p>
+<p>Voxtral 3 multilingual library</p>
+<p>Voice Presets are available in 18 languages: Arabic (Emirati, Modern Standard), Brazilian (Portuguese), Catalan, Chinese (Mandarin), Dutch, English (American, British), French (France), German, Greek, Hindi, Italian, Korean, Norwegian, Russian, Spanish (Spain), and Vietnamese.</p>
+<h2>The voice agent is in control of the whole conversation.</h2>
+<p>Voxtral 3 introduces a voice agent SDK, built on LiveKit, that runs speech in, reasoning, and speech out as one streaming pipeline. Voxtral Mini Transcribe Realtime 3 listens and detects when the caller has finished speaking, a general model—like <a href="https://docs.mistral.ai/models/mistral-small-4-0-26-03"><u>Mistral Small</u></a>—reasons and calls tools, and Voxtral Speech 3 replies in the tone of the conversation so far. No stage waits for the one before it, so each turn completes in under one second, and the agent stops talking when the caller cuts in.</p>
+<p>During a call, the agent can verify a caller's identity, check a bill, or book an appointment, using function calling, web search, and retrieval over your own systems. It answers and places calls over SIP, runs in browsers and apps over WebRTC, and connects to the telephony, IVR, and contact-center software you already use.</p>
+<figure><img height="1601" src="https://mistral.ai/_astro/diagram-voxtral-alt_Z2ufcLf.webp?dpl=6ad78eeae2c86aaf57435522" width="2400"/></figure>
+<p>Each stage is a separate model, so you can change the LLM, the voice, or the language without rewriting the agent, and run the whole stack on Mistral's API in Europe or on your own infrastructure.</p>
+<h2>Get started.</h2>
+<p>Voxtral 3 is available today through the Mistral API, hosted through our European, US, and global endpoints.</p>
+<p>You can test out voice agents, audio transcription, speech generation, and voice cloning in the Studio playgrounds. </p>
+<table><tbody><tr><th colspan="1" rowspan="1"><p><strong>Model</strong></p></th><th colspan="1" rowspan="1"><p><strong>Price</strong></p></th></tr><tr><td colspan="1" rowspan="1"><p>Voxtral Mini Transcribe 3 (batch)</p></td><td colspan="1" rowspan="1"><p>$0.0035/min</p></td></tr><tr><td colspan="1" rowspan="1"><p>Voxtral Mini Transcribe Realtime 3</p></td><td colspan="1" rowspan="1"><p>$0.008/min</p></td></tr><tr><td colspan="1" rowspan="1"><p>Voxtral Small Transcribe 3</p></td><td colspan="1" rowspan="1"><p>$0.0040/min</p></td></tr><tr><td colspan="1" rowspan="1"><p>Voxtral Speech 3 (batch and realtime, same API)</p></td><td colspan="1" rowspan="1"><p>$13/1M chars</p></td></tr></tbody></table>
+<p>To run the full stack on-premises or in a private cloud, <a href="https://mistral.ai/contact/"><u>talk to our team</u></a>. </p>
+<img src="https://mistral.ai/cms-media/api/media/file/Icon-Model-Voxtral.svg"/>
+<p>Voxtral Small Transcribe 3</p>
+<p>Highest accuracy speech transcription model. State-of-the-art multilingual transcription and diarization, with support for over 50 languages and context biasing.</p>
+<p>Audio </p>
+<p>$0.004</p>
+<p>/min</p>
+<img src="https://mistral.ai/cms-media/api/media/file/Icon-Model-Voxtral.svg"/>
+<p>Voxtral Mini Transcribe 3</p>
+<p>Efficient, low-latency speech transcription model. Supports multilingual transcription, diarization and context biasing in over 50 languages.</p>
+<p>Audio (Batch) </p>
+<p>$0.0035</p>
+<p>/min</p>
+<img src="https://mistral.ai/cms-media/api/media/file/Icon-Model-Voxtral.svg"/>
+<p>Voxtral Mini Transcribe Realtime 3</p>
+<p>A realtime transcription model built for agentic use-cases, delivering high-quality transcriptions at sub-500ms latency across 40+ languages. </p>
+<p>Audio </p>
+<p>$0.008</p>
+<p>/min</p>
+<img src="https://mistral.ai/cms-media/api/media/file/voxtral-tts-icon.svg"/>
+<p>Voxtral Speech 3</p>
+<p>State-of-the-art expressiveness and instruction following across 35+ languages and 50+ dialects</p>
+<p>Input </p>
+<p>$13</p>
+<p>/1M chars</p>]]></content:encoded>
+      <guid isPermaLink="true">https://mistral.ai/news/voxtral-3</guid>
+      <category>Agent</category>
+      <pubDate>Tue, 20 Oct 2026 00:00:00 +0000</pubDate>
+      <media:content url="https://mistral.ai/images/heros/voxtral/agent.svg?dpl=6ad78eeae2c86aaf57435522" type="image/svg+xml" medium="image"/>
+    </item>
     <item>
       <title>Advancing coding in low‑resource programming languages</title>
       <link>https://openai.com/index/low-resource-programming-languages/</link>
@@ -2312,281 +2477,45 @@ Discover
       <pubDate>Fri, 18 Sep 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Memory in Grok Build</title>
-      <link>https://x.ai/news/grok-build-memory</link>
-      <description>Grok Build now carries conventions, decisions, and project facts from one session to the next. Notes are written in the background as you work and read back when you return to the project.</description>
-      <content:encoded><![CDATA[<p>Grok Build now has memory. As you work, it keeps notes on the conventions, decisions, and project facts that come up, and later sessions read those notes before touching related code. Grok Build gets better the more you use it.</p>
-<h2 id="what-it-remembers">What it remembers</h2>
-<p>Memory holds the details most likely to matter in a later session: how the team writes and reviews code, decisions and the reasoning behind them, and durable facts about the project, from where a subsystem lives to which command runs the suite. Task state, tentative conclusions, secrets, and anything the repository or its docs already cover are left out.</p>
-<p>Notes are kept per project, plus a global set for preferences that apply everywhere.</p>
-<h2 id="written-in-the-background">Written in the background</h2>
-<p>Capture runs after a turn completes and never blocks the session. Grok reviews the finished turn, writes anything worth keeping as a markdown note, and continues. Over time, <code>/dream</code> folds those notes into topic files, one per subject, so each project ends up with a small set of organized references.</p>
-<p>When you return to a project, Grok reads the topics that cover the area it is about to work in. Instructions in the current conversation take precedence over anything in a note.</p>
-<h2 id="browsing-memory">Browsing memory</h2>
-<p><code>/memory</code> opens a read-only browser of every memory file, grouped by scope, with a preview of the selected file. It is the fastest way to see what a session produced, and to find the file to edit when a note is wrong.</p>
-<h2 id="new-commands">New commands</h2>
-<ul>
-<li><code>/memory</code> opens the browser above.</li>
-<li><code>/dream</code> organizes recent notes into topic files, for example <code>topics/testing.md</code>. Dream also runs on its own periodically in the background.</li>
-</ul>
-<h2 id="availability">Availability</h2>
-<p>Memory is available in Grok Build now. It applies to new sessions: run <code>/new</code> or start a fresh <code>grok</code>, and notes begin after the first completed turn.</p>]]></content:encoded>
-      <guid isPermaLink="true">https://x.ai/news/grok-build-memory</guid>
+      <title>Introducing Grok Voice Transcribe 2.0</title>
+      <link>https://x.ai/news/grok-voice-transcribe-2</link>
+      <description>Announcing SpaceXSI's newest speech-to-text model, with unparalleled accuracy and cost effectiveness.</description>
+      <guid isPermaLink="true">https://x.ai/news/grok-voice-transcribe-2</guid>
       <category>News</category>
       <pubDate>Fri, 18 Sep 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Setting Grok Bot loose on procurement</title>
-      <link>https://x.ai/news/grok-bot-procurement</link>
-      <description>We gave Grok Bot access to vendor spend, contracts, and usage data. It found more than $100,000 in direct savings.</description>
-      <content:encoded><![CDATA[<p>Enterprises have a lot of spend that is hard to track closely. That includes unused SaaS seats that accumulate as teams change, and renewals that come up before anyone has checked whether the contract still matches how the product is being used. The same problem shows up in recurring purchases, where it is often easier to reorder what was bought last time than to adjust quantities to current needs or shop around for a better price.</p>
-<p>A lot of this work is worth doing, but hard to justify doing by hand. We wanted to see how much of it Grok Bot could take on.</p>
-<p>Grok Bot makes agents much easier to set up and use. You tell or show a Bot what you want it to do, give it access to the right tools, and let it execute without designing the workflow step by step.</p>
-<p>For procurement, we created a Bot we affectionately named <a href="https://x.ai/bot/marketplace/bots/haggle-bot">Haggle Bot</a>. It reads our vendor spend alongside contracts and usage data, then uses market pricing and competitive quotes to find savings and prepare negotiations. So far, it has identified more than $100,000 in direct savings, worked through larger SaaS renewals, and applied the same approach to recurring purchases like office supplies.</p>
-<p>We think Haggle Bot points to a broader role for Bots inside a company. Give a Bot a clear job and access to the tools it needs, and it can keep taking on the work within that role without being told each task.</p>
-<h2 id="procurement-is-a-good-task-for-a-bot">Procurement is a good task for a Bot</h2>
-<p>The goal of procurement is to support the business and get the most out of every dollar spent on vendors. A lot of existing procurement tools help with this at the vendor intake and contract-management level.</p>
-<p>But much of the most important procurement work hinges on questions those systems do not address:</p>
-<ul>
-<li>Who is the owner for this?</li>
-<li>Why do we need it?</li>
-<li>Have we explored alternatives?</li>
-<li>Why do we have X and Y if they do the same thing?</li>
-<li>Why are our costs spiking?</li>
-<li>Everyone has a license. Are they using it?</li>
-</ul>
-<p>These questions are common, but depending on the stage of the company, they may not be worth answering by hand. Fast-growing companies often leave money on the table to avoid spending time chasing them down. That is where a Bot can be useful.</p>
-<h2 id="a-simple-expression-of-intent">A simple expression of intent</h2>
-<p>We started Haggle Bot by describing the job we wanted it to do. Its instruction was to learn our vendor spend and turn that knowledge into evidence-backed savings, with a person making the final decisions.</p>
-<p>We then gave the Bot access to Slack, Notion, Drive, Gmail, Hex, and Ramp. Haggle Bot used those systems to build a working map of roughly 125 active vendors.</p>
-<p>That record gave Haggle Bot enough context to make decisions and keep working without a person spelling out each next step. We also defined where Haggle Bot should stop and hand back control. We let it handle internal research and coordination on its own, but required explicit approval for spending money, accepting terms, or sending something to a vendor.</p>
-<h2 id="finding-unused-saas-seats">Finding unused SaaS seats</h2>
-<p>An easy place to start was auditing SaaS spend. Haggle Bot asked our IT team for assigned-seat and last-used data, then compared that with what we were paying for. For one product, it found 43 paid seats with no activity in the previous 90 days and sent the names back for review and downgrade. That added up to $14,220 in savings.</p>
-<p>We applied the same approach to another SaaS product and Haggle Bot found $85,662 a year in unused SKUs. Because the product was month-to-month, those cuts reduced spend immediately.</p>
-<p>One thing we noticed in these SaaS audits was how often Haggle Bot took the next step without being asked. In one case, Haggle Bot needed to figure out who owned the relationship and what our plans were for the vendor. It started with the owners listed in Ramp, messaged them, and followed each handoff until it reached the engineers with the right context to make a decision. Rather than stop when the first answer was incomplete, it identified what additional information it needed and then proactively sought it out.</p>
-<h2 id="negotiating-a-saas-renewal">Negotiating a SaaS renewal</h2>
-<p>When a SaaS renewal came up, we asked Haggle Bot to review the quote and explore alternatives. Haggle Bot compared the renewal offer with our current annualized spend and recommended against the options that added seats ahead of demonstrated usage.</p>
-<img alt="Haggle Bot reviews a contract renewal proposal, breaks the quote down against current spend, and recommends the cheaper option" src="https://media.x.ai/cdn-cgi/image/fit=scale-down,onerror=redirect,f=auto/v1/website/haggle-bot-image1-75f1097a.png"/>
-<p>It then priced credible alternatives against our current footprint and used those comparisons alongside current usage data to work out where we had negotiating leverage.</p>
-<img alt="Haggle Bot compares Webex, webinar platforms, and Zoom pricing against the renewal quote" src="https://media.x.ai/cdn-cgi/image/fit=scale-down,onerror=redirect,f=auto/v1/website/haggle-bot-image2-7f0e2a56.png"/>
-<p>From there, Haggle Bot worked out the negotiation and drafted the response for us to edit. We set the minimum quantities we wanted to keep and approved the send. Haggle Bot made an opening bid while setting an internal price target we were willing to go up to.</p>
-<h2 id="shopping-around-for-office-supplies">Shopping around for office supplies</h2>
-<p>Every Friday, our office team orders tech, snacks, and hygiene supplies for the next group of new hires. We use another Bot to place that order, which we call "Amazon Bot." It's logged into our corporate account and can work across Gmail, Ramp, Google Sheets, Rippling, and Vercel to understand headcount and the office floor plan.</p>
-<img alt="Amazon Bot creates standing office supply orders based on weekly new-hire counts from Slack" src="https://media.x.ai/cdn-cgi/image/fit=scale-down,onerror=redirect,f=auto/v1/website/haggle-bot-image3-b5f9709c.png"/>
-<p>Rather than treat that as a fixed Amazon order, we gave Haggle Bot the job of shopping the weekly order around. Haggle Bot can see how quickly supplies are being used, the seat map for each building, and the quotes and carts from the last four orders. From that, it builds an editable Google Sheet where office ops can change the number of incoming hires and see the quantities needed for each new-hire kit.</p>
-<p>Haggle Bot then shops the order across Amazon, Costco, Uline, and Walmart. If it cannot find the same product for less, it can look for an equivalent from another brand, then collect the comparisons in a sheet for review.</p>
-<p>It then drafts an email to our Amazon procurement rep with same-day competitor prices and asks for lower pricing on specific line items through our business discount program.</p>
-<img alt="Haggle Bot drafts an email to our Amazon procurement rep citing same-day competitor prices on specific line items" src="https://media.x.ai/cdn-cgi/image/fit=scale-down,onerror=redirect,f=auto/v1/website/haggle-bot-image6-f62bac1c.png"/>
-<p>Once pricing is settled, Haggle Bot delegates the order back to Amazon Bot to send. In one run, the process brought a $14,629 tech order down to $6,143, a 58% reduction.</p>
-<h2 id="where-haggle-bot-is-most-useful">Where Haggle Bot is most useful</h2>
-<p>Haggle Bot shows how much work can be done behind a simple expression of intent. Once a Bot has a purpose and the access to pursue it, it can keep making progress across systems without additional intervention.</p>
-<p>Haggle Bot has also helped us see where Bots fit naturally into a workflow, and where they need more guidance. A lot of procurement work depends on good judgment about how to communicate with vendors, and we still revise its emails to calibrate on tone and make sure we're providing vendors with the right level of information.</p>
-<p>Haggle Bot has made us interested in what Bots can do when they keep working on the same job over time. The examples above came from a short window, but many of the signals worth acting on only emerge gradually as spend and usage change. Over the next year, we expect Haggle Bot to find more of that work on its own and take it further before a person needs to step in.</p>
-<p>You can copy and import <a href="https://x.ai/bot/marketplace/bots/haggle-bot">Haggle Bot</a> now in the Bot Marketplace.</p>
-<p>Join the Grok Bot for Enterprise <a href="https://cursor.com/contact-sales?product=grok-bot">waitlist</a>.</p>]]></content:encoded>
-      <guid isPermaLink="true">https://x.ai/news/grok-bot-procurement</guid>
-      <category>News</category>
-      <pubDate>Fri, 18 Sep 2026 00:00:00 +0000</pubDate>
-      <media:content url="https://media.x.ai/cdn-cgi/image/fit=scale-down,onerror=redirect,f=auto/v1/website/haggle-bot-image1-75f1097a.png" type="image/png" medium="image"/>
-    </item>
-    <item>
-      <title>Designing Grok Bot for a world of persistent agents</title>
-      <link>https://x.ai/news/designing-grok-bot</link>
-      <description>How we designed Grok Bot for agents that persist beyond a single session — from a chat history to a Bot roster, presence, a computer of the Bot’s own, and work that starts without a prompt.</description>
-      <content:encoded><![CDATA[<p>When we started designing Grok Bot, one of the central questions was how the interface should shape the relationship between user and agent. Most AI interfaces are organized around a chat session the user operates. Each session begins with setup, unfolds as the user looks on, and ends when the conversation stops.</p>
-<p>We wanted to design for an agent that persists beyond any one session and can carry responsibility on its own. That meant reconsidering some of the basic objects and signals of the interface, including what belongs in the sidebar, how an agent shows progress, and when its work should become visible.</p>
-<img src="https://x.ai/_next/static/media/wallpaper-light-noon.27_hyf9uycov-.png?dpl=bf1b646db0e10b894be84fff4552be67ae281493"/>
-<img src="https://x.ai/_next/static/media/wallpaper-dark-night.2tq8j5y-604e-.png?dpl=bf1b646db0e10b894be84fff4552be67ae281493"/>
-<img src="https://x.ai/_next/static/media/user-peng.3rw63gdxpcheg.png?dpl=bf1b646db0e10b894be84fff4552be67ae281493"/>
-<img src="https://x.ai/_next/static/media/wallpaper-gray.13vta0mrxymev.png?dpl=bf1b646db0e10b894be84fff4552be67ae281493"/>
-<img src="https://x.ai/_next/static/media/wallpaper-dark-night.2tq8j5y-604e-.png?dpl=bf1b646db0e10b894be84fff4552be67ae281493"/>
-<img src="https://x.ai/_next/static/media/dock-icons.0cwlcw-73qj01.png?dpl=bf1b646db0e10b894be84fff4552be67ae281493"/>
-<h2 id="rethinking-the-primitives">Rethinking the primitives</h2>
-<p>AI products have accumulated a large vocabulary in a short time. Chats, sessions, models, context windows, memories, system prompts, projects, skills, connectors, agents, tools, sandboxes, permissions, and automations all describe real parts of these systems.</p>
-<p>But exposing each one as a separate product concept asks users to understand more than they need to. We started by asking which concepts a person actually needs in order to work with an agent.</p>
-<p>We kept coming back to five:</p>
-<ol>
-<li><strong>Bots</strong> are persistent agents with their own identity, memory, runtime, and tools.</li>
-<li><strong>Chats</strong> are the conversational interface for working with a Bot.</li>
-<li><strong>Prompts</strong> give a Bot context or instructions. They can be used once, saved as Skills, or triggered automatically as Routines.</li>
-<li><strong>Tools</strong> let Bots access information and take action through software, APIs, connectors, the shell, or computer use.</li>
-<li><strong>Artifacts</strong> are the documents, designs, code, data, and other durable outputs that Bots create or modify.</li>
-</ol>
-<p>Everything else could remain beneath the interface until the user had a reason to care about it. The next question was which of these five objects should organize the product.</p>
-<h2 id="from-chat-history-to-a-bot-roster">From chat history to a Bot roster</h2>
-<p>Chats are disposable. We start a conversation to solve a problem. It gets pushed down the sidebar. A week later, we start another one. You rarely go back beyond the most recent five.</p>
-<p>That behavior is perfectly reasonable when the unit of interaction is a question. It becomes strange when the thing on the other side of the interaction is supposed to know you, remember previous work, and take responsibility over time.</p>
-<p>So the main objects in Grok Bot are Bots, not conversations. A Bot has a name. It has an avatar and a title. It remembers its conversations with you. It has its own computer and tools. When you come back tomorrow, you are coming back to the same Bot.</p>
-<h2 id="presence-as-interface">Presence as interface</h2>
-<p>Once a Bot was something you maintain over time rather than a session you start, the way Bots appear in the product had to answer three questions at once:</p>
-<ol>
-<li>Who is this?</li>
-<li>What are they doing?</li>
-<li>How much do I need to know?</li>
-</ol>
-<h3 id="who-is-this">Who is this</h3>
-<p>A roster only works if it can be scanned quickly. As the roster grows, we did not want people to have to read every name each time they opened the product. They should be able to recognize a Bot from its avatar almost peripherally.</p>
-<img src="https://x.ai/_next/static/media/initials-1.0yig-qj1joruk.png?dpl=bf1b646db0e10b894be84fff4552be67ae281493"/>
-<img src="https://x.ai/_next/static/media/initials-2.1txviuzdipoiw.png?dpl=bf1b646db0e10b894be84fff4552be67ae281493"/>
-<img src="https://x.ai/_next/static/media/initials-3.38z4vaotfsn1v.png?dpl=bf1b646db0e10b894be84fff4552be67ae281493"/>
-<img src="https://x.ai/_next/static/media/initials-4.01qrbimmhtavw.png?dpl=bf1b646db0e10b894be84fff4552be67ae281493"/>
-<img src="https://x.ai/_next/static/media/initials-5.3jwzv-u8m85v8.png?dpl=bf1b646db0e10b894be84fff4552be67ae281493"/>
-<img src="https://x.ai/_next/static/media/initials-6.19sekhuc8jakl.png?dpl=bf1b646db0e10b894be84fff4552be67ae281493"/>
-<img src="https://x.ai/_next/static/media/emoji-1.3h5blj8bz5-jf.png?dpl=bf1b646db0e10b894be84fff4552be67ae281493"/>
-<img src="https://x.ai/_next/static/media/emoji-2.39jbp_6rdd-5c.png?dpl=bf1b646db0e10b894be84fff4552be67ae281493"/>
-<img src="https://x.ai/_next/static/media/emoji-3.28sgvmrs9mln9.png?dpl=bf1b646db0e10b894be84fff4552be67ae281493"/>
-<img src="https://x.ai/_next/static/media/emoji-4.2avjpk08w6cek.png?dpl=bf1b646db0e10b894be84fff4552be67ae281493"/>
-<img src="https://x.ai/_next/static/media/emoji-5.01zc07ny7g1nn.png?dpl=bf1b646db0e10b894be84fff4552be67ae281493"/>
-<img src="https://x.ai/_next/static/media/emoji-6.09640mz61fg7f.png?dpl=bf1b646db0e10b894be84fff4552be67ae281493"/>
-<img src="https://x.ai/_next/static/media/agentb-1.3r4tz4_d9u_-z.png?dpl=bf1b646db0e10b894be84fff4552be67ae281493"/>
-<img src="https://x.ai/_next/static/media/agentb-2.3fmjch4q22wof.png?dpl=bf1b646db0e10b894be84fff4552be67ae281493"/>
-<img src="https://x.ai/_next/static/media/agentb-3.3riz-3zy_f268.png?dpl=bf1b646db0e10b894be84fff4552be67ae281493"/>
-<img src="https://x.ai/_next/static/media/agentb-4.2--kd8w9v-eaw.png?dpl=bf1b646db0e10b894be84fff4552be67ae281493"/>
-<img src="https://x.ai/_next/static/media/agentb-5.0d3thxc1-7umo.png?dpl=bf1b646db0e10b894be84fff4552be67ae281493"/>
-<img src="https://x.ai/_next/static/media/agentb-6.2hz5ggcwjuefo.png?dpl=bf1b646db0e10b894be84fff4552be67ae281493"/>
-<img src="https://x.ai/_next/static/media/base-1.13x8p2khem12n.png?dpl=bf1b646db0e10b894be84fff4552be67ae281493"/>
-<img src="https://x.ai/_next/static/media/base-2.0_m9l5xohcj95.png?dpl=bf1b646db0e10b894be84fff4552be67ae281493"/>
-<img src="https://x.ai/_next/static/media/base-3.35r25_i92f7lp.png?dpl=bf1b646db0e10b894be84fff4552be67ae281493"/>
-<img src="https://x.ai/_next/static/media/base-4.1p9fcypmuoe49.png?dpl=bf1b646db0e10b894be84fff4552be67ae281493"/>
-<img src="https://x.ai/_next/static/media/base-5.1fhzuvuy00j0n.png?dpl=bf1b646db0e10b894be84fff4552be67ae281493"/>
-<img src="https://x.ai/_next/static/media/base-6.3t9tmxu30heol.png?dpl=bf1b646db0e10b894be84fff4552be67ae281493"/>
-<img src="https://x.ai/_next/static/media/new3d-1.1zc81r05mlxf2.png?dpl=bf1b646db0e10b894be84fff4552be67ae281493"/>
-<img src="https://x.ai/_next/static/media/new3d-2.27lpziqdwd0j0.png?dpl=bf1b646db0e10b894be84fff4552be67ae281493"/>
-<img src="https://x.ai/_next/static/media/new3d-3.1u9ugv0y8018y.png?dpl=bf1b646db0e10b894be84fff4552be67ae281493"/>
-<img src="https://x.ai/_next/static/media/new3d-4.0o6i10hvi0pyz.png?dpl=bf1b646db0e10b894be84fff4552be67ae281493"/>
-<img src="https://x.ai/_next/static/media/new3d-5.0dfi-x29-s1jo.png?dpl=bf1b646db0e10b894be84fff4552be67ae281493"/>
-<img src="https://x.ai/_next/static/media/new3d-6.30xsvxdcjr7_i.png?dpl=bf1b646db0e10b894be84fff4552be67ae281493"/>
-<img src="https://x.ai/_next/static/media/blob-1.179mb5k-55q0s.png?dpl=bf1b646db0e10b894be84fff4552be67ae281493"/>
-<img src="https://x.ai/_next/static/media/blob-2.0f9k73iqne5ic.png?dpl=bf1b646db0e10b894be84fff4552be67ae281493"/>
-<img src="https://x.ai/_next/static/media/blob-3.3ccg438vd4bnj.png?dpl=bf1b646db0e10b894be84fff4552be67ae281493"/>
-<img src="https://x.ai/_next/static/media/blob-4.26votlluxpf3p.png?dpl=bf1b646db0e10b894be84fff4552be67ae281493"/>
-<img src="https://x.ai/_next/static/media/blob-5.3td20ca0sy08_.png?dpl=bf1b646db0e10b894be84fff4552be67ae281493"/>
-<img src="https://x.ai/_next/static/media/blob-6.24umj72ldwxsm.png?dpl=bf1b646db0e10b894be84fff4552be67ae281493"/>
-<img src="https://x.ai/_next/static/media/line-1.2vlri0g4yob5c.png?dpl=bf1b646db0e10b894be84fff4552be67ae281493"/>
-<img src="https://x.ai/_next/static/media/line-2.0k59bd-g6w77s.png?dpl=bf1b646db0e10b894be84fff4552be67ae281493"/>
-<img src="https://x.ai/_next/static/media/line-3.00_foixq2-eza.png?dpl=bf1b646db0e10b894be84fff4552be67ae281493"/>
-<img src="https://x.ai/_next/static/media/line-4.3na4nl1j5at_t.png?dpl=bf1b646db0e10b894be84fff4552be67ae281493"/>
-<img src="https://x.ai/_next/static/media/line-5.3rjal0p5m-286.png?dpl=bf1b646db0e10b894be84fff4552be67ae281493"/>
-<img src="https://x.ai/_next/static/media/line-6.2ehf_3xbvejl2.png?dpl=bf1b646db0e10b894be84fff4552be67ae281493"/>
-<img src="https://x.ai/_next/static/media/s32-1.2utembwuppxxx.png?dpl=bf1b646db0e10b894be84fff4552be67ae281493"/>
-<img src="https://x.ai/_next/static/media/s32-2.3iy5no1sbn35f.png?dpl=bf1b646db0e10b894be84fff4552be67ae281493"/>
-<img src="https://x.ai/_next/static/media/s32-3.0e7acsgpg5bqv.png?dpl=bf1b646db0e10b894be84fff4552be67ae281493"/>
-<img src="https://x.ai/_next/static/media/s32-4.21x56bl2zkenr.png?dpl=bf1b646db0e10b894be84fff4552be67ae281493"/>
-<img src="https://x.ai/_next/static/media/s32-5.10zlplp724o1m.png?dpl=bf1b646db0e10b894be84fff4552be67ae281493"/>
-<img src="https://x.ai/_next/static/media/s32-6.26kxeg4kxjnex.png?dpl=bf1b646db0e10b894be84fff4552be67ae281493"/>
-<img src="https://x.ai/_next/static/media/mix-1.11lta7nrjb9pn.png?dpl=bf1b646db0e10b894be84fff4552be67ae281493"/>
-<img src="https://x.ai/_next/static/media/mix-2.1tpo6-fp8vgup.png?dpl=bf1b646db0e10b894be84fff4552be67ae281493"/>
-<img src="https://x.ai/_next/static/media/mix-3.32f6whniadrub.png?dpl=bf1b646db0e10b894be84fff4552be67ae281493"/>
-<img src="https://x.ai/_next/static/media/mix-4.1pily-uyp88-h.png?dpl=bf1b646db0e10b894be84fff4552be67ae281493"/>
-<img src="https://x.ai/_next/static/media/mix-5.2sq51vj2aq2dn.png?dpl=bf1b646db0e10b894be84fff4552be67ae281493"/>
-<img src="https://x.ai/_next/static/media/mix-6.1e2kj0mwyz2mi.png?dpl=bf1b646db0e10b894be84fff4552be67ae281493"/>
-<img src="https://x.ai/_next/static/media/agenta-1.1iuswpcl3hq8o.png?dpl=bf1b646db0e10b894be84fff4552be67ae281493"/>
-<img src="https://x.ai/_next/static/media/agenta-2.346vsyk23d7i_.png?dpl=bf1b646db0e10b894be84fff4552be67ae281493"/>
-<img src="https://x.ai/_next/static/media/agenta-3.20lqy9orb-_2u.png?dpl=bf1b646db0e10b894be84fff4552be67ae281493"/>
-<img src="https://x.ai/_next/static/media/agenta-4.44r1bdv8r6u-c.png?dpl=bf1b646db0e10b894be84fff4552be67ae281493"/>
-<img src="https://x.ai/_next/static/media/agenta-5.3at_es63n-ehm.png?dpl=bf1b646db0e10b894be84fff4552be67ae281493"/>
-<img src="https://x.ai/_next/static/media/agenta-6.3m1estnwuqiu3.png?dpl=bf1b646db0e10b894be84fff4552be67ae281493"/>
-<p>At the same time, we wanted to keep the avatars consistent enough to read as one system. We studied character systems across illustration, animation, games, and interface design, exploring everything from initials and emojis to pixel art, watercolor, claymorphism, Noritake-style line art, silhouettes, and identicons.</p>
-<p>Most approaches solved one side of the problem better than the other. Watercolor and clay gave individual Bots plenty of character but carried too much detail at sidebar scale. Simpler systems sat more naturally in the interface, but often left the Bots looking interchangeable.</p>
-<p>The system we landed on keeps the basic construction consistent, using simple shapes and expressive eyes, then introduces distinction through controlled variations and accessories. Each Bot remains recognizable at a glance without appearing to come from a different visual world.</p>
-<h3 id="what-are-they-doing">What are they doing</h3>
-<p>Once the avatar became the Bot’s identity, it was also the natural place to show state. A Bot may be idle, thinking, working, waiting, blocked, or done. We could have represented each state with a separate indicator, but that would have added another layer of UI for the user to interpret.</p>
-<p>Instead, we explored how much of the lifecycle the avatar itself could carry.</p>
-<p>At rest, the Bot is calm and slightly curious. When work arrives, it acknowledges the task. As work begins, it kicks into gear. Its motion changes again when it is waiting or needs help, then settles once the work is done. The avatar now shows what the Bot is doing as well as which Bot it is.</p>
-<h3 id="how-much-do-i-need-to-know">How much do I need to know</h3>
-<p>A related design question was how much of the Bot’s execution to show. One approach would have been the standard “three animated dots” but that would have been too little information, making it hard for users to tell whether the Bot was working or stuck.</p>
-<p>We also tried showing a short written description of the Bot’s current action, but once people could see one step, they wanted to see the rest. User research showed us that they were asking for that detail mainly for reassurance that the Bot was still working and on the right track.</p>
-<p>In the final design, the avatar’s motion provides the first bit of reassurance by showing that the Bot is active. If someone wants to check what it is doing, they can hover to see its current action.</p>
-<h2 id="their-computer-not-yours">Their computer, not yours</h2>
-<p>Each Bot has its own computer, which it can use to browse the web, work with files, and run software. This created another interface problem. How visible should that computer be and when should the user be able to control it?</p>
-<p>We explored four arrangements:</p>
-<ul>
-<li><strong>Floating window:</strong> kept the computer easy to reach but covered the conversation.</li>
-<li><strong>Side by side:</strong> made the work continuously visible and encouraged users to watch it.</li>
-<li><strong>Modal:</strong> made checking in easy but treated the Bot’s workspace as a temporary interruption.</li>
-<li><strong>Full screen:</strong> gave the computer plenty of room but displaced the conversation entirely.</li>
-</ul>
-<img src="https://x.ai/_next/static/media/wallpaper-gray.13vta0mrxymev.png?dpl=bf1b646db0e10b894be84fff4552be67ae281493"/>
-<p>The more prominent we made the computer, the more the product encouraged users to supervise it. We decided it should remain the Bot’s workspace, with the interface providing different levels of access as the user needed them.</p>
-<p>The final design has three levels, which allow the user to enter the Bot’s workspace without being drawn into operating it:</p>
-<ul>
-<li><strong>Status:</strong> the title-bar icon turns purple while the computer is active.</li>
-<li><strong>Preview:</strong> opening it reveals a pinned side panel where the user can follow the work without leaving the conversation.</li>
-<li><strong>Takeover:</strong> when the Bot needs help, the user can open the computer full screen, take control, and then hand it back.</li>
-</ul>
-<img src="https://x.ai/_next/static/media/wallpaper-gray.13vta0mrxymev.png?dpl=bf1b646db0e10b894be84fff4552be67ae281493"/>
-<p>We also designed wallpapers that shift throughout the day, becoming lighter in the morning and darker at night. The detail gives the Bot’s computer its own sense of time and makes it feel separate from the user’s desktop.</p>
-<img alt="light day" src="https://x.ai/_next/static/media/wall-strip-1.3gno9o6tamsil.png?dpl=bf1b646db0e10b894be84fff4552be67ae281493"/>
-<img alt="light noon" src="https://x.ai/_next/static/media/wall-strip-2.06luvae_idfx_.png?dpl=bf1b646db0e10b894be84fff4552be67ae281493"/>
-<img alt="light night" src="https://x.ai/_next/static/media/wall-strip-3.170lw02z5ufzv.png?dpl=bf1b646db0e10b894be84fff4552be67ae281493"/>
-<img alt="dark day" src="https://x.ai/_next/static/media/wall-strip-4.31folbdvqalze.png?dpl=bf1b646db0e10b894be84fff4552be67ae281493"/>
-<img alt="dark noon" src="https://x.ai/_next/static/media/wall-strip-5.099mty7qqe_zp.png?dpl=bf1b646db0e10b894be84fff4552be67ae281493"/>
-<p>It is closer to working with a coworker than operating a remote machine. You can tell that they are working, glance at their screen when you need context, and sit down when something requires your help.</p>
-<h2 id="the-shape-of-information">The shape of information</h2>
-<p>Early versions of Grok Bot responded to almost every request with prose. It described a five-day forecast instead of showing one and narrated a set of tasks instead of laying them out as a board. The user then had to restructure the answer. This led us to treat the form of a response as part of the answer.</p>
-<p>To support this, we built inline cards and widgets into Grok Bot. A Bot can answer in prose when prose fits the information and use structured UI when it does not.</p>
-<p>The same principle applies to actions. When a Bot creates a Routine, changes a setting, or messages another Bot, the event can appear directly in the transcript. The user can open it when there is more to inspect.</p>
-<p>The result is a heterogeneous transcript in which conversation, system events, interactive objects, and visualizations share one timeline.</p>
-<h2 id="organizing-intelligence">Organizing intelligence</h2>
-<p>Once people create several Bots, the product also has to organize how those Bots work together. We needed to decide which context should belong to each role, how Bots should share context when their work overlaps, and how to coordinate them without turning the user into a dispatcher.</p>
-<p>We saw one answer emerge as people created more Bots. Some made a Chief of Staff Bot responsible for coordinating several specialists. They could give direction to one Bot instead of checking each one and routing every task themselves.</p>
-<p>Giving Bots distinct roles also forced us to decide what each role should know. A legal Bot may need the history of an ongoing dispute, while a finance Bot may need years of financial records. Combining those histories into one large memory would make it harder to give each Bot the information relevant to its work.</p>
-<p>Capabilities and context therefore follow different boundaries in Grok Bot. Tools and Skills live at the account level because many Bots may need to browse the web, work with documents, or send email. Memory and Routines belong to the Bot because they reflect what that particular role knows and does over time. Put another way, capabilities can be shared broadly while context remains with the role that needs it.</p>
-<p>Some work crosses those role boundaries. Group chats provide shared context for a project or team while allowing each Bot to retain its specialized memory. A designer, engineer, PM, and data scientist can work in the same conversation, hand work to one another, and share what the project requires.</p>
-<p>We considered adding dashboards, assignment boards, and explicit handoff controls to manage these groups. Each one gave the user more coordination work. Instead, coordinating Bots handle routine routing and bring the user in when a decision requires judgment.</p>
-<h2 id="work-that-keeps-moving">Work that keeps moving</h2>
-<p>Most agent sessions begin when a user sends a prompt. That leaves even a persistent Bot waiting for someone to activate it. Routines let users give a Bot a standing responsibility that runs on a schedule or in response to an event, such as watching an industry or preparing a briefing every morning. The user defines the work once, and the Routine activates the Bot when it needs to happen.</p>
-<p>We initially treated Routines as secondary configuration. As they became more important to autonomous work, we moved them into the Bot’s main interface. The transcript shows what ran and gives the user a place to review the result or handle an exception.</p>
-<p>This also changes the role of conversation. A prompt can start a session, but so can a schedule, an event, or another Bot. Over time, more work may begin without the user being present at all.</p>
-<h2 id="the-disappearing-interface">The disappearing interface</h2>
-<p>By the end of the project, much of the design work involved taking things away. We removed window and panel controls, computer-view options, and agent metadata. We also set practical limits of roughly 50 Bots per account and six per group chat. Each decision came back to the same question: Did this help someone delegate, or did it give them one more thing to manage?</p>
-<p>The line between operating an AI and delegating to a coworker keeps moving as models improve. Grok Bot reflects where we think it sits today. Designing Grok Bot from its earliest explorations through launch has been about finding that line and helping the interface change with it. As agents take on more responsibility, the interface should ask less of the person.</p>]]></content:encoded>
-      <guid isPermaLink="true">https://x.ai/news/designing-grok-bot</guid>
-      <category>News</category>
-      <pubDate>Fri, 18 Sep 2026 00:00:00 +0000</pubDate>
-      <media:content url="https://x.ai/_next/static/media/wallpaper-light-noon.27_hyf9uycov-.png?dpl=bf1b646db0e10b894be84fff4552be67ae281493" type="image/png" medium="image"/>
-    </item>
-    <item>
-      <title>Grok Bot for Enterprise</title>
-      <link>https://x.ai/news/grok-bot-for-enterprise</link>
-      <description>Grok Bot is now available for enterprises. Grok and Cursor Enterprise customers have free usage for the next two weeks, and can invite their whole organization, including people without an existing seat.</description>
-      <guid isPermaLink="true">https://x.ai/news/grok-bot-for-enterprise</guid>
+      <title>Imagine Image 2.0</title>
+      <link>https://x.ai/news/grok-imagine-image-2</link>
+      <description>Precise image generation and editing, built for real creative work.</description>
+      <content:encoded><![CDATA[<a href="https://grok.com/imagine?referrer=website&amp;campaign=imagine-image-2-blog">Open Grok.com</a>]]></content:encoded>
+      <guid isPermaLink="true">https://x.ai/news/grok-imagine-image-2</guid>
       <category>News</category>
       <pubDate>Fri, 18 Sep 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Grok Bot now works with X</title>
-      <link>https://x.ai/news/grok-bot-and-x</link>
-      <description>Grok Bot now has a tighter integration with X.</description>
-      <guid isPermaLink="true">https://x.ai/news/grok-bot-and-x</guid>
+      <title>Introducing Build Mode</title>
+      <link>https://x.ai/news/grok-build-mode</link>
+      <description>Create and share websites, apps, games, and interactive dashboards. Now in Early Beta for SuperGrok Heavy subscribers on grok.com, iOS, and Android.</description>
+      <guid isPermaLink="true">https://x.ai/news/grok-build-mode</guid>
       <category>News</category>
       <pubDate>Fri, 18 Sep 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Grok Bot is now included with more plans</title>
-      <link>https://x.ai/news/grok-bot-more-plans</link>
-      <description>Grok Bot is now available for SuperGrok, Cursor Pro, and all Cursor Teams plans.</description>
-      <guid isPermaLink="true">https://x.ai/news/grok-bot-more-plans</guid>
+      <title>Grok 4.5 in GitHub Copilot</title>
+      <link>https://x.ai/news/grok-github-copilot</link>
+      <description>Grok 4.5, our smartest coding model, is now available in GitHub Copilot.</description>
+      <content:encoded><![CDATA[<a href="https://console.x.ai/team/default/api-keys?campaign=grok-github-copilot-blog&amp;utm_source=website&amp;utm_medium=referral&amp;utm_campaign=grok-github-copilot-blog">Try Grok 4.5 in the API</a>
+<a href="https://github.com/features/copilot">Open GitHub Copilot</a>]]></content:encoded>
+      <guid isPermaLink="true">https://x.ai/news/grok-github-copilot</guid>
       <category>News</category>
       <pubDate>Fri, 18 Sep 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Grok 4.6 on Gemini Enterprise Agent Platform</title>
-      <link>https://x.ai/news/grok-4-6-vertex-ai</link>
-      <description>Grok 4.6 is now available via Gemini Enterprise Agent Platform.</description>
-      <content:encoded><![CDATA[<p>Today, we’re excited to announce that Grok 4.6 is now available on Gemini Enterprise Agent Platform.</p>
-<p>Grok 4.6 is our latest flagship model, built for long-running agents and ambitious interactive and visual work. It offers a 500k context window and configurable reasoning efforts (low, medium, high, xhigh). Now, Gemini Enterprise Agent Platform users can use the model through <a href="https://console.cloud.google.com/agent-platform/publishers/xai/model-garden/grok-4.6">Model Garden</a>.</p>
-<h2 id="capabilities--pricing">Capabilities &amp; Pricing</h2>
-<p>Grok 4.6 is available for:</p>
-<ul>
-<li><strong>Input</strong>: $2 per 1 million tokens</li>
-<li><strong>Cached input</strong>: $0.50 per 1 million tokens</li>
-<li><strong>Output</strong>: $6 per 1 million tokens</li>
-</ul>
-<p>For more on the model, read the <a href="https://x.ai/news/grok-4-6">Grok 4.6 announcement</a>.</p>
-<h2 id="build-with-grok-46-on-gemini-enterprise-agent-platform">Build with Grok 4.6 on Gemini Enterprise Agent Platform</h2>
-<p>Grok 4.6 is now available to developers in Model Garden. To get started, visit the <a href="https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/partner-models/grok/grok-4-6">Grok 4.6 model card</a>. We're excited to see what you build!</p>]]></content:encoded>
-      <guid isPermaLink="true">https://x.ai/news/grok-4-6-vertex-ai</guid>
+      <title>Grok in Google Workspace</title>
+      <link>https://x.ai/news/introducing-google-workspace-addon</link>
+      <description>Use the Grok add-on for Google Workspace to work directly in Sheets, Slides, and Docs.</description>
+      <guid isPermaLink="true">https://x.ai/news/introducing-google-workspace-addon</guid>
       <category>News</category>
       <pubDate>Fri, 18 Sep 2026 00:00:00 +0000</pubDate>
     </item>

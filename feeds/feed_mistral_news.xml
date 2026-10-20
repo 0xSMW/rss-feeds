@@ -8,7 +8,122 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 15 Oct 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 20 Oct 2026 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Voxtral 3</title>
+      <link>https://mistral.ai/news/voxtral-3</link>
+      <description>Merci de recevoir ce patient pour un avis dermatologique. Traitement en cours : crème à l’hydrocortisone. Dr Martin, Clinique du Parc.</description>
+      <content:encoded><![CDATA[<img alt="The Voxtral agent" height="400" src="https://mistral.ai/images/heros/voxtral/agent.svg?dpl=6ad78eeae2c86aaf57435522" width="240"/>
+<img alt="Béatrice, the caller" height="400" src="https://mistral.ai/images/heros/voxtral/user.webp?dpl=6ad78eeae2c86aaf57435522" width="240"/>
+<p>Speech transcription and voice generation have come a long way, but building end-to-end voice agents that can listen, reason, interact, and handle complex workflows remains difficult. </p>
+<p>A reliable voice agent needs to do four things very well (and simultaneously): </p>
+<ol><li><p><strong>Listen accurately </strong>across languages, accents, speakers, and interruptions,</p></li><li><p><strong>Reason</strong> <strong>deeply </strong>about what users mean in specific contexts,</p></li><li><p><strong>Speak naturally </strong>with emotion and expression, and </p></li><li><p><strong>Take action </strong>over multiple steps through connected systems. </p></li></ol>
+<p>Getting all four to work together reliably in real time remains a challenge. </p>
+<p>To address this, we introduce Voxtral 3: a new family of state-of-the-art <a href="https://docs.mistral.ai/studio/audio/speech-to-text/overview"><u>speech-to-text</u></a> and <a href="https://docs.mistral.ai/models/voxtral-mini-tts-3"><u>text-to-speech</u></a> models, alongside a voice agent SDK that brings listening, thinking, tool calling, and speaking into a single real-time streaming pipeline.</p>
+<p>Voxtral 3 is built to create natural conversational experiences, from contact-center agents and service desks to virtual assistants and hands-free copilots. With support for dozens of languages, expressive speech, complex reasoning, and deep integration with your own tools and data, agents built with Voxtral can interpret nuanced intent, reason through sophisticated requests, and execute multi-step actions across connected systems.</p>
+<p>As with other Mistral models, the Voxtral 3 family is designed for sovereign deployment. Available today through Mistral's EU-hosted API or for self-deployment on your own infrastructure, it gives organizations control over where audio is processed, how data is handled, and whether conversations are retained.</p>
+<iframe allowfullscreen="" src="https://www.youtube.com/embed/xFhyfPC-VzI"></iframe>
+<h2>Highlights</h2>
+<ol><li><p><strong>Accurate transcription across 50+ languages</strong>. The speech-to-text model, <em>Voxtral Small Transcribe 3</em>, is state-of-the-art in multilingual transcription, identifying who said what (diarization), using keyphrases to improve its accuracy (context-biasing). It detects when someone has finished speaking so agents can respond without delay (end-of-turn detection).</p></li><li><p><strong>Natural speech that adapts to the conversation</strong>. The text-to-speech model, <em>Voxtral Mini TTS 3</em>, introduces new voices that adjust their emotion, pace, and emphasis based on conversational context, with support for 35+ languages and 50+ dialects.</p></li><li><p><strong>Human-like intelligence at your (spoken) command</strong>. The new voice agent SDK combines listening, reasoning, tool calling, and speaking into a real-time experience. Agents can retrieve information, interact with business systems, and complete tasks during live conversations over phone or web.</p></li><li><p><strong>Pro Voice for distinctly accurate voice adaptation</strong>. For professional use cases where basic voice cloning does not suffice, Voxtral’s <em>Pro Voice</em> adaptation is able to reproduce a speaker’s distinctive character, emotional range, and speaking style across languages, using just 30 minutes of audio. </p></li><li><p><strong>Your voice AI, on your infrastructure</strong>. Use Mistral's EU-hosted API or deploy Voxtral 3 on your own infrastructure. Keep sensitive conversations within your environment and control whether any audio is retained. </p></li></ol>
+<p><a href="https://console.mistral.ai/api-keys"><u>Try Voxtral now </u></a> | <a href="https://docs.mistral.ai/studio/audio/overview"><u>Learn more</u></a></p>
+<h2>It hears 50+ languages, with state-of-the-art accuracy.</h2>
+<p><a href="http://docs.mistral.ai/models/voxtral-small-transcribe-3-0"><u>Voxtral Transcribe 3</u></a> represents a significant milestone across transcription, diarization (who spoke when) and context biasing capabilities. The supported list of languages is expanded to 50, including 24 official EU languages and many low-resource Asian and Indic languages.</p>
+<p>The Small version achieves state-of-the-art results across diarization and multilingual transcription, including in English, French and Spanish. It outperforms Whisper, Scribe v2 and Gemini 3.5 Transcribe. The <a href="https://docs.mistral.ai/models/voxtral-mini-transcribe-3-0"><u>Mini variant</u></a> is 4B parameters, enabling fast and accurate transcriptions at a price of $0.0035/min.</p>
+<p>Both models support context biasing, where key terms and free-form text can be given to bias the transcription and improve recall on technical terms. This enables them to be used in production settings with domain-specific vocabulary without the need for fine-tuning.</p>
+<iframe allowfullscreen="" src="https://www.youtube.com/embed/7a65lAUvAxQ?si=g_XfgQRB9cZQBiME"></iframe>
+<iframe allowfullscreen="" src="https://www.youtube.com/embed/hHIs0pc-RVQ"></iframe>
+<p><a href="http://docs.mistral.ai/models/voxtral-mini-transcribe-realtime-3-0"><u>Voxtral Realtime Transcribe 3</u></a> is a realtime transcription model built for agentic use-cases. It achieves high-quality transcriptions at sub-500ms latency in over 35 languages, including with diarization and context biasing.</p>
+<p>End-of-turn prediction is natively supported, incorporating both acoustic and semantic information to accurately predict when a user is finished speaking. This allows for low-latency voice agent applications, while minimizing false cut-off rates when the user is prematurely interrupted.</p>
+<h2>It answers with the right emotion, in your or your customer’s brand's own voice and local dialect.</h2>
+<p><a href="http://docs.mistral.ai/models/voxtral-mini-tts-3-0"><u>Voxtral Mini TTS 3.0</u></a>, available in batch and realtime, achieves state-of-the-art expressiveness and instruction following for 35+ languages and 50+ dialects. At $13 per 1M characters, Voxtral Speech 3 costs less to run than comparable models from OpenAI TTS-1, Deepgram, ElevenLabs Flash and Gemini Flash.</p>
+<p>The speech model implicitly interprets the semantic meaning of context better, producing natural speech across a diverse range of emotions and languages. New and improved features include voice cloning from 30+ minutes of sampled audio, custom prompt instruction following (IF), contextual TTS, and a vocabulary library, all of which serve the goal of speech reliability in deployment. Variables for Explicit IF include <code>emotion</code>, <code>pacing</code>, and <code>emphasis</code>.</p>
+<p>Let's end the debate here: it's GIF.</p>
+<p>Default</p>
+<audio src="https://mistral.ai/cms-media/api/media/file/audio_(20).wav"></audio>
+<p>Non-standard phoneme hint: dʒ ɪ f</p>
+<audio src="https://mistral.ai/cms-media/api/media/file/audio_(21).wav"></audio>
+<p>Attends… Ce n’est pas possible. Ce tableau vient de Reims ? Mais alors… C’est celui que ma grand-mère cherchait depuis cinquante ans !</p>
+<p>Default</p>
+<audio src="https://mistral.ai/cms-media/api/media/file/audio_(8).wav"></audio>
+<p>Non-standard phoneme hint: ʁ e i m s</p>
+<audio src="https://mistral.ai/cms-media/api/media/file/audio_(9).wav"></audio>
+<p>Il nostro nuovo assistente si chiama Quivello.</p>
+<p>Default</p>
+<audio src="https://mistral.ai/cms-media/api/media/file/quivelo.wav"></audio>
+<p>Non-standard phoneme hint: tʃ i v ɛ l l o</p>
+<audio src="https://mistral.ai/cms-media/api/media/file/chievelo.wav"></audio>
+<p>Hallo! Ich bin Xyra, deine persönliche Assistentin.</p>
+<p>Default</p>
+<audio src="https://mistral.ai/cms-media/api/media/file/ger-2.wav"></audio>
+<p>Non-standard phoneme hint: z aɪ ɹ ə</p>
+<audio src="https://mistral.ai/cms-media/api/media/file/ger-1.wav"></audio>
+<p>All natural-sounding speech relies on emotion, which determines its prosody, rhythm, pacing, emphasis, and transitions. Voxtral TTS natively interprets a prompt’s text context to determine the emotion and voice style, making the model inherently better at natural speech without requiring additional instructions or voice prompts.</p>
+<h3>Illustrating Voxtral hill-climbing in expressiveness, numbers and unique names.</h3>
+<p>Thank you for calling Mistral! I understand you're having difficulty logging into AI Studio. Can I confirm your email address? I have here elena.vance82@yahoo.com, is that correct?</p>
+<p>Voxtral 1</p>
+<audio src="https://mistral.ai/cms-media/api/media/file/Voxtral%201%20-%20Customer%20Support.wav"></audio>
+<p>Voxtral 3</p>
+<audio src="https://mistral.ai/cms-media/api/media/file/Voxtral%203%20-%20Customer%20Support.wav"></audio>
+<p>Gosh that was quick, I've found a flight for your upcoming travel. How about the Emirates flight at 21:00pm on 10/10 returning 10/25 at 22:00pm for £1881? Say the word, and I'll book a window seat now.</p>
+<p>Voxtral 1</p>
+<audio src="https://mistral.ai/cms-media/api/media/file/Voxtral%201%20-%20personal%20ai%20agent.wav"></audio>
+<p>Voxtral 3</p>
+<audio src="https://mistral.ai/cms-media/api/media/file/Voxtral%203%20-%20personal%20ai%20agent.wav"></audio>
+<p>Wow I can't believe you're pregnant! This is so exciting, congratulations Corina, I'm so happy for you!</p>
+<p>Voxtral 1</p>
+<audio src="https://mistral.ai/cms-media/api/media/file/Voxtral%201%20-%20EQ%20Excited.wav"></audio>
+<p>Voxtral 3</p>
+<audio src="https://mistral.ai/cms-media/api/media/file/Voxtral%203%20-%20EQ%20Excited.wav"></audio>
+<p>What do you mean my passport won't be finished this week -- I've told you several times how I need to go to Paris for work. This is ridiculous. I can't even begin to describe how infuriating this has been.</p>
+<p>Voxtral 1</p>
+<audio src="https://mistral.ai/cms-media/api/media/file/Voxtral%201%20-%20Angry%20EQ.wav"></audio>
+<p>Voxtral 3</p>
+<audio src="https://mistral.ai/cms-media/api/media/file/Voxtral%203%20-%20Angry%20EQ.wav"></audio>
+<iframe allowfullscreen="" src="https://www.youtube.com/embed/y7Dtkjz3MZM"></iframe>
+<iframe allowfullscreen="" src="https://www.youtube.com/embed/1czHOKcAtfY"></iframe>
+<h3>Speech sounds local in 35 languages and over 50 dialects.</h3>
+<p>Voxtral TTS supports over <strong>35 languages</strong> and regional dialects. Our multilingual evals adhere to dialect differences in pronunciation, formal vs. informal register, spelling, verbosity, and locale conventions (time, dates, temperatures, addresses, currencies).</p>
+<p>Voxtral 3 multilingual library</p>
+<p>Voice Presets are available in 18 languages: Arabic (Emirati, Modern Standard), Brazilian (Portuguese), Catalan, Chinese (Mandarin), Dutch, English (American, British), French (France), German, Greek, Hindi, Italian, Korean, Norwegian, Russian, Spanish (Spain), and Vietnamese.</p>
+<h2>The voice agent is in control of the whole conversation.</h2>
+<p>Voxtral 3 introduces a voice agent SDK, built on LiveKit, that runs speech in, reasoning, and speech out as one streaming pipeline. Voxtral Mini Transcribe Realtime 3 listens and detects when the caller has finished speaking, a general model—like <a href="https://docs.mistral.ai/models/mistral-small-4-0-26-03"><u>Mistral Small</u></a>—reasons and calls tools, and Voxtral Speech 3 replies in the tone of the conversation so far. No stage waits for the one before it, so each turn completes in under one second, and the agent stops talking when the caller cuts in.</p>
+<p>During a call, the agent can verify a caller's identity, check a bill, or book an appointment, using function calling, web search, and retrieval over your own systems. It answers and places calls over SIP, runs in browsers and apps over WebRTC, and connects to the telephony, IVR, and contact-center software you already use.</p>
+<figure><img height="1601" src="https://mistral.ai/_astro/diagram-voxtral-alt_Z2ufcLf.webp?dpl=6ad78eeae2c86aaf57435522" width="2400"/></figure>
+<p>Each stage is a separate model, so you can change the LLM, the voice, or the language without rewriting the agent, and run the whole stack on Mistral's API in Europe or on your own infrastructure.</p>
+<h2>Get started.</h2>
+<p>Voxtral 3 is available today through the Mistral API, hosted through our European, US, and global endpoints.</p>
+<p>You can test out voice agents, audio transcription, speech generation, and voice cloning in the Studio playgrounds. </p>
+<table><tbody><tr><th colspan="1" rowspan="1"><p><strong>Model</strong></p></th><th colspan="1" rowspan="1"><p><strong>Price</strong></p></th></tr><tr><td colspan="1" rowspan="1"><p>Voxtral Mini Transcribe 3 (batch)</p></td><td colspan="1" rowspan="1"><p>$0.0035/min</p></td></tr><tr><td colspan="1" rowspan="1"><p>Voxtral Mini Transcribe Realtime 3</p></td><td colspan="1" rowspan="1"><p>$0.008/min</p></td></tr><tr><td colspan="1" rowspan="1"><p>Voxtral Small Transcribe 3</p></td><td colspan="1" rowspan="1"><p>$0.0040/min</p></td></tr><tr><td colspan="1" rowspan="1"><p>Voxtral Speech 3 (batch and realtime, same API)</p></td><td colspan="1" rowspan="1"><p>$13/1M chars</p></td></tr></tbody></table>
+<p>To run the full stack on-premises or in a private cloud, <a href="https://mistral.ai/contact/"><u>talk to our team</u></a>. </p>
+<img src="https://mistral.ai/cms-media/api/media/file/Icon-Model-Voxtral.svg"/>
+<p>Voxtral Small Transcribe 3</p>
+<p>Highest accuracy speech transcription model. State-of-the-art multilingual transcription and diarization, with support for over 50 languages and context biasing.</p>
+<p>Audio </p>
+<p>$0.004</p>
+<p>/min</p>
+<img src="https://mistral.ai/cms-media/api/media/file/Icon-Model-Voxtral.svg"/>
+<p>Voxtral Mini Transcribe 3</p>
+<p>Efficient, low-latency speech transcription model. Supports multilingual transcription, diarization and context biasing in over 50 languages.</p>
+<p>Audio (Batch) </p>
+<p>$0.0035</p>
+<p>/min</p>
+<img src="https://mistral.ai/cms-media/api/media/file/Icon-Model-Voxtral.svg"/>
+<p>Voxtral Mini Transcribe Realtime 3</p>
+<p>A realtime transcription model built for agentic use-cases, delivering high-quality transcriptions at sub-500ms latency across 40+ languages. </p>
+<p>Audio </p>
+<p>$0.008</p>
+<p>/min</p>
+<img src="https://mistral.ai/cms-media/api/media/file/voxtral-tts-icon.svg"/>
+<p>Voxtral Speech 3</p>
+<p>State-of-the-art expressiveness and instruction following across 35+ languages and 50+ dialects</p>
+<p>Input </p>
+<p>$13</p>
+<p>/1M chars</p>]]></content:encoded>
+      <guid isPermaLink="true">https://mistral.ai/news/voxtral-3</guid>
+      <category>Agent</category>
+      <pubDate>Tue, 20 Oct 2026 00:00:00 +0000</pubDate>
+      <media:content url="https://mistral.ai/images/heros/voxtral/agent.svg?dpl=6ad78eeae2c86aaf57435522" type="image/svg+xml" medium="image"/>
+    </item>
     <item>
       <title>Introducing Timestral</title>
       <link>https://mistral.ai/news/timestral</link>
@@ -2463,76 +2578,6 @@ $ /usr/local/lib/heaptrack/libexec/heaptrack_interpret &lt; heaptrack.2028233 | 
       <category>Solutions</category>
       <pubDate>Fri, 01 Aug 2025 00:00:00 +0000</pubDate>
       <media:content url="https://mistral.ai/_astro/db21e46d-22c1-4144-9171-f142cd628cfb_2ePEi6.webp?dpl=6a622da400bba40008995ff8" type="image/webp" medium="image"/>
-    </item>
-    <item>
-      <title>Announcing Codestral 25.08 and the Complete Mistral Coding Stack for Enterprise</title>
-      <link>https://mistral.ai/news/codestral-25-08</link>
-      <description>How the world’s leading enterprises are using integrated coding solutions from Mistral AI to cut development, review, and testing time by 50%—and why the playbook now fits every company that wants AI-native software development.</description>
-      <content:encoded><![CDATA[<img height="800" src="https://mistral.ai/_astro/Cover-Model-Codestral_Z2hbXei.webp?dpl=6a622da400bba40008995ff8" width="1440"/>
-<p>How the world’s leading enterprises are using integrated coding solutions from Mistral AI to cut development, review, and testing time by 50%—and why the playbook now fits every company that wants AI-native software development. </p>
-<p><figure><img alt="Codestral Main" height="497" src="https://mistral.ai/_astro/973b0f2f-1139-4630-be69-7c8de535c775_1w5Omt.webp?dpl=6a622da400bba40008995ff8" width="1727"/></figure></p>
-<h2>AI-powered coding is taking off, but enterprise adoption still lags due to critical limitations</h2>
-<p>Over the past year, AI coding assistants have introduced powerful capabilities, such as multi-file reasoning, contextual suggestions, and natural-language agents, all directly within the IDE. Despite these improvements, however, adoption inside enterprise environments has been slow. The reasons have less to do with model performance or the interface, and more with how these tools are built, deployed, and governed.</p>
-<p>Key limitations holding back enterprise teams include:</p>
-<ul><li><p>Deployment constraints: Most AI coding tools are SaaS-only, with no options for VPC, on-prem, or air-gapped environments. This is a hard blocker for organizations in finance, defense, healthcare, and other regulated industries.</p></li><li><p>Limited customization: Enterprises often need to adapt models to their own codebases and development conventions. Without access to model weights, pos-training workflows, or extensibility, teams are locked out of leveraging the best of their codebases.</p></li><li><p>Fragmented architecture: Agents, embeddings, completions, and plugins are frequently decoupled across vendors—leading to integration drift, inconsistent context handling, and operational overhead. Moreover, coding copilots are not well-integrated into full enterprise platforms, such as product development tools, CRMs, and customer issue trackers.</p></li><li><p>No unified observability or control: Teams lack visibility into how AI is being used across the development lifecycle. Without telemetry, audit trails, and centralized controls, it’s difficult to scale AI usage responsibly or measure real ROI.</p></li><li><p>Incompatibility with internal toolchains: Many assistants operate in closed environments, making it hard to connect with internal CI/CD pipelines, knowledge bases, or static analysis frameworks.</p></li></ul>
-<p>For enterprises, these limitations aren’t edge cases—they’re baseline requirements. Solving them is what separates a good developer tool from an AI-native software development platform.</p>
-<h2>A Full-Stack Approach Built for AI-Native Software Development</h2>
-<p>Our approach to enterprise coding isn’t a bundle of isolated tools. It’s an integrated system designed to support enterprise-grade software development across every stage—from code suggestion to autonomous pull requests.</p>
-<p><figure><img alt="Marketecture Code Alt" height="1376" src="https://mistral.ai/_astro/da3fc2a0-146a-4394-90f7-3997a58230af_2m1fCO.webp?dpl=6a622da400bba40008995ff8" width="1710"/></figure></p>
-<p>It starts with fast, reliable completion—and scales up to full codebase understanding and multi-file automation.</p>
-<h3>1. Fast, High-Fidelity Code Completion</h3>
-<p>At the foundation of the stack is Codestral, Mistral’s family of code generation models built specifically for high-precision fill-in-the-middle (FIM) completion. These models are optimized for production engineering environments: latency-sensitive, context-aware, and self-deployable.</p>
-<p>Today, we announce its latest update. Codestral 25.08 delivers measurable upgrades over prior versions:</p>
-<ul><li><p>+30% increase in accepted completions</p></li><li><p>+10% more retained code after suggestion</p></li><li><p>50% fewer runaway generations, improving confidence in longer edits</p></li><li><p>Improved performance on academic benchmarks for short and long-context FIM completion</p></li></ul>
-<p>These improvements were validated in live IDE usage across production codebases. The model supports a wide range of languages and tasks, and is deployable across cloud, VPC, or on-prem environments—with no architectural changes required.</p>
-<p>Codestral-2508 also brings improvements to chat mode:</p>
-<ul><li><p>Instruction following: +5% on IF eval v8</p></li><li><p>Code abilities: +5% in average MultiplE</p></li></ul>
-<p><figure><img alt="Offline V2" height="1151" src="https://mistral.ai/_astro/a11e458a-15f4-40c0-aa98-5af69ff961e1_Z2kwzJ0.webp?dpl=6a622da400bba40008995ff8" width="1527"/></figure></p>
-<p><figure><img alt="Chat V2" height="1135" src="https://mistral.ai/_astro/397701a8-1849-4cdd-aff1-a672388640a5_Z1l0cHk.webp?dpl=6a622da400bba40008995ff8" width="1505"/></figure></p>
-<p><figure><img alt="Offline 2" height="1166" src="https://mistral.ai/_astro/9dd41059-f1ac-478a-b9ae-3c78926f72f2_2lgb5p.webp?dpl=6a622da400bba40008995ff8" width="1505"/></figure></p>
-<h3>2. Codebase-Scale Search and Semantic Retrieval</h3>
-<p>Autocomplete accelerates, but only if the model understands your codebase. <a href="https://docs.mistral.ai/capabilities/embeddings/code_embeddings/">Codestral Embed</a> sets a new standard in this domain. Designed specifically for code rather than general text, it outperforms leading embedding models from OpenAI and Cohere in real-world code retrieval benchmarks. </p>
-<p>Key advantages include:</p>
-<ul><li><p>High-recall, low-latency search across massive monorepos and poly-repos. Developers can find internal logic, validation routines, or domain-specific utilities using natural language.</p></li><li><p>Flexible embedding outputs, with configurable dimensions (e.g., 256-dim, INT8) that balance retrieval quality with storage efficiency—while outperforming alternatives even at lower dimensionality</p></li><li><p>Private deployment for maximum control, ensuring no data leakage via third-party APIs. All embedding inference and index storage can run within enterprise infrastructure</p></li></ul>
-<p>This embedding layer serves as both the context foundation for agentic workflows and the retrieval engine powering in‑IDE code search features—without sacrificing privacy, performance, or precision.</p>
-<h3>3. Autonomous Multi-Step Development with Agentic Workflows</h3>
-<p>With relevant context surfaced, AI can take meaningful action. <a href="https://mistral.ai/news/devstral">Devstral</a>, powered by the <a href="https://github.com/All-Hands-AI/OpenHands">OpenHands </a>agent scaffold, enables enterprise-ready agentic coding workflows. It’s built specifically for engineering tasks—cross-file refactors, test generation, and PR authoring—using structured, context-rich reasoning.</p>
-<p>Standout capabilities include:</p>
-<ul><li><p>Top open‑model performance on SWE‑Bench Verified: Devstral Small 1.1 scores 53.6%, and Devstral Medium reaches 61.6%, outperforming Claude 3.5, GPT‑4.1‑mini, and other open models by wide margins</p></li><li><p>Flexible architecture for any environment: Devstral is available in multiple sizes. The open-weight Devstral Small (24B, Apache-2.0) runs efficiently on a single Nvidia RTX 4090 or Mac with 32 GB RAM—ideal for self-hosted, air-gapped, or experimental workflows. The larger Devstral Medium is available through enterprise partnerships and our API for more advanced code understanding and planning capabilities.</p></li><li><p>Open model for extensibility: Teams can fine-tune Devstral Small on proprietary code, build custom agents, or embed it directly into CI/CD workflows—without licensing lock-in. For production environments requiring higher model performance, Devstral Medium is available with enterprise-grade support, including the ability for companies to post-train and fine-tune.</p></li></ul>
-<p>Delivering agentic automation within private infrastructure lets engineering organizations reduce friction, ensure compliance, and speed up delivery with repeatable, auditable AI workflows.</p>
-<h3>4. IDE Integration and Operational Control</h3>
-<p>All capabilities in the Mistral stack—completion, semantic search, and agentic workflows—are surfaced through Mistral Code, a native plugin for JetBrains and VS Code.</p>
-<p><figure><img alt="Code Ide" height="840" src="https://mistral.ai/_astro/f5361c96-bf6c-4876-8a1c-c9fd6e80a612_2ou40e.webp?dpl=6a622da400bba40008995ff8" width="1152"/></figure></p>
-<p>It provides:</p>
-<ul><li><p>Inline completions using Codestral 25.08, optimized for FIM and multi-line editing</p></li><li><p>One-click task automations like “Write commit message”, “Fix function”, or “Add docstring”, powered by Devstral</p></li><li><p>Context awareness from Git diffs, terminal history, and static analysis tools</p></li><li><p>Integrated semantic search, backed by Codestral Embed</p></li></ul>
-<p>Mistral Code is built to support enterprise deployment requirements:</p>
-<ul><li><p>Deploy in any environment: cloud, self-managed VPC, or fully on-prem (GA in Q3)</p></li><li><p>No mandatory telemetry, and no external API calls for inference or search</p></li><li><p>SSO, audit logging, and usage controls for secure, policy-compliant adoption</p></li><li><p>Usage observability via the Mistral Console, including metrics on AI-generated code, suggestion acceptance, and agent usage</p></li></ul>
-<p>These features give engineering, platform, and security teams the ability to roll out AI tooling safely, incrementally, and with full visibility.</p>
-<h2>How It All Fits Together: From Developer Actions to Organizational Impact</h2>
-<p>The Mistral coding stack integrates autocomplete, semantic retrieval, and agentic workflows directly into the IDE—while giving platform teams control over deployment, observability, and security. In a typical development task:</p>
-<p>Say a developer is working on a payments service written in Python. A recent update to a third-party billing API means they need to update the integration logic and add proper error handling.</p>
-<ol><li><p>They start by navigating to the billing handler. As they modify the function signature, Codestral fills in the expected parameters and suggests a first-pass implementation, reducing the need to copy patterns from other services.</p></li><li><p>Before changing the retry logic, they need to understand how similar failures are handled elsewhere. Instead of switching to Slack or searching GitHub manually, they enter a query directly in the IDE: “How do we handle Stripe timeouts in the checkout flow?” The embedding index, running locally, returns a helper module from another service that wraps retry logic with exponential backoff.</p></li><li><p>They copy the pattern into their own handler—but realize three other services are using outdated retry code. They invoke a Devstral-powered agent from within the IDE: “Replace all uses of retry_with_sleep in the billing and checkout services with the new retry_exponential helper, and update the docs.” Devstral scans the codebase using the same embeddings, makes the required edits across files, and generates a draft PR. The agent also writes a changelog and updates the README section on error handling.</p></li></ol>
-<p>The developer reviews the PR, confirms the logic, and merges it. A cross-service update that previously would have required search, coordination, and hand-written boilerplate now completes in one editing session—with traceable, reviewable output.</p>
-<p>At the organization level, this same workflow unlocks broader advantages:</p>
-<ul><li><p>Every component in the stack can be self-hosted or run on-prem, giving teams control over data, latency, and deployment architecture.</p></li><li><p>Observability is built in. The Mistral Console tracks usage patterns, model acceptance rates, and agent adoption, providing the data needed to tune rollout and measure ROI.</p></li><li><p>Security and compliance controls—including SSO, audit logging, and telemetry configuration—make it easy to integrate with internal policies and infrastructure.</p></li><li><p>No stitching required. Because completion, search, and agents share architecture, context handling, and support boundaries, teams avoid the drift, overhead, and security gaps of piecing together third-party tools.</p></li></ul>
-<p>The result is a development workflow that’s both faster and easier to govern—designed for individual productivity and organizational scale.</p>
-<h2>Adopted by Leading Enterprises Across Diverse Environments</h2>
-<p>The Mistral coding stack is already being used in production by organizations across consulting, finance, transportation, and industry—each with different requirements, but shared constraints around data control, deployment flexibility, and internal code complexity.</p>
-<ul><li><p>Capgemini has rolled out the stack across global delivery teams to accelerate development while maintaining code ownership and compliance across clients in defense, telecom, and energy.</p></li><li><p>Abanca, a leading bank in Spain operating under European banking regulations, uses Mistral’s models in a fully self-hosted deployment to meet data residency and network isolation requirements—without sacrificing usability.</p></li><li><p>SNCF, the French national railway company, uses agentic workflows to modernize legacy Java systems safely and incrementally, with human oversight built into the loop.</p></li></ul>
-<blockquote><p>“Leveraging Mistral’s Codestral has been a game changer in the adoption of private coding assistant for our client projects in regulated industries. We have evolved from basic support for some development activities to systematic value for our development teams“.</p><p>Alban Alev, VP head of Solutioning at Capgemini France.</p></blockquote>
-<p>In addition, several tier-1 global banks and industrial manufacturers are actively piloting or scaling adoption across their engineering teams—driven by requirements that hosted copilots and fragmented tooling can’t support.</p>
-<p>These use cases reflect a growing shift: organizations are no longer looking for isolated assistants—they’re adopting integrated AI systems that match the complexity, security posture, and velocity of modern enterprise software development.</p>
-<h2>Get Started</h2>
-<p>The full Mistral coding stack—Codestral 25.08, Devstral, Codestral Embed, and the Mistral Code IDE extension—is available today for enterprise deployment.</p>
-<p>Teams can start with autocomplete and semantic search, then expand to agentic workflows and private deployments at their own pace.</p>
-<p>To begin:</p>
-<ul><li><p>Install Mistral Code from the <a href="https://plugins.jetbrains.com/plugin/27493-mistral-code-enterprise">JetBrains</a> or <a href="https://marketplace.visualstudio.com/items?itemName=mistralai.mistral-code">VS Code</a> marketplace</p></li><li><p>Connect to your preferred deployment modality (cloud, VPC, or on-prem)</p></li></ul>
-<p>If you would like to use the models for your own copilot, get your keys at <a href="http://console.mistral.ai">console.mistral.ai</a>. For more information on Mistral’s coding solutions, please visit our <a href="https://mistral.ai/solutions/coding">website</a> and <a href="https://docs.mistral.ai/">documentation</a>. </p>
-<p>To evaluate on-prem options, enterprise-scale deployments, or schedule a hands-on pilot, fill out the demand form on this page. A member of the Mistral team will follow up to help tailor the rollout to your environment.</p>]]></content:encoded>
-      <guid isPermaLink="true">https://mistral.ai/news/codestral-25-08</guid>
-      <category>Research</category>
-      <pubDate>Wed, 30 Jul 2025 00:00:00 +0000</pubDate>
-      <media:content url="https://mistral.ai/_astro/Cover-Model-Codestral_Z2hbXei.webp?dpl=6a622da400bba40008995ff8" type="image/webp" medium="image"/>
     </item>
   </channel>
 </rss>
