@@ -8,7 +8,42 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 21 Oct 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 22 Oct 2026 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Donating Agent Skills to the Agentic AI Foundation</title>
+      <link>https://www.anthropic.com/news/donating-agent-skills-to-the-agentic-ai-foundation</link>
+      <description>Today, we’re donating Agent Skills , the open standard that gives AI agents specialized knowledge and workflows, to the Agentic AI Foundation (AAIF). More than 70 agent platforms, including ChatGPT, Cursor, GitHub Copilot, and VS Code, have integrated Agent Skills since we published the standard in December 2025.</description>
+      <content:encoded><![CDATA[<p>Today, we’re donating <a href="https://agentskills.io/home">Agent Skills</a>, the open standard that gives AI agents specialized knowledge and workflows, to the Agentic AI Foundation (AAIF). More than 70 agent platforms, including ChatGPT, Cursor, GitHub Copilot, and VS Code, have integrated Agent Skills since we published the standard in December 2025.</p>
+<h3 id="agent-interoperability-through-simplicity">Agent interoperability through simplicity</h3>
+<p>A skill is a folder containing a SKILL.md file that teaches an agent a specific task or domain, along with any scripts or reference material it needs. We developed skills while working on Claude Code. It handled general knowledge work well, but often lacked the procedural knowledge that real business tasks need. Within weeks of our October 2025 launch, developers published thousands of skills on GitHub and wrote loaders for Codex, Cursor, and OpenCode. We then published Agent Skills as an open standard, under its own GitHub organization and domain, so any agent could use it. So far, 1 million skills have been published and nearly 280 million installed.</p>
+<h3 id="donating-agent-skills-to-aaif">Donating Agent Skills to AAIF</h3>
+<p>We’re committed to keeping Agent Skills open, community-driven, and vendor-neutral. Today, we are donating the standard to the Agentic AI Foundation (AAIF) under the Linux Foundation, <a href="https://www.anthropic.com/news/donating-the-model-context-protocol-and-establishing-of-the-agentic-ai-foundation">which we co-founded</a> with Block and OpenAI last year, and to which we donated the Model Context Protocol (MCP). The AAIF will provide a neutral home to the standard going forward, ensuring the community has a say in where Agent Skills go next.</p>
+<p>We are donating the Agent Skills name and logo, the GitHub organization, and the <a href="https://agentskills.io/home">agentskills.io</a> domain. You can continue to use the standard or contribute to it without joining the AAIF.</p>
+<p>Engineers from Anthropic, Google, OpenAI, and other companies will maintain the standard as individuals, with David Soria Parra and Mahesh Murag as Lead Maintainers.</p>
+<h3 id="what-comes-next">What comes next</h3>
+<p>We’ve proposed starting with a roadmap covering versioned releases, a formal proposal process, and security guidance for people who write and install skills. As with MCP, the project will continue to prioritize community input and transparent decision-making. You can join the project’s <a href="https://discord.gg/MKPE9g8aUy">Discord</a> to give feedback on proposed specification changes.</p>
+<p>Thank you to the developers who built with Agent Skills from the start, and to the teams who brought skills into their products. Read the specification at <a href="https://agentskills.io">agentskills.io</a> and join the discussion on <a href="https://github.com/agentskills/agentskills">GitHub</a>.</p>]]></content:encoded>
+      <guid isPermaLink="true">https://www.anthropic.com/news/donating-agent-skills-to-the-agentic-ai-foundation</guid>
+      <category>News</category>
+      <pubDate>Thu, 22 Oct 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Open call for guest investigators in the life sciences</title>
+      <link>https://www.anthropic.com/news/open-call-guest-investigators-life-sciences</link>
+      <description>Today, we’re inviting members of the life sciences community to apply to work with us on special projects.</description>
+      <content:encoded><![CDATA[<p>Today, we’re inviting members of the life sciences community to apply to work with us on special projects. We’re looking for proposals from principal investigators and their research groups at academic institutions, nonprofits, or government labs who want to use Claude to investigate key questions in causal human biology, structural and computational molecular biology, medicinal chemistry, drug discovery, and clinical science.</p>
+<p>You can submit a <a href="https://www.anthropic.com/guest-investigator-program">proposal for a project here</a>.</p>
+<p>Over 8–12 weeks, guest investigators will work directly with Anthropic researchers on a problem of interest and produce the analyses, artifacts, and tools that will be most helpful for them in their work. Our team will run our models and harnesses at no cost to them.</p>
+<p>We’ll work together to publish these outputs and open-source the accompanying data and code. Guest investigators retain the rights to their data at every step during their project. They will also have the rights to any independent follow-on research that might come out of our collaboration.</p>
+<p>We’re looking for applicants who can clearly explain how they would benefit from direct collaboration with Anthropic’s researchers. Applicants should also make a reasonable case that their outputs (e.g., preliminary discoveries, answers to open questions, open-source datasets, or public resources) can be produced within the 8- to 12-week collaboration period. There may be an option for extension beyond the initial collaboration period for some projects.</p>
+<p>We understand that the results for most open problems of interest will take much longer to validate, but we’re looking for proposals that can produce some preliminary evidence in a relatively short amount of time.</p>
+<p>We aren’t asking for guest investigators to give us their data, either in the application or during the collaboration, and we’re requesting that applicants include only publicly available information in their application materials.</p>
+<p>Applications will be open for approximately 14 days, and we’ll strive to notify selected participants by email approximately 14 days after applications close. We look forward to potentially expanding this effort in the future as we learn more about how we can best support the scientific community.</p>
+<p>This program is one of several initiatives Anthropic is pursuing to invest more heavily in the life sciences and the broader scientific research community. Scientists who would like direct access to our most capable publicly available models for biology can apply to join our <a href="https://www.anthropic.com/news/life-sciences-verification-program">Life Sciences Verification Program</a>. We’ve also continued to support researchers through our <a href="https://www.anthropic.com/news/ai-for-science-program">AI for Science initiative</a>, which provides scientists with Claude credits to accelerate their progress toward making scientific discoveries.</p>]]></content:encoded>
+      <guid isPermaLink="true">https://www.anthropic.com/news/open-call-guest-investigators-life-sciences</guid>
+      <category>News</category>
+      <pubDate>Thu, 22 Oct 2026 00:00:00 +0000</pubDate>
+    </item>
     <item>
       <title>Physicist Christopher Stubbs joins Anthropic's Long-Term Benefit Trust</title>
       <link>https://www.anthropic.com/news/christopher-stubbs-joins-long-term-benefit-trust</link>
