@@ -8,7 +8,143 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 21 Oct 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 29 Oct 2026 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Le Chonk: Built for Coders, Trusted by Defenders.</title>
+      <link>https://mistral.ai/news/mistral-large-4-oss</link>
+      <description>Mistral released Mistral Large 4 (Le Chonk), a 1-trillion-parameter multimodal model, now available with improved coding, cybersecurity, and reasoning efficiency. It leads open-weight benchmarks in coding and defensive security while offering three reasoning modes for cost-performance balance. Fully open-weight and European-trained, it empowers sovereign AI with customizable, self-hosted deployment options.</description>
+      <content:encoded><![CDATA[<img alt="Le Chonk signal" height="484" src="https://mistral.ai/images/heros/ml4-oss/cat-signal.svg?dpl=6ae3844da0718a08567e65ba" width="290"/>
+<img alt="Le Chonk Computer" height="200" src="https://mistral.ai/images/heros/ml4-oss/desktop.svg?dpl=6ae3844da0718a08567e65ba" width="200"/>
+<p><strong>We release the weights of Le Chonk, advancing the frontier of open models in agentic coding and cybersecurity.</strong></p>
+<p>Earlier this month, we released Mistral Large 4 (Le Chonk), our flagship 1-trillion-parameter, natively multimodal model, in public preview. The response to the preview has exceeded our expectations, and we're grateful to our developer community, early-access customers, and partners for their support, collaboration, and feedback.</p>
+<figure><img height="1160" src="https://mistral.ai/_astro/partners-ml4-oss_17QG5o.webp?dpl=6ae3844da0718a08567e65ba" width="2400"/></figure>
+<p>Since then, we've put that feedback to work while continuing to scale reinforcement learning, driving massive improvements in <strong><em>coding</em></strong> and defensive <strong><em>cybersecurity</em></strong>. Gains continue to accelerate, with no signs of saturation.</p>
+<p><strong>Today, we're releasing the weights of this improved Mistral Large 4.</strong> The new model also features substantial gains in reasoning efficiency that give developers greater performance while lowering inference costs.</p>
+<p>Mistral Large 4 ranks as the <strong>best open-weight model for coding</strong> and among the world's most capable open models overall. Trained from scratch on European infrastructure with clear lineage from inception to release, it gives organizations a trusted foundation for Sovereign AI</p>
+<p>Mistral is defining the sovereign AI category and leading the open frontier. We're committed to building the world's most capable models and releasing them openly, giving developers, enterprises, and institutions the power to own, customize, and control their AI. </p>
+<h2>Built for the Builders.</h2>
+<p>Mistral Large 4 entered public preview with strong results across leading coding benchmarks. Just three weeks of additional reinforcement learning have since propelled it to the forefront of open-weight coding, taking the lead on FrontierCode and Terminal-Bench while matching the best open-weight models on the Artificial Analysis Coding Agent Index with substantially greater token efficiency.</p>
+<p>On Cognition's private FrontierCode 2.0 benchmark, which assesses end-to-end code quality and whether a repository maintainer would merge the agent's change, Mistral Large 4 leads with a score of 19.7%.</p>
+<h2>Pushing the pareto frontier for agentic coding.</h2>
+<p>Mistral Large 4 delivers frontier coding performance with significantly fewer tokens, making sophisticated coding agents more economical to run at scale.</p>
+<p>On the Artificial Analysis Coding Agent Index, Mistral Large 4 scores 48%, effectively tied with the leading open-weight model, GLM-5.3, while using 47% fewer tokens per task on average.</p>
+<p>The gains extend to terminal-based coding workflows. On Terminal-Bench 4.0, Mistral Large 4 improved by 13 percentage points to 41% compared to its public preview, taking the lead among open-weight models while reducing output tokens by 30%.</p>
+<p>To give developers greater control over this tradeoff between performance and cost, Mistral Large 4 now supports three reasoning modes:</p>
+<table><tbody><tr><td colspan="1" rowspan="1"><p><strong>Mode</strong></p></td><td colspan="1" rowspan="1"><p><strong>Recommended Use</strong></p></td></tr><tr><td colspan="1" rowspan="1"><p>Low</p></td><td colspan="1" rowspan="1"><p>Simple tasks; replaces ‘None’ reasoning mode</p></td></tr><tr><td colspan="1" rowspan="1"><p>Medium</p></td><td colspan="1" rowspan="1"><p>Everyday tasks</p></td></tr><tr><td colspan="1" rowspan="1"><p>High (default)</p></td><td colspan="1" rowspan="1"><p>Hardest use cases requiring high precision and thorough reasoning</p></td></tr></tbody></table>
+<p>Beyond benchmarks, Mistral Large 4's coding capabilities are validated by human preference. In Surge Code's blind pairwise evaluations, Mistral Large 4 was preferred over leading open-weight models including GLM-5.3, Kimi K3, and DeepSeek V4.1 Flash, ranking behind only Claude Opus 5.5 among the models evaluated.</p>
+<h2>Built for the Defenders. </h2>
+<p>Since its preview, we've been working with leading cybersecurity vendors to evaluate Mistral Large 4 in real-world environments to test Mistral Large 4’s strengths in vulnerability reproduction and patching.</p>
+<p>Mistral Large 4 scores 51% on the Artificial Analysis Cyber Index, which measures a model’s ability to discover vulnerabilities in a codebase, reproduce and validate them, and patch them without breaking existing functionality. Crucially, Mistral Large 4 handles these legitimate defensive security tasks without unnecessary refusals.</p>
+<p>Safety has improved alongside capability. Our model’s built-in guardrails distinguishes between defensive and malicious, offensive cybersecurity tasks. It retains strong performance on Cyber benchmarks, while achieving an average refusal rate of 96.6% on malicious cyber requests, the highest we measure among open models.</p>
+<p>Here’s what global leaders in cybersecurity have to say about Mistral Large 4:</p>
+<p>Testing by Booz Allen demonstrated the success of the European Mistral Large 4 model against our internal benchmark for source code security analysis. The model was able to match vulnerability detection recall rates against other frontier cyber models with a compelling cost curve. And, Mistral's support for model customization and data-sovereign deployment also lets us tailor it for our mission needs and client environments with strict data-residency requirements. We look forward to working with Mistral to strengthen critical infrastructure around the globe.</p>
+<p>Brad Medairy, President National Cyber at Booz Allen Hamilton</p>
+<p>Organizations that treat transparency and openness as strengths are positioned well as AI becomes central to security operations. Open-weight cybersecurity models extend that transparency to enterprises and governments that need to host and customize AI under their own control, and they allow researchers to study how these models behave, including where they could be misused. As adversaries increasingly use AI to accelerate their operations, we aim to work alongside model developers such as Mistral to help security teams build on that control, establishing a foundation for resilience by design rather than reactive threat management.</p>
+<p>Amy Chang, Head of Cisco's AI Threat Intelligence and Security Research</p>
+<img alt="Cisco (black)" src="https://mistral.ai/cms-media/api/media/file/cisco-black.svg"/>
+<img alt="Cisco (white)" src="https://mistral.ai/cms-media/api/media/file/cisco-white.svg"/>
+<p>When threats move at machine speed, human defense cannot keep pace. Worse, a defense you don’t control isn’t defense—it’s exposure. Security teams perform best when they take the steering wheel. Mistral's ML4 lets defenders audit the architecture, deploy on their own infrastructure, and keep full sovereignty. Resilience starts with autonomy, and open-weight models help give organizations the control to lead their own defense."</p>
+<p>Stephanie Cohen, Chief Strategy Officer at Cloudflare</p>
+<img alt="Cloudflare (black)" src="https://mistral.ai/cms-media/api/media/file/cloudflare-black.svg"/>
+<img alt="Cloudflare (white)" src="https://mistral.ai/cms-media/api/media/file/cloudflare-white.svg"/>
+<p>Powerful AI models alone won't tip the scales in cybersecurity. It takes deep security expertise, real-world threat intelligence, and rigorous testing. Our work with Mistral Large 4 tests how well frontier AI can reason through complex vulnerabilities, accelerate remediation, and ensure defenders move faster than adversaries.</p>
+<p>Dr. Bartley Richardson, Chief AI and Autonomous Systems Officer, CrowdStrike</p>
+<img height="96" src="https://mistral.ai/_astro/crowdstrike_ZOd3AQ.webp?dpl=6ae3844da0718a08567e65ba" width="519"/>
+<img height="96" src="https://mistral.ai/_astro/crowdstrike-white_14MSzg.webp?dpl=6ae3844da0718a08567e65ba" width="519"/>
+<p>Elastic gives security teams the freedom to bring the AI they trust to the data they control, including Mistral’s open models, which are supported on Elastic Security today. We’ve already evaluated ML4 against real cybersecurity workloads, where models need to reason across complex data to help analysts make informed investigation and response decisions. This demonstrates the partnerships we are building to deliver powerful, open-weight models combined with the security context, transparency and control our customers demand.</p>
+<p>James Spiteri, Senior Director, Product Management, Elastic</p>
+<img height="138" src="https://mistral.ai/_astro/elastic-co-brandmark_2w56MF.webp?dpl=6ae3844da0718a08567e65ba" width="404"/>
+<img height="138" src="https://mistral.ai/_astro/elastic-co-brandmark-light_2jt1Kc.webp?dpl=6ae3844da0718a08567e65ba" width="404"/>
+<p>ENISA is experimenting with closed and open weight models in order to better understand their cyber capabilities. Open-weight models allow organisations to keep control of the technology their resilience depends on. ENISA access to and are testing Mistral Large 4 to identify security vulnerabilities, to audit code and analyse defensive logs.</p>
+<p>Laura Heuvinck, Head of Communications of ENISA</p>
+<p>We believe open-weight AI models have an important role to play in advancing cybersecurity by giving organizations greater flexibility, choice, and control. Innovations like Mistral Large 4 represent promising steps forward in AI's potential to transform cyber defense. We see continued AI innovation as an important opportunity to strengthen cybersecurity and help organizations navigate an evolving threat landscape.</p>
+<p>John Whittle, Chief Operating Officer at Fortinet</p>
+<img height="58" src="https://mistral.ai/_astro/fortinet_1UAxG1.webp?dpl=6ae3844da0718a08567e65ba" width="480"/>
+<img height="58" src="https://mistral.ai/_astro/fortinet-light_Zfxgft.webp?dpl=6ae3844da0718a08567e65ba" width="480"/>
+<p>Open models let security researchers and developers inspect, adapt and build on AI. Mistral is expanding what the ecosystem can build, and our collaboration on NVIDIA accelerated infrastructure helps developers put these models to work.</p>
+<p>Kari Briski, VP of Open Models and Software, NVIDIA</p>
+<img height="726" src="https://mistral.ai/_astro/logo-nvidia-color_1Siszv.webp?dpl=6ae3844da0718a08567e65ba" width="1290"/>
+<img alt="Nvidia (white)" src="https://mistral.ai/cms-media/api/media/file/nvidia-white.svg"/>
+<p>As threats become ever faster, industrialized and now automated, defense must operate at a different scale. Volume, speed, trust: these are the three challenges facing cybersecurity in the age of AI. With Mistral AI, we are building European cyber AI, trained by our experts and operated under their control. By combining the power of AI, the expertise of our teams and our Cyber Threat Intelligence, we are accelerating our response so that we can protect more broadly, more quickly and with trusted European technology.</p>
+<p>Hugues Foulon, CEO of Orange Cyberdefense</p>
+<img height="134" src="https://mistral.ai/_astro/orange-cyber_9259u.webp?dpl=6ae3844da0718a08567e65ba" width="884"/>
+<img height="134" src="https://mistral.ai/_astro/orange-cyber-light_2iXka1.webp?dpl=6ae3844da0718a08567e65ba" width="884"/>
+<p>Rubrik supports Mistral and the push for ‘sovereign AI,’ to give European governments and regulated industries a credible option that does not route their data to other countries. Customers want model choices, including open-weight and private models, to support data residency, latency, cost and capability requirements. As part of our focus to deliver cyber resilience and speed recovery from both AI-powered attacks outside an organization and internal agents, we’ll continue rigorous cybersecurity testing with Mistral Large 4 and work closely together to serve evolving regional demands.</p>
+<p>Anneka Gupta, Chief Product Officer of Rubrik.</p>
+<img height="108" src="https://mistral.ai/_astro/rubrik_5mmnd.webp?dpl=6ae3844da0718a08567e65ba" width="378"/>
+<img height="108" src="https://mistral.ai/_astro/rubrik-light_Z1f74a3.webp?dpl=6ae3844da0718a08567e65ba" width="378"/>
+<p>As enterprises bring AI into production, they increasingly want models they can run on their own terms, with clear visibility into model behavior, data access, and agent permissions. Mistral Large 4 brings strong cybersecurity and technical reasoning to open weight AI, and many European enterprises are already embracing it as their sovereign model of choice. Zscaler Security for AI offerings, delivered on our sovereign Zero Trust Exchange in Europe, now integrate with Mistral, helping organizations continuously test their AI deployments, map what every model and agent can reach, and enforce policy inline. Together, we are empowering enterprises to adopt sovereign AI with the visibility, control, and data protection they need to innovate securely.</p>
+<p>Dhawal Sharma, EVP of AI and Data Security, Zscaler</p>
+<img height="52" src="https://mistral.ai/_astro/zscaler_Z1X4UR3.webp?dpl=6ae3844da0718a08567e65ba" width="240"/>
+<img height="70" src="https://mistral.ai/_astro/zscaler-light_Z2r0bCX.webp?dpl=6ae3844da0718a08567e65ba" width="321"/>
+<p>In the time since the preview, we carefully monitored cybersecurity-related use in our live traffic. Though we observed the model refusing to comply with black-box attacks against live targets, we see a potential for uplift to conduct real attacks. We are modifying our guardrails accordingly, and will continue updating them in the months to come. </p>
+<p>We are also providing enterprise design partners such as Orange Cyberdefense, with preview access to a specialized variant of Mistral Large 4 optimized for advanced cybersecurity workflows, including penetration testing, vulnerability assessment, and red-teaming. Access is subject to rigorous vetting and contractual safeguards, with testing restricted to owned or explicitly authorized systems in controlled environments.</p>
+<p>Meanwhile, customers are tailoring Mistral Large 4 with proprietary security data, policies, detection logic, and threat environments using Mistral <a href="https://mistral.ai/products/forge/"><u>Forge</u></a>. For well-defined cybersecurity tasks, it can be further optimized into smaller, task-specific variants for greater accuracy, making security applications more effective.</p>
+<p><a href="https://mistral.ai/industry/cybersecurity">Learn more about sovereign AI for cybersecurity and how to work with us.</a></p>
+<h2>Built for Work.</h2>
+<p>Mistral Large 4 has continued improving on a range of broad enterprise-use metrics. </p>
+<p><br/><strong>For finance-related work</strong>, we improved the model’s ability to perform real-world workflows, especially ones involving the creation and editing of spreadsheets for finance and accounting use cases. This is reflected in our Finch scores climbing to 73.3%, second only to Kimi K3 for open models. </p>
+<p><strong>Web browsing</strong> is a critical part of a majority of knowledge work. Our RL pipeline enabled us to reach 84.5% on BrowseComp (starting from an SFT checkpoint that was achieving 75%). This brings Mistral Large 4 at a higher performance than models like GLM-5.3 or DeepSeek Flash 4.1 1017.</p>
+<p><strong>Agents deployed by an organization need to be secure.</strong> Whether deployed to internal members or external users, agents shouldn’t open you up to threats like system prompt exfiltration or malicious code injection. RL increased our gains on the B3 Agent Security Benchmark, with Mistral Large 4 resisting 97.1% of attacks vs 93.3% in Preview. This places it at the top of the OSS frontier, meaning anyone hosting the model can run a safe agent without additional tuning.<br/></p>
+<p>This major investment by Mistral AI reinforces the choice La Banque Postale made over a year ago and underscores the relevance of the long-term strategic partnership we are building together: supporting the emergence of an open and sovereign European AI leader. For a public and citizen bank, technological sovereignty is not optional; it is a key prerequisite for maintaining our customers' trust. The introduction of this open model unlocks new opportunities and use cases. By partnering with Mistral AI, our ambition is to combine the best of human expertise and digital technology to deliver an enhanced experience of both customers and employees over the long term.</p>
+<p>Zakaria Moursli, Executive Vice President, Operational Performance, Payments and Digital Services, La Banque Postale</p>
+<h2>See it in Action</h2>
+<p><u>Cyber Vulnerability Triage</u>: an agent reads incoming vulnerability reports, investigates the source code and product context, reproduces the flaws in an isolated sandbox, then writes and iterates on a patch until a canary exploit no longer works.</p>
+<p><u>Agentic webdev: </u>with no human help, Mistral Large 4 builds Orbital Trace, a live 3D map of roughly 19,000 satellites and debris pieces orbiting Earth. It pulls real tracking data, writes the app, uses it in a browser to catch its own bugs and slowdowns, then fixes what an independent reviewer flags until all requirements pass.</p>
+<p><u>Quantum chemistry solver:</u> Mistral Large 4 writes, from scratch, software that calculates where electrons sit in a molecule, and checks its answers against a standard chemistry tool. It then builds a 3D page around it: pick a molecule such as benzene or water, drag a slider to pull it apart, and watch the electrons regroup as the bond breaks.</p>
+<h2>Built for Sovereignty.</h2>
+<p>As organizations build AI around their knowledge and workflows, sovereignty means that they retain control of the models they depend on and the intelligence they create. </p>
+<p>With Mistral Large 4, that control begins with the model itself. Organizations have the ability to inspect, customize, and deploy the model on their own infrastructure. They can use and improve Mistral Large 4 without depending on Mistral to serve it through an API. Mistral Large 4 was developed and trained from scratch in Europe, giving organizations clarity about the origins of the technology they’re building on. </p>
+<p>Control also extends to how AI operates inside an organization. Organizations can customize Mistral Large 4 around their proprietary data with Mistral <a href="https://mistral.ai/products/forge/"><u>Forge</u></a>, and they can build, govern, and improve the resulting agents and applications using Mistral <a href="https://mistral.ai/products/studio/"><u>Studio.</u></a> Mistral’s Applied AI experts can work alongside customer teams to build and deploy these tailored systems. Through that work, teams understand the architecture and decisions behind what they’ve built, along with the methods used to train and operate it, so they can run and improve their AI independently. </p>
+<p>At ABN AMRO, we believe that open and transparent AI ecosystems are essential for driving innovation responsibly within the financial sector. Developments such as Mistral Large 4 demonstrate how sovereign and open-weight AI models can expand the range of trusted solutions available to European organizations. We are encouraged by the progress being made and continue to explore how advanced AI can contribute to strengthening critical capabilities, including cybersecurity.</p>
+<p>Coen Klaver, Director Cyber Defense at ABN AMRO Bank N.V.</p>
+<img height="84" src="https://mistral.ai/_astro/abn-armo_GjFH9.webp?dpl=6ae3844da0718a08567e65ba" width="336"/>
+<img height="63" src="https://mistral.ai/_astro/abn-armo-light_1IoiGs.webp?dpl=6ae3844da0718a08567e65ba" width="252"/>
+<p>The rapid progress we are seeing in AI models creates exciting opportunities for advanced engineering in chip manufacturing. Our early experience with Mistral Large 4 is promising, particularly for use cases where higher model performance matters. Mistral’s commitment to continued innovation supports our efforts to accelerate the application of AI throughout our semiconductor product lifecycle.</p>
+<p>Arnaud Hubaux, Head of AI Program and Strategy.</p>
+<img height="298" src="https://mistral.ai/_astro/ASML_logo_bleu_PNG-format-1_Z18yqlK.webp?dpl=6ae3844da0718a08567e65ba" width="1063"/>
+<img height="850" src="https://mistral.ai/_astro/asml-white_25UA4r.webp?dpl=6ae3844da0718a08567e65ba" width="1701"/>
+<p>Mistral Large 4 is an important step forward for financial‑grade AI: an open‑weight model we can fine‑tune to our needs, deploy on our own infrastructure and closely integrate into our digital channels. Hey Belfius is a flagship example of how this partnership helps us rethink how customers interact with their bank.</p>
+<p>Nicolas Goosse, Head of Data Insights, Analytics &amp; AI at Belfius</p>
+<img alt="Belfius (black)" src="https://mistral.ai/cms-media/api/media/file/belfius-black.svg"/>
+<img alt="Belfius (white)" src="https://mistral.ai/cms-media/api/media/file/belfius-white.svg"/>
+<p>Mastering our AI begins with mastering its architecture and data. For the most sensitive use cases, having access to European open-weight models, which we can deploy on our own infrastructure, is a vital lever for strengthening our strategic autonomy and the resilience of our organizations. The industrial partnership between Crédit Agricole Artificial Intelligence and Mistral addresses these challenges at the Group level. The "Le Chonk" model, which stands out for its reasoning capabilities and performance in the field of cybersecurity, is a promising illustration of the possibilities opened up by this partnership.</p>
+<p>Oliver Biton, Group CIO, Crédit Agricole </p>
+<img height="327" src="https://mistral.ai/_astro/credit-agricole_2ss1DX.webp?dpl=6ae3844da0718a08567e65ba" width="462"/>
+<img height="327" src="https://mistral.ai/_astro/credit-agricole-light_Z1u43aY.webp?dpl=6ae3844da0718a08567e65ba" width="462"/>
+<p>We're excited about an open-weight model with strong scientific and vision capabilities. Our work is highly specialized, so the ability to adapt a model matters. With Mistral Large 4, we see a foundation for building tools around the way our scientists and engineers actually work with Earth observation data — from imagery to technical documents.</p>
+<p>Giuseppe Borghi, Head of ESA Φ-lab</p>
+<img alt="ESA (black)" src="https://mistral.ai/cms-media/api/media/file/esa-black.svg"/>
+<img alt="ESA (white)" src="https://mistral.ai/cms-media/api/media/file/esa-white.svg"/>
+<p>AI sovereignty isn't about choosing which API to call. It's about having the freedom to run, customize, and build AI on your own terms. Mistral Large 4 brings powerful capabilities in coding, multimodal AI, and cybersecurity into the open, giving developers, companies, and countries a great open foundation to build their own AI and defend themselves against cyber threats.</p>
+<p>Jeff Boudier, VP Product, Hugging Face</p>
+<img alt="connector-Hugging Face (black)" height="303" src="https://mistral.ai/_astro/connector-hugging-face-black_2gxwbj.webp?dpl=6ae3844da0718a08567e65ba" width="300"/>
+<p>A powerful model is only part of the equation. Developers also need the freedom to decide where it runs, how it is optimized, and how it fits into their systems. We’re excited about Mistral Large 4 because open weights give builders more control over those decisions, rather than making them dependent on a single hosted service. At ZML, we see that freedom as essential to turning advances in AI into useful, deployable software.</p>
+<p>Steeve Morin, CEO of ZML</p>
+<img height="114" src="https://mistral.ai/_astro/zml-1_1zreP0.webp?dpl=6ae3844da0718a08567e65ba" width="127"/>
+<img height="114" src="https://mistral.ai/_astro/zml-light-1_2mQFES.webp?dpl=6ae3844da0718a08567e65ba" width="127"/>
+<p>Sovereignty does not always require self-hosting; sometimes it just requires deployments that meet your control requirements. For organizations that prefer a managed service, Mistral Large 4 is available through Microsoft Foundry, with private deployment options for Azure developers.</p>
+<p>Microsoft and Mistral AI share a commitment to expanding customer choice in next-generation AI. As the first cloud provider to bring Mistral Large 4 to customers, Microsoft is making Mistral’s latest open-weight model available through Microsoft Foundry, an enterprise AI platform built for evaluating, deploying, and operating models at scale. For organizations advancing sovereign AI strategies, this combination offers greater flexibility and control across their data, infrastructure, and AI operations.</p>
+<p>Tina Schuchman, Corporate Vice President, Foundry, Microsoft </p>
+<h2>Start building with Le Chonk</h2>
+<p>Mistral Large 4 is available to try, deploy, and customize today.</p>
+<p>Get started in <a href="https://console.mistral.ai/home"><u>Mistral Studio</u></a>, through the Mistral <a href="https://docs.mistral.ai/models/mistral-large-4-0#use-mistral-large-4-0"><u>API</u></a>, or on <a href="https://openrouter.ai/mistralai/mistral-large-4-0"><u>OpenRouter</u></a>. For full control, download the open weights from <a href="https://huggingface.co/mistralai/Mistral-Large-4-1T-A52B"><u>Hugging Face</u></a> and deploy on your own infrastructure with vLLM or SGLang. The <a href="https://docs.mistral.ai/models/mistral-large-4-0"><u>model card</u></a> and <a href="https://huggingface.co/mistralai/Mistral-Large-4-1T-A52B/blob/main/LICENSE"><u>license</u></a> have everything you need to get started — and for those who want to go deeper, a full technical report is coming soon.</p>
+<p>You can also try the new model in <a href="https://chat.mistral.ai/code?model=mistral-large-4-0"><u>Vibe Code</u></a>; give it a feature to build or a bug to fix in your own repository.</p>
+<p>Mistral Large 4, is also available through <a href="https://build.nvidia.com/mistralai/mistral-large-4-1t-a52b"><u>NVIDIA-hosted endpoints</u></a>, as an optimized <a href="https://catalog.ngc.nvidia.com/orgs/nim/nvidia/containers/vllm-model-free-nim-experimental/-"><u>NVIDIA NIM container</u></a> for serving with vLLM. Developers can use the open source <a href="https://github.com/NVIDIA-NeMo/Automodel/blob/main/docs/model-coverage/vlm/mistralai/mistral-large-4.mdx"><u>NeMo AutoModel library</u></a> for customization or the open source <a href="https://github.com/NVIDIA/TensorRT-LLM/tree/feat/mistral-large-4"><u>TensorRT LLM</u></a> library for high-throughput serving.</p>
+<p>Enterprises can also tailor Mistral Large 4 to their proprietary data, use cases, and guardrails with Mistral Forge. <a href="https://mistral.ai/contact/"><u>Talk to our team</u></a> to learn more.</p>
+<p>The model is available to use under the <a href="https://huggingface.co/mistralai/Mistral-Large-4-1T-A52B/blob/main/LICENSE"><em>Mistral Ecosystem Open-Weight license</em></a><em>, </em>a modified MIT license. The model is free to use, modify, fine-tune, and commercialize, with a single condition: businesses that operate a Model-as-a-Service offering must obtain a separate commercial license from Mistral before using the model commercially.</p>
+<p>Starting today, Mistral Large 4 is priced at <strong><em>$0.70 input</em></strong> / M, <strong><em>$0.07 cached input</em></strong> / M, and <strong><em>$2.10 output</em></strong> / M tokens.</p>
+<p>We encourage the community to put Mistral Large 4 to the test. Run your own evaluations, push its limits, and share your findings with us on <a href="https://x.com/MistralAI?lang=en"><u>X</u></a>, <a href="https://discord.com/invite/mistralai"><u>Discord</u></a>, or <a href="https://github.com/mistralai"><u>GitHub</u></a>.</p>
+<h2>What's Next</h2>
+<p>Mistral Large 4 will serve as the foundation for a new generation of specialized and optimized Mistral models. Building on recent releases such as <a href="https://mistral.ai/news/voxtral-3/"><u>Voxtral</u></a> and <a href="https://mistral.ai/news/timestral/"><u>Timestral</u></a>, we'll continue expanding the frontier of open-weight AI, continuing to give developers and enterprises greater freedom to build, customize, and own their intelligence.</p>
+<img src="https://mistral.ai/cms-media/api/media/file/big-cat-icon.svg"/>
+<p>Mistral Large 4</p>
+<p>Open-weight hybrid instruct-and-reasoning MoE with multimodal input; unifies instruction, reasoning, and agentic capabilities in a single model, state-of-the-art among open weights on cybersecurity, finance, and manufacturing, natively fluent in 160+ languages.</p>]]></content:encoded>
+      <guid isPermaLink="true">https://mistral.ai/news/mistral-large-4-oss</guid>
+      <category>Multimodal</category>
+      <pubDate>Thu, 29 Oct 2026 00:00:00 +0000</pubDate>
+      <media:content url="https://mistral.ai/images/heros/ml4-oss/cat-signal.svg?dpl=6ae3844da0718a08567e65ba" type="image/svg+xml" medium="image"/>
+    </item>
     <item>
       <title>Mistral Advances AI for Engineering with NVIDIA</title>
       <link>https://mistral.ai/news/mistral-nvidia-ai-for-industrial-engineering</link>
@@ -2492,71 +2628,6 @@ $ /usr/local/lib/heaptrack/libexec/heaptrack_interpret &lt; heaptrack.2028233 | 
       <guid isPermaLink="true">https://mistral.ai/news/memory</guid>
       <category>Product</category>
       <pubDate>Tue, 02 Sep 2025 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Le Chat. Custom MCP connectors. Memories.</title>
-      <link>https://mistral.ai/news/le-chat-mcp-connectors-memories</link>
-      <description>The widest enterprise-ready connector directory (beta) , with custom extensibility, making it easy to bring workflows into your AI assistant.</description>
-      <content:encoded><![CDATA[<h2>Today, we’re giving you more reasons to switch to Le Chat.</h2>
-<ol><li><p><strong>The widest enterprise-ready </strong><a href="https://chat.mistral.ai/connections"><strong>connector directory (beta)</strong></a><strong>, with custom extensibility, making it easy to bring workflows into your AI assistant.</strong></p></li><li><p><ul><li><p>Directory of 20+ secure connectors—spanning data, productivity, development, automation, commerce, and custom integrations. Search, summarize, and act in tools like Databricks, Snowflake, GitHub, Atlassian, Asana, Outlook, Box, Stripe, Zapier, and more.</p></li><li><p>Custom extensibility: Add your own MCP connectors to broaden coverage and drive more precise actions and insights.</p></li><li><p>Flexible deployment: run on mobile, in your browser, or deploy on-premises or in your cloud.</p></li></ul></p></li><li><p><strong>Context that carries: introducing </strong><a href="https://chat.mistral.ai/memories"><strong>Memories (beta).</strong></a></p></li><li><p><ul><li><p>Highly-personalized responses based on your preferences and facts.</p></li><li><p>Careful and reliable memory handling: saves what matters, slips sensitive or fleeting info.</p></li><li><p>Complete control over what to store, edit, or delete.</p></li><li><p>And… fast import of your memories from ChatGPT.</p></li></ul></p></li><li><p><strong>Everything available on the Free plan.</strong></p></li></ol>
-<iframe allowfullscreen="" height="315" src="https://www.youtube.com/embed/tKUnOrl-OTw?si=oieNA4c9qiHmw2M4" width="560"></iframe>
-<h2>Plug it right in.</h2>
-<p>Today, we’re releasing 20+ secure, MCP-powered connectors in Le Chat, enabling you to search, summarize, and take actions with your business-critical tools. Le Chat’s connector directory spans essential categories, simplifying how you integrate your workflows in chats.</p>
-<p><figure><img alt="Logo Cloud 1 1" height="1920" src="https://mistral.ai/_astro/92e9c189-28ba-4d83-b8c9-058850e1ad30_Z1WvyYy.webp?dpl=6a622da400bba40008995ff8" width="1920"/></figure></p>
-<p>The new-look <a href="https://chat.mistral.ai/connections">Connectors directory</a> opens direct pipelines into enterprise tools, turning Le Chat into a single surface for data, documents, and actions. </p>
-<ul><li><p><strong>Data</strong>: Search and analyze datasets in Databricks (coming soon), Snowflake (coming soon), Pinecone, Prisma Postgres, and DeepWiki.</p></li><li><p><strong>Productivity</strong>: Collaborate on team docs in Box and Notion, spin up project boards in Asana or Monday.com, and triage across Atlassian tools like Jira and Confluence.</p></li><li><p><strong>Development</strong>: Manage issues, pull requests, repositories, and code analysis in GitHub; create tasks in Linear, monitor errors in Sentry, and integrate with Cloudflare Development Platform.</p></li><li><p><strong>Automation</strong>: Extend workflows through Zapier and campaigns in Brevo.</p></li><li><p><strong>Commerce</strong>: Access and act on merchant and payment data from PayPal, Plaid, Square, and Stripe.</p></li><li><p><strong>Custom</strong>: Add your own MCP connectors to extend coverage, so you can query, get summaries, and act on the systems and workflows unique to your business.</p></li><li><p><strong>Deployment</strong>: Run on-prem, in your cloud, or on Mistral Cloud, giving you full control over where your data and workflows live.</p></li></ul>
-<iframe allowfullscreen="" height="315" src="https://www.youtube.com/embed/2Xd3-ZX8Bsk?si=SsvHnmNaEH9zDcK-" width="560"></iframe>
-<h3>Connectors in action.</h3>
-<p><figure><img alt="Databrick Asana" src="https://cms.globalaegis.net/api/legacy-media/file/91cf7ae4-1e23-4557-ba81-11a9f1153f45.svg"/></figure></p>
-<h4>Databricks and Asana</h4>
-<p>Summarizing customer reviews in Databricks, then raising a ticket in Asana to address the top issues.</p>
-<iframe allowfullscreen="" height="315" src="https://www.youtube.com/embed/NAAwv-D-4cA?si=PijEwVINQU0FdQMf" width="560"></iframe>
-<p><figure><img alt="GitHub Notion" src="https://cms.globalaegis.net/api/legacy-media/file/231fb518-99d4-4f85-84bd-0fba406c78f9.svg"/></figure></p>
-<h4>GitHub and Notion</h4>
-<p>Reviewing open pull requests in GitHub, then creating Jira issues for follow-up and documenting the changes in Notion.</p>
-<iframe allowfullscreen="" height="315" src="https://www.youtube.com/embed/vAEqEYIp23s?si=kjh0A3WHCP1NDlRB" width="560"></iframe>
-<p><figure><img alt="Box" src="https://cms.globalaegis.net/api/legacy-media/file/4a059f07-6386-4859-9cc1-7f7dcc9788d5.svg"/></figure></p>
-<h4>Box</h4>
-<p>Comparing financial obligations across legal documents in Box, then uploading a concise summary back into Box.</p>
-<iframe allowfullscreen="" height="315" src="https://www.youtube.com/embed/MIM6Uk7A1sw?si=zPEYtDCWm67FPork" width="560"></iframe>
-<p><figure><img alt="Atlassian" src="https://cms.globalaegis.net/api/legacy-media/file/a61455d1-664c-4ef8-9e89-9552df4191b2.svg"/></figure></p>
-<h4>Confluence and Jira</h4>
-<p>Summarizing active issues from Jira, then drafting a Confluence sprint overview page for team planning.</p>
-<iframe allowfullscreen="" height="315" src="https://www.youtube.com/embed/6M-t0OiujnM?si=daMTg8P_KwrbmuKq" width="560"></iframe>
-<p><figure><img alt="Stripe Linear" src="https://cms.globalaegis.net/api/legacy-media/file/03bc7129-9871-432a-9bed-02209a47af32.svg"/></figure></p>
-<h4>Stripe and Linear</h4>
-<p>Retrieving business payment insights from Stripe, then logging anomalies as a development project and task in Linear.</p>
-<iframe allowfullscreen="" height="315" src="https://www.youtube.com/embed/qJ381CswnKw?si=BU-xbsOACKMFaOcy" width="560"></iframe>
-<p>Learn more about Connectors in our <a href="https://help.mistral.ai/en/collections/911943-connectors">Help Center</a>.</p>
-<h3>Connect any MCP server.</h3>
-<p>For everything else, you can now <a href="https://help.mistral.ai/en/articles/393572-configuring-a-custom-connector">connect to any remote MCP server</a> of choice—even if it’s not listed in the <a href="https://chat.mistral.ai/connections">Connectors directory</a>—to query, cross-reference, and perform actions on any tool in your stack.</p>
-<iframe allowfullscreen="" height="315" src="https://www.youtube.com/embed/bZR2ctE2LyQ?si=vMFuFgS8LqKguwH5" width="560"></iframe>
-<h3>Your rules. Your control.</h3>
-<p>Admin users can confidently control which connectors are available to whom in their organization, with on-behalf authentication, ensuring users only access data they’re permitted to.</p>
-<p>Deploy Le Chat your way—self-hosted, in your private or public cloud, or as a fully managed service in the Mistral Cloud. <a href="https://mistral.ai/contact">Talk to our team</a> about enterprise deployments.</p>
-<h2>Hold that thought.</h2>
-<p>Memories in Le Chat carry your context across conversations, retrieving insights, decisions, and references from the past when needed. They power more relevant responses, adaptive recommendations tailored for you, and richer answers infused with the specifics of your work—delivering a faster, more relevant, and fully personalized experience.</p>
-<iframe allowfullscreen="" height="315" src="https://www.youtube.com/embed/mNfre6VhHj8?si=FSQptHhZehGe90NC" width="560"></iframe>
-<p>Memories score high in our evaluations for accuracy and reliability: saving what’s important, avoiding forbidden or sensitive inferences, ignoring ephemeral content, and retrieving the right information without hallucinations.</p>
-<p><figure><img alt="Grid Lechat" height="1200" src="https://mistral.ai/_astro/a0e581b9-125b-4ec7-b03a-9fea8eacbd63_1DXF0r.webp?dpl=6a622da400bba40008995ff8" width="1600"/></figure></p>
-<p>Most importantly, you stay in full control—add, edit, update, or remove any entry at any time, with <a href="https://help.mistral.ai/en/articles/396497-how-do-you-handle-my-data-when-using-the-memories-feature">clear privacy settings</a> and selective memory handling you can trust.</p>
-<h2>Get started in Le Chat.</h2>
-<p>Both Connectors and Memories are available to all Le Chat users.</p>
-<p>Try out the new features at <a href="http://chat.mistral.ai">chat.mistral.ai</a>, or by downloading the Le Chat mobile by Mistral AI app from the <a href="https://apps.apple.com/fr/app/le-chat-by-mistral-ai/id6740410176">App Store</a> or <a href="https://play.google.com/store/apps/details?id=ai.mistral.chat&amp;hl=fr">Google Play Store</a>, for free; no credit card needed.</p>
-<p><a href="https://mistral.ai/contact">Reach out to us</a> to learn how Le Chat Enterprise can transform your mission-critical work. </p>
-<h2>See you at our MCP webinar and hackathon?</h2>
-<p>Webinar</p>
-<h3>Getting Started with MCP in Le Chat, September 9, Online.</h3>
-<p>Join our webinar on September 9 to dive into Le Chat’s new MCP capabilities with the Mistral team. Learn key insights, ask your questions, and prepare to build cutting-edge projects—all before the hackathon begins.</p>
-<p>Hackathon</p>
-<h3>Mistral AI MCP Hackathon, September 13-14, Paris.</h3>
-<p>Gather with the best AI engineers for a 2-day overnight hackathon (Sep. 13-14) and turn ideas into reality using your custom MCPs in Le Chat. Network with peers, get hands-on guidance from Mistral experts, and push the boundaries of what’s possible.</p>
-<h2>We’re hiring!</h2>
-<p>If you’re interested in joining us on our mission to build world-class AI products, we welcome your application to <a href="https://mistral.ai/careers">join our team</a>!</p>]]></content:encoded>
-      <guid isPermaLink="true">https://mistral.ai/news/le-chat-mcp-connectors-memories</guid>
-      <category>Product</category>
-      <pubDate>Tue, 02 Sep 2025 00:00:00 +0000</pubDate>
-      <media:content url="https://mistral.ai/_astro/92e9c189-28ba-4d83-b8c9-058850e1ad30_Z1WvyYy.webp?dpl=6a622da400bba40008995ff8" type="image/webp" medium="image"/>
     </item>
   </channel>
 </rss>
