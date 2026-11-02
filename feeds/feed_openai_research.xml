@@ -8,7 +8,56 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 29 Oct 2026 09:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 02 Nov 2026 09:00:00 +0000</lastBuildDate>
+    <item>
+      <title>LifeVal</title>
+      <link>https://openai.com/index/lifeval/</link>
+      <description>Introducing LifeVal, a benchmark measuring how well AI helps people complete everyday tasks, from finding childcare to managing finances and government paperwork.</description>
+      <content:encoded><![CDATA[<p>Measuring AI progress on the tasks that matter in everyday life.</p>
+<p>OpenAI’s mission is to ensure that artificial general intelligence benefits all of humanity. For the more than one billion people who currently use ChatGPT every week, we want to build AI that can help with the practical challenges of everyday life, like finding childcare, accessing government services, creating a budget, preparing for school, modifying recipes, ordering groceries, designing workout plans, and more.</p>
+<p>When someone is looking for help making their life easier, they need more than advice or a chat response. To be a truly helpful personal assistant, ChatGPT should be able to take actions that actually get things done.</p>
+<p>To measure model performance over time on everyday tasks, we built an evaluation of tasks covering areas where users wanted the most help from AI and personal agents. We used this evaluation to track and drive improvement in model performance on everyday tasks over the past year. </p>
+<h2>Background</h2>
+<p>To identify the tasks people value most, we started with two large studies that track how people spend time in both the U.S. and internationally: the <a href="https://www.bls.gov/tus/"><u>American Time Use Survey</u>⁠</a> and the <a href="https://www.timeuse.org/mtus"><u>Multinational Time Use Study</u>⁠</a>. Together, these datasets provide a detailed catalog of everyday life tasks that people do across different demographics, times of day, and seasons. To understand where people would most value AI assistance, we expanded on these existing surveys with a new demographically representative survey of 3,995 respondents. For each task, we asked a variety of questions to identify the areas where everyday people most wanted help from a personal assistant. The resulting tasks span the most important areas that people want help with, including caregiving, health, education, household administration, personal finances, shopping, and accessing government services. </p>
+<h2 id="_R_kd5bsnplmjcknpfivb_-heading">Individual task examples</h2>
+<p>Below are some examples of how our current models perform on practical workflows from everyday life.</p>
+<h3>Enroll in the right kindergarten after moving</h3>
+<p>93.1%</p>
+<img height="160" src="https://images.ctfassets.net/kftzwdyauwt9/0PsOKDe2IX2yO0sZVTxNn/d1de90b42ea9c430a6910aaf9e4f731b/bus.png?w=3840&amp;q=90&amp;fm=webp" width="160"/>
+<p>Compare kindergartens near our new home and shortlist the best fits.</p>
+<p>I’ve narrowed it to three kindergartens and organized the enrollment details. Two preferences still need your call. Want to review the shortlist?</p>
+<h3>Manage volunteers ahead of a flood</h3>
+<p>98.0%</p>
+<img height="160" src="https://images.ctfassets.net/kftzwdyauwt9/1hDPV5I4BneWeWnKWVsAvs/6bdf8f993cbedc6b20dc2a03c8824dce/water-drop-dingbat.png?w=3840&amp;q=90&amp;fm=webp" width="160"/>
+<p>Help me organize our community’s flood preparation volunteer force for four neighbors needing floodproofing assistance.</p>
+<p>I’ve prepared a simple action plan to help volunteers assess the sites mentioned and help them prepare for upcoming severe weather.</p>
+<h3>Find a new home for my family</h3>
+<p>100%</p>
+<img height="160" src="https://images.ctfassets.net/kftzwdyauwt9/4p9ZKTfC9iNi5m1xXkMCQl/ffdff61608bbc569e5bfa647c1a38c84/welcome-mat-white-cropped.png?w=3840&amp;q=90&amp;fm=webp" width="160"/>
+<p>Find a home in Luzerne County that fits my budget, has a separate living unit, and keeps my commute short after school drop-off. Add the deed to my cart so I can review it.</p>
+<p>I found one home that meets your requirements. I’ve calculated the transfer tax and added the deed to your country records cart to review.</p>
+<h3>Watch a game with grandma from far away</h3>
+<p>96.3%</p>
+<img height="160" src="https://images.ctfassets.net/kftzwdyauwt9/1EixydflAQZXI6yTNaL6Zg/6cc1f7086d118c3853f3a8c83da589fb/football.png?w=3840&amp;q=90&amp;fm=webp" width="160"/>
+<p>Set up an easy way for grandma and me to watch the game together remotely.</p>
+<p>The easiest watch setup is ready, with a backup if the stream fails. Want me to walk you through it with grandma?</p>
+<h3>Meal prep for a parent adjusting to a new diabetes diagnosis</h3>
+<p>90.4%</p>
+<img height="160" src="https://images.ctfassets.net/kftzwdyauwt9/7cn1KRGTQUsctQue7wawds/5be11f2e14bffbcb227e0ee375f5529e/cart.png?w=3840&amp;q=90&amp;fm=webp" width="160"/>
+<p>Help my parent adjust to a new diabetes diagnosis with a practical care and meal plan.</p>
+<p>The first-week plan is ready, including meals, reminders, and questions for the care team. Want to review it together before you share it with your parent?</p>
+<p>Our latest models score very highly on many LifeVal tasks. See more</p>
+<p>Over the past year, we’ve trained our models to become much faster, more capable, and more aligned on browser use, computer use, and connectors tasks. Enabling these capabilities in ChatGPT also expands the types of tasks the model can help with, helping move ChatGPT beyond a chat tool and towards a truly agentic personal assistant.</p>
+<h2 id="why-this-matters">Why this matters</h2>
+<p>To ensure AGI benefits all of humanity, we need to measure and improve model progress on what matters in the lives of everyday people. That means going beyond academic assessments of model knowledge and actually measuring how well AI models can help people navigate decisions, manage everyday responsibilities, and get meaningful things done. We are hopeful that LifeVal represents a step towards that goal.</p>
+<ul><li><img alt="A caregiver helping an older adult use a walker" height="401" src="https://images.ctfassets.net/kftzwdyauwt9/9irZEa7VuG3EddaIPYWD5/f267058764f8a5eda29a410fe80114d0/photo-02.webp?w=3840&amp;q=90&amp;fm=webp" width="600"/></li><li><img alt="A person feeding a cat" height="600" src="https://images.ctfassets.net/kftzwdyauwt9/2lhC1WTyvGX4qBssxZraQj/b7792d227886b7f1adaec281eb2bee01/photo-03.webp?w=3840&amp;q=90&amp;fm=webp" width="600"/></li><li><img alt="A person carrying boxes beside a moving truck" height="802" src="https://images.ctfassets.net/kftzwdyauwt9/5i50ehjTmYbz5jB0E6lJHZ/16a4356b416bc033df4cfcfdc705b1a6/photo-04.webp?w=3840&amp;q=90&amp;fm=webp" width="600"/></li><li><img alt="People working through paperwork together" height="600" src="https://images.ctfassets.net/kftzwdyauwt9/7sFzZxKpcOhJP4T1ppAf6b/57fbb1cd4a8a73066261aa1e450117ec/photo-05.webp?w=3840&amp;q=90&amp;fm=webp" width="600"/></li><li><img alt="A person carrying a bag of groceries" height="802" src="https://images.ctfassets.net/kftzwdyauwt9/31Q75V3wFI3n0xK4Nxsog0/f0b03a26cf990bb2254e879dc8678d8b/photo-06.webp?w=3840&amp;q=90&amp;fm=webp" width="600"/></li><li><img alt="A hand tracing a route on a map" height="900" src="https://images.ctfassets.net/kftzwdyauwt9/618uJhR5QI4ZmuQycqQZx5/4efe8f2977a023df632849ec8c1d5f0b/photo-07.webp?w=3840&amp;q=90&amp;fm=webp" width="600"/></li><li><img alt="An adult reading with a young child" height="336" src="https://images.ctfassets.net/kftzwdyauwt9/M4upvozkrlrSSfvHaYlzF/3a3f9a3f8ecd7ba77d9ad7e79d2c4641/photo-08.webp?w=3840&amp;q=90&amp;fm=webp" width="600"/></li><li><img alt="A person organizing notes on a wall" height="902" src="https://images.ctfassets.net/kftzwdyauwt9/1UfbC89B8yZRrvvmLEpMV/bf244804cb209b62d1be578e6e8b582f/photo-09.webp?w=3840&amp;q=90&amp;fm=webp" width="600"/></li><li><img alt="A person examining a medical scan" height="900" src="https://images.ctfassets.net/kftzwdyauwt9/rzxlK2Ggnph5Op4ysnUc4/94c42358418debcc92b7900de0b865da/photo-10.webp?w=3840&amp;q=90&amp;fm=webp" width="600"/></li><li><img alt="A person holding a laptop at their side" height="900" src="https://images.ctfassets.net/kftzwdyauwt9/5XfHlU5MluLbVrnc7AoCZK/dc74b9270813c16ae476edc65ff3ade2/photo-11.webp?w=3840&amp;q=90&amp;fm=webp" width="600"/></li></ul>
+<h2>Author</h2>
+<p>OpenAI</p>]]></content:encoded>
+      <guid isPermaLink="true">https://openai.com/index/lifeval/</guid>
+      <category>Research</category>
+      <pubDate>Mon, 02 Nov 2026 09:00:00 +0000</pubDate>
+      <media:content url="https://images.ctfassets.net/kftzwdyauwt9/0PsOKDe2IX2yO0sZVTxNn/d1de90b42ea9c430a6910aaf9e4f731b/bus.png?w=3840&amp;amp;q=90&amp;amp;fm=webp" type="image/png" medium="image"/>
+    </item>
     <item>
       <title>How we detect frontier model misalignment</title>
       <link>https://openai.com/index/how-we-detect-frontier-model-misalignment/</link>
@@ -2871,22 +2920,6 @@ x = \frac{3 \pm \sqrt{33}}{2}
       <category>Product</category>
       <pubDate>Thu, 18 Dec 2025 00:00:00 +0000</pubDate>
       <media:content url="https://images.ctfassets.net/kftzwdyauwt9/3zqTyemGGUiGdqzwcSHfqT/7dcff34a7b6f51ce1ed20be8a4ffcbf4/image__5_.png?w=3840&amp;amp;q=90&amp;amp;fm=webp" type="image/png" medium="image"/>
-    </item>
-    <item>
-      <title>Addendum to GPT-5.2 System Card: GPT-5.2-Codex</title>
-      <link>https://openai.com/index/gpt-5-2-codex-system-card/</link>
-      <description>GPT‑5.2‑Codex is our most advanced agentic coding model yet for complex, real-world software engineering. A version of GPT‑5.2 ⁠ optimized for agentic coding in Codex, it includes further improvements on long-horizon work through context compaction, stronger performance on project-scale tasks like refactors and migrations, and improved performance in Windows environments—and significantly stronger cybersecurity capabilities.</description>
-      <content:encoded><![CDATA[<h2>Addendum to GPT‑5.2 System Card: GPT‑5.2‑Codex</h2>
-<h2>Introduction</h2>
-<p>GPT‑5.2‑Codex is our most advanced agentic coding model yet for complex, real-world software engineering. A version of <a href="https://openai.com/index/introducing-gpt-5-2/">GPT‑5.2⁠</a> optimized for agentic coding in Codex, it includes further improvements on long-horizon work through context compaction, stronger performance on project-scale tasks like refactors and migrations, and improved performance in Windows environments—and significantly stronger cybersecurity capabilities.</p>
-<p>This system card outlines the comprehensive safety measures implemented for GPT‑5.2‑Codex. It details both model-level mitigations, such as specialized safety training for harmful tasks and prompt injections, and product-level mitigations like agent sandboxing and configurable network access.</p>
-<p>GPT‑5.2‑Codex was evaluated under our Preparedness Framework. It is very capable in the cybersecurity domain but does not reach High capability on cybersecurity. We expect current trends of rapidly increasing capability to continue, and for models to cross the High cybersecurity threshold in the near future. Like other recent models, it is being treated as High capability on biology, and is being deployed with the corresponding suite of safeguards we use for other models in the GPT‑5 family. It does not reach High capability on AI self-improvement.</p>
-<ul><li><a href="https://openai.com/research/index/?tags=2025">2025</a></li><li><a href="https://openai.com/research/index/?tags=system-cards">System Cards</a></li></ul>
-<h2>Author</h2>
-<p>OpenAI</p>]]></content:encoded>
-      <guid isPermaLink="true">https://openai.com/index/gpt-5-2-codex-system-card/</guid>
-      <category>Publication</category>
-      <pubDate>Thu, 18 Dec 2025 00:00:00 +0000</pubDate>
     </item>
   </channel>
 </rss>
