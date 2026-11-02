@@ -2596,38 +2596,69 @@ $ /usr/local/lib/heaptrack/libexec/heaptrack_interpret &lt; heaptrack.2028233 | 
       <pubDate>Tue, 09 Sep 2025 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Make Memory work for you.</title>
-      <link>https://mistral.ai/news/memory</link>
-      <description>As conversational AIs get more capable, our expectations grow with them. We don’t just want faster answers, we want tools that remember, adapt, and fit the way we work. That’s where Memories (beta) come in. And with it, new questions: What should an AI remember? How should it recall? And what does it take for you to trust it?</description>
-      <content:encoded><![CDATA[<p>As conversational AIs get more capable, our expectations grow with them. We don’t just want faster answers, we want tools that remember, adapt, and fit the way we work. That’s where <a href="https://chat.mistral.ai/memories">Memories (beta)</a> come in. And with it, new questions: What should an AI remember? How should it recall? And what does it take for you to trust it?</p>
-<h2>What users told us.</h2>
-<p>When we talked to users across personal and professional settings, three consistent needs stood out: transparency, control, and focus. People want the ability to ask, “What do you know about me?” and get a clear answer. They also want memory to stay on-task. As one Le Chat user put it: “I need a hammer, not a friend.”</p>
-<p>For some, that means citations: show me exactly which conversation or file a response is pulling from. For others, it means scoped recall, project-specific details, not casual asides from months ago. Whatever the preference, one thing is clear: memory should stay visible, editable, and under your control.</p>
-<h2>A memory system built for users.</h2>
-<p>Many AI tools today store information automatically. Some resurface it without warning; others only recall when you explicitly ask.</p>
-<p>Le Chat takes a hybrid approach. It saves useful information automatically, like jotting down a note while you talk. But recall is designed to be smart, timely, and visible. You’ll always see what memory is in play, with links to the source.</p>
-<p>That design comes from a simple philosophy: An AI assistant should help you think better, not guess what it’s doing. Here’s how we put that into practice.</p>
-<h2>Three principles behind Le Chat’s memory.</h2>
-<h3>Transparency.</h3>
-<p>You’ll always know when memory is being used. Le Chat clearly shows when it’s recalling something, where it came from, and why it’s relevant. Think of it like clickable receipts.</p>
-<h3>Agency.</h3>
-<p>Memory is something you manage—not something that manages you.<br/>You can:</p>
-<ul><li><p>Turn Memories off anytime</p></li><li><p>Start an incognito chat that doesn’t use memory</p></li><li><p>Edit or delete individual memories from your log</p></li></ul>
-<h3>Sovereignty.</h3>
-<p>You own your memories. Export them. Import from elsewhere. Memories in Le Chat are portable and interoperable by design, because control shouldn’t stop at the interface.</p>
-<h2>What it helps you do.</h2>
-<p>Memory makes your assistant more useful over time, without getting in the way. That can look like:</p>
-<ul><li><p>Recalling how you solved a similar problem last quarter</p></li><li><p>Surfacing a past insight you’d forgotten</p></li><li><p>Connecting your current query to something you said in another thread</p></li></ul>
-<iframe allowfullscreen="" src="https://www.youtube.com/embed/mNfre6VhHj8?si=dTzn_D9uZkUFEZDF"></iframe>
-<p>One user asked a follow-up about a legal policy weeks after uploading a PDF. Le Chat instantly found the right section in the document, without needing to re-upload or re-explain. That kind of connective recall saves time and unlocks flow. No retraining. No do-overs.</p>
-<h2>Try it now: Memory Insights.</h2>
-<p>We introduced <a href="https://chat.mistral.ai/memories">Memory Insights</a>, lightweight prompts that help you explore what Le Chat remembers and how it can help. They surface trends, suggest summaries, and point out moments worth revisiting, all based on your own data, and all editable. It’s a simple way to turn memory from passive storage into active signal. Download Le Chat on the <a href="https://apps.apple.com/fr/app/le-chat-by-mistral-ai/id6740410176">App Store</a> or <a href="https://play.google.com/store/apps/details?id=ai.mistral.chat&amp;hl=fr">Google Play</a> to try memory on mobile.</p>
-<h2>What’s next?</h2>
-<p>We’re continuing to improve how memory works: Trimming noise, speeding up recall, and making it easier to organize long-term. You’ll see updates soon that let you sort memories into categories, instantly forget something, and get clearer visibility into what memory was used and when.</p>
-<p>Under the hood, we’ve built a graph-based architecture that balances performance with context-awareness, so memory doesn’t just get longer, it gets smarter. AI is still early. Models will change, and fast. Memories are what keep your assistant anchored in your context, even as everything else shifts. Not a feature. Not a friend. A system you can trust and one that grows with you.</p>]]></content:encoded>
-      <guid isPermaLink="true">https://mistral.ai/news/memory</guid>
+      <title>Le Chat. Custom MCP connectors. Memories.</title>
+      <link>https://mistral.ai/news/le-chat-mcp-connectors-memories</link>
+      <description>The widest enterprise-ready connector directory (beta) , with custom extensibility, making it easy to bring workflows into your AI assistant.</description>
+      <content:encoded><![CDATA[<h2>Today, we’re giving you more reasons to switch to Le Chat.</h2>
+<ol><li><p><strong>The widest enterprise-ready </strong><a href="https://chat.mistral.ai/connections"><strong>connector directory (beta)</strong></a><strong>, with custom extensibility, making it easy to bring workflows into your AI assistant.</strong></p></li><li><p><ul><li><p>Directory of 20+ secure connectors—spanning data, productivity, development, automation, commerce, and custom integrations. Search, summarize, and act in tools like Databricks, Snowflake, GitHub, Atlassian, Asana, Outlook, Box, Stripe, Zapier, and more.</p></li><li><p>Custom extensibility: Add your own MCP connectors to broaden coverage and drive more precise actions and insights.</p></li><li><p>Flexible deployment: run on mobile, in your browser, or deploy on-premises or in your cloud.</p></li></ul></p></li><li><p><strong>Context that carries: introducing </strong><a href="https://chat.mistral.ai/memories"><strong>Memories (beta).</strong></a></p></li><li><p><ul><li><p>Highly-personalized responses based on your preferences and facts.</p></li><li><p>Careful and reliable memory handling: saves what matters, slips sensitive or fleeting info.</p></li><li><p>Complete control over what to store, edit, or delete.</p></li><li><p>And… fast import of your memories from ChatGPT.</p></li></ul></p></li><li><p><strong>Everything available on the Free plan.</strong></p></li></ol>
+<iframe allowfullscreen="" height="315" src="https://www.youtube.com/embed/tKUnOrl-OTw?si=oieNA4c9qiHmw2M4" width="560"></iframe>
+<h2>Plug it right in.</h2>
+<p>Today, we’re releasing 20+ secure, MCP-powered connectors in Le Chat, enabling you to search, summarize, and take actions with your business-critical tools. Le Chat’s connector directory spans essential categories, simplifying how you integrate your workflows in chats.</p>
+<p><figure><img alt="Logo Cloud 1 1" height="1920" src="https://mistral.ai/_astro/92e9c189-28ba-4d83-b8c9-058850e1ad30_Z1WvyYy.webp?dpl=6ae3844da0718a08567e65ba" width="1920"/></figure></p>
+<p>The new-look <a href="https://chat.mistral.ai/connections">Connectors directory</a> opens direct pipelines into enterprise tools, turning Le Chat into a single surface for data, documents, and actions. </p>
+<ul><li><p><strong>Data</strong>: Search and analyze datasets in Databricks (coming soon), Snowflake (coming soon), Pinecone, Prisma Postgres, and DeepWiki.</p></li><li><p><strong>Productivity</strong>: Collaborate on team docs in Box and Notion, spin up project boards in Asana or Monday.com, and triage across Atlassian tools like Jira and Confluence.</p></li><li><p><strong>Development</strong>: Manage issues, pull requests, repositories, and code analysis in GitHub; create tasks in Linear, monitor errors in Sentry, and integrate with Cloudflare Development Platform.</p></li><li><p><strong>Automation</strong>: Extend workflows through Zapier and campaigns in Brevo.</p></li><li><p><strong>Commerce</strong>: Access and act on merchant and payment data from PayPal, Plaid, Square, and Stripe.</p></li><li><p><strong>Custom</strong>: Add your own MCP connectors to extend coverage, so you can query, get summaries, and act on the systems and workflows unique to your business.</p></li><li><p><strong>Deployment</strong>: Run on-prem, in your cloud, or on Mistral Cloud, giving you full control over where your data and workflows live.</p></li></ul>
+<iframe allowfullscreen="" height="315" src="https://www.youtube.com/embed/2Xd3-ZX8Bsk?si=SsvHnmNaEH9zDcK-" width="560"></iframe>
+<h3>Connectors in action.</h3>
+<p><figure><img alt="Databrick Asana" src="https://cms.globalaegis.net/api/legacy-media/file/91cf7ae4-1e23-4557-ba81-11a9f1153f45.svg"/></figure></p>
+<h4>Databricks and Asana</h4>
+<p>Summarizing customer reviews in Databricks, then raising a ticket in Asana to address the top issues.</p>
+<iframe allowfullscreen="" height="315" src="https://www.youtube.com/embed/NAAwv-D-4cA?si=PijEwVINQU0FdQMf" width="560"></iframe>
+<p><figure><img alt="GitHub Notion" src="https://cms.globalaegis.net/api/legacy-media/file/231fb518-99d4-4f85-84bd-0fba406c78f9.svg"/></figure></p>
+<h4>GitHub and Notion</h4>
+<p>Reviewing open pull requests in GitHub, then creating Jira issues for follow-up and documenting the changes in Notion.</p>
+<iframe allowfullscreen="" height="315" src="https://www.youtube.com/embed/vAEqEYIp23s?si=kjh0A3WHCP1NDlRB" width="560"></iframe>
+<p><figure><img alt="Box" src="https://cms.globalaegis.net/api/legacy-media/file/4a059f07-6386-4859-9cc1-7f7dcc9788d5.svg"/></figure></p>
+<h4>Box</h4>
+<p>Comparing financial obligations across legal documents in Box, then uploading a concise summary back into Box.</p>
+<iframe allowfullscreen="" height="315" src="https://www.youtube.com/embed/MIM6Uk7A1sw?si=zPEYtDCWm67FPork" width="560"></iframe>
+<p><figure><img alt="Atlassian" src="https://cms.globalaegis.net/api/legacy-media/file/a61455d1-664c-4ef8-9e89-9552df4191b2.svg"/></figure></p>
+<h4>Confluence and Jira</h4>
+<p>Summarizing active issues from Jira, then drafting a Confluence sprint overview page for team planning.</p>
+<iframe allowfullscreen="" height="315" src="https://www.youtube.com/embed/6M-t0OiujnM?si=daMTg8P_KwrbmuKq" width="560"></iframe>
+<p><figure><img alt="Stripe Linear" src="https://cms.globalaegis.net/api/legacy-media/file/03bc7129-9871-432a-9bed-02209a47af32.svg"/></figure></p>
+<h4>Stripe and Linear</h4>
+<p>Retrieving business payment insights from Stripe, then logging anomalies as a development project and task in Linear.</p>
+<iframe allowfullscreen="" height="315" src="https://www.youtube.com/embed/qJ381CswnKw?si=BU-xbsOACKMFaOcy" width="560"></iframe>
+<p>Learn more about Connectors in our <a href="https://help.mistral.ai/en/collections/911943-connectors">Help Center</a>.</p>
+<h3>Connect any MCP server.</h3>
+<p>For everything else, you can now <a href="https://help.mistral.ai/en/articles/393572-configuring-a-custom-connector">connect to any remote MCP server</a> of choice—even if it’s not listed in the <a href="https://chat.mistral.ai/connections">Connectors directory</a>—to query, cross-reference, and perform actions on any tool in your stack.</p>
+<iframe allowfullscreen="" height="315" src="https://www.youtube.com/embed/bZR2ctE2LyQ?si=vMFuFgS8LqKguwH5" width="560"></iframe>
+<h3>Your rules. Your control.</h3>
+<p>Admin users can confidently control which connectors are available to whom in their organization, with on-behalf authentication, ensuring users only access data they’re permitted to.</p>
+<p>Deploy Le Chat your way—self-hosted, in your private or public cloud, or as a fully managed service in the Mistral Cloud. <a href="https://mistral.ai/contact">Talk to our team</a> about enterprise deployments.</p>
+<h2>Hold that thought.</h2>
+<p>Memories in Le Chat carry your context across conversations, retrieving insights, decisions, and references from the past when needed. They power more relevant responses, adaptive recommendations tailored for you, and richer answers infused with the specifics of your work—delivering a faster, more relevant, and fully personalized experience.</p>
+<iframe allowfullscreen="" height="315" src="https://www.youtube.com/embed/mNfre6VhHj8?si=FSQptHhZehGe90NC" width="560"></iframe>
+<p>Memories score high in our evaluations for accuracy and reliability: saving what’s important, avoiding forbidden or sensitive inferences, ignoring ephemeral content, and retrieving the right information without hallucinations.</p>
+<p><figure><img alt="Grid Lechat" height="1200" src="https://mistral.ai/_astro/a0e581b9-125b-4ec7-b03a-9fea8eacbd63_1DXF0r.webp?dpl=6ae3844da0718a08567e65ba" width="1600"/></figure></p>
+<p>Most importantly, you stay in full control—add, edit, update, or remove any entry at any time, with <a href="https://help.mistral.ai/en/articles/396497-how-do-you-handle-my-data-when-using-the-memories-feature">clear privacy settings</a> and selective memory handling you can trust.</p>
+<h2>Get started in Le Chat.</h2>
+<p>Both Connectors and Memories are available to all Le Chat users.</p>
+<p>Try out the new features at <a href="http://chat.mistral.ai">chat.mistral.ai</a>, or by downloading the Le Chat mobile by Mistral AI app from the <a href="https://apps.apple.com/fr/app/le-chat-by-mistral-ai/id6740410176">App Store</a> or <a href="https://play.google.com/store/apps/details?id=ai.mistral.chat&amp;hl=fr">Google Play Store</a>, for free; no credit card needed.</p>
+<p><a href="https://mistral.ai/contact">Reach out to us</a> to learn how Le Chat Enterprise can transform your mission-critical work. </p>
+<h2>See you at our MCP webinar and hackathon?</h2>
+<p>Webinar</p>
+<h3>Getting Started with MCP in Le Chat, September 9, Online.</h3>
+<p>Join our webinar on September 9 to dive into Le Chat’s new MCP capabilities with the Mistral team. Learn key insights, ask your questions, and prepare to build cutting-edge projects—all before the hackathon begins.</p>
+<p>Hackathon</p>
+<h3>Mistral AI MCP Hackathon, September 13-14, Paris.</h3>
+<p>Gather with the best AI engineers for a 2-day overnight hackathon (Sep. 13-14) and turn ideas into reality using your custom MCPs in Le Chat. Network with peers, get hands-on guidance from Mistral experts, and push the boundaries of what’s possible.</p>
+<h2>We’re hiring!</h2>
+<p>If you’re interested in joining us on our mission to build world-class AI products, we welcome your application to <a href="https://mistral.ai/careers">join our team</a>!</p>]]></content:encoded>
+      <guid isPermaLink="true">https://mistral.ai/news/le-chat-mcp-connectors-memories</guid>
       <category>Product</category>
       <pubDate>Tue, 02 Sep 2025 00:00:00 +0000</pubDate>
+      <media:content url="https://mistral.ai/_astro/92e9c189-28ba-4d83-b8c9-058850e1ad30_Z1WvyYy.webp?dpl=6ae3844da0718a08567e65ba" type="image/webp" medium="image"/>
     </item>
   </channel>
 </rss>
