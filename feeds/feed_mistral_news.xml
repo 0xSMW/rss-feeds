@@ -8,7 +8,60 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 29 Oct 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 05 Nov 2026 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Le Chonk brings the brains. Studio puts it to work.</title>
+      <link>https://mistral.ai/news/build-with-studio</link>
+      <description>Mistral Large 4 (Le Chonk) enhances enterprise AI with advanced coding, cybersecurity, and document reasoning, while Mistral Studio provides a flexible platform for deploying agents, workflows, and apps across cloud, VPC, or on-premises environments. New features like managed agents, workflows, and enterprise context streamline business processes, enabling faster development and deployment of AI solutions. Customers like ABANCA and BNP Paribas already use Studio to automate tasks, improve efficiency, and maintain full control over their AI systems.</description>
+      <content:encoded><![CDATA[<img src="https://mistral.ai/images/heros/studio-2/chonk-up.gif" width="120"/>
+<img src="https://mistral.ai/images/heros/studio-2/chonk-ready.gif" width="120"/>
+<img src="https://mistral.ai/images/heros/studio-2/chonk-up.gif" width="120"/>
+<img src="https://mistral.ai/images/heros/studio-2/chonk-ready.gif" width="120"/>
+<p>Mistral Large 4 (Le Chonk) pushes the frontier of what enterprises can build with open models. It does great for <a href="https://mistral.ai/news/mistral-large-4-oss/"><u>coding</u></a>, delivers advanced <a href="https://mistral.ai/news/mistral-large-4-oss/"><u>defensive cybersecurity capabilities</u></a>, and brings powerful reasoning to <a href="https://artificialanalysis.ai/articles/mistral-large-4-france-ai"><u>complex documents</u></a> and <a href="https://mistral.ai/news/mistral-large-4-oss/"><u>business tasks</u></a>.</p>
+<p>Mistral Studio is our enterprise AI platform for putting that intelligence to work in your business. It lets your teams activate models quickly through agents, workflows and apps connected to your enterprise data and systems. Deploy them wherever you choose: in the cloud, in your own VPC, on-premises or across a combination of environments. And retain full control and understanding of the intelligence you create, from how your systems work to the knowledge they build.</p>
+<p>Today, we’re expanding Studio with managed agents and apps, alongside new capabilities for workflows, enterprise context, agent observability and evaluations.</p>
+<p>Customers and partners including ABANCA, Accenture, Alten, BNP Paribas, Capgemini, CMA CGM and Tata Consultancy Services already use Studio in production. With this release, your developers can build and deploy new use cases faster, then reuse that work across more of the business.</p>
+<figure><img src="https://mistral.ai/cms-media/api/media/file/logo-abanca-black.svg"/><img src="https://mistral.ai/cms-media/api/media/file/logo-abanca-white.svg"/><blockquote>Mistral Studio is our platform for building enterprise AI applications. Running it in our own cloud environment, with inference provided by Mistral, allows us to bring AI into the business while retaining control over our infrastructure and how sensitive customer data is accessed and used.</blockquote><figcaption><p>Jose Jorge Garcia Romaris, Head of Data Engineering &amp; AI</p></figcaption></figure>
+<figure><img src="https://mistral.ai/cms-media/api/media/file/accenture-black-full.svg"/><img src="https://mistral.ai/cms-media/api/media/file/accenture-white-1.svg"/><blockquote>Our clients are looking beyond isolated AI use cases to reinvent how work gets done across the enterprise. Mistral Studio gives us the foundation to build, orchestrate and scale AI solutions tailored to their business needs, while securing control over their data and deployment. Combined with our industry expertise and delivery capabilities, it allows us to turn technology into real business impact at scale.</blockquote><figcaption><p>Gregory Christophe, Accenture x Mistral Business Group</p></figcaption></figure>
+<figure><img src="https://mistral.ai/cms-media/api/media/file/alten-black-1.svg"/><img src="https://mistral.ai/cms-media/api/media/file/alten-white-1.svg"/><blockquote>Most industrial AI projects still stall at the pilot stage. We'll build agents and workflows for our clients' engineering and R&amp;D teams on Mistral Studio to take their pilots into production. We're training our developers on the platform.</blockquote><figcaption><p>Gualtiero Bazzana, ExCom Member and CAIO</p></figcaption></figure>
+<figure><img alt="BNP Paribas - quote as feature (black)" src="https://mistral.ai/cms-media/api/media/file/bnp-paribas-black-1.svg"/><img alt="BNP Paribas - quote as feature (white)" src="https://mistral.ai/cms-media/api/media/file/bnp-paribas-white-1.svg"/><blockquote>The AI systems we build run some of our most sensitive processes, so we run Mistral Studio on our own infrastructure and keep those systems under our control.</blockquote><figcaption><p>Su YANG - Head of Artificial Intelligence &amp; IT Innovation, BNP Paribas</p></figcaption></figure>
+<figure><img alt="Capgemini (black)" src="https://mistral.ai/cms-media/api/media/file/capgemini-black-1.svg"/><img alt="Capgemini (white)" src="https://mistral.ai/cms-media/api/media/file/capgemini-white-1.svg"/><blockquote>AI creates lasting value only when enterprises can trust it within their operations. Mistral Studio aims to let us decide exactly which systems the agents can access, and brings the observability and evaluation needed to turn a promising PoC into a system they can operate, measure, and rely on. That’s one of the gaps our clients are looking to close leveraging Mistral.</blockquote><figcaption><p>Fernando Alvarez, Capgemini Group Chief Strategy &amp; Development Officer, Group Executive Board Member</p></figcaption></figure>
+<figure><img src="https://mistral.ai/cms-media/api/media/file/cmacgm-black.svg"/><img height="375" src="https://mistral.ai/_astro/cma-cmg-white_ZOXQzq.webp?dpl=6aecd6311d05ce92b71f34a5" width="500"/><blockquote>We've built AI systems with Mistral's engineers for some of our most critical processes, from cargo release and customer assistance in shipping to transport orders in logistics. They run on Mistral Studio, where each new process we automate is production-ready in weeks rather than months. With the new version of Studio, our own teams and partners will do more of the building themselves, so we can take more of our processes to production and keep the know-how in-house.</blockquote><figcaption><p>Julien Smadja, VP AI</p></figcaption></figure>
+<figure><img alt="TCS (black)" src="https://mistral.ai/cms-media/api/media/file/tata-consultancy-services-black.svg"/><img alt="TCS (white)" src="https://mistral.ai/cms-media/api/media/file/tata-consultancy-services-white.svg"/><blockquote>The future of enterprise AI will be defined by an ecosystem that balances innovation with trust, giving organizations the flexibility to adopt the right AI technologies while maintaining control. Through our partnership with Mistral, TCS is helping enterprises harness advanced AI capabilities while maintaining sovereignty, governance, security, and deployment flexibility. As one of the first global systems integrators investing in the Mistral ecosystem, we are enabling clients to build, deploy, govern, and scale AI with confidence. Together, we are accelerating the adoption of trusted AI and helping enterprises convert AI ambition into business outcomes.</blockquote><figcaption><p>Amit Kapur, Chief AI &amp; Services Transformation Officer</p></figcaption></figure>
+<h2><strong>Agents, workflows and apps for your business processes</strong></h2>
+<p>Agents, workflows and apps serve different parts of a business process. An agent investigates and acts, a workflow coordinates execution and approvals, and an app gives employees a way to use these systems.</p>
+<p>Studio brings all three together on shared infrastructure. You start with a model like Le Chonk and connect it to your enterprise data and systems through connectors and MCP servers. That foundation lets you easily build agents, workflows and apps with access to the context they need. Studio manages how they run and lets teams inspect what happened.</p>
+<p>Through the new Mistral MCP server, developers can build with Mistral Vibe or the coding agent they already use, test locally and deploy to their Studio environment with one command. Studio handles hosting and execution, so teams can build on that foundation to get each new use case into production faster.</p>
+<figure><img height="1601" src="https://mistral.ai/_astro/business-process_ZmGxpx.webp?dpl=6aecd6311d05ce92b71f34a5" width="2400"/></figure>
+<h3><strong>Build managed agents that investigate and act</strong></h3>
+<p>In Studio, developers can now build agents that carry out complex, multi-step tasks. Developers can equip them with skills that capture the team’s procedures, sandboxes where they can run code, and subagents to delegate parts of a task. Hooks let developers add custom logic at key points in execution, shaping how the agent works and integrates with existing systems.</p>
+<p>Studio manages the runtime behind all that work, using the proven infrastructure that supports millions of Mistral Vibe sessions each week. Developers can focus on the agent’s capabilities and behaviour, while setting boundaries on the tools, data and actions it can access. That means getting capable agents into production faster, with less infrastructure to build and more control over howyour agents operate.</p>
+<p>Our engineering team built an agent in Studio to investigate production incidents. When an alert fires, engineers need to work out what happened, often under pressure to resolve the issue. The agent starts the investigation: it follows the team’s runbook, asks for approval before taking sensitive actions and posts its findings in Slack. Engineers pick up the investigation with useful context already gathered, saving the team hundreds of hours each month.</p>
+<h3><strong>Automate processes with workflows</strong></h3>
+<p>Workflows define how a process runs: which steps follow fixed rules, where an agent reasons and when a person decides. Interrupted runs can resume where they left off. Teams can describe a process in Mistral Vibe and use it to generate, test and deploy a workflow, with code they can inspect and edit. Today’s release also adds event triggers from enterprise systems and a visual graph that makes each workflow’s logic easier to inspect.</p>
+<p>Our product operations team built a workflow in Studio to sort ideas from internal teams and feedback from customers. Routing each submission to the right people is one of the team’s routine tasks, but one that takes time. A model identifies bugs and feature requests, then routing rules send them to the appropriate team. This saves the product operations team about 35 hours a week.</p>
+<iframe allowfullscreen="" src="https://www.youtube.com/embed/GwVmmQpOUkc"></iframe>
+<h3><strong>Build apps ready for enterprise use</strong></h3>
+<p>Coding agents make it easy to build an application, but putting it to work across an enterprise means meeting requirements for security, access and reliability. Studio provides hosting, authentication and access controls, helping developers get applications ready for enterprise use faster. Teams can build with pre-approved, reusable components, reducing the amount of new code that needs security review.</p>
+<p>These applications can use agents and workflows, retrieve enterprise documents through search indexes and access shared context in Studio. Developers can test locally, then deploy with one command to make the application available at its own link or inside Mistral Vibe.</p>
+<p>Our Applied AI team, which helps customers build AI solutions, built a staffing app in Studio. Previously, staffing a project meant manually matching team profiles and past experience against requirements spread across documents and tools.</p>
+<p>The app uses an agent to recommend people and explain how their experience fits the project. Staffing leads get a shortlist with supporting evidence ready to review, helping Mistral assemble teams faster and uncover expertise that might otherwise be overlooked when staffing complex customer AI projects.</p>
+<iframe allowfullscreen="" src="https://www.youtube.com/embed/Oe5z6BsWf7w"></iframe>
+<p>Each use case leaves the enterprise better equipped to build the next. More engineering effort goes into improving operations, with less time spent rebuilding the infrastructure around them.</p>
+<h2><strong>Keep your AI sovereign</strong></h2>
+<p>Studio gives you control over where your AI runs, how it operates and the intelligence you build. Deploy both the models and the platform in your own cloud, VPC or on-premises environment. You can also use Mistral-hosted deployments or combine environments to meet your requirements. Sensitive data and the processes built around it can stay within your perimeter.</p>
+<p>You choose the models, govern access to data and tools, and decide which actions require human approval. OpenTelemetry traces show each step of a run, including model calls, tool use and approvals, so your teams can see where a process slows down or fails. Evaluations let them test changes to prompts, models or tools against your own datasets before release. Those traces and evaluations remain theirs, preserving the operational knowledge they build through use.</p>
+<p>Customers are already putting this into practice with systems built alongside our Solutions team. From penetration testing to KYC onboarding, they’re bringing <a href="https://www.youtube.com/watch?v=6_eHHtB7Q2I"><u>AI into critical operations</u></a> while keeping sensitive data and specialist knowledge under their control.</p>
+<h2><strong>Get started</strong></h2>
+<p>Choose a process your team wants to improve and put Le Chonk to work in <a href="https://console.mistral.ai/">Studio</a>.</p>
+<ul><li><p><strong>Build an agent:</strong> <a href="https://docs.mistral.ai/studio/agents/overview"><u>Managed Agents documentation</u></a>· <a href="https://docs.mistral.ai/resources/cookbooks/mistral-agents-investigation_agent-slack-sentry-investigation-agent"><u>Incident investigation cookbook</u></a></p></li><li><p><strong>Automate a process:</strong> <a href="https://docs.mistral.ai/studio/workflows/overview"><u>Workflows documentation</u></a> · <a href="https://docs.mistral.ai/resources/cookbooks/mistral-agents-slack_triage_workflow-slack-triage-workflow"><u>Workflow cookbooks</u></a></p></li><li><p><strong>Create an app:</strong> <a href="https://docs.mistral.ai/studio/apps/overview"><u>Apps documentation</u></a> · <a href="https://docs.mistral.ai/resources/cookbooks/mistral-agents-expert_matching_workflow-expert-matching-workflow"><u>Document review cookbook</u></a></p></li></ul>
+<p>Explore <a href="https://mistral.ai/use-cases/"><u>interactive demos and enterprise use cases</u></a>, or read the <a href="https://docs.mistral.ai/resources/release-notes"><u>release notes</u></a> for the full list of updates.</p>
+<p>For an enterprise rollout or a business-critical implementation, <a href="https://mistral.ai/contact"><u>talk to our team</u></a> about what you want to automate and where it needs to run.</p>]]></content:encoded>
+      <guid isPermaLink="true">https://mistral.ai/news/build-with-studio</guid>
+      <category>Product</category>
+      <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
+      <media:content url="https://mistral.ai/images/heros/studio-2/chonk-up.gif" type="image/gif" medium="image"/>
+    </item>
     <item>
       <title>Le Chonk: Built for Coders, Trusted by Defenders.</title>
       <link>https://mistral.ai/news/mistral-large-4-oss</link>
@@ -2594,71 +2647,6 @@ $ /usr/local/lib/heaptrack/libexec/heaptrack_interpret &lt; heaptrack.2028233 | 
       <guid isPermaLink="true">https://mistral.ai/news/mistral-ai-raises-1-7-b-to-accelerate-technological-progress-with-ai/</guid>
       <category>Product</category>
       <pubDate>Tue, 09 Sep 2025 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Le Chat. Custom MCP connectors. Memories.</title>
-      <link>https://mistral.ai/news/le-chat-mcp-connectors-memories</link>
-      <description>The widest enterprise-ready connector directory (beta) , with custom extensibility, making it easy to bring workflows into your AI assistant.</description>
-      <content:encoded><![CDATA[<h2>Today, we’re giving you more reasons to switch to Le Chat.</h2>
-<ol><li><p><strong>The widest enterprise-ready </strong><a href="https://chat.mistral.ai/connections"><strong>connector directory (beta)</strong></a><strong>, with custom extensibility, making it easy to bring workflows into your AI assistant.</strong></p></li><li><p><ul><li><p>Directory of 20+ secure connectors—spanning data, productivity, development, automation, commerce, and custom integrations. Search, summarize, and act in tools like Databricks, Snowflake, GitHub, Atlassian, Asana, Outlook, Box, Stripe, Zapier, and more.</p></li><li><p>Custom extensibility: Add your own MCP connectors to broaden coverage and drive more precise actions and insights.</p></li><li><p>Flexible deployment: run on mobile, in your browser, or deploy on-premises or in your cloud.</p></li></ul></p></li><li><p><strong>Context that carries: introducing </strong><a href="https://chat.mistral.ai/memories"><strong>Memories (beta).</strong></a></p></li><li><p><ul><li><p>Highly-personalized responses based on your preferences and facts.</p></li><li><p>Careful and reliable memory handling: saves what matters, slips sensitive or fleeting info.</p></li><li><p>Complete control over what to store, edit, or delete.</p></li><li><p>And… fast import of your memories from ChatGPT.</p></li></ul></p></li><li><p><strong>Everything available on the Free plan.</strong></p></li></ol>
-<iframe allowfullscreen="" height="315" src="https://www.youtube.com/embed/tKUnOrl-OTw?si=oieNA4c9qiHmw2M4" width="560"></iframe>
-<h2>Plug it right in.</h2>
-<p>Today, we’re releasing 20+ secure, MCP-powered connectors in Le Chat, enabling you to search, summarize, and take actions with your business-critical tools. Le Chat’s connector directory spans essential categories, simplifying how you integrate your workflows in chats.</p>
-<p><figure><img alt="Logo Cloud 1 1" height="1920" src="https://mistral.ai/_astro/92e9c189-28ba-4d83-b8c9-058850e1ad30_Z1WvyYy.webp?dpl=6aeb4896a91ba5a5aad9c10c" width="1920"/></figure></p>
-<p>The new-look <a href="https://chat.mistral.ai/connections">Connectors directory</a> opens direct pipelines into enterprise tools, turning Le Chat into a single surface for data, documents, and actions. </p>
-<ul><li><p><strong>Data</strong>: Search and analyze datasets in Databricks (coming soon), Snowflake (coming soon), Pinecone, Prisma Postgres, and DeepWiki.</p></li><li><p><strong>Productivity</strong>: Collaborate on team docs in Box and Notion, spin up project boards in Asana or Monday.com, and triage across Atlassian tools like Jira and Confluence.</p></li><li><p><strong>Development</strong>: Manage issues, pull requests, repositories, and code analysis in GitHub; create tasks in Linear, monitor errors in Sentry, and integrate with Cloudflare Development Platform.</p></li><li><p><strong>Automation</strong>: Extend workflows through Zapier and campaigns in Brevo.</p></li><li><p><strong>Commerce</strong>: Access and act on merchant and payment data from PayPal, Plaid, Square, and Stripe.</p></li><li><p><strong>Custom</strong>: Add your own MCP connectors to extend coverage, so you can query, get summaries, and act on the systems and workflows unique to your business.</p></li><li><p><strong>Deployment</strong>: Run on-prem, in your cloud, or on Mistral Cloud, giving you full control over where your data and workflows live.</p></li></ul>
-<iframe allowfullscreen="" height="315" src="https://www.youtube.com/embed/2Xd3-ZX8Bsk?si=SsvHnmNaEH9zDcK-" width="560"></iframe>
-<h3>Connectors in action.</h3>
-<p><figure><img alt="Databrick Asana" src="https://cms.globalaegis.net/api/legacy-media/file/91cf7ae4-1e23-4557-ba81-11a9f1153f45.svg"/></figure></p>
-<h4>Databricks and Asana</h4>
-<p>Summarizing customer reviews in Databricks, then raising a ticket in Asana to address the top issues.</p>
-<iframe allowfullscreen="" height="315" src="https://www.youtube.com/embed/NAAwv-D-4cA?si=PijEwVINQU0FdQMf" width="560"></iframe>
-<p><figure><img alt="GitHub Notion" src="https://cms.globalaegis.net/api/legacy-media/file/231fb518-99d4-4f85-84bd-0fba406c78f9.svg"/></figure></p>
-<h4>GitHub and Notion</h4>
-<p>Reviewing open pull requests in GitHub, then creating Jira issues for follow-up and documenting the changes in Notion.</p>
-<iframe allowfullscreen="" height="315" src="https://www.youtube.com/embed/vAEqEYIp23s?si=kjh0A3WHCP1NDlRB" width="560"></iframe>
-<p><figure><img alt="Box" src="https://cms.globalaegis.net/api/legacy-media/file/4a059f07-6386-4859-9cc1-7f7dcc9788d5.svg"/></figure></p>
-<h4>Box</h4>
-<p>Comparing financial obligations across legal documents in Box, then uploading a concise summary back into Box.</p>
-<iframe allowfullscreen="" height="315" src="https://www.youtube.com/embed/MIM6Uk7A1sw?si=zPEYtDCWm67FPork" width="560"></iframe>
-<p><figure><img alt="Atlassian" src="https://cms.globalaegis.net/api/legacy-media/file/a61455d1-664c-4ef8-9e89-9552df4191b2.svg"/></figure></p>
-<h4>Confluence and Jira</h4>
-<p>Summarizing active issues from Jira, then drafting a Confluence sprint overview page for team planning.</p>
-<iframe allowfullscreen="" height="315" src="https://www.youtube.com/embed/6M-t0OiujnM?si=daMTg8P_KwrbmuKq" width="560"></iframe>
-<p><figure><img alt="Stripe Linear" src="https://cms.globalaegis.net/api/legacy-media/file/03bc7129-9871-432a-9bed-02209a47af32.svg"/></figure></p>
-<h4>Stripe and Linear</h4>
-<p>Retrieving business payment insights from Stripe, then logging anomalies as a development project and task in Linear.</p>
-<iframe allowfullscreen="" height="315" src="https://www.youtube.com/embed/qJ381CswnKw?si=BU-xbsOACKMFaOcy" width="560"></iframe>
-<p>Learn more about Connectors in our <a href="https://help.mistral.ai/en/collections/911943-connectors">Help Center</a>.</p>
-<h3>Connect any MCP server.</h3>
-<p>For everything else, you can now <a href="https://help.mistral.ai/en/articles/393572-configuring-a-custom-connector">connect to any remote MCP server</a> of choice—even if it’s not listed in the <a href="https://chat.mistral.ai/connections">Connectors directory</a>—to query, cross-reference, and perform actions on any tool in your stack.</p>
-<iframe allowfullscreen="" height="315" src="https://www.youtube.com/embed/bZR2ctE2LyQ?si=vMFuFgS8LqKguwH5" width="560"></iframe>
-<h3>Your rules. Your control.</h3>
-<p>Admin users can confidently control which connectors are available to whom in their organization, with on-behalf authentication, ensuring users only access data they’re permitted to.</p>
-<p>Deploy Le Chat your way—self-hosted, in your private or public cloud, or as a fully managed service in the Mistral Cloud. <a href="https://mistral.ai/contact">Talk to our team</a> about enterprise deployments.</p>
-<h2>Hold that thought.</h2>
-<p>Memories in Le Chat carry your context across conversations, retrieving insights, decisions, and references from the past when needed. They power more relevant responses, adaptive recommendations tailored for you, and richer answers infused with the specifics of your work—delivering a faster, more relevant, and fully personalized experience.</p>
-<iframe allowfullscreen="" height="315" src="https://www.youtube.com/embed/mNfre6VhHj8?si=FSQptHhZehGe90NC" width="560"></iframe>
-<p>Memories score high in our evaluations for accuracy and reliability: saving what’s important, avoiding forbidden or sensitive inferences, ignoring ephemeral content, and retrieving the right information without hallucinations.</p>
-<p><figure><img alt="Grid Lechat" height="1200" src="https://mistral.ai/_astro/a0e581b9-125b-4ec7-b03a-9fea8eacbd63_1DXF0r.webp?dpl=6aeb4896a91ba5a5aad9c10c" width="1600"/></figure></p>
-<p>Most importantly, you stay in full control—add, edit, update, or remove any entry at any time, with <a href="https://help.mistral.ai/en/articles/396497-how-do-you-handle-my-data-when-using-the-memories-feature">clear privacy settings</a> and selective memory handling you can trust.</p>
-<h2>Get started in Le Chat.</h2>
-<p>Both Connectors and Memories are available to all Le Chat users.</p>
-<p>Try out the new features at <a href="http://chat.mistral.ai">chat.mistral.ai</a>, or by downloading the Le Chat mobile by Mistral AI app from the <a href="https://apps.apple.com/fr/app/le-chat-by-mistral-ai/id6740410176">App Store</a> or <a href="https://play.google.com/store/apps/details?id=ai.mistral.chat&amp;hl=fr">Google Play Store</a>, for free; no credit card needed.</p>
-<p><a href="https://mistral.ai/contact">Reach out to us</a> to learn how Le Chat Enterprise can transform your mission-critical work. </p>
-<h2>See you at our MCP webinar and hackathon?</h2>
-<p>Webinar</p>
-<h3>Getting Started with MCP in Le Chat, September 9, Online.</h3>
-<p>Join our webinar on September 9 to dive into Le Chat’s new MCP capabilities with the Mistral team. Learn key insights, ask your questions, and prepare to build cutting-edge projects—all before the hackathon begins.</p>
-<p>Hackathon</p>
-<h3>Mistral AI MCP Hackathon, September 13-14, Paris.</h3>
-<p>Gather with the best AI engineers for a 2-day overnight hackathon (Sep. 13-14) and turn ideas into reality using your custom MCPs in Le Chat. Network with peers, get hands-on guidance from Mistral experts, and push the boundaries of what’s possible.</p>
-<h2>We’re hiring!</h2>
-<p>If you’re interested in joining us on our mission to build world-class AI products, we welcome your application to <a href="https://mistral.ai/careers">join our team</a>!</p>]]></content:encoded>
-      <guid isPermaLink="true">https://mistral.ai/news/le-chat-mcp-connectors-memories</guid>
-      <category>Product</category>
-      <pubDate>Tue, 02 Sep 2025 00:00:00 +0000</pubDate>
-      <media:content url="https://mistral.ai/_astro/92e9c189-28ba-4d83-b8c9-058850e1ad30_Z1WvyYy.webp?dpl=6aeb4896a91ba5a5aad9c10c" type="image/webp" medium="image"/>
     </item>
   </channel>
 </rss>
