@@ -2482,82 +2482,56 @@ Discover
       <media:content url="https://www.anthropic.com/_next/image?url=https%3A%2F%2Fwww-cdn.anthropic.com%2Fimages%2F4zrzovbb%2Fwebsite%2Faab3f9927b5be6b7abba51df907e05c925dbe4c5-1920x1080.png&amp;amp;w=3840&amp;amp;q=75" type="image/jpeg" medium="image"/>
     </item>
     <item>
-      <title>Memory in Grok Build</title>
-      <link>https://x.ai/news/grok-build-memory</link>
-      <description>Grok Build now carries conventions, decisions, and project facts from one session to the next. Notes are written in the background as you work and read back when you return to the project.</description>
-      <content:encoded><![CDATA[<p>Grok Build now has memory. As you work, it keeps notes on the conventions, decisions, and project facts that come up, and later sessions read those notes before touching related code. Grok Build gets better the more you use it.</p>
-<h2 id="what-it-remembers">What it remembers</h2>
-<p>Memory holds the details most likely to matter in a later session: how the team writes and reviews code, decisions and the reasoning behind them, and durable facts about the project, from where a subsystem lives to which command runs the suite. Task state, tentative conclusions, secrets, and anything the repository or its docs already cover are left out.</p>
-<p>Notes are kept per project, plus a global set for preferences that apply everywhere.</p>
-<h2 id="written-in-the-background">Written in the background</h2>
-<p>Capture runs after a turn completes and never blocks the session. Grok reviews the finished turn, writes anything worth keeping as a markdown note, and continues. Over time, <code>/dream</code> folds those notes into topic files, one per subject, so each project ends up with a small set of organized references.</p>
-<p>When you return to a project, Grok reads the topics that cover the area it is about to work in. Instructions in the current conversation take precedence over anything in a note.</p>
-<h2 id="browsing-memory">Browsing memory</h2>
-<p><code>/memory</code> opens a read-only browser of every memory file, grouped by scope, with a preview of the selected file. It is the fastest way to see what a session produced, and to find the file to edit when a note is wrong.</p>
-<h2 id="new-commands">New commands</h2>
-<ul>
-<li><code>/memory</code> opens the browser above.</li>
-<li><code>/dream</code> organizes recent notes into topic files, for example <code>topics/testing.md</code>. Dream also runs on its own periodically in the background.</li>
-</ul>
-<h2 id="availability">Availability</h2>
-<p>Memory is available in Grok Build now. It applies to new sessions: run <code>/new</code> or start a fresh <code>grok</code>, and notes begin after the first completed turn.</p>]]></content:encoded>
-      <guid isPermaLink="true">https://x.ai/news/grok-build-memory</guid>
+      <title>How SpaceXSI is using Grok Bot to scale customer support</title>
+      <link>https://x.ai/news/grok-bot-customer-support</link>
+      <description>We rebuilt the combined SpaceXSI and Cursor support operation around Grok Bot, expanding to a much broader product portfolio without adding headcount.</description>
+      <content:encoded><![CDATA[<p>When Cursor became part of SpaceXSI on August 14, our two customer support teams began coming together around a much broader product portfolio.</p>
+<p>At the same time, we were preparing to launch <a href="https://x.ai/bot">Grok Bot</a>, an AI teammate you can give real work to. We expected the product to grow quickly, bringing another wave of users and support demand.</p>
+<p>We decided to use Grok Bot itself to help meet that demand, putting it to work throughout the support operation. It signed into the same tools our team used and its role stretched from resolving individual tickets to helping us understand and improve the operation as a whole.</p>
+<p>Our new combined team has seen a 175% increase in support tickets, but we have not had to hire any new people thanks to Grok Bot. We might have hired 200 additional people otherwise.</p>
+<p>We are also doing it at a fraction of the usual cost. Traditional AI support tools charge a flat $1 to $4 per resolution. With Grok Bot, you only pay for your actual usage, which is already included in your plan. With minor optimizations, we've been able to resolve tickets for as low as $0.20 to $0.30.</p>
+<h2 id="establishing-the-foundation">Establishing the foundation</h2>
+<p>We took a crawl, walk, run approach to setting up Grok Bot. We started by connecting it to a few core systems, including Plain for ticketing and Linear for issue tracking. We then had it act as though it owned tickets, while limiting it to internal notes and requiring human approval for every write action. This let us check whether it understood each issue and proposed the right next step without affecting the customer experience.</p>
+<p>As the results became more reliable, we added traces and evaluations to every run. When something went wrong, we could see where Grok Bot had gone off course, make an adjustment, and try again. Grok Bot could also analyze these runs itself. This feedback loop allowed us to move quickly while keeping the process controlled.</p>
+<p>Once that foundation was in place, we began rolling Grok Bot out on the least complex tickets. During the first day, we manually reviewed its interpretation and proposed response for accuracy, tone, and whether it had followed our instructions. By the end of the day, we had enough confidence to let it begin responding directly to customers. From there, we gradually expanded the range of tickets it could handle.</p>
+<img alt="Crawl, walk, and run phases for automating customer support with Grok Bot" src="https://media.x.ai/cdn-cgi/image/fit=scale-down,onerror=redirect,f=auto/v1/website/grok-bot-customer-support-phases-light-d64d8820.webp"/>
+<img alt="Crawl, walk, and run phases for automating customer support with Grok Bot" src="https://media.x.ai/cdn-cgi/image/fit=scale-down,onerror=redirect,f=auto/v1/website/grok-bot-customer-support-phases-dark-8fb7a9dc.webp"/>
+<h2 id="from-intake-to-resolution">From intake to resolution</h2>
+<p>If you consider the end-to-end time that it takes to resolve a ticket, the majority of the clock happens during discovery, investigation, and troubleshooting. We began applying Grok Bot to every ticket as a pre-investigation step the moment it entered into our system. This could get expensive, so we've looked at common tickets and classified common issues to reduce the amount of tokens we needed to spend. We also don't exhaust a significant amount of troubleshooting capacity when a simple help center check does the trick.</p>
+<p>Whenever we run into a known issue (it connects to our Linear instance), or if we hit a common error in our backend (it's connected to Datadog), we've trained Grok Bot to either add to the existing issue or to create a new one. Grok Bot also reproduces the issue with a video, which helps the engineering team quickly resolve it.</p>
+<p>Of course, we also need to ensure that our customers are getting a clear response from us. We've trained Grok Bot on over one million customer interactions so that it's learned our tone and voice directly from our humans. Grok Bot is trained to not only respond, but always push the ticket towards resolution. It does this by asking relevant questions (i.e., it won't ask a question where the answer is already found in our logs).</p>
+<p>Grok Bot can also take action on behalf of our customers. For example, we've provided it with clear refund instructions where 99% of all refund requests are resolved without human intervention.</p>
+<img alt="Grok Bot confirming a refund on a support thread" src="https://media.x.ai/cdn-cgi/image/fit=scale-down,onerror=redirect,f=auto/v1/website/grok-bot-customer-support-refund-c952d80e.webp"/>
+<h2 id="managing-the-queue-in-real-time">Managing the queue in real time</h2>
+<p>Resolving individual tickets is only part of the job. We also need to understand what is happening across the queue. Grok Bot watches inbound volume continuously and adjusts the queue based on what needs attention. It can reprioritize tickets, reassign ownership based on urgency, and alert the organization when we are getting close to breaching a response-time SLA.</p>
+<p>Grok Bot also looks across tickets for patterns. When the volume around a particular issue reaches a set threshold, it can declare an incident automatically. It monitors X for changes in sentiment and recurring reports of the same problem, giving us a view beyond the customers who contact support directly. Together, these signals help us spot emerging problems early.</p>
+<img alt="A Slack alert flagging a possible incident before paging anyone" src="https://media.x.ai/cdn-cgi/image/fit=scale-down,onerror=redirect,f=auto/v1/website/grok-bot-customer-support-incident-b3f2d249.webp"/>
+<p>At our current scale, raw volume alerts would create a lot of noise. Grok Bot assesses whether a spike reflects a real support issue and begins investigating before it alerts the team. That gives us more context about what requires action while preserving the team's time and capacity.</p>
+<h2 id="continually-improving-our-customer-support-system">Continually improving our customer support system</h2>
+<p>As Grok Bot took on more of our customer support work, it also gave us a new way to improve the operation itself. It reviews customer interactions handled by both people and Bots, provides specific feedback on what could be improved, and surfaces coaching opportunities for individual team members and Bots.</p>
+<p>Every week, Grok Bot sends our leadership team a summary of where our AI responses are falling short. Sometimes the answer is more training or better documentation. Other times, the summary confirms that the guardrails we put in place are working. This gives us a regularly updated view of quality and helps us address patterns early.</p>
+<p>As more users ask Grok for support, our help center increasingly serves as source material for its answers. To keep those answers accurate, Grok Bot reviews changes to our codebase and suggests corresponding updates to the help center.</p>
+<p>We have now reached the point where Grok Bots can coach other Grok Bots. They identify gaps in the knowledge system, fill those gaps, and feed what they learn back into the system. We are scaling this loop across the portfolio so that it covers every product surface.</p>
+<h2 id="turning-customer-support-data-into-decisions">Turning customer support data into decisions</h2>
+<p>Grok Bot has become our default data analyst, turning what it sees across customer support into daily reports for our Slack channels. When it detects early signs of a poor customer experience, it flags the situation so the team can step in while there is still time to change the outcome.</p>
+<p>An example of this is whenever a ticket goes back and forth more than three times between a customer and one of our team members (human or Bot). When that happens, Grok Bot flags the interaction for management review and gives leadership an opportunity to lean in and save the experience. This interaction helps train Grok Bot, and as Grok Bot learns which signals are useful to the team, the reporting becomes more relevant over time.</p>
+<p>The same analysis helps us improve product quality. Grok Bot synthesizes more than 20,000 points of product feedback from customer support tickets each day and turns them into clear themes we can bring to engineering. This gives the product team a broader view of where customers are struggling and where the product needs work.</p>
+<img alt="Grok Bot summarizing today's engineering themes from Plain tickets" src="https://media.x.ai/cdn-cgi/image/fit=scale-down,onerror=redirect,f=auto/v1/website/grok-bot-customer-support-themes-eb5918b6.webp"/>
+<h2 id="how-grok-bot-changes-a-customer-support-team">How Grok Bot changes a customer support team</h2>
+<p>Grok Bot is still a new way of working, but it has already changed how our team operates. Instead of spending most of the day on repetitive support work, we can focus on setting guardrails, handling cases that require judgment, and deciding how the operation should improve. That makes the work more engaging and gives people more room to apply their experience to harder problems.</p>
+<p>We are still learning what this model makes possible. As the role of customer support continues to change, we will keep sharing what we find.</p>]]></content:encoded>
+      <guid isPermaLink="true">https://x.ai/news/grok-bot-customer-support</guid>
       <category>News</category>
       <pubDate>Mon, 12 Oct 2026 00:00:00 +0000</pubDate>
+      <media:content url="https://media.x.ai/cdn-cgi/image/fit=scale-down,onerror=redirect,f=auto/v1/website/grok-bot-customer-support-phases-light-d64d8820.webp" type="image/webp" medium="image"/>
     </item>
     <item>
-      <title>Setting Grok Bot loose on procurement</title>
-      <link>https://x.ai/news/grok-bot-procurement</link>
-      <description>We gave Grok Bot access to vendor spend, contracts, and usage data. It found more than $100,000 in direct savings.</description>
-      <content:encoded><![CDATA[<p>Enterprises have a lot of spend that is hard to track closely. That includes unused SaaS seats that accumulate as teams change, and renewals that come up before anyone has checked whether the contract still matches how the product is being used. The same problem shows up in recurring purchases, where it is often easier to reorder what was bought last time than to adjust quantities to current needs or shop around for a better price.</p>
-<p>A lot of this work is worth doing, but hard to justify doing by hand. We wanted to see how much of it Grok Bot could take on.</p>
-<p>Grok Bot makes agents much easier to set up and use. You tell or show a Bot what you want it to do, give it access to the right tools, and let it execute without designing the workflow step by step.</p>
-<p>For procurement, we created a Bot we affectionately named <a href="https://x.ai/bot/marketplace/bots/haggle-bot">Haggle Bot</a>. It reads our vendor spend alongside contracts and usage data, then uses market pricing and competitive quotes to find savings and prepare negotiations. So far, it has identified more than $100,000 in direct savings, worked through larger SaaS renewals, and applied the same approach to recurring purchases like office supplies.</p>
-<p>We think Haggle Bot points to a broader role for Bots inside a company. Give a Bot a clear job and access to the tools it needs, and it can keep taking on the work within that role without being told each task.</p>
-<h2 id="procurement-is-a-good-task-for-a-bot">Procurement is a good task for a Bot</h2>
-<p>The goal of procurement is to support the business and get the most out of every dollar spent on vendors. A lot of existing procurement tools help with this at the vendor intake and contract-management level.</p>
-<p>But much of the most important procurement work hinges on questions those systems do not address:</p>
-<ul>
-<li>Who is the owner for this?</li>
-<li>Why do we need it?</li>
-<li>Have we explored alternatives?</li>
-<li>Why do we have X and Y if they do the same thing?</li>
-<li>Why are our costs spiking?</li>
-<li>Everyone has a license. Are they using it?</li>
-</ul>
-<p>These questions are common, but depending on the stage of the company, they may not be worth answering by hand. Fast-growing companies often leave money on the table to avoid spending time chasing them down. That is where a Bot can be useful.</p>
-<h2 id="a-simple-expression-of-intent">A simple expression of intent</h2>
-<p>We started Haggle Bot by describing the job we wanted it to do. Its instruction was to learn our vendor spend and turn that knowledge into evidence-backed savings, with a person making the final decisions.</p>
-<p>We then gave the Bot access to Slack, Notion, Drive, Gmail, Hex, and Ramp. Haggle Bot used those systems to build a working map of roughly 125 active vendors.</p>
-<p>That record gave Haggle Bot enough context to make decisions and keep working without a person spelling out each next step. We also defined where Haggle Bot should stop and hand back control. We let it handle internal research and coordination on its own, but required explicit approval for spending money, accepting terms, or sending something to a vendor.</p>
-<h2 id="finding-unused-saas-seats">Finding unused SaaS seats</h2>
-<p>An easy place to start was auditing SaaS spend. Haggle Bot asked our IT team for assigned-seat and last-used data, then compared that with what we were paying for. For one product, it found 43 paid seats with no activity in the previous 90 days and sent the names back for review and downgrade. That added up to $14,220 in savings.</p>
-<p>We applied the same approach to another SaaS product and Haggle Bot found $85,662 a year in unused SKUs. Because the product was month-to-month, those cuts reduced spend immediately.</p>
-<p>One thing we noticed in these SaaS audits was how often Haggle Bot took the next step without being asked. In one case, Haggle Bot needed to figure out who owned the relationship and what our plans were for the vendor. It started with the owners listed in Ramp, messaged them, and followed each handoff until it reached the engineers with the right context to make a decision. Rather than stop when the first answer was incomplete, it identified what additional information it needed and then proactively sought it out.</p>
-<h2 id="negotiating-a-saas-renewal">Negotiating a SaaS renewal</h2>
-<p>When a SaaS renewal came up, we asked Haggle Bot to review the quote and explore alternatives. Haggle Bot compared the renewal offer with our current annualized spend and recommended against the options that added seats ahead of demonstrated usage.</p>
-<img alt="Haggle Bot reviews a contract renewal proposal, breaks the quote down against current spend, and recommends the cheaper option" src="https://media.x.ai/cdn-cgi/image/fit=scale-down,onerror=redirect,f=auto/v1/website/haggle-bot-image1-75f1097a.png"/>
-<p>It then priced credible alternatives against our current footprint and used those comparisons alongside current usage data to work out where we had negotiating leverage.</p>
-<img alt="Haggle Bot compares Webex, webinar platforms, and Zoom pricing against the renewal quote" src="https://media.x.ai/cdn-cgi/image/fit=scale-down,onerror=redirect,f=auto/v1/website/haggle-bot-image2-7f0e2a56.png"/>
-<p>From there, Haggle Bot worked out the negotiation and drafted the response for us to edit. We set the minimum quantities we wanted to keep and approved the send. Haggle Bot made an opening bid while setting an internal price target we were willing to go up to.</p>
-<h2 id="shopping-around-for-office-supplies">Shopping around for office supplies</h2>
-<p>Every Friday, our office team orders tech, snacks, and hygiene supplies for the next group of new hires. We use another Bot to place that order, which we call "Amazon Bot." It's logged into our corporate account and can work across Gmail, Ramp, Google Sheets, Rippling, and Vercel to understand headcount and the office floor plan.</p>
-<img alt="Amazon Bot creates standing office supply orders based on weekly new-hire counts from Slack" src="https://media.x.ai/cdn-cgi/image/fit=scale-down,onerror=redirect,f=auto/v1/website/haggle-bot-image3-b5f9709c.png"/>
-<p>Rather than treat that as a fixed Amazon order, we gave Haggle Bot the job of shopping the weekly order around. Haggle Bot can see how quickly supplies are being used, the seat map for each building, and the quotes and carts from the last four orders. From that, it builds an editable Google Sheet where office ops can change the number of incoming hires and see the quantities needed for each new-hire kit.</p>
-<p>Haggle Bot then shops the order across Amazon, Costco, Uline, and Walmart. If it cannot find the same product for less, it can look for an equivalent from another brand, then collect the comparisons in a sheet for review.</p>
-<p>It then drafts an email to our Amazon procurement rep with same-day competitor prices and asks for lower pricing on specific line items through our business discount program.</p>
-<img alt="Haggle Bot drafts an email to our Amazon procurement rep citing same-day competitor prices on specific line items" src="https://media.x.ai/cdn-cgi/image/fit=scale-down,onerror=redirect,f=auto/v1/website/haggle-bot-image6-f62bac1c.png"/>
-<p>Once pricing is settled, Haggle Bot delegates the order back to Amazon Bot to send. In one run, the process brought a $14,629 tech order down to $6,143, a 58% reduction.</p>
-<h2 id="where-haggle-bot-is-most-useful">Where Haggle Bot is most useful</h2>
-<p>Haggle Bot shows how much work can be done behind a simple expression of intent. Once a Bot has a purpose and the access to pursue it, it can keep making progress across systems without additional intervention.</p>
-<p>Haggle Bot has also helped us see where Bots fit naturally into a workflow, and where they need more guidance. A lot of procurement work depends on good judgment about how to communicate with vendors, and we still revise its emails to calibrate on tone and make sure we're providing vendors with the right level of information.</p>
-<p>Haggle Bot has made us interested in what Bots can do when they keep working on the same job over time. The examples above came from a short window, but many of the signals worth acting on only emerge gradually as spend and usage change. Over the next year, we expect Haggle Bot to find more of that work on its own and take it further before a person needs to step in.</p>
-<p>You can copy and import <a href="https://x.ai/bot/marketplace/bots/haggle-bot">Haggle Bot</a> now in the Bot Marketplace.</p>
-<p>Join the Grok Bot for Enterprise <a href="https://cursor.com/contact-sales?product=grok-bot">waitlist</a>.</p>]]></content:encoded>
-      <guid isPermaLink="true">https://x.ai/news/grok-bot-procurement</guid>
+      <title>Introducing Grok 4.7</title>
+      <link>https://x.ai/news/grok-4-7</link>
+      <description>SpaceXSI's most powerful model for coding and knowledge work. Twice as fast, at half the price of comparable models.</description>
+      <guid isPermaLink="true">https://x.ai/news/grok-4-7</guid>
       <category>News</category>
       <pubDate>Mon, 12 Oct 2026 00:00:00 +0000</pubDate>
-      <media:content url="https://media.x.ai/cdn-cgi/image/fit=scale-down,onerror=redirect,f=auto/v1/website/haggle-bot-image1-75f1097a.png" type="image/png" medium="image"/>
     </item>
   </channel>
 </rss>
