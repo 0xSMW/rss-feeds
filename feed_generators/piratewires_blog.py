@@ -1,7 +1,7 @@
 import argparse
 import logging
-import time
 import os
+import time
 from datetime import datetime
 from pathlib import Path
 from urllib.parse import urljoin, urlparse
@@ -9,9 +9,6 @@ from urllib.parse import urljoin, urlparse
 import pytz
 import requests
 import undetected_chromedriver as uc
-from bs4 import BeautifulSoup
-from dateutil import parser as dateparser
-
 from _common import (
     build_feed,
     clean_article_html,
@@ -20,9 +17,15 @@ from _common import (
     load_cached_entries,
     save_feed,
 )
+from bs4 import BeautifulSoup
+from dateutil import parser as dateparser
+from requests.adapters import HTTPAdapter
+from urllib3.util.retry import Retry
 
 # Set up logging
-logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
+logging.basicConfig(
+    level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s"
+)
 logger = logging.getLogger(__name__)
 
 BASE_URL = "https://www.piratewires.com"
@@ -52,6 +55,17 @@ def build_requests_session() -> requests.Session:
             "Referer": BASE_URL,
         }
     )
+    # Honour server cooldowns and retry transient rate limits before using a browser.
+    retries = Retry(
+        total=3,
+        backoff_factor=2,
+        status_forcelist=(429, 500, 502, 503, 504),
+        allowed_methods=("GET",),
+        respect_retry_after_header=True,
+        raise_on_status=False,
+    )
+    session.mount("https://", HTTPAdapter(max_retries=retries))
+    session.mount("http://", HTTPAdapter(max_retries=retries))
     return session
 
 
@@ -76,7 +90,8 @@ def setup_selenium_driver():
         driver_executable_path=driver_path,
         browser_executable_path=browser_path,
         version_main=int(version_main) if version_main else None,
-        user_multi_procs=True,
+        # An explicit workflow-installed driver does not need a pre-existing UC cache.
+        user_multi_procs=not bool(driver_path),
     )
 
 
@@ -114,7 +129,8 @@ def fetch_page_selenium(url: str) -> str:
             driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
             try:
                 WebDriverWait(driver, 5).until(
-                    lambda d: d.execute_script("return document.body.scrollHeight") > last_height
+                    lambda d: d.execute_script("return document.body.scrollHeight")
+                    > last_height
                 )
                 last_height = driver.execute_script("return document.body.scrollHeight")
             except Exception:
@@ -130,8 +146,6 @@ def fetch_page(url: str, session: requests.Session | None = None) -> str:
     try:
         return fetch_page_requests(url, session=session)
     except Exception as e:
-        if in_ci():
-            raise
         logger.warning(f"Requests fetch failed ({e}); falling back to Selenium...")
         return fetch_page_selenium(url)
 
@@ -178,10 +192,10 @@ def _decode_payload_text(value: str) -> str:
 def parse_listing_payload(html: str, category: str) -> list[dict]:
     items: list[dict] = []
     seen_links = set()
-    needle = "\\\"canonical_url\\\":\\\"https://piratewires.substack.com/p/"
-    title_key = "\\\"title\\\":\\\""
-    subtitle_key = "\\\"subtitle\\\":\\\""
-    date_key = "\\\"post_date\\\":\\\""
+    needle = '\\"canonical_url\\":\\"https://piratewires.substack.com/p/'
+    title_key = '\\"title\\":\\"'
+    subtitle_key = '\\"subtitle\\":\\"'
+    date_key = '\\"post_date\\":\\"'
 
     idx = 0
     while True:
@@ -190,7 +204,7 @@ def parse_listing_payload(html: str, category: str) -> list[dict]:
             break
 
         slug_start = idx + len(needle)
-        slug_end = html.find("\\\"", slug_start)
+        slug_end = html.find('\\"', slug_start)
         if slug_end == -1:
             break
 
@@ -208,9 +222,9 @@ def parse_listing_payload(html: str, category: str) -> list[dict]:
         subtitle_start = subtitle_pos + len(subtitle_key)
         date_start = date_pos + len(date_key)
 
-        title_end = window.find("\\\"", title_start)
-        subtitle_end = window.find("\\\"", subtitle_start)
-        date_end = window.find("\\\"", date_start)
+        title_end = window.find('\\"', title_start)
+        subtitle_end = window.find('\\"', subtitle_start)
+        date_end = window.find('\\"', date_start)
         if title_end == -1 or subtitle_end == -1 or date_end == -1:
             idx = slug_end + 1
             continue
@@ -250,7 +264,9 @@ def _parse_date(text: str) -> datetime | None:
         return None
 
 
-def fetch_article_page_requests(url: str, session: requests.Session | None = None) -> str | None:
+def fetch_article_page_requests(
+    url: str, session: requests.Session | None = None
+) -> str | None:
     sess = session or build_requests_session()
     try:
         resp = sess.get(url, timeout=20)
@@ -272,10 +288,14 @@ def fetch_articles_selenium(urls: list[str]) -> dict[str, str]:
                 driver = setup_selenium_driver()
                 break
             except Exception as e:
-                logger.warning(f"Selenium driver startup failed (attempt {attempt + 1}): {e}")
+                logger.warning(
+                    f"Selenium driver startup failed (attempt {attempt + 1}): {e}"
+                )
                 time.sleep(2)
         if driver is None:
-            logger.warning("Could not start Selenium driver; keeping requests-fetched content")
+            logger.warning(
+                "Could not start Selenium driver; keeping requests-fetched content"
+            )
             return results
         from selenium.webdriver.common.by import By
         from selenium.webdriver.support import expected_conditions as EC
@@ -288,7 +308,9 @@ def fetch_articles_selenium(urls: list[str]) -> dict[str, str]:
                 logger.info(f"Selenium fetch {idx}/{total}: {url}")
                 driver.get(url)
                 WebDriverWait(driver, 20).until(
-                    EC.presence_of_element_located((By.CSS_SELECTOR, "section[class*='article_postBody']"))
+                    EC.presence_of_element_located(
+                        (By.CSS_SELECTOR, "section[class*='article_postBody']")
+                    )
                 )
                 try:
                     WebDriverWait(driver, 20).until(
@@ -373,7 +395,9 @@ def extract_article_metadata(html: str, page_url: str) -> dict:
         )
 
         if "description" not in result:
-            summary = extract_summary(soup, content_container, title=result.get("title"))
+            summary = extract_summary(
+                soup, content_container, title=result.get("title")
+            )
             if summary:
                 result["description"] = summary
 
@@ -388,12 +412,14 @@ def collect_listing_articles(session: requests.Session | None = None) -> list[di
     seen_links = set()
 
     for category, url in CATEGORY_PAGES.items():
-        html = fetch_page_requests(url, session=session)
+        html = fetch_page(url, session=session)
         payload_items = parse_listing_payload(html, category)
         links = parse_listing_links(html)
 
-        if not payload_items and not links and not in_ci():
-            logger.warning(f"No links found via requests for {url}; retrying with Selenium...")
+        if not payload_items and not links:
+            logger.warning(
+                f"No links found via requests for {url}; retrying with Selenium..."
+            )
             html = fetch_page_selenium(url)
             payload_items = parse_listing_payload(html, category)
             links = parse_listing_links(html)
@@ -461,10 +487,14 @@ def main(force: bool = False) -> bool:
         session = build_requests_session()
         articles = collect_listing_articles(session=session)
         if not articles:
-            logger.warning("No Pirate Wires articles parsed. Selectors may need updating.")
+            logger.warning(
+                "No Pirate Wires articles parsed. Selectors may need updating."
+            )
             return False
 
-        new_articles = [article for article in articles if article["link"] not in existing_links]
+        new_articles = [
+            article for article in articles if article["link"] not in existing_links
+        ]
         logger.info(f"Fetching full content for {len(new_articles)} articles...")
 
         needs_selenium: list[str] = []
@@ -482,13 +512,30 @@ def main(force: bool = False) -> bool:
 
         if needs_selenium:
             selenium_html = fetch_articles_selenium(needs_selenium)
+            missing = set(needs_selenium) - selenium_html.keys()
+            if missing:
+                raise RuntimeError(
+                    f"Could not retrieve article pages: {', '.join(sorted(missing))}"
+                )
             for article in new_articles:
                 if article["link"] not in selenium_html:
                     continue
-                metadata = extract_article_metadata(selenium_html[article["link"]], article["link"])
+                metadata = extract_article_metadata(
+                    selenium_html[article["link"]], article["link"]
+                )
                 for key in ("title", "description", "date", "author", "content_html"):
                     if metadata.get(key):
                         article[key] = metadata[key]
+
+        missing_content = [
+            article["link"]
+            for article in new_articles
+            if not article.get("content_html")
+        ]
+        if missing_content:
+            raise RuntimeError(
+                f"No article content retrieved: {', '.join(missing_content)}"
+            )
 
         combined_articles = new_articles + existing_entries
         seen_links = set()
@@ -510,6 +557,10 @@ def main(force: bool = False) -> bool:
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Generate Pirate Wires RSS feed.")
-    parser.add_argument("--force", action="store_true", help="Refetch all articles and rebuild the feed.")
+    parser.add_argument(
+        "--force",
+        action="store_true",
+        help="Refetch all articles and rebuild the feed.",
+    )
     args = parser.parse_args()
     raise SystemExit(0 if main(force=args.force) else 1)

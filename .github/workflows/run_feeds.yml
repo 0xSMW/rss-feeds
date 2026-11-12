@@ -64,6 +64,7 @@ jobs:
           uv venv
           source .venv/bin/activate
           uv pip install -r requirements.txt
+          python -m unittest discover -s tests -v
           python feed_generators/run_all_feeds.py
 
       - name: Commit and push feed
