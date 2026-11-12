@@ -527,16 +527,6 @@ def main(force: bool = False) -> bool:
                     if metadata.get(key):
                         article[key] = metadata[key]
 
-        missing_content = [
-            article["link"]
-            for article in new_articles
-            if not article.get("content_html")
-        ]
-        if missing_content:
-            raise RuntimeError(
-                f"No article content retrieved: {', '.join(missing_content)}"
-            )
-
         combined_articles = new_articles + existing_entries
         seen_links = set()
         deduped_articles = []
