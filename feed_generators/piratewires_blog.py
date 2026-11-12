@@ -59,9 +59,11 @@ def build_requests_session() -> requests.Session:
     retries = Retry(
         total=3,
         backoff_factor=2,
-        status_forcelist=(429, 500, 502, 503, 504),
+        status_forcelist=(500, 502, 503, 504),
         allowed_methods=("GET",),
-        respect_retry_after_header=True,
+        # Handle 429 and its Retry-After in fetch_page_requests so challenges
+        # can switch to the browser immediately instead of being retried here.
+        respect_retry_after_header=False,
         raise_on_status=False,
     )
     session.mount("https://", HTTPAdapter(max_retries=retries))
@@ -97,10 +99,29 @@ def setup_selenium_driver():
 
 def fetch_page_requests(url: str, session: requests.Session | None = None) -> str:
     sess = session or build_requests_session()
+    if getattr(sess, "_piratewires_browser_required", False):
+        raise requests.HTTPError(
+            "Vercel challenge requires browser fetching for this session"
+        )
     logger.info(f"Fetching page (requests): {url}")
-    resp = sess.get(url, timeout=20)
-    resp.raise_for_status()
-    return resp.text
+    retry_policy = Retry()
+    for attempt in range(4):
+        resp = sess.get(url, timeout=20)
+        if resp.status_code == 429:
+            # A browser challenge is not a cooldown; stop repeating blocked requests.
+            if resp.headers.get("x-vercel-mitigated") == "challenge":
+                sess._piratewires_browser_required = True
+                resp.raise_for_status()
+            if attempt < 3:
+                delay = retry_policy.get_retry_after(resp)
+                if delay is None:
+                    delay = 0 if attempt == 0 else 2 ** (attempt + 1)
+                resp.close()
+                time.sleep(delay)
+                continue
+        resp.raise_for_status()
+        return resp.text
+    raise RuntimeError(f"Could not fetch {url}")
 
 
 def _wait_for_article_links(driver, timeout: int = 15) -> None:
@@ -268,10 +289,10 @@ def fetch_article_page_requests(
     url: str, session: requests.Session | None = None
 ) -> str | None:
     sess = session or build_requests_session()
+    if getattr(sess, "_piratewires_browser_required", False):
+        return None
     try:
-        resp = sess.get(url, timeout=20)
-        resp.raise_for_status()
-        return resp.text
+        return fetch_page_requests(url, session=sess)
     except Exception as e:
         logger.warning(f"Requests fetch failed for {url}: {e}")
         return None
@@ -307,21 +328,24 @@ def fetch_articles_selenium(urls: list[str]) -> dict[str, str]:
             try:
                 logger.info(f"Selenium fetch {idx}/{total}: {url}")
                 driver.get(url)
+                body_selector = "section[class*='article_postBody']"
                 WebDriverWait(driver, 20).until(
                     EC.presence_of_element_located(
-                        (By.CSS_SELECTOR, "section[class*='article_postBody']")
+                        (By.CSS_SELECTOR, f"{body_selector}, article video")
                     )
                 )
-                try:
-                    WebDriverWait(driver, 20).until(
-                        lambda d: d.execute_script(
-                            "const el=document.querySelector(\"section[class*='article_postBody']\");"
-                            "return el ? el.innerText.length : 0;"
+                # Video-only posts are already ready; text posts may expand after hydration.
+                if driver.find_elements(By.CSS_SELECTOR, body_selector):
+                    try:
+                        WebDriverWait(driver, 20).until(
+                            lambda d: d.execute_script(
+                                "const el=document.querySelector(\"section[class*='article_postBody']\");"
+                                "return el ? el.innerText.length : 0;"
+                            )
+                            > 1500
                         )
-                        > 1500
-                    )
-                except Exception:
-                    pass
+                    except Exception:
+                        pass
                 page_source = driver.page_source
                 results[url] = page_source
                 elapsed = time.perf_counter() - start_time

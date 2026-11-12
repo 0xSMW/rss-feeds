@@ -8,7 +8,7 @@ import unittest
 import xml.etree.ElementTree as ET
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
-from unittest.mock import patch
+from unittest.mock import MagicMock, patch
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "feed_generators"))
 import piratewires_blog as pirate
@@ -33,10 +33,12 @@ class PirateWiresTests(unittest.TestCase):
         class Handler(BaseHTTPRequestHandler):
             def do_GET(self):
                 cls.hits += 1
-                blocked = self.path == "/blocked" or (
+                blocked = self.path in ("/blocked", "/challenge") or (
                     self.path in ("/transient", "/cooldown") and cls.hits == 1
                 )
                 self.send_response(429 if blocked else 200)
+                if self.path == "/challenge":
+                    self.send_header("x-vercel-mitigated", "challenge")
                 if blocked:
                     self.send_header(
                         "Retry-After", "7" if self.path == "/cooldown" else "0"
@@ -96,6 +98,21 @@ class PirateWiresTests(unittest.TestCase):
         ):
             return pirate.collect_listing_articles()
 
+    def test_vercel_challenge_switches_session_to_browser_without_retries(self):
+        session = pirate.build_requests_session()
+        with patch.object(
+            pirate, "fetch_page_selenium", return_value=LISTING
+        ) as browser:
+            self.assertEqual(
+                pirate.fetch_page(self.base + "/challenge", session), LISTING
+            )
+            self.assertEqual(
+                pirate.fetch_page(self.base + "/another-listing", session), LISTING
+            )
+            self.assertIsNone(pirate.fetch_article_page_requests(ARTICLE_LINK, session))
+        self.assertEqual(type(self).hits, 1)
+        self.assertEqual(browser.call_count, 2)
+
     def test_browser_failure_propagates(self):
         with (
             patch.dict(os.environ, {"CI": "true"}),
@@ -108,6 +125,16 @@ class PirateWiresTests(unittest.TestCase):
             self.assertRaisesRegex(RuntimeError, "browser blocked"),
         ):
             self.collect("/blocked")
+
+    def test_browser_fetch_accepts_existing_video_only_posts(self):
+        driver = MagicMock()
+        driver.find_elements.return_value = []
+        driver.page_source = "<article><video controls></video></article>"
+        with patch.object(pirate, "setup_selenium_driver", return_value=driver):
+            pages = pirate.fetch_articles_selenium([ARTICLE_LINK])
+        self.assertEqual(pages, {ARTICLE_LINK: driver.page_source})
+        driver.execute_script.assert_not_called()
+        driver.quit.assert_called_once()
 
     def test_explicit_driver_does_not_require_uc_cache(self):
         with (
