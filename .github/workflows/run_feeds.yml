@@ -35,7 +35,7 @@ jobs:
           sudo apt-get install -y software-properties-common
           sudo add-apt-repository universe
           sudo apt-get update
-          sudo apt-get install -y python3-setuptools
+          sudo apt-get install -y python3-setuptools xvfb xauth
 
       # Download a matched browser/driver pair directly, bypassing Ubuntu's Snap packages.
       - name: Install Chrome for Testing and ChromeDriver for Selenium
@@ -65,7 +65,15 @@ jobs:
           source .venv/bin/activate
           uv pip install -r requirements.txt
           python -m unittest discover -s tests -v
-          python feed_generators/run_all_feeds.py
+          xvfb-run --auto-servernum python feed_generators/run_all_feeds.py
+
+      - name: Save generated Pirate Wires feed for verification
+        if: always()
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: piratewires-verification-feed
+          path: feeds/feed_piratewires.xml
+          retention-days: 1
 
       - name: Commit and push feed
         run: |

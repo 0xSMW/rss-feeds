@@ -162,6 +162,8 @@ class PirateWiresTests(unittest.TestCase):
             patch.dict(
                 os.environ,
                 {
+                    "CI": "true",
+                    "DISPLAY": ":99",
                     "CHROMEDRIVER_PATH": "/workflow/chromedriver",
                     "CHROME_BINARY": "/workflow/chrome",
                 },
@@ -170,9 +172,20 @@ class PirateWiresTests(unittest.TestCase):
         ):
             pirate.setup_selenium_driver()
         self.assertFalse(chrome.call_args.kwargs["user_multi_procs"])
+        arguments = chrome.call_args.kwargs["options"].arguments
+        self.assertFalse(any(arg.startswith("--headless") for arg in arguments))
+        self.assertFalse(any(arg.startswith("--user-agent") for arg in arguments))
         self.assertEqual(
             chrome.call_args.kwargs["driver_executable_path"], "/workflow/chromedriver"
         )
+
+    def test_local_browser_remains_headless_without_virtual_display(self):
+        with (
+            patch.dict(os.environ, {"CI": "true", "DISPLAY": ""}),
+            patch.object(pirate.uc, "Chrome") as chrome,
+        ):
+            pirate.setup_selenium_driver()
+        self.assertIn("--headless=new", chrome.call_args.kwargs["options"].arguments)
 
     def test_full_metered_article_replaces_cached_preview(self):
         with tempfile.TemporaryDirectory() as directory:

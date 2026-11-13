@@ -82,13 +82,10 @@ def in_ci() -> bool:
 
 def setup_selenium_driver():
     options = uc.ChromeOptions()
-    options.add_argument("--headless=new")
+    if not (in_ci() and os.environ.get("DISPLAY")):
+        options.add_argument("--headless=new")
     options.add_argument("--window-size=1920,1080")
     options.add_argument("--disable-blink-features=AutomationControlled")
-    options.add_argument(
-        "--user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
-        "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36"
-    )
     driver_path = os.environ.get("CHROMEDRIVER_PATH")
     browser_path = os.environ.get("CHROME_BINARY")
     version_main = os.environ.get("UC_VERSION_MAIN")
@@ -297,7 +294,16 @@ def _fetch_article_api_browser(api_url: str, session: requests.Session) -> str:
         except ValueError:
             return False
 
-    return WebDriverWait(driver, 20).until(json_document)
+    try:
+        return WebDriverWait(driver, 20).until(json_document)
+    except Exception as exc:
+        try:
+            detail = (
+                f"{driver.title}: {driver.find_element(By.TAG_NAME, 'body').text[:250]}"
+            )
+        except Exception:
+            detail = "No readable browser response"
+        raise RuntimeError(f"Publisher returned no article JSON: {detail}") from exc
 
 
 def fetch_article_api(
