@@ -499,9 +499,11 @@ def main():
         feed = generate_rss_feed(merged, feed_name=args.feed_name)
         save_rss_feed(feed, feed_name=args.feed_name)
         logger.info("xAI News feed generation complete")
+        return True
     except Exception as e:
         logger.error(f"Failed to generate xAI News feed: {e}")
+        return False
 
 
 if __name__ == "__main__":
-    main()
+    raise SystemExit(0 if main() else 1)

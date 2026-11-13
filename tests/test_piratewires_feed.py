@@ -1,14 +1,17 @@
 """Exercise rate-limit recovery and full article extraction without external services."""
 
+import json
 import os
 import sys
 import tempfile
 import threading
 import unittest
 import xml.etree.ElementTree as ET
+from datetime import datetime, timedelta, timezone
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 from unittest.mock import MagicMock, patch
+from urllib.parse import parse_qs, urlparse
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "feed_generators"))
 import piratewires_blog as pirate
@@ -33,6 +36,22 @@ class PirateWiresTests(unittest.TestCase):
         class Handler(BaseHTTPRequestHandler):
             def do_GET(self):
                 cls.hits += 1
+                if self.path.startswith("/posts/"):
+                    cls.api_requests.append(self.path)
+                    slug = urlparse(self.path).path.rsplit("/", 1)[-1]
+                    post = {
+                        "slug": "wrong-slug" if cls.api_mode == "wrong" else slug,
+                        "title": "A current story",
+                        "subtitle": "A summary",
+                        "post_date": "2026-11-12T18:35:10Z",
+                        "type": "newsletter",
+                        "authors": [{"name": "Writer"}],
+                        "body_html": "" if cls.api_mode == "missing" else ARTICLE,
+                    }
+                    self.send_response(403 if cls.api_mode == "denied" else 200)
+                    self.end_headers()
+                    self.wfile.write(json.dumps({"post": post}).encode())
+                    return
                 blocked = self.path in ("/blocked", "/challenge") or (
                     self.path in ("/transient", "/cooldown") and cls.hits == 1
                 )
@@ -62,6 +81,8 @@ class PirateWiresTests(unittest.TestCase):
 
     def setUp(self):
         type(self).hits = 0
+        type(self).api_mode = "full"
+        type(self).api_requests = []
 
     def test_transient_429_retries_requests(self):
         with patch.object(pirate.time, "sleep"):
@@ -153,61 +174,185 @@ class PirateWiresTests(unittest.TestCase):
             chrome.call_args.kwargs["driver_executable_path"], "/workflow/chromedriver"
         )
 
-    def test_writes_article_body_not_listing_excerpt(self):
+    def test_full_metered_article_replaces_cached_preview(self):
         with tempfile.TemporaryDirectory() as directory:
             previous = Path.cwd()
             os.chdir(directory)
             try:
+                Path("feeds").mkdir()
+                Path("feeds/feed_piratewires.xml").write_text(
+                    '<rss xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><item>'
+                    "<title>Cached story</title><link>" + ARTICLE_LINK + "</link>"
+                    "<content:encoded><![CDATA[<p>Cached preview only</p>]]></content:encoded>"
+                    "</item></channel></rss>"
+                )
                 with (
                     patch.dict(
                         pirate.CATEGORY_PAGES,
                         {"Home": self.base + "/listing"},
                         clear=True,
                     ),
-                    patch.object(
-                        pirate, "fetch_article_page_requests", return_value=ARTICLE
-                    ) as article_fetch,
+                    patch.object(pirate, "ARTICLE_API_BASE", self.base + "/posts"),
                     patch.object(
                         pirate,
                         "fetch_articles_selenium",
-                        side_effect=AssertionError("Complete article needs no browser"),
+                        side_effect=AssertionError(
+                            "Article API supplies the complete body"
+                        ),
                     ),
                 ):
                     self.assertTrue(pirate.main())
-                article_fetch.assert_called_once()
-                self.assertEqual(article_fetch.call_args.args[0], ARTICLE_LINK)
+                query = parse_qs(urlparse(type(self).api_requests[-1]).query)
+                self.assertEqual(query, {"withMetering": ["true"]})
                 item = ET.parse("feeds/feed_piratewires.xml").find("./channel/item")
                 content = item.findtext(
                     "{http://purl.org/rss/1.0/modules/content/}encoded"
                 )
                 self.assertIn("Full article paragraph 7.", content)
                 self.assertNotIn("Listing excerpt only", content)
+                self.assertEqual(item.findtext("link"), ARTICLE_LINK)
             finally:
                 os.chdir(previous)
 
-    def test_missing_article_content_fails_without_overwriting_feed(self):
+    def test_article_api_is_independent_of_challenged_frontend_session(self):
         with tempfile.TemporaryDirectory() as directory:
             previous = Path.cwd()
             os.chdir(directory)
             try:
-                Path("feeds").mkdir()
-                destination = Path("feeds/feed_piratewires.xml")
-                destination.write_text("<rss><channel/></rss>")
                 with (
                     patch.dict(
                         pirate.CATEGORY_PAGES,
-                        {"Home": self.base + "/listing"},
+                        {"Home": self.base + "/challenge"},
                         clear=True,
                     ),
-                    patch.object(
-                        pirate, "fetch_article_page_requests", return_value=None
-                    ),
-                    patch.object(pirate, "fetch_articles_selenium", return_value={}),
+                    patch.object(pirate, "ARTICLE_API_BASE", self.base + "/posts"),
+                    patch.object(pirate, "fetch_page_selenium", return_value=LISTING),
                 ):
-                    self.assertFalse(pirate.main())
-                self.assertEqual(destination.read_text(), "<rss><channel/></rss>")
+                    self.assertTrue(pirate.main())
+                self.assertEqual(type(self).hits, 3)
             finally:
                 os.chdir(previous)
+
+    def test_source_content_errors_fail_without_overwriting_feed(self):
+        for mode in ("missing", "wrong", "denied"):
+            with self.subTest(mode=mode), tempfile.TemporaryDirectory() as directory:
+                previous = Path.cwd()
+                os.chdir(directory)
+                type(self).api_mode = mode
+                try:
+                    Path("feeds").mkdir()
+                    destination = Path("feeds/feed_piratewires.xml")
+                    destination.write_text("<rss><channel/></rss>")
+                    with (
+                        patch.dict(
+                            pirate.CATEGORY_PAGES,
+                            {"Home": self.base + "/listing"},
+                            clear=True,
+                        ),
+                        patch.object(pirate, "ARTICLE_API_BASE", self.base + "/posts"),
+                    ):
+                        self.assertFalse(pirate.main())
+                    self.assertEqual(destination.read_text(), "<rss><channel/></rss>")
+                finally:
+                    os.chdir(previous)
+
+    def test_only_newest_feed_candidates_fetch_article_bodies(self):
+        articles = [
+            {
+                "title": f"Story {i}",
+                "link": f"https://www.piratewires.com/p/story-{i}",
+                "date": datetime(2026, 1, 1, tzinfo=timezone.utc) + timedelta(days=i),
+                "category": "Home",
+            }
+            for i in range(61)
+        ]
+        metadata = {"content_html": "<p>Complete article body</p>"}
+        with tempfile.TemporaryDirectory() as directory:
+            previous = Path.cwd()
+            os.chdir(directory)
+            try:
+                with (
+                    patch.object(
+                        pirate, "collect_listing_articles", return_value=articles
+                    ),
+                    patch.object(
+                        pirate, "fetch_article_api", return_value=metadata
+                    ) as fetch,
+                ):
+                    self.assertTrue(pirate.main())
+                self.assertEqual(fetch.call_count, 50)
+                self.assertEqual(
+                    {call.args[0] for call in fetch.call_args_list},
+                    {a["link"] for a in articles[:50]},
+                )
+                self.assertNotIn(
+                    "https://www.piratewires.com/p/story-0",
+                    {call.args[0] for call in fetch.call_args_list},
+                )
+                self.assertEqual(
+                    len(
+                        ET.parse("feeds/feed_piratewires.xml").findall("./channel/item")
+                    ),
+                    50,
+                )
+            finally:
+                os.chdir(previous)
+
+    def test_undated_old_links_do_not_displace_newest_stories(self):
+        dated = [
+            {
+                "title": f"Story {i}",
+                "link": f"https://www.piratewires.com/p/story-{i}",
+                "date": datetime(2026, 1, 1, tzinfo=timezone.utc) + timedelta(days=i),
+                "category": "Home",
+            }
+            for i in range(61)
+        ]
+        undated = [
+            {
+                "title": "Undated archive",
+                "link": f"https://www.piratewires.com/p/archive-{i}",
+                "date": None,
+                "category": "Culture",
+            }
+            for i in range(50)
+        ]
+        full_requests = []
+        metadata_requests = []
+
+        def fetch(url, session=None, *, include_body=True):
+            if not include_body:
+                metadata_requests.append(url)
+                return {"date": datetime(2025, 1, 1, tzinfo=timezone.utc)}
+            full_requests.append(url)
+            return {"content_html": "<p>Complete current story</p>"}
+
+        with tempfile.TemporaryDirectory() as directory:
+            previous = Path.cwd()
+            os.chdir(directory)
+            try:
+                with (
+                    patch.object(
+                        pirate, "collect_listing_articles", return_value=dated + undated
+                    ),
+                    patch.object(pirate, "fetch_article_api", side_effect=fetch),
+                ):
+                    self.assertTrue(pirate.main())
+                self.assertEqual(len(metadata_requests), 50)
+                self.assertEqual(set(full_requests), {a["link"] for a in dated[-50:]})
+                self.assertEqual(len(full_requests), 50)
+            finally:
+                os.chdir(previous)
+
+    def test_browser_listing_does_not_scroll_into_discarded_archives(self):
+        driver = MagicMock()
+        driver.page_source = LISTING
+        with patch.object(pirate, "setup_selenium_driver", return_value=driver):
+            self.assertEqual(
+                pirate.fetch_page_selenium(self.base + "/listing"), LISTING
+            )
+        driver.execute_script.assert_not_called()
+        driver.quit.assert_called_once()
 
 
 if __name__ == "__main__":

@@ -1,15 +1,17 @@
 import argparse
+import json
 import logging
 import os
 import time
 from datetime import datetime
 from pathlib import Path
-from urllib.parse import urljoin, urlparse
+from urllib.parse import quote, urljoin, urlparse
 
 import pytz
 import requests
 import undetected_chromedriver as uc
 from _common import (
+    DEFAULT_MAX_ITEMS,
     build_feed,
     clean_article_html,
     extract_summary,
@@ -29,6 +31,9 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 BASE_URL = "https://www.piratewires.com"
+ARTICLE_API_BASE = (
+    "https://piratewires.substack.com/api/v1/islands/client/posts/by-slug"
+)
 CATEGORY_PAGES = {
     "Home": BASE_URL,
     "Culture": f"{BASE_URL}/c/culture",
@@ -142,21 +147,8 @@ def fetch_page_selenium(url: str) -> str:
         driver.get(url)
         _wait_for_article_links(driver, timeout=20)
 
-        # Scroll to load lazy content without fixed sleeps.
-        from selenium.webdriver.support.ui import WebDriverWait
-
-        last_height = driver.execute_script("return document.body.scrollHeight")
-        for _ in range(5):
-            driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
-            try:
-                WebDriverWait(driver, 5).until(
-                    lambda d: d.execute_script("return document.body.scrollHeight")
-                    > last_height
-                )
-                last_height = driver.execute_script("return document.body.scrollHeight")
-            except Exception:
-                break
-
+        # Match the initial HTTP listing; archive scrolling discovers older posts
+        # that cannot fit in the current feed and needlessly increases requests.
         return driver.page_source
     finally:
         if driver:
@@ -283,6 +275,46 @@ def _parse_date(text: str) -> datetime | None:
         return dt
     except Exception:
         return None
+
+
+def fetch_article_api(
+    url: str, session: requests.Session | None = None, *, include_body: bool = True
+) -> dict:
+    """Use the same metered full-article request as the publisher's web client."""
+    parsed = urlparse(url)
+    if parsed.hostname not in (
+        "www.piratewires.com",
+        "piratewires.com",
+    ) or not parsed.path.startswith("/p/"):
+        raise ValueError(f"Unexpected Pirate Wires article URL: {url}")
+    slug = parsed.path.removeprefix("/p/").strip("/")
+    api_url = f"{ARTICLE_API_BASE}/{quote(slug, safe='')}"
+    if include_body:
+        api_url += "?withMetering=true"
+    payload = json.loads(fetch_page_requests(api_url, session=session))
+    post = payload.get("post")
+    if not isinstance(post, dict) or post.get("slug") != slug:
+        raise ValueError(f"Publisher returned the wrong article for {url}")
+    title = post.get("title")
+    body = post.get("body_html") if include_body else ""
+    if not title or (
+        include_body and not body and post.get("type") not in ("podcast", "video")
+    ):
+        raise ValueError(f"Publisher returned no article content for {url}")
+    soup = BeautifulSoup(body or "", "html.parser")
+    content = clean_article_html(soup, url, title=title)
+    if body and not content:
+        raise ValueError(f"Publisher returned no readable article content for {url}")
+    authors = post.get("authors") or []
+    return {
+        "title": title,
+        "description": post.get("subtitle") or extract_summary(soup, soup, title=title),
+        "date": _parse_date(post.get("post_date") or ""),
+        "author": ", ".join(
+            a["name"] for a in authors if isinstance(a, dict) and a.get("name")
+        ),
+        "content_html": content,
+    }
 
 
 def fetch_article_page_requests(
@@ -503,10 +535,8 @@ def main(force: bool = False) -> bool:
         feed_path = feeds_dir / "feed_piratewires.xml"
 
         existing_entries = []
-        existing_links = set()
         if not force:
             existing_entries, _cache = load_cached_entries(feed_path)
-            existing_links = {entry["link"] for entry in existing_entries}
 
         session = build_requests_session()
         articles = collect_listing_articles(session=session)
@@ -516,40 +546,32 @@ def main(force: bool = False) -> bool:
             )
             return False
 
-        new_articles = [
-            article for article in articles if article["link"] not in existing_links
-        ]
+        # Resolve undated links before ranking; old archive links must not displace
+        # known recent stories. Metadata requests do not request metered full bodies.
+        article_session = build_requests_session()
+        for article in articles:
+            if not article.get("date"):
+                metadata = fetch_article_api(
+                    article["link"], session=article_session, include_body=False
+                )
+                if not metadata.get("date"):
+                    raise ValueError(
+                        f"Publisher returned no publication date for {article['link']}"
+                    )
+                article["date"] = metadata["date"]
+        # Only fetch bodies for candidates that can enter the existing 50-item feed.
+        articles.sort(key=lambda article: article["date"], reverse=True)
+        articles = articles[:DEFAULT_MAX_ITEMS]
+        # Refresh these bodies so feeds cached from the old preview path recover too.
+        new_articles = articles
         logger.info(f"Fetching full content for {len(new_articles)} articles...")
 
-        needs_selenium: list[str] = []
+        # Keep article requests separate from a front-end session challenged by Vercel.
         for article in new_articles:
-            html = fetch_article_page_requests(article["link"], session=session)
-            if not html:
-                needs_selenium.append(article["link"])
-                continue
-            metadata = extract_article_metadata(html, article["link"])
+            metadata = fetch_article_api(article["link"], session=article_session)
             for key in ("title", "description", "date", "author", "content_html"):
                 if metadata.get(key):
                     article[key] = metadata[key]
-            if metadata.get("needs_selenium"):
-                needs_selenium.append(article["link"])
-
-        if needs_selenium:
-            selenium_html = fetch_articles_selenium(needs_selenium)
-            missing = set(needs_selenium) - selenium_html.keys()
-            if missing:
-                raise RuntimeError(
-                    f"Could not retrieve article pages: {', '.join(sorted(missing))}"
-                )
-            for article in new_articles:
-                if article["link"] not in selenium_html:
-                    continue
-                metadata = extract_article_metadata(
-                    selenium_html[article["link"]], article["link"]
-                )
-                for key in ("title", "description", "date", "author", "content_html"):
-                    if metadata.get(key):
-                        article[key] = metadata[key]
 
         combined_articles = new_articles + existing_entries
         seen_links = set()

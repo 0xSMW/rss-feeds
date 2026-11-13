@@ -637,4 +637,4 @@ if __name__ == "__main__":
     parser.add_argument("--force", action="store_true", help="Refetch all articles and rebuild the feed.")
     parser.add_argument("--feed-name", dest="feed_name", default="arenamag", help="Feed name suffix (default: arenamag)")
     args = parser.parse_args()
-    main(feed_name=args.feed_name, force=args.force)
+    raise SystemExit(0 if main(feed_name=args.feed_name, force=args.force) else 1)

@@ -545,4 +545,4 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Generate Mistral AI News RSS feed.")
     parser.add_argument("--force", action="store_true", help="Refetch all articles and rebuild the feed.")
     args = parser.parse_args()
-    main(force=args.force)
+    raise SystemExit(0 if main(force=args.force) else 1)
