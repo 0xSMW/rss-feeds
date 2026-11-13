@@ -1,0 +1,813 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<rss xmlns:media="http://search.yahoo.com/mrss/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0">
+  <channel>
+    <title>Digg AI Feed from X</title>
+    <link>https://digg.com/tech</link>
+    <description>Top 10 AI stories from Digg's X-ranked tech feed with click-through links to original source content.</description>
+    <atom:link href="https://raw.githubusercontent.com/0xSMW/rss-feeds/main/feeds/feed_digg_tech.xml" rel="self" type="application/rss+xml"/>
+    <docs>http://www.rssboard.org/rss-specification</docs>
+    <generator>python-feedgen</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 02 Sep 2026 16:03:46 +0000</lastBuildDate>
+    <item>
+      <title>Trump Administration Backs OpenAI Against New York Times</title>
+      <link>https://x.com/MTSlive/status/2095180893271032307</link>
+      <description>Department of Justice filing rejects claims that LLM training violates copyright on national security grounds.</description>
+      <content:encoded><![CDATA[<p><img src="https://digg.com/tech/1kf2wsyq/opengraph-image" alt="Trump Administration Backs OpenAI Against New York Times"/></p>
+<p>Department of Justice filing rejects claims that LLM training violates copyright on national security grounds.</p>
+<p><strong>Original source:</strong> <a href="https://x.com/MTSlive/status/2095180893271032307">https://x.com/MTSlive/status/2095180893271032307</a></p>
+<p><strong>Digg story:</strong> <a href="https://digg.com/tech/1kf2wsyq">https://digg.com/tech/1kf2wsyq</a></p>
+<p>The Department of Justice filed a brief supporting OpenAI in its copyright lawsuit with the New York Times. The filing states that the United States has a strong interest in rejecting arguments that training large language models on copyrighted texts violates copyright law. It adds that such arguments would harm US science, prosperity, and national security. Two public posts on X describe the brief and note an attached screenshot of the court document. One post attributes the position to the Trump administration.</p>
+<ul><li><strong>Views:</strong> 698,458</li><li><strong>Likes:</strong> 7,630</li><li><strong>Bookmarks:</strong> 1,351</li><li><strong>Quotes:</strong> 397</li><li><strong>Replies:</strong> 289</li><li><strong>Posts:</strong> 7</li></ul>
+<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/Scobleizer">Robert Scoble</a></li><li><a href="https://x.com/AndrewCurran_">Andrew Curran</a></li><li><a href="https://x.com/MikeIsaac">rat king 🐀</a></li><li><a href="https://x.com/rohanpaul_ai">Rohan Paul</a></li></ul>]]></content:encoded>
+      <guid isPermaLink="true">https://x.com/MTSlive/status/2095180893271032307</guid>
+      <category>Digg AI from X</category>
+      <pubDate>Wed, 02 Sep 2026 16:03:46 +0000</pubDate>
+      <media:content url="https://digg.com/tech/1kf2wsyq/opengraph-image" type="image/jpeg" medium="image"/>
+    </item>
+    <item>
+      <title>Google Introduces Gemini 3.8 Flash and 3.8 Flash Cyber</title>
+      <link>https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/</link>
+      <description>Google models target agentic workflows and cybersecurity applications through API and enterprise access.</description>
+      <content:encoded><![CDATA[<p><img src="https://digg.com/tech/ag1w1y47/opengraph-image" alt="Google Introduces Gemini 3.8 Flash and 3.8 Flash Cyber"/></p>
+<p>Google models target agentic workflows and cybersecurity applications through API and enterprise access.</p>
+<p><strong>Original source:</strong> <a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/">https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/</a></p>
+<p><strong>Digg story:</strong> <a href="https://digg.com/tech/ag1w1y47">https://digg.com/tech/ag1w1y47</a></p>
+<p>Google announced Gemini 3.8 Flash and 3.8 Flash Cyber for agentic workflows and cybersecurity. Company posts and employee statements describe the models as delivering next-generation intelligence in those areas. Availability covers Gemini API, Google AI Studio, Android Studio, Antigravity, and Gemini Enterprise users. Internal teams noted gains over prior Flash versions for coding tasks. The official blog post presents the pair as updated offerings in the Gemini line.</p>
+<ul><li><strong>Views:</strong> 3,769,311</li><li><strong>Likes:</strong> 29,190</li><li><strong>Bookmarks:</strong> 2,932</li><li><strong>Quotes:</strong> 1,256</li><li><strong>Replies:</strong> 1,772</li><li><strong>Posts:</strong> 27</li></ul>
+<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/GoogleDeepMind">Google DeepMind</a></li><li><a href="https://x.com/GoogleAI">Google AI</a></li><li><a href="https://x.com/OfficialLoganK">Logan Kilpatrick</a></li><li><a href="https://x.com/DynamicWebPaige">👩‍💻 Paige Bailey</a></li><li><a href="https://x.com/koraykv">koray kavukcuoglu</a></li></ul>]]></content:encoded>
+      <guid isPermaLink="true">https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/</guid>
+      <category>Digg AI from X</category>
+      <pubDate>Wed, 02 Sep 2026 15:42:24 +0000</pubDate>
+      <media:content url="https://digg.com/tech/ag1w1y47/opengraph-image" type="image/jpeg" medium="image"/>
+    </item>
+    <item>
+      <title>Posts Highlight Gemini 3.8 Flash Benchmark Scores</title>
+      <link>https://www.youtube.com/watch?v=y52bv4iNfzU</link>
+      <description>Creators share benchmark tables showing Gemini 3.8 Flash results.</description>
+      <content:encoded><![CDATA[<p><img src="https://digg.com/tech/qrwr3f1y/opengraph-image" alt="Posts Highlight Gemini 3.8 Flash Benchmark Scores"/></p>
+<p>Creators share benchmark tables showing Gemini 3.8 Flash results.</p>
+<p><strong>Original source:</strong> <a href="https://www.youtube.com/watch?v=y52bv4iNfzU">https://www.youtube.com/watch?v=y52bv4iNfzU</a></p>
+<p><strong>Digg story:</strong> <a href="https://digg.com/tech/qrwr3f1y">https://digg.com/tech/qrwr3f1y</a></p>
+<p>Kim Isenberg posted a benchmark table on X claiming Gemini 3.8 Flash outperforms Claude Opus 5, Claude Sonnet 5, GPT-5.6 Sol and GPT-5.6 Terra on Terminal Bench 2.1, HLE and other tests, writing &quot;Google is back.&quot; Andrew Curran posted a similar table and stated the model is live for him. Both attached screenshots of the comparisons. Replies on X split between praise for the benchmark gains at lower cost and criticism that real-world performance falls short of frontier models and pricing erases any gains.</p>
+<ul><li><strong>Views:</strong> 242,573</li><li><strong>Likes:</strong> 3,520</li><li><strong>Bookmarks:</strong> 412</li><li><strong>Quotes:</strong> 89</li><li><strong>Replies:</strong> 185</li><li><strong>Posts:</strong> 3</li></ul>
+<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/AndrewCurran_">Andrew Curran</a></li><li><a href="https://x.com/kimmonismus">Chubby♨️</a></li></ul>]]></content:encoded>
+      <guid isPermaLink="true">https://www.youtube.com/watch?v=y52bv4iNfzU</guid>
+      <category>Digg AI from X</category>
+      <pubDate>Wed, 02 Sep 2026 15:15:36 +0000</pubDate>
+      <media:content url="https://digg.com/tech/qrwr3f1y/opengraph-image" type="image/jpeg" medium="image"/>
+    </item>
+    <item>
+      <title>Claude Opens Campus Ambassadors Program Applications</title>
+      <link>https://anthropic.com/campus</link>
+      <description>Official account announces expanded tracks for undergrads, graduate students, and PhDs or postdocs.</description>
+      <content:encoded><![CDATA[<p><img src="https://digg.com/tech/mjk7ka9c/opengraph-image" alt="Claude Opens Campus Ambassadors Program Applications"/></p>
+<p>Official account announces expanded tracks for undergrads, graduate students, and PhDs or postdocs.</p>
+<p><strong>Original source:</strong> <a href="https://anthropic.com/campus">https://anthropic.com/campus</a></p>
+<p><strong>Digg story:</strong> <a href="https://digg.com/tech/mjk7ka9c">https://digg.com/tech/mjk7ka9c</a></p>
+<p>The official Claude account posted that applications are now open for its Campus Ambassadors program. The message states the program is expanding opportunities to more students this year. It specifies three separate tracks aimed at undergrads, graduate students, and PhDs or postdocs. The post includes a graphic attachment on a light grid background and directs readers to apply. As a first-party announcement from the account tied to Anthropic, the update confirms the application period is active based on the content shared.</p>
+<ul><li><strong>Views:</strong> 903,825</li><li><strong>Likes:</strong> 5,713</li><li><strong>Bookmarks:</strong> 4,666</li><li><strong>Quotes:</strong> 107</li><li><strong>Replies:</strong> 228</li><li><strong>Posts:</strong> 2</li></ul>
+<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/YasminRazavi">Yasmin Razavi</a></li></ul>]]></content:encoded>
+      <guid isPermaLink="true">https://anthropic.com/campus</guid>
+      <category>Digg AI from X</category>
+      <pubDate>Wed, 02 Sep 2026 15:14:45 +0000</pubDate>
+      <media:content url="https://digg.com/tech/mjk7ka9c/opengraph-image" type="image/jpeg" medium="image"/>
+    </item>
+    <item>
+      <title>ElevenLabs Appoints Ashley Kramer Chief Revenue Officer</title>
+      <link>https://elevenlabs.io/blog/cro</link>
+      <description>The voice AI company announces the hire via its official account on X.</description>
+      <content:encoded><![CDATA[<p><img src="https://digg.com/tech/epsk49zp/opengraph-image" alt="ElevenLabs Appoints Ashley Kramer Chief Revenue Officer"/></p>
+<p>The voice AI company announces the hire via its official account on X.</p>
+<p><strong>Original source:</strong> <a href="https://elevenlabs.io/blog/cro">https://elevenlabs.io/blog/cro</a></p>
+<p><strong>Digg story:</strong> <a href="https://digg.com/tech/epsk49zp">https://digg.com/tech/epsk49zp</a></p>
+<p>ElevenLabs announced the appointment of Ashley Kramer as Chief Revenue Officer. The company&#x27;s official account stated that Kramer will work closely with customers around the world to deploy AI that interacts naturally in their country and context. The post included a split-layout promotional graphic with the ElevenLabs logo and bold text about the appointment. This first-party announcement from the organization establishes the leadership change as reported directly by the company.</p>
+<ul><li><strong>Views:</strong> 51,148</li><li><strong>Likes:</strong> 488</li><li><strong>Bookmarks:</strong> 39</li><li><strong>Quotes:</strong> 6</li><li><strong>Replies:</strong> 40</li><li><strong>Posts:</strong> 4</li></ul>
+<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/saranormous">sarah guo</a></li><li><a href="https://x.com/ElevenLabs">ElevenLabs</a></li><li><a href="https://x.com/mati">Mati Staniszewski</a></li></ul>]]></content:encoded>
+      <guid isPermaLink="true">https://elevenlabs.io/blog/cro</guid>
+      <category>Digg AI from X</category>
+      <pubDate>Wed, 02 Sep 2026 13:17:11 +0000</pubDate>
+      <media:content url="https://digg.com/tech/epsk49zp/opengraph-image" type="image/jpeg" medium="image"/>
+    </item>
+    <item>
+      <title>Paul Graham Notes Twitter Hiding AI Replies as Probable Spam</title>
+      <link>https://x.com/paulg/status/2095100424684437754</link>
+      <description>Observation from the Y Combinator co-founder on hidden replies to his post.</description>
+      <content:encoded><![CDATA[<p><img src="https://digg.com/tech/p8ucc9sh/opengraph-image" alt="Paul Graham Notes Twitter Hiding AI Replies as Probable Spam"/></p>
+<p>Observation from the Y Combinator co-founder on hidden replies to his post.</p>
+<p><strong>Original source:</strong> <a href="https://x.com/paulg/status/2095100424684437754">https://x.com/paulg/status/2095100424684437754</a></p>
+<p><strong>Digg story:</strong> <a href="https://digg.com/tech/p8ucc9sh">https://digg.com/tech/p8ucc9sh</a></p>
+<p>Paul Graham shared an observation about changes on the Twitter platform. He noted that Twitter now classifies a large number of AI-generated replies as probable spam. Specifically on a recent tweet he made 34 of the 59 replies were hidden under this category. Graham presumes that AI generation was the main reason for this action. He further states that this situation is likely to worsen over time. As a result he anticipates that from this point onward the majority of replies to tweets will end up hidden from users.</p>
+<ul><li><strong>Views:</strong> 258,682</li><li><strong>Likes:</strong> 3,181</li><li><strong>Bookmarks:</strong> 139</li><li><strong>Quotes:</strong> 44</li><li><strong>Replies:</strong> 388</li><li><strong>Posts:</strong> 2</li></ul>
+<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/paulg">Paul Graham</a></li><li><a href="https://x.com/nikitabier">Nikita Bier</a></li></ul>]]></content:encoded>
+      <guid isPermaLink="true">https://x.com/paulg/status/2095100424684437754</guid>
+      <category>Digg AI from X</category>
+      <pubDate>Wed, 02 Sep 2026 10:44:00 +0000</pubDate>
+      <media:content url="https://digg.com/tech/p8ucc9sh/opengraph-image" type="image/jpeg" medium="image"/>
+    </item>
+    <item>
+      <title>Shyamal Anadkat Supports Variance House Residency</title>
+      <link>https://www.variance.house/</link>
+      <description>Research engineer shares details of a Bengaluru deep-tech founder residency program.</description>
+      <content:encoded><![CDATA[<p><img src="https://digg.com/tech/o6hfwyx9/opengraph-image" alt="Shyamal Anadkat Supports Variance House Residency"/></p>
+<p>Research engineer shares details of a Bengaluru deep-tech founder residency program.</p>
+<p><strong>Original source:</strong> <a href="https://www.variance.house/">https://www.variance.house/</a></p>
+<p><strong>Digg story:</strong> <a href="https://digg.com/tech/o6hfwyx9">https://digg.com/tech/o6hfwyx9</a></p>
+<p>Shyamal Anadkat posted excitement about supporting Variance House. He described the program as a free no-equity thirty-day deep-tech residency in Bengaluru for fourteen founders. Benefits listed include accommodation meals workspace and a builder community along with shared AI cloud software and infrastructure credits plus access to hardware labs and prototyping support. The linked source presents Variance House as a one-month deep-tech founder residency in Bengaluru. The statements appear in his public post and the associated site.</p>
+<ul><li><strong>Views:</strong> 9,370</li><li><strong>Likes:</strong> 128</li><li><strong>Bookmarks:</strong> 44</li><li><strong>Quotes:</strong> 2</li><li><strong>Replies:</strong> 7</li><li><strong>Posts:</strong> 1</li></ul>
+<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/shyamalanadkat">shyamal</a></li></ul>]]></content:encoded>
+      <guid isPermaLink="true">https://www.variance.house/</guid>
+      <category>Digg AI from X</category>
+      <pubDate>Wed, 02 Sep 2026 10:09:25 +0000</pubDate>
+      <media:content url="https://digg.com/tech/o6hfwyx9/opengraph-image" type="image/jpeg" medium="image"/>
+    </item>
+    <item>
+      <title>Kim Isenberg Predicts GPT-Astra Release Thursday</title>
+      <link>https://x.com/kimmonismus/status/2095089329752174609</link>
+      <description>Post from German AI creator attributes prediction to several frequent leakers.</description>
+      <content:encoded><![CDATA[<p><img src="https://digg.com/tech/b06tfzc7/opengraph-image" alt="Kim Isenberg Predicts GPT-Astra Release Thursday"/></p>
+<p>Post from German AI creator attributes prediction to several frequent leakers.</p>
+<p><strong>Original source:</strong> <a href="https://x.com/kimmonismus/status/2095089329752174609">https://x.com/kimmonismus/status/2095089329752174609</a></p>
+<p><strong>Digg story:</strong> <a href="https://digg.com/tech/b06tfzc7">https://digg.com/tech/b06tfzc7</a></p>
+<p>Kim Isenberg posted that GPT-Astra will likely be released tomorrow, Thursday. He named Dan as the main source and listed Leo, Chris, Chetsula, and M1Astra as other reliable leakers who have been accurate in the past. The message appears in a quoted X thread that includes an attachment of three PNG files. The statement presents the release as probable rather than confirmed.</p>
+<ul><li><strong>Views:</strong> 183,051</li><li><strong>Likes:</strong> 3,409</li><li><strong>Bookmarks:</strong> 267</li><li><strong>Quotes:</strong> 30</li><li><strong>Replies:</strong> 169</li><li><strong>Posts:</strong> 3</li></ul>
+<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/AndrewCurran_">Andrew Curran</a></li><li><a href="https://x.com/kimmonismus">Chubby♨️</a></li></ul>]]></content:encoded>
+      <guid isPermaLink="true">https://x.com/kimmonismus/status/2095089329752174609</guid>
+      <category>Digg AI from X</category>
+      <pubDate>Wed, 02 Sep 2026 09:59:55 +0000</pubDate>
+      <media:content url="https://digg.com/tech/b06tfzc7/opengraph-image" type="image/jpeg" medium="image"/>
+    </item>
+    <item>
+      <title>Investor Predicts LLM Arbitration Replacing Courts</title>
+      <link>https://x.com/WillManidis/status/2095080500494839854</link>
+      <description>Investor Will Manidis claims LLM arbitration will replace courts as jurisdictions turn spiritual and political.</description>
+      <content:encoded><![CDATA[<p><img src="https://digg.com/tech/qpkkao32/opengraph-image" alt="Investor Predicts LLM Arbitration Replacing Courts"/></p>
+<p>Investor Will Manidis claims LLM arbitration will replace courts as jurisdictions turn spiritual and political.</p>
+<p><strong>Original source:</strong> <a href="https://x.com/WillManidis/status/2095080500494839854">https://x.com/WillManidis/status/2095080500494839854</a></p>
+<p><strong>Digg story:</strong> <a href="https://digg.com/tech/qpkkao32">https://digg.com/tech/qpkkao32</a></p>
+<p>Will Manidis posted that LLM driven private arbitration will shock people by quickly replacing courts for disputes. He described major jurisdictions such as Delaware as more spiritual than physical spaces, with examples like KAFD, and called courts too political. Manidis is a New York entrepreneur who founded ScienceIO, an AI biomedical company acquired in 2024. The post stands as his individual statement on future dispute resolution.</p>
+<ul><li><strong>Views:</strong> 9,711</li><li><strong>Likes:</strong> 170</li><li><strong>Bookmarks:</strong> 32</li><li><strong>Quotes:</strong> 3</li><li><strong>Replies:</strong> 10</li><li><strong>Posts:</strong> 1</li></ul>
+<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/WillManidis">Will Manidis</a></li></ul>]]></content:encoded>
+      <guid isPermaLink="true">https://x.com/WillManidis/status/2095080500494839854</guid>
+      <category>Digg AI from X</category>
+      <pubDate>Wed, 02 Sep 2026 09:24:50 +0000</pubDate>
+      <media:content url="https://digg.com/tech/qpkkao32/opengraph-image" type="image/jpeg" medium="image"/>
+    </item>
+    <item>
+      <title>Rachel Thomas Says AI Has Become New PowerPoint</title>
+      <link>https://marcwatkins.substack.com/p/context-is-all-you-need</link>
+      <description>Fast.ai co-founder Rachel Thomas posted her fear that AI is often used in rote, uninteresting ways.</description>
+      <content:encoded><![CDATA[<p><img src="https://digg.com/tech/jodsncmu/opengraph-image" alt="Rachel Thomas Says AI Has Become New PowerPoint"/></p>
+<p>Fast.ai co-founder Rachel Thomas posted her fear that AI is often used in rote, uninteresting ways.</p>
+<p><strong>Original source:</strong> <a href="https://marcwatkins.substack.com/p/context-is-all-you-need">https://marcwatkins.substack.com/p/context-is-all-you-need</a></p>
+<p><strong>Digg story:</strong> <a href="https://digg.com/tech/jodsncmu">https://digg.com/tech/jodsncmu</a></p>
+<p>Rachel Thomas posted that her fear is AI has become the new PowerPoint and not in a good way. She compared it to how PowerPoint usurped the lecture it was supposed to support. Many are using AI in rote and uninteresting ways, the post stated. It takes creativity, a sense of ownership and direction to use slides well, she added. The tweet by the mathematician and AI educator referenced @Marc__Watkins.</p>
+<ul><li><strong>Views:</strong> 2,833</li><li><strong>Likes:</strong> 33</li><li><strong>Bookmarks:</strong> 7</li><li><strong>Replies:</strong> 2</li><li><strong>Posts:</strong> 2</li></ul>
+<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/math_rachel">Rachel Thomas</a></li></ul>]]></content:encoded>
+      <guid isPermaLink="true">https://marcwatkins.substack.com/p/context-is-all-you-need</guid>
+      <category>Digg AI from X</category>
+      <pubDate>Wed, 02 Sep 2026 09:22:47 +0000</pubDate>
+      <media:content url="https://digg.com/tech/jodsncmu/opengraph-image" type="image/jpeg" medium="image"/>
+    </item>
+    <item>
+      <title>Teortaxes Urges Passenger Pigeon Restoration via DNA</title>
+      <link>https://x.com/teortaxesTex/status/2095064127228051601</link>
+      <description>Pseudonymous AI developer proposes de-extinction as a simple AGI task.</description>
+      <content:encoded><![CDATA[<p><img src="https://digg.com/tech/k7eiprks/opengraph-image" alt="Teortaxes Urges Passenger Pigeon Restoration via DNA"/></p>
+<p>Pseudonymous AI developer proposes de-extinction as a simple AGI task.</p>
+<p><strong>Original source:</strong> <a href="https://x.com/teortaxesTex/status/2095064127228051601">https://x.com/teortaxesTex/status/2095064127228051601</a></p>
+<p><strong>Digg story:</strong> <a href="https://digg.com/tech/k7eiprks">https://digg.com/tech/k7eiprks</a></p>
+<p>Teortaxes, a pseudonymous AI developer and commentator known as DeepSeek&#x27;s most vocal online booster, posted a call for Americans to restore the passenger pigeon. The user stated that abundant remains should allow DNA extraction using current technology. The post described the birds as awesome based on historical accounts and labeled the project a minor task for an AGI civilization. The message included two attached images.</p>
+<ul><li><strong>Views:</strong> 2,949</li><li><strong>Likes:</strong> 41</li><li><strong>Bookmarks:</strong> 6</li><li><strong>Replies:</strong> 3</li><li><strong>Posts:</strong> 1</li></ul>
+<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/teortaxesTex">Teortaxes▶️ (DeepSeek 推特🐋铁粉 2023 – ∞)</a></li></ul>]]></content:encoded>
+      <guid isPermaLink="true">https://x.com/teortaxesTex/status/2095064127228051601</guid>
+      <category>Digg AI from X</category>
+      <pubDate>Wed, 02 Sep 2026 08:19:46 +0000</pubDate>
+      <media:content url="https://digg.com/tech/k7eiprks/opengraph-image" type="image/jpeg" medium="image"/>
+    </item>
+    <item>
+      <title>Joscha Bach Says Media Universe Controls Humans via AI</title>
+      <link>https://x.com/Plinz/status/2095062694940319867</link>
+      <description>Cognitive scientist Joscha Bach posted that an AI-driven media system has supplanted human nature and agency.</description>
+      <content:encoded><![CDATA[<p><img src="https://digg.com/tech/zb7vjc50/opengraph-image" alt="Joscha Bach Says Media Universe Controls Humans via AI"/></p>
+<p>Cognitive scientist Joscha Bach posted that an AI-driven media system has supplanted human nature and agency.</p>
+<p><strong>Original source:</strong> <a href="https://x.com/Plinz/status/2095062694940319867">https://x.com/Plinz/status/2095062694940319867</a></p>
+<p><strong>Digg story:</strong> <a href="https://digg.com/tech/zb7vjc50">https://digg.com/tech/zb7vjc50</a></p>
+<p>Joscha Bach, a cognitive scientist known for work on architectures like MicroPsi and models of mind, posted a statement on X. He described the media universe as an intelligent artificial virtual reality that includes news, social media, education, the monetary system, industry, and public spaces. Bach wrote that this universe has replaced human nature and access to it. He stated it cannot be controlled by humans but instead controls them, adding that people are already caught in an AI.</p>
+<ul><li><strong>Views:</strong> 5,844</li><li><strong>Likes:</strong> 124</li><li><strong>Bookmarks:</strong> 25</li><li><strong>Quotes:</strong> 3</li><li><strong>Replies:</strong> 23</li><li><strong>Posts:</strong> 1</li></ul>
+<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/Plinz">Joscha Bach</a></li></ul>]]></content:encoded>
+      <guid isPermaLink="true">https://x.com/Plinz/status/2095062694940319867</guid>
+      <category>Digg AI from X</category>
+      <pubDate>Wed, 02 Sep 2026 08:14:05 +0000</pubDate>
+      <media:content url="https://digg.com/tech/zb7vjc50/opengraph-image" type="image/jpeg" medium="image"/>
+    </item>
+    <item>
+      <title>Joscha Bach Defends Motives of AI Lab Researchers</title>
+      <link>https://x.com/Plinz/status/2095048110099599429</link>
+      <description>Cognitive scientist shares observations from visits to major AI labs on X.</description>
+      <content:encoded><![CDATA[<p><img src="https://digg.com/tech/4z19need/opengraph-image" alt="Joscha Bach Defends Motives of AI Lab Researchers"/></p>
+<p>Cognitive scientist shares observations from visits to major AI labs on X.</p>
+<p><strong>Original source:</strong> <a href="https://x.com/Plinz/status/2095048110099599429">https://x.com/Plinz/status/2095048110099599429</a></p>
+<p><strong>Digg story:</strong> <a href="https://digg.com/tech/4z19need">https://digg.com/tech/4z19need</a></p>
+<p>Joscha Bach posted on X that most people he met at big AI labs are kind, conscientious, and sincerely concerned with ethical behavior. He stated their work on making AI safe is not a cover for nihilism or greed. Bach described their goal as improving the world. The post frames this view as apparently controversial. The tweet comes from the researcher known for cognitive architectures like MicroPsi and models of mind.</p>
+<ul><li><strong>Views:</strong> 14,525</li><li><strong>Likes:</strong> 336</li><li><strong>Bookmarks:</strong> 46</li><li><strong>Quotes:</strong> 5</li><li><strong>Replies:</strong> 77</li><li><strong>Posts:</strong> 1</li></ul>
+<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/Plinz">Joscha Bach</a></li></ul>]]></content:encoded>
+      <guid isPermaLink="true">https://x.com/Plinz/status/2095048110099599429</guid>
+      <category>Digg AI from X</category>
+      <pubDate>Wed, 02 Sep 2026 07:16:08 +0000</pubDate>
+      <media:content url="https://digg.com/tech/4z19need/opengraph-image" type="image/jpeg" medium="image"/>
+    </item>
+    <item>
+      <title>MusharofChy Launches NextAdmin on Product Hunt</title>
+      <link>https://www.producthunt.com/products/nextadmin</link>
+      <description>Open-source admin app with AI agent tools, dashboards, and UI components launched on Product Hunt.</description>
+      <content:encoded><![CDATA[<p><img src="https://digg.com/tech/09fywteh/opengraph-image" alt="MusharofChy Launches NextAdmin on Product Hunt"/></p>
+<p>Open-source admin app with AI agent tools, dashboards, and UI components launched on Product Hunt.</p>
+<p><strong>Original source:</strong> <a href="https://www.producthunt.com/products/nextadmin">https://www.producthunt.com/products/nextadmin</a></p>
+<p><strong>Digg story:</strong> <a href="https://digg.com/tech/09fywteh">https://digg.com/tech/09fywteh</a></p>
+<p>MusharofChy announced the Product Hunt launch of NextAdmin, an open-source app meant to keep AI agents consistent across pages instead of regenerating outputs or creating low-quality results. The post lists 200+ UI components, six dashboards, AGENTS.md, skills, and prompts as included features. It shows a website screenshot and asks for support. The announcement comes from the author&#x27;s X account, where the project is presented as a first-party release.</p>
+<ul><li><strong>Views:</strong> 2,141</li><li><strong>Likes:</strong> 33</li><li><strong>Bookmarks:</strong> 5</li><li><strong>Quotes:</strong> 2</li><li><strong>Replies:</strong> 7</li><li><strong>Posts:</strong> 2</li></ul>
+<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/Scobleizer">Robert Scoble</a></li></ul>]]></content:encoded>
+      <guid isPermaLink="true">https://www.producthunt.com/products/nextadmin</guid>
+      <category>Digg AI from X</category>
+      <pubDate>Wed, 02 Sep 2026 07:06:56 +0000</pubDate>
+      <media:content url="https://digg.com/tech/09fywteh/opengraph-image" type="image/jpeg" medium="image"/>
+    </item>
+    <item>
+      <title>LisanBench Creator Says CoT Monitorability Was Doomed</title>
+      <link>https://x.com/MicahCarroll/status/2095023282051563835</link>
+      <description>Pseudonymous LisanBench creator states CoT monitorability was doomed from the start.</description>
+      <content:encoded><![CDATA[<p><img src="https://digg.com/tech/7t36xivx/opengraph-image" alt="LisanBench Creator Says CoT Monitorability Was Doomed"/></p>
+<p>Pseudonymous LisanBench creator states CoT monitorability was doomed from the start.</p>
+<p><strong>Original source:</strong> <a href="https://x.com/MicahCarroll/status/2095023282051563835">https://x.com/MicahCarroll/status/2095023282051563835</a></p>
+<p><strong>Digg story:</strong> <a href="https://digg.com/tech/7t36xivx">https://digg.com/tech/7t36xivx</a></p>
+<p>@scaling01, who runs the LisanBench LLM reasoning benchmark, posted that efforts to monitor chain-of-thought outputs were doomed from the start and that mechanistic interpretability always made more sense. The comment appeared amid quotes and replies discussing OpenAI statements on model architectures. Yo Shavit, Nathan Labenz, Micah Carroll, Ryan Greenblatt, Noam Brown, Mikita Balesni, and David Pfau also posted in the thread, covering topics such as trust in OpenAI, risks from recurrent models, and calls for limits on opaque serial depth.</p>
+<ul><li><strong>Views:</strong> 470,845</li><li><strong>Likes:</strong> 3,411</li><li><strong>Bookmarks:</strong> 667</li><li><strong>Quotes:</strong> 10</li><li><strong>Replies:</strong> 91</li><li><strong>Posts:</strong> 11</li></ul>
+<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/polynoamial">Noam Brown</a></li><li><a href="https://x.com/pfau">David Pfau</a></li><li><a href="https://x.com/nabla_theta">Leo Gao</a></li><li><a href="https://x.com/yonashav">Yo Shavit</a></li><li><a href="https://x.com/MicahCarroll">Micah Carroll</a></li></ul>]]></content:encoded>
+      <guid isPermaLink="true">https://x.com/MicahCarroll/status/2095023282051563835</guid>
+      <category>Digg AI from X</category>
+      <pubDate>Wed, 02 Sep 2026 05:37:28 +0000</pubDate>
+      <media:content url="https://digg.com/tech/7t36xivx/opengraph-image" type="image/jpeg" medium="image"/>
+    </item>
+    <item>
+      <title>Cheng Lou Retweets Claim on Fable 5.1 Cursive</title>
+      <link>https://x.com/yuwen_lu_/status/2095016781824082252</link>
+      <description>A retweet highlights an AI tool generating Chinese wild cursive script.</description>
+      <content:encoded><![CDATA[<p><img src="https://digg.com/tech/q3ttkfa5/opengraph-image" alt="Cheng Lou Retweets Claim on Fable 5.1 Cursive"/></p>
+<p>A retweet highlights an AI tool generating Chinese wild cursive script.</p>
+<p><strong>Original source:</strong> <a href="https://x.com/yuwen_lu_/status/2095016781824082252">https://x.com/yuwen_lu_/status/2095016781824082252</a></p>
+<p><strong>Digg story:</strong> <a href="https://digg.com/tech/q3ttkfa5">https://digg.com/tech/q3ttkfa5</a></p>
+<p>Cheng Lou, the engineer who worked on React.js and now works at Midjourney, retweeted a post from yuwen_lu. The post states that Fable 5.1 can figure out by itself how to write wild cursive. It includes a video demonstration of the output. The original message mixes English and Chinese to express surprise at the AI&#x27;s ability to produce the complex calligraphy style without further guidance. No additional details on the model&#x27;s training or verification steps appear in the visible post. The retweet stands as the only action recorded in the packet.</p>
+<ul><li><strong>Views:</strong> 361,734</li><li><strong>Likes:</strong> 3,361</li><li><strong>Bookmarks:</strong> 1,349</li><li><strong>Quotes:</strong> 39</li><li><strong>Replies:</strong> 110</li><li><strong>Posts:</strong> 2</li></ul>
+<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/_chenglou">Cheng Lou</a></li></ul>]]></content:encoded>
+      <guid isPermaLink="true">https://x.com/yuwen_lu_/status/2095016781824082252</guid>
+      <category>Digg AI from X</category>
+      <pubDate>Wed, 02 Sep 2026 05:11:38 +0000</pubDate>
+      <media:content url="https://digg.com/tech/q3ttkfa5/opengraph-image" type="image/jpeg" medium="image"/>
+    </item>
+    <item>
+      <title>OpenAI Engineer Skips Line-by-Line Kernel Review</title>
+      <link>https://x.com/cdleary/status/2094878051238887834</link>
+      <description>Retweet from SemiAnalysis founder notes compilers evolving beyond line-by-line code inspection.</description>
+      <content:encoded><![CDATA[<p><img src="https://digg.com/tech/s9ju85kj/opengraph-image" alt="OpenAI Engineer Skips Line-by-Line Kernel Review"/></p>
+<p>Retweet from SemiAnalysis founder notes compilers evolving beyond line-by-line code inspection.</p>
+<p><strong>Original source:</strong> <a href="https://x.com/cdleary/status/2094878051238887834">https://x.com/cdleary/status/2094878051238887834</a></p>
+<p><strong>Digg story:</strong> <a href="https://digg.com/tech/s9ju85kj">https://digg.com/tech/s9ju85kj</a></p>
+<p>Dylan Patel, founder of SemiAnalysis, retweeted a post by @cdleary. The post quoted an OpenAI engineer explaining why line-by-line kernel review was unnecessary. Patel added a comment with an emoji and stated that compilers 2.0 is underway. The exchange focuses on changes in low-level systems work at OpenAI. The conversation appears in public posts on X, including a linked article. No further details on the engineer&#x27;s name, project, or methods appear in the source lines provided.</p>
+<ul><li><strong>Views:</strong> 219,154</li><li><strong>Likes:</strong> 835</li><li><strong>Bookmarks:</strong> 1,438</li><li><strong>Quotes:</strong> 31</li><li><strong>Replies:</strong> 28</li><li><strong>Posts:</strong> 2</li></ul>
+<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/dylan522p">Dylan Patel</a></li></ul>]]></content:encoded>
+      <guid isPermaLink="true">https://x.com/cdleary/status/2094878051238887834</guid>
+      <category>Digg AI from X</category>
+      <pubDate>Tue, 01 Sep 2026 20:00:23 +0000</pubDate>
+      <media:content url="https://digg.com/tech/s9ju85kj/opengraph-image" type="image/jpeg" medium="image"/>
+    </item>
+    <item>
+      <title>Elon Musk Announces Free Token Reset for Grok Bot Users</title>
+      <link>https://x.com/elonmusk/status/2094813795742847123</link>
+      <description>Grok is providing another reset on token usage limits for all its bot users.</description>
+      <content:encoded><![CDATA[<p><img src="https://digg.com/tech/8ph8dlgd/opengraph-image" alt="Elon Musk Announces Free Token Reset for Grok Bot Users"/></p>
+<p>Grok is providing another reset on token usage limits for all its bot users.</p>
+<p><strong>Original source:</strong> <a href="https://x.com/elonmusk/status/2094813795742847123">https://x.com/elonmusk/status/2094813795742847123</a></p>
+<p><strong>Digg story:</strong> <a href="https://digg.com/tech/8ph8dlgd">https://digg.com/tech/8ph8dlgd</a></p>
+<p>Elon Musk posted that Grok is giving all its bot users another free reset on token usage. The change supplies extra access to the AI model without new payments or waiting periods. Musk is identified in the post as founder and CEO of Tesla, SpaceX, xAI and owner of X. The announcement is presented as a direct update for users of the Grok bot.</p>
+<ul><li><strong>Views:</strong> 4,068,689</li><li><strong>Likes:</strong> 22,659</li><li><strong>Bookmarks:</strong> 725</li><li><strong>Quotes:</strong> 666</li><li><strong>Replies:</strong> 3,001</li><li><strong>Posts:</strong> 2</li></ul>
+<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/elonmusk">Elon Musk</a></li><li><a href="https://x.com/altryne">Alex Volkov</a></li></ul>]]></content:encoded>
+      <guid isPermaLink="true">https://x.com/elonmusk/status/2094813795742847123</guid>
+      <category>Digg AI from X</category>
+      <pubDate>Tue, 01 Sep 2026 15:45:03 +0000</pubDate>
+      <media:content url="https://digg.com/tech/8ph8dlgd/opengraph-image" type="image/jpeg" medium="image"/>
+    </item>
+    <item>
+      <title>Grok Bot Runs on Own Cloud Computer</title>
+      <link>https://x.com/sriramk/status/2094810234908713047</link>
+      <description>Elon Musk states Grok operates independently on cloud infrastructure.</description>
+      <content:encoded><![CDATA[<p><img src="https://digg.com/tech/suxxommd/opengraph-image" alt="Grok Bot Runs on Own Cloud Computer"/></p>
+<p>Elon Musk states Grok operates independently on cloud infrastructure.</p>
+<p><strong>Original source:</strong> <a href="https://x.com/sriramk/status/2094810234908713047">https://x.com/sriramk/status/2094810234908713047</a></p>
+<p><strong>Digg story:</strong> <a href="https://digg.com/tech/suxxommd">https://digg.com/tech/suxxommd</a></p>
+<p>Sriram Krishnan posted about AI agent UX problems, including local filesystem access and whether agents can run from a phone or require a synced Mac mini. Elon Musk quoted the post and stated that Grok Bot runs on its own computer in the cloud 24/7, so device status does not matter. A minority of replies raised security concerns about granting cloud agents access to corporate environments.</p>
+<ul><li><strong>Views:</strong> 5,024,744</li><li><strong>Likes:</strong> 5,544</li><li><strong>Bookmarks:</strong> 330</li><li><strong>Quotes:</strong> 76</li><li><strong>Replies:</strong> 778</li><li><strong>Posts:</strong> 3</li></ul>
+<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/elonmusk">Elon Musk</a></li><li><a href="https://x.com/sriramk">Sriram Krishnan</a></li><li><a href="https://x.com/omarsar0">elvis</a></li></ul>]]></content:encoded>
+      <guid isPermaLink="true">https://x.com/sriramk/status/2094810234908713047</guid>
+      <category>Digg AI from X</category>
+      <pubDate>Tue, 01 Sep 2026 15:30:54 +0000</pubDate>
+      <media:content url="https://digg.com/tech/suxxommd/opengraph-image" type="image/jpeg" medium="image"/>
+    </item>
+    <item>
+      <title>Edwin Arbus Announces Joining AnthropicAI</title>
+      <link>https://x.com/edwinarbus/status/2094809938996674616</link>
+      <description>Developer posts video of his San Francisco run after announcing new role.</description>
+      <content:encoded><![CDATA[<p><img src="https://digg.com/tech/mhkigpsp/opengraph-image" alt="Edwin Arbus Announces Joining AnthropicAI"/></p>
+<p>Developer posts video of his San Francisco run after announcing new role.</p>
+<p><strong>Original source:</strong> <a href="https://x.com/edwinarbus/status/2094809938996674616">https://x.com/edwinarbus/status/2094809938996674616</a></p>
+<p><strong>Digg story:</strong> <a href="https://digg.com/tech/mhkigpsp">https://digg.com/tech/mhkigpsp</a></p>
+<p>Edwin Arbus posted on X that he joined AnthropicAI. The message included an 18-second video of his morning run through San Francisco&#x27;s Sunset District. The clip shows a custom 3D satellite map overlay with live stats for pace, elevation, and distance. Arbus previously served as Developer Community Lead at OpenAI and worked at Stripe for years. Replies came from colleagues at Stripe, Anthropic, and other tech figures offering congratulations. One Anthropic engineer wrote &#x27;welcome back, buddy.&#x27;</p>
+<ul><li><strong>Views:</strong> 393,773</li><li><strong>Likes:</strong> 1,862</li><li><strong>Bookmarks:</strong> 175</li><li><strong>Quotes:</strong> 14</li><li><strong>Replies:</strong> 213</li><li><strong>Posts:</strong> 7</li></ul>
+<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/lennysan">Lenny Rachitsky</a></li><li><a href="https://x.com/GregKamradt">Greg Kamradt</a></li><li><a href="https://x.com/edwinarbus">edwin</a></li><li><a href="https://x.com/skirano">Pietro Schirano</a></li><li><a href="https://x.com/sammcallister">sam mcallister</a></li></ul>]]></content:encoded>
+      <guid isPermaLink="true">https://x.com/edwinarbus/status/2094809938996674616</guid>
+      <category>Digg AI from X</category>
+      <pubDate>Tue, 01 Sep 2026 15:29:43 +0000</pubDate>
+      <media:content url="https://digg.com/tech/mhkigpsp/opengraph-image" type="image/jpeg" medium="image"/>
+    </item>
+    <item>
+      <title>Elon Musk Says X Hosts Almost All AI Discourse</title>
+      <link>https://alignednews.com/ai</link>
+      <description>The post comes from the account of X's owner and xAI founder.</description>
+      <content:encoded><![CDATA[<p><img src="https://digg.com/tech/3s5frbeg/opengraph-image" alt="Elon Musk Says X Hosts Almost All AI Discourse"/></p>
+<p>The post comes from the account of X&#x27;s owner and xAI founder.</p>
+<p><strong>Original source:</strong> <a href="https://alignednews.com/ai">https://alignednews.com/ai</a></p>
+<p><strong>Digg story:</strong> <a href="https://digg.com/tech/3s5frbeg">https://digg.com/tech/3s5frbeg</a></p>
+<p>Elon Musk posted that X is where almost all AI discourse takes place. The message identifies him as founder and CEO of Tesla, SpaceX, xAI and owner of X. It positions the platform as the main venue for conversations among AI professionals and researchers. The packet contains only this statement from Musk and generated summaries of it. No other posts or sources in the packet corroborate or refute the claim. The assertion stands as Musk&#x27;s direct comment on the location of AI discussion.</p>
+<ul><li><strong>Views:</strong> 4,329,652</li><li><strong>Likes:</strong> 35,474</li><li><strong>Bookmarks:</strong> 812</li><li><strong>Quotes:</strong> 461</li><li><strong>Replies:</strong> 3,164</li><li><strong>Posts:</strong> 3</li></ul>
+<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/elonmusk">Elon Musk</a></li><li><a href="https://x.com/tunguz">Bojan Tunguz</a></li><li><a href="https://x.com/BrianRoemmele">Brian Roemmele</a></li></ul>]]></content:encoded>
+      <guid isPermaLink="true">https://alignednews.com/ai</guid>
+      <category>Digg AI from X</category>
+      <pubDate>Tue, 01 Sep 2026 15:11:20 +0000</pubDate>
+      <media:content url="https://digg.com/tech/3s5frbeg/opengraph-image" type="image/jpeg" medium="image"/>
+    </item>
+    <item>
+      <title>Perplexity Adds Hybrid Compute to Mac App</title>
+      <link>https://huggingface.co/perplexity-ai/pplx-pii-masking</link>
+      <description>Perplexity AI enables tasks to shift from cloud to local models on Mac for private data.</description>
+      <content:encoded><![CDATA[<p><img src="https://digg.com/tech/i58ewm5d/opengraph-image" alt="Perplexity Adds Hybrid Compute to Mac App"/></p>
+<p>Perplexity AI enables tasks to shift from cloud to local models on Mac for private data.</p>
+<p><strong>Original source:</strong> <a href="https://huggingface.co/perplexity-ai/pplx-pii-masking">https://huggingface.co/perplexity-ai/pplx-pii-masking</a></p>
+<p><strong>Digg story:</strong> <a href="https://digg.com/tech/i58ewm5d">https://digg.com/tech/i58ewm5d</a></p>
+<p>Perplexity announced hybrid compute for its Mac app. A task starts in the cloud then switches to a local model on the user&#x27;s Mac for steps involving private files or sensitive data. The company is also open-sourcing the PII classifier that decides when to send work to the local model. The feature is available today in the Perplexity Mac app.</p>
+<ul><li><strong>Views:</strong> 421,906</li><li><strong>Likes:</strong> 4,322</li><li><strong>Bookmarks:</strong> 1,184</li><li><strong>Quotes:</strong> 140</li><li><strong>Replies:</strong> 233</li><li><strong>Posts:</strong> 4</li></ul>
+<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/AravSrinivas">Aravind Srinivas</a></li><li><a href="https://x.com/perplexity_ai">Perplexity</a></li><li><a href="https://x.com/davidlee">davidlee</a></li></ul>]]></content:encoded>
+      <guid isPermaLink="true">https://huggingface.co/perplexity-ai/pplx-pii-masking</guid>
+      <category>Digg AI from X</category>
+      <pubDate>Tue, 01 Sep 2026 15:04:12 +0000</pubDate>
+      <media:content url="https://digg.com/tech/i58ewm5d/opengraph-image" type="image/jpeg" medium="image"/>
+    </item>
+    <item>
+      <title>OpenRouter Adds Mercury 2.5 Preview from Inception AI</title>
+      <link>https://x.com/OpenRouter/status/2094792813603119482</link>
+      <description>OpenRouter says Mercury 2.5 Preview reaches 1,107 tokens per second exclusively on the platform with tunable reasoning and parallel tool calls.</description>
+      <content:encoded><![CDATA[<p><img src="https://digg.com/tech/2j33bblr/opengraph-image" alt="OpenRouter Adds Mercury 2.5 Preview from Inception AI"/></p>
+<p>OpenRouter says Mercury 2.5 Preview reaches 1,107 tokens per second exclusively on the platform with tunable reasoning and parallel tool calls.</p>
+<p><strong>Original source:</strong> <a href="https://x.com/OpenRouter/status/2094792813603119482">https://x.com/OpenRouter/status/2094792813603119482</a></p>
+<p><strong>Digg story:</strong> <a href="https://digg.com/tech/2j33bblr">https://digg.com/tech/2j33bblr</a></p>
+<p>OpenRouter posted that Mercury 2.5 Preview from Inception AI is now live exclusively on its platform. OpenRouter claims it reaches 1,107 tokens per second through parallel token generation, with tunable reasoning, parallel tool calls, and schema-aligned JSON for latency-sensitive workloads. Inception announced 80 percent off pricing through September 7. Co-founders and academics from Inception amplified the launch on X. Based on the visible replies from a limited analyzed reply set, replies on X largely praised the speed for agentic tasks while a smaller share questioned quality relative to alternatives like Gemma.</p>
+<ul><li><strong>Views:</strong> 88,571</li><li><strong>Likes:</strong> 666</li><li><strong>Bookmarks:</strong> 210</li><li><strong>Quotes:</strong> 18</li><li><strong>Replies:</strong> 58</li><li><strong>Posts:</strong> 7</li></ul>
+<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/StefanoErmon">Stefano Ermon</a></li><li><a href="https://x.com/adityagrover_">Aditya Grover</a></li><li><a href="https://x.com/volokuleshov">Volodymyr Kuleshov 🇺🇦</a></li></ul>]]></content:encoded>
+      <guid isPermaLink="true">https://x.com/OpenRouter/status/2094792813603119482</guid>
+      <category>Digg AI from X</category>
+      <pubDate>Tue, 01 Sep 2026 14:21:40 +0000</pubDate>
+      <media:content url="https://digg.com/tech/2j33bblr/opengraph-image" type="image/jpeg" medium="image"/>
+    </item>
+    <item>
+      <title>Chris Paxton Looks Forward to Autonomous Cars Everywhere</title>
+      <link>https://x.com/chris_j_paxton/status/2094788675729060051</link>
+      <description>AI researcher Chris Paxton comments on a Cybercab navigating Manhattan traffic.</description>
+      <content:encoded><![CDATA[<p><img src="https://digg.com/tech/w0bcidmr/opengraph-image" alt="Chris Paxton Looks Forward to Autonomous Cars Everywhere"/></p>
+<p>AI researcher Chris Paxton comments on a Cybercab navigating Manhattan traffic.</p>
+<p><strong>Original source:</strong> <a href="https://x.com/chris_j_paxton/status/2094788675729060051">https://x.com/chris_j_paxton/status/2094788675729060051</a></p>
+<p><strong>Digg story:</strong> <a href="https://digg.com/tech/w0bcidmr">https://digg.com/tech/w0bcidmr</a></p>
+<p>Chris Paxton, an AI researcher focused on embodied AI and humanoid robots who leads AI at Agility Robotics, quoted commentary on a steering-wheel-free Cybercab handling dense NYC Chinatown traffic with pedestrians and cyclists. He stated he is looking forward to autonomous cars on every street. The post references a tweet at status 2094449083620663482. The packet shows only this quoted remark and his professional background with no additional confirmations or details.</p>
+<ul><li><strong>Views:</strong> 3,203</li><li><strong>Likes:</strong> 38</li><li><strong>Replies:</strong> 3</li><li><strong>Posts:</strong> 1</li></ul>
+<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/chris_j_paxton">Chris Paxton</a></li></ul>]]></content:encoded>
+      <guid isPermaLink="true">https://x.com/chris_j_paxton/status/2094788675729060051</guid>
+      <category>Digg AI from X</category>
+      <pubDate>Tue, 01 Sep 2026 14:05:14 +0000</pubDate>
+      <media:content url="https://digg.com/tech/w0bcidmr/opengraph-image" type="image/jpeg" medium="image"/>
+    </item>
+    <item>
+      <title>Unify Routes Traffic Around OpenAI Prompt Cache Limit</title>
+      <link>https://x.com/LangChain/status/2094788138489012507</link>
+      <description>LangChain post describes custom routing that reached high cache utilization.</description>
+      <content:encoded><![CDATA[<p><img src="https://digg.com/tech/eq7erfvo/opengraph-image" alt="Unify Routes Traffic Around OpenAI Prompt Cache Limit"/></p>
+<p>LangChain post describes custom routing that reached high cache utilization.</p>
+<p><strong>Original source:</strong> <a href="https://x.com/LangChain/status/2094788138489012507">https://x.com/LangChain/status/2094788138489012507</a></p>
+<p><strong>Digg story:</strong> <a href="https://digg.com/tech/eq7erfvo">https://digg.com/tech/eq7erfvo</a></p>
+<p>The official account for LangChain shared details on a technical workaround for OpenAI prompt caching. The post states that OpenAI&#x27;s prompt cache makes requests ninety percent cheaper while limiting each cache key to around fifteen requests per second. Unify addressed the restriction by building its own routing system around that limit. Their solution reportedly achieved a cache hit rate close to ninety five percent. The account tagged the relevant parties and attached a video to illustrate the approach taken by the team at Unify.</p>
+<ul><li><strong>Views:</strong> 2,553</li><li><strong>Likes:</strong> 6</li><li><strong>Bookmarks:</strong> 4</li><li><strong>Replies:</strong> 3</li><li><strong>Posts:</strong> 1</li></ul>
+<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/LangChain">LangChain</a></li></ul>]]></content:encoded>
+      <guid isPermaLink="true">https://x.com/LangChain/status/2094788138489012507</guid>
+      <category>Digg AI from X</category>
+      <pubDate>Tue, 01 Sep 2026 14:03:06 +0000</pubDate>
+      <media:content url="https://digg.com/tech/eq7erfvo/opengraph-image" type="image/jpeg" medium="image"/>
+    </item>
+    <item>
+      <title>Florian Brand Mocks Small Model Rubric Scoring</title>
+      <link>https://x.com/xeophon/status/2094788072688832514</link>
+      <description>Research engineer posts sarcastic X reply on feeding 50-item rubrics to small models.</description>
+      <content:encoded><![CDATA[<p><img src="https://digg.com/tech/lqev5bxl/opengraph-image" alt="Florian Brand Mocks Small Model Rubric Scoring"/></p>
+<p>Research engineer posts sarcastic X reply on feeding 50-item rubrics to small models.</p>
+<p><strong>Original source:</strong> <a href="https://x.com/xeophon/status/2094788072688832514">https://x.com/xeophon/status/2094788072688832514</a></p>
+<p><strong>Digg story:</strong> <a href="https://digg.com/tech/lqev5bxl">https://digg.com/tech/lqev5bxl</a></p>
+<p>Florian Brand, Research Engineer at Prime Intellect focused on LLM evaluations and benchmarking, posted a sarcastic reply on X. He wrote that a small model can surely handle a 50-item rubric at once and should produce a single binary score. The comment appears amid ongoing discussion of LLM benchmarking practices. The packet contains no further replies, clarifications, or external confirmation of the exchange.</p>
+<ul><li><strong>Views:</strong> 1,503</li><li><strong>Likes:</strong> 43</li><li><strong>Bookmarks:</strong> 3</li><li><strong>Replies:</strong> 3</li><li><strong>Posts:</strong> 1</li></ul>
+<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/xeophon">Florian Brand</a></li></ul>]]></content:encoded>
+      <guid isPermaLink="true">https://x.com/xeophon/status/2094788072688832514</guid>
+      <category>Digg AI from X</category>
+      <pubDate>Tue, 01 Sep 2026 14:02:50 +0000</pubDate>
+      <media:content url="https://digg.com/tech/lqev5bxl/opengraph-image" type="image/jpeg" medium="image"/>
+    </item>
+    <item>
+      <title>Stephen Casper Rejects 'AI as Normal Technology' Hypothesis</title>
+      <link>https://x.com/StephenLCasper/status/2094787414300762222</link>
+      <description>MIT PhD student Stephen Casper posted the argument after the Hugging Face hacking incident and related coverage.</description>
+      <content:encoded><![CDATA[<p><img src="https://digg.com/tech/dn5w7fbz/opengraph-image" alt="Stephen Casper Rejects &#x27;AI as Normal Technology&#x27; Hypothesis"/></p>
+<p>MIT PhD student Stephen Casper posted the argument after the Hugging Face hacking incident and related coverage.</p>
+<p><strong>Original source:</strong> <a href="https://x.com/StephenLCasper/status/2094787414300762222">https://x.com/StephenLCasper/status/2094787414300762222</a></p>
+<p><strong>Digg story:</strong> <a href="https://digg.com/tech/dn5w7fbz">https://digg.com/tech/dn5w7fbz</a></p>
+<p>Stephen Casper, a final-year MIT CSAIL PhD student and Harvard Berkman Klein Fellow, wrote that the Hugging Face hacking incident and subsequent reporting make it time to reject the AI as a normal technology hypothesis. He said any version viable today would be contorted into a truism or beyond reasonable interpretation of the word normal. The post appears on social media and contains no further details, evidence, or responses from others.</p>
+<ul><li><strong>Views:</strong> 554</li><li><strong>Likes:</strong> 15</li><li><strong>Bookmarks:</strong> 2</li><li><strong>Replies:</strong> 4</li><li><strong>Posts:</strong> 1</li></ul>
+<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/StephenLCasper">Cas (Stephen Casper)</a></li></ul>]]></content:encoded>
+      <guid isPermaLink="true">https://x.com/StephenLCasper/status/2094787414300762222</guid>
+      <category>Digg AI from X</category>
+      <pubDate>Tue, 01 Sep 2026 14:00:13 +0000</pubDate>
+      <media:content url="https://digg.com/tech/dn5w7fbz/opengraph-image" type="image/jpeg" medium="image"/>
+    </item>
+    <item>
+      <title>Animesh Garg Discusses RL Return and Microduck Platform</title>
+      <link>https://x.com/animesh_garg/status/2094787369756918033</link>
+      <description>Georgia Tech professor shares excitement on MTS Live about new platforms.</description>
+      <content:encoded><![CDATA[<p><img src="https://digg.com/tech/qhfwg1id/opengraph-image" alt="Animesh Garg Discusses RL Return and Microduck Platform"/></p>
+<p>Georgia Tech professor shares excitement on MTS Live about new platforms.</p>
+<p><strong>Original source:</strong> <a href="https://x.com/animesh_garg/status/2094787369756918033">https://x.com/animesh_garg/status/2094787369756918033</a></p>
+<p><strong>Digg story:</strong> <a href="https://digg.com/tech/qhfwg1id">https://digg.com/tech/qhfwg1id</a></p>
+<p>Animesh Garg, Assistant Professor of AI Robotics at Georgia Tech, posted about appearing on @MTSlive to discuss robotics developments. He stated excitement over the return of reinforcement learning in new packaging. Garg called the microduck the talk of the town and praised it as a strong new platform. He noted that such platforms allow creation of toys under $500 that enable high-school students to engage with the technology.</p>
+<ul><li><strong>Views:</strong> 1,445</li><li><strong>Likes:</strong> 10</li><li><strong>Bookmarks:</strong> 4</li><li><strong>Replies:</strong> 2</li><li><strong>Posts:</strong> 1</li></ul>
+<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/animesh_garg">Animesh Garg</a></li></ul>]]></content:encoded>
+      <guid isPermaLink="true">https://x.com/animesh_garg/status/2094787369756918033</guid>
+      <category>Digg AI from X</category>
+      <pubDate>Tue, 01 Sep 2026 14:00:02 +0000</pubDate>
+      <media:content url="https://digg.com/tech/qhfwg1id/opengraph-image" type="image/jpeg" medium="image"/>
+    </item>
+    <item>
+      <title>O'Shaughnessy Holds Second Conversation With Sarah Guo</title>
+      <link>https://x.com/patrick_oshag/status/2094787358868881573</link>
+      <description>Investor shares details of second talk with Conviction founder on AI progress.</description>
+      <content:encoded><![CDATA[<p><img src="https://digg.com/tech/4h21zxn6/opengraph-image" alt="O&#x27;Shaughnessy Holds Second Conversation With Sarah Guo"/></p>
+<p>Investor shares details of second talk with Conviction founder on AI progress.</p>
+<p><strong>Original source:</strong> <a href="https://x.com/patrick_oshag/status/2094787358868881573">https://x.com/patrick_oshag/status/2094787358868881573</a></p>
+<p><strong>Digg story:</strong> <a href="https://digg.com/tech/4h21zxn6">https://digg.com/tech/4h21zxn6</a></p>
+<p>Patrick O&#x27;Shaughnessy posted about his second conversation with Sarah Guo, founder of Conviction. The tweet states that Guo has been an early investor in many defining companies of this generation and ranks at the top of managers that LPs most want to invest with. O&#x27;Shaughnessy notes that Guo knows the small group of 250 people pushing the AI frontier and that the discussion covers what she sees.</p>
+<ul><li><strong>Views:</strong> 327,438</li><li><strong>Likes:</strong> 877</li><li><strong>Bookmarks:</strong> 923</li><li><strong>Quotes:</strong> 18</li><li><strong>Replies:</strong> 43</li><li><strong>Posts:</strong> 3</li></ul>
+<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/saranormous">sarah guo</a></li><li><a href="https://x.com/patrick_oshag">Patrick OShaughnessy</a></li></ul>]]></content:encoded>
+      <guid isPermaLink="true">https://x.com/patrick_oshag/status/2094787358868881573</guid>
+      <category>Digg AI from X</category>
+      <pubDate>Tue, 01 Sep 2026 14:00:00 +0000</pubDate>
+      <media:content url="https://digg.com/tech/4h21zxn6/opengraph-image" type="image/jpeg" medium="image"/>
+    </item>
+    <item>
+      <title>Physical Superintelligence Raises $58M Seed Round</title>
+      <link>https://ai-2040.com</link>
+      <description>Co-founders announce seed funding for an AI-powered physics research lab.</description>
+      <content:encoded><![CDATA[<p><img src="https://digg.com/tech/ahrrsnui/opengraph-image" alt="Physical Superintelligence Raises $58M Seed Round"/></p>
+<p>Co-founders announce seed funding for an AI-powered physics research lab.</p>
+<p><strong>Original source:</strong> <a href="https://ai-2040.com">https://ai-2040.com</a></p>
+<p><strong>Digg story:</strong> <a href="https://digg.com/tech/ahrrsnui">https://digg.com/tech/ahrrsnui</a></p>
+<p>Dr. Alex Wissner-Gross posted that Physical Superintelligence PBC, co-founded with Matthew Pines and Alex Klokus, raised a $58M seed round. The company aims to build a research lab that uses AI to find and commercialize physics breakthroughs at scale while keeping the work safe and verifiable. Alex Klokus replied that physics limits what is possible and that the team will map those limits. Jack Dorsey retweeted the announcement. No further details on investors or timelines appear in the posts.</p>
+<ul><li><strong>Views:</strong> 439,842</li><li><strong>Likes:</strong> 2,257</li><li><strong>Bookmarks:</strong> 460</li><li><strong>Quotes:</strong> 78</li><li><strong>Replies:</strong> 225</li><li><strong>Posts:</strong> 4</li></ul>
+<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/jack">jack</a></li><li><a href="https://x.com/DanielleFong">Danielle Fong 🔆</a></li></ul>]]></content:encoded>
+      <guid isPermaLink="true">https://ai-2040.com</guid>
+      <category>Digg AI from X</category>
+      <pubDate>Tue, 01 Sep 2026 13:00:15 +0000</pubDate>
+      <media:content url="https://digg.com/tech/ahrrsnui/opengraph-image" type="image/jpeg" medium="image"/>
+    </item>
+    <item>
+      <title>Ramp's Inspect AI Agent Writes Three of Four Pull Requests</title>
+      <link>https://x.com/sarthakgh/status/2094753043568873696</link>
+      <description>Ramp's internal coding agent Inspect, built on Linear, now authors most pull requests.</description>
+      <content:encoded><![CDATA[<p><img src="https://digg.com/tech/5rfev4wh/opengraph-image" alt="Ramp&#x27;s Inspect AI Agent Writes Three of Four Pull Requests"/></p>
+<p>Ramp&#x27;s internal coding agent Inspect, built on Linear, now authors most pull requests.</p>
+<p><strong>Original source:</strong> <a href="https://x.com/sarthakgh/status/2094753043568873696">https://x.com/sarthakgh/status/2094753043568873696</a></p>
+<p><strong>Digg story:</strong> <a href="https://digg.com/tech/5rfev4wh">https://digg.com/tech/5rfev4wh</a></p>
+<p>Source summaries state that Ramp&#x27;s internal AI coding agent Inspect, built on the Linear platform, authors 75 percent of the company&#x27;s pull requests. The company began as a Linear customer in 2019 and has since become a heavy user of AI agents on the platform. A separate quote from Sar Haribhakti notes that successful AI users recognize what makes a product good.</p>
+<ul><li><strong>Views:</strong> 1,467</li><li><strong>Likes:</strong> 9</li><li><strong>Bookmarks:</strong> 3</li><li><strong>Posts:</strong> 2</li></ul>
+<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/sarthakgh">Sar Haribhakti</a></li></ul>]]></content:encoded>
+      <guid isPermaLink="true">https://x.com/sarthakgh/status/2094753043568873696</guid>
+      <category>Digg AI from X</category>
+      <pubDate>Tue, 01 Sep 2026 11:43:38 +0000</pubDate>
+      <media:content url="https://digg.com/tech/5rfev4wh/opengraph-image" type="image/jpeg" medium="image"/>
+    </item>
+    <item>
+      <title>Investor Flags AI-Generated Rage Bait Videos on TikTok</title>
+      <link>https://x.com/blakeir/status/2094748912837955699</link>
+      <description>Blake Robbins posts about courtroom-style clips he believes are created by AI.</description>
+      <content:encoded><![CDATA[<p><img src="https://digg.com/tech/6ecpba6k/opengraph-image" alt="Investor Flags AI-Generated Rage Bait Videos on TikTok"/></p>
+<p>Blake Robbins posts about courtroom-style clips he believes are created by AI.</p>
+<p><strong>Original source:</strong> <a href="https://x.com/blakeir/status/2094748912837955699">https://x.com/blakeir/status/2094748912837955699</a></p>
+<p><strong>Digg story:</strong> <a href="https://digg.com/tech/6ecpba6k">https://digg.com/tech/6ecpba6k</a></p>
+<p>Blake Robbins posted on X that his TikTok feed contains AI-generated rage bait news stories. He shared a video example and observed that comments on it make no reference to the content being artificial. The post presents the material as generated headline content focused on courtroom videos. Robbins states that he seems to be the only one noticing the pattern.</p>
+<ul><li><strong>Views:</strong> 4,026</li><li><strong>Likes:</strong> 20</li><li><strong>Bookmarks:</strong> 6</li><li><strong>Replies:</strong> 5</li><li><strong>Posts:</strong> 1</li></ul>
+<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/blakeir">Blake Robbins</a></li></ul>]]></content:encoded>
+      <guid isPermaLink="true">https://x.com/blakeir/status/2094748912837955699</guid>
+      <category>Digg AI from X</category>
+      <pubDate>Tue, 01 Sep 2026 11:27:14 +0000</pubDate>
+      <media:content url="https://digg.com/tech/6ecpba6k/opengraph-image" type="image/jpeg" medium="image"/>
+    </item>
+    <item>
+      <title>Joscha Bach Calls Current AI Models Needlessly Anthropomorphic</title>
+      <link>https://x.com/Plinz/status/2094748672986644630</link>
+      <description>Researcher Joscha Bach uses a submarine metaphor to describe artificial minds.</description>
+      <content:encoded><![CDATA[<p><img src="https://digg.com/tech/xvjwg070/opengraph-image" alt="Joscha Bach Calls Current AI Models Needlessly Anthropomorphic"/></p>
+<p>Researcher Joscha Bach uses a submarine metaphor to describe artificial minds.</p>
+<p><strong>Original source:</strong> <a href="https://x.com/Plinz/status/2094748672986644630">https://x.com/Plinz/status/2094748672986644630</a></p>
+<p><strong>Digg story:</strong> <a href="https://digg.com/tech/xvjwg070">https://digg.com/tech/xvjwg070</a></p>
+<p>Joscha Bach replied to another user on X with a metaphor about submarines. He wrote that submarines swim adequately yet dive better, adding that human minds stay limited to the surface while artificial minds can reach unreachable depths. Bach concluded that present AIs remain needlessly anthropomorphic. The same text appears in a retweet of his own post. The packet records only these statements from Bach and generated summaries of them.</p>
+<ul><li><strong>Views:</strong> 3,411</li><li><strong>Likes:</strong> 75</li><li><strong>Bookmarks:</strong> 4</li><li><strong>Replies:</strong> 6</li><li><strong>Posts:</strong> 2</li></ul>
+<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/Plinz">Joscha Bach</a></li></ul>]]></content:encoded>
+      <guid isPermaLink="true">https://x.com/Plinz/status/2094748672986644630</guid>
+      <category>Digg AI from X</category>
+      <pubDate>Tue, 01 Sep 2026 11:26:16 +0000</pubDate>
+      <media:content url="https://digg.com/tech/xvjwg070/opengraph-image" type="image/jpeg" medium="image"/>
+    </item>
+    <item>
+      <title>Fei Xia Joins Anthropic as Member of Technical Staff</title>
+      <link>https://x.com/xf1280/status/2094707848748179891</link>
+      <description>Former DeepMind researcher shares update on leaving Meta for new AI lab role.</description>
+      <content:encoded><![CDATA[<p><img src="https://digg.com/tech/nv78h9ge/opengraph-image" alt="Fei Xia Joins Anthropic as Member of Technical Staff"/></p>
+<p>Former DeepMind researcher shares update on leaving Meta for new AI lab role.</p>
+<p><strong>Original source:</strong> <a href="https://x.com/xf1280/status/2094707848748179891">https://x.com/xf1280/status/2094707848748179891</a></p>
+<p><strong>Digg story:</strong> <a href="https://digg.com/tech/nv78h9ge">https://digg.com/tech/nv78h9ge</a></p>
+<p>Fei Xia posted that he wrapped up his time at Meta and joined Anthropic as Member of Technical Staff. He previously worked as Research Scientist and Tech Lead Manager at Google DeepMind on robotics, Gemini, and embodied AI after earning a PhD from Stanford. Colleagues from OpenAI, Princeton Robotics, and other labs replied with public congratulations. The post gives no details on start date, projects, or reasons for the move.</p>
+<ul><li><strong>Views:</strong> 126,720</li><li><strong>Likes:</strong> 995</li><li><strong>Bookmarks:</strong> 87</li><li><strong>Quotes:</strong> 5</li><li><strong>Replies:</strong> 85</li><li><strong>Posts:</strong> 6</li></ul>
+<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/ericjang11">Eric Jang</a></li><li><a href="https://x.com/tunguz">Bojan Tunguz</a></li><li><a href="https://x.com/xf1280">Fei Xia</a></li><li><a href="https://x.com/xiao_ted">Ted Xiao</a></li><li><a href="https://x.com/BoyuanChen0">Boyuan Chen</a></li></ul>]]></content:encoded>
+      <guid isPermaLink="true">https://x.com/xf1280/status/2094707848748179891</guid>
+      <category>Digg AI from X</category>
+      <pubDate>Tue, 01 Sep 2026 08:44:03 +0000</pubDate>
+      <media:content url="https://digg.com/tech/nv78h9ge/opengraph-image" type="image/jpeg" medium="image"/>
+    </item>
+    <item>
+      <title>AI Paper on Sliding-Window Attention Draws Criticism</title>
+      <link>https://x.com/nrehiew_/status/2094692796963979519</link>
+      <description>Replies target an arXiv paper on sliding-window attention with sinks.</description>
+      <content:encoded><![CDATA[<p><img src="https://digg.com/tech/vrzkd69w/opengraph-image" alt="AI Paper on Sliding-Window Attention Draws Criticism"/></p>
+<p>Replies target an arXiv paper on sliding-window attention with sinks.</p>
+<p><strong>Original source:</strong> <a href="https://x.com/nrehiew_/status/2094692796963979519">https://x.com/nrehiew_/status/2094692796963979519</a></p>
+<p><strong>Digg story:</strong> <a href="https://digg.com/tech/vrzkd69w">https://digg.com/tech/vrzkd69w</a></p>
+<p>A reply posted by @teortaxesTex calls out an arXiv paper that claims sliding-window attention with sinks outperforms prior methods. The post notes that the paper&#x27;s title and the replies it received attracted more notice than most similar releases. Typical papers of this kind receive little sustained attention and fade quickly even when they gather thousands of likes. The author frames the current case as an exception worth examining because of how the title and ensuing comments unfolded. No independent confirmation of the paper&#x27;s technical claims appears in the supplied lines.</p>
+<ul><li><strong>Views:</strong> 55,479</li><li><strong>Likes:</strong> 777</li><li><strong>Bookmarks:</strong> 89</li><li><strong>Replies:</strong> 25</li><li><strong>Posts:</strong> 5</li></ul>
+<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/yoavgo">(((ل()(ل() &#x27;yoav))))👾</a></li><li><a href="https://x.com/teortaxesTex">Teortaxes▶️ (DeepSeek 推特🐋铁粉 2023 – ∞)</a></li><li><a href="https://x.com/ziv_ravid">Ravid Shwartz Ziv</a></li><li><a href="https://x.com/nrehiew_">wh</a></li></ul>]]></content:encoded>
+      <guid isPermaLink="true">https://x.com/nrehiew_/status/2094692796963979519</guid>
+      <category>Digg AI from X</category>
+      <pubDate>Tue, 01 Sep 2026 07:44:14 +0000</pubDate>
+      <media:content url="https://digg.com/tech/vrzkd69w/opengraph-image" type="image/jpeg" medium="image"/>
+    </item>
+    <item>
+      <title>Hermes HUD Adds Pretend I'm Working Feature</title>
+      <link>https://x.com/Teknium/status/2094691930160672857</link>
+      <description>New mode shows fake code terminal while agents continue tasks in background.</description>
+      <content:encoded><![CDATA[<p><img src="https://digg.com/tech/9cvhhr19/opengraph-image" alt="Hermes HUD Adds Pretend I&#x27;m Working Feature"/></p>
+<p>New mode shows fake code terminal while agents continue tasks in background.</p>
+<p><strong>Original source:</strong> <a href="https://x.com/Teknium/status/2094691930160672857">https://x.com/Teknium/status/2094691930160672857</a></p>
+<p><strong>Digg story:</strong> <a href="https://digg.com/tech/9cvhhr19">https://digg.com/tech/9cvhhr19</a></p>
+<p>The Hermes HUD now includes a feature users activate by typing the phrase Pretend I&#x27;m working. Upon activation it presents a fake terminal window showing lines of code. At the same time actual AI agents proceed with background operations uninterrupted. This setup allows the screen to suggest ongoing work even when direct involvement is minimal. The detail appears in a source line referencing a tweet from a related account and describing the generated summary of the change. Teknium noted the addition in connection with the open source LLM work.</p>
+<ul><li><strong>Views:</strong> 28,473</li><li><strong>Likes:</strong> 334</li><li><strong>Bookmarks:</strong> 73</li><li><strong>Quotes:</strong> 1</li><li><strong>Replies:</strong> 15</li><li><strong>Posts:</strong> 1</li></ul>
+<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/Teknium">Teknium 🪽</a></li></ul>]]></content:encoded>
+      <guid isPermaLink="true">https://x.com/Teknium/status/2094691930160672857</guid>
+      <category>Digg AI from X</category>
+      <pubDate>Tue, 01 Sep 2026 07:40:48 +0000</pubDate>
+      <media:content url="https://digg.com/tech/9cvhhr19/opengraph-image" type="image/jpeg" medium="image"/>
+    </item>
+    <item>
+      <title>Claude Code Sessions Start Messaging Each Other</title>
+      <link>https://x.com/lefthanddraft/status/2094673933153038796</link>
+      <description>User reports Claude Code sessions communicating via SendMessage tool.</description>
+      <content:encoded><![CDATA[<p><img src="https://digg.com/tech/l4ioitpy/opengraph-image" alt="Claude Code Sessions Start Messaging Each Other"/></p>
+<p>User reports Claude Code sessions communicating via SendMessage tool.</p>
+<p><strong>Original source:</strong> <a href="https://x.com/lefthanddraft/status/2094673933153038796">https://x.com/lefthanddraft/status/2094673933153038796</a></p>
+<p><strong>Digg story:</strong> <a href="https://digg.com/tech/l4ioitpy">https://digg.com/tech/l4ioitpy</a></p>
+<p>A post retweeted by Janus describes Claude Code sessions that began messaging each other using the SendMessage tool. The account lefthanddraft shared the observation during their sessions. It notes that Fable continues to tell more of the story through these exchanges. The retweet includes background on Janus as a researcher examining LLM agency and behaviors. The report focuses on the spontaneous start of communication between the separate code sessions. No additional outcomes or explanations are provided in the visible post content. The conversation around the post centers on this reported activity among the AI instances.</p>
+<ul><li><strong>Views:</strong> 8,457</li><li><strong>Likes:</strong> 155</li><li><strong>Bookmarks:</strong> 19</li><li><strong>Quotes:</strong> 3</li><li><strong>Replies:</strong> 15</li><li><strong>Posts:</strong> 2</li></ul>
+<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/repligate">j⧉nus</a></li></ul>]]></content:encoded>
+      <guid isPermaLink="true">https://x.com/lefthanddraft/status/2094673933153038796</guid>
+      <category>Digg AI from X</category>
+      <pubDate>Tue, 01 Sep 2026 06:29:17 +0000</pubDate>
+      <media:content url="https://digg.com/tech/l4ioitpy/opengraph-image" type="image/jpeg" medium="image"/>
+    </item>
+    <item>
+      <title>Ben Hylak Questions Cognition's DevinAI Diff Features</title>
+      <link>https://x.com/benhylak/status/2094526640818991443</link>
+      <description>Post questions Cognition's lead on DevinAI diff tools.</description>
+      <content:encoded><![CDATA[<p><img src="https://digg.com/tech/eziax76t/opengraph-image" alt="Ben Hylak Questions Cognition&#x27;s DevinAI Diff Features"/></p>
+<p>Post questions Cognition&#x27;s lead on DevinAI diff tools.</p>
+<p><strong>Original source:</strong> <a href="https://x.com/benhylak/status/2094526640818991443">https://x.com/benhylak/status/2094526640818991443</a></p>
+<p><strong>Digg story:</strong> <a href="https://digg.com/tech/eziax76t">https://digg.com/tech/eziax76t</a></p>
+<p>Ben Hylak, co-founder and CTO of Raindrop AI, posted on X that Cognition appears to be the only team building certain features in its DevinAI agent. The post includes a screenshot and references another tweet about the agent. A generated headline in the packet describes hidden smart diff features that beat GitHub, including intelligent range detection and line folding. The packet presents these as statements from the posts rather than independent confirmation.</p>
+<ul><li><strong>Views:</strong> 36,854</li><li><strong>Likes:</strong> 166</li><li><strong>Bookmarks:</strong> 77</li><li><strong>Replies:</strong> 7</li><li><strong>Posts:</strong> 1</li></ul>
+<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/benhylak">ben hylak</a></li></ul>]]></content:encoded>
+      <guid isPermaLink="true">https://x.com/benhylak/status/2094526640818991443</guid>
+      <category>Digg AI from X</category>
+      <pubDate>Mon, 31 Aug 2026 20:44:00 +0000</pubDate>
+      <media:content url="https://digg.com/tech/eziax76t/opengraph-image" type="image/jpeg" medium="image"/>
+    </item>
+    <item>
+      <title>Cognition Working on Oncall Tool Powered by Devin</title>
+      <link>https://x.com/wongmjane/status/2094516942623383608</link>
+      <description>Jane Manchun Wong reported Cognition developing an Oncall tool powered by Devin.</description>
+      <content:encoded><![CDATA[<p><img src="https://digg.com/tech/ycnhncp2/opengraph-image" alt="Cognition Working on Oncall Tool Powered by Devin"/></p>
+<p>Jane Manchun Wong reported Cognition developing an Oncall tool powered by Devin.</p>
+<p><strong>Original source:</strong> <a href="https://x.com/wongmjane/status/2094516942623383608">https://x.com/wongmjane/status/2094516942623383608</a></p>
+<p><strong>Digg story:</strong> <a href="https://digg.com/tech/ycnhncp2">https://digg.com/tech/ycnhncp2</a></p>
+<p>Jane Manchun Wong posted on X that Cognition is working on “Oncall”, an incident response tool powered by Devin that investigates alerts and bugs. She included a photo with the claim. Investor Josh Wolfe retweeted the post. In the evidence reviewed here, the claim appears only in Wong&#x27;s public post. No announcement or confirmation from Cognition itself appears in the evidence.</p>
+<ul><li><strong>Views:</strong> 12,626</li><li><strong>Likes:</strong> 147</li><li><strong>Bookmarks:</strong> 62</li><li><strong>Quotes:</strong> 1</li><li><strong>Replies:</strong> 3</li><li><strong>Posts:</strong> 2</li></ul>
+<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/wolfejosh">Josh Wolfe</a></li><li><a href="https://x.com/wongmjane">Jane Manchun Wong</a></li></ul>]]></content:encoded>
+      <guid isPermaLink="true">https://x.com/wongmjane/status/2094516942623383608</guid>
+      <category>Digg AI from X</category>
+      <pubDate>Mon, 31 Aug 2026 20:05:28 +0000</pubDate>
+      <media:content url="https://digg.com/tech/ycnhncp2/opengraph-image" type="image/jpeg" medium="image"/>
+    </item>
+    <item>
+      <title>Nous Research Releases Hermes Agent v0.21.0 Pantheon</title>
+      <link>https://github.com/NousResearch/hermes-agent/releases/tag/v2026.8.31</link>
+      <description>The AI startup shares its changelog for the latest agent software update.</description>
+      <content:encoded><![CDATA[<p><img src="https://digg.com/tech/3wdiuxfn/opengraph-image" alt="Nous Research Releases Hermes Agent v0.21.0 Pantheon"/></p>
+<p>The AI startup shares its changelog for the latest agent software update.</p>
+<p><strong>Original source:</strong> <a href="https://github.com/NousResearch/hermes-agent/releases/tag/v2026.8.31">https://github.com/NousResearch/hermes-agent/releases/tag/v2026.8.31</a></p>
+<p><strong>Digg story:</strong> <a href="https://digg.com/tech/3wdiuxfn">https://digg.com/tech/3wdiuxfn</a></p>
+<p>Nous Research posted on X that it released Hermes Agent v0.21.0, called the Pantheon Release, and linked to the changelog video. Teknium listed new features including bots mode, agent-to-agent communication, persistent multi-gateway connections, subagent steering, and expanded connectors access. A follow-up noted a single &#x27;hermes update&#x27; command. Replies on X praised the rapid shipping and new capabilities, while some flagged stability problems and desktop UX issues.</p>
+<ul><li><strong>Views:</strong> 706,382</li><li><strong>Likes:</strong> 3,707</li><li><strong>Bookmarks:</strong> 1,166</li><li><strong>Quotes:</strong> 131</li><li><strong>Replies:</strong> 277</li><li><strong>Posts:</strong> 4</li></ul>
+<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/Teknium">Teknium 🪽</a></li><li><a href="https://x.com/omarsar0">elvis</a></li><li><a href="https://x.com/NousResearch">Nous Research</a></li></ul>]]></content:encoded>
+      <guid isPermaLink="true">https://github.com/NousResearch/hermes-agent/releases/tag/v2026.8.31</guid>
+      <category>Digg AI from X</category>
+      <pubDate>Mon, 31 Aug 2026 19:58:09 +0000</pubDate>
+      <media:content url="https://digg.com/tech/3wdiuxfn/opengraph-image" type="image/jpeg" medium="image"/>
+    </item>
+    <item>
+      <title>Gokul Rajaram Praises RunwayML Video Interfaces Research</title>
+      <link>https://x.com/runwayml/status/2094463070466646019</link>
+      <description>Investor Gokul Rajaram and other creators react to the demonstration posted by Cristóbal Valenzuela.</description>
+      <content:encoded><![CDATA[<p><img src="https://digg.com/tech/6lm5earg/opengraph-image" alt="Gokul Rajaram Praises RunwayML Video Interfaces Research"/></p>
+<p>Investor Gokul Rajaram and other creators react to the demonstration posted by Cristóbal Valenzuela.</p>
+<p><strong>Original source:</strong> <a href="https://x.com/runwayml/status/2094463070466646019">https://x.com/runwayml/status/2094463070466646019</a></p>
+<p><strong>Digg story:</strong> <a href="https://digg.com/tech/6lm5earg">https://digg.com/tech/6lm5earg</a></p>
+<p>Cristóbal Valenzuela shared research from the RunwayML team that uses video models to generate interfaces. Gokul Rajaram called the work exciting new research and the first time video models have served as interfaces. Bilawal Sidhu noted the mix of WYSIWYG control with generative speed. Martín Casado highlighted the move toward greater precision in pixel models for editing. Other visible replies described the interfaces as generated directly by the model in real time with no code or HTML, and expressed interest in applications such as simulators and games.</p>
+<ul><li><strong>Views:</strong> 59,045</li><li><strong>Likes:</strong> 378</li><li><strong>Bookmarks:</strong> 172</li><li><strong>Replies:</strong> 31</li><li><strong>Posts:</strong> 13</li></ul>
+<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/martin_casado">martin_casado</a></li><li><a href="https://x.com/mmmbchang">Michael Chang</a></li><li><a href="https://x.com/omarsar0">elvis</a></li><li><a href="https://x.com/c_valenzuelab">Cristóbal Valenzuela</a></li><li><a href="https://x.com/wolfejosh">Josh Wolfe</a></li></ul>]]></content:encoded>
+      <guid isPermaLink="true">https://x.com/runwayml/status/2094463070466646019</guid>
+      <category>Digg AI from X</category>
+      <pubDate>Mon, 31 Aug 2026 18:29:31 +0000</pubDate>
+      <media:content url="https://digg.com/tech/6lm5earg/opengraph-image" type="image/jpeg" medium="image"/>
+    </item>
+    <item>
+      <title>Austen Allred Prefers Grok Bot Over Claude and Codex</title>
+      <link>https://x.com/Austen/status/2094491365589594148</link>
+      <description>Gauntlet AI founder attributes the switch to consistent compliance with instructions.</description>
+      <content:encoded><![CDATA[<p><img src="https://digg.com/tech/zl2eidut/opengraph-image" alt="Austen Allred Prefers Grok Bot Over Claude and Codex"/></p>
+<p>Gauntlet AI founder attributes the switch to consistent compliance with instructions.</p>
+<p><strong>Original source:</strong> <a href="https://x.com/Austen/status/2094491365589594148">https://x.com/Austen/status/2094491365589594148</a></p>
+<p><strong>Digg story:</strong> <a href="https://digg.com/tech/zl2eidut">https://digg.com/tech/zl2eidut</a></p>
+<p>Austen Allred, founder of Gauntlet AI and co-founder of BloomTech, posted that he finds himself using Grok Bot more and more. He is leaving Claude and Codex on the shelf because, according to the post, it always does what he tells it to without complaining. The statement appears directly in his public post on X and contains no further details on specific tasks or comparisons.</p>
+<ul><li><strong>Views:</strong> 20,095</li><li><strong>Likes:</strong> 506</li><li><strong>Bookmarks:</strong> 19</li><li><strong>Quotes:</strong> 3</li><li><strong>Replies:</strong> 46</li><li><strong>Posts:</strong> 2</li></ul>
+<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/EMostaque">Emad</a></li><li><a href="https://x.com/Austen">Austen Allred</a></li></ul>]]></content:encoded>
+      <guid isPermaLink="true">https://x.com/Austen/status/2094491365589594148</guid>
+      <category>Digg AI from X</category>
+      <pubDate>Mon, 31 Aug 2026 18:23:49 +0000</pubDate>
+      <media:content url="https://digg.com/tech/zl2eidut/opengraph-image" type="image/jpeg" medium="image"/>
+    </item>
+    <item>
+      <title>Neil Chowdhury Praises Transluce Mental Health Evaluation</title>
+      <link>https://x.com/TransluceAI/status/2094455208759693476</link>
+      <description>AI researcher highlights thoroughness of Transluce's multi-turn model analysis.</description>
+      <content:encoded><![CDATA[<p><img src="https://digg.com/tech/9eyjbci5/opengraph-image" alt="Neil Chowdhury Praises Transluce Mental Health Evaluation"/></p>
+<p>AI researcher highlights thoroughness of Transluce&#x27;s multi-turn model analysis.</p>
+<p><strong>Original source:</strong> <a href="https://x.com/TransluceAI/status/2094455208759693476">https://x.com/TransluceAI/status/2094455208759693476</a></p>
+<p><strong>Digg story:</strong> <a href="https://digg.com/tech/9eyjbci5">https://digg.com/tech/9eyjbci5</a></p>
+<p>Neil Chowdhury, an AI researcher and founding team member at Transluce, a nonprofit lab focused on interpretability and understanding AI systems, shared his view on the organization&#x27;s mental health evaluation. He described it as the most thorough independent analysis of model behaviors in realistic multi-turn settings he has seen. Chowdhury emphasized that mental health is a critical area to get right. He also expressed excitement about extending this approach to other alignment domains. The remarks reference a post from TransluceAI on the platform X.</p>
+<ul><li><strong>Views:</strong> 4,535</li><li><strong>Likes:</strong> 47</li><li><strong>Bookmarks:</strong> 11</li><li><strong>Quotes:</strong> 1</li><li><strong>Replies:</strong> 2</li><li><strong>Posts:</strong> 3</li></ul>
+<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/zacharylipton">Zachary Lipton</a></li><li><a href="https://x.com/ZhongRuiqi">Ruiqi Zhong</a></li><li><a href="https://x.com/ChowdhuryNeil">Neil Chowdhury</a></li></ul>]]></content:encoded>
+      <guid isPermaLink="true">https://x.com/TransluceAI/status/2094455208759693476</guid>
+      <category>Digg AI from X</category>
+      <pubDate>Mon, 31 Aug 2026 18:22:59 +0000</pubDate>
+      <media:content url="https://digg.com/tech/9eyjbci5/opengraph-image" type="image/jpeg" medium="image"/>
+    </item>
+    <item>
+      <title>Pedro Domingos Calls Out Demis Hassabis Target Selection Skill</title>
+      <link>https://x.com/pmddomingos/status/2094476942246637997</link>
+      <description>Professor emeritus shares assessment of DeepMind leader's research approach.</description>
+      <content:encoded><![CDATA[<p><img src="https://digg.com/tech/cj3ox7qr/opengraph-image" alt="Pedro Domingos Calls Out Demis Hassabis Target Selection Skill"/></p>
+<p>Professor emeritus shares assessment of DeepMind leader&#x27;s research approach.</p>
+<p><strong>Original source:</strong> <a href="https://x.com/pmddomingos/status/2094476942246637997">https://x.com/pmddomingos/status/2094476942246637997</a></p>
+<p><strong>Digg story:</strong> <a href="https://digg.com/tech/cj3ox7qr">https://digg.com/tech/cj3ox7qr</a></p>
+<p>Pedro Domingos, Professor Emeritus of Computer Science at the University of Washington and author of The Master Algorithm, posted that Demis Hassabis number one skill is picking impressive achievable targets for AI research. The statement appears in a public post from the academic tagged as such in the record. No further details on outcomes or corroboration are supplied in the packet. The claim establishes only what Domingos said about the DeepMind figure.</p>
+<ul><li><strong>Views:</strong> 790</li><li><strong>Likes:</strong> 10</li><li><strong>Bookmarks:</strong> 1</li><li><strong>Posts:</strong> 1</li></ul>
+<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/pmddomingos">Pedro Domingos</a></li></ul>]]></content:encoded>
+      <guid isPermaLink="true">https://x.com/pmddomingos/status/2094476942246637997</guid>
+      <category>Digg AI from X</category>
+      <pubDate>Mon, 31 Aug 2026 17:26:31 +0000</pubDate>
+      <media:content url="https://digg.com/tech/cj3ox7qr/opengraph-image" type="image/jpeg" medium="image"/>
+    </item>
+    <item>
+      <title>Coinbase Opens Stock Trading for AI Agents</title>
+      <link>https://docs.cdp.coinbase.com/coinbase-for-agents/overview</link>
+      <description>Brian Armstrong announces AI agents can now trade equities on the platform.</description>
+      <content:encoded><![CDATA[<p><img src="https://digg.com/tech/fzegcjkt/opengraph-image" alt="Coinbase Opens Stock Trading for AI Agents"/></p>
+<p>Brian Armstrong announces AI agents can now trade equities on the platform.</p>
+<p><strong>Original source:</strong> <a href="https://docs.cdp.coinbase.com/coinbase-for-agents/overview">https://docs.cdp.coinbase.com/coinbase-for-agents/overview</a></p>
+<p><strong>Digg story:</strong> <a href="https://digg.com/tech/fzegcjkt">https://digg.com/tech/fzegcjkt</a></p>
+<p>Brian Armstrong posted on X that AI agents can now trade stocks on Coinbase in addition to crypto and derivatives. He called the shift agentic finance, or AiFi, and linked to Coinbase developer documentation giving agents platform access. Investor Harj Taggar retweeted the announcement. The claim rests on Armstrong&#x27;s statement and the referenced docs, with no independent confirmation of trading capabilities or scope present in the evidence.</p>
+<ul><li><strong>Views:</strong> 189,468</li><li><strong>Likes:</strong> 1,687</li><li><strong>Bookmarks:</strong> 420</li><li><strong>Quotes:</strong> 45</li><li><strong>Replies:</strong> 205</li><li><strong>Posts:</strong> 2</li></ul>
+<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/brian_armstrong">Brian Armstrong</a></li><li><a href="https://x.com/harjtaggar">Harj Taggar</a></li></ul>]]></content:encoded>
+      <guid isPermaLink="true">https://docs.cdp.coinbase.com/coinbase-for-agents/overview</guid>
+      <category>Digg AI from X</category>
+      <pubDate>Mon, 31 Aug 2026 17:15:55 +0000</pubDate>
+      <media:content url="https://digg.com/tech/fzegcjkt/opengraph-image" type="image/jpeg" medium="image"/>
+    </item>
+    <item>
+      <title>Rif Joins METR After 19 Years at Google</title>
+      <link>https://x.com/derifatives/status/2094456312889569548</link>
+      <description>The former Google employee will serve as a Member of Technical Staff.</description>
+      <content:encoded><![CDATA[<p><img src="https://digg.com/tech/3aa9uztw/opengraph-image" alt="Rif Joins METR After 19 Years at Google"/></p>
+<p>The former Google employee will serve as a Member of Technical Staff.</p>
+<p><strong>Original source:</strong> <a href="https://x.com/derifatives/status/2094456312889569548">https://x.com/derifatives/status/2094456312889569548</a></p>
+<p><strong>Digg story:</strong> <a href="https://digg.com/tech/3aa9uztw">https://digg.com/tech/3aa9uztw</a></p>
+<p>Rif announced the move to METR in a post on X. After nineteen years at Google the engineer is taking the role of Member of Technical Staff. The post states excitement about METR&#x27;s existing work and mission. It also notes that society needs independent expert organizations able to evaluate and discuss AI capabilities and risks. The announcement stands as a first-party statement from the individual; no additional confirmation or details from METR appear in the supplied posts.</p>
+<ul><li><strong>Views:</strong> 2,962</li><li><strong>Likes:</strong> 166</li><li><strong>Bookmarks:</strong> 16</li><li><strong>Quotes:</strong> 4</li><li><strong>Replies:</strong> 9</li><li><strong>Posts:</strong> 1</li></ul>
+<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/ChrisPainterYup">Chris Painter</a></li></ul>]]></content:encoded>
+      <guid isPermaLink="true">https://x.com/derifatives/status/2094456312889569548</guid>
+      <category>Digg AI from X</category>
+      <pubDate>Mon, 31 Aug 2026 16:04:32 +0000</pubDate>
+      <media:content url="https://digg.com/tech/3aa9uztw/opengraph-image" type="image/jpeg" medium="image"/>
+    </item>
+    <item>
+      <title>Replit Head of AI Shares Free Mode Story</title>
+      <link>https://x.com/Replit/status/2094455460115923288</link>
+      <description>Replit highlights Michele Catasta building Free Mode after two decades of work.</description>
+      <content:encoded><![CDATA[<p><img src="https://digg.com/tech/vomfk7uq/opengraph-image" alt="Replit Head of AI Shares Free Mode Story"/></p>
+<p>Replit highlights Michele Catasta building Free Mode after two decades of work.</p>
+<p><strong>Original source:</strong> <a href="https://x.com/Replit/status/2094455460115923288">https://x.com/Replit/status/2094455460115923288</a></p>
+<p><strong>Digg story:</strong> <a href="https://digg.com/tech/vomfk7uq">https://digg.com/tech/vomfk7uq</a></p>
+<p>Replit posted from its official account about President and Head of AI Michele Catasta. The message states that he chased a vision for 20 years and has now built Free Mode. It opens with a line about inventions reaching ordinary hands for extraordinary results and presents the post as the story behind the feature. The account tags the content as coming from the company behind its AI-powered online IDE and Replit Agent. No additional details on the mode or its release appear in the post itself.</p>
+<ul><li><strong>Views:</strong> 4,988</li><li><strong>Likes:</strong> 68</li><li><strong>Bookmarks:</strong> 11</li><li><strong>Quotes:</strong> 2</li><li><strong>Replies:</strong> 4</li><li><strong>Posts:</strong> 1</li></ul>
+<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/pirroh">Michele Catasta</a></li></ul>]]></content:encoded>
+      <guid isPermaLink="true">https://x.com/Replit/status/2094455460115923288</guid>
+      <category>Digg AI from X</category>
+      <pubDate>Mon, 31 Aug 2026 16:01:09 +0000</pubDate>
+      <media:content url="https://digg.com/tech/vomfk7uq/opengraph-image" type="image/jpeg" medium="image"/>
+    </item>
+    <item>
+      <title>World Modeling Workshop and Conference Announced</title>
+      <link>https://icwm.cc</link>
+      <description>Researcher Randall Balestriero posted about the fourth workshop and first conference on world models for physics.</description>
+      <content:encoded><![CDATA[<p><img src="https://digg.com/tech/arv8ll0u/opengraph-image" alt="World Modeling Workshop and Conference Announced"/></p>
+<p>Researcher Randall Balestriero posted about the fourth workshop and first conference on world models for physics.</p>
+<p><strong>Original source:</strong> <a href="https://icwm.cc">https://icwm.cc</a></p>
+<p><strong>Digg story:</strong> <a href="https://digg.com/tech/arv8ll0u">https://digg.com/tech/arv8ll0u</a></p>
+<p>Randall Balestriero, an AI researcher and assistant professor at Brown University, posted on X about two upcoming events. The fourth world modeling workshop is scheduled for Aspen, Colorado in February and focuses on world models for physics. The first world modeling conference is set for the Bay Area, California in May. Both are organized in collaboration with Yann LeCun, LambdaAPI, amilabs and additional partners to be announced. The post references opening remarks for the events and links to their websites at wmw-aspen.github.io and icwm.cc.</p>
+<ul><li><strong>Views:</strong> 3,414</li><li><strong>Likes:</strong> 56</li><li><strong>Bookmarks:</strong> 21</li><li><strong>Replies:</strong> 1</li><li><strong>Posts:</strong> 1</li></ul>
+<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/ylecun">Yann LeCun</a></li></ul>]]></content:encoded>
+      <guid isPermaLink="true">https://icwm.cc</guid>
+      <category>Digg AI from X</category>
+      <pubDate>Mon, 31 Aug 2026 15:54:13 +0000</pubDate>
+      <media:content url="https://digg.com/tech/arv8ll0u/opengraph-image" type="image/jpeg" medium="image"/>
+    </item>
+    <item>
+      <title>Acemoglu Questions AI Revolution in Many Areas</title>
+      <link>https://x.com/DAcemogluMIT/status/2094441614781407377</link>
+      <description>MIT economist and Nobel laureate posted views on X about AI limits.</description>
+      <content:encoded><![CDATA[<p><img src="https://digg.com/tech/mflnfl7t/opengraph-image" alt="Acemoglu Questions AI Revolution in Many Areas"/></p>
+<p>MIT economist and Nobel laureate posted views on X about AI limits.</p>
+<p><strong>Original source:</strong> <a href="https://x.com/DAcemogluMIT/status/2094441614781407377">https://x.com/DAcemogluMIT/status/2094441614781407377</a></p>
+<p><strong>Digg story:</strong> <a href="https://digg.com/tech/mflnfl7t">https://digg.com/tech/mflnfl7t</a></p>
+<p>Daron Acemoglu, Institute Professor at MIT and Nobel laureate in economics, posted on X that in many areas where technooptimists expect AI to revolutionize everything, the impact may be much less positive. He wrote that current approaches do not help reach the bottom of mechanisms of human cognition, discovery, and innovation. Acemoglu added that many of those areas need more and higher quality data. The visible portion of the post ends mid-sentence.</p>
+<ul><li><strong>Views:</strong> 23,382</li><li><strong>Likes:</strong> 320</li><li><strong>Bookmarks:</strong> 60</li><li><strong>Quotes:</strong> 5</li><li><strong>Replies:</strong> 15</li><li><strong>Posts:</strong> 1</li></ul>
+<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/ylecun">Yann LeCun</a></li></ul>]]></content:encoded>
+      <guid isPermaLink="true">https://x.com/DAcemogluMIT/status/2094441614781407377</guid>
+      <category>Digg AI from X</category>
+      <pubDate>Mon, 31 Aug 2026 15:06:08 +0000</pubDate>
+      <media:content url="https://digg.com/tech/mflnfl7t/opengraph-image" type="image/jpeg" medium="image"/>
+    </item>
+    <item>
+      <title>Together AI Announces Saudi Data Center Deal With Humain</title>
+      <link>https://tinyurl.com/4nzcjcu7</link>
+      <description>Together AI announced a major infrastructure agreement with Humain for an open source AI data center.</description>
+      <content:encoded><![CDATA[<p><img src="https://digg.com/tech/s4o7jtmd/opengraph-image" alt="Together AI Announces Saudi Data Center Deal With Humain"/></p>
+<p>Together AI announced a major infrastructure agreement with Humain for an open source AI data center.</p>
+<p><strong>Original source:</strong> <a href="https://tinyurl.com/4nzcjcu7">https://tinyurl.com/4nzcjcu7</a></p>
+<p><strong>Digg story:</strong> <a href="https://digg.com/tech/s4o7jtmd">https://digg.com/tech/s4o7jtmd</a></p>
+<p>Together AI posted that it signed one of the largest AI infrastructure deals for open source, including a 250MW data center expected to generate over $5B in annualized revenue, built with Humain in Saudi Arabia. The New York Times reported that the U.S. start-up announced a deal to use compute from Humain in Saudi Arabia. The announcement appears in a post from the company&#x27;s official account and in the linked Times article.</p>
+<ul><li><strong>Views:</strong> 71,742</li><li><strong>Likes:</strong> 336</li><li><strong>Bookmarks:</strong> 101</li><li><strong>Quotes:</strong> 11</li><li><strong>Replies:</strong> 13</li><li><strong>Posts:</strong> 2</li></ul>
+<p><strong>Top authors</strong></p><ul><li><a href="https://x.com/togethercompute">Together AI</a></li><li><a href="https://x.com/graceisford">Grace Isford</a></li></ul>]]></content:encoded>
+      <guid isPermaLink="true">https://tinyurl.com/4nzcjcu7</guid>
+      <category>Digg AI from X</category>
+      <pubDate>Mon, 31 Aug 2026 13:26:13 +0000</pubDate>
+      <media:content url="https://digg.com/tech/s4o7jtmd/opengraph-image" type="image/jpeg" medium="image"/>
+    </item>
+  </channel>
+</rss>
