@@ -24,6 +24,8 @@ Automated RSS feeds for AI research blogs that don't provide them natively.
 
 Each feed includes the full article content (not just titles), so you can read everything directly in your RSS reader. The feeds update automatically via GitHub Actions and include proper formatting, images, and links.
 
+Generated feeds stay at their existing URLs on `main`. Successful refreshes replace the latest marked, bot-authored, feed-only commit; a source change starts a new feed checkpoint. Publication refuses concurrent remote changes and never replaces a source-changing commit. This keeps routine refreshes from adding permanent history while retaining the current XML as the generators' cache.
+
 Perfect for staying up-to-date with AI research without having to check multiple sites manually.
 
 Idea forked from [https://github.com/Olshansk/rss-feeds/](https://github.com/Olshansk/rss-feeds/)

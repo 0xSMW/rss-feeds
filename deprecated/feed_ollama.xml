@@ -1,0 +1,235 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0">
+  <channel>
+    <title>Ollama Blog</title>
+    <link>https://ollama.com/blog/feed_ollama.xml</link>
+    <description>Latest updates from Ollama</description>
+    <atom:link href="https://ollama.com/blog/feed_ollama.xml" rel="self"/>
+    <docs>http://www.rssboard.org/rss-specification</docs>
+    <generator>python-feedgen</generator>
+    <image>
+      <url>https://ollama.com/public/icon-64x64.png</url>
+      <title>Ollama Blog</title>
+      <link>https://ollama.com/blog/feed_ollama.xml</link>
+    </image>
+    <language>en</language>
+    <lastBuildDate>Thu, 11 Sep 2025 06:05:42 +0000</lastBuildDate>
+    <item>
+      <title>Run Llama 2 uncensored locally</title>
+      <link>https://ollama.com/blog/run-llama2-uncensored-locally</link>
+      <description>This post will give some example comparisons running Llama 2 uncensored model versus its censored model.</description>
+      <guid isPermaLink="false">https://ollama.com/blog/run-llama2-uncensored-locally</guid>
+      <pubDate>Tue, 01 Aug 2023 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Run Code Llama locally</title>
+      <link>https://ollama.com/blog/run-code-llama-locally</link>
+      <description>Meta's Code Llama is now available on Ollama to try.</description>
+      <guid isPermaLink="false">https://ollama.com/blog/run-code-llama-locally</guid>
+      <pubDate>Thu, 24 Aug 2023 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>How to prompt Code Llama</title>
+      <link>https://ollama.com/blog/how-to-prompt-code-llama</link>
+      <description>This guide walks through the different ways to structure prompts for Code Llama and its different variations and features including instructions, code completion and fill-in-the-middle (FIM).</description>
+      <guid isPermaLink="false">https://ollama.com/blog/how-to-prompt-code-llama</guid>
+      <pubDate>Sat, 09 Sep 2023 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Leveraging LLMs in your Obsidian Notes</title>
+      <link>https://ollama.com/blog/llms-in-obsidian</link>
+      <description>This post walks through how you could incorporate a local LLM using Ollama in Obsidian, or potentially any note taking tool.</description>
+      <guid isPermaLink="false">https://ollama.com/blog/llms-in-obsidian</guid>
+      <pubDate>Thu, 21 Sep 2023 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Ollama is now available as an official Docker image</title>
+      <link>https://ollama.com/blog/ollama-is-now-available-as-an-official-docker-image</link>
+      <description>Ollama can now run with Docker Desktop on the Mac, and run inside Docker containers with GPU acceleration on Linux.</description>
+      <guid isPermaLink="false">https://ollama.com/blog/ollama-is-now-available-as-an-official-docker-image</guid>
+      <pubDate>Thu, 05 Oct 2023 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Building LLM-Powered Web Apps with Client-Side Technology</title>
+      <link>https://ollama.com/blog/building-llm-powered-web-apps</link>
+      <description>Recreate one of the most popular LangChain use-cases with open source, locally running software - a chain that performs Retrieval-Augmented Generation, or RAG for short, and allows you to “chat with your documents”</description>
+      <guid isPermaLink="false">https://ollama.com/blog/building-llm-powered-web-apps</guid>
+      <pubDate>Fri, 13 Oct 2023 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Python &amp; JavaScript Libraries</title>
+      <link>https://ollama.com/blog/python-javascript-libraries</link>
+      <description>The initial versions of the Ollama Python and JavaScript libraries are now available, making it easy to integrate your Python or JavaScript, or Typescript app with Ollama in a few lines of code. Both libraries include all the features of the Ollama REST API, are familiar in design, and compatible with new and previous versions of Ollama.</description>
+      <guid isPermaLink="false">https://ollama.com/blog/python-javascript-libraries</guid>
+      <pubDate>Tue, 23 Jan 2024 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Vision models</title>
+      <link>https://ollama.com/blog/vision-models</link>
+      <description>New vision models are now available: LLaVA 1.6, in 7B, 13B and 34B parameter sizes. These models support higher resolution images, improved text recognition and logical reasoning.</description>
+      <guid isPermaLink="false">https://ollama.com/blog/vision-models</guid>
+      <pubDate>Fri, 02 Feb 2024 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>OpenAI compatibility</title>
+      <link>https://ollama.com/blog/openai-compatibility</link>
+      <description>Ollama now has initial compatibility with the OpenAI Chat Completions API, making it possible to use existing tooling built for OpenAI with local models via Ollama.</description>
+      <guid isPermaLink="false">https://ollama.com/blog/openai-compatibility</guid>
+      <pubDate>Thu, 08 Feb 2024 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Windows preview</title>
+      <link>https://ollama.com/blog/windows-preview</link>
+      <description>Ollama is now available on Windows in preview, making it possible to pull, run and create large language models in a new native Windows experience. Ollama on Windows includes built-in GPU acceleration, access to the full model library, and serves the Ollama API including OpenAI compatibility.</description>
+      <guid isPermaLink="false">https://ollama.com/blog/windows-preview</guid>
+      <pubDate>Thu, 15 Feb 2024 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Ollama now supports AMD graphics cards</title>
+      <link>https://ollama.com/blog/amd-preview</link>
+      <description>Ollama now supports AMD graphics cards in preview on Windows and Linux. All the features of Ollama can now be accelerated by AMD graphics cards on Ollama for Linux and Windows.</description>
+      <guid isPermaLink="false">https://ollama.com/blog/amd-preview</guid>
+      <pubDate>Thu, 14 Mar 2024 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Embedding models</title>
+      <link>https://ollama.com/blog/embedding-models</link>
+      <description>Embedding models are available in Ollama, making it easy to generate vector embeddings for use in search and retrieval augmented generation (RAG) applications.</description>
+      <guid isPermaLink="false">https://ollama.com/blog/embedding-models</guid>
+      <pubDate>Mon, 08 Apr 2024 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Llama 3</title>
+      <link>https://ollama.com/blog/llama3</link>
+      <description>Llama 3 is now available to run on Ollama. This model is the next generation of Meta's state-of-the-art large language model, and is the most capable openly available LLM to date.</description>
+      <guid isPermaLink="false">https://ollama.com/blog/llama3</guid>
+      <pubDate>Thu, 18 Apr 2024 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Llama 3 is not very censored</title>
+      <link>https://ollama.com/blog/llama-3-is-not-very-censored</link>
+      <description>Compared to Llama 2, Llama 3 feels much less censored. Meta has substantially lowered false refusal rates. Llama 3 will refuse less than 1/3 of the prompts previously refused by Llama 2.</description>
+      <guid isPermaLink="false">https://ollama.com/blog/llama-3-is-not-very-censored</guid>
+      <pubDate>Fri, 19 Apr 2024 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Google announces Firebase Genkit with Ollama support</title>
+      <link>https://ollama.com/blog/firebase-genkit</link>
+      <description>At Google IO 2024, Google announced Ollama support in Firebase Genkit, a new open-source framework for developers to build, deploy and monitor production-ready AI-powered apps.</description>
+      <guid isPermaLink="false">https://ollama.com/blog/firebase-genkit</guid>
+      <pubDate>Mon, 20 May 2024 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>An entirely open-source AI code assistant inside your editor</title>
+      <link>https://ollama.com/blog/continue-code-assistant</link>
+      <description>Continue enables you to easily create your own coding assistant directly inside Visual Studio Code and JetBrains with open-source LLMs.</description>
+      <guid isPermaLink="false">https://ollama.com/blog/continue-code-assistant</guid>
+      <pubDate>Fri, 31 May 2024 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Google Gemma 2</title>
+      <link>https://ollama.com/blog/gemma2</link>
+      <description>Gemma 2 is now available on Ollama in 3 sizes - 2B, 9B and 27B.</description>
+      <guid isPermaLink="false">https://ollama.com/blog/gemma2</guid>
+      <pubDate>Thu, 27 Jun 2024 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Tool support</title>
+      <link>https://ollama.com/blog/tool-support</link>
+      <description>Ollama now supports tool calling with popular models such as Llama 3.1. This enables a model to answer a given prompt using tool(s) it knows about, making it possible for models to perform more complex tasks or interact with the outside world.</description>
+      <guid isPermaLink="false">https://ollama.com/blog/tool-support</guid>
+      <pubDate>Thu, 25 Jul 2024 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Reduce hallucinations with Bespoke-Minicheck</title>
+      <link>https://ollama.com/blog/reduce-hallucinations-with-bespoke-minicheck</link>
+      <description>Bespoke-Minicheck is a new grounded factuality checking model developed by Bespoke Labs that is now available in Ollama. It can fact-check responses generated by other models to detect and reduce hallucinations.</description>
+      <guid isPermaLink="false">https://ollama.com/blog/reduce-hallucinations-with-bespoke-minicheck</guid>
+      <pubDate>Wed, 18 Sep 2024 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Llama 3.2 goes small and multimodal</title>
+      <link>https://ollama.com/blog/llama3.2</link>
+      <description>Ollama partners with Meta to bring Llama 3.2 to Ollama.</description>
+      <guid isPermaLink="false">https://ollama.com/blog/llama3.2</guid>
+      <pubDate>Wed, 25 Sep 2024 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>IBM Granite 3.0 models</title>
+      <link>https://ollama.com/blog/ibm-granite</link>
+      <description>Ollama partners with IBM to bring Granite 3.0 models to Ollama.</description>
+      <guid isPermaLink="false">https://ollama.com/blog/ibm-granite</guid>
+      <pubDate>Mon, 21 Oct 2024 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Llama 3.2 Vision</title>
+      <link>https://ollama.com/blog/llama3.2-vision</link>
+      <description>Llama 3.2 Vision 11B and 90B models are now available in Ollama.</description>
+      <guid isPermaLink="false">https://ollama.com/blog/llama3.2-vision</guid>
+      <pubDate>Wed, 06 Nov 2024 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Ollama Python library 0.4 with function calling improvements</title>
+      <link>https://ollama.com/blog/functions-as-tools</link>
+      <description>With Ollama Python library version 0.4, functions can now be provided as tools. The library now also has full typing support and new examples have been added.</description>
+      <guid isPermaLink="false">https://ollama.com/blog/functions-as-tools</guid>
+      <pubDate>Mon, 25 Nov 2024 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Structured outputs</title>
+      <link>https://ollama.com/blog/structured-outputs</link>
+      <description>Ollama now supports structured outputs making it possible to constrain a model's output to a specific format defined by a JSON schema. The Ollama Python and JavaScript libraries have been updated to support structured outputs.</description>
+      <guid isPermaLink="false">https://ollama.com/blog/structured-outputs</guid>
+      <pubDate>Fri, 06 Dec 2024 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Minions: where local and cloud LLMs meet</title>
+      <link>https://ollama.com/blog/minions</link>
+      <description>Avanika Narayan, Dan Biderman, and Sabri Eyuboglu from Christopher Ré's Stanford Hazy Research lab, along with Avner May, Scott Linderman, James Zou, have developed a way to shift a substantial portion of LLM workloads to consumer devices by having small on-device models (such as Llama 3.2 with Ollama) collaborate with larger models in the cloud (such as GPT-4o).</description>
+      <guid isPermaLink="false">https://ollama.com/blog/minions</guid>
+      <pubDate>Tue, 25 Feb 2025 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Ollama's new engine for multimodal models</title>
+      <link>https://ollama.com/blog/multimodal-models</link>
+      <description>Ollama now supports new multimodal models with its new engine.</description>
+      <guid isPermaLink="false">https://ollama.com/blog/multimodal-models</guid>
+      <pubDate>Thu, 15 May 2025 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Streaming responses with tool calling</title>
+      <link>https://ollama.com/blog/streaming-tool</link>
+      <description>Ollama now supports streaming responses with tool calling. This enables all chat applications to stream content and also call tools in real time.</description>
+      <guid isPermaLink="false">https://ollama.com/blog/streaming-tool</guid>
+      <pubDate>Wed, 28 May 2025 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Thinking</title>
+      <link>https://ollama.com/blog/thinking</link>
+      <description>Ollama now has the ability to enable or disable thinking. This gives users the flexibility to choose the model’s thinking behavior for different applications and use cases.</description>
+      <guid isPermaLink="false">https://ollama.com/blog/thinking</guid>
+      <pubDate>Fri, 30 May 2025 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Secure Minions: private collaboration between Ollama and frontier models</title>
+      <link>https://ollama.com/blog/secureminions</link>
+      <description>Secure Minions is a secure protocol built by Stanford's Hazy Research lab to allow encrypted local-remote communication.</description>
+      <guid isPermaLink="false">https://ollama.com/blog/secureminions</guid>
+      <pubDate>Tue, 03 Jun 2025 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Ollama's new app</title>
+      <link>https://ollama.com/blog/new-app</link>
+      <description>Ollama's new app is now available for macOS and Windows.</description>
+      <guid isPermaLink="false">https://ollama.com/blog/new-app</guid>
+      <pubDate>Wed, 30 Jul 2025 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>OpenAI gpt-oss</title>
+      <link>https://ollama.com/blog/gpt-oss</link>
+      <description>Ollama partners with OpenAI to bring gpt-oss to Ollama and its community.</description>
+      <guid isPermaLink="false">https://ollama.com/blog/gpt-oss</guid>
+      <pubDate>Tue, 05 Aug 2025 00:00:00 +0000</pubDate>
+    </item>
+  </channel>
+</rss>

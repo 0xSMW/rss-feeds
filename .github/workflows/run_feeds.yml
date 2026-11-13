@@ -5,6 +5,10 @@ on:
     - cron: "0 0,12 * * *" # Runs twice a day at midnight and noon
   workflow_dispatch:
 
+concurrency:
+  group: feed-publication-main
+  cancel-in-progress: false
+
 jobs:
   run-feeds:
     permissions:
@@ -15,9 +19,9 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          # Ensure we have the branch checked out and full history for pushing
+          # The parent is needed to identify a replaceable feed-only checkpoint.
           ref: main
-          fetch-depth: 0
+          fetch-depth: 2
 
       - name: Set up Python
         uses: actions/setup-python@v4
@@ -68,19 +72,4 @@ jobs:
           python feed_generators/run_all_feeds.py
 
       - name: Commit and push feed
-        run: |
-          set -e
-          git config user.name 'github-actions[bot]'
-          git config user.email 'github-actions[bot]@users.noreply.github.com'
-
-          # Stage any changes under feeds/ (XML and any future cache files)
-          git add feeds/*.xml || true
-
-          # Commit and push if anything is staged
-          if git diff --staged --quiet; then
-            echo "No changes to commit"
-          else
-            git commit -m "Update RSS feed $(date '+%m%d%Y %H%M')"
-            # Push explicitly to main in case of detached HEAD
-            git push origin HEAD:main
-          fi
+        run: python scripts/publish_feeds.py
