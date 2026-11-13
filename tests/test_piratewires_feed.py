@@ -173,19 +173,10 @@ class PirateWiresTests(unittest.TestCase):
             pirate.setup_selenium_driver()
         self.assertFalse(chrome.call_args.kwargs["user_multi_procs"])
         arguments = chrome.call_args.kwargs["options"].arguments
-        self.assertFalse(any(arg.startswith("--headless") for arg in arguments))
-        self.assertFalse(any(arg.startswith("--user-agent") for arg in arguments))
+        self.assertIn("--headless=new", arguments)
         self.assertEqual(
             chrome.call_args.kwargs["driver_executable_path"], "/workflow/chromedriver"
         )
-
-    def test_local_browser_remains_headless_without_virtual_display(self):
-        with (
-            patch.dict(os.environ, {"CI": "true", "DISPLAY": ""}),
-            patch.object(pirate.uc, "Chrome") as chrome,
-        ):
-            pirate.setup_selenium_driver()
-        self.assertIn("--headless=new", chrome.call_args.kwargs["options"].arguments)
 
     def test_full_metered_article_replaces_cached_preview(self):
         with tempfile.TemporaryDirectory() as directory:
@@ -402,9 +393,14 @@ class PirateWiresTests(unittest.TestCase):
                     "type": "newsletter",
                     "body_html": ARTICLE,
                 }
-                driver.find_element.return_value.text = json.dumps(
-                    {"post": post} if allowed else {"error": "Publisher denied access"}
-                )
+                driver.execute_async_script.return_value = {
+                    "status": 200 if allowed else 403,
+                    "body": json.dumps(
+                        {"post": post}
+                        if allowed
+                        else {"error": "Publisher denied access"}
+                    ),
+                }
                 try:
                     with (
                         patch.dict(
@@ -419,7 +415,10 @@ class PirateWiresTests(unittest.TestCase):
                     ):
                         self.assertEqual(pirate.main(), allowed)
                     setup.assert_called_once()
-                    self.assertEqual(driver.get.call_count, 2 if allowed else 1)
+                    driver.get.assert_called_once_with(pirate.BASE_URL)
+                    self.assertEqual(
+                        driver.execute_async_script.call_count, 2 if allowed else 1
+                    )
                     driver.quit.assert_called_once()
                     self.assertEqual(
                         Path("feeds/feed_piratewires.xml").exists(), allowed

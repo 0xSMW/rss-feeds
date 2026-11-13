@@ -82,10 +82,13 @@ def in_ci() -> bool:
 
 def setup_selenium_driver():
     options = uc.ChromeOptions()
-    if not (in_ci() and os.environ.get("DISPLAY")):
-        options.add_argument("--headless=new")
+    options.add_argument("--headless=new")
     options.add_argument("--window-size=1920,1080")
     options.add_argument("--disable-blink-features=AutomationControlled")
+    options.add_argument(
+        "--user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+        "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36"
+    )
     driver_path = os.environ.get("CHROMEDRIVER_PATH")
     browser_path = os.environ.get("CHROME_BINARY")
     version_main = os.environ.get("UC_VERSION_MAIN")
@@ -275,35 +278,38 @@ def _parse_date(text: str) -> datetime | None:
 
 
 def _fetch_article_api_browser(api_url: str, session: requests.Session) -> str:
-    """Read the publisher's JSON in a browser when the API blocks a direct client."""
-    from selenium.webdriver.common.by import By
-    from selenium.webdriver.support.ui import WebDriverWait
-
+    """Perform the web client's cross-origin article request from its own page."""
     driver = getattr(session, "_piratewires_article_driver", None)
     if driver is None:
         driver = setup_selenium_driver()
         session._piratewires_article_driver = driver
         driver.set_page_load_timeout(45)
+        driver.set_script_timeout(30)
+        driver.get(BASE_URL)
+        _wait_for_article_links(driver, timeout=20)
     logger.info(f"Fetching article API (browser): {api_url}")
-    driver.get(api_url)
-
-    def json_document(browser):
-        text = browser.find_element(By.TAG_NAME, "pre").text
-        try:
-            return text if isinstance(json.loads(text), dict) else False
-        except ValueError:
-            return False
-
-    try:
-        return WebDriverWait(driver, 20).until(json_document)
-    except Exception as exc:
-        try:
-            detail = (
-                f"{driver.title}: {driver.find_element(By.TAG_NAME, 'body').text[:250]}"
-            )
-        except Exception:
-            detail = "No readable browser response"
-        raise RuntimeError(f"Publisher returned no article JSON: {detail}") from exc
+    response = driver.execute_async_script(
+        """
+        const url = arguments[0], done = arguments[arguments.length - 1];
+        fetch(url, {credentials: 'include', headers: {Accept: 'application/json'}})
+          .then(async response => done({status: response.status, body: await response.text()}))
+          .catch(error => done({error: String(error)}));
+        """,
+        api_url,
+    )
+    if response.get("error"):
+        raise RuntimeError(
+            f"Publisher browser article request failed: {response['error']}"
+        )
+    status = response.get("status", 0)
+    if status < 200 or status >= 300:
+        error_response = requests.Response()
+        error_response.status_code = status
+        raise requests.HTTPError(
+            f"Publisher browser article request returned HTTP {status}",
+            response=error_response,
+        )
+    return response["body"]
 
 
 def fetch_article_api(
