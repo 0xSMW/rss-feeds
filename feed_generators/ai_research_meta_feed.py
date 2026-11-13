@@ -165,8 +165,6 @@ def main(feed_name: str = "ai_research") -> bool:
         # Exclude non-AI feeds and this meta feed
         exclude_feeds = [
             "arenamag",
-            "piratewires",
-            "hackernews",
             "steve_jobs_archive_stories",
             feed_name,
         ]
