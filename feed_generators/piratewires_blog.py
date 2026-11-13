@@ -277,6 +277,29 @@ def _parse_date(text: str) -> datetime | None:
         return None
 
 
+def _fetch_article_api_browser(api_url: str, session: requests.Session) -> str:
+    """Read the publisher's JSON in a browser when the API blocks a direct client."""
+    from selenium.webdriver.common.by import By
+    from selenium.webdriver.support.ui import WebDriverWait
+
+    driver = getattr(session, "_piratewires_article_driver", None)
+    if driver is None:
+        driver = setup_selenium_driver()
+        session._piratewires_article_driver = driver
+        driver.set_page_load_timeout(45)
+    logger.info(f"Fetching article API (browser): {api_url}")
+    driver.get(api_url)
+
+    def json_document(browser):
+        text = browser.find_element(By.TAG_NAME, "pre").text
+        try:
+            return text if isinstance(json.loads(text), dict) else False
+        except ValueError:
+            return False
+
+    return WebDriverWait(driver, 20).until(json_document)
+
+
 def fetch_article_api(
     url: str, session: requests.Session | None = None, *, include_body: bool = True
 ) -> dict:
@@ -291,7 +314,28 @@ def fetch_article_api(
     api_url = f"{ARTICLE_API_BASE}/{quote(slug, safe='')}"
     if include_body:
         api_url += "?withMetering=true"
-    payload = json.loads(fetch_page_requests(api_url, session=session))
+    sess = session or build_requests_session()
+    owned_session = session is None
+    try:
+        if getattr(sess, "_piratewires_article_driver", None) is not None:
+            raw = _fetch_article_api_browser(api_url, sess)
+        else:
+            try:
+                raw = fetch_page_requests(api_url, session=sess)
+            except requests.HTTPError as exc:
+                if exc.response is None or exc.response.status_code not in (403, 429):
+                    raise
+                logger.warning(
+                    "Direct article API request blocked; using the publisher JSON in a browser"
+                )
+                raw = _fetch_article_api_browser(api_url, sess)
+        payload = json.loads(raw)
+    finally:
+        if owned_session:
+            driver = getattr(sess, "_piratewires_article_driver", None)
+            if driver is not None:
+                driver.quit()
+            sess.close()
     post = payload.get("post")
     if not isinstance(post, dict) or post.get("slug") != slug:
         raise ValueError(f"Publisher returned the wrong article for {url}")
@@ -529,6 +573,7 @@ def save_rss_feed(feed_generator, feed_name: str = "piratewires") -> Path:
 
 
 def main(force: bool = False) -> bool:
+    article_session = None
     try:
         feeds_dir = Path("feeds")
         feeds_dir.mkdir(exist_ok=True)
@@ -549,6 +594,9 @@ def main(force: bool = False) -> bool:
         # Resolve undated links before ranking; old archive links must not displace
         # known recent stories. Metadata requests do not request metered full bodies.
         article_session = build_requests_session()
+        article_session.headers.update(
+            {"Origin": BASE_URL, "Accept": "application/json"}
+        )
         for article in articles:
             if not article.get("date"):
                 metadata = fetch_article_api(
@@ -588,6 +636,15 @@ def main(force: bool = False) -> bool:
     except Exception as e:
         logger.error(f"Failed to generate Pirate Wires RSS feed: {e}")
         return False
+    finally:
+        if article_session is not None:
+            try:
+                driver = getattr(article_session, "_piratewires_article_driver", None)
+                if driver is not None:
+                    driver.quit()
+            except Exception as exc:
+                logger.warning(f"Could not close article browser: {exc}")
+            article_session.close()
     return True
 
 

@@ -250,6 +250,11 @@ class PirateWiresTests(unittest.TestCase):
                             clear=True,
                         ),
                         patch.object(pirate, "ARTICLE_API_BASE", self.base + "/posts"),
+                        patch.object(
+                            pirate,
+                            "_fetch_article_api_browser",
+                            side_effect=RuntimeError("Publisher denied access"),
+                        ),
                     ):
                         self.assertFalse(pirate.main())
                     self.assertEqual(destination.read_text(), "<rss><channel/></rss>")
@@ -343,6 +348,71 @@ class PirateWiresTests(unittest.TestCase):
                 self.assertEqual(len(full_requests), 50)
             finally:
                 os.chdir(previous)
+
+    def test_blocked_article_api_uses_browser_json(self):
+        type(self).api_mode = "denied"
+        payload = json.dumps(
+            {
+                "post": {
+                    "slug": "current-story",
+                    "title": "Current story",
+                    "post_date": "2026-11-12T00:00:00Z",
+                    "type": "newsletter",
+                    "body_html": ARTICLE,
+                }
+            }
+        )
+        with (
+            patch.object(pirate, "ARTICLE_API_BASE", self.base + "/posts"),
+            patch.object(
+                pirate, "_fetch_article_api_browser", return_value=payload
+            ) as browser,
+        ):
+            metadata = pirate.fetch_article_api(ARTICLE_LINK)
+        self.assertIn("Full article paragraph 7.", metadata["content_html"])
+        self.assertIn("withMetering=true", browser.call_args.args[0])
+
+    def test_article_json_browser_is_reused_and_closed(self):
+        for allowed in (True, False):
+            with (
+                self.subTest(allowed=allowed),
+                tempfile.TemporaryDirectory() as directory,
+            ):
+                previous = Path.cwd()
+                os.chdir(directory)
+                type(self).api_mode = "denied"
+                driver = MagicMock()
+                post = {
+                    "slug": "current-story",
+                    "title": "Current story",
+                    "post_date": "2026-11-12T00:00:00Z",
+                    "type": "newsletter",
+                    "body_html": ARTICLE,
+                }
+                driver.find_element.return_value.text = json.dumps(
+                    {"post": post} if allowed else {"error": "Publisher denied access"}
+                )
+                try:
+                    with (
+                        patch.dict(
+                            pirate.CATEGORY_PAGES,
+                            {"Home": self.base + "/listing"},
+                            clear=True,
+                        ),
+                        patch.object(pirate, "ARTICLE_API_BASE", self.base + "/posts"),
+                        patch.object(
+                            pirate, "setup_selenium_driver", return_value=driver
+                        ) as setup,
+                    ):
+                        self.assertEqual(pirate.main(), allowed)
+                    setup.assert_called_once()
+                    self.assertEqual(driver.get.call_count, 2 if allowed else 1)
+                    driver.quit.assert_called_once()
+                    self.assertEqual(
+                        Path("feeds/feed_piratewires.xml").exists(), allowed
+                    )
+                finally:
+                    os.chdir(previous)
 
     def test_browser_listing_does_not_scroll_into_discarded_archives(self):
         driver = MagicMock()
