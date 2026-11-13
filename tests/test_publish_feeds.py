@@ -121,6 +121,28 @@ class PublishFeedsTests(unittest.TestCase):
         self.assertEqual(self.remote_head(), latest)
         self.assertEqual(self.git("rev-parse", "HEAD"), latest)
 
+    def test_return_to_source_baseline_removes_checkpoint_without_history_growth(self):
+        for cycle in range(2):
+            with self.subTest(cycle=cycle):
+                content = f"<rss>changed cycle {cycle}</rss>"
+                self.write("feeds/feed_example.xml", content + "\n")
+                self.publish()
+                self.assert_published(self.initial, content)
+                self.assertEqual(
+                    self.git("rev-list", "--count", self.remote_head()), "2"
+                )
+                self.write("feeds/feed_example.xml", "<rss>initial</rss>\n")
+                self.publish()
+                self.assertEqual(self.remote_head(), self.initial)
+                self.assertEqual(self.git("rev-parse", "HEAD"), self.initial)
+                self.assertEqual(
+                    self.git("rev-list", "--count", self.remote_head()), "1"
+                )
+        self.write("feeds/feed_example.xml", "<rss>final change</rss>\n")
+        self.publish()
+        self.assert_published(self.initial, "<rss>final change</rss>")
+        self.assertEqual(self.git("rev-list", "--count", self.remote_head()), "2")
+
     def test_clean_source_tip_is_noop(self):
         self.publish()
         self.assertEqual(self.remote_head(), self.initial)

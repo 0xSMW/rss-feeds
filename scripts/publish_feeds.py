@@ -69,22 +69,28 @@ def main() -> None:
     previous_parent = checkpoint_parent(tip)
     parent = previous_parent or tip
     tree = git("write-tree")
-    env = os.environ.copy()
-    env.update(
-        GIT_AUTHOR_NAME=BOT_NAME,
-        GIT_AUTHOR_EMAIL=BOT_EMAIL,
-        GIT_COMMITTER_NAME=BOT_NAME,
-        GIT_COMMITTER_EMAIL=BOT_EMAIL,
-    )
-    commit = git(
-        "commit-tree",
-        tree,
-        "-p",
-        parent,
-        input=f"Update RSS feeds\n\n{MARKER}\n",
-        env=env,
-    )
-    action = "Replacing" if previous_parent else "Creating"
+    if previous_parent and tree == git("rev-parse", f"{parent}^{{tree}}"):
+        # Returning to the source snapshot needs no publication commit. Keeping
+        # an empty checkpoint would prevent the next refresh from replacing it.
+        commit = parent
+        action = "Removing redundant"
+    else:
+        env = os.environ.copy()
+        env.update(
+            GIT_AUTHOR_NAME=BOT_NAME,
+            GIT_AUTHOR_EMAIL=BOT_EMAIL,
+            GIT_COMMITTER_NAME=BOT_NAME,
+            GIT_COMMITTER_EMAIL=BOT_EMAIL,
+        )
+        commit = git(
+            "commit-tree",
+            tree,
+            "-p",
+            parent,
+            input=f"Update RSS feeds\n\n{MARKER}\n",
+            env=env,
+        )
+        action = "Replacing" if previous_parent else "Creating"
     print(f"{action} feed checkpoint {tip} -> {commit}", flush=True)
     # An explicit expected value also protects against background Git fetches.
     subprocess.run(
