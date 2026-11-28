@@ -8,7 +8,15 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 02 Nov 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 16 Nov 2026 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Building an accounting team with Grok Bot</title>
+      <link>https://x.ai/news/grok-bot-accounting</link>
+      <description>Five Grok Bots at SpaceXSI each own an accounting job end to end, from provisioning a customer account to collecting payment. They only involve a person when the work needs judgment.</description>
+      <guid isPermaLink="true">https://x.ai/news/grok-bot-accounting</guid>
+      <category>News</category>
+      <pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
+    </item>
     <item>
       <title>Introducing Grok Bot 1.0</title>
       <link>https://x.ai/news/grok-bot-1-0</link>
@@ -51,10 +59,18 @@
       <pubDate>Thu, 22 Oct 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Using Grok Bot to detect and respond to incidents</title>
-      <link>https://x.ai/news/incident-sweep</link>
-      <description>IncidentWatch spots ticket spikes before internal alerts fire. IncidentSweep clears the related backlog in an approved batch.</description>
-      <guid isPermaLink="true">https://x.ai/news/incident-sweep</guid>
+      <title>Team Bots: shared AI teammates that learn as they work</title>
+      <link>https://x.ai/news/team-bots</link>
+      <description>Give a Grok Bot the files, apps, and expertise it needs, then share it so your whole team can work from the same context.</description>
+      <guid isPermaLink="true">https://x.ai/news/team-bots</guid>
+      <category>News</category>
+      <pubDate>Tue, 20 Oct 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Introducing Grok 4.7</title>
+      <link>https://x.ai/news/grok-4-7</link>
+      <description>SpaceXSI's most powerful model for coding and knowledge work. Twice as fast, at half the price of comparable models.</description>
+      <guid isPermaLink="true">https://x.ai/news/grok-4-7</guid>
       <category>News</category>
       <pubDate>Tue, 20 Oct 2026 00:00:00 +0000</pubDate>
     </item>
@@ -64,31 +80,7 @@
       <description>Announcing SpaceXSI's newest speech-to-text model, with unparalleled accuracy and cost effectiveness.</description>
       <guid isPermaLink="true">https://x.ai/news/grok-voice-transcribe-2</guid>
       <category>News</category>
-      <pubDate>Wed, 14 Oct 2026 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Memory in Grok Build</title>
-      <link>https://x.ai/news/grok-build-memory</link>
-      <description>Grok Build now carries conventions, decisions, and project facts from one session to the next. Notes are written in the background as you work and read back when you return to the project.</description>
-      <content:encoded><![CDATA[<p>Grok Build now has memory. As you work, it keeps notes on the conventions, decisions, and project facts that come up, and later sessions read those notes before touching related code. Grok Build gets better the more you use it.</p>
-<h2 id="what-it-remembers">What it remembers</h2>
-<p>Memory holds the details most likely to matter in a later session: how the team writes and reviews code, decisions and the reasoning behind them, and durable facts about the project, from where a subsystem lives to which command runs the suite. Task state, tentative conclusions, secrets, and anything the repository or its docs already cover are left out.</p>
-<p>Notes are kept per project, plus a global set for preferences that apply everywhere.</p>
-<h2 id="written-in-the-background">Written in the background</h2>
-<p>Capture runs after a turn completes and never blocks the session. Grok reviews the finished turn, writes anything worth keeping as a markdown note, and continues. Over time, <code>/dream</code> folds those notes into topic files, one per subject, so each project ends up with a small set of organized references.</p>
-<p>When you return to a project, Grok reads the topics that cover the area it is about to work in. Instructions in the current conversation take precedence over anything in a note.</p>
-<h2 id="browsing-memory">Browsing memory</h2>
-<p><code>/memory</code> opens a read-only browser of every memory file, grouped by scope, with a preview of the selected file. It is the fastest way to see what a session produced, and to find the file to edit when a note is wrong.</p>
-<h2 id="new-commands">New commands</h2>
-<ul>
-<li><code>/memory</code> opens the browser above.</li>
-<li><code>/dream</code> organizes recent notes into topic files, for example <code>topics/testing.md</code>. Dream also runs on its own periodically in the background.</li>
-</ul>
-<h2 id="availability">Availability</h2>
-<p>Memory is available in Grok Build now. It applies to new sessions: run <code>/new</code> or start a fresh <code>grok</code>, and notes begin after the first completed turn.</p>]]></content:encoded>
-      <guid isPermaLink="true">https://x.ai/news/grok-build-memory</guid>
-      <category>News</category>
-      <pubDate>Wed, 14 Oct 2026 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 20 Oct 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
       <title>Designing Grok Bot for a world of persistent agents</title>
@@ -96,12 +88,12 @@
       <description>How we designed Grok Bot for agents that persist beyond a single session — from a chat history to a Bot roster, presence, a computer of the Bot’s own, and work that starts without a prompt.</description>
       <content:encoded><![CDATA[<p>When we started designing Grok Bot, one of the central questions was how the interface should shape the relationship between user and agent. Most AI interfaces are organized around a chat session the user operates. Each session begins with setup, unfolds as the user looks on, and ends when the conversation stops.</p>
 <p>We wanted to design for an agent that persists beyond any one session and can carry responsibility on its own. That meant reconsidering some of the basic objects and signals of the interface, including what belongs in the sidebar, how an agent shows progress, and when its work should become visible.</p>
-<img src="https://x.ai/_next/static/media/wallpaper-light-noon.27_hyf9uycov-.png?dpl=fabb4f30c26a852cb5afe652834650ec18823e47"/>
-<img src="https://x.ai/_next/static/media/wallpaper-dark-night.2tq8j5y-604e-.png?dpl=fabb4f30c26a852cb5afe652834650ec18823e47"/>
-<img src="https://x.ai/_next/static/media/user-peng.3rw63gdxpcheg.png?dpl=fabb4f30c26a852cb5afe652834650ec18823e47"/>
-<img src="https://x.ai/_next/static/media/wallpaper-gray.13vta0mrxymev.png?dpl=fabb4f30c26a852cb5afe652834650ec18823e47"/>
-<img src="https://x.ai/_next/static/media/wallpaper-dark-night.2tq8j5y-604e-.png?dpl=fabb4f30c26a852cb5afe652834650ec18823e47"/>
-<img src="https://x.ai/_next/static/media/dock-icons.0cwlcw-73qj01.png?dpl=fabb4f30c26a852cb5afe652834650ec18823e47"/>
+<img src="https://x.ai/_next/static/media/wallpaper-light-noon.27_hyf9uycov-.png?dpl=0c0ac50f3a8cd1b1c0fd97673f29885397d81b96"/>
+<img src="https://x.ai/_next/static/media/wallpaper-dark-night.2tq8j5y-604e-.png?dpl=0c0ac50f3a8cd1b1c0fd97673f29885397d81b96"/>
+<img src="https://x.ai/_next/static/media/user-peng.3rw63gdxpcheg.png?dpl=0c0ac50f3a8cd1b1c0fd97673f29885397d81b96"/>
+<img src="https://x.ai/_next/static/media/wallpaper-gray.13vta0mrxymev.png?dpl=0c0ac50f3a8cd1b1c0fd97673f29885397d81b96"/>
+<img src="https://x.ai/_next/static/media/wallpaper-dark-night.2tq8j5y-604e-.png?dpl=0c0ac50f3a8cd1b1c0fd97673f29885397d81b96"/>
+<img src="https://x.ai/_next/static/media/dock-icons.0cwlcw-73qj01.png?dpl=0c0ac50f3a8cd1b1c0fd97673f29885397d81b96"/>
 <h2 id="rethinking-the-primitives">Rethinking the primitives</h2>
 <p>AI products have accumulated a large vocabulary in a short time. Chats, sessions, models, context windows, memories, system prompts, projects, skills, connectors, agents, tools, sandboxes, permissions, and automations all describe real parts of these systems.</p>
 <p>But exposing each one as a separate product concept asks users to understand more than they need to. We started by asking which concepts a person actually needs in order to work with an agent.</p>
@@ -127,66 +119,66 @@
 </ol>
 <h3 id="who-is-this">Who is this</h3>
 <p>A roster only works if it can be scanned quickly. As the roster grows, we did not want people to have to read every name each time they opened the product. They should be able to recognize a Bot from its avatar almost peripherally.</p>
-<img src="https://x.ai/_next/static/media/initials-1.0yig-qj1joruk.png?dpl=fabb4f30c26a852cb5afe652834650ec18823e47"/>
-<img src="https://x.ai/_next/static/media/initials-2.1txviuzdipoiw.png?dpl=fabb4f30c26a852cb5afe652834650ec18823e47"/>
-<img src="https://x.ai/_next/static/media/initials-3.38z4vaotfsn1v.png?dpl=fabb4f30c26a852cb5afe652834650ec18823e47"/>
-<img src="https://x.ai/_next/static/media/initials-4.01qrbimmhtavw.png?dpl=fabb4f30c26a852cb5afe652834650ec18823e47"/>
-<img src="https://x.ai/_next/static/media/initials-5.3jwzv-u8m85v8.png?dpl=fabb4f30c26a852cb5afe652834650ec18823e47"/>
-<img src="https://x.ai/_next/static/media/initials-6.19sekhuc8jakl.png?dpl=fabb4f30c26a852cb5afe652834650ec18823e47"/>
-<img src="https://x.ai/_next/static/media/emoji-1.3h5blj8bz5-jf.png?dpl=fabb4f30c26a852cb5afe652834650ec18823e47"/>
-<img src="https://x.ai/_next/static/media/emoji-2.39jbp_6rdd-5c.png?dpl=fabb4f30c26a852cb5afe652834650ec18823e47"/>
-<img src="https://x.ai/_next/static/media/emoji-3.28sgvmrs9mln9.png?dpl=fabb4f30c26a852cb5afe652834650ec18823e47"/>
-<img src="https://x.ai/_next/static/media/emoji-4.2avjpk08w6cek.png?dpl=fabb4f30c26a852cb5afe652834650ec18823e47"/>
-<img src="https://x.ai/_next/static/media/emoji-5.01zc07ny7g1nn.png?dpl=fabb4f30c26a852cb5afe652834650ec18823e47"/>
-<img src="https://x.ai/_next/static/media/emoji-6.09640mz61fg7f.png?dpl=fabb4f30c26a852cb5afe652834650ec18823e47"/>
-<img src="https://x.ai/_next/static/media/agentb-1.3r4tz4_d9u_-z.png?dpl=fabb4f30c26a852cb5afe652834650ec18823e47"/>
-<img src="https://x.ai/_next/static/media/agentb-2.3fmjch4q22wof.png?dpl=fabb4f30c26a852cb5afe652834650ec18823e47"/>
-<img src="https://x.ai/_next/static/media/agentb-3.3riz-3zy_f268.png?dpl=fabb4f30c26a852cb5afe652834650ec18823e47"/>
-<img src="https://x.ai/_next/static/media/agentb-4.2--kd8w9v-eaw.png?dpl=fabb4f30c26a852cb5afe652834650ec18823e47"/>
-<img src="https://x.ai/_next/static/media/agentb-5.0d3thxc1-7umo.png?dpl=fabb4f30c26a852cb5afe652834650ec18823e47"/>
-<img src="https://x.ai/_next/static/media/agentb-6.2hz5ggcwjuefo.png?dpl=fabb4f30c26a852cb5afe652834650ec18823e47"/>
-<img src="https://x.ai/_next/static/media/base-1.13x8p2khem12n.png?dpl=fabb4f30c26a852cb5afe652834650ec18823e47"/>
-<img src="https://x.ai/_next/static/media/base-2.0_m9l5xohcj95.png?dpl=fabb4f30c26a852cb5afe652834650ec18823e47"/>
-<img src="https://x.ai/_next/static/media/base-3.35r25_i92f7lp.png?dpl=fabb4f30c26a852cb5afe652834650ec18823e47"/>
-<img src="https://x.ai/_next/static/media/base-4.1p9fcypmuoe49.png?dpl=fabb4f30c26a852cb5afe652834650ec18823e47"/>
-<img src="https://x.ai/_next/static/media/base-5.1fhzuvuy00j0n.png?dpl=fabb4f30c26a852cb5afe652834650ec18823e47"/>
-<img src="https://x.ai/_next/static/media/base-6.3t9tmxu30heol.png?dpl=fabb4f30c26a852cb5afe652834650ec18823e47"/>
-<img src="https://x.ai/_next/static/media/new3d-1.1zc81r05mlxf2.png?dpl=fabb4f30c26a852cb5afe652834650ec18823e47"/>
-<img src="https://x.ai/_next/static/media/new3d-2.27lpziqdwd0j0.png?dpl=fabb4f30c26a852cb5afe652834650ec18823e47"/>
-<img src="https://x.ai/_next/static/media/new3d-3.1u9ugv0y8018y.png?dpl=fabb4f30c26a852cb5afe652834650ec18823e47"/>
-<img src="https://x.ai/_next/static/media/new3d-4.0o6i10hvi0pyz.png?dpl=fabb4f30c26a852cb5afe652834650ec18823e47"/>
-<img src="https://x.ai/_next/static/media/new3d-5.0dfi-x29-s1jo.png?dpl=fabb4f30c26a852cb5afe652834650ec18823e47"/>
-<img src="https://x.ai/_next/static/media/new3d-6.30xsvxdcjr7_i.png?dpl=fabb4f30c26a852cb5afe652834650ec18823e47"/>
-<img src="https://x.ai/_next/static/media/blob-1.179mb5k-55q0s.png?dpl=fabb4f30c26a852cb5afe652834650ec18823e47"/>
-<img src="https://x.ai/_next/static/media/blob-2.0f9k73iqne5ic.png?dpl=fabb4f30c26a852cb5afe652834650ec18823e47"/>
-<img src="https://x.ai/_next/static/media/blob-3.3ccg438vd4bnj.png?dpl=fabb4f30c26a852cb5afe652834650ec18823e47"/>
-<img src="https://x.ai/_next/static/media/blob-4.26votlluxpf3p.png?dpl=fabb4f30c26a852cb5afe652834650ec18823e47"/>
-<img src="https://x.ai/_next/static/media/blob-5.3td20ca0sy08_.png?dpl=fabb4f30c26a852cb5afe652834650ec18823e47"/>
-<img src="https://x.ai/_next/static/media/blob-6.24umj72ldwxsm.png?dpl=fabb4f30c26a852cb5afe652834650ec18823e47"/>
-<img src="https://x.ai/_next/static/media/line-1.2vlri0g4yob5c.png?dpl=fabb4f30c26a852cb5afe652834650ec18823e47"/>
-<img src="https://x.ai/_next/static/media/line-2.0k59bd-g6w77s.png?dpl=fabb4f30c26a852cb5afe652834650ec18823e47"/>
-<img src="https://x.ai/_next/static/media/line-3.00_foixq2-eza.png?dpl=fabb4f30c26a852cb5afe652834650ec18823e47"/>
-<img src="https://x.ai/_next/static/media/line-4.3na4nl1j5at_t.png?dpl=fabb4f30c26a852cb5afe652834650ec18823e47"/>
-<img src="https://x.ai/_next/static/media/line-5.3rjal0p5m-286.png?dpl=fabb4f30c26a852cb5afe652834650ec18823e47"/>
-<img src="https://x.ai/_next/static/media/line-6.2ehf_3xbvejl2.png?dpl=fabb4f30c26a852cb5afe652834650ec18823e47"/>
-<img src="https://x.ai/_next/static/media/s32-1.2utembwuppxxx.png?dpl=fabb4f30c26a852cb5afe652834650ec18823e47"/>
-<img src="https://x.ai/_next/static/media/s32-2.3iy5no1sbn35f.png?dpl=fabb4f30c26a852cb5afe652834650ec18823e47"/>
-<img src="https://x.ai/_next/static/media/s32-3.0e7acsgpg5bqv.png?dpl=fabb4f30c26a852cb5afe652834650ec18823e47"/>
-<img src="https://x.ai/_next/static/media/s32-4.21x56bl2zkenr.png?dpl=fabb4f30c26a852cb5afe652834650ec18823e47"/>
-<img src="https://x.ai/_next/static/media/s32-5.10zlplp724o1m.png?dpl=fabb4f30c26a852cb5afe652834650ec18823e47"/>
-<img src="https://x.ai/_next/static/media/s32-6.26kxeg4kxjnex.png?dpl=fabb4f30c26a852cb5afe652834650ec18823e47"/>
-<img src="https://x.ai/_next/static/media/mix-1.11lta7nrjb9pn.png?dpl=fabb4f30c26a852cb5afe652834650ec18823e47"/>
-<img src="https://x.ai/_next/static/media/mix-2.1tpo6-fp8vgup.png?dpl=fabb4f30c26a852cb5afe652834650ec18823e47"/>
-<img src="https://x.ai/_next/static/media/mix-3.32f6whniadrub.png?dpl=fabb4f30c26a852cb5afe652834650ec18823e47"/>
-<img src="https://x.ai/_next/static/media/mix-4.1pily-uyp88-h.png?dpl=fabb4f30c26a852cb5afe652834650ec18823e47"/>
-<img src="https://x.ai/_next/static/media/mix-5.2sq51vj2aq2dn.png?dpl=fabb4f30c26a852cb5afe652834650ec18823e47"/>
-<img src="https://x.ai/_next/static/media/mix-6.1e2kj0mwyz2mi.png?dpl=fabb4f30c26a852cb5afe652834650ec18823e47"/>
-<img src="https://x.ai/_next/static/media/agenta-1.1iuswpcl3hq8o.png?dpl=fabb4f30c26a852cb5afe652834650ec18823e47"/>
-<img src="https://x.ai/_next/static/media/agenta-2.346vsyk23d7i_.png?dpl=fabb4f30c26a852cb5afe652834650ec18823e47"/>
-<img src="https://x.ai/_next/static/media/agenta-3.20lqy9orb-_2u.png?dpl=fabb4f30c26a852cb5afe652834650ec18823e47"/>
-<img src="https://x.ai/_next/static/media/agenta-4.44r1bdv8r6u-c.png?dpl=fabb4f30c26a852cb5afe652834650ec18823e47"/>
-<img src="https://x.ai/_next/static/media/agenta-5.3at_es63n-ehm.png?dpl=fabb4f30c26a852cb5afe652834650ec18823e47"/>
-<img src="https://x.ai/_next/static/media/agenta-6.3m1estnwuqiu3.png?dpl=fabb4f30c26a852cb5afe652834650ec18823e47"/>
+<img src="https://x.ai/_next/static/media/initials-1.0yig-qj1joruk.png?dpl=0c0ac50f3a8cd1b1c0fd97673f29885397d81b96"/>
+<img src="https://x.ai/_next/static/media/initials-2.1txviuzdipoiw.png?dpl=0c0ac50f3a8cd1b1c0fd97673f29885397d81b96"/>
+<img src="https://x.ai/_next/static/media/initials-3.38z4vaotfsn1v.png?dpl=0c0ac50f3a8cd1b1c0fd97673f29885397d81b96"/>
+<img src="https://x.ai/_next/static/media/initials-4.01qrbimmhtavw.png?dpl=0c0ac50f3a8cd1b1c0fd97673f29885397d81b96"/>
+<img src="https://x.ai/_next/static/media/initials-5.3jwzv-u8m85v8.png?dpl=0c0ac50f3a8cd1b1c0fd97673f29885397d81b96"/>
+<img src="https://x.ai/_next/static/media/initials-6.19sekhuc8jakl.png?dpl=0c0ac50f3a8cd1b1c0fd97673f29885397d81b96"/>
+<img src="https://x.ai/_next/static/media/emoji-1.3h5blj8bz5-jf.png?dpl=0c0ac50f3a8cd1b1c0fd97673f29885397d81b96"/>
+<img src="https://x.ai/_next/static/media/emoji-2.39jbp_6rdd-5c.png?dpl=0c0ac50f3a8cd1b1c0fd97673f29885397d81b96"/>
+<img src="https://x.ai/_next/static/media/emoji-3.28sgvmrs9mln9.png?dpl=0c0ac50f3a8cd1b1c0fd97673f29885397d81b96"/>
+<img src="https://x.ai/_next/static/media/emoji-4.2avjpk08w6cek.png?dpl=0c0ac50f3a8cd1b1c0fd97673f29885397d81b96"/>
+<img src="https://x.ai/_next/static/media/emoji-5.01zc07ny7g1nn.png?dpl=0c0ac50f3a8cd1b1c0fd97673f29885397d81b96"/>
+<img src="https://x.ai/_next/static/media/emoji-6.09640mz61fg7f.png?dpl=0c0ac50f3a8cd1b1c0fd97673f29885397d81b96"/>
+<img src="https://x.ai/_next/static/media/agentb-1.3r4tz4_d9u_-z.png?dpl=0c0ac50f3a8cd1b1c0fd97673f29885397d81b96"/>
+<img src="https://x.ai/_next/static/media/agentb-2.3fmjch4q22wof.png?dpl=0c0ac50f3a8cd1b1c0fd97673f29885397d81b96"/>
+<img src="https://x.ai/_next/static/media/agentb-3.3riz-3zy_f268.png?dpl=0c0ac50f3a8cd1b1c0fd97673f29885397d81b96"/>
+<img src="https://x.ai/_next/static/media/agentb-4.2--kd8w9v-eaw.png?dpl=0c0ac50f3a8cd1b1c0fd97673f29885397d81b96"/>
+<img src="https://x.ai/_next/static/media/agentb-5.0d3thxc1-7umo.png?dpl=0c0ac50f3a8cd1b1c0fd97673f29885397d81b96"/>
+<img src="https://x.ai/_next/static/media/agentb-6.2hz5ggcwjuefo.png?dpl=0c0ac50f3a8cd1b1c0fd97673f29885397d81b96"/>
+<img src="https://x.ai/_next/static/media/base-1.13x8p2khem12n.png?dpl=0c0ac50f3a8cd1b1c0fd97673f29885397d81b96"/>
+<img src="https://x.ai/_next/static/media/base-2.0_m9l5xohcj95.png?dpl=0c0ac50f3a8cd1b1c0fd97673f29885397d81b96"/>
+<img src="https://x.ai/_next/static/media/base-3.35r25_i92f7lp.png?dpl=0c0ac50f3a8cd1b1c0fd97673f29885397d81b96"/>
+<img src="https://x.ai/_next/static/media/base-4.1p9fcypmuoe49.png?dpl=0c0ac50f3a8cd1b1c0fd97673f29885397d81b96"/>
+<img src="https://x.ai/_next/static/media/base-5.1fhzuvuy00j0n.png?dpl=0c0ac50f3a8cd1b1c0fd97673f29885397d81b96"/>
+<img src="https://x.ai/_next/static/media/base-6.3t9tmxu30heol.png?dpl=0c0ac50f3a8cd1b1c0fd97673f29885397d81b96"/>
+<img src="https://x.ai/_next/static/media/new3d-1.1zc81r05mlxf2.png?dpl=0c0ac50f3a8cd1b1c0fd97673f29885397d81b96"/>
+<img src="https://x.ai/_next/static/media/new3d-2.27lpziqdwd0j0.png?dpl=0c0ac50f3a8cd1b1c0fd97673f29885397d81b96"/>
+<img src="https://x.ai/_next/static/media/new3d-3.1u9ugv0y8018y.png?dpl=0c0ac50f3a8cd1b1c0fd97673f29885397d81b96"/>
+<img src="https://x.ai/_next/static/media/new3d-4.0o6i10hvi0pyz.png?dpl=0c0ac50f3a8cd1b1c0fd97673f29885397d81b96"/>
+<img src="https://x.ai/_next/static/media/new3d-5.0dfi-x29-s1jo.png?dpl=0c0ac50f3a8cd1b1c0fd97673f29885397d81b96"/>
+<img src="https://x.ai/_next/static/media/new3d-6.30xsvxdcjr7_i.png?dpl=0c0ac50f3a8cd1b1c0fd97673f29885397d81b96"/>
+<img src="https://x.ai/_next/static/media/blob-1.179mb5k-55q0s.png?dpl=0c0ac50f3a8cd1b1c0fd97673f29885397d81b96"/>
+<img src="https://x.ai/_next/static/media/blob-2.0f9k73iqne5ic.png?dpl=0c0ac50f3a8cd1b1c0fd97673f29885397d81b96"/>
+<img src="https://x.ai/_next/static/media/blob-3.3ccg438vd4bnj.png?dpl=0c0ac50f3a8cd1b1c0fd97673f29885397d81b96"/>
+<img src="https://x.ai/_next/static/media/blob-4.26votlluxpf3p.png?dpl=0c0ac50f3a8cd1b1c0fd97673f29885397d81b96"/>
+<img src="https://x.ai/_next/static/media/blob-5.3td20ca0sy08_.png?dpl=0c0ac50f3a8cd1b1c0fd97673f29885397d81b96"/>
+<img src="https://x.ai/_next/static/media/blob-6.24umj72ldwxsm.png?dpl=0c0ac50f3a8cd1b1c0fd97673f29885397d81b96"/>
+<img src="https://x.ai/_next/static/media/line-1.2vlri0g4yob5c.png?dpl=0c0ac50f3a8cd1b1c0fd97673f29885397d81b96"/>
+<img src="https://x.ai/_next/static/media/line-2.0k59bd-g6w77s.png?dpl=0c0ac50f3a8cd1b1c0fd97673f29885397d81b96"/>
+<img src="https://x.ai/_next/static/media/line-3.00_foixq2-eza.png?dpl=0c0ac50f3a8cd1b1c0fd97673f29885397d81b96"/>
+<img src="https://x.ai/_next/static/media/line-4.3na4nl1j5at_t.png?dpl=0c0ac50f3a8cd1b1c0fd97673f29885397d81b96"/>
+<img src="https://x.ai/_next/static/media/line-5.3rjal0p5m-286.png?dpl=0c0ac50f3a8cd1b1c0fd97673f29885397d81b96"/>
+<img src="https://x.ai/_next/static/media/line-6.2ehf_3xbvejl2.png?dpl=0c0ac50f3a8cd1b1c0fd97673f29885397d81b96"/>
+<img src="https://x.ai/_next/static/media/s32-1.2utembwuppxxx.png?dpl=0c0ac50f3a8cd1b1c0fd97673f29885397d81b96"/>
+<img src="https://x.ai/_next/static/media/s32-2.3iy5no1sbn35f.png?dpl=0c0ac50f3a8cd1b1c0fd97673f29885397d81b96"/>
+<img src="https://x.ai/_next/static/media/s32-3.0e7acsgpg5bqv.png?dpl=0c0ac50f3a8cd1b1c0fd97673f29885397d81b96"/>
+<img src="https://x.ai/_next/static/media/s32-4.21x56bl2zkenr.png?dpl=0c0ac50f3a8cd1b1c0fd97673f29885397d81b96"/>
+<img src="https://x.ai/_next/static/media/s32-5.10zlplp724o1m.png?dpl=0c0ac50f3a8cd1b1c0fd97673f29885397d81b96"/>
+<img src="https://x.ai/_next/static/media/s32-6.26kxeg4kxjnex.png?dpl=0c0ac50f3a8cd1b1c0fd97673f29885397d81b96"/>
+<img src="https://x.ai/_next/static/media/mix-1.11lta7nrjb9pn.png?dpl=0c0ac50f3a8cd1b1c0fd97673f29885397d81b96"/>
+<img src="https://x.ai/_next/static/media/mix-2.1tpo6-fp8vgup.png?dpl=0c0ac50f3a8cd1b1c0fd97673f29885397d81b96"/>
+<img src="https://x.ai/_next/static/media/mix-3.32f6whniadrub.png?dpl=0c0ac50f3a8cd1b1c0fd97673f29885397d81b96"/>
+<img src="https://x.ai/_next/static/media/mix-4.1pily-uyp88-h.png?dpl=0c0ac50f3a8cd1b1c0fd97673f29885397d81b96"/>
+<img src="https://x.ai/_next/static/media/mix-5.2sq51vj2aq2dn.png?dpl=0c0ac50f3a8cd1b1c0fd97673f29885397d81b96"/>
+<img src="https://x.ai/_next/static/media/mix-6.1e2kj0mwyz2mi.png?dpl=0c0ac50f3a8cd1b1c0fd97673f29885397d81b96"/>
+<img src="https://x.ai/_next/static/media/agenta-1.1iuswpcl3hq8o.png?dpl=0c0ac50f3a8cd1b1c0fd97673f29885397d81b96"/>
+<img src="https://x.ai/_next/static/media/agenta-2.346vsyk23d7i_.png?dpl=0c0ac50f3a8cd1b1c0fd97673f29885397d81b96"/>
+<img src="https://x.ai/_next/static/media/agenta-3.20lqy9orb-_2u.png?dpl=0c0ac50f3a8cd1b1c0fd97673f29885397d81b96"/>
+<img src="https://x.ai/_next/static/media/agenta-4.44r1bdv8r6u-c.png?dpl=0c0ac50f3a8cd1b1c0fd97673f29885397d81b96"/>
+<img src="https://x.ai/_next/static/media/agenta-5.3at_es63n-ehm.png?dpl=0c0ac50f3a8cd1b1c0fd97673f29885397d81b96"/>
+<img src="https://x.ai/_next/static/media/agenta-6.3m1estnwuqiu3.png?dpl=0c0ac50f3a8cd1b1c0fd97673f29885397d81b96"/>
 <p>At the same time, we wanted to keep the avatars consistent enough to read as one system. We studied character systems across illustration, animation, games, and interface design, exploring everything from initials and emojis to pixel art, watercolor, claymorphism, Noritake-style line art, silhouettes, and identicons.</p>
 <p>Most approaches solved one side of the problem better than the other. Watercolor and clay gave individual Bots plenty of character but carried too much detail at sidebar scale. Simpler systems sat more naturally in the interface, but often left the Bots looking interchangeable.</p>
 <p>The system we landed on keeps the basic construction consistent, using simple shapes and expressive eyes, then introduces distinction through controlled variations and accessories. Each Bot remains recognizable at a glance without appearing to come from a different visual world.</p>
@@ -207,7 +199,7 @@
 <li><strong>Modal:</strong> made checking in easy but treated the Bot’s workspace as a temporary interruption.</li>
 <li><strong>Full screen:</strong> gave the computer plenty of room but displaced the conversation entirely.</li>
 </ul>
-<img src="https://x.ai/_next/static/media/wallpaper-gray.13vta0mrxymev.png?dpl=fabb4f30c26a852cb5afe652834650ec18823e47"/>
+<img src="https://x.ai/_next/static/media/wallpaper-gray.13vta0mrxymev.png?dpl=0c0ac50f3a8cd1b1c0fd97673f29885397d81b96"/>
 <p>The more prominent we made the computer, the more the product encouraged users to supervise it. We decided it should remain the Bot’s workspace, with the interface providing different levels of access as the user needed them.</p>
 <p>The final design has three levels, which allow the user to enter the Bot’s workspace without being drawn into operating it:</p>
 <ul>
@@ -215,13 +207,13 @@
 <li><strong>Preview:</strong> opening it reveals a pinned side panel where the user can follow the work without leaving the conversation.</li>
 <li><strong>Takeover:</strong> when the Bot needs help, the user can open the computer full screen, take control, and then hand it back.</li>
 </ul>
-<img src="https://x.ai/_next/static/media/wallpaper-gray.13vta0mrxymev.png?dpl=fabb4f30c26a852cb5afe652834650ec18823e47"/>
+<img src="https://x.ai/_next/static/media/wallpaper-gray.13vta0mrxymev.png?dpl=0c0ac50f3a8cd1b1c0fd97673f29885397d81b96"/>
 <p>We also designed wallpapers that shift throughout the day, becoming lighter in the morning and darker at night. The detail gives the Bot’s computer its own sense of time and makes it feel separate from the user’s desktop.</p>
-<img alt="light day" src="https://x.ai/_next/static/media/wall-strip-1.3gno9o6tamsil.png?dpl=fabb4f30c26a852cb5afe652834650ec18823e47"/>
-<img alt="light noon" src="https://x.ai/_next/static/media/wall-strip-2.06luvae_idfx_.png?dpl=fabb4f30c26a852cb5afe652834650ec18823e47"/>
-<img alt="light night" src="https://x.ai/_next/static/media/wall-strip-3.170lw02z5ufzv.png?dpl=fabb4f30c26a852cb5afe652834650ec18823e47"/>
-<img alt="dark day" src="https://x.ai/_next/static/media/wall-strip-4.31folbdvqalze.png?dpl=fabb4f30c26a852cb5afe652834650ec18823e47"/>
-<img alt="dark noon" src="https://x.ai/_next/static/media/wall-strip-5.099mty7qqe_zp.png?dpl=fabb4f30c26a852cb5afe652834650ec18823e47"/>
+<img alt="light day" src="https://x.ai/_next/static/media/wall-strip-1.3gno9o6tamsil.png?dpl=0c0ac50f3a8cd1b1c0fd97673f29885397d81b96"/>
+<img alt="light noon" src="https://x.ai/_next/static/media/wall-strip-2.06luvae_idfx_.png?dpl=0c0ac50f3a8cd1b1c0fd97673f29885397d81b96"/>
+<img alt="light night" src="https://x.ai/_next/static/media/wall-strip-3.170lw02z5ufzv.png?dpl=0c0ac50f3a8cd1b1c0fd97673f29885397d81b96"/>
+<img alt="dark day" src="https://x.ai/_next/static/media/wall-strip-4.31folbdvqalze.png?dpl=0c0ac50f3a8cd1b1c0fd97673f29885397d81b96"/>
+<img alt="dark noon" src="https://x.ai/_next/static/media/wall-strip-5.099mty7qqe_zp.png?dpl=0c0ac50f3a8cd1b1c0fd97673f29885397d81b96"/>
 <p>It is closer to working with a coworker than operating a remote machine. You can tell that they are working, glance at their screen when you need context, and sit down when something requires your help.</p>
 <h2 id="the-shape-of-information">The shape of information</h2>
 <p>Early versions of Grok Bot responded to almost every request with prose. It described a five-day forecast instead of showing one and narrated a set of tasks instead of laying them out as a board. The user then had to restructure the answer. This led us to treat the form of a response as part of the answer.</p>
@@ -244,8 +236,8 @@
 <p>The line between operating an AI and delegating to a coworker keeps moving as models improve. Grok Bot reflects where we think it sits today. Designing Grok Bot from its earliest explorations through launch has been about finding that line and helping the interface change with it. As agents take on more responsibility, the interface should ask less of the person.</p>]]></content:encoded>
       <guid isPermaLink="true">https://x.ai/news/designing-grok-bot</guid>
       <category>News</category>
-      <pubDate>Wed, 14 Oct 2026 00:00:00 +0000</pubDate>
-      <media:content url="https://x.ai/_next/static/media/wallpaper-light-noon.27_hyf9uycov-.png?dpl=fabb4f30c26a852cb5afe652834650ec18823e47" type="image/png" medium="image"/>
+      <pubDate>Tue, 20 Oct 2026 00:00:00 +0000</pubDate>
+      <media:content url="https://x.ai/_next/static/media/wallpaper-light-noon.27_hyf9uycov-.png?dpl=0c0ac50f3a8cd1b1c0fd97673f29885397d81b96" type="image/png" medium="image"/>
     </item>
     <item>
       <title>Grok Bot for Enterprise</title>
@@ -253,7 +245,7 @@
       <description>Grok Bot is now available for enterprises. Grok and Cursor Enterprise customers have free usage for the next two weeks, and can invite their whole organization, including people without an existing seat.</description>
       <guid isPermaLink="true">https://x.ai/news/grok-bot-for-enterprise</guid>
       <category>News</category>
-      <pubDate>Wed, 14 Oct 2026 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 20 Oct 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
       <title>Biosecurity at the frontier</title>
@@ -295,7 +287,7 @@
 </ul>]]></content:encoded>
       <guid isPermaLink="true">https://x.ai/news/biosafety-at-the-frontier</guid>
       <category>News</category>
-      <pubDate>Wed, 14 Oct 2026 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 20 Oct 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
       <title>Grok 4.6 on Gemini Enterprise Agent Platform</title>
@@ -315,7 +307,7 @@
 <p>Grok 4.6 is now available to developers in Model Garden. To get started, visit the <a href="https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/partner-models/grok/grok-4-6">Grok 4.6 model card</a>. We're excited to see what you build!</p>]]></content:encoded>
       <guid isPermaLink="true">https://x.ai/news/grok-4-6-vertex-ai</guid>
       <category>News</category>
-      <pubDate>Wed, 14 Oct 2026 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 20 Oct 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
       <title>Grok 4.6 on Amazon Bedrock</title>
@@ -335,7 +327,7 @@
 <p>Grok 4.6 is now available to all developers in supported AWS Regions. Please visit AWS documentation to get started - we're excited to see what you build!</p>]]></content:encoded>
       <guid isPermaLink="true">https://x.ai/news/grok-4-6-amazon-bedrock</guid>
       <category>News</category>
-      <pubDate>Wed, 14 Oct 2026 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 20 Oct 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
       <title>Grok 4.6 in GitHub Copilot</title>
@@ -345,7 +337,7 @@
 <a href="https://github.com/features/copilot">Open GitHub Copilot</a>]]></content:encoded>
       <guid isPermaLink="true">https://x.ai/news/grok-4-6-github-copilot</guid>
       <category>News</category>
-      <pubDate>Wed, 14 Oct 2026 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 20 Oct 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
       <title>Introducing Grok 4.6</title>
@@ -353,7 +345,7 @@
       <description>Grok 4.6 builds on Grok 4.5 with a particular focus on long-running agents and more ambitious interactive and visual work.</description>
       <guid isPermaLink="true">https://x.ai/news/grok-4-6</guid>
       <category>News</category>
-      <pubDate>Wed, 14 Oct 2026 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 20 Oct 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
       <title>Introducing Grok Voice 2.0</title>
@@ -361,7 +353,7 @@
       <description>Introducing our most capable speech-to-speech voice model.</description>
       <guid isPermaLink="true">https://x.ai/news/grok-voice-think-fast-2</guid>
       <category>News</category>
-      <pubDate>Wed, 14 Oct 2026 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 20 Oct 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
       <title>Introducing Build Mode</title>
@@ -369,7 +361,7 @@
       <description>Create and share websites, apps, games, and interactive dashboards. Now in Early Beta for SuperGrok Heavy subscribers on grok.com, iOS, and Android.</description>
       <guid isPermaLink="true">https://x.ai/news/grok-build-mode</guid>
       <category>News</category>
-      <pubDate>Wed, 14 Oct 2026 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 20 Oct 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
       <title>Grok 4.5 in GitHub Copilot</title>
@@ -379,7 +371,7 @@
 <a href="https://github.com/features/copilot">Open GitHub Copilot</a>]]></content:encoded>
       <guid isPermaLink="true">https://x.ai/news/grok-github-copilot</guid>
       <category>News</category>
-      <pubDate>Wed, 14 Oct 2026 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 20 Oct 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
       <title>Introducing Grok for Outlook</title>
@@ -387,7 +379,7 @@
       <description>Use the Grok add-in for Microsoft Outlook to summarize long email threads, draft replies in your voice, and keep your inbox organized.</description>
       <guid isPermaLink="true">https://x.ai/news/introducing-outlook-addin</guid>
       <category>News</category>
-      <pubDate>Wed, 14 Oct 2026 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 20 Oct 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
       <title>Introducing Grok 4.5</title>
@@ -395,7 +387,7 @@
       <description>Grok 4.5 is SpaceXSI's smartest model built for coding, agentic tasks, and knowledge work.</description>
       <guid isPermaLink="true">https://x.ai/news/grok-4-5</guid>
       <category>News</category>
-      <pubDate>Wed, 14 Oct 2026 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 20 Oct 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
       <title>Grok Build is Now Open Source</title>
@@ -404,7 +396,7 @@
       <content:encoded><![CDATA[<a href="https://github.com/xai-org/grok-build">View on GitHub</a>]]></content:encoded>
       <guid isPermaLink="true">https://x.ai/news/grok-build-open-source</guid>
       <category>News</category>
-      <pubDate>Wed, 14 Oct 2026 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 20 Oct 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
       <title>21 New Flagship Grok Voices</title>
@@ -412,7 +404,7 @@
       <description>New multilingual voices for Grok Voice, plus improved naturalness for the original five.</description>
       <guid isPermaLink="true">https://x.ai/news/new-flagship-voices</guid>
       <category>News</category>
-      <pubDate>Wed, 14 Oct 2026 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 20 Oct 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
       <title>Grok on Databricks</title>
@@ -425,7 +417,7 @@
 <p>For more on Agent Bricks, see the <a href="https://www.databricks.com/blog/agent-bricks-dais-2026">Databricks announcement</a>.</p>]]></content:encoded>
       <guid isPermaLink="true">https://x.ai/news/grok-databricks</guid>
       <category>News</category>
-      <pubDate>Wed, 14 Oct 2026 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 20 Oct 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
       <title>Introducing Grok for PowerPoint</title>
@@ -433,7 +425,7 @@
       <description>Grok now works inside Microsoft PowerPoint — turn outlines into slides, expand the deck, and tighten the narrative without leaving the app.</description>
       <guid isPermaLink="true">https://x.ai/news/introducing-powerpoint-addin</guid>
       <category>News</category>
-      <pubDate>Wed, 14 Oct 2026 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 20 Oct 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
       <title>Agent Dashboard in Grok Build</title>
@@ -455,7 +447,7 @@
 <p>The Agent Dashboard ships with Grok Build. Install it with a single command, then run <code>grok dashboard</code>, or <code>/dashboard</code> from any session you already have open.</p>]]></content:encoded>
       <guid isPermaLink="true">https://x.ai/news/agent-dashboard</guid>
       <category>News</category>
-      <pubDate>Wed, 14 Oct 2026 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 20 Oct 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
       <title>Use Grok in Warp</title>
@@ -472,7 +464,7 @@
 <p>That's it! More agents and integrations are coming soon to SuperGrok and X Premium subscribers. To subscribe, visit the <a href="https://x.ai/pricing">pricing page</a>.</p>]]></content:encoded>
       <guid isPermaLink="true">https://x.ai/news/grok-warp</guid>
       <category>News</category>
-      <pubDate>Wed, 14 Oct 2026 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 20 Oct 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
       <title>Grok Build Plugin Marketplace</title>
@@ -502,7 +494,7 @@ grok plugin install &lt;name&gt; --trust
 <p>New to Grok Build? Visit <a href="https://x.ai/build">x.ai/build</a> to get started.</p>]]></content:encoded>
       <guid isPermaLink="true">https://x.ai/news/grok-plugin-marketplace</guid>
       <category>News</category>
-      <pubDate>Wed, 14 Oct 2026 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 20 Oct 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
       <title>Composer 2.5</title>
@@ -512,7 +504,7 @@ grok plugin install &lt;name&gt; --trust
 <p>Try it by typing <code>/model</code> and then selecting Composer 2.5 in the menu.</p>]]></content:encoded>
       <guid isPermaLink="true">https://x.ai/news/composer-2-5</guid>
       <category>News</category>
-      <pubDate>Wed, 14 Oct 2026 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 20 Oct 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
       <title>Introducing Grok Build</title>
@@ -534,7 +526,7 @@ Once a plan is approved, every change shows up as a clean diff.</p>
 <p>SuperGrok and X Premium Plus subscribers can install Grok Build with the command above and start building. If you don't have SuperGrok yet, <a href="https://grok.com/supergrok?referrer=grok-build">upgrade here</a> — we're excited to see what you create.</p>]]></content:encoded>
       <guid isPermaLink="true">https://x.ai/news/grok-build-cli</guid>
       <category>News</category>
-      <pubDate>Wed, 14 Oct 2026 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 20 Oct 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
       <title>Use Grok in OpenClaw</title>
@@ -559,7 +551,7 @@ Once a plan is approved, every change shows up as a clean diff.</p>
 <p>More open-source agents and integrations are coming soon.</p>]]></content:encoded>
       <guid isPermaLink="true">https://x.ai/news/grok-openclaw</guid>
       <category>News</category>
-      <pubDate>Wed, 14 Oct 2026 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 20 Oct 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
       <title>New Compute Partnership with Anthropic</title>
@@ -573,7 +565,7 @@ Once a plan is approved, every change shows up as a clean diff.</p>
 <p>SpaceX is the only organization with the launch cadence, mass-to-orbit economics, and constellation operations experience to make orbital compute a near-term engineering program rather than a research concept. If engineering challenges can be overcome, space-based compute offers near-limitless sustainable power with less impact on Earth.</p>]]></content:encoded>
       <guid isPermaLink="true">https://x.ai/news/anthropic-compute-partnership</guid>
       <category>News</category>
-      <pubDate>Wed, 14 Oct 2026 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 20 Oct 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
       <title>Connectors in web, iOS, and Android</title>
@@ -581,7 +573,7 @@ Once a plan is approved, every change shows up as a clean diff.</p>
       <description>Deep integrations that bring the apps you use every day directly into Grok.</description>
       <guid isPermaLink="true">https://x.ai/news/grok-connectors</guid>
       <category>News</category>
-      <pubDate>Wed, 14 Oct 2026 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 20 Oct 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
       <title>Grok Imagine Quality Mode API</title>
@@ -635,7 +627,7 @@ print(response.url)
 <p>Welcome to the next level of Grok Imagine. Try Grok Imagine <strong>Quality Mode</strong> on API.</p>]]></content:encoded>
       <guid isPermaLink="true">https://x.ai/news/grok-imagine-quality-mode</guid>
       <category>News</category>
-      <pubDate>Wed, 14 Oct 2026 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 20 Oct 2026 00:00:00 +0000</pubDate>
       <media:content url="https://data.x.ai/releases/imagine/quality-mode/woman-by-pool.webp" type="image/webp" medium="image"/>
     </item>
     <item>
@@ -655,7 +647,7 @@ print(response.url)
 <p>You can't clone a voice from a pre-existing recording, and you can't clone someone else's voice.</p>]]></content:encoded>
       <guid isPermaLink="true">https://x.ai/news/grok-custom-voices</guid>
       <category>News</category>
-      <pubDate>Wed, 14 Oct 2026 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 20 Oct 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
       <title>xAI joins SpaceX</title>
@@ -664,7 +656,7 @@ print(response.url)
       <content:encoded><![CDATA[<p>Read the full update <a href="https://spacex.com/updates#xai-joins-spacex">here</a>.</p>]]></content:encoded>
       <guid isPermaLink="true">https://x.ai/news/xai-joins-spacex</guid>
       <category>News</category>
-      <pubDate>Wed, 14 Oct 2026 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 20 Oct 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
       <title>Supporting the DOW's mission with AI</title>
@@ -686,7 +678,7 @@ Americans have led the world through all of society’s great technological inno
 <p><em>xAI is proud to continue this legacy – which is why we are the only company building on this legacy here in the US and turning shovels into tokens entirely inside our United States.</em></p>]]></content:encoded>
       <guid isPermaLink="true">https://x.ai/news/us-gov-dept-of-war</guid>
       <category>News</category>
-      <pubDate>Wed, 14 Oct 2026 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 20 Oct 2026 00:00:00 +0000</pubDate>
       <media:content url="https://media.x.ai/cdn-cgi/image/fit=scale-down,onerror=redirect,f=auto/v1/website/dow-33656674.webp" type="image/webp" medium="image"/>
     </item>
     <item>
@@ -736,17 +728,17 @@ Americans have led the world through all of society’s great technological inno
 <li>Audio models with even stronger performance in pronunciation and latency</li>
 </ul>
 <p>We can’t wait to hear what you build!</p>
-<img alt="Livekit Logo" height="32" src="https://x.ai/_next/static/media/livekit.1hce6gfuiwow7.svg?dpl=fabb4f30c26a852cb5afe652834650ec18823e47" width="32"/>]]></content:encoded>
+<img alt="Livekit Logo" height="32" src="https://x.ai/_next/static/media/livekit.1hce6gfuiwow7.svg?dpl=0c0ac50f3a8cd1b1c0fd97673f29885397d81b96" width="32"/>]]></content:encoded>
       <guid isPermaLink="true">https://x.ai/news/grok-voice-agent-api</guid>
       <category>News</category>
-      <pubDate>Wed, 14 Oct 2026 00:00:00 +0000</pubDate>
-      <media:content url="https://x.ai/_next/static/media/livekit.1hce6gfuiwow7.svg?dpl=fabb4f30c26a852cb5afe652834650ec18823e47" type="image/svg+xml" medium="image"/>
+      <pubDate>Tue, 20 Oct 2026 00:00:00 +0000</pubDate>
+      <media:content url="https://x.ai/_next/static/media/livekit.1hce6gfuiwow7.svg?dpl=0c0ac50f3a8cd1b1c0fd97673f29885397d81b96" type="image/svg+xml" medium="image"/>
     </item>
     <item>
       <title>xAI and El Salvador Pioneer the World's First Nationwide AI Education Program</title>
       <link>https://x.ai/news/el-salvador-partnership</link>
       <description>Announcing Our Transformative Partnership with the Government of El Salvador.</description>
-      <content:encoded><![CDATA[<img alt="xAI and El Salvador logos" height="120" src="https://x.ai/_next/static/media/el-salvador-banner.03kqq9365tu8e.svg?dpl=fabb4f30c26a852cb5afe652834650ec18823e47" width="331"/>
+      <content:encoded><![CDATA[<img alt="xAI and El Salvador logos" height="120" src="https://x.ai/_next/static/media/el-salvador-banner.03kqq9365tu8e.svg?dpl=0c0ac50f3a8cd1b1c0fd97673f29885397d81b96" width="331"/>
 <p>Today, xAI is thrilled to announce a groundbreaking partnership with the Government of El Salvador to launch the world's first nationwide AI-powered education program. Over the next two years, we'll deploy Grok across more than 5,000 public schools, delivering personalized learning to over one million students and empowering thousands of teachers as collaborative partners in education.</p>
 <p>This initiative will create adaptive, curriculum-aligned tutoring that adjusts to each student's pace, preferences, and mastery level—ensuring every child, from urban centers to rural communities, receives world-class education tailored to their needs. By co-developing this system with El Salvador, we'll generate new methodologies, datasets, and frameworks to guide responsible AI use in classrooms globally, with a focus on local contexts, safety, and human-centered impact.</p>
 <p>At xAI, our mission is to advance scientific discovery and deepen our collective understanding of the universe. This partnership embodies that purpose by harnessing Grok's frontier capabilities to accelerate learning at scale, bridging educational gaps, and fostering innovation that benefits humanity. It's a step toward making advanced AI accessible to all, reimagining how nations build knowledge for generations to come.</p>
@@ -763,8 +755,8 @@ Americans have led the world through all of society’s great technological inno
 <p>Onward.</p>]]></content:encoded>
       <guid isPermaLink="true">https://x.ai/news/el-salvador-partnership</guid>
       <category>News</category>
-      <pubDate>Wed, 14 Oct 2026 00:00:00 +0000</pubDate>
-      <media:content url="https://x.ai/_next/static/media/el-salvador-banner.03kqq9365tu8e.svg?dpl=fabb4f30c26a852cb5afe652834650ec18823e47" type="image/svg+xml" medium="image"/>
+      <pubDate>Tue, 20 Oct 2026 00:00:00 +0000</pubDate>
+      <media:content url="https://x.ai/_next/static/media/el-salvador-banner.03kqq9365tu8e.svg?dpl=0c0ac50f3a8cd1b1c0fd97673f29885397d81b96" type="image/svg+xml" medium="image"/>
     </item>
     <item>
       <title>Grok 4.1 Fast and Agent Tools API</title>
@@ -823,7 +815,7 @@ chat = client.chat.create(
 <p>We can’t wait to see what you build. Please share your creations and feedback with the community on X!</p>]]></content:encoded>
       <guid isPermaLink="true">https://x.ai/news/grok-4-1-fast</guid>
       <category>News</category>
-      <pubDate>Wed, 14 Oct 2026 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 20 Oct 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
       <title>Grok goes Global with KSA</title>
@@ -831,7 +823,7 @@ chat = client.chat.create(
       <description>Announcing Our Landmark Partnership with Saudi Arabia and HUMAIN</description>
       <content:encoded><![CDATA[<p><strong>Today, xAI is proud to announce a landmark framework agreement with Kingdom of Saudi Arabia and HUMAIN, a PIF company focused on full-stack AI solutions.</strong></p>
 <img alt="PIF Logo" src="https://media.x.ai/cdn-cgi/image/fit=scale-down,onerror=redirect,width=80,height=80,f=auto/v1/website/piflogo-fdb05a40.png"/>
-<img alt="Grok Logo" height="80" src="https://x.ai/_next/static/media/GROKLogo.1686pj7pmiyvt.svg?dpl=fabb4f30c26a852cb5afe652834650ec18823e47" width="80"/>
+<img alt="Grok Logo" height="80" src="https://x.ai/_next/static/media/GROKLogo.1686pj7pmiyvt.svg?dpl=0c0ac50f3a8cd1b1c0fd97673f29885397d81b96" width="80"/>
 <img alt="Humain Logo" src="https://media.x.ai/cdn-cgi/image/fit=scale-down,onerror=redirect,width=80,height=80,f=auto/v1/website/humainlogo-f13fdd4d.png"/>
 <p>Together, we will design, build, and operate a new generation of low-cost, hyperscale GPU data centers in the Kingdom of Saudi Arabia.</p>
 <p>Beyond infrastructure, we are deploying Grok nationwide across Saudi Arabia. This collaboration establishes a unified national AI layer that supplies every public and private entity with advanced decision-making capabilities, positioning the Kingdom at the forefront of global AI transformation. Grok will also integrate into HUMAIN’s agent platform, HUMAIN ONE, bringing real-time intelligence, autonomous workflows, and advanced AI copilots to government, enterprises, and society at large.</p>
@@ -844,7 +836,7 @@ chat = client.chat.create(
 <p><strong>Onward.</strong><br/><em>xAI Team</em></p>]]></content:encoded>
       <guid isPermaLink="true">https://x.ai/news/grok-goes-global</guid>
       <category>News</category>
-      <pubDate>Wed, 14 Oct 2026 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 20 Oct 2026 00:00:00 +0000</pubDate>
       <media:content url="https://media.x.ai/cdn-cgi/image/fit=scale-down,onerror=redirect,width=80,height=80,f=auto/v1/website/piflogo-fdb05a40.png" type="image/png" medium="image"/>
     </item>
     <item>
@@ -919,7 +911,7 @@ chat = client.chat.create(
 <p>You can read the Grok 4.1 model card <a href="https://data.x.ai/2025-11-17-grok-4-1-model-card.pdf">here</a>.</p>]]></content:encoded>
       <guid isPermaLink="true">https://x.ai/news/grok-4-1</guid>
       <category>News</category>
-      <pubDate>Wed, 14 Oct 2026 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 20 Oct 2026 00:00:00 +0000</pubDate>
       <media:content url="https://media.x.ai/cdn-cgi/image/fit=scale-down,onerror=redirect,width=1200,height=675,f=auto/v1/website/sf1-94bf8d2c.webp" type="image/webp" medium="image"/>
     </item>
     <item>
@@ -939,7 +931,7 @@ chat = client.chat.create(
 <p><strong>We’re also seeking talented mission driven engineers who want to join the cause. If you’re excited by solving hard problems to empower our nation’s hardest workers, we’d love to hear from you. Reach out to us over <a href="mailto:usg-careers@x.ai">email</a> or apply online directly <a href="https://job-boards.greenhouse.io/xai/jobs/4676513007">here</a>. We’d love to hear from you.</strong></p>]]></content:encoded>
       <guid isPermaLink="true">https://x.ai/news/onegov</guid>
       <category>News</category>
-      <pubDate>Wed, 14 Oct 2026 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 20 Oct 2026 00:00:00 +0000</pubDate>
       <media:content url="https://media.x.ai/cdn-cgi/image/fit=scale-down,onerror=redirect,f=auto/v1/website/gov-f49a723d.webp" type="image/webp" medium="image"/>
     </item>
     <item>
@@ -969,7 +961,7 @@ chat = client.chat.create(
 <p><strong>We’re also seeking talented mission driven engineers who want to join the cause. If you’re excited by solving hard problems to empower our nation’s hardest workers, we’d love to hear from you. Reach out to us over <a href="mailto:usg-careers@x.ai">email</a> or apply online directly <a href="https://job-boards.greenhouse.io/xai/jobs/4676513007">here</a>. We’d love to hear from you.</strong></p>]]></content:encoded>
       <guid isPermaLink="true">https://x.ai/news/government</guid>
       <category>News</category>
-      <pubDate>Wed, 14 Oct 2026 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 20 Oct 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
       <title>xAI raises $6B Series C</title>
@@ -991,7 +983,7 @@ chat = client.chat.create(
 <p>xAI is hiring aggressively and seeks mission-oriented individuals ready to join an elite team with the highest talent density focused on making a transformational impact on the future of humanity. Those interested can apply today at <a href="https://x.ai/careers">x.ai/careers</a>.</p>]]></content:encoded>
       <guid isPermaLink="true">https://x.ai/news/series-c</guid>
       <category>News</category>
-      <pubDate>Wed, 14 Oct 2026 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 20 Oct 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
       <title>Grok-1.5 Vision Preview</title>
@@ -1031,7 +1023,7 @@ if __name__ == "__main__":
 <p>If you want to be a part of this journey, we are <a href="https://x.ai/careers">hiring</a>.</p>]]></content:encoded>
       <guid isPermaLink="true">https://x.ai/news/grok-1.5v</guid>
       <category>News</category>
-      <pubDate>Wed, 14 Oct 2026 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 20 Oct 2026 00:00:00 +0000</pubDate>
       <media:content url="https://media.x.ai/cdn-cgi/image/fit=scale-down,onerror=redirect,width=1920,height=2560,f=auto/v1/website/grok1.5v_guessing-4609fc8f.webp" type="image/webp" medium="image"/>
     </item>
     <item>
@@ -1054,7 +1046,7 @@ if __name__ == "__main__":
 <p><em>Note that the GPT-4 scores are taken from the March 2023 release. For MATH and GSM8K, we present maj@1 results. For HumanEval, we report pass@1 benchmark scores.</em></p>]]></content:encoded>
       <guid isPermaLink="true">https://x.ai/news/grok-1.5</guid>
       <category>News</category>
-      <pubDate>Wed, 14 Oct 2026 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 20 Oct 2026 00:00:00 +0000</pubDate>
       <media:content url="https://media.x.ai/cdn-cgi/image/fit=scale-down,onerror=redirect,f=auto/v1/website/context-4d7ed84c.jpg" type="image/jpeg" medium="image"/>
     </item>
     <item>
@@ -1073,7 +1065,7 @@ if __name__ == "__main__":
 </ul>]]></content:encoded>
       <guid isPermaLink="true">https://x.ai/news/grok-os</guid>
       <category>News</category>
-      <pubDate>Wed, 14 Oct 2026 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 20 Oct 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
       <title>Announcing Grok</title>
@@ -1128,24 +1120,15 @@ You can join the Grok waitlist <a href="https://grok.x.ai">here</a>.
 This release just represents the first step for xAI. Looking ahead, we have an exciting roadmap and will be rolling out new capabilities and features in the coming months.</p>]]></content:encoded>
       <guid isPermaLink="true">https://x.ai/news/grok</guid>
       <category>News</category>
-      <pubDate>Wed, 14 Oct 2026 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 20 Oct 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Introducing The X Subscription</title>
-      <link>https://x.ai/news/x-subscription</link>
-      <description>Grok, Grok Bot, Cursor, and X Premium, all on one plan.</description>
-      <content:encoded><![CDATA[<a href="https://x.ai/pricing">Compare plans</a>]]></content:encoded>
-      <guid isPermaLink="true">https://x.ai/news/x-subscription</guid>
+      <title>Using Grok Bot to detect and respond to incidents</title>
+      <link>https://x.ai/news/incident-sweep</link>
+      <description>IncidentWatch spots ticket spikes before internal alerts fire. IncidentSweep clears the related backlog in an approved batch.</description>
+      <guid isPermaLink="true">https://x.ai/news/incident-sweep</guid>
       <category>News</category>
-      <pubDate>Wed, 14 Oct 2026 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Team Bots: shared AI teammates that learn as they work</title>
-      <link>https://x.ai/news/team-bots</link>
-      <description>Give a Grok Bot the files, apps, and expertise it needs, then share it so your whole team can work from the same context.</description>
-      <guid isPermaLink="true">https://x.ai/news/team-bots</guid>
-      <category>News</category>
-      <pubDate>Wed, 14 Oct 2026 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 20 Oct 2026 00:00:00 +0000</pubDate>
     </item>
   </channel>
 </rss>
